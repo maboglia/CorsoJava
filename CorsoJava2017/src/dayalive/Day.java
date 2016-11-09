@@ -1,5 +1,9 @@
 package dayalive;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/master
 /**
    A Day object represents a day in the Julian/Gregorian calendar.
 */
