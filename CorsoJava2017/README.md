@@ -14,6 +14,22 @@ esempi algoritmi
 OOP teoria, definizione
 variabile: definizione
 esempio classe Studente (nome, cognome, eta)
+
+##esempi
+	*	ArrayInteri.java
+	*	Booleani.java
+	*	Caratteri.java
+	*	CastInteri.java
+	*	Confronti.java
+	*	ForEsempio.java
+	*	GeneraErrore.java
+	*	HelloWorld.java
+	*	Interi.java
+	*	OperazioniAritmetiche.java
+	*	Pitagora.java
+	*	PrimoIncremento.java
+	*	PromotionErrata.java
+
 Counter: OOP/java 8h
 
 ## Settimana 2 
