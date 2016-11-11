@@ -73,7 +73,7 @@ Schema Libero - Case sensitive
 Commenti - Regole per gli identificatori 
 Array Multidimensionali 
 Limiti degli array in JAVA - dimensione prefissata
-Array (vettori semplici, monodimensionali 
+Array (vettori semplici, monodimensionali) 
 
 array elenco allievi 
 scorro elenco allievi utilizzando un ciclo for 
@@ -87,28 +87,35 @@ gestione base di possibili eccezioni:
 creare e gestire array di stringhe all'interno del codice sorgente 
 
 ###MARTEDÌ 8/11/2016 9-12 3h
+* costrutto switch
 
-Introduzione classi
-classi, 
-struttura delle classi, 
-progettazione delle classi in UML, 
-stato interno, 
-	metodi costruttori, overloading
- 	metodi getter e setter, 
-incapsulamento, 
-overload dei costruttori 
+*	Introduzione classi
+	* classi, 
+	* struttura delle classi, 
+	* progettazione delle classi in UML, 
+	* stato interno, 
+		* metodi costruttori, overloading
+ 		* metodi getter e setter, 
+	*	incapsulamento, 
+	* overload dei costruttori 
 
-@override toString() (solo in caso di extends)
+	* @override toString() (solo in caso di extends)
 
-esercizi metodi ausiliari
+	* esercizi metodi ausiliari
 
 ###GIOVEDÌ 10/11/2016 9-14 5h
-correzione esercizi metodi ausiliari
-Test java base
+* java  (2h java)
+	*	correzione esercizi metodi ausiliari 
+	* 	Test java base
+
 * javascript
 	*	javascript funzionale
 	*	oggetti javascript
 	*	primo JSON short bio studente
+	
+esercizi java sugli array
+
+Counter: OOP/java 48h - javascript 6h	
 
 
 
