@@ -62,3 +62,53 @@ I METODI COSTRUTTORI
 Caratteristiche di un costruttore - Costruttore di default - Package
 ###VENERDÌ 4/11/2016 9-12 3h
 Javascript introduzione, variabili e tipi
+Counter: OOP/java 35h - javascript 3h
+
+#Settimana 4 
+###LUNEDì 7/11/2016 9-13 14-18 8h
+Approfondiamo la classe Studente
+Gli array in Java - Dichiarazione - Creazione - Inizializzazione
+IDENTIFICATORI, TIPI DI DATI ED ARRAY 
+Schema Libero - Case sensitive 
+Commenti - Regole per gli identificatori 
+Array Multidimensionali 
+Limiti degli array in JAVA - dimensione prefissata
+Array (vettori semplici, monodimensionali 
+
+array elenco allievi 
+scorro elenco allievi utilizzando un ciclo for 
+
+
+
+gestione base di possibili eccezioni: 
+1) provare a risolvere il problema con if() 
+2) usare la gestione eccezioni di JAVA
+
+creare e gestire array di stringhe all'interno del codice sorgente 
+
+###MARTEDÌ 8/11/2016 9-12 3h
+
+Introduzione classi
+classi, 
+struttura delle classi, 
+progettazione delle classi in UML, 
+stato interno, 
+	metodi costruttori, overloading
+ 	metodi getter e setter, 
+incapsulamento, 
+overload dei costruttori 
+
+@override toString() (solo in caso di extends)
+
+esercizi metodi ausiliari
+
+###GIOVEDÌ 10/11/2016 9-14 5h
+correzione esercizi metodi ausiliari
+Test java base
+* javascript
+	*javascript funzionale
+	*oggetti javascript
+	*primo JSON short bio studente
+
+
+
