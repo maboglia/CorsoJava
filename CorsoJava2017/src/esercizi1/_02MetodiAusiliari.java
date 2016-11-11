@@ -73,6 +73,12 @@ public class _02MetodiAusiliari {
 		 * */
 		
 		}
+	
+		/**
+		 * ripetitore ripete una stringa str per num volte
+		 * @param str stringa da ripetere
+		 * @param num per numero di volte
+		 */
 		private static void ripetitore ( String str , int num ) {
 		if ( num <0) System . out . println ( " ERRORE : numero negativo " );
 		else
