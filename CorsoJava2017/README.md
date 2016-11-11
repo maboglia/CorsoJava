@@ -106,9 +106,9 @@ esercizi metodi ausiliari
 correzione esercizi metodi ausiliari
 Test java base
 * javascript
-	*javascript funzionale
-	*oggetti javascript
-	*primo JSON short bio studente
+	*	javascript funzionale
+	*	oggetti javascript
+	*	primo JSON short bio studente
 
 
 
