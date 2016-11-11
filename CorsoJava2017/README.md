@@ -47,7 +47,7 @@ COSTRUTTI DI PROGRAMMAZIONE SEMPLICI
 Il costrutto if e il ciclo for
 ###GIOVEDÌ 27/10/2016 9-14 5h
 Esercizi e primo test di  verifica
-------------------------------------stampato fino a qui------------------------------------
+_------------------------------------stampato fino a qui------------------------------------_
 Counter: OOP/java 25h
 ## Settimana 3 
 ###MERCOLEDì 2/11/2016 9-14 5h
