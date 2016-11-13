@@ -3,8 +3,8 @@ Roadmap
 * 1. Buone abitudini
 * 2. Tipi di dati primitivi
 * 3. Uso di classi
-Fondamenti di Programmazione
-Uso di classi
+
+##Uso di classi
 * Le classi, in quanto tipi di dato strutturati,
 prevedono usi e regole più complessi rispetto
 ai tipi semplici
@@ -15,8 +15,8 @@ completiamo e sistematizziamo la trattazione
 problemi molto comuni: l’interazione con
 l’utente e il trattamento di sequenze di
 caratteri
-Fondamenti di ProgrammazioneClassi già pronte
-* Come la maggior parte dei linguaggi di
+Classi già pronte
+### Come la maggior parte dei linguaggi di
 programmazione, Java è dotato di una libreria
 ( library ) di classi “pronte all’uso” che coprono
 molte esigenze comuni (e anche meno
@@ -24,22 +24,22 @@ comuni)
 * Usare classi già definite da altri è la norma
 per non sprecare tempo a risolvere problemi
 già risolti o a reinventare la ruota
-Fondamenti di Programmazione
-Uso di una classe pronta
+
+##Uso di una classe pronta
 * Quando si deve cercare e poi usare una
 classe pronta all’uso i passi da seguire sono:
 3⁄4 Come identificarla ? Dove cercarla ?
 3⁄4 La classe è istanziabile o non istanziabile ?
 3⁄4 Se è istanziabile , come creo le istanze ?
 3⁄4 Quali metodi mi servono e come li uso ?
-Fondamenti di ProgrammazioneRoadmap
-* 3. Uso di classi
+Roadmap
+### 3. Uso di classi
 3⁄4 Come identificarla ? Dove cercarla ?
 3⁄4 La classe è istanziabile o non istanziabile ?
 3⁄4 Se è istanziabile , come creo le istanze ?
 3⁄4 Quali metodi mi servono e come li uso ?
-Fondamenti di Programmazione
-Classi e documentazione
+
+##Classi e documentazione
 * La libreria Java standard è accompagnata da
 documentazione che illustra lo scopo e l’utilizzo di
 ciascuna classe presente
@@ -51,8 +51,8 @@ estensivamente o memorizzare la documentazione
 prima di programmare
 * Al contrario, leggere la documentazione è una delle
 attività più tipiche durante la programmazione
-Fondamenti di ProgrammazioneOrganizzazione delle classi
-* La libreria standard segue il metodo di
+Organizzazione delle classi
+### La libreria standard segue il metodo di
 organizzazione delle classi previsto da Java: le classi
 tra loro “affini” sono raggruppate in package
 * Ogni package ha un nome tipicamente composto da
@@ -61,8 +61,8 @@ classi (ed eventualmente altri componenti)
 * I nomi a più livelli riflettono un’organizzazione
 gerarchica dei package simile a quella delle cartelle
 (directory) su un disco
-Fondamenti di Programmazione
-Esempi di package
+
+##Esempi di package
 java. lang Package fondamentale con
 classi di uso molto comune
 java.io Package per l’Input/Output
@@ -71,8 +71,8 @@ utilità generale
 java. text Package con classi per la
 gestione ed elaborazione di
 testi e dati in formato testuale
-Fondamenti di ProgrammazioneUso di classi appartenenti
-ad un package
+Uso di classi appartenenti
+##ad un package
 * Solo le classi appartenenti al package java. lang sono
 automaticamente disponibili in ogni programma
 * Per l’uso di altri package in una classe è necessario
@@ -83,8 +83,8 @@ prima della definizione della classe
 import java. util . Random
 ma è più tipico importare comunque tutto il package:
 import java. util .*
-Fondamenti di Programmazione
-I package
+
+##I package
 * All’atto pratico un package è un insieme di file .class
 tipicamente archiviati in un file compresso .zip o . jar
 * Ogni classe appartiene ad un package: la
@@ -95,23 +95,23 @@ riservata package seguita dal nome del package
 viene assegnata ad un package “anonimo” che
 contiene, oltre ad essa, tutte le classi senza package
 presenti nella stessa directory
-Fondamenti di ProgrammazioneRoadmap
-* 3. Uso di classi
+Roadmap
+### 3. Uso di classi
 3⁄4 Come identificarla ? Dove cercarla ?
 3⁄4 La classe è istanziabile o non istanziabile ?
 3⁄4 Se è istanziabile , come creo le istanze ?
 3⁄4 Se è istanziabile , come uso le istanze ?
 3⁄4 Quali metodi mi servono e come li uso ?
-Fondamenti di Programmazione
-La doppia natura delle classi
+
+##La doppia natura delle classi
 * Le classi disponibili nella libreria standard si
 possono distinguere in due tipologie principali:
 3⁄4 Classi istanziabili
 3⁄4 Classi non istanziabili
 * La stessa distinzione è applicabile alle “nostre”
 classi
-Fondamenti di ProgrammazioneClassi istanziabili
-* Una classe istanziabile fornisce il prototipo di
+Classi istanziabili
+### Una classe istanziabile fornisce il prototipo di
 una famiglia di oggetti (istanze della classe) che
 hanno struttura simile ma proprietà distinte a
 livello individuale (valori diversi degli attributi e
@@ -119,8 +119,8 @@ quindi risultati diversi prodotti dai metodi)
 * L’uso tipico è la costruzione di istanze (tramite
 new) e quindi l’invocazione di metodi su di esse
 * Esempi: Ossequioso, Valuta, Anno, String , . . .
-Fondamenti di Programmazione
-Classi non istanziabili
+
+##Classi non istanziabili
 * Una classe non istanziabile contiene un
 insieme di metodi (ed eventualmente
 attributi) di natura generale non legati alle
@@ -130,8 +130,8 @@ classe poiché non ci sono caratteristiche
 differenziabili tra oggetti distinti
 * Esempi: BuongiornoMain , ValutaDriver ,
 AnnoDriver , Math , Collections , . . .
-Fondamenti di ProgrammazioneUna precisazione
-* La distinzione tra classi istanziabili e non istanziabili
+Una precisazione
+### La distinzione tra classi istanziabili e non istanziabili
 riguarda il senso logico del loro utilizzo
 * Il termine “classe non istanziabile ” sarà utilizzato per
 indicare una classe che non ha senso istanziare , date
@@ -142,8 +142,8 @@ e attributi tutti static ) ma non avrebbe senso pratico
 * Vedremo nella parte finale del corso classi di altra
 natura (astratte) sulle quali non è tecnicamente
 possibile usare l’operatore new
-Fondamenti di Programmazione
-Istanziabili vs. non istanziabili
+
+##Istanziabili vs. non istanziabili
 * La stragrande maggioranza delle classi è
 istanziabile ma l’esistenza di alcune classi non
 istanziabili è necessaria
@@ -152,8 +152,8 @@ istanziabili è necessaria
 * Poiché i numeri non sono oggetti, i metodi
 numerici appartengono a classi non
 istanziabili
-Fondamenti di ProgrammazioneIstanziabili vs. non istanziabili
-* Nel caso di una classe istanziabile attributi e metodi
+Istanziabili vs. non istanziabili
+### Nel caso di una classe istanziabile attributi e metodi
 rappresentano proprietà possedute da tutti gli oggetti
 istanza della classe
 * Ogni oggetto istanza di una classe ha una sua identità
@@ -164,8 +164,8 @@ un nuovo insieme di attributi e metodi individuali
 * Nel caso di una classe non istanziabile attributi e
 metodi sono “unici” a livello della classe (non esistono
 istanze diversificate)
-Fondamenti di Programmazione
-Classi non istanziabili
+
+##Classi non istanziabili
 * Una classe non istanziabile rappresenta
 “qualcosa” di concettualmente unico, che non
 esiste e non può esistere in versioni separate
@@ -176,8 +176,8 @@ istanziabile )
 eseguito (la classe System non è istanziabile )
 – esiste un solo punto di inizio di un programma (le
 classi contenenti il main non sono istanziabili )
-Fondamenti di ProgrammazioneRiconoscere una classe non
-istanziabile
+Riconoscere una classe non
+##istanziabile
 * Non ha costruttori
 * Attributi e metodi sono tutti static
 * Quando penso all’esecuzione dei suoi metodi
@@ -186,8 +186,8 @@ individuale: sono applicabili direttamente alla
 classe con almeno un argomento
 – Math . sqrt (2)
 – Math . abs ( - 3)
-Fondamenti di Programmazione
-In memoria ...
+
+##In memoria ...
 Math
 E
 2.7182
@@ -204,8 +204,8 @@ static double abs(double a)
 static double cos(double a)
 static double sqrt(double
 static float ulp(float f)
-Fondamenti di ProgrammazioneClassi istanziabili
-* Una classe istanziabile rappresenta “qualcosa”
+Classi istanziabili
+### Una classe istanziabile rappresenta “qualcosa”
 che esiste in molteplici versioni individuali che
 hanno una struttura comune ma ciascuna con
 una propria identità:
@@ -215,8 +215,8 @@ String è istanziabile )
 istanziabile )
 – esistono molte persone (un’ipotetica classe
 Persona è istanziabile )
-Fondamenti di Programmazione
-Riconoscere una classe
+
+##Riconoscere una classe
 istanziabile
 * Ha costruttori
 * Attributi e metodi sono tutti (o quasi) non
@@ -228,8 +228,8 @@ argomenti esterni, perché usano attributi
 interni)
 – Persona. codiceFiscale () // NO! QUALE PERSONA?
 – String . toUpperCase () // NO! QUALE STRINGA?
-Fondamenti di ProgrammazioneIn memoria (1) ...
-Persona
+In memoria (1) ...
+##Persona
 String nome;
 String cognome;
 . . .
@@ -237,8 +237,8 @@ public Persona (String _nome, String _cognome)
 . . .
 public String codiceFiscale()
 . . .
-Fondamenti di Programmazione
-In memoria (2) ...
+
+##In memoria (2) ...
 Persona
 String nome;
 String cognome;
@@ -253,8 +253,8 @@ String cognome “Rossi”;
 String nome= “Ugo”;
 String cognome “Neri”;
 . . .
-Fondamenti di Programmazione
-Ogni volta che eseguo new Persona
+
+##Ogni volta che eseguo new Persona
 ne creo una nuova istanza distinta
 String nome= “Luca”;
 String cognome “Verdi”;
@@ -266,8 +266,8 @@ attributi e metodi
 sono definiti a livello di istanza
 3⁄4 Nel caso di classi non istanziabili attributi e
 metodi sono definiti a livello di classe
-Fondamenti di Programmazione
-Il modificatore static
+
+##Il modificatore static
 * La parola riservata static viene usata per
 indicare il livello di definizione di un attributo
 o metodo
@@ -275,8 +275,8 @@ o metodo
 metodo è definito a livello di classe
 * Se la parola static non è presente l’attributo o
 metodo è definito a livello di istanza
-Fondamenti di ProgrammazioneIl modificatore static
-* La parola riservata static viene usata per
+Il modificatore static
+### La parola riservata static viene usata per
 indicare il Il
 livello
 di definizione del
@@ -298,8 +298,8 @@ l’attributo o
 il la termine
 “statico”
 metodo è definito a livello di istanza
-Fondamenti di Programmazione
-Static vs. non static
+
+##Static vs. non static
 * Ogni attributo o metodo non static esiste
 concretamente in ogni istanza creata
 – Esiste in “molteplici versioni” se vengono create
@@ -311,8 +311,8 @@ concretamente a livello di classe
 – Esiste in un’unica versione
 – La sua esistenza non dipende da cosa fa il
 programma
-Fondamenti di ProgrammazioneTirando le somme
-* Una classe non istanziabile (come Math o
+Tirando le somme
+### Una classe non istanziabile (come Math o
 BuongiornoMain )
 – non contiene nessun costruttore esplicito
 – dovrebbe contenere solo attributi e metodi static
@@ -321,8 +321,8 @@ String )
 – ha almeno un costruttore (di solito esplicito)
 – dovrebbe avere almeno un attributo o metodo
 non static
-Fondamenti di Programmazione
-Classi istanziabili “ibride”
+
+##Classi istanziabili “ibride”
 * Alcune classi istanziabili (p.e. String ) della
 libreria standard contengono attributi o
 metodi static ed hanno quindi natura ibrida
@@ -332,8 +332,8 @@ segue le proprie regole
 * Salvo rari casi, è sconsigliabile realizzare
 classi istanziabili ibride (sono accettabili
 attributi costanti definiti come static )
-Fondamenti di ProgrammazioneProprietà a livello
-di classe e di istanza
+Proprietà a livello
+##di classe e di istanza
 Proprietà collettive a
 livello di classe,
 referenziabili
@@ -362,8 +362,8 @@ attributi static
 attributi non static
 . . .
 metodi non static
-Fondamenti di Programmazione
-Accesso a metodi e
+
+##Accesso a metodi e
 attributi static
 * Essendo definiti a livello di classe, attributi e metodi
 static sono acceduti/invocati tramite il nome della
@@ -378,8 +378,8 @@ sconsigliabile, accedere tramite una qualunque istanza
 della classe:
 nomeIstanza . nomeMetodoStatic (...)
 nomeIstanza . nomeAttributoStatic
-Fondamenti di ProgrammazioneAccesso a metodi e attributi
-non static
+Accesso a metodi e attributi
+##non static
 * La sintassi è simile al caso precedente, ma
 ovviamente l’accesso/invocazione è possibile solo
 tramite un’istanza specifica (ed ogni accesso è
@@ -389,8 +389,8 @@ nomeIstanza . nomeAttributoNonStatic
 * P.e.
 maggiordomoIta .saluta();
 altraValuta . tassoRif
-Fondamenti di Programmazione
-Accesso ad attributi e
+
+##Accesso ad attributi e
 metodi della propria classe
 * All'interno del corpo di un metodo si possono riferire in
 modo abbreviato attributi e metodi definiti nella stessa
@@ -405,8 +405,8 @@ equivalente
 ...= new Ossequioso(BuongiornoMain
 .SALUTO_ITA);
 Ossequioso( BuongiornoMain.SALUTO_ITA);
-Fondamenti di ProgrammazioneAccesso ad attributi e
-metodi della propria classe
+Accesso ad attributi e
+##metodi della propria classe
 * Se nel corpo di un metodo (non static ) appare il nome
 di un metodo o attributo non static della sua classe è
 sottinteso che sia riferito all’istanza su cui è stato
@@ -422,8 +422,8 @@ l’attributo tassoRif dell’istanza riferita da dollaro se
 si sta eseguendo dollaro.tassoConversione
 (...)
 dollaro. tassoConversione(...)
-Fondamenti di Programmazione
-Incroci vietati
+
+##Incroci vietati
 * Nel corpo di un metodo static non si può accedere
 ad attributi e metodi non static della stessa classe
 * Infatti il metodo static deve poter essere invocato a
@@ -433,8 +433,8 @@ almeno un’istanza
 * Nel corpo di un metodo non static si può accedere a
 qualunque attributo e metodo della stessa classe (se
 esiste l’istanza ovviamente esiste la classe)
-Fondamenti di ProgrammazioneErrori subdoli
-* Eventuali mescolanze improprie di static e
+Errori subdoli
+### Eventuali mescolanze improprie di static e
 non static causano errori di compilazione
 * Si può “accontentare” il compilatore facendo
 grossi errori concettuali (p.e. aggiungendo
@@ -442,20 +442,20 @@ static dove non deve stare)
 * Modificare il codice per accontentare il
 compilatore senza pensare al significato della
 modifica può solo peggiorare le cose
-Fondamenti di Programmazione
-Errori subdoli
+
+##Errori subdoli
 NON modificare
 MAI il codice per
 accontentare il compilatore
 senza pensare al significato
 della modifica
-Fondamenti di ProgrammazioneErrori subdoli
-L’uso improprio
+Errori subdoli
+##L’uso improprio
 del modificatore static
 causa errori DISASTROSI
 talvolta ritenuti MISTERIOSI
-Fondamenti di Programmazione
-Errori subdoli
+
+##Errori subdoli
 public class Valuta
 {
 private String nome;
@@ -485,8 +485,8 @@ altraValuta . tassoRif;
 tassoRif ;
 }
 }
-Fondamenti di ProgrammazioneIl “driver” non cambia . . .
-public class ValutaDriver
+Il “driver” non cambia . . .
+##public class ValutaDriver
 {
 public static void main ( String args [])
 {
@@ -519,17 +519,17 @@ tassoConversione(franco));
 System.out. println(dollaro.
 }
 }
-Fondamenti di Programmazione
-. . . ma il risultato sì !
-Fondamenti di ProgrammazioneRoadmap
-* 3. Uso di classi
+
+##. . . ma il risultato sì !
+Roadmap
+### 3. Uso di classi
 3⁄4 Come identificarla ? Dove cercarla ?
 3⁄4 La classe è istanziabile o non istanziabile ?
 3⁄4 Se è istanziabile , come creo le istanze ?
 3⁄4 Se è istanziabile , come uso le istanze ?
 3⁄4 Quali metodi mi servono e come li uso ?
-Fondamenti di Programmazione
-Due esempi
+
+##Due esempi
 * Come primi esempi di classi pronte istanziabili
 useremo le classi String e StringBuffer del package
 java. lang
@@ -541,8 +541,8 @@ essere modificate dopo essere state costruite
 stringhe (sequenze) di caratteri che possono essere
 modificate dopo essere state costruite (in Java 6 c’è
 anche una classe molto simile di nome StringBuilder )
-Fondamenti di ProgrammazioneDefinizione di variabili
-* tipo nome; oppure
+Definizione di variabili
+### tipo nome; oppure
 tipo nome1,..., nomeN ;
 String nome;
 StringBuffer risultato;
@@ -560,8 +560,8 @@ variabile di tipo strutturato.
 Esso indica che il riferimento è nullo e
 accedere ad un oggetto String
 non c'e' nessun oggetto riferito
-Fondamenti di Programmazione
-Operatore new
+
+##Operatore new
 * L'operatore new NomeClasse crea un nuovo oggetto
 con le proprietà definite in NomeClasse (istanza della
 classe) e ritorna il riferimento ad esso
@@ -571,8 +571,8 @@ costruttore passandogli gli argomenti necessari
 uguale o "compatibile" con la definizione della variabile
 * Ogni classe può avere più costruttori che si
 differenziano per la lista degli argomenti
-Fondamenti di ProgrammazioneCostruttori
-* La classe String ha 15 costruttori alternativi in Java 6
+Costruttori
+### La classe String ha 15 costruttori alternativi in Java 6
 (erano 11 in Java 2)
 * La classe StringBuffer ha 4 costruttori alternativi in
 Java 6 (erano 3 in Java 2)
@@ -582,15 +582,15 @@ gli argomenti attuali che vengono passati
 StringBuffer è quello di passargli una sequenza di
 caratteri tra doppie virgolette (che di fatto è un
 oggetto String creato automaticamente)
-Fondamenti di Programmazione
-New di un oggetto String
+
+##New di un oggetto String
 String saluto;
 saluto = new String("Ciao ciao");
 Ciao ciao
 saluto
 null
-Fondamenti di ProgrammazioneVarianti sul tema
-* L'operatore new può essere usato al
+Varianti sul tema
+### L'operatore new può essere usato al
 momento della definizione
 String saluto = new String("Ciao ciao");
 StringBuffer salutino = new StringBuffer("Bye");
@@ -598,8 +598,8 @@ StringBuffer saluto2 = new StringBuffer(saluto);
 * Solo per la classe String , in quanto di uso
 molto comune, Java offre la forma compatta
 String s = "Ciao ciao";
-Fondamenti di Programmazione
-Costruzioni diverse
+
+##Costruzioni diverse
 String saluto = new String("Ciao ciao");
 StringBuffer salutino = new StringBuffer("Bye");
 StringBuffer saluto2 = new StringBuffer(saluto);
@@ -611,30 +611,30 @@ metodi classe
 String metodi classe
 StringBuffer metodi classe
 StringBuffer
-Fondamenti di ProgrammazioneRoadmap
-* 3. Uso di classi
+Roadmap
+### 3. Uso di classi
 3⁄4 Come identificarla ? Dove cercarla ?
 3⁄4 La classe è istanziabile o non istanziabile ?
 3⁄4 Se è istanziabile , come creo le istanze ?
 3⁄4 Se è istanziabile , cosa posso fare con le istanze ?
 3⁄4 Quali metodi mi servono e come li uso ?
-Fondamenti di Programmazione
+
+##Operazioni su istanze
+* Le principali operazioni che si possono
+effettuare sulle variabili che riferiscono
+istanze di una classe sono:
+3⁄4 assegnamento
+3⁄4 confronto
+3⁄4 invocazione di metodi
 Operazioni su istanze
-* Le principali operazioni che si possono
+### Le principali operazioni che si possono
 effettuare sulle variabili che riferiscono
 istanze di una classe sono:
 3⁄4 assegnamento
 3⁄4 confronto
 3⁄4 invocazione di metodi
-Fondamenti di ProgrammazioneOperazioni su istanze
-* Le principali operazioni che si possono
-effettuare sulle variabili che riferiscono
-istanze di una classe sono:
-3⁄4 assegnamento
-3⁄4 confronto
-3⁄4 invocazione di metodi
-Fondamenti di Programmazione
-Assegnamenti tra variabili di
+
+##Assegnamenti tra variabili di
 tipi strutturati
 String saluto1, saluto2, saluto3;
 saluto1 = new String("Ciao ciao");
@@ -649,8 +649,8 @@ String
 saluto1=saluto3;
 saluto2
 saluto3
-Fondamenti di Programmazione
-Buongiorno
+
+##Buongiorno
 Buongiorno
 metodi
 metodi classe
@@ -675,8 +675,8 @@ v1
 null
 v2
 v2
-Fondamenti di Programmazione
-Assegnamenti tra variabili di
+
+##Assegnamenti tra variabili di
 tipi strutturati
 PRIMA
 v1
@@ -690,8 +690,8 @@ v2
 null
 v1 v1
 v2 v2
-Fondamenti di ProgrammazioneIl valore è il riferimento !
-* Il valore di una variabile di tipo strutturato è il
+Il valore è il riferimento !
+### Il valore di una variabile di tipo strutturato è il
 riferimento ad un oggetto (istanza di una
 classe)
 * Una stessa variabile può riferire oggetti
@@ -699,8 +699,8 @@ diversi in momenti diversi a seguito di
 operazioni di assegnazione sul suo valore
 * Se la variabile contiene il valore null non
 riferisce nessun oggetto in quel momento
-Fondamenti di Programmazione
-Oggetti e riferimenti
+
+##Oggetti e riferimenti
 * Le variabili hanno un nome, gli oggetti no
 * Per utilizzare un oggetto bisogna passare attraverso
 una variabile che ne contiene il riferimento
@@ -712,15 +712,15 @@ riferimento iniziale non necessariamente rimane legato
 all’oggetto per tutta la sua esistenza
 * Se un oggetto non è (più) riferito da nessuna variabile
 diventa irraggiungibile (e quindi inutilizzabile)
-Fondamenti di ProgrammazioneOperazioni su istanze
-* Le principali operazioni che si possono
+Operazioni su istanze
+### Le principali operazioni che si possono
 effettuare sulle variabili che riferiscono
 istanze di una classe sono:
 3⁄4 assegnamento
 3⁄4 confronto
 3⁄4 invocazione di metodi
-Fondamenti di Programmazione
-Confronti tra variabili di tipo
+
+##Confronti tra variabili di tipo
 strutturato
 * E’ possibile applicare gli operatori di confronto == e
 != a variabili di tipo strutturato
@@ -732,8 +732,8 @@ p.e. saluto3 != null
 verifica se hanno lo stesso valore (cioè riferiscono
 esattamente lo stesso oggetto)
 * Raramente questo è desiderato e utile
-Fondamenti di ProgrammazioneIl valore è il riferimento !
-String saluto1 = new String ("Buongiorno");
+Il valore è il riferimento !
+##String saluto1 = new String ("Buongiorno");
 String saluto2 = new String ("Buongiorno");
 saluto1 == saluto2 ??
 FALSE
@@ -743,8 +743,8 @@ Buongiorno Buongiorno
 metodi classe
 String metodi classe
 String
-Fondamenti di Programmazione
-Il valore è il riferimento !
+
+##Il valore è il riferimento !
 String saluto1 = new String ("Buongiorno");
 String saluto2 = saluto1
 saluto1 == saluto2 ??
@@ -753,8 +753,8 @@ saluto1
 Buongiorno
 metodi classe
 String
-Fondamenti di Programmazione
-saluto2Confronto tra riferimenti vs.
+
+##saluto2Confronto tra riferimenti vs.
 confronto tra oggetti
 * Usare == fa il confronto tra i riferimenti non fra i
 valori contenuti negli oggetti (p.e. le sequenze di
@@ -767,8 +767,8 @@ ritorna true se le stringhe contenute sono uguali (in
 modo case sensitive), false altrimenti
 * Il metodo booleano equalsIgnoreCase fa lo stesso
 senza distinguere maiuscole/minuscole
-Fondamenti di Programmazione
-Confronto
+
+##Confronto
 String saluto1 = new String ("Buongiorno");
 String saluto2 = new String ("Buongiorno");
 saluto1 == saluto2; // false
@@ -781,8 +781,8 @@ Buongiorno Buongiorno
 metodi classe
 String metodi classe
 String
-Fondamenti di ProgrammazioneConfronto
-String saluto1 = new String ("Buongiorno");
+Confronto
+##String saluto1 = new String ("Buongiorno");
 String saluto2 = new String ("buongiorno");
 saluto1 == saluto2; // false
 saluto1.equals
@@ -797,8 +797,8 @@ Buongiorno buongiorno
 metodi classe
 String metodi classe
 String
-Fondamenti di Programmazione
-Una particolarità di String
+
+##Una particolarità di String
 * Usare esplicitamente new oppure la forma
 abbreviata per inizializzare un oggetto String
 non è esattamente la stessa cosa
@@ -808,8 +808,8 @@ contenuto uguale
 * Se non si usa esplicitamente new, la Java
 Virtual Machine evita di creare oggetti distinti
 ma dal contenuto uguale
-Fondamenti di ProgrammazioneUna particolarità di String
-String saluto1 = new String ("Buongiorno");
+Una particolarità di String
+##String saluto1 = new String ("Buongiorno");
 String saluto2 = new String ("Buongiorno");
 saluto1
 saluto2
@@ -817,8 +817,8 @@ Buongiorno Buongiorno
 metodi classe
 String metodi classe
 String
-Fondamenti di Programmazione
-Una particolarità di String
+
+##Una particolarità di String
 String saluto1 = "Buongiorno";
 String saluto2 = "Buongiorno";
 saluto1
@@ -826,8 +826,8 @@ saluto2
 Buongiorno
 metodi classe
 String
-Fondamenti di ProgrammazioneAlcune distinzioni
-a = "b";
+Alcune distinzioni
+##a = "b";
 a
 a è una variabile di tipo String
 Il riferimento ad un oggetto
@@ -835,15 +835,15 @@ che contiene una stringa
 composta dal solo carattere b
 viene copiato “dentro” a
 "b"
-Fondamenti di Programmazione
-Alcune distinzioni
+
+##Alcune distinzioni
 a = 'b';
 a è una variabile di tipo char
 Il valore corrispondente
 al singolo carattere b
 viene copiato “dentro” a
-Fondamenti di Programmazione
-a
+
+##a
 ‘b’Alcune distinzioni
 a = ' ';
 a è una variabile di tipo char
@@ -853,8 +853,8 @@ al singolo carattere spazio
 viene copiato “dentro” a
 a
 ‘ ’
-Fondamenti di Programmazione
-Alcune distinzioni
+
+##Alcune distinzioni
 a = " ";
 a
 a è una variabile di tipo String
@@ -862,8 +862,8 @@ Il riferimento ad un oggetto
 che contiene una stringa
 composta dal solo carattere
 spazio viene copiato “dentro” a
-Fondamenti di Programmazione
-" "Alcune distinzioni
+
+##" "Alcune distinzioni
 a = "";
 a
 a è una variabile di tipo String
@@ -874,16 +874,16 @@ viene copiato “dentro” a
 Non confondere stringa vuota
 (detta anche nulla) con riferimento null
 ""
-Fondamenti di Programmazione
-Operazioni su istanze
+
+##Operazioni su istanze
 * Le principali operazioni che si possono
 effettuare sulle variabili che riferiscono
 istanze di una classe sono:
 3⁄4 assegnamento
 3⁄4 confronto
 3⁄4 invocazione di metodi
-Fondamenti di ProgrammazioneMetodi
-* I metodi non static rappresentano operazioni
+Metodi
+### I metodi non static rappresentano operazioni
 effettuabili su singoli oggetti
 * La documentazione indica per ogni metodo il
 tipo ritornato e la lista degli argomenti formali
@@ -892,8 +892,8 @@ ricevere in ingresso da chi lo invoca
 * Per ogni argomento formale sono specificati:
 – un nome
 – un tipo
-Fondamenti di Programmazione
-Esempi di metodi di String
+
+##Esempi di metodi di String
 Tipo ritornato
 Nome del metodo
 public char charAt ( int index)
@@ -917,8 +917,8 @@ index endIndex - 1. Thus the length of the substring is endIndex-
 endIndex -
 beginIndex.
 beginIndex .
-Fondamenti di ProgrammazioneEsempi di metodi di String
-Tipo ritornato
+Esempi di metodi di String
+##Tipo ritornato
 Nome del metodo
 Lista argomenti attuali
 public int length ()
@@ -938,8 +938,8 @@ corrispondente toLowerCase)
 toLowerCase ) restituisce un riferimento ad un
 nuovo oggetto String:
 String : quello iniziale rimane immutato !
-Fondamenti di Programmazione
-Concatenazione di stringhe
+
+##Concatenazione di stringhe
 * L'operatore + si applica a due (o più) variabili
 di tipo String (o meglio: almeno una String
 e altre trasformabili in String )
@@ -951,8 +951,8 @@ int estratto = . . . ;
 System.out.println
 ("Il numero vincente e'" + estratto);
 System.out. println("Il
-Fondamenti di ProgrammazioneEsempi di metodi di
-StringBuffer
+Esempi di metodi di
+##StringBuffer
 public StringBuffer append(
 append ( String str)
 str )
@@ -976,16 +976,16 @@ modificano il contenuto dell’oggetto su cui sono invocati e
 restituiscono un riferimento all’oggetto stesso (anziché ad uno
 nuovo, come normalmente fanno i metodi della classe String)
 String )
-Fondamenti di Programmazione
-Invocazione di metodi
+
+##Invocazione di metodi
 * L’invocazione di un metodo non static su un
 oggetto istanza della classe in cui il metodo è
 definito si effettua con la sintassi:
 nomeVar.
 nomeVar . nomeMetodo(lista
 nomeMetodo (lista argomenti attuali)
-Fondamenti di ProgrammazioneArgomenti attuali e formali
-* Ogni volta che si invoca un metodo si deve
+Argomenti attuali e formali
+### Ogni volta che si invoca un metodo si deve
 specificare una lista di argomenti attuali
 * Gli argomenti attuali e formali sono in
 corrispondenza posizionale
@@ -993,8 +993,8 @@ corrispondenza posizionale
 variabili o delle espressioni
 * Gli argomenti attuali devono rispettare il tipo
 attribuito agli argomenti formali
-Fondamenti di Programmazione
-Un saluto maiuscolo
+
+##Un saluto maiuscolo
 public class Ossequioso
 {
 private String mioSaluto;
@@ -1016,8 +1016,8 @@ mioSaluto . toUppercase());
 toUppercase ());
 }
 }
-Fondamenti di ProgrammazioneUn saluto a rovescio
-public class Ossequioso
+Un saluto a rovescio
+##public class Ossequioso
 {
 private String mioSaluto;
 mioSaluto ;
@@ -1042,16 +1042,16 @@ System.out.println
 System.out. println(rovescio);
 }
 }
-Fondamenti di Programmazione
-Roadmap
+
+##Roadmap
 * 3. Uso di classi
 3⁄4 Come identificarla ? Dove cercarla ?
 3⁄4 La classe è istanziabile o non istanziabile ?
 3⁄4 Se è istanziabile , come creo le istanze ?
 3⁄4 Se è istanziabile , cosa posso fare con le istanze ?
 3⁄4 Quali metodi mi servono e come li uso ?
-Fondamenti di ProgrammazioneLunghi elenchi
-* La documentazione di ogni classe ( istanziabile o
+Lunghi elenchi
+### La documentazione di ogni classe ( istanziabile o
 no) contiene l’elenco dei metodi disponibili
 * La classe Math non è istanziabile e contiene 54
 metodi (tutti static ovviamente)
@@ -1059,8 +1059,8 @@ metodi (tutti static ovviamente)
 70 metodi di cui 13 static
 * La classe StringBuffer è “ istanziabile pura” e
 contiene 53 metodi (nessuno static ovviamente)
-Fondamenti di Programmazione
-La ricerca del metodo
+
+##La ricerca del metodo
 * Capire se esistono una classe e/o un metodo
 che fanno ciò che ci serve non è sempre
 facile: esiste un mare di classi ognuna delle
@@ -1070,8 +1070,8 @@ esperti possono essere indispensabili per
 indirizzare la ricerca
 * In subordine, può essere utile anche la ricerca
 su Internet
-Fondamenti di ProgrammazioneLa ricerca del metodo
-* Se nessuno ci indirizza e nemmeno Internet ci
+La ricerca del metodo
+### Se nessuno ci indirizza e nemmeno Internet ci
 aiuta si procede per tentativi seguendo
 l’ordine logico:
 – individuare il package
@@ -1079,8 +1079,8 @@ l’ordine logico:
 – individuare il metodo
 * I nomi delle classi e dei metodi ci dovrebbero
 aiutare
-Fondamenti di Programmazione
-Esempio di ricerca
+
+##Esempio di ricerca
 * Supponiamo di voler arrotondare un numero
 floating point all’intero più vicino: ci sarà un
 metodo che lo fa per noi ?
@@ -1090,8 +1090,8 @@ java. lang e sulla classe Math
 * Sapendo che in inglese round significa
 (anche) arrotondare vediamo se c’è un
 metodo con questo nome
-Fondamenti di ProgrammazioneOverloading di metodi
-* Esistono due metodi round nella classe Math
+Overloading di metodi
+### Esistono due metodi round nella classe Math
 * I due metodi hanno lo stesso nome ma sono
 distinguibili in base alla lista degli argomenti: uno
 riceve in ingresso un argomento float , l’altro riceve in
@@ -1101,8 +1101,8 @@ degli argomenti diverse, cioè varianti diverse dello
 stesso metodo è detta overloading
 * A seconda degli argomenti passati verrà selezionato
 ed eseguito il metodo appropriato
-Fondamenti di Programmazione
-Esempi di overloading
+
+##Esempi di overloading
 * Nella classe Math i metodi abs , max e min
 sono definiti ciascuno in 4 versioni diverse
 * Nella classe String il metodo substring è
@@ -1111,8 +1111,8 @@ definito in 2 versioni diverse
 definito in 13 versioni diverse
 * Se una classe istanziabile ha più costruttori
 essi sono (ovviamente) in overloading
-Fondamenti di ProgrammazioneAltro esempio di ricerca
-* Supponiamo di voler verificare se una
+Altro esempio di ricerca
+### Supponiamo di voler verificare se una
 sequenza di caratteri ne contiene uno in
 particolare: ci sarà un metodo che lo fa per
 noi ?
@@ -1121,8 +1121,8 @@ caratteri la ricerca si orienta sul package
 java. lang e sulle classi String o StringBuffer
 * Stavolta non è facile ipotizzare un nome di
 metodo, scorriamo la lista . . .
-Fondamenti di Programmazione
-Complicazioni
+
+##Complicazioni
 * Il metodo contains sembra essere quello che
 ci serve (in effetti lo è) ma richiede
 conoscenze che non abbiamo ancora
@@ -1130,8 +1130,8 @@ conoscenze che non abbiamo ancora
 alla versione 1.4
 * Il metodo indexOf (in 4 versioni) non fa
 esattamente quello che ci serve ma quasi . . .
-Fondamenti di ProgrammazioneUso “creativo” dei metodi
-* Il metodo indexOf (nella versione che riceve
+Uso “creativo” dei metodi
+### Il metodo indexOf (nella versione che riceve
 in ingresso un char ) restituisce la posizione
 della prima occorrenza nella stringa del char
 specificato
@@ -1139,8 +1139,8 @@ specificato
 * Quindi possiamo sapere se il char è presente
 o meno distinguendo tra risultati non negativi
 e il risultato - 1
-Fondamenti di Programmazione
-Ricerche senza successo
+
+##Ricerche senza successo
 * Ci interessa un metodo che calcoli il logaritmo
 in base 2 di un numero
 * Essendo un’operazione matematica
@@ -1149,4 +1149,4 @@ java. lang e sulla classe Math
 * Ci sono il metodo log (base e) e il metodo
 log10 (base 10), ma in base 2 non c’è
 * Dovremo scrivercelo noi
-Fondamenti di Programmazione
+##
