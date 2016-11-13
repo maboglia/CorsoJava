@@ -1,4 +1,4 @@
-package week3;
+package esempi.week3;
 /**
    This example demonstrates variables and assignments.
 */

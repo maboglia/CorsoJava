@@ -1,4 +1,4 @@
-package week3.stringhe;
+package esempi.week3.stringhe;
 
 /* 
    Questo programma costruisce una parola di 8 lettere 

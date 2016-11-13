@@ -1,4 +1,4 @@
-package week3.stringhe;
+package esempi.week3.stringhe;
 
 /* 
    Questo programma analizza l'utilizzo di alcune funzioni 

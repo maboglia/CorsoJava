@@ -1,4 +1,4 @@
-package week3.stringhe;
+package esempi.week3.stringhe;
 
 import java.text.NumberFormat;
 

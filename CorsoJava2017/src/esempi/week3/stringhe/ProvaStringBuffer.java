@@ -1,4 +1,4 @@
-package week3.stringhe;
+package esempi.week3.stringhe;
 
 /*
   Questo programma vuol testare la differenza tra la costruzione di 

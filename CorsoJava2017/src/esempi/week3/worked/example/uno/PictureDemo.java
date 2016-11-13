@@ -1,4 +1,4 @@
-package week3.worked.example.uno;
+package esempi.week3.worked.example.uno;
 
 public class PictureDemo
 {

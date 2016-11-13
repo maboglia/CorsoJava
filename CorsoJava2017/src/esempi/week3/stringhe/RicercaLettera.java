@@ -1,4 +1,4 @@
-package week3.stringhe;
+package esempi.week3.stringhe;
 
 /*
   Questo programma scrive una parola a caso di 10 lettere
