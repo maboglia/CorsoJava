@@ -28,16 +28,16 @@ già risolti o a reinventare la ruota
 ##Uso di una classe pronta
 * Quando si deve cercare e poi usare una
 classe pronta all’uso i passi da seguire sono:
-3⁄4 Come identificarla ? Dove cercarla ?
-3⁄4 La classe è istanziabile o non istanziabile ?
-3⁄4 Se è istanziabile , come creo le istanze ?
-3⁄4 Quali metodi mi servono e come li uso ?
+	* Come identificarla ? Dove cercarla ?
+	* La classe è istanziabile o non istanziabile ?
+	* Se è istanziabile , come creo le istanze ?
+	* Quali metodi mi servono e come li uso ?
 Roadmap
 ### 3. Uso di classi
-3⁄4 Come identificarla ? Dove cercarla ?
-3⁄4 La classe è istanziabile o non istanziabile ?
-3⁄4 Se è istanziabile , come creo le istanze ?
-3⁄4 Quali metodi mi servono e come li uso ?
+	* Come identificarla ? Dove cercarla ?
+	* La classe è istanziabile o non istanziabile ?
+	* Se è istanziabile , come creo le istanze ?
+	* Quali metodi mi servono e come li uso ?
 
 ##Classi e documentazione
 * La libreria Java standard è accompagnata da
@@ -97,17 +97,17 @@ contiene, oltre ad essa, tutte le classi senza package
 presenti nella stessa directory
 Roadmap
 ### 3. Uso di classi
-3⁄4 Come identificarla ? Dove cercarla ?
-3⁄4 La classe è istanziabile o non istanziabile ?
-3⁄4 Se è istanziabile , come creo le istanze ?
-3⁄4 Se è istanziabile , come uso le istanze ?
-3⁄4 Quali metodi mi servono e come li uso ?
+	* Come identificarla ? Dove cercarla ?
+	* La classe è istanziabile o non istanziabile ?
+	* Se è istanziabile , come creo le istanze ?
+	* Se è istanziabile , come uso le istanze ?
+	* Quali metodi mi servono e come li uso ?
 
 ##La doppia natura delle classi
 * Le classi disponibili nella libreria standard si
 possono distinguere in due tipologie principali:
-3⁄4 Classi istanziabili
-3⁄4 Classi non istanziabili
+	* Classi istanziabili
+	* Classi non istanziabili
 * La stessa distinzione è applicabile alle “nostre”
 classi
 Classi istanziabili
@@ -262,9 +262,9 @@ String cognome “Verdi”;
 * Dalla discussione precedente emerge che
 esistono due “livelli” di definizione per
 attributi e metodi
-3⁄4 Nel caso di classi istanziabili attributi e metodi
+	* Nel caso di classi istanziabili attributi e metodi
 sono definiti a livello di istanza
-3⁄4 Nel caso di classi non istanziabili attributi e
+	* Nel caso di classi non istanziabili attributi e
 metodi sono definiti a livello di classe
 
 ##Il modificatore static
@@ -523,11 +523,11 @@ System.out. println(dollaro.
 ##. . . ma il risultato sì !
 Roadmap
 ### 3. Uso di classi
-3⁄4 Come identificarla ? Dove cercarla ?
-3⁄4 La classe è istanziabile o non istanziabile ?
-3⁄4 Se è istanziabile , come creo le istanze ?
-3⁄4 Se è istanziabile , come uso le istanze ?
-3⁄4 Quali metodi mi servono e come li uso ?
+	* Come identificarla ? Dove cercarla ?
+	* La classe è istanziabile o non istanziabile ?
+	* Se è istanziabile , come creo le istanze ?
+	* Se è istanziabile , come uso le istanze ?
+	* Quali metodi mi servono e come li uso ?
 
 ##Due esempi
 * Come primi esempi di classi pronte istanziabili
@@ -613,26 +613,26 @@ StringBuffer metodi classe
 StringBuffer
 Roadmap
 ### 3. Uso di classi
-3⁄4 Come identificarla ? Dove cercarla ?
-3⁄4 La classe è istanziabile o non istanziabile ?
-3⁄4 Se è istanziabile , come creo le istanze ?
-3⁄4 Se è istanziabile , cosa posso fare con le istanze ?
-3⁄4 Quali metodi mi servono e come li uso ?
+	* Come identificarla ? Dove cercarla ?
+	* La classe è istanziabile o non istanziabile ?
+	* Se è istanziabile , come creo le istanze ?
+	* Se è istanziabile , cosa posso fare con le istanze ?
+	* Quali metodi mi servono e come li uso ?
 
 ##Operazioni su istanze
 * Le principali operazioni che si possono
 effettuare sulle variabili che riferiscono
 istanze di una classe sono:
-3⁄4 assegnamento
-3⁄4 confronto
-3⁄4 invocazione di metodi
+	* assegnamento
+	* confronto
+	* invocazione di metodi
 Operazioni su istanze
 ### Le principali operazioni che si possono
 effettuare sulle variabili che riferiscono
 istanze di una classe sono:
-3⁄4 assegnamento
-3⁄4 confronto
-3⁄4 invocazione di metodi
+	* assegnamento
+	* confronto
+	* invocazione di metodi
 
 ##Assegnamenti tra variabili di
 tipi strutturati
@@ -716,9 +716,9 @@ Operazioni su istanze
 ### Le principali operazioni che si possono
 effettuare sulle variabili che riferiscono
 istanze di una classe sono:
-3⁄4 assegnamento
-3⁄4 confronto
-3⁄4 invocazione di metodi
+	* assegnamento
+	* confronto
+	* invocazione di metodi
 
 ##Confronti tra variabili di tipo
 strutturato
@@ -879,9 +879,9 @@ Non confondere stringa vuota
 * Le principali operazioni che si possono
 effettuare sulle variabili che riferiscono
 istanze di una classe sono:
-3⁄4 assegnamento
-3⁄4 confronto
-3⁄4 invocazione di metodi
+	* assegnamento
+	* confronto
+	* invocazione di metodi
 Metodi
 ### I metodi non static rappresentano operazioni
 effettuabili su singoli oggetti
@@ -1045,11 +1045,11 @@ System.out. println(rovescio);
 
 ##Roadmap
 * 3. Uso di classi
-3⁄4 Come identificarla ? Dove cercarla ?
-3⁄4 La classe è istanziabile o non istanziabile ?
-3⁄4 Se è istanziabile , come creo le istanze ?
-3⁄4 Se è istanziabile , cosa posso fare con le istanze ?
-3⁄4 Quali metodi mi servono e come li uso ?
+	* Come identificarla ? Dove cercarla ?
+	* La classe è istanziabile o non istanziabile ?
+	* Se è istanziabile , come creo le istanze ?
+	* Se è istanziabile , cosa posso fare con le istanze ?
+	* Quali metodi mi servono e come li uso ?
 Lunghi elenchi
 ### La documentazione di ogni classe ( istanziabile o
 no) contiene l’elenco dei metodi disponibili
