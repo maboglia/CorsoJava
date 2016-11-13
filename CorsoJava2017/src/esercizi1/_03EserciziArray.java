@@ -87,6 +87,8 @@ public class _03EserciziArray {
 //		}
 //		if ( trovato ) System . out . println ( " Tre valori consecutivi uguali " );
 //		else System . out . println ( " NO " );
+		
+		
 		/*Es 5.5: Scrivere un programma DoppioUnoDellaltro che he prevede un array di 10 numeri interi contenente valori a 
 		 * piacere (senza bisogno di chiederli all’utente) e stampa "Doppio uno dell’altro" se nell’array sono presenti due 
 		 * valori che sono l’uno il doppio dell’altro, oppure stampa "NO" altrimenti. 
