@@ -1,10 +1,12 @@
-package esempi.week4;
+package progetti.aula.v2;
 
 public class Studente {
 
 	//dichiarazione delle variabili di tipo stringa
 
-	private static int matricola  = 0;
+	
+	private int matricola  = 0;
+	private static int matricolatore  = 1;
 	private String nome, cognome;
 	private char genere;
 
@@ -13,10 +15,8 @@ public class Studente {
 	}
 
 	public void setMatricola() {
-		if (matricola == 13) 
-		this.matricola = matricola + 2;
-		else
-		this.matricola = matricola + 1;
+
+		this.matricola = matricolatore++;
 		
 	}
 

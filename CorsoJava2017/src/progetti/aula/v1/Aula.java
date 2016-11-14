@@ -1,4 +1,4 @@
-package progetti.aula;
+package progetti.aula.v1;
 
 import java.util.Date;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package esempi.week4;
+package progetti.aula.v2;
 
 public class StudenteTester {
 
