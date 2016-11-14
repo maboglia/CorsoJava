@@ -1112,7 +1112,8 @@ definito in 13 versioni diverse
 * Se una classe istanziabile ha più costruttori
 essi sono (ovviamente) in overloading
 Altro esempio di ricerca
-### Supponiamo di voler verificare se una
+
+###Supponiamo di voler verificare se una
 sequenza di caratteri ne contiene uno in
 particolare: ci sarà un metodo che lo fa per
 noi ?
