@@ -1,4 +1,4 @@
-package esempi.week3;
+package week3;
 
 public class EsempiWhile {
 
