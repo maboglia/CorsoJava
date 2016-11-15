@@ -1,4 +1,4 @@
-package dayalive;
+package progetti.dayalive;
 
 public class DaysAlivePrinter
 {

@@ -1,4 +1,4 @@
-package esempi.week4;
+package progetti.contocorrente.v1;
 
 public class ContoTester {
 	public static void main(String[] args) {

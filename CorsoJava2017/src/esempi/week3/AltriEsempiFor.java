@@ -1,4 +1,4 @@
-package week3;
+package esempi.week3;
 
 public class AltriEsempiFor {
 

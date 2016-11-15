@@ -1,4 +1,4 @@
-package esempi.week3;
+package esempi.week3.stringhe;
 
 import java.util.Scanner;
 

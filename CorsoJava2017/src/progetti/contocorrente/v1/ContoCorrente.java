@@ -1,4 +1,4 @@
-package esempi.week4;
+package progetti.contocorrente.v1;
 
 /*
  * Testo:
@@ -35,7 +35,10 @@ public class ContoCorrente {
 		this.tasso = 0.0;
 	}
 
-	
+	/**
+	 * metodo che ritorna il saldo del conto
+	 * @return test
+	 */
 	public double getSaldo() {
 		return saldo + (saldo * tasso);
 	}
