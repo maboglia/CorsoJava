@@ -36,35 +36,44 @@ Counter: OOP/java 8h
 ###24/10/2016 8h
 Creazione spazio su github e caricamento del materiale
 esempio classe Studente (continua)
+
 __LE VARIABILI IN JAVA__ 
 Dichiarazione di una variabile: 
 Variabili d'istanza -Variabili locali - Parametri formali 
+
 classe ProvaStudente
 argomenti passati al metodo main 
 
 Package
 Consultazione oracle api docs
+
 __TIPI DI DATI PRIMITIVI__ 
 Tipi di dati interi, casting e promotion 
 Tipi di dati a virgola mobile, casting e promotion 
 Tipo di dato logico - booleano 
 Tipo di dato primitivo letterale
+
 __OPERATORI DI BASE__ 
 Operatore d'assegnazione 
 Operatori aritmetici 
 Operatori (unari) di pre e post-incremento (e decremento) 
 Operatori relazionali o di confronto 
-Concatenazione di stringhe con + 
+Concatenare le stringhe con + 
+
 ###MARTEDÌ 25/10/2016 9-13 4h
 Esercizi sui tipi
+
 Flusso di lavoro del programma 
+
 GESTIONE DEL FLUSSO DI ESECUZIONE 
 COSTRUTTI DI PROGRAMMAZIONE SEMPLICI 
 Il costrutto if e il ciclo for
 ###GIOVEDÌ 27/10/2016 9-14 5h
 Esercizi e primo test di  verifica
 _------------------------------------stampato fino a qui------------------------------------_
+
 Counter: OOP/java 25h
+
 ## Settimana 3 
 ###MERCOLEDì 2/11/2016 9-14 5h
 INTRODUZIONE ALLA LIBRERIA STANDARD 
