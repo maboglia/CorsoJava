@@ -1,44 +1,63 @@
 #cos'è JavaScript
+
+	* Basi
+	* Strutture del linguaggio
+	* Variabili, dichiarazioni ed espressioni
+	* Funzioni
+	* Array, oggetti e classi
+	* Stringhe
+	* Risorse del browser
+	* Cattura eventi
+	* JSON
+	* AJAX
+
+
+
+##Risorse disponibili
+
+    Javascript reference (Mozilla Developer Network)
+    w3schools (JavaScript tutorial)
+
+
+
 	*	incontra JS
 	*	perché imparare JS
 	*	scrivi un'istruzione JS
 	*	la struttura di un programma JS
 	*	sintassi
 	*	commenti
-##2
-	*	tipi di dati e variabili
+
+###tipi di dati e variabili
 	*	convenzioni di naming
 	*	crea una nuova varibile usando Math
 	*	incrementare e decrementare
 	*	+=
 	*	-=
-	*	stringhe
+###stringhe
 	*	unire le stringhe
 	*	trovare la lunghezza di una stringa
 	*	trovare un carattere in una stringa
 	*	tagliare le stringhe
 	*	modificare le stringhe: tutto maiuscolo/minuscolo
-	*	Booleans
-	*		operazioni logiche
-	*		comparazione tra numeri e valori booleani
+###Booleans
+	*	operazioni logiche
+	*	comparazione tra numeri e valori booleani
 	*	undefined e null
-##3
-	*	Arrays
+###Arrays
 	*		perché devi saper utilizzare gli array
 	*		creazione di un array
 	*		accesso a i dati di un array
 	*		array non omogenei
-	*		lavorare con gli array
+####lavorare con gli array
 	*			trova la lunghezza di un array
 	*			aggiungere elementi a un array
 	*			aggiungere array
 	*			trasformare un array in una stringa
-	*		cose utili da fare con un array
+####cose utili da fare con un array
 	*			trova la strada di casa
 	*			decision maker
 	*			crea un generatore di frasi random
-##4
-	*	Objects
+###Objects
 	*		creare un oggetto
 	*			chiavi senza quote
 	*		accedere ai valori di un oggetto
@@ -50,12 +69,11 @@
 	*		cose utili da fare con gli oggetti
 	*			tieni traccia delle spese
 	*			raccogli informazioni sui tuoi film preferiti
-##6
-	*	condizioni e cicli
+###costrutti del linguaggio
 	*		condizioni
 	*			if statement
 	*			if...else
-	*		loop
+	*		cicli
 	*			ciclo while
 	*			ciclo for
 	*	
