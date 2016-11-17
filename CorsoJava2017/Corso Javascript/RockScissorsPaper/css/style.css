@@ -1,1 +1,10 @@
-style.css
+body {background-color: #ccc;font-size: 12px;}
+
+
+div {
+		border:1px solid red;
+		margin:1em;
+		min-height: 4em;
+		text-align: center;
+		padding: 0.8em;
+	}
