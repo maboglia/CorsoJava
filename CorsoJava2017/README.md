@@ -143,4 +143,51 @@ esercizi java sugli array
 Counter: OOP/java 48h - javascript 6h	
 
 
+#Settimana 5 
+###LUNEDì 14/11/2016 9-13 14-18 8h
+Recap
+Tipi primitivi 
+tipi complessi 
+gestione della memoria in Java
 
+* uso una classe con metodi statici, accedo ad essi senza istanziare nuovi oggetti: 
+* Math
+
+* tipo di utilizzo classe, creo oggetto, attraverso l'oggetto mediante l'opertore dot (.) accedo ai suoi metodi e variabili 
+
+##Esercizi sul Flusso di lavoro del programma 
+GESTIONE DEL FLUSSO DI ESECUZIONE 
+COSTRUTTI DI PROGRAMMAZIONE SEMPLICI 
+Il costrutto if 
+Il costrutto while 
+COSTRUTTI DI PROGRAMMAZIONE AVANZATI 
+Il costrutto for 
+Il costrutto do 
+Cicli for migliorato 
+Il costrutto switch
+
+##progetto conto corrente
+##progetto agenda
+##progetto aula.v3
+
+###MARTEDì 15/11/2016 9-12 
+* relazioni tra classi: uso, aggregazione, teoria delle classi 
+
+###MERCOLEDì 16/11/2016 9-12 
+* esercitazione luoghi e figure geometriche
+
+###GIOVEDì 17/11/2016 9-13 4h javascript
+
+gioco matematico 01 - rock, scissors, paper
+
+
+
+Counter: OOP/java 62h - javascript 10h	
+
+
+#Settimana 6 
+###LUNEDì 21/11/2016 9-13 14-18 8h
+
+###MERCOLEDì 23/11/2016 9-13 
+
+###VENERDì 25/11/2016 9-12 
