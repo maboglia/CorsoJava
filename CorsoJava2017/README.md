@@ -167,25 +167,25 @@ Cicli for migliorato
 Il costrutto switch
 
 ##progetto conto corrente
-    │   │   │   │   ├── contocorrente
-    │   │   │   │   │   └── v1
-    │   │   │   │   │       ├── CompoundInterest.java
-    │   │   │   │   │       ├── ContoCorrente.java
-    │   │   │   │   │       └── ContoTester.java
+*contocorrente
+*   * v1
+*       * CompoundInterest.java
+*       * ContoCorrente.java
+*       * ContoTester.java
 
 ##progetto agenda
-    │   │   │   │   ├── agenda
-    │   │   │   │   │   ├── Agenda2.java
-    │   │   │   │   │   ├── Agenda.java
-    │   │   │   │   │   ├── Appuntamento.java
-    │   │   │   │   │   ├── ProvaAgenda2.java
-    │   │   │   │   │   └── ProvaAgenda.java
+*agenda
+*   * Agenda2.java
+*   * Agenda.java
+*   * Appuntamento.java
+*   * ProvaAgenda2.java
+*   * ProvaAgenda.java
 
 ##progetto aula.v3
-    │   │   │   │   │   └── v3
-    │   │   │   │   │       ├── Registro.java
-    │   │   │   │   │       ├── Studente.java
-    │   │   │   │   │       └── StudenteTester.java
+*   * v3
+*       * Registro.java
+*       * Studente.java
+*       * StudenteTester.java
 
 ###MARTEDì 15/11/2016 9-12 
 * relazioni tra classi: uso, aggregazione, teoria delle classi 
@@ -193,30 +193,30 @@ Il costrutto switch
 ###MERCOLEDì 16/11/2016 9-12 
 * esercitazione luoghi e figure geometriche
  geometria
-    │   │   │   │       │   ├── GeometriaTest.class
-    │   │   │   │       │   ├── NuovaGeometria.class
-    │   │   │   │       │   ├── Punto.class
-    │   │   │   │       │   ├── Quadrato.class
-    │   │   │   │       │   ├── Rettangolo.class
-    │   │   │   │       │   ├── Segmento.class
-    │   │   │   │       │   └── Triangolo.class
+    * GeometriaTest.class
+    * NuovaGeometria.class
+    * Punto.class
+    * Quadrato.class
+    * Rettangolo.class
+    * Segmento.class
+    * Triangolo.class
 
 
 ###GIOVEDì 17/11/2016 9-13 4h javascript
-
+.
 gioco matematico 01 - rock, scissors, paper
-    │   │   ├── 02RockScissorsPaper
-    │   │   │   ├── css
-    │   │   │   │   └── style.css
-    │   │   │   ├── index.html
-    │   │   │   └── js
-    │   │   │       └── script.js
-    │   │   ├── masterJS
-    │   │   │   ├── css
-    │   │   │   │   └── style.css
-    │   │   │   ├── index.html
-    │   │   │   └── js
-    │   │   │       └── script.js
+    * 02RockScissorsPaper
+    *    * css
+    *    *    * style.css
+    *    * index.html
+    *    * js
+    *        * script.js
+    * masterJS
+    *    * css
+    *    *    * style.css
+    *    * index.html
+    *    * js
+    *        * script.js
 
 
 
