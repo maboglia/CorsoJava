@@ -206,16 +206,16 @@ Il costrutto switch
 .
 gioco matematico 01 - rock, scissors, paper
     * 02RockScissorsPaper
-    *    * css
-    *    *    * style.css
-    *    * index.html
-    *    * js
+* css
+* style.css
+* index.html
+* js
     *        * script.js
     * masterJS
-    *    * css
-    *    *    * style.css
-    *    * index.html
-    *    * js
+* css
+* style.css
+* index.html
+* js
     *        * script.js
 
 
