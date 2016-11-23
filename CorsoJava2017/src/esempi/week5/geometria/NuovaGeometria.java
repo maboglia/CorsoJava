@@ -38,6 +38,17 @@ public class NuovaGeometria {
 		System.out.println(triangolo1.area());
 		System.out.println(triangolo1.isRettangolo());
 		
+		//---------RETTANGOLO--------------
+		
+		Rettangolo rettangolo1 = new Rettangolo(2, 4, 4, 2);
+		System.out.println(rettangolo1);
+		
+		//---------QUADRATO--------------
+		
+		Quadrato quadrato1 = new Quadrato(a,5);
+		System.out.println(quadrato1);
+		
+		
 		
 	}
 

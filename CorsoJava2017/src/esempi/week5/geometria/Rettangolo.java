@@ -14,6 +14,7 @@ public class Rettangolo {
         angoloSx    = new Punto(x,y);
         base        = b;
         altezza     = h;
+        System.out.println(angoloSx);
 
     }
     public Rettangolo(Punto p, int b, int h){
@@ -29,7 +30,18 @@ public class Rettangolo {
     public int getArea(){
         return base * altezza;
     }
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
 
+		return "In fine dei conti sono solo un rettangolo!";
+		
+		
+	}
+
+    
 
 
 }
