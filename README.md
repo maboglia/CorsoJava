@@ -6,7 +6,7 @@
 
 
 ###Corso Javascript
-[Corso Java 2017](https://github.com/maboglia/TSS2017/tree/master/CorsoJavascript)
+[Corso JavaScript 2017](https://github.com/maboglia/TSS2017/tree/master/CorsoJavascript)
 
 
 
