@@ -1,4 +1,4 @@
-package esempi.week6.GUI2D;
+package esempi.week7.GUI2D;
 
 import java.awt.event.MouseListener;
 import java.awt.event.MouseEvent;

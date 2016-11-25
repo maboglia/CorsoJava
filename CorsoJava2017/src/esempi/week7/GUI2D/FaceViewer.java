@@ -1,4 +1,4 @@
-package esempi.week6.GUI2D;
+package esempi.week7.GUI2D;
 
 import javax.swing.JFrame;
 
