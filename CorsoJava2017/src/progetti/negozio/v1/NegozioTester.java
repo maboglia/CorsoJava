@@ -20,7 +20,7 @@ public class NegozioTester {
 				negozio.elencaProdotti();
 			} else if (c.equals("negozio")) {
 				System.out.println("Nome: " + negozio.getNome());
-				System.out.println("Nome negozio:" + negozio.getNomenegozio());
+				System.out.println("Nome negoziante:" + negozio.getNomenegoziante());
 				System.out.println("Indirizzo: " + negozio.getIndirizzo());
 				System.out.println("Telefono: " + negozio.getTelefono());
 				System.out.println("Sito web: " + negozio.getSitoWeb());
