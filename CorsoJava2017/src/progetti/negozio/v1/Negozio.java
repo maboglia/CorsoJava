@@ -113,7 +113,7 @@ public class Negozio {
 	public Negozio(String nome, String negoziante) {
 		setNome( nome);
 		setNomeNegoziante(negoziante);
-		
+		creaProdotti();
 	}
 
 	private void creaProdotti(){
@@ -126,18 +126,27 @@ public class Negozio {
 	}
 	
 	public void elencaProdotti() {
-		// TODO Auto-generated method stub
+		
+		int i = 1;
+		for (Prodotto prodotto : prodotti) {
+
+			System.out.println(i+")"+prodotto.getNome() + ": " +  "prezzo " + prodotto.getPrezzo());
+			i++;
+		}
 		
 	}
 
 	public Prodotto vendiProdotto(int pos) {
-		// TODO Auto-generated method stub
-		return null;
+		
+		Prodotto p = prodotti.get(pos-1);
+		incasso = incasso + p.getPrezzo();
+		// rimuovo il prodotto dalla lista
+		prodotti.remove(pos-1);
+		return p;
 	}
 
 	public void nuovoProdotto(Prodotto prodotto) {
-		// TODO Auto-generated method stub
-		
+		prodotti.add(prodotto);		
 	}
 
 }

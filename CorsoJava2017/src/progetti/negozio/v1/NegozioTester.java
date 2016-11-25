@@ -1,5 +1,7 @@
 package progetti.negozio.v1;
 
+import java.util.Scanner;
+
 public class NegozioTester {
 
 	public static void main(String[] args) {
@@ -12,7 +14,7 @@ public class NegozioTester {
 		boolean devoUscire = false;
 		
 		while(!devoUscire) {
-			System.out.println("Inserisci un comando:");
+			System.out.println("Inserisci un comando: \nelenca, \nnegozio, \nacquista, \naggiungi, \nq per uscire ");
 			String c = sc.next();
 			if (c.equals("q")) {
 				devoUscire = true;
@@ -20,7 +22,7 @@ public class NegozioTester {
 				negozio.elencaProdotti();
 			} else if (c.equals("negozio")) {
 				System.out.println("Nome: " + negozio.getNome());
-				System.out.println("Nome negoziante:" + negozio.getNomenegoziante());
+				System.out.println("Nome negoziante:" + negozio.getNomeNegoziante());
 				System.out.println("Indirizzo: " + negozio.getIndirizzo());
 				System.out.println("Telefono: " + negozio.getTelefono());
 				System.out.println("Sito web: " + negozio.getSitoWeb());
