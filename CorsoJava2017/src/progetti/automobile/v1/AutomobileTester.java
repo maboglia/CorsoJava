@@ -1,5 +1,7 @@
 package progetti.automobile.v1;
 
+import java.util.Scanner;
+
 public class AutomobileTester {
 
 	public static void main(String[] args) {
