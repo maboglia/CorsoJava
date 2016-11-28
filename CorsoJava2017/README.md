@@ -224,8 +224,23 @@ Counter: OOP/java 62h - javascript 10h
 
 
 #Settimana 6 
-###LUNEDì 21/11/2016 9-13 14-18 8h
+###LUNEDì 21/11/2016 9-13 14-18 8h Java
+*	Ereditarietà in Java
 
-###MERCOLEDì 23/11/2016 9-13 
+###MERCOLEDì 23/11/2016 9-13 4h Javascript 
+*	esercizi javascript per la gestione degli eventi
 
-###VENERDì 25/11/2016 9-12 
+
+###VENERDì 25/11/2016 9-12 3h Java
+
+* Teoria:
+	Class design: diversi ruoli degli oggetti/attori del progetto
+	diverse classi con differenti relazioni tra esse
+
+* Esercizi
+	dato il main di una classe NegozioTester, sviluppare le classi Negozio e Prodotto
+	dato il main di una classe AutomobileTester, sviluppare le classi Automobile e Guidatore
+
+Counter: OOP/java 73h - javascript 14h	
+
+
