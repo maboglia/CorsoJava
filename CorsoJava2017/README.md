@@ -244,3 +244,30 @@ Counter: OOP/java 62h - javascript 10h
 Counter: OOP/java 73h - javascript 14h	
 
 
+#Settimana 7 
+###LUNEDì 28/11/2016 9-13 14-18 5h Java - 3h Javascript
+![Esempio Aggregazione](images/image010.jpg)
+*	Ereditarietà in Java
+	Slide OOP 
+		esempio Studente/Professore - Teatro
+	
+	Esercitazione guidata:
+		
+		zaino
+			arraylist
+			relazione d'uso
+		
+		dipendenti, 
+			arraylist, 
+			ereditarietà, 
+			late binding
+
+*	Javascript
+
+		esercizi base
+			operatori, booleans, logici
+		gioco
+			trenino che si muove, collisione
+				
+			
+

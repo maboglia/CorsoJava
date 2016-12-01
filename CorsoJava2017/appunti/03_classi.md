@@ -16,7 +16,7 @@ problemi molto comuni: l’interazione con
 l’utente e il trattamento di sequenze di
 caratteri
 Classi già pronte
-### Come la maggior parte dei linguaggi di
+###Come la maggior parte dei linguaggi di
 programmazione, Java è dotato di una libreria
 ( library ) di classi “pronte all’uso” che coprono
 molte esigenze comuni (e anche meno
@@ -33,7 +33,7 @@ classe pronta all’uso i passi da seguire sono:
 	* Se è istanziabile , come creo le istanze ?
 	* Quali metodi mi servono e come li uso ?
 Roadmap
-### 3. Uso di classi
+###3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
 	* Se è istanziabile , come creo le istanze ?
@@ -52,7 +52,7 @@ prima di programmare
 * Al contrario, leggere la documentazione è una delle
 attività più tipiche durante la programmazione
 Organizzazione delle classi
-### La libreria standard segue il metodo di
+###La libreria standard segue il metodo di
 organizzazione delle classi previsto da Java: le classi
 tra loro “affini” sono raggruppate in package
 * Ogni package ha un nome tipicamente composto da
@@ -96,7 +96,7 @@ viene assegnata ad un package “anonimo” che
 contiene, oltre ad essa, tutte le classi senza package
 presenti nella stessa directory
 Roadmap
-### 3. Uso di classi
+###3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
 	* Se è istanziabile , come creo le istanze ?
@@ -111,7 +111,7 @@ possono distinguere in due tipologie principali:
 * La stessa distinzione è applicabile alle “nostre”
 classi
 Classi istanziabili
-### Una classe istanziabile fornisce il prototipo di
+###Una classe istanziabile fornisce il prototipo di
 una famiglia di oggetti (istanze della classe) che
 hanno struttura simile ma proprietà distinte a
 livello individuale (valori diversi degli attributi e
@@ -131,7 +131,7 @@ differenziabili tra oggetti distinti
 * Esempi: BuongiornoMain , ValutaDriver ,
 AnnoDriver , Math , Collections , . . .
 Una precisazione
-### La distinzione tra classi istanziabili e non istanziabili
+###La distinzione tra classi istanziabili e non istanziabili
 riguarda il senso logico del loro utilizzo
 * Il termine “classe non istanziabile ” sarà utilizzato per
 indicare una classe che non ha senso istanziare , date
@@ -153,7 +153,7 @@ istanziabili è necessaria
 numerici appartengono a classi non
 istanziabili
 Istanziabili vs. non istanziabili
-### Nel caso di una classe istanziabile attributi e metodi
+###Nel caso di una classe istanziabile attributi e metodi
 rappresentano proprietà possedute da tutti gli oggetti
 istanza della classe
 * Ogni oggetto istanza di una classe ha una sua identità
@@ -205,7 +205,7 @@ static double cos(double a)
 static double sqrt(double
 static float ulp(float f)
 Classi istanziabili
-### Una classe istanziabile rappresenta “qualcosa”
+###Una classe istanziabile rappresenta “qualcosa”
 che esiste in molteplici versioni individuali che
 hanno una struttura comune ma ciascuna con
 una propria identità:
@@ -276,7 +276,7 @@ metodo è definito a livello di classe
 * Se la parola static non è presente l’attributo o
 metodo è definito a livello di istanza
 Il modificatore static
-### La parola riservata static viene usata per
+###La parola riservata static viene usata per
 indicare il Il
 livello
 di definizione del
@@ -312,7 +312,7 @@ concretamente a livello di classe
 – La sua esistenza non dipende da cosa fa il
 programma
 Tirando le somme
-### Una classe non istanziabile (come Math o
+###Una classe non istanziabile (come Math o
 BuongiornoMain )
 – non contiene nessun costruttore esplicito
 – dovrebbe contenere solo attributi e metodi static
@@ -434,7 +434,7 @@ almeno un’istanza
 qualunque attributo e metodo della stessa classe (se
 esiste l’istanza ovviamente esiste la classe)
 Errori subdoli
-### Eventuali mescolanze improprie di static e
+###Eventuali mescolanze improprie di static e
 non static causano errori di compilazione
 * Si può “accontentare” il compilatore facendo
 grossi errori concettuali (p.e. aggiungendo
@@ -522,7 +522,7 @@ System.out. println(dollaro.
 
 ##. . . ma il risultato sì !
 Roadmap
-### 3. Uso di classi
+###3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
 	* Se è istanziabile , come creo le istanze ?
@@ -542,7 +542,7 @@ stringhe (sequenze) di caratteri che possono essere
 modificate dopo essere state costruite (in Java 6 c’è
 anche una classe molto simile di nome StringBuilder )
 Definizione di variabili
-### tipo nome; oppure
+###tipo nome; oppure
 tipo nome1,..., nomeN ;
 String nome;
 StringBuffer risultato;
@@ -572,7 +572,7 @@ uguale o "compatibile" con la definizione della variabile
 * Ogni classe può avere più costruttori che si
 differenziano per la lista degli argomenti
 Costruttori
-### La classe String ha 15 costruttori alternativi in Java 6
+###La classe String ha 15 costruttori alternativi in Java 6
 (erano 11 in Java 2)
 * La classe StringBuffer ha 4 costruttori alternativi in
 Java 6 (erano 3 in Java 2)
@@ -590,7 +590,7 @@ Ciao ciao
 saluto
 null
 Varianti sul tema
-### L'operatore new può essere usato al
+###L'operatore new può essere usato al
 momento della definizione
 String saluto = new String("Ciao ciao");
 StringBuffer salutino = new StringBuffer("Bye");
@@ -612,7 +612,7 @@ String metodi classe
 StringBuffer metodi classe
 StringBuffer
 Roadmap
-### 3. Uso di classi
+###3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
 	* Se è istanziabile , come creo le istanze ?
@@ -627,7 +627,7 @@ istanze di una classe sono:
 	* confronto
 	* invocazione di metodi
 Operazioni su istanze
-### Le principali operazioni che si possono
+###Le principali operazioni che si possono
 effettuare sulle variabili che riferiscono
 istanze di una classe sono:
 	* assegnamento
@@ -691,7 +691,7 @@ null
 v1 v1
 v2 v2
 Il valore è il riferimento !
-### Il valore di una variabile di tipo strutturato è il
+###Il valore di una variabile di tipo strutturato è il
 riferimento ad un oggetto (istanza di una
 classe)
 * Una stessa variabile può riferire oggetti
@@ -713,7 +713,7 @@ all’oggetto per tutta la sua esistenza
 * Se un oggetto non è (più) riferito da nessuna variabile
 diventa irraggiungibile (e quindi inutilizzabile)
 Operazioni su istanze
-### Le principali operazioni che si possono
+###Le principali operazioni che si possono
 effettuare sulle variabili che riferiscono
 istanze di una classe sono:
 	* assegnamento
@@ -883,7 +883,7 @@ istanze di una classe sono:
 	* confronto
 	* invocazione di metodi
 Metodi
-### I metodi non static rappresentano operazioni
+###I metodi non static rappresentano operazioni
 effettuabili su singoli oggetti
 * La documentazione indica per ogni metodo il
 tipo ritornato e la lista degli argomenti formali
@@ -985,7 +985,7 @@ nomeVar.
 nomeVar . nomeMetodo(lista
 nomeMetodo (lista argomenti attuali)
 Argomenti attuali e formali
-### Ogni volta che si invoca un metodo si deve
+###Ogni volta che si invoca un metodo si deve
 specificare una lista di argomenti attuali
 * Gli argomenti attuali e formali sono in
 corrispondenza posizionale
@@ -1051,7 +1051,7 @@ System.out. println(rovescio);
 	* Se è istanziabile , cosa posso fare con le istanze ?
 	* Quali metodi mi servono e come li uso ?
 Lunghi elenchi
-### La documentazione di ogni classe ( istanziabile o
+###La documentazione di ogni classe ( istanziabile o
 no) contiene l’elenco dei metodi disponibili
 * La classe Math non è istanziabile e contiene 54
 metodi (tutti static ovviamente)
@@ -1071,7 +1071,7 @@ indirizzare la ricerca
 * In subordine, può essere utile anche la ricerca
 su Internet
 La ricerca del metodo
-### Se nessuno ci indirizza e nemmeno Internet ci
+###Se nessuno ci indirizza e nemmeno Internet ci
 aiuta si procede per tentativi seguendo
 l’ordine logico:
 – individuare il package
@@ -1091,7 +1091,7 @@ java. lang e sulla classe Math
 (anche) arrotondare vediamo se c’è un
 metodo con questo nome
 Overloading di metodi
-### Esistono due metodi round nella classe Math
+###Esistono due metodi round nella classe Math
 * I due metodi hanno lo stesso nome ma sono
 distinguibili in base alla lista degli argomenti: uno
 riceve in ingresso un argomento float , l’altro riceve in
@@ -1132,7 +1132,7 @@ alla versione 1.4
 * Il metodo indexOf (in 4 versioni) non fa
 esattamente quello che ci serve ma quasi . . .
 Uso “creativo” dei metodi
-### Il metodo indexOf (nella versione che riceve
+###Il metodo indexOf (nella versione che riceve
 in ingresso un char ) restituisce la posizione
 della prima occorrenza nella stringa del char
 specificato
