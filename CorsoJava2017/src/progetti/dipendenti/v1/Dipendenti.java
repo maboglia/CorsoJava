@@ -8,8 +8,8 @@ public class Dipendenti {
 		
 		int oreLavorate = 100;
 		
-		Lavoratore pippo = new Lavoratore("Pippo", "Rossi");
-		System.out.println(pippo.calcolaStipendio(oreLavorate));
+//		Lavoratore pippo = new Lavoratore("Pippo", "Rossi");
+//		System.out.println(pippo.calcolaStipendio(oreLavorate));
 
 		System.out.println("----------------");
 		
@@ -31,7 +31,7 @@ public class Dipendenti {
 		
 		ArrayList<Lavoratore> dipendenti = new ArrayList<>();
 		
-		dipendenti.add(pippo);
+//		dipendenti.add(pippo);
 		dipendenti.add(gino);
 		dipendenti.add(impiegato);
 		dipendenti.add(d1);

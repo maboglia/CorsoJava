@@ -1,6 +1,6 @@
 package progetti.dipendenti.v1;
 
-public class Lavoratore {
+public  class Lavoratore {
 
 	private String nome, cognome;
 	

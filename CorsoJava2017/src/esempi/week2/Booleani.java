@@ -1,4 +1,4 @@
-package week2;
+package esempi.week2;
 
 /**
  * Created by mauro on 13/06/16.
