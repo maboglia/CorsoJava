@@ -1,0 +1,44 @@
+<!DOCTYPE html/>
+<html>
+	<head>
+		<title>Stringhe</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<h1>todo list</h1>
+		<input type="text" id="todo" />
+		<button onclick="inserisciLista()">Aggiungi</button>
+	
+	<ul id="test">
+
+	</ul>
+
+	<script type="text/javascript">
+
+		//stringa mioTesto di prova
+		var mioTesto = "Lorem ipsum qualche cosa";
+		var todoItem = document.getElementById('todo');
+		var testJS = document.getElementById('test');
+		//alert(testJS.innerHTML);
+
+		testJS.innerHTML = mioTesto + " è lungo " +mioTesto.length + " caratteri";
+		 if(mioTesto.indexOf("ipsum") > -1) 
+		 	testJS.innerHTML += "la parola ipsum è contenuta nel tuo testo"  ;
+		 else
+		 	testJS.innerHTML = "la parola ipsum NON è contenuta nel tuo testo"  ;
+
+		 testJS.innerHTML = test.innerHTML + " ciao";
+
+
+function inserisciLista() {
+	
+	testJS.innerHTML += ("<li>" + todoItem.value +"</li>");
+
+}
+
+
+	</script>
+
+
+	</body>
+</html>
