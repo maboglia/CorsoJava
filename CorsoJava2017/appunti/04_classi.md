@@ -1,20 +1,18 @@
 #Introduzione alla Programmazione Orientata agli Oggetti (Object Oriented Programming – OOP)
                       
-##Sommario
-* 1 Programmazione Orientata agli Oggetti: concetti
-* 2 Programmazione Orientata agli Oggetti: highlights
-                      
+                 
 #Programmazione imperativa (1)
 Abbiamo visto come programmare utilizzando i seguenti tipi di dati:
 
 * Tipi di dato primitivi (int, double, char, boolean, ecc...) 
 * Le stringhe
 * Gli array
+
 I programmi fatti fino ad ora consistevano di una sequenza di comandi
 strutture di controllo (cicli, scelte condizionali, ecc...) ed eventualmente metodi ausiliari
 che consentivano di manipolare i dati per calcolare il risultato voluto.
 Questo modo di programmare prende il nome di
-PROGRAMMAZIONE IMPERATIVA
+_PROGRAMMAZIONE IMPERATIVA_
       (nota: imperativa in quanto basata su comandi)
                      
 ##Programmazione imperativa (2)
@@ -443,11 +441,14 @@ Heap: area di memoria in cui vengono caricati (allocati) tutti i vari oggetti cr
    
 
 ####Nell’ambiente delle classi
+
 * vengono memorizzati il codice dei metodi e le variabili statiche di tutte
 le classi del programma
 * sono le parti condivise dai vari oggetti della classe
 * le variabili statiche sono utilizzabili anche in assenza di oggetti
+
 ####Nello stack
+
 * vengono memorizzate le variabili locali dei metodi in esecuzione
 * per le variabili di tipi primitivi viene memorizzato il valore (esempio:
 somma)
@@ -456,11 +457,6 @@ somma)
 * per ogni oggetto creato vengono memorizzate le variabili d’istanza (ossia, le variabili non statiche)
 * ogni oggetto nell’heap contiene anche il nome della classe di appartenenza
    
- Sommario
-1 Condivisione di variabili tra classi (variabili statiche)
-2 Gestione della memoria nella Java Virtual Machine
-3 Riferimenti a oggetti
-
 ##Riferimenti (1)
 I riferimenti meritano un approfondimento.
 Abbiamo visto che una variabile di un tipo primitivo contiene direttamente il valore del dato
@@ -473,6 +469,7 @@ La modifica di y non modifica x y = 40;
                   int y = x;
            
 ##Riferimenti (2)
+
 Una variabile di un tipo classe contiene invece un riferimento a un oggetto La dichirazione della variabile primo di tipo Rettangolo alloca la
 memoria necessaria per contenere un riferimento (inizializzato a null)
 La creazione dell’oggetto primo alloca un nuovo oggetto e assegna un riferimento alla variabile
@@ -515,7 +512,7 @@ supponiamo di creare due oggetti di tipo Rettangolo
           Rettangolo primo = new Rettangolo(10,30); Rettangolo secondo = new Rettangolo(20,50);
              
 ##Garbage collection (2)
-ora assegnamo secondo a primo
+ora assegniamo secondo a primo
 come è possibile accedere al vecchio valore di primo (il rettangolo di dimensioni 10 e 30) ???
 Il vecchio oggetto è rimasto orfano... (nessun riferimento ad esso)
             Rettangolo primo = secondo;
