@@ -3,22 +3,24 @@
 
 * Java è un linguaggio fortemente tipato
 prevede un sofisticato utilizzo dei tipi (primitivi e classi) che consente di individuare molti errori al momento della compilazione del programma (prima dell'esecuzione vera e propria)
-Ciò nonostante si possono verificare varie situazioni impreviste o anomale durante l'esecuzione del programma
+* Ciò nonostante si possono verificare varie situazioni impreviste o anomale durante l'esecuzione del programma
 che possono causare l'interruzione del programma stesso Ad esempio:
-Tentativi di accedere a posizioni di un array che sono fuori dai limiti (indice negativo o maggiore della dimensione)
-Errori aritmetici (esempio: divisione per zero)
-Errori di formato: si chiede all'utente un intero e l'utente inserisce una stringa
+* Tentativi di accedere a posizioni di un array che sono fuori dai limiti (indice negativo o maggiore della dimensione)
+* Errori aritmetici (esempio: divisione per zero)
+* Errori di formato: si chiede all'utente un intero e l'utente inserisce una stringa
      
 ##Situazioni anomale a run-time (2)
 
 * Un po' di esempi:
-        public class ErroreArray {
+```java
+public class ErroreArray {
 public static void main(String[] args) {
 int[] a = {5,3,6,5,4};
 // attenzione al <=...
 for (int i=0; i<=a.length; i++) System.out.println(a[i]);
 System.out.println("Ciao"); }
 }
+```
                                                              
 ##Situazioni anomale a run-time (3)
 
