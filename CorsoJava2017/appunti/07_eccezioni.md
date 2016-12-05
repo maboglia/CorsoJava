@@ -32,7 +32,7 @@ int y = input.nextInt();
 System.out.println(x/y);
 // che succede se y == 0??
 } }
-                                                                   
+```                                                                   
 ##Situazioni anomale a run-time (4)
 
 ```java
@@ -71,7 +71,7 @@ try {
 catch (Exception e) {
 // ... comandi da eseguire in caso di eccezione
 }
-
+```
 
 // ... altri comandi non monitorati ....
          
@@ -96,7 +96,7 @@ catch (ArithmeticException e) {
 System.out.println("Non faccio la divisione..."); // gestita l'anomalia, l'esecuzione riprende...
 }
 System.out.println("Fine Programma"); }
-                                                            }
+```                                                            }
 ##Gestire eccezioni (2)
 
 * Altro esempio: la classe ErroreFormato... 
@@ -117,7 +117,7 @@ ok = false;
 } while (!ok);
 } 
 }
-                                                              
+```                                                              
 ##Gestire eccezioni (3)
 
 * Un costrutto try-catch può gestire più tipi di eccezione contemporaneamente
@@ -133,7 +133,7 @@ catch (NumberFormatException e) {
 .... }
 catch (Exception e) { ....
 }
-                                        
+```                                     
 ##Gestire eccezioni (4)
 
 * Per capire quando preoccuparsi di definire un gestore di eccezioni:
@@ -181,7 +181,7 @@ throw new Exception("errore generico"); .....
 }
 catch(Exception e) {
 ... }
-                                             
+```                                           
 ##Lanciare eccezioni (3)
 
 * L'utilizzo di throw dentro a un metodo consente di interrompere il metodo in caso di situazioni anomale
@@ -215,7 +215,7 @@ public void setBase(int x) throws EccezioneBaseNegativa { if (x<0) throw new Ecc
 else base=x;
 } 
 }
-                                                         
+```                                                       
 ##Lanciare eccezioni (5)
 
 * Dove la classe EccezioneBaseNegativa è definita banalmente così:
@@ -225,4 +225,4 @@ EccezioneBaseNegativa() { super ();
 }
 EccezioneBaseNegativa(String msg) { super(msg);
 } }
-                                                 
+```                                              
