@@ -21,10 +21,11 @@ for (int i=0; i<=a.length; i++) System.out.println(a[i]);
 System.out.println("Ciao"); }
 }
 ```
-                                                             
+
 ##Situazioni anomale a run-time (3)
 
-*          import java.util.Scanner; public class ErroreAritmetico {
+```java
+import java.util.Scanner; public class ErroreAritmetico {
 public static void main(String[] args) { Scanner input = new Scanner(System.in);
 System.out.println("Inserisci due interi"); int x = input.nextInt();
 int y = input.nextInt();
@@ -34,7 +35,9 @@ System.out.println(x/y);
                                                                    
 ##Situazioni anomale a run-time (4)
 
-*          import java.util.Scanner; public class ErroreFormato {
+```java
+import java.util.Scanner; 
+public class ErroreFormato {
 public static void main(String[] args) { Scanner input = new Scanner(System.in); System.out.println("Inserisci un intero"); int x = input.nextInt();
 // che succede se l'utente inserisce un carattere?
 System.out.println(x); }
@@ -45,12 +48,12 @@ System.out.println(x); }
 * In Java, le situazioni anomale che si possono verificare a run-time possono essere controllate tramite meccanismi di gestione delle eccezioni
 Esistono classi che descrivono le possibili anomalie
 Ogni volta che la Java Virtual Machine si trova in una situazione anomala;
-1. sospende il programma
-2. crea un oggetto della classe corrispondente all'anomalia che si è
+* 1. sospende il programma
+* 2. crea un oggetto della classe corrispondente all'anomalia che si è
 verificata
-3a. passa il controllo a un gestore di eccezioni (implementato dal
+* 3a. passa il controllo a un gestore di eccezioni (implementato dal
 programmatore)
-3b. se il programmatore non ha previsto nessun gestore, interrompe il
+* 3b. se il programmatore non ha previsto nessun gestore, interrompe il
 programma e stampa il messaggio di errore
 Bene... come si fa quindi a implementare un gestore di eccezioni? Tramite il costrutto try-catch
    
@@ -60,6 +63,7 @@ Bene... come si fa quindi a implementare un gestore di eccezioni? Tramite il cos
 monitorare una porzione di programma (all'interno di un metodo)
 specificare cosa fare in caso si verifichi una anomalia (eccezione) nella porzione di programma monitorata (gestione dell'eccezione)
 Si usa cosi:
+```java
           // ... comandi non monitorati ....
 try {
 // ... comandi monitorati ....
@@ -67,7 +71,9 @@ try {
 catch (Exception e) {
 // ... comandi da eseguire in caso di eccezione
 }
-                                                    // ... altri comandi non monitorati ....
+
+
+// ... altri comandi non monitorati ....
          
 #La gerarchia delle eccezioni
 La classe Exception descrive un'eccezine generica
@@ -75,7 +81,9 @@ Situazioni anomale piuòspecifiche sono descritte da sottoclassi di Exception
   
 ##Gestire eccezioni (1)
 
-* Aggiungiamo un gestore delle eccezioni alla classe ErroreAritmetico import java.util.Scanner;
+* Aggiungiamo un gestore delle eccezioni alla classe ErroreAritmetico 
+```java
+import java.util.Scanner;
 public class ErroreAritmetico2 {
 public static void main(String[] args) { Scanner input = new Scanner(System.in);
 System.out.println("Inserisci due interi"); int x = input.nextInt();
@@ -91,8 +99,12 @@ System.out.println("Fine Programma"); }
                                                             }
 ##Gestire eccezioni (2)
 
-* Altro esempio: la classe ErroreFormato... import java.util.Scanner;
-import java.util.InputMismatchException; public class ErroreFormato2 {
+* Altro esempio: la classe ErroreFormato... 
+```java
+import java.util.Scanner;
+import java.util.InputMismatchException; 
+
+public class ErroreFormato2 {
 public static void main(String[] args) {
 Scanner input = new Scanner(System.in); System.out.println("Inserisci un intero"); int x; boolean ok;
 do {
@@ -103,7 +115,8 @@ catch (InputMismatchException e) { input.nextLine(); // annulla l'input ricevuto
 ok = false;
 }
 } while (!ok);
-} }
+} 
+}
                                                               
 ##Gestire eccezioni (3)
 
@@ -112,6 +125,8 @@ I vari gestori (ognuno denotato da un catch) vengono controllati in sequenza
 Viene eseguito (solo) il primo catch che prevede un tipo di eccezione che è supertipo dell'eccezione che si è verificata
 Quindi, è meglio non mettere Exception per prima (verrebbe richiamata in tutti i casi)
 La variabile e è un oggetto che può contenere informazioni utili sull'errore che si è verificato... (vedere documentazione)
+```java
+
           try { ....
 }
 catch (NumberFormatException e) {
@@ -124,20 +139,22 @@ catch (Exception e) { ....
 * Per capire quando preoccuparsi di definire un gestore di eccezioni:
 bisogna avere un'idea di quali sono le eccezioni più comuni e in quali casi si verificano (esperienza)
 bisogna leggere la documentazione dei metodi di libreria che si utilizzano
-  ad esempio: la documentazione della classe Scanner spiega che il metodo nextInt() può lanciare l'eccezione InputMismatchException
+  ad esempio: 
+* la documentazione della classe Scanner spiega che il metodo nextInt() può lanciare l'eccezione InputMismatchException
 In alcuni casi le eccezioni non vanno gestite: segnalano un errore di programmazione che deve essere corretto!
-esempio: la classe ErroreArray lanciava un eccezione a causa di un errore nel ciclo for
+* esempio: la classe ErroreArray lanciava un eccezione a causa di un errore nel ciclo for
    
 ##Eccezioni checked e unchecked
 
 * In alcuni casi, inoltre, il compilatore obbliga a definire un gestore di eccezioni.
 Le eccezioni si dividono in:
-Checked (o controllate) per le quali il compilatore richiede che ci sia un gestore
-Unchecked (o non controllate) per le quali il gestore non è obbligatorio Tutte le eccezioni che abbiamo visto fino ad ora sono unchecked!
-Per essere unchecked un'eccezione deve essere una sottoclasse di RuntimeException, altrimenti è checked
+* Checked (o controllate) per le quali il compilatore richiede che ci sia un gestore
+* Unchecked (o non controllate) per le quali il gestore non è obbligatorio Tutte le eccezioni che abbiamo visto fino ad ora sono unchecked!
+* Per essere unchecked un'eccezione deve essere una sottoclasse di RuntimeException, altrimenti è checked
+
 Esempi tipici di eccezioni checked:
-le eccezioni che descrivono errori di input/output (lettura o scrittura su file, comunicazione via rete, ecc...)
-le eccezioni definite dal programmatore (vedremo)
+* le eccezioni che descrivono errori di input/output (lettura o scrittura su file, comunicazione via rete, ecc...)
+* le eccezioni definite dal programmatore (vedremo)
     
 ##Lanciare eccezioni (1)
 
@@ -148,6 +165,7 @@ una sua sottoclasse definita dal programmatore stesso
 throw si aspetta di essere seguito da un oggetto, che solitamente è
 costruito al momento (tramite new)
 Il costruttore di una eccezione prende come parametro (opzionale) una stringa di descrizione
+```java
            throw new Exception("Operazione non consentita");
                 throw new AritmeticException ();
                 throw new EccezionePersonalizzata ();
@@ -156,6 +174,7 @@ Il costruttore di una eccezione prende come parametro (opzionale) una stringa di
 
 * Il comando throw si può usare direttamente dentro un try-catch
 Ma in realtà l'uso più sensato di throw è all'interno dei metodi...
+ ```java
         try {
 .....
 throw new Exception("errore generico"); .....
@@ -177,27 +196,31 @@ in caso di problemi si lancia l'eccezione, non si restituisce un valore particol
 
 * Un metodo che contiene dei comandi throw deve elencare le eccezioni che possono essere sollevate
 L'elenco deve essere fatto nell'intestazione, usando la parola chiave
-throws
+*throws*
  Attenzione alla s finale:
-  throws si usa nell'intestazione del metodo
-  throw si usa all'interno (nel punto in cui si verifica l'errore)
+* throws si usa nell'intestazione del metodo
+* throw si usa all'interno (nel punto in cui si verifica l'errore)
          public void preleva(int somma)
 throws IOException , IllegalParameterException { ... }
              
 ##Lanciare eccezioni (4)
 
 * Esempio: controllo correttezza parametri
-        public class Rettangolo { private base;
+```java
+public class Rettangolo { private base;
 private altezza;
 // ... altri metodi e costruttori
+
 public void setBase(int x) throws EccezioneBaseNegativa { if (x<0) throw new EccezioneBaseNegativa()
 else base=x;
-} }
+} 
+}
                                                          
 ##Lanciare eccezioni (5)
 
 * Dove la classe EccezioneBaseNegativa è definita banalmente così:
-        public class EccezioneBaseNegativa extends Exception {
+```java
+public class EccezioneBaseNegativa extends Exception {
 EccezioneBaseNegativa() { super ();
 }
 EccezioneBaseNegativa(String msg) { super(msg);
