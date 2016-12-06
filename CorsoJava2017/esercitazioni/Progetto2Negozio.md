@@ -28,7 +28,7 @@ Realizzare il sistema software per la gestione di
  per volta. 
  
  Per attivare la promozione si utilizza il
- _metodo_ promozione() che riceve come parametri il codice
+ _metodo_ __promozione()__ che riceve come parametri il codice
  del _prodotto_ da promuovere e un intero che indica la
  percentuale di sconto da applicare (e.g., il numero
  intero 20 indica uno sconto del 20%). Per disabilitare
@@ -39,14 +39,14 @@ Realizzare il sistema software per la gestione di
  
  Ogni volta che viene letto il codice di un _prodotto_, la
  cassa accede ad un listino di prodotti e recupera il
- prezzo e la descrizione del _prodotto_. Il _metodo_ leggi(),
+ prezzo e la descrizione del _prodotto_. Il _metodo_ __leggi(),__
  restituisce informazioni sul pezzo acquistato.
  
  E' possibile, in qualsiasi momento, ottenere l'importo
  totale al lordo delle tasse attraverso il _metodo_
- totale(). E' inoltre possibile ottenere l'importo totale
- netto e l'ammontare dell'IVA attraverso i metodi netto()
- e tasse(). Il _metodo_ stampa() permette di stampare a
+ __totale().__ E' inoltre possibile ottenere l'importo totale
+ netto e l'ammontare dell'IVA attraverso i metodi __netto()__
+ e __tasse().__ Il _metodo_ __stampa()__ permette di stampare a
  video l'elenco degli articoli venduti; la lista è
- ordinata lessicograficamente. Il _metodo_ chiude() conclude
+ ordinata lessicograficamente. Il _metodo_ __chiude()__ conclude
  la registrazione dei prodotti venduti.
