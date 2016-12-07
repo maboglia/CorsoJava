@@ -16,12 +16,16 @@
 	<script type="text/javascript">
 
 		//stringa mioTesto di prova
-		var mioTesto = "Lorem ipsum qualche cosa";
+		var mioTesto = "Lorem ipsum qualche cosa qua";
+		var temp = mioTesto.indexOf("qua");
+		alert(mioTesto.indexOf("qua", temp + 1));
 		var todoItem = document.getElementById('todo');
 		var testJS = document.getElementById('test');
 		//alert(testJS.innerHTML);
 
 		testJS.innerHTML = mioTesto + " è lungo " +mioTesto.length + " caratteri";
+
+
 		 if(mioTesto.indexOf("ipsum") > -1) 
 		 	testJS.innerHTML += "la parola ipsum è contenuta nel tuo testo"  ;
 		 else

@@ -1,4 +1,4 @@
-<DOCTYPE html />
+<!DOCTYPE html />
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
@@ -7,25 +7,15 @@
 
 </head>
 <body>
-
 	<div id="container">
 		<h1>Todo List</h1>
-
 		<div>
-		<input type="text" id="inserisciItem"  /> 
-		<button id="btnInserisci">Aggiungi</button>
+			<input type="text" id="inserisciItem" placeholder="scrivi qui" /> 
+			<button id="btnInserisci">Aggiungi</button>
 		</div>
 
-
 		<ul id="todoList">
-
-
 		</ul>
-	
-
-
-
-
 	</div>
 
 
@@ -41,16 +31,11 @@
 				todoList.innerHTML += temp;
 				pulisciCampo();
 			}
-
 		});
 
 		function pulisciCampo () {
 			item.value = "";
-
 		}
-
-
-
 
 	</script>
 </body>

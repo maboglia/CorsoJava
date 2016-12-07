@@ -12,7 +12,11 @@
 
 		h1 {font-size: 2em;color: #C00;}
 		ul {border: 1px solid #ccc;width: 50%;}
-		li {font-size: 1.4em; border-bottom: 1px solid #ccc; padding:0.8em 1em;}
+		li {
+			font-size: 1.4em; 
+			border-bottom: 1px solid #ccc; 
+			padding:0.8em 1em;
+		}
 
 	</style>
 
@@ -31,9 +35,9 @@
 
 <script>
 	//riconosco gli elementi della pagina (del DOM) e li memorizzo in variabili JS
-	var nuovoElementoLista = document.getElementById("inserisciItem");
+	var nuovoElementoLista 		= document.getElementById("inserisciItem");
 	var btnInserisciQuandoPremi = document.getElementById("btnInserisci");
-	var miaTodoList = document.getElementById("todoList");
+	var miaTodoList 			= document.getElementById("todoList");
 
 	//al bottone collego un evento onclick e quando viene premuto parte una funzione
 	btnInserisciQuandoPremi.onclick = 
