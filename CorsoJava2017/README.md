@@ -269,8 +269,11 @@ Counter: OOP/java 73h - javascript 14h
 		gioco
 			trenino che si muove, collisione
 				
-			
-			
+###MERCOLEDì 30/11/2016 9-12 3h Java
+
+###GIOVEDì 01/12/2016 9-11 2h Java			
+
+Counter: OOP/java 83h - javascript 17h				
 			
 #Settimana 8 
 ###LUNEDì 05/12/2016 9-13 14-18 5h Java - 3h Javascript
@@ -289,6 +292,24 @@ array, stringhe (metodi sulle stringhe)
 	lampadina accendi-spegni
 
 ###MARTEDì 06/12/2016 9-12 3h Java 
+	proviamo un altro IDE: IntelliJIdea
+	gestione delle eccezioni, vd cartella appunti
+	blocco try-catch-finally
+	le parole chiave throws e throw
+	esercitazione-homework progetto negozio alimentari, come da specifiche
+	
+
+
+Counter: OOP/java 91h - javascript 20h	
+
+			
+#Settimana 9 
+###LUNEDì 12/12/2016 9-13 14-18 5h Java - 3h Javascript
+
+
+###MERCOLEDì 14/12/2016 9-1
+
+###VENERDì 16/12/2016 9-1
 
 
 
