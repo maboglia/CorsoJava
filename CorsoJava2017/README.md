@@ -270,4 +270,30 @@ Counter: OOP/java 73h - javascript 14h
 			trenino che si muove, collisione
 				
 			
+			
+			
+#Settimana 8 
+###LUNEDì 05/12/2016 9-13 14-18 5h Java - 3h Javascript
+
+##java
+* OOP design, ereditarietà
+
+
+* Esercitazione 02 Java - scritta - OCA Java 1
+
+##javascript: 
+array, stringhe (metodi sulle stringhe)
+* esercizi: 
+	todo-list, 
+	slideshow banksy, 
+	lampadina accendi-spegni
+
+###MARTEDì 06/12/2016 9-12 3h Java 
+
+
+
+
+
+
+
 
