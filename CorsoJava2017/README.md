@@ -304,10 +304,23 @@ Counter: OOP/java 91h - javascript 20h
 
 			
 #Settimana 9 
+
 ###LUNEDì 12/12/2016 9-13 14-18 5h Java - 3h Javascript
 
+###LUNEDì 12/12/2016 9-13 14-18 8h Java
 
-###MERCOLEDì 14/12/2016 9-1
+	Java
+	interfacce
+	esempio classificazione animali, mammiferi
+	esercitazione negozio alimentari con eccezioni, interfacce e hashmap
+	restituzione esercitazione 2 java
+	
+	Javascript
+	array e oggetti
+	DOM
+
+
+###MERCOLEDì 14/12/2016 9-12
 
 ###VENERDì 16/12/2016 9-1
 
