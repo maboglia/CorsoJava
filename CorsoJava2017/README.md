@@ -304,14 +304,14 @@ Counter: OOP/java 91h - javascript 20h
 
 			
 #Settimana 9 
-###LUNEDì 12/12/2016 9-13 14-18 8h Java
-*	Java
+###LUNEDì 12/12/2016 9-13 14-18 5h Java - 3h Javascript
+	Java
 	interfacce
 	esempio classificazione animali, mammiferi
-	esercitazione negozio alimentari con interfacce e hashmap
+	esercitazione negozio alimentari con eccezioni, interfacce e hashmap
 	restituzione esercitazione 2 java
 	
-*	Javascript
+	Javascript
 	array e oggetti
 	DOM
 
