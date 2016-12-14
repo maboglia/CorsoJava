@@ -307,8 +307,6 @@ Counter: OOP/java 91h - javascript 20h
 
 ###LUNEDì 12/12/2016 9-13 14-18 5h Java - 3h Javascript
 
-###LUNEDì 12/12/2016 9-13 14-18 8h Java
-
 	Java
 	interfacce
 	esempio classificazione animali, mammiferi
@@ -321,6 +319,9 @@ Counter: OOP/java 91h - javascript 20h
 
 
 ###MERCOLEDì 14/12/2016 9-12
+	Java
+	JCF: HashSet e TreeSet
+	Vector, HashSet e TreeSet, lettura file canto 1 inferno
 
 ###VENERDì 16/12/2016 9-1
 
