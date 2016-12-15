@@ -65,6 +65,190 @@ undefined e null
 --------------
 
 JS può modificare il contenuto HTML
+
+---
+
+## Adding JavaScript to your page
+
+```html
+<html>
+<head>
+    <title>My First Web Page</title>
+    <script>
+   
+    var sayHello = function(){
+        alert("Hello there!");
+    };
+
+    </script>
+</head>
+<body>
+    <h1>My First Web Page</h1>  
+    <button onclick="sayHello()">Click me!</button>
+</body>
+</html>
+```
+
+---
+
+
+---
+
+# Asking the user for information
+
+---
+
+## Asking the user for information
+
+```html
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My First Web Page</title>
+    <script>
+   
+    var sayHello = function(){
+        alert("Hello there!");
+    };
+
+    </script>
+</head>
+<body>
+    <h1>My First Web Page</h1>  
+    <button onclick="sayHello()">Click me!</button>
+</body>
+</html>
+```
+
+---
+
+## Asking the user for information
+
+```html
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My First Web Page</title>
+    <script>
+   
+    var sayHello = function(){
+        var name = prompt("What is your name?");
+        alert("Pleased to meet you, " + name);
+    };
+
+    </script>
+</head>
+<body>
+    <h1>My First Web Page</h1>
+    <button onclick="sayHello()">Click me!</button>
+</body>
+</html>
+```
+
+
+---
+
+## Changing the page
+
+```html
+<h1 id="name"></h1>
+```
+
+---
+
+## Changing the page
+
+```javascript
+document.getElementById("name").innerHTML = "Pleased to meet you, " + name;
+```
+
+---
+
+## Changing the page
+
+```html
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My First Web Page</title>
+    <script>
+   
+    var sayHello = function(){
+        var name = prompt("What is your name?");
+        document.getElementById("name").innerHTML = "Pleased to meet you, " + name;
+    };
+
+    </script>
+</head>
+<body>
+    <h1>My First Web Page</h1>
+    <button onclick="sayHello()">Click me!</button>
+    <h1 id="name"></h1>
+</body>
+</html>
+```
+
+---
+
+## Task: Add the code to change the page when the user enters their name
+
+---
+
+## Creating a simple form
+
+---
+
+## Creating a simple form
+
+```html
+<input id="age"/>
+<button onclick="ageInDogYears()">My Age in Dog Years</button>
+<h2 id="dogyears"></h2>
+```
+
+---
+
+## Creating a simple form
+
+```javascript
+var ageInDogYears = function(){
+    var age = document.getElementById("age").value;
+    var ageInDogYears = age * 7;
+    document.getElementById("dogyears").innerHTML = "In dog years, you are " + ageInDogYears + " years old";
+}
+```
+
+---
+
+## Creating a simple form
+
+```html
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My First Web Page</title>
+    <script>
+    var ageInDogYears = function(){
+        var age = document.getElementById("age").value;
+        var ageInDogYears = age * 7;
+        document.getElementById("dogyears").innerHTML = "In dog years, you are " + ageInDogYears + " years old";
+    }
+    </script>
+</head>
+<body>
+    <h1>My First Web Page</h1>
+    <input id="age"/>
+    <button onclick="ageInDogYears()">My Age in Dog Years</button>
+    <h2 id="dogyears"></h2>
+</body>
+</html>
+```
+
+---
+
+
+
+
 ```javascript
 <!DOCTYPE html>
 <html>

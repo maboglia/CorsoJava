@@ -27,17 +27,17 @@
 
 ###creare un array
 ```javascript
-var student1 = 'Ethan';
-var student2 = 'Jose';
-var student3 = 'Cooper';
-var student4 = 'Rosa';
-var student5 = 'Christina';
-var student6 = 'Allan';
-var student7 = 'Brad';
+var student1 = 'Paperino';
+var student2 = 'Pippo';
+var student3 = 'Pluto';
+var student4 = 'Paperina';
+var student5 = 'Topolino';
+var student6 = 'Minnie';
+var student7 = 'Ciccio';
 ```
 
 ```javascript
-var students = ['Ethan', 'Jose', 'Cooper', 'Rosa', 'Christina', 'Allan', 'Brad'];
+var students = ['Paperino', 'Pippo', 'Pluto', 'Paperina', 'Topolino', 'Minnie', 'Ciccio'];
 ```
 ---
 
@@ -112,8 +112,8 @@ students;
 ## Concatenare Arrays
 
 ```javascript
-var mondayClass = ['Cooper', 'Rosa'];
-var tuesdayClass = ['Ethan', 'Jose'];
+var mondayClass = ['Pluto', 'Paperina'];
+var tuesdayClass = ['Paperino', 'Pippo'];
 var bothClasses = mondayClass.concat(tuesdayClass);
 ```
 
