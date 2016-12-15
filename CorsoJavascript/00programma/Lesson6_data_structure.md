@@ -26,7 +26,7 @@ console.log(languages.length);
 ```javascript
 var languages = ["HTML", "CSS", "JavaScript", "Python", "Ruby"];
 
-for(var i=0; i<languages.length; i++){
+for(var i=0; i < languages.length; i++){
  console.log(languages[i]);   
 }
 ```
