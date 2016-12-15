@@ -1,6 +1,11 @@
 #Lesson1 Introduction To Javascript
 
 ##programma
+
+
+
+
+
 cos'è JavaScript
 incontra JS
 perché imparare JS
@@ -472,107 +477,8 @@ fruits[Math.floor(Math.random() * 5)]
     formati e metodi per le date
     metodi get e metodi set
 
-*   JS array
-    cos'è un array
-    ###creare un array
-```javascript
-var student1 = 'Ethan';
-var student2 = 'Jose';
-var student3 = 'Cooper';
-var student4 = 'Rosa';
-var student5 = 'Christina';
-var student6 = 'Allan';
-var student7 = 'Brad';
-```
+[JS array](Lesson2_array.md)
 
-```javascript
-var students = ['Ethan', 'Jose', 'Cooper', 'Rosa', 'Christina', 'Allan', 'Brad'];
-```
-
-    accedere agli elementi di un array
-    si possono avere oggetti differenti in un array
-    gli array sono oggetti
-    proprietà e metodi degli array
-    la proprietà length
-    aggiungere elementi a un array
-    scorrere gli elementi di un array
-    JS non supporta gli array associativi
-    la differenza tra array e oggetti
-    valueOf() e toString() convertire array a stringhe
-    join() come to string, ma puoi usare un separatore
-    push() aggiunge elementi all'array
-    pop() rimuove l'ultimo elemento dell'array
-    shift() rimuove il primo elemento di un'array
-    indice dell'array per accedere / modificare un valore
-    delete: lascia buchi undefined, usare pop o splice
-    splice() 
-    sort()  ordinare un array
-    reverse() invertire l'ordine di un array
-    concat() unire array
-    slice() restituisce una parte di array indicato dagli argomenti start e end
-
-
----
-
-## Inserting and Removing Elements
-
-```javascript
-students.push('Mako');
-```
-
----
-
-## Inserting and Removing Elements
-
-```javascript
-students.pop();
-```
-
----
-
-## Get the length of an array
-
-```javascript
-students.length
-```
-
----
-
-## Indexing an array
-
-```javascript
-students[0]
-```
-
----
-
-## Indexing an array
-
-```javascript
-students[1] = 'Simon';
-students;
-```
-
----
-
-## Joining Arrays
-
-```javascript
-var mondayClass = ['Cooper', 'Rosa'];
-var tuesdayClass = ['Ethan', 'Jose'];
-var bothClasses = mondayClass.concat(tuesdayClass);
-```
-
----
-
-## Turning Arrays into Strings
-
-```javascript
-bothClasses.toString();
-bothClasses.join(' and ');
-```
-
----
     
 Boolean() verifica se un'espressione è booleana
 Comparazione e Operatori  logici
