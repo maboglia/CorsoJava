@@ -65,18 +65,18 @@ undefined e null
 --------------
 
 JS può modificare il contenuto HTML
-
+```javascript
 <!DOCTYPE html>
 <html>
 <body>
 
-<h1>JavaScript Can Validate Input</h1>
+<h1>JavaScript Validate Input</h1>
 
-<p>Please input a number between 1 and 10:</p>
+<p>Inserisci un nmero tra 1 e 10:</p>
 
 <input id="numb" type="number">
 
-<button type="button" onclick="myFunction()">Submit</button>
+<button type="button" onclick="myFunction()">Invia</button>
 
 <p id="demo"></p>
 
@@ -99,7 +99,7 @@ function myFunction() {
 
 </body>
 </html> 
-
+```
 JS può modificare gli attributi HTML
 JS può modificare gli stili CSS / HTML
 JS può validare i dati
