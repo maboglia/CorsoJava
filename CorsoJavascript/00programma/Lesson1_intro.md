@@ -3,9 +3,6 @@
 ##programma
 
 
-
-
-
 cos'è JavaScript
 incontra JS
 perché imparare JS
@@ -13,8 +10,8 @@ scrivi un'istruzione JS
 la struttura di un programma JS
 sintassi
 commenti
-###step 2
-    tipi di dati e variabili
+
+###tipi di dati e variabili
 convenzioni di naming
 crea una nuova varibile usando Math
 incrementare e decrementare
@@ -30,8 +27,8 @@ Booleans
     operazioni logiche
     comparazione tra numeri e valori booleani
 undefined e null
-###step 3
-    Arrays
+
+###Arrays
     perché devi saper utilizzare gli array
     creazione di un array
     accesso a i dati di un array
@@ -45,8 +42,8 @@ undefined e null
         trova la strada di casa
         decision maker
         crea un generatore di frasi random
-###step 4
-    Objects
+
+###Objects
     creare un oggetto
         chiavi senza quote
     accedere ai valori di un oggetto
@@ -58,8 +55,8 @@ undefined e null
     cose utili da fare con gli oggetti
         tieni traccia delle spese
         raccogli informazioni sui tuoi film preferiti
-###step 6
-    condizioni e cicli
+
+###condizioni e cicli
     condizioni
         if statement
         if...else
@@ -67,10 +64,17 @@ undefined e null
         ciclo while
         ciclo for
 
---------------
+---
 
 JS può modificare il contenuto HTML
+```
+*   JS può modificare gli attributi HTML
+*   JS può modificare gli stili CSS / HTML
+*   JS può validare i dati
 
+###dove scrivere JS
+    *   JS in head o body
+    *   JS in un file esterno: vantaggi
 ---
 
 ## Adding JavaScript to your page
@@ -201,10 +205,6 @@ document.getElementById("name").innerHTML = "Pleased to meet you, " + name;
 
 ## Creating a simple form
 
----
-
-## Creating a simple form
-
 ```html
 <input id="age"/>
 <button onclick="ageInDogYears()">My Age in Dog Years</button>
@@ -252,7 +252,7 @@ var ageInDogYears = function(){
 ---
 
 
-
+##Validate Input
 
 ```javascript
 <!DOCTYPE html>
@@ -288,13 +288,7 @@ function myFunction() {
 
 </body>
 </html> 
-```
-*   JS può modificare gli attributi HTML
-*   JS può modificare gli stili CSS / HTML
-*   JS può validare i dati
-dove scrivere JS
-    *   JS in head o body
-    *   JS in un file esterno: vantaggi
+
 *   JS mostrare a video i dati
     window.alert()
     document.write()
