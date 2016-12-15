@@ -24,7 +24,8 @@
 
 *   JS array
     cos'è un array
-    ###creare un array
+
+###creare un array
 ```javascript
 var student1 = 'Ethan';
 var student2 = 'Jose';
@@ -38,16 +39,19 @@ var student7 = 'Brad';
 ```javascript
 var students = ['Ethan', 'Jose', 'Cooper', 'Rosa', 'Christina', 'Allan', 'Brad'];
 ```
+---
 
-    accedere agli elementi di un array
-    si possono avere oggetti differenti in un array
-    gli array sono oggetti
-    proprietà e metodi degli array
-    la proprietà length
-    aggiungere elementi a un array
-    scorrere gli elementi di un array
-    JS non supporta gli array associativi
-    la differenza tra array e oggetti
+* accedere agli elementi di un array
+* si possono avere oggetti differenti in un array
+* gli array sono oggetti
+* proprietà e metodi degli array
+* la proprietà length
+* aggiungere elementi a un array
+* scorrere gli elementi di un array
+* JS non supporta gli array associativi
+* la differenza tra array e oggetti
+---
+##alcuni metodi
     valueOf() e toString() convertire array a stringhe
     join() come to string, ma puoi usare un separatore
     push() aggiunge elementi all'array
