@@ -127,4 +127,6 @@ bothClasses.join(' and ');
 ```
 
 ---
+
+[altri appunti sugli array](Lesson6_data_structure.md)
     
