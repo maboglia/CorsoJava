@@ -100,28 +100,28 @@ function myFunction() {
 </body>
 </html> 
 ```
-JS può modificare gli attributi HTML
-JS può modificare gli stili CSS / HTML
-JS può validare i dati
+*   JS può modificare gli attributi HTML
+*   JS può modificare gli stili CSS / HTML
+*   JS può validare i dati
 dove scrivere JS
-    JS in head o body
-    JS in un file esterno: vantaggi
-JS mostrare a video i dati
+    *   JS in head o body
+    *   JS in un file esterno: vantaggi
+*   JS mostrare a video i dati
     window.alert()
     document.write()
     innerHTML
     console.log()
-JS statements, semicolon
-JS Values
-JS Literals
-JS Variabili
-    unique identifiers
+*   JS statements, semicolon
+*   JS Values
+*   JS Literals
+*   JS Variabili
+        identificatore univoco
         operatori di assignment
     dichiarazione/creazione di variabili
     dichiarazione/creazione su una sola riga
     value undefined
     
-JS operatori
+*   JS operatori
     operatori aritmetici
     operatori di assegnamento
     operatori su stringhe
@@ -129,7 +129,7 @@ JS operatori
     comparazione e operatori logici
     operatori e operandi
     precedenza degli operatori
-JS tipi di dato
+*   JS tipi di dato
     tipi dinamici
     stringhe
     numeri
@@ -141,7 +141,7 @@ JS tipi di dato
     empty values
     null
     differenza tra null e undefined
-JS funzioni ed eventi
+*   JS funzioni ed eventi
     sintassi
     invocare le funzioni
     return
@@ -151,25 +151,25 @@ JS funzioni ed eventi
     scope delle variabili, variabili globali (automatiche) e locali
     ciclo vita delle variabili
 
-JS keywords
-JS commenti
+*   JS keywords
+*   JS commenti
     //commenti su una riga
     /*
         commenti
         su più righe
     */
-JS è case sensitive
-JS convenzioni di naming: CamelCase
-JS Character Set
-JS Statements
-JS Objects
+*   JS è case sensitive
+*   JS convenzioni di naming: CamelCase
+*   JS Character Set
+*   JS Statements
+*   JS Objects
     oggetti della vita reale (e classi)
     proprietà e metodi
     definizione di oggetti
     accedere alle proprietà degli oggetti
     accedere ai metodi degli oggetti
     non dichiarare stringhe, numeri e booleans come oggetti
-JS events
+*   JS events
     HTML eventi
         onchange
         onclick
@@ -177,8 +177,8 @@ JS events
         onmouseout
         onkeydown
         onload
-        cosa può fare JS utilizzando i gestori di eventi (handlers)
-JS strings
+        cosa può fare * JS utilizzando i gestori di eventi (handlers)
+*   JS strings
     length
     caratteri speciali
         apici, doppi apici, escape
@@ -196,11 +196,11 @@ JS strings
         charAt(position)
         charCodeAt(position) ritorna il carattere Unicode
         split(separatore) converte una stringa in un array
-JS numbers
+*   JS numbers
     sono SEMPRE float a 64-bit
     il numero massimo di decimali è 17 e la virgola mobile non è sempre accurata
     il prefisso 0x permette di usare i numeri esadecimali
-    In JS esiste Infinity e -Infinity
+    In *    JS esiste Infinity e -Infinity
     NaN not a number: operazioni aritmetiche con le stringhe restituiscono NaN
     proprietà e metodi
         Number()
@@ -221,15 +221,90 @@ Math Object
     Math costanti
     vedi elenco reference completo
 
-JS Date 
+
+---
+
+## Random Numbers
+
+```javascript
+Math.random();
+```
+
+---
+
+## Random Number between 1 and 10
+```javascript
+Math.random() * 10;
+```
+--- 
+
+## Rounding down and up a number
+
+```javascript
+Math.floor(3.141592);
+Math.ceil(4.01);
+Math.floor(10.99999);
+Math.ceil(10.99999);
+```
+---
+
+## Generating whole random numbers between 0 and 9
+
+```javascript
+Math.floor(Math.random() * 10);
+```
+
+---
+
+## Random Fruit Selection!
+
+```javascript
+var fruits = ['Apple', 'Banana', 'Cherry', 'Pineapple', 'Kiwi'];
+fruits[Math.floor(Math.random() * 5)]
+```
+
+---
+
+## Would you like some random fruit?
+
+```javascript
+"Would you like some " + fruits[Math.ceil(Math.random() * 5)] + "?"
+```
+
+---
+
+# Body Parts!
+
+- Create three arrays: different numbers, different adjectives and an array of different body parts. 
+- Select a number, adjective and body part at random
+- Write some code that will prints "I like your 5 big arms!" or "I like your 10 smelly feet!"
+
+
+
+
+*   JS Date 
     mostrare le date
     creare l'oggetto Date()
     formati e metodi per le date
     metodi get e metodi set
 
-JS array
+*   JS array
     cos'è un array
-    creare un array
+    ###creare un array
+```javascript
+var student1 = 'Ethan';
+var student2 = 'Jose';
+var student3 = 'Cooper';
+var student4 = 'Rosa';
+var student5 = 'Christina';
+var student6 = 'Allan';
+var student7 = 'Brad';
+```
+
+```javascript
+var students = ['Ethan', 'Jose', 'Cooper', 'Rosa', 'Christina', 'Allan', 'Brad'];
+```
+
     accedere agli elementi di un array
     si possono avere oggetti differenti in un array
     gli array sono oggetti
@@ -251,7 +326,71 @@ JS array
     reverse() invertire l'ordine di un array
     concat() unire array
     slice() restituisce una parte di array indicato dagli argomenti start e end
-    Boolean() verifica se un'espressione è booleana
+
+
+---
+
+## Inserting and Removing Elements
+
+```javascript
+students.push('Mako');
+```
+
+---
+
+## Inserting and Removing Elements
+
+```javascript
+students.pop();
+```
+
+---
+
+## Get the length of an array
+
+```javascript
+students.length
+```
+
+---
+
+## Indexing an array
+
+```javascript
+students[0]
+```
+
+---
+
+## Indexing an array
+
+```javascript
+students[1] = 'Simon';
+students;
+```
+
+---
+
+## Joining Arrays
+
+```javascript
+var mondayClass = ['Cooper', 'Rosa'];
+var tuesdayClass = ['Ethan', 'Jose'];
+var bothClasses = mondayClass.concat(tuesdayClass);
+```
+
+---
+
+## Turning Arrays into Strings
+
+```javascript
+bothClasses.toString();
+bothClasses.join(' and ');
+```
+
+---
+    
+Boolean() verifica se un'espressione è booleana
 Comparazione e Operatori  logici
     if()
     operatore ternario
