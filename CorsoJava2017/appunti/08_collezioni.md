@@ -648,7 +648,7 @@ System.out.println(System.getProperty("java.home"));
 
 Oppure si potrebbe impostare una nuova proprietà mediante il codice:
 
-System.setProperty("giuseppe.cognome", "Liccardo");
+System.setProperty("Claudio.cognome", "De Sio");
 
 Un elenco con tutte le properties di sistema è riportato in basso.
 
@@ -927,8 +927,8 @@ Eventualmente può essere valorizzata con dei valori, tra parentesi tonde come c
 Un’annotazione si presente nella seguente forma.
 
 @Autore(
-  name = "Giuseppe Liccardo",
-  company = "informaticaparthenope.it"
+  name = "Claudio De Sio",
+  company = "informatica.it"
 )
 class ClasseAnnotata() {
   ...
