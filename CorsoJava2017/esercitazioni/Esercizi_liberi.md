@@ -91,6 +91,33 @@ public void laurea(){...} }
 	dell'utilizzo del campo.
 
 
+
+
+
+
+##Esercizio. Archivio MP3
+	Uno studente desidera implementare un archivio elettronico con tutti i brani
+	musicali in formato mp3 contenuti nel suo pc.
+	L'archivio tiene traccia di tutti i cd, artisti e generi di pertinenza dei brani
+	catalogati. Ad esempio, due brani dello stesso cd avranno come variabile
+	d'istanza album due riferimenti allo stesso cd, contenuto nella variabile
+	d'istanza cds specificata per la classe Archivio.
+	Allo stesso modo, due cd dello stesso genere avranno come variabile d'istanza
+	genere due riferimenti allo stesso genere, contenuto nella variabile d'istanza
+	generi specificata per la classe Archivio.
+	Non devono dunque mai essere duplicati i cd, oppure i generi.
+	Bisogna invece "condividere" questi dati ogni volta che sia possibile.
+	Quando si deve aggiungere un nuovo brano nell'archivio, vengono specificate
+	tutte le coordinate: artista, cd e genere.
+	Se viene trovato il cd a cui il brano appartiene, ci si deve riferire a
+	quell'oggetto e non duplicarlo.
+	Se invece tale oggetto non esiste nell'archivio (ovvero si tratta del primo
+	brano acquisito di questo cd)si deve allora creare anche il nuovo oggetto che
+	rappresenti il cd.
+	Stesso discorso vale per il genere e l'artista: si deve creare una nuova istanza
+	solamente se non ne esiste alcuna.
+
+
 ##Esercizio. concessionario d'auto.
 
 	Supponiamo di voler gestire i dati relativi ai modelli in vendita presso un concessionario d'auto.
