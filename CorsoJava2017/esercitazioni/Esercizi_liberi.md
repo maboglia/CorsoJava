@@ -1,33 +1,33 @@
 ##Esercizio. Gestione di una biblioteca
-	Una biblioteca ha dato l’incarico di implementare un software per la gestione
+	Una biblioteca ha dato l'incarico di implementare un software per la gestione
 	dei prestiti di libri. Si costruiscano le seguenti classi:
-	- Data: serve per costruire “l’orologio” virtuale. Implementare tre
-	variabili d’istanza e i metodi: int getDay(), int getMonth(), int
+	- Data: serve per costruire “l'orologio” virtuale. Implementare tre
+	variabili d'istanza e i metodi: int getDay(), int getMonth(), int
 	getYear(), void setDay(int aDay), void setMonth(int aMonth), void
 	setYear(int aYear), void nextDay(), Boolean isEqual(Data date).
-	- Abbonato: costruisce l’oggetto utente. Essa ha due variabili
-	d’istanza e i seguenti metodi: String getCognome(), String getNome()
-	- Libro: costruisce l’oggetto libro. Ha tre variabili d’istanza:
+	- Abbonato: costruisce l'oggetto utente. Essa ha due variabili
+	d'istanza e i seguenti metodi: String getCognome(), String getNome()
+	- Libro: costruisce l'oggetto libro. Ha tre variabili d'istanza:
 	titolo, utente a cui è prestato, data scadenza del prestito. Ha
 	inoltre i relativi metodi accessori.
 	- Archivio: essa implementa due arrayList, una contenente gli abbonati
-	alla biblioteca e l’altra i libri presenti, oltre ad un riferimento
+	alla biblioteca e l'altra i libri presenti, oltre ad un riferimento
 	alla data, e i seguenti metodi: void nuovoLibro(String unTitolo),
 	void nuovoUtente(String unNome, String unCognome), int
 	trovaUtente(String unNome, String unCognome), Data scadenza(Data
 	date), int presta(Libro unLibro, Abbonato unUtente), void aggiorna()
-	[si riferisce all’aggiornamento dell’ora], int numLibri(Abbonato
+	[si riferisce all'aggiornamento dell'ora], int numLibri(Abbonato
 	anAbb) [restituisce il numero di libri posseduti da un dato utente]
 	Consigli:
 	Le classi Data, Abbonato e Libro non presentano particolari difficoltà
-	d’esecuzione. La classe Archivio, invece, può risultare di difficile
+	d'esecuzione. La classe Archivio, invece, può risultare di difficile
 	implementazione, in particolare:
 	- presta(Libro unLibro, Abbonato unUtente): si passa in rassegna
-	l’arraylist contenente i libri, se una copia del libro cercato
+	l'arraylist contenente i libri, se una copia del libro cercato
 	esiste e non è in prestito, viene assegnata una data di scadenza per
-	la restituzione e l’utente che l’ha preso in prestito;
+	la restituzione e l'utente che l'ha preso in prestito;
 	- aggiorna(): aggiorna la data, se un libro deve essere restituito nel
-	medesimo giorno, allora si resettano i dati sull’utente possessore.
+	medesimo giorno, allora si resettano i dati sull'utente possessore.
 	- numLibri(Abbonato anAbb): restituisce quanti libri possiede un dato
 	utente
 
