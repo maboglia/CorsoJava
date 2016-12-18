@@ -154,7 +154,7 @@ public void laurea(){...} }
 	Si vuole simulare il traffico automobilistico in prossimità di un semaforo
 	stradale. Si assuma una classe Auto, avente la variabile d'istanza targa
 	(stringa) e gli usuali metodi (non sviluppare il codice relativo).
-	La classe Semaforo è cos`ı definita:
+	La classe Semaforo è così definita:
 ```java
 
 	public class Semaforo {
@@ -217,8 +217,8 @@ public void laurea(){...} }
 	posti per un concerto. Si sviluppi una classe Cliente avente come variabili
 	d'istanza il nominativo ed numero telefonico del cliente, rappresentati entrambi
 	come stringhe, con i relativi metodi di accesso ed un costruttore. Si sviluppi
-```java
 	inoltre la seguente classe:
+```java
 	public class Spettacolo {
 	private Cliente[] prenotazioni;
 	private int n_prenotazione;
