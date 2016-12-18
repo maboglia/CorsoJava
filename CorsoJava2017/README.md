@@ -325,9 +325,9 @@ Counter: OOP/java 91h - javascript 20h
 
 ###VENERDì 16/12/2016 9-12 3h Javascript
 	JavaScript
-
+	Array e Oggetti in JS
+	
 Counter: OOP/java 99h - javascript 26h	
-
 
 #Settimana 10 
 
@@ -335,7 +335,7 @@ Counter: OOP/java 99h - javascript 26h
 
 	Java
 	focus date, valute
-	recap
+	recap 
 	JCF
 	info sistema > scrivi su file
 	
