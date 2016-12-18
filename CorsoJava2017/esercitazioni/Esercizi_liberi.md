@@ -40,41 +40,41 @@
 	il codice: definite tali metodi ogniqualvolta lo ritenete opportuno.
 
 ```java
-	public class Esame {
-	private String nome;
-	private int crediti;
-	private int voto;
-	public Esame(String unNomeEsame, int numCrediti){...}
-	public String getNome(){...}
-	public String getCrediti(){...}
-	public String getVoto(){...}
-	public void setVoto(int unVoto){...}
-	public String toString(){...} }
-	public class Studente {
-	private String nome;
-	private int matricola;
-	private ArrayList<Esame> esamiSostenuti;
-	private ArrayList<Esame> pianoStudio;
-	public Studente(String unNomeStudente, int unaMatricola){...}
-	public String getNome(){...}
-	public String getMatricola(){...}
-	public void aggiungiEsame(String unNomeEsame, int numCrediti){...}
-	public void promosso(String unNomeEsame, int unVoto){...}
-	public void cancella(String unNomeEsame){...}
-	public double media(){...}
-	public double crediti(){...}
-	public String toString(){...} }
-	public class CorsoLaurea {
-	private String nome;
-	private ArrayList<Studente> immatricolati;
-	public static int prossimaMatricola;
-	public static final int MIN_CREDITI;
-	public CorsoLaurea(String unNomeStudente){...}
-	public String getNome(){...}
-	public void iscrivi(String unNomeStudente){...}
-	public void ritira(String unNomeStudente){...}
-	public void appello(String unNomeEsame, ArrayList<Studente> iscritti){...}
-	public void laurea(){...} }
+public class Esame {
+private String nome;
+private int crediti;
+private int voto;
+public Esame(String unNomeEsame, int numCrediti){...}
+public String getNome(){...}
+public String getCrediti(){...}
+public String getVoto(){...}
+public void setVoto(int unVoto){...}
+public String toString(){...} }
+public class Studente {
+private String nome;
+private int matricola;
+private ArrayList<Esame> esamiSostenuti;
+private ArrayList<Esame> pianoStudio;
+public Studente(String unNomeStudente, int unaMatricola){...}
+public String getNome(){...}
+public String getMatricola(){...}
+public void aggiungiEsame(String unNomeEsame, int numCrediti){...}
+public void promosso(String unNomeEsame, int unVoto){...}
+public void cancella(String unNomeEsame){...}
+public double media(){...}
+public double crediti(){...}
+public String toString(){...} }
+public class CorsoLaurea {
+private String nome;
+private ArrayList<Studente> immatricolati;
+public static int prossimaMatricola;
+public static final int MIN_CREDITI;
+public CorsoLaurea(String unNomeStudente){...}
+public String getNome(){...}
+public void iscrivi(String unNomeStudente){...}
+public void ritira(String unNomeStudente){...}
+public void appello(String unNomeEsame, ArrayList<Studente> iscritti){...}
+public void laurea(){...} }
 ```
 
 ##Esercizio. Gestione di un campo da tennis
