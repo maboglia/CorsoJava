@@ -318,17 +318,27 @@ Counter: OOP/java 91h - javascript 20h
 	DOM
 
 
-###MERCOLEDì 14/12/2016 9-12
+###MERCOLEDì 14/12/2016 9-12 3h Java
 	Java
 	JCF: HashSet e TreeSet
 	Vector, HashSet e TreeSet, lettura file canto 1 inferno
 
-###VENERDì 16/12/2016 9-1
+###VENERDì 16/12/2016 9-12 3h Javascript
+	JavaScript
+
+Counter: OOP/java 99h - javascript 26h	
 
 
+#Settimana 10 
 
+###LUNEDì 19/12/2016 9-13 14-18 5h Java - 3h Javascript
 
-
+	Java
+	focus date, valute
+	recap
+	JCF
+	info sistema > scrivi su file
+	
 
 
 
