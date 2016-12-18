@@ -1,26 +1,27 @@
-#LEZIONE 10	1
-	Package java.util	2
-	Framework Collections	2
-	Metodi delle Collection e delle Map	4
-	Implementazione di Set e SortedSet	5
-	Implementazione di Map e SortedMap	6
-	Implementazione di List	7
-	Implementazione di Queue	8
-	Algoritmi del Java Collections Framework	9
-	Collections e Generics	11
-	Internazionalizzazione e localizzazione	11
-	Date e orari	15
-	Classe StringTokenizer	17
-	Espressioni regolari	18
-	Package java.lang	21
-	Classe String	21
-	Classe System	22
-	Classe Runtime	25
-	Classi wrapper	25
-	Classe Math	26
-##LEZIONE 10
+>source: Manuale Java 7 - Claudio De Sio Cesari
+
+#Capitolo 10	
+	Package java.util	
+	Framework Collections	
+	Metodi delle Collection e delle Map	
+	Implementazione di Set e SortedSet	
+	Implementazione di Map e SortedMap	
+	Implementazione di List	
+	Implementazione di Queue	
+	Algoritmi del Java Collections Framework	
+	Collections e Generics	
+	Internazionalizzazione e localizzazione	
+	Date e orari	
+	Classe StringTokenizer	
+	Espressioni regolari	
+	Package java.lang	
+	Classe String	
+	Classe System	
+	Classe Runtime	
+	Classi wrapper	
+	Classe Math	
 ###Package java.util
-	Il package java.util contiene una serie di classi utili come il framework “Collections” per gestire collezioni eterogenee di ogni tipo, il modello a eventi, classi per la gestione facilitata delle date e degli orari, classi per la gestione dell’internazionalizzazione e tante altre utilità come un separatore di stringhe (StringTokenizer), un generatore di numeri casuali ecc.
+	Il package java.util contiene una serie di classi utili come il framework "Collections" per gestire collezioni eterogenee di ogni tipo, il modello a eventi, classi per la gestione facilitata delle date e degli orari, classi per la gestione dell’internazionalizzazione e tante altre utilità come un separatore di stringhe (StringTokenizer), un generatore di numeri casuali ecc.
 ###Framework Collections
 	Nella normale attività di programmazione ci si trova spesso a dover gestire un insieme di dati. In Java, le soluzioni per la gestione di un insieme di oggetti sono molteplici e, come sempre, a seconda delle circostanze, bisogna individuare la soluzione migliore da adottare.
 
@@ -122,11 +123,10 @@ HashSet risulta più performante di TreeSet in quanto gestisce l’ordinamento.
 HashSet | TreeSet
 ------------ | -------------
 HashSet hash = new HashSet();	|	TreeSet tree = new TreeSet();
-hash.add(“c”);			|		tree.add(“c”);
-hash.add(“a”);			|		tree.add(“a”);
-hash.add(“b”);			|		tree.add(“b”);
-hash.add(“b”);			|		tree.add(“b”);
-
+hash.add("c");			|		tree.add("c");
+hash.add("a");			|		tree.add("a");
+hash.add("b");			|		tree.add("b");
+hash.add("b");			|		tree.add("b");
 Iterator it = hash.iterator();	|	Iterator it = tree.iterator();
 while (it.hasNext) {			|	while (it.hasNext()) {
    System.out.print(it.next());	|	System.out.print(it.next());
@@ -134,38 +134,44 @@ while (it.hasNext) {			|	while (it.hasNext()) {
 
 L’output sarà:
 	c a b			|			a b c
+
 Come si può vedere dagli output, l’elemento duplicato (b) non è stato aggiunto e nel caso del TreeSet sono stati anche ordinati.
+
 Per scorrere facilmente le tabelle abbiamo usato un’implementazione dell’interfaccia Iterator, che permette di iterare sugli elementi della collezione.
-Dalla versione 6 di Java gli oggetti TreeSet sono “bidirezionali”, infatti è possibile anche ottenere un’istanza di Iterator che itera al contrario invocando il metodo descendingIterator().
-Implementazione di Map e SortedMap
+
+Dalla versione 6 di Java gli oggetti TreeSet sono "bidirezionali", infatti è possibile anche ottenere un’istanza di Iterator che itera al contrario invocando il metodo descendingIterator().
+
+####Implementazione di Map e SortedMap
 L’interfaccia Map rappresenta un insieme di elementi, ad ognuno dei quali viene associata una chiave univoca. Non sono permessi elementi duplicati e null.
+
 E’ preferibile usare le mappe piuttosto che i set in quanto è possibile ricercare facilmente un oggetto all’interno di una mappa a partire dalla sua chiave univoca ed anche perché è possibile accedere agli oggetti in modo veloce.
+
 Le implementazioni di Map sono HashTable e HashMap.
-Un’implementazione di SortedMap è TreeMap. Piripacchio
+Un’implementazione di SortedMap è TreeMap. 
+
 Entrambe non ammettono elementi duplicati.
-HashMap risulta più performante di:
-HashTable, in quanto quest’ultima è sincronizzata di default mentre HashMap non lo è (i metodi di accesso agli oggetti non sono Synchronized)
-TreeMap, in quanto quest’ultima gestisce l’ordinamento
-Esempio di HashTable e HashMap.
-
-HashTable hash = new HashTable();	HashMap map = new HashMap();
-hash.put(“1”, “Data attuale”);		map.put(“1”, “Data attuale”);
-hash.put(“2”, new Date());			map.put(“2”, new Date());
-hash.put(“3”, hash);				map.put(“3”, hash);
-
-int size = hash.size();			int size = hash.size();
-for (int i=1; 1<=size; i++) {		for (int i=1; 1<=size; i++) {
-   out.print(hash.get(“”+i));		   out.print(hash.get(“”+i));
-}							}
+HashMap risulta più performante di HashTable, in quanto quest’ultima è sincronizzata di default mentre HashMap non lo è (i metodi di accesso agli oggetti non sono Synchronized)
+HashMap risulta più performante di TreeMap, in quanto quest’ultima gestisce l’ordinamento
+####Esempio di HashTable e HashMap.
+HashTable | HashMap
+------------ | -------------
+HashTable hash = new HashTable();	|	HashMap map = new HashMap();
+hash.put("1", "Data attuale");		|	map.put("1", "Data attuale");
+hash.put("2", new Date());			|	map.put("2", new Date());
+hash.put("3", hash);				|	map.put("3", hash);
+int size = hash.size();			|	int size = hash.size();
+for (int i=1; 1<=size; i++) {		|	for (int i=1; 1<=size; i++) {
+   out.print(hash.get(""+i));		   |	out.print(hash.get(""+i));
+}							|	}
 
 E’ possibile aggiungere elementi mediante il metodo put(Object key, Object value) e si recuperano mediante il metodo get(Object key). In particolare, il metodo get() permette un recupero molto performante dell’elemento della collezione, mediante la specifica della chiave.
 Vediamo un esempio riguardante l’iterazione sulle mappe.
-
+```java
 HashMap<Integer, String> map = new HashMap<Integer, String>();
-map.put(1, “Sam”);
-map.put(2, “John”);
-map.put(3, “Sunny”);
-map.put(4, “Linda”);
+map.put(1, "Sam");
+map.put(2, "John");
+map.put(3, "Sunny");
+map.put(4, "Linda");
   
 Iterator<Map.Entry<Integer, String>> it = map.entrySet().iterator();
 while (it.hasNext()) {
@@ -173,26 +179,29 @@ while (it.hasNext()) {
 	System.out.println("Chiave: " + entry.getKey());
 	System.out.println("Valore: " + entry.getValue());
 }
+```
 
 Per iterare sulle mappe occorre utilizzare, oltre al solito iterator, anche:
-la classe innestata Map.Entry astrae una coppia di tipo chiave-valore che rappresenta un elemento di una mappa
-il metodo entrySet() restituisce un insieme ordinato (in base alle chiavi) degli elementi della mappa
-Implementazione di List
+* la classe innestata Map.Entry astrae una coppia di tipo chiave-valore che rappresenta un elemento di una mappa
+* il metodo entrySet() restituisce un insieme ordinato (in base alle chiavi) degli elementi della mappa
+####Implementazione di List
+
 L’interfaccia List rappresenta un insieme di elementi. Sono permessi elementi duplicati.
 Gli oggetti vengono memorizzati in locazioni di memoria contigue quindi è possibile accedere a ciascun oggetto molto velocemente mediante il suo indice all’interno della collezione. Naturalmente non è adatta per operazioni di ricerca poiché occorrerebbe scorrere tutta la lista per ricercare un oggetto al suo interno. È possibile scorrere facilmente la lista sia mediante la classe iterator che mediante accesso diretto utilizzando l’indice dell’oggetto.
+
 Le implementazioni di List sono ArrayList e Vector.
 ArrayList ha prestazioni nettamente superiori rispetto a Vector in quanto quest’ultima è sincronizzata di default mentre ArrayList non lo è (i metodi di accesso agli oggetti non sono Synchronized).
 Esempio di ArrayList e Vector.
-
-ArrayList lista = new ArrayList();	Vector vett = new Vector();
-lista.add(“abhijit”);				vett.add(“abhijit”);
-lista.add(“smitesh”);				vett.add(“smitesh”);
-lista.add(“melissa”);				vett.add(“melissa”);
-
-Iterator it = lista.iterator();		Iterator it = vett.iterator();
-while (it.hasNext()) {			while (it.hasNext()) {
-   out.print(it.next());		   	   out.print(it.next());
-}							}
+ArrayList | Vector
+------------ | -------------
+ArrayList lista = new ArrayList();	|Vector vett = new Vector();
+lista.add("abhijit");				|vett.add("abhijit");
+lista.add("smitesh");				|vett.add("smitesh");
+lista.add("melissa");				|vett.add("melissa");
+Iterator it = lista.iterator();		|Iterator it = vett.iterator();
+while (it.hasNext()) {			|while (it.hasNext()) {
+   out.print(it.next());		   	  | out.print(it.next());
+}							|}
 
 ##Implementazione di Queue
 L’interfaccia Queue rappresenta un insieme di elementi gestiti mediante FIFO. 
@@ -203,47 +212,50 @@ la seconda ritorna un valore speciale (come null o false) se l’operazione fall
 
 L’implementazione di Queue è PriorityQueue.
 Esempio di Queue.
-
+```java
 Queue coda = new PriorityQueue();
 for (int i=0; i<50; i++) {
-	coda.offer(“String #” + i);
+	coda.offer("String #" + i);
 }
 while (!coda.isEmpty()) {
 	System.out.println(coda.poll());
 }
-
+```
 La PriorityQueue è una coda che estrae gli elementi secondo la priorità assegnata.
 Algoritmi del Java Collections Framework
+
 Nei paragrafi precedenti abbiamo visto diversi tipi di Collection e alcune semplici implementazioni. Occorre specificare però che in implementazioni più complesse occorre usare metodi che consentano di sfruttare tutte le features offerte dal Collection Framework.
+
 Nello specifico, infatti, esistono classi ed algoritmi aggiuntivi come, ad esempio, quelli di ordinamento che se avessimo usato array o altre strutture avremmo dovuto definire ad-hoc.
 Infatti, Collections ha metodi che implementano complicati algoritmi come:
-sort() (ordina)
-shuffle() (mischia – il contrario di ordina)
-max() (restituisce l’elemento massimo)
-reverse() (inverte l’ordine degli elementi)
-binarySeach() (ricerca binaria)
-Altri metodi, detti “di convenienza”, permettono la creazione di:
+* sort() (ordina)
+* shuffle() (mischia – il contrario di ordina)
+* max() (restituisce l’elemento massimo)
+* reverse() (inverte l’ordine degli elementi)
+* binarySeach() (ricerca binaria)
+Altri metodi, detti "di convenienza", permettono la creazione di:
 collection immutabili di un numero definito di oggetti identici (metodo ncopies())
 un oggetto singleton, che si può istanziare una sola volta (metodo singleton())
+
 ESEMPIO
 Ora vediamo come è semplice utilizzare gli algoritmi per ordinare una lista.
-
+```java
 public static void main(String[] args) {
 	List<Persona> persone = new ArrayList<Persona>();
 
-	persone.add(new Persona(27, “marco”, “bianco”));
-	persone.add(new Persona(80, “luca”, “arancio”));
-	persone.add(new Persona(75, “giovanni”, “rossi”));
-	persone.add(new Persona(29, “mario”, “bianchi”));
+	persone.add(new Persona(27, "marco", "bianco"));
+	persone.add(new Persona(80, "luca", "arancio"));
+	persone.add(new Persona(75, "giovanni", "rossi"));
+	persone.add(new Persona(29, "mario", "bianchi"));
 
-	System.out.println(“Lista non ordinata”);
+	System.out.println("Lista non ordinata");
 	print(persone);
 
-	System.out.println(“Ordina per eta”);
+	System.out.println("Ordina per eta");
 	Collections.sort(persone);
 	print(persone);
 
-	System.out.println(“Ordina per cognomi”);
+	System.out.println("Ordina per cognomi");
 	Collections.sort(persone, new CognomeComparator());
 	print(persone);
 }
@@ -253,17 +265,17 @@ private static void print(Collection<Persona> coll) {
 
 	while (it.hasNext()) {
 		Persona p = it.next();
-		System.out.println(p.getNome() + “ ” +
-   p.getCognome() + “ ” +
+		System.out.println(p.getNome() + " " +
+   p.getCognome() + " " +
    p.getEta());
 	}
 }
-
+```
 Sono stati usati due metodi per ordinare la lista:
 Collections.sort(persone) che riceve in input una List di oggetti che implementano l’interfaccia Comparable. Nell’esempio gli elementi vengono ordinati in base all’età
 Collections.sort(persone, new CognomeComparator()) che riceve in input una List di oggetti e un’istanza di una classe che implementa l’interfaccia Comparator. Nell’esempio gli elementi vengono ordinati in base al cognome. Naturalmente è possibile creare diversi Comparator che permettono di ordinare la lista in altrettanti modi
 Per completezza si riporta anche la classe Persona. 
-
+```java
 private String nome;
 private String cognome;
 private int eta;
@@ -277,7 +289,7 @@ public Persona(int eta, String nome, String nome) {
 }
 
 public String toString() {
-	return nome + “ ” + cognome + “ ” + eta;
+	return nome + " " + cognome + " " + eta;
 }
 
 public boolean equals(Persona p) {
@@ -294,14 +306,14 @@ public int compareTo(Persona p) {
 	else if (getEta()>p.getEta())	return 1;
 	else 						return -1;	
 }
-
-Collections e Generics
-Se si provano a runnare alcuni dei precedenti esempi con un JDK 1.5 o superiore, si avranno alcuni messaggi di warning dopo aver compilato. Questi warning sono dovuti all’introduzione, in Java 5, dei Generics. Negli esempi sono state utilizzate Collection “raw type”, che sono delle Collection non parametrizzate mediante Generics.
-I Generics offrono la loro più classica utilità nell’uso delle Collection. Essi, infatti, permettono di fare in modo che una particolare Collection sia parametrizzata con un certo tipo. La sintassi fa uso di parentesi angolari “<” e “>”.
+```
+###Collections e Generics
+Se si provano a runnare alcuni dei precedenti esempi con un JDK 1.5 o superiore, si avranno alcuni messaggi di warning dopo aver compilato. Questi warning sono dovuti all’introduzione, in Java 5, dei Generics. Negli esempi sono state utilizzate Collection "raw type", che sono delle Collection non parametrizzate mediante Generics.
+I Generics offrono la loro più classica utilità nell’uso delle Collection. Essi, infatti, permettono di fare in modo che una particolare Collection sia parametrizzata con un certo tipo. La sintassi fa uso di parentesi angolari "<" e ">".
 Ad esempio, col seguente codice, indicheremo che la nostra Collection potrà contenere solo e solamente stringhe.
-
+```java
 Vector<String> vector = new Vector<String>();
-
+```
 Se si provasse ad aggiungere a vector un eventuale oggetto che non sia di tipo String otterremmo un warning in compilazione.
 Java diventa così un linguaggio ancora più robusto, sicuro e fortemente tipizzato.
 Un altro vantaggio nell’uso delle Generics sta nel fatto che sapendo da quali tipi è costituita la Collection, ogni casting è superfluo.
@@ -311,9 +323,10 @@ La localizzazione permette l’adattamento del software a una particolare region
 Occorre tener presente che, nella maggior parte dei casi, con internazionalization si intendono entrambi gli aspetti.
 CLASSE LOCALE
 
-nomeLocale = new Locale(“language”, “country”, [“variant”]);
-
-Per gestire l’internazionalizzazione non si può fare a meno di utilizzare la classe Locale, che astrae il concetto di “zona” sia dal punto di vista linguistico che geografico. 
+```java
+nomeLocale = new Locale("language", "country", ["variant"]);
+```
+Per gestire l’internazionalizzazione non si può fare a meno di utilizzare la classe Locale, che astrae il concetto di "zona" sia dal punto di vista linguistico che geografico. 
 Molte rappresentazioni di numerose altre classi dipendono da Locale. 
 Il package java.text fornisce gli strumenti per la formattazione del testo. Alcune sue classi possiedono metodi che usano Locale.
 Un esempio è la classe NumberFormat che possiede metodi che usano Locale per individuare l’uso della virgola o del punto per i numeri decimali.
@@ -323,38 +336,39 @@ I valori dei parametri passati si riferiscono a precisi simboli definiti dallo s
 La prima variabile si riferisce al linguaggio, ovvero alla lingua. Viene specificata mediante due lettere minuscole rappresentative della zona (esempi: Italia = it, Stati Uniti = us).
 La seconda variabile si riferisce permette di indicare la regione geografica. Ciò torna utile quando in una stessa nazione non necessariamente si parla un’unica lingua. Viene specificata mediante due lettere maiuscole (es: Svizzera italiana = it_CH, Svizzera tedesca = de_CH).
 La terza variabile, non necessaria, permette la specifica di strutture personalizzate implementate, ad esempio, da particolari tipi di browser.
-
+```java
 // creazione di un Locale con due parametri
-Italia = new Locale(“it”, “IT”);
-America = new Locale(“en”, “US”);
-Inghilterra = new Locale(“en”, “BG”);
+Italia = new Locale("it", "IT");
+America = new Locale("en", "US");
+Inghilterra = new Locale("en", "BG");
 
 // creazione di un Locale col parametro opzionale
-nordAmerica = new Locale(“en”, “US”, “NORTH”);
-unixLocale = new Locale(“it”, “IT”, “UNIX”);
-windowsLocale = new Locale(“it”, “IT”, “WINDOWS”);
-
+nordAmerica = new Locale("en", "US", "NORTH");
+unixLocale = new Locale("it", "IT", "UNIX");
+windowsLocale = new Locale("it", "IT", "WINDOWS");
+```
 Molti Locale sono sicuramente più usati di altri, per questi ultimi sono disponibili delle costanti facilmente accessibili.
-
+```java
 America = Locale.US;
 CanadaFrancesce = Locale.CANAD_FRENCH;
+```
+La classe Locale possiede, inoltre, alcuni metodi che restituiscono informazioni sulla zona.
 
-La classe Locale possiede, inoltre, alcuni metodi che restituiscono informazioni sulla zona. 
 CLASSE RESOURCEBUNDLE
 
-nomeResBundle = ResourceBundle.getBundle(“nomeBundle”, nomeLocale)
+nomeResBundle = ResourceBundle.getBundle("nomeBundle", nomeLocale)
 
 Un ruolo molto importante nel processo di internazionalizzazione sono le risorse, cioè file di proprietà che fanno riferimento ad un ResourceBundle. Sono semplici file di testo che contengono i messaggi, label, bottoni, parole che cambiano da una lingua all’altra e possono essere tradotti anche da persone che non conoscono la programmazione in quanto non si lavora sul codice ma all’esterno dell’applicazione.
 Queste risorse hanno un formato molto semplice, in quanto contengono praticamente coppie (Chiave : valore) dove:
 la chiave è una stringa
 il valore è la traduzione, cioè una stringa tradotta nella lingua del particolare Locale
 Per creare l’oggetto ResourceBundle bisogna invocare il metodo getBundle() passandogli come parametri il nome del bundle (cioè la risorsa) e il nome del locale.
-Il metodo getBundle() per prima cosa cerca il file bundle specificato nel costruttore (nell’esempio seguente  “mioBundle”), se non lo trova cerca i file di proprietà di default.
+Il metodo getBundle() per prima cosa cerca il file bundle specificato nel costruttore (nell’esempio seguente  "mioBundle"), se non lo trova cerca i file di proprietà di default.
 Per recuperare il testo memorizzato nel file di proprietà basta evocare il metodo getString() sull’oggetto ResourceBundle.
 
-mioMessaggio = resourceBundle.getBundle(“mioBundle”, mioLocale);
-String testo = mioMessaggio.getString(“header”);
-System.out.println(“testo”);
+mioMessaggio = resourceBundle.getBundle("mioBundle", mioLocale);
+String testo = mioMessaggio.getString("header");
+System.out.println("testo");
 
 La stringa che ritorna dall’esempio è quella che corrisponde alla chiave che abbiamo specificato e sarà nella lingua identificata dal Locale.
 Poiché nei file properties non variano le chiavi ma le corrispondenti traduzioni, si possono aggiungere altre risorse senza cambiare nulla nel codice.
@@ -369,17 +383,17 @@ public class Example {
 		String language;	 // stringa per il codice della lingua
 		String country;	 // stringa per il codice del paese
 
-		language = new String(“en”);
-		country = new String(“US”);
+		language = new String("en");
+		country = new String("US");
 
 		Locale mioLocale;	 // dichiarazione Locale
 		Resourcebundle testo;	 // dichiarazione ResourceBundle
 
 		presentLocale = new Locale(language, country);
-		testo = Resourcebundle.getBundle(“MyBundle”, mioLocale);
+		testo = Resourcebundle.getBundle("MyBundle", mioLocale);
 
-		System.out.println(testo.getString(“header”));
-		System.out.println(testo.getString(“block1”));
+		System.out.println(testo.getString("header"));
+		System.out.println(testo.getString("block1"));
 	}
 }
 
@@ -412,15 +426,15 @@ int ore = calendario.get(Calendar.HOUR);
 int min = calendario.get(Calendar.MINUTE);
 int sec = calendario.get(Calendar.SECOND);
 
-System.out.println(giorno + “/” + mese + “/” + anno);
-System.out.println(ore + “:” + minuti + “:” + secondi);
+System.out.println(giorno + "/" + mese + "/" + anno);
+System.out.println(ore + ":" + minuti + ":" + secondi);
 
 La classe GregorianCalendar è molto semplice da utilizzare. Sono disponibili diversi costruttori. Il costruttore senza parametri inizializza l’oggetto con la data e l’ora attuale. Con il metodo get(), ereditato da Calendar, è possibile trarre tutte le informazioni disponibili.
 Java ha messo a disposizione la classe SimpleDateFormat che permette di trattare le date nel formato più adatto alla nostra esigenza.
 Col prossimo esempio vediamo come stampare la data odierna usando la classe descritta.
 
 GregorianCalendar calendario = new GregorianCalendar();
-SimpleDateFormat sdf = new SimpleDateFormat(“dd/MM/yy – HH:mm:ss);
+SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy – HH:mm:ss);
 System.out.println(sdf.format(calendario.getTime()));
 
 Il costruttore della classe SimpleDateFormat prende in ingresso una stringa che rappresenta il formato della data che vogliamo stampare. 
@@ -428,8 +442,8 @@ Il metodo getTime() della classe GregorianCalendar restituisce un’istanza di D
 Il metodo format() della classe SimpleDateFormat, che restituisce in ingresso una Date, restituisce una stringa che corrisponde al formato che abbiamo impostato.
 E’ possibile sfruttare la classe SimpleDateFormat anche per ottenere un’istanza della classe Calendar.
 
-SimpleDateFormat sdf = new SimpleDateFormat(“dd/MM/yy – HH:mm:ss);
-String miaData = “15/04/1988”;
+SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy – HH:mm:ss);
+String miaData = "15/04/1988";
 GregorianCalendar calendario = new GregorianCalendar();
 try {
 	calendario.setTime(sdf.parse(miaData));
@@ -441,12 +455,12 @@ Il metodo parse() della classe SimpleDateFormat riceve in ingresso una stringa e
 Il metodo setTime della classe GregorianCalendar ci permette di impostare la data. Abbiamo utilizzato il blocco try-catch perché questa operazione potrebbe sollevare una ParseException, nel caso in cui una stringa passata al metodo parse(), non rappresenti una data convertibile.
 Come ultimo esempio vediamo come convertire una data dal formato americano in quello italiano utilizzando le tecniche analizzate in precedenza.
 
-SimpleDateFormat formatIT = new SimpleDateFormat(“dd/MM/yyyy”); 
-SimpleDateFormat formatUS = new SimpleDateFormat(“yyyy/MM/dd”);
+SimpleDateFormat formatIT = new SimpleDateFormat("dd/MM/yyyy"); 
+SimpleDateFormat formatUS = new SimpleDateFormat("yyyy/MM/dd");
 
 Date dataIT;
 try {
-	dataIT = formatUS.parse(“2007/04/05”);
+	dataIT = formatUS.parse("2007/04/05");
 	String dataUS = formatIT.format(dataIT);
 	System.out.println(dataUS);
 } catch(ParseException exc) {
@@ -472,7 +486,7 @@ Spesso risulta necessario manipolare dei token di testo.
 Una semplice classe che permette di separare i contenuti di una stringa in più parti, chiamate token, è la classe StringTokenizer.
 Questa classe si utilizza solitamente per estrarre le parole di una stringa.
 L’utilizzo di base è estremamente semplice, occorrono:
-una stringa da “navigare”, cioè da cui estrarre i token
+una stringa da "navigare", cioè da cui estrarre i token
 un delimitatore, che serve per identificare i token
 Un token è, quindi, la sequenza massima di caratteri consecutivi che non sono delimitatori.
 CREARE OGGETTO STRINGTOKENIZER
@@ -481,12 +495,12 @@ Il costruttore può accettare da 1 a 3 parametri:
 la stringa da cui estrarre i token
 il delimitatore, che può essere:
 esplicito [st2 – st3]
-di default “ \t\n\r\f” (notare che il primo delimitatore e uno spazio) [st1]
+di default " \t\n\r\f" (notare che il primo delimitatore e uno spazio) [st1]
 un booleano che, se settato a true, considera token anche gli stessi delimitatori
 
-StringTokenizer st1 = new StringTokenizer(“Stringa da dividere”);
-StringTokenizer st2 = new StringTokenizer(“Stringa sezionata”, “;”);
-StringTokenizer st3 = new StringTokenizer(“Ciao Mamma”, “a”, true);
+StringTokenizer st1 = new StringTokenizer("Stringa da dividere");
+StringTokenizer st2 = new StringTokenizer("Stringa sezionata", ";");
+StringTokenizer st3 = new StringTokenizer("Ciao Mamma", "a", true);
 
 Output [st1]
 	Stringa
@@ -504,7 +518,7 @@ Output [st3]
 Per scandire l’intero testo si può usare un ciclo while con all’interno l’invocazione del metodo hasMoreTokens() che ritorna true se sono presenti altri token, altrimenti false.
 Per stampare il token appena recuperato si può invocare il metodo nextToken() sull’oggetto StringTokenizer.
 
-StringTokenizer st = new StringTokenizer(“Stringa da dividere”);
+StringTokenizer st = new StringTokenizer("Stringa da dividere");
 while (st.hasMoreTokens()) {
 	// Due metodi per fare la stessa cosa
 System.out.println(st.nextToken());
@@ -530,7 +544,7 @@ Esistono anche forme abbreviate per rappresentare un insieme di caratteri.
 
 
 QUANTIFICATORI
-I quantificatori servono a indicare la molteplicità di caratteri, parole, espressioni o gruppi di caratteri. Noi indichiamo soltanto quelli appartenenti alla tipologia “greedy quantifier”:
+I quantificatori servono a indicare la molteplicità di caratteri, parole, espressioni o gruppi di caratteri. Noi indichiamo soltanto quelli appartenenti alla tipologia "greedy quantifier":
 
 
 PACKAGE JAVA.UTIL.REGEX
@@ -558,8 +572,8 @@ public static boolean check(String regex, String input) {
 
 E’ possibile, inoltre, utilizzare il package java.util.regex per ricercare una stringa all’interno di un’altra.
 
-String regex = “[a-zA-Z0-9._%-]+@[ a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}”;
-String input = “pippo@email.it;pluto@email.it;paperino@email.it”;
+String regex = "[a-zA-Z0-9._%-]+@[ a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}";
+String input = "pippo@email.it;pluto@email.it;paperino@email.it";
 
 Pattern pattern = Pattern.compile(regex);
 Matcher matcher = pattern.matcher(input);
@@ -618,7 +632,7 @@ Un metodo di cui abbiamo già parlato è il metodo arraycopy() che permette di c
 Un altro metodo è il metodo exit(int code) che consente di bloccare istantaneamente l’esecuzione del programma. Il codice che viene specificata come parametro potrebbe servire al programmatore per capire perché si è interrotto il programma. Questo risulta, però, un sistema piuttosto rudimentale dopo aver visto la gestione delle eccezioni e delle asserzioni.
 
 if (continua == false) {
-	System.err.println(“Si è verificato un problema!”);
+	System.err.println("Si è verificato un problema!");
 	System.exit(0);
 }
 
@@ -634,7 +648,7 @@ System.out.println(System.getProperty("java.home"));
 
 Oppure si potrebbe impostare una nuova proprietà mediante il codice:
 
-System.setProperty(“giuseppe.cognome”, “Liccardo”);
+System.setProperty("giuseppe.cognome", "Liccardo");
 
 Un elenco con tutte le properties di sistema è riportato in basso.
 
@@ -646,7 +660,7 @@ Classi wrapper
 Nella versione 1.5 di Java è stata introdotta una funzionalità davvero comoda che viene chiamata boxing (inscatolamento) che permette ai valori dei tipi primitivi di essere convertiti in oggetti, e viceversa. In particolare:
 l’autoboxing è un casting automatico che permette ai valori dei tipi primitivi di essere convertiti in oggetti
 l’unboxing effettua il casting inverso
-Gli oggetti che rappresentano i tipi primitivi sono detti classi wrapper (in italiano “involucro”) che sono classi che fanno da contenitore a un tipo di dato primitivo, astraendo proprio il concetto di tipo. 
+Gli oggetti che rappresentano i tipi primitivi sono detti classi wrapper (in italiano "involucro") che sono classi che fanno da contenitore a un tipo di dato primitivo, astraendo proprio il concetto di tipo. 
 N.B. Tutte le classi wrapper sono classi final per cui non possono essere estese.
 In Java, ogni tipo primitivo possiede una corrispondente classe wrapper: Byte, Short, Integer, Long, Float, Double, Boolean, Character. Ciascuna di queste classi permette di manipolare i valori di tipo primitivo come se fossero valori di oggetti. 
 Spesso abbiamo a che fare con tipi primitivi (int, double, boolean, …) che sono tipi semplici e, quindi, non possiedono metodi. I wrapper, invece, essendo degli oggetti, sono dotati di metodi ed attributi.
@@ -654,7 +668,7 @@ Prima dell’introduzione dell’autoboxing, programmando in Java ci si poteva t
 
 Integer x = new Integer(10);
 Double y = new Double(5.5f);
-Boolean z = Boolean.parseBoolean(“true”);
+Boolean z = Boolean.parseBoolean("true");
 
 Occorreva prima creare un nuovo oggetto di una classe wrapper.
 Le stesse operazioni precedenti possono essere ora eseguite mediante il seguente codice.
@@ -676,26 +690,25 @@ arrotondamento classico, per eccesso e per difetto
 generazione di numeri casuali
 
 #LEZIONE 12	1
-	Java 5 – Tiger	2
-	Generics	2
-	Sintassi	2
-	Generics e List	3
-	Interfaccia Iterator	4
-	Interfaccia Map	4
-	Creare i propri tipi Generics	5
-	Java 7 e la deduzione automatica del tipo	6
-	Varargs	6
-	Annotazioni	8
-	Sintassi	8
-	Tipi di annotations	9
-##LEZIONE 12
-	Novità di Java 5: Generics e Varargs
-	Questa lezione è dedicata alle rivoluzionarie caratteristiche della versione 5 di Java, quella definita Tiger. Questa versione, infatti, ha sconvolto completamente Java mettendone in discussione anche le caratteristiche ormai assodate come la semplicità.
+	Generics
+	Sintassi
+	Generics e List
+	Interfaccia Iterator
+	Interfaccia Map
+	Creare i propri tipi Generics
+	Java 7 e la deduzione automatica del tipo
+	Varargs
+	Annotazioni
+	Sintassi
+	Tipi di annotations
+
+	Generics e Varargs
+	Caratteristiche della versione 5 di Java, quella definita Tiger. Questa versione, infatti, ha sconvolto completamente Java mettendone in discussione anche le caratteristiche ormai assodate come la semplicità.
 	Andremo, dunque, a descrivere le innovazioni principali portate da Tiger come i Generics e i varargs.
 	Infine verranno introdotte le annotazioni e alcuni dei suoi tipi più utilizzati.
 ##Java 5 – Tiger
 	Java è un linguaggio in continua evoluzione. Tiger non è stata pensata come il capolinea della programmazione Java, bensì come una svolta.
-	Nella storia di Java, i cambiamenti non riguardanti librerie e prestazioni sono pochi. Le modifiche apportate dalla release 5 di Java permettono di scrivere meno codice e di risolvere i bug già in fase di compilazione. Tuttavia questo ha portato ad una perdita di “semplicità” anche se è stata mantenuta, comunque, la compatibilità con le versioni precedenti. Infatti, anche se sono definite novità clamorose come un nuovo ciclo for, e nuove keyword, queste saranno trasformate dal compilatore in istruzioni “vecchie”, che saranno interpretabili anche da Virtual Machine meno aggiornate.
+	Nella storia di Java, i cambiamenti non riguardanti librerie e prestazioni sono pochi. Le modifiche apportate dalla release 5 di Java permettono di scrivere meno codice e di risolvere i bug già in fase di compilazione. Tuttavia questo ha portato ad una perdita di "semplicità" anche se è stata mantenuta, comunque, la compatibilità con le versioni precedenti. Infatti, anche se sono definite novità clamorose come un nuovo ciclo for, e nuove keyword, queste saranno trasformate dal compilatore in istruzioni "vecchie", che saranno interpretabili anche da Virtual Machine meno aggiornate.
 	Generics
 	Una delle nuove caratteristiche di Java 5 sono i Generics (o Generici). 
 	Questi forniscono la possibilità di creare un modello generale di tipo. 
@@ -727,9 +740,9 @@ List<String> strings = new ArrayList<String>();
 A questo punto abbiamo una lista che accetta solo stringhe, e nessun altro tipo di oggetto.
 
 // non produce errore
-strings.add(“si può usare String”);
+strings.add("si può usare String");
 // produce errore in fase di compilazione
-strings.add(new StringBuffer(“non si può usare ” + “StringBuffer”));
+strings.add(new StringBuffer("non si può usare " + "StringBuffer"));
 
 I generics sono utilizzati anche come parametri sia di input che di output dei metodi. Segue un esempio di dichiarazione di un metodo che prende un tipo generico in input e ne restituisce un altro in output.
 
@@ -746,9 +759,9 @@ Oltre a List, tutte le classi e tutte le interfacce Collections supportano ora i
 Consideriamo il seguente codice di esempio.
 
 List<String> strings = new ArrayList<String>();
-strings.add(“Generics”);
-strings.add(“Ciclo for migliorato”);
-strings.add(“Varargs”);
+strings.add("Generics");
+strings.add("Ciclo for migliorato");
+strings.add("Varargs");
 ...
 Iterator it = strings.iterator();
 while (it.hasNext()) {
@@ -775,16 +788,16 @@ Map<Integer, String> map = new HashMap<Integer, String>();
 
 Ovviamente, in casi del genere, grazie all’autoboxing sarà possibile utilizzare interi primitivi per valorizzare la chiave. Ad esempio, il seguente codice inizializza la mappa e ne stampa i valori con un ciclo sulle chiavi.
 
-map.put(0, “generics”);
-map.put(1, “ciclo for migliorato”);
-map.out(2, “varargs”);
+map.put(0, "generics");
+map.put(1, "ciclo for migliorato");
+map.out(2, "varargs");
 for (int i=0; i<3; i++) {
 	System.out.println(map.get(i));
 }
 
 Creare i propri tipi Generics
 Una qualsiasi classe è parametrizzabile, dunque è possibile definire i propri tipi Generics.
-
+```java
 public class MioGeneric <E> {
 	private List<E> list;
 	
@@ -815,11 +828,12 @@ public String toString() {
 	StringBuilder sb = new StringBuilder();
 	int size = size();
 	for (int i=0; i<size; i++) {
-		sb.append(get(i) + (i != size-1 ? “-” : “”));
+		sb.append(get(i) + (i != size-1 ? "-" : ""));
 	}
 	return sb.toString();
 }
 }
+```
 
 Java 7 e la deduzione automatica del tipo
 Java 7 ha introdotto un piccolo cambiamento di sintassi per la creazione dei tipi generici, che prende il nome di deduzione automatica del tipo per la creazione di una istanza generica.
@@ -901,10 +915,10 @@ public class DeveloperJava extends Developer {
 	}
 }
 
-Come è possibile notare, questa classe è identica alla precedente, tranne per il fatto che utilizza la sintassi dei varargs (i puntini sospensivi “…”). Effettivamente, i varargs, all’interno del metodo dove sono dichiarati, sono considerati a tutti gli effetti array, quindi, come per gli array, se ne può ricavare la dimensione con la variabile length ed eseguire cicli su di essi.
+Come è possibile notare, questa classe è identica alla precedente, tranne per il fatto che utilizza la sintassi dei varargs (i puntini sospensivi "…"). Effettivamente, i varargs, all’interno del metodo dove sono dichiarati, sono considerati a tutti gli effetti array, quindi, come per gli array, se ne può ricavare la dimensione con la variabile length ed eseguire cicli su di essi.
 Il vantaggio di avere varargs in luogo di un array o di una collection risiede essenzialmente nel fatto che, per chiamare un metodo dichiarante argomenti variabili, non bisogna creare array o collection.
 Annotazioni
-Le annotazioni sono lo strumento utilizzato da Java per definire metadati, cioè “informazioni sulle informazioni”.
+Le annotazioni sono lo strumento utilizzato da Java per definire metadati, cioè "informazioni sulle informazioni".
 Possiamo definire un’annotation (annotazione) come un appunto che mettiamo per specificare qualcosa relativo al codice che stiamo scrivendo, un attributo particolare, un metodo o una classe che hanno delle peculiarità.
 Le annotazioni servono soprattutto per il compilatore che, ricorrendo al loro utilizzo, avrà la possibilità di effettuare determinate operazioni.
 Sintassi
@@ -913,8 +927,8 @@ Eventualmente può essere valorizzata con dei valori, tra parentesi tonde come c
 Un’annotazione si presente nella seguente forma.
 
 @Autore(
-  name = “Giuseppe Liccardo”,
-  company = “informaticaparthenope.it”
+  name = "Giuseppe Liccardo",
+  company = "informaticaparthenope.it"
 )
 class ClasseAnnotata() {
   ...
@@ -928,11 +942,11 @@ L’annotazione @Deprecated viene usata per specificare che l’elemento indicat
 public class TestDeprecated {
   @Deprecated
   public void metodoA() {
-    System.out.println(“Questo metodo è DEPRECATO, usa metodoB().”);
+    System.out.println("Questo metodo è DEPRECATO, usa metodoB().");
   }
 
   public void metodoB() {
-    System.out.println(“Questo metodo è SUPPORTATO.”);
+    System.out.println("Questo metodo è SUPPORTATO.");
   }
 }
 
@@ -942,14 +956,14 @@ L’annotazione @Override è probabilmente la più utile in quanto consente di e
 
 class A{
   void metodo1(){
-    System.out.println(“Metodo 1″);
+    System.out.println("Metodo 1″);
   }
 }
 
 class B extends A{
   @Override
   void metodoo1(){
-    System.out.println(“Override A.metodo1()”);
+    System.out.println("Override A.metodo1()");
   }
 }
 
@@ -958,7 +972,7 @@ Se si prova a compilare il codice, il compilatore restituirà un errore. Se nota
 @SUPPRESSWARNING
 L’annotazione @SuppressWarning è utile quando vogliamo sopprimere le indicazioni di warning da parte del compilatore, ad esempio, perché stiamo usando dei metodi deprecati.
 
-@SuppressWarnings({“deprecation”})
+@SuppressWarnings({"deprecation"})
 public void usaMetodoDeprecato() {
 TestDeprecated t = new TestDeprecated();
 t.metodoA();
