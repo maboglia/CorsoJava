@@ -120,10 +120,131 @@ public void laurea(){...} }
 
 ##Esercizio. concessionario d'auto.
 
-	Supponiamo di voler gestire i dati relativi ai modelli in vendita presso un concessionario d'auto.
+	Supponiamo di voler gestire i dati relativi ai modelli in vendita presso un
+	concessionario d'auto.
 	Per ogni modello occorre tener traccia della marca, del nome, della cilindrata, della capacità del serbatoio e del numero dei chilometri che il modello è in grado di percorrere con un litro di carburante. Il titolare del concessionario vuole calcolare l'autonomia di ogni modello (in chilometri). 
 	Inoltre, potrebbe essere utile poter costruire facilmente un nuovo modello d'auto che sia del tutto simile ad un modello esistente, ma che abbia una cilindrata diversa.
 	Progettare ed implementare una classe automobile che sia in grado di soddisfare le esigenze del titolare del concessionario in questione.
+
+##Esercizio. Gestione di una compagnia aerea
+	Una compagnia aerea desidera gestire elettronicamente le prenotazioni sui
+	singoli voli. Abbiamo una classe Cliente, con nome unico (si assuma che non ci
+	siano clienti omonimi). Poi una classe Volo, che contiene due var d'istanza
+	denominate posti e attesa. Ogni volo ha un numero max di passeggeri (passato
+	come parametro al costruttore). Quando un cliente prenota il volo, lo mettiamo
+	in posti se c'è ancora disponibilità, altrimenti lo mettiamo in attesa. Quando
+	un cliente in posti disdice il suo volo, si libera un posto e prendiamo il primo
+	elemento di attesa e lo trasferiamo su posti.
+	Suggerimento: posti è un array di dimensione pari al max numero di passeggeri;
+	attesa è un ArrayList senza limitazioni sulla dimensione. Per l'array posti,
+	usate la tecnica della sentinella vista nel cap 8. La sentinella deve essere
+	anch'essa una variabile d'istanza.
+
+
+##Esercizio. Tandem
+	Una stringa è un tandem se è composta da due sequenze esattamente uguali. Ad
+	esempio, la stringa "toctoc" è un tandem. Si assuma una classe Tandem con una
+	sola variabile d'istanza private String mystring. Utilizzando la ricorsione, si
+	implementi un metodo boolean tandem(){...} che restituisce true se mystring è un
+	tandem, e false altrimenti. Non usare alcuna istruzione di iterazione.
+
+
+
+##Esercizio. Semaforo
+	Si vuole simulare il traffico automobilistico in prossimità di un semaforo
+	stradale. Si assuma una classe Auto, avente la variabile d'istanza targa
+	(stringa) e gli usuali metodi (non sviluppare il codice relativo).
+	La classe Semaforo è cos`ı definita:
+```java
+
+	public class Semaforo {
+	private boolean rosso, verde;
+	private int numOsservazioni, totLunghezze;
+	private ArrayList<Auto> coda;
+	public Semaforo(){};
+	public void rosso(); // porto il semaforo a rosso
+	public int verde(); // porto il semaforo a verde
+	public void arrivo(String unaTarga); // arrivo auto
+	public double impaziente();
+	public double statistica();
+	public toString();
+	};
+```
+
+	Le due variabili verde e rosso sono mutuamente esclusive. Qualora il semaforo
+	sia rosso, le automobili in arrivo rimangono in coda in attesa del verde.
+	Inoltre, se la coda ha lunghezza maggiore di 10, l'auto in arrivo decide di
+	abbandonare la coda con probabilità un mezzo (usare la classe Random). La coda
+	viene svuotata allo scattare del verde, e viene restituito il numero di auto che
+	lasciano il semaforo.
+	Il metodo impaziente causa, da parte di ciascuna auto, l'abbandono della coda
+	con probabilità un sesto.
+	Il metodo statistica restituisce il valore medio della lunghezza della coda allo
+	scattare del verde, calcolato su tutte le osservazioni effettuate da quando il
+	semaforo è attivo. Utilizzare le variabili d'istanza numOsservazioni e
+	totLunghezze per tale calcolo.
+
+##Esercizio. magazzino di articoli
+	Un rivenditore vuole gestire un magazzino di articoli. Sviluppare una classe
+	Articolo
+	avente come variabili d’istanza un codice (stringa), un prezzo (intero) ed un
+	quantitativo di disponibilità a (intero). Definire i relativi metodi di accesso
+	ed un costruttore. Il magazzino è rappresentato dalla seguente classe:
+```java
+	public class Magazzino {
+	private ArrayList<Articolo> articoli;
+	public Magazzino(){...}
+	public void rifornisciArticolo(String codice, int quantita, int prezzo){...}
+	public int vendiArticolo(String codice, int quantita){...}
+	public void aggiornaPrezzi(int percentuale){...}
+	public int conteggiaArticoli(String prefisso){...}}
+```
+	Nel magazzino non possono essere presenti più articoli aventi lo stesso codice;
+	inoltre, gli articoli aventi quantitativo pari a zero devono essere cancellati
+	dal magazzino. Il metodo rifornisciArticolo aggiunge un nuovo articolo al
+	magazzino, se questo non è presente, oppure aggiorna il quantitativo di un
+	articolo. Il metodo vendiArticolo preleva dal magazzino una specificata
+	quantità di un certo articolo, e comunque non oltre esaurimento. Viene
+	restituito il ricavo totale. Il metodo aggiornaPrezzi aumenta della percentuale
+	indicata il prezzo di tutti gli articoli disponibili. Il metodo
+	conteggiaArticoli restituisce la totale quantità di articoli presenti nel
+	magazzino, aventi codice che inizi con uno specificato prefisso. Sviluppare
+	tutte le funzioni associate alla classe.
+
+
+##Esercizio. prenotazione dei posti per un concerto
+	Un'agenzia per il turismo desidera gestire automaticamente la prenotazione dei
+	posti per un concerto. Si sviluppi una classe Cliente avente come variabili
+	d'istanza il nominativo ed numero telefonico del cliente, rappresentati entrambi
+	come stringhe, con i relativi metodi di accesso ed un costruttore. Si sviluppi
+```java
+	inoltre la seguente classe:
+	public class Spettacolo {
+	private Cliente[] prenotazioni;
+	private int n_prenotazione;
+	private ArrayList<Cliente> attesa;
+	public Spettacolo(int n){...}
+	public boolean libero(){...}
+	public int trova(String nome, String tel){...}
+	public void prenota(String nome, String tel){...}
+	public void disdici(String nome, String tel){...}
+	public boolean incompleto(){...}
+	}
+```
+	L'array prenotazioni contiene i clienti che hanno il posto, la lista attesa
+	contiene i clienti in lista d'attesa. La lista d'attesa deve essere gestita con
+	la politica primo arrivato, primo servito. Il costruttore inizializza una classe
+	con un array prenotazioni (inizialmente vuoto) avente lunghezza n specificata
+	come parametro. Il metodo libero restituisce true solo se vi sono posti ancora
+	liberi. Il metodo trova restituisce 0 se il cliente specificato ha il posto, 1
+	se il cliente è in attesa e -1 altrimenti. Il metodo prenota inserisce il
+	cliente specificato nell'oggetto (eventualmente in attesa). Il metodo disdici
+	rimuove il cliente specificato dall'oggetto. Nel caso venga liberato un posto in
+	prenotazioni, viene trasferito il primo cliente da attesa. Infine, il metodo
+	incompleto restituisce true se esiste almeno un cliente che abbia almeno un
+	posto ed almeno una prenotazione in attesa; il metodo restituisce false
+	in caso contrario.
+
 
 ##Esercizio. scuola superiore
 	Una scuola superiore è organizzata in classi, ciascuna delle quali è composta da un certo numero di studenti. 
