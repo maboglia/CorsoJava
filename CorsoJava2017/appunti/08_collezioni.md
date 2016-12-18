@@ -117,8 +117,10 @@ Un’implementazione di Set è HashSet.
 Un’implementazione di SortedSet è TreeSet.
 Entrambe non ammettono elementi duplicati.
 HashSet risulta più performante di TreeSet in quanto gestisce l’ordinamento.
-Esempio di HashSet e TreeSet.
+####Esempio di HashSet e TreeSet
 
+HashSet | TreeSet
+------------ | -------------
 HashSet hash = new HashSet();	|	TreeSet tree = new TreeSet();
 hash.add(“c”);			|		tree.add(“c”);
 hash.add(“a”);			|		tree.add(“a”);
