@@ -1,0 +1,50 @@
+<!DOCTYPE html/>
+<html>
+	<head>
+		<title>Object 3</title>
+		<meta charset="utf-8">
+
+<script type="text/javascript">
+		//è un oggetto 'senza' costruttore
+	var Car = {
+		produttore : "Fiat",
+		anno 		: 2016,
+		modello		: "500",
+		proprietario : {
+			nome : "Mauro",
+			telefono: "123456",
+			indirizzo:{
+				via : "Roma",
+				civico : 1,
+				comune :"Torino"
+				},
+			mostraDettagli: function() {
+				var dettagli = this.produttore+"<br/>";
+				dettagli += this.proprietario.nome+"<br/>";
+				alert(dettagli);
+			}	
+
+		}		
+
+
+
+	};
+	
+
+</script>
+
+
+	</head>
+	<body>
+		<h1></h1>
+	<p>
+		<script type="text/javascript">
+			//var miaAuto = new Car();
+			console.log(Car);
+
+		</script>
+	</p>	
+
+
+</body>
+</html>
