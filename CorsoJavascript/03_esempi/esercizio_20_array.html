@@ -1,0 +1,53 @@
+<!DOCTYPE html/>
+<html>
+	<head>
+		<title>Array</title>
+		<meta charset="utf-8">
+
+<script type="text/javascript">
+
+	var libri = new Array();
+	libri[0] = "Eloquent Javascript";
+	libri[1] = "Beginning Javascript";
+	libri[2] = "Javascript Quick Syntax Reference";
+
+	var risorseOL = [
+		"MDN",
+		"W3school",
+		"CodeAcademy",
+		"CodeSchool",
+		"Html.it"
+
+	];
+
+
+
+</script>
+
+
+	</head>
+	<body>
+		<h1>Un array di libri</h1>
+<p>
+		<script type="text/javascript">
+				libri[3] = "Essentials ecmascript6 typescript preview";
+				libri.push("JavaScript for kids");
+				var test = libri.pop();
+			for (var i in libri){
+				document.write("libro " + i + " : "+libri[i] + "<br/>");
+			}
+
+			document.write(libri.length);
+			document.write(test);
+
+
+			risorseOL.sort();
+			document.write(risorseOL);
+
+
+		</script>
+	</p>	
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html/>
+<html>
+	<head>
+		<title>Array</title>
+		<meta charset="utf-8">
+
+<script type="text/javascript">
+
+	function Libro() {
+		this.title = "Eloquent Javascript";
+		this.year = 2014;
+	}
+	var mioLibro = new Libro;
+
+	alert(mioLibro.title);
+
+	var libri = new Object();
+
+	 libri.principale = "Eloquent Javascript";
+	 libri.iniziale = "Beginning Javascript";
+	 libri.reference = "Javascript Quick Syntax Reference";
+	 libri.elenco=mostraElenco;
+
+
+	 function mostraElenco () {
+	 	document.write("Principale: " + libri.principale +"<br/>");
+	 	document.write("reference: " + libri.reference +"<br/>");
+	 	document.write("iniziale: " + libri.iniziale +"<br/>");
+	 }
+
+	//alert(libri.principale);
+
+
+	var risorseOL = [
+		"MDN",
+		"W3school",
+		"CodeAcademy",
+		"CodeSchool",
+		"Html.it"
+
+	];
+
+
+
+</script>
+
+
+	</head>
+	<body>
+		<h1>Un oggetto  libri</h1>
+<p>
+		<script type="text/javascript">
+
+			document.write(libri.elenco);
+		</script>
+	</p>	
+
+
+</body>
+</html>
