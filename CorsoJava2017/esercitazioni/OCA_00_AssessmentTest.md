@@ -2,7 +2,7 @@
 
 ##1.
 ###What is the result of the following class? 
-####Choose all that apply
+####Scegli tutte le risposte possibili
 	1: public class _C {
 	2: private static int $;
 	3: public static void main(String[] main) {
@@ -37,7 +37,7 @@
 
 ##3.
 ###What is the output of the following code? 
-####Choose all that apply
+####Scegli tutte le risposte possibili
 	1: interface HasTail { int getTailLength(); }
 	2: abstract class Puma implements HasTail {
 	3: protected int getTailLength() {return 4;}
@@ -164,7 +164,7 @@ H. The code will not compile because of line 12.
 
 ##9.
 ###Which of the following statements are true? 
-####Choose all that apply
+####Scegli tutte le risposte possibili
 * A. Checked exceptions are intended to be thrown by the JVM (and not the programmer).
 * B. Checked exceptions are required to be caught or declared.
 * C. Errors are intended to be thrown by the JVM (and not the programmer).
@@ -175,7 +175,7 @@ H. The code will not compile because of line 12.
 
 ##10. 
 ###Which are true of the following code? 
-####Choose all that apply
+####Scegli tutte le risposte possibili
 	1: import java.util.*;
 	2: public class Grasshopper {
 	3: public Grasshopper(String n) {
@@ -259,7 +259,7 @@ H. The code will not compile because of line 12.
 
 ##14. 
 ###Assuming we have a valid, non-null HenHouse object whose value is initialized by the blank line shown here, which of the following are possible outputs of this application? 
-####Choose all that apply
+####Scegli tutte le risposte possibili
 	1: class Chicken {}
 	2: interface HenHouse { public java.util.List<Chicken> getChickens(); }
 	3: public class ChickenSong {
@@ -279,7 +279,7 @@ H. The code will not compile because of line 12.
 
 ##15. 
 ###Which of the following statements can be inserted in the blank line so that the code will compile successfully? 
-####Choose all that apply
+####Scegli tutte le risposte possibili
 
 	public interface CanSwim {}
 	public class Amphibian implements CanSwim {}
@@ -300,7 +300,7 @@ H. The code will not compile because of line 12.
 
 ##16. 
 ###What individual changes, if any, would allow the following code to compile? 
-####Choose all that apply
+####Scegli tutte le risposte possibili
 	1: public interface Animal { public default String getName() { return null; } }
 	2: interface Mammal { public default String getName() { return null; } }
 	3: abstract class Otter implements Mammal, Animal {}
@@ -330,7 +330,7 @@ H. The code will not compile because of line 12.
 
 ##18. 
 ###Which of the following print out a date representing April 1, 2015? 
-####Choose all that apply
+####Scegli tutte le risposte possibili
 * A. System.out.println(LocalDate.of(2015, Calendar.APRIL, 1));
 * B. System.out.println(LocalDate.of(2015, Month.APRIL, 1));
 * C. System.out.println(LocalDate.of(2015, 3, 1));
@@ -349,7 +349,7 @@ H. The code will not compile because of line 12.
 
 ##20. 
 ###Which of the following are checked exceptions? 
-####Choose all that apply
+####Scegli tutte le risposte possibili
 * A. Exception
 * B. IllegalArgumentException
 * C. IOException
