@@ -338,7 +338,29 @@ Counter: OOP/java 99h - javascript 26h
 	recap 
 	JCF
 	info sistema > scrivi su file
+	esercizi per le vacanze
 	
+###MARTEDì 20/12/2016 9-12 3h Javascript
+	Oggetti in Javascript
+	esempi js 22-27
+	
+Counter: OOP/java 104h - javascript 32h	
+
+
+#Settimana 11
+ 
+###LUNEDì 9/01/2017 9-13 14-18 5h Java - 3h Javascript
+	recap Java
+	gestire le collezioni
+	evoluzione esempio aula, con collezioni e scrittura su file
+	
+	javascript: 
+	ideazione e sviluppo pagina web le ricette del mondo per scambio con allievi corso cucina
+	
+
+
+
+
 
 
 
