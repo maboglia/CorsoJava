@@ -94,7 +94,7 @@
 
   
 
-    Chiedere all'utente dei numeri in input.
+*    Chiedere all'utente dei numeri in input.
     Salvare i numeri in un array.
     Ordinare con le funzioni degli array.
 
