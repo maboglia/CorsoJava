@@ -34,7 +34,6 @@ function set_background() {
 #JavaScript : Collect the value of href, hreflang, rel, target, and type attributes of a link
 
 ```html
-view plaincopy to clipboardprint?
 
     <!DOCTYPE html>   
     <html>   
@@ -50,7 +49,6 @@ view plaincopy to clipboardprint?
 ```     
 
 ```javascript
-view plaincopy to clipboardprint?
 
     function getAttributes()  
     {  
@@ -72,7 +70,6 @@ view plaincopy to clipboardprint?
 Sample Solution :
 
 ```html
-view plaincopy to clipboardprint?
 
     <!DOCTYPE html>   
     <html><head>   
@@ -90,7 +87,6 @@ view plaincopy to clipboardprint?
 ```     
 
 ```javascript
-view plaincopy to clipboardprint?
 
     function insert_Row()  
     {  
@@ -108,7 +104,6 @@ view plaincopy to clipboardprint?
 
 
 ```html
-view plaincopy to clipboardprint?
 
     <!DOCTYPE html>   
     <html>   
@@ -126,7 +121,6 @@ view plaincopy to clipboardprint?
 ```     
 
 ```javascript
-view plaincopy to clipboardprint?
 
     function createTable()  
     {  
@@ -149,7 +143,6 @@ view plaincopy to clipboardprint?
 #JavaScript : Remove items from a dropdown list
 
 ```html
-view plaincopy to clipboardprint?
 
     <!DOCTYPE html>   
     <html>   
@@ -171,7 +164,6 @@ view plaincopy to clipboardprint?
 ```     
 
 ```javascript
-view plaincopy to clipboardprint?
 
     function removecolor()  
     {  
