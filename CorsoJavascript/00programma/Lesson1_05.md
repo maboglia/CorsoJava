@@ -43,7 +43,7 @@ Math.floor(Math.random() * 10);
 
 ---
 
-## Seelzion di frutti casuali!
+## Selezione casuale di frutti!
 
 ```javascript
 var fruits = ['Apple', 'Banana', 'Cherry', 'Pineapple', 'Kiwi'];
@@ -52,9 +52,8 @@ fruits[Math.floor(Math.random() * 5)]
 
 ---
 
-## Vuoiun frutto a caso?
 
 ```javascript
-"Would you like some " + fruits[Math.ceil(Math.random() * 5)] + "?"
+"Vuoi un frutto a caso " + fruits[Math.ceil(Math.random() * 5)] + "?"
 ```
 
