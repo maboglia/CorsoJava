@@ -57,3 +57,10 @@ fruits[Math.floor(Math.random() * 5)]
 "Vuoi un frutto a caso " + fruits[Math.ceil(Math.random() * 5)] + "?"
 ```
 
+---
+
+# Esercizio - Body Parts!
+
+- Crea tre arrays: numeri differenti, differenti aggettivi e un array di differenti parti del corpo. 
+- Seleziona un numero, aggettivo e parte del corpo a caso
+- Scivi un codice che stampi una frase tipo "Mi piacciono le tue 4 enormi braccia!" oppure "Mi piace il tuo mento peloso!"
