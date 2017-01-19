@@ -37,19 +37,19 @@
     In fondo alla pagina deve essere scritto "Benvenuto"+ nome + cognome.
 
   
-*6
+* 6
     Creare una pagina che chieda all'utente di fornire la propria autorizzazione al trattamento dei dati.
     Nel caso non sia data, scrivere "Autorizzazione non concessa".
     Nel caso contrario scrivere "Autorizzazione concessa".
 
   
-*7
+* 7
     Creare una pagina in cui il sistema chiede all'utente il proprio nome
     Il sistema verifica il nome e comunica all'utente se è un amministratore o meno
     E' dato un array di nomi che hanno i diritti di amministratore
 
   
-*8
+* 8
     Chiedere tre colori in input all'utente: uno per il testo, uno per lo sfondo e uno per il titolo.
     Chiedere alll'utente la dimensione del carattere di base (da 1 a 7).
     Determinare la dimensione e le caratteristiche di H1 (+3, grassetto), H2 (+2) e H3 (+1, grassetto, corsivo) rispetto alle caratteristiche inserite dall'utente per il carattere.
@@ -59,11 +59,9 @@
     Nel caso due o più dei colori assegnati dall'utente siano uguali, devono essere presenti regole che determinino che colore devono assumere titolo, testo e sfondo.
     Nel caso l'utente inserisca al posto dei tre colori il testo "*"deve essere caricato un foglio di stile esterno.
 
-  
 
-Versione semplificata dell'esercizio precedente.
-
-* Creare uno script JavaScript che:
+* 9 
+    Creare uno script JavaScript che:
 
     chieda all'utente la dimensione del carattere e il colore per i tag p, body, h1
     chieda all'utente il colore dello sfondo per il tab body
@@ -74,17 +72,17 @@ Versione semplificata dell'esercizio precedente.
 
 #Utilizzo delle funzioni
 
-*    Calcolare il totale della spesa (per un numero non definito di acquisti) utilizzando una funzione.
+*   Calcolare il totale della spesa (per un numero non definito di acquisti) utilizzando una funzione.
     L'utente deve poter interrompere gli acquisti scrivendo 0.
 
   
 
-*    Stampare la lista della spesa per un massimo di 3 acquisti.
+*   Stampare la lista della spesa per un massimo di 3 acquisti.
     L'utente deve poter interrompere gli acquisti scrivendo *.
 
   
 
- *   Creare uno slide-show di immagini
+*   Creare uno slide-show di immagini
 
   
 
