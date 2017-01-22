@@ -356,11 +356,42 @@ Counter: OOP/java 104h - javascript 32h
 	
 	javascript: 
 	ideazione e sviluppo pagina web le ricette del mondo per scambio con allievi corso cucina
+
+###MARTEDì 10/01/2017  9-11 2h Javascript
+	javascript: 
+	ideazione e sviluppo pagina web le ricette del mondo per scambio con allievi corso cucina
 	
 
+###GIOVEDì 12/01/2017 9-13 1h javascript - 3h Java
+	Javascript: ricette del mondo
+	Java: Progetti Archivio CD
+
+Counter: OOP/java 112h - javascript 38h	
 
 
+#Settimana 12
+	
+ 
+###MARTEDì 17/01/2017  9-11 2h Javascript
+	Javascript: ricette del mondo
+	
+###VENERDì 20/01/2017  9-12     1h javascript 2h Java
+	
+	[introduzione JSP](http://www.bogliaccino.it/corso-jsp-introduzione/)
+	Hello World JSP 
+	NetBeans e Eclipse, GlassFish e TomCat
+
+Counter: OOP/java 114h - javascript 41h		
 
 
+#Settimana 13
+ 
+###LUNEDì 23/01/2017 9-14  5h Java
 
+	[introduzione JSP](http://www.bogliaccino.it/corso-jsp-introduzione/)
+
+
+###MERCOLEDì 25/12/2016 9-12 3h 
+
+###VENERDì 27/12/2016 9-11 2h 
 
