@@ -377,7 +377,7 @@ Counter: OOP/java 112h - javascript 38h
 	
 ###VENERDì 20/01/2017  9-12     1h javascript 2h Java
 	
-	[introduzione JSP](http://www.bogliaccino.it/corso-jsp-introduzione/)
+[introduzione JSP](http://www.bogliaccino.it/corso-jsp-introduzione/)
 	Hello World JSP 
 	NetBeans e Eclipse, GlassFish e TomCat
 
@@ -388,7 +388,7 @@ Counter: OOP/java 114h - javascript 41h
  
 ###LUNEDì 23/01/2017 9-14  5h Java
 
-	[introduzione JSP](http://www.bogliaccino.it/corso-jsp-introduzione/)
+[introduzione JSP](http://www.bogliaccino.it/corso-jsp-introduzione/)
 
 
 ###MERCOLEDì 25/12/2016 9-12 3h 
