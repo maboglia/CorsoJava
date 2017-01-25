@@ -3,7 +3,7 @@ package model;
 public abstract class Abito {
 
 	String misura;
-	Enum taglia; 
+	Taglie taglia; 
 	String colore;
 	Double prezzo;
 	String marca;

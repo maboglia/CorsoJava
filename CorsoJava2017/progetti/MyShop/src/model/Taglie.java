@@ -2,6 +2,12 @@ package model;
 
 public enum Taglie {
 	
-	S, M, L, XL;
+	S("small"), M("medium"), L("large"), XL("Extra-large");
+	
+	String descrizione;
+	
+	Taglie(String descrizione){
+		this.descrizione = descrizione;
+	}
 
 }
