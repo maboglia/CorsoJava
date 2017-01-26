@@ -387,13 +387,15 @@ Counter: OOP/java 114h - javascript 41h
 #Settimana 13
  
 ###LUNEDì 23/01/2017 9-14  5h Java
+[introduzione JSP](http://www.bogliaccino.it/corso-jsp-introduzione/)
 
 [JSP: le direttive](http://www.bogliaccino.it/corso-jsp-le-direttive/)
 
 ###MARTEDì 24/12/2016 9-13 4h Java 
 
 [JSP: le direttive](http://www.bogliaccino.it/corso-jsp-le-direttive/)
-[JSP: le direttive](http://www.bogliaccino.it/corso-jsp-le-espressioni/)
+
+[JSP: le espressioni](http://www.bogliaccino.it/corso-jsp-le-espressioni/)
 
 	Progetto JSP: MyShop
 	Java Advanced: inizializzatore statico
