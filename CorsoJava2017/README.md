@@ -400,12 +400,17 @@ Counter: OOP/java 114h - javascript 41h
 	Progetto JSP: MyShop
 	Java Advanced: inizializzatore statico
 
-###MERCOLEDì 25/12/2016 9-12 3h 
+###MERCOLEDì 25/12/2016 9-12 3h Java
 
 [JSP: le dichiarazioni](http://www.bogliaccino.it/corso-jsp-dichiarazioni/)
 
-	Progetto JSP: MyShop, Model View Controller
+	Progetto JSP: MyShop, il pattern MVC Model View Controller
 	Java Advanced: enumerazioni
 
-###VENERDì 27/12/2016 9-11 2h 
+###VENERDì 27/12/2016 9-11 2h Java
+
+	Verifica OCA Java - 2: statements e costrutti del linguaggio
+	Progetto JSP: MyShop, JSP View, ricevere dati dal form html
+	
+Counter: OOP/java 128h - javascript 41h		
 
