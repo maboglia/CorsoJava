@@ -15,7 +15,7 @@ public class StudentiJsonReader {
         try {
  
             Object obj = parser.parse(new FileReader(
-                    "dario_mennillo.json"));
+                    "test_files/dario_mennillo.json"));
  
             JSONObject jsonObject = (JSONObject) obj;
  
