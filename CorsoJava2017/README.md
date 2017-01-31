@@ -423,7 +423,11 @@ Counter: OOP/java 128h - javascript 41h
 <<<<<<< HEAD
 	[Progetto JSP: MyShop](https://github.com/maboglia/MyShop) , MVC, controller, ordini con nested class
 =======
+<<<<<<< HEAD
+	[Progetto JSP: MyShop](https://github.com/maboglia/MyShop) , MVC, controller, ordini con nested class
+=======
 	[Progetto JSP: MyShop](https://github.com/maboglia/MyShop), MVC, controller, ordini con nested class
+>>>>>>> branch 'master' of https://github.com/maboglia/TSS2017.git
 >>>>>>> branch 'master' of https://github.com/maboglia/TSS2017.git
 	Hello Swing GUI
 	Creare Jar eseguibili, creare e includere Jar nel progetto 
