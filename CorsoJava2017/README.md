@@ -420,7 +420,8 @@ Counter: OOP/java 128h - javascript 41h
 	
 	Restituzione verifica 2 Java
 	Java advanced: nested classes, member classes, anonymous inner classes
-	[Progetto JSP: MyShop](https://github.com/maboglia/MyShop) , MVC, controller, ordini con nested class
+[Progetto JSP: MyShop](https://github.com/maboglia/MyShop)
+	MVC, controller, ordini con nested class
 	Hello Swing GUI
 	Creare Jar eseguibili, creare e includere Jar nel progetto 
 
