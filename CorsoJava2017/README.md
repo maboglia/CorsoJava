@@ -391,7 +391,7 @@ Counter: OOP/java 114h - javascript 41h
 
 [JSP: le direttive](http://www.bogliaccino.it/corso-jsp-le-direttive/)
 
-###MARTEDì 24/12/2016 9-13 4h Java 
+###MARTEDì 24/01/2017 9-13 4h Java 
 
 [JSP: le direttive](http://www.bogliaccino.it/corso-jsp-le-direttive/)
 
@@ -400,17 +400,27 @@ Counter: OOP/java 114h - javascript 41h
 	Progetto JSP: MyShop
 	Java Advanced: inizializzatore statico
 
-###MERCOLEDì 25/12/2016 9-12 3h Java
+###MERCOLEDì 25/01/2017 9-12 3h Java
 
 [JSP: le dichiarazioni](http://www.bogliaccino.it/corso-jsp-dichiarazioni/)
 
 	Progetto JSP: MyShop, il pattern MVC Model View Controller
 	Java Advanced: enumerazioni
 
-###VENERDì 27/12/2016 9-11 2h Java
+###VENERDì 27/01/2017 9-11 2h Java
 
 	Verifica OCA Java - 2: statements e costrutti del linguaggio
 	Progetto JSP: MyShop, JSP View, ricevere dati dal form html
 	
 Counter: OOP/java 128h - javascript 41h		
+
+#Settimana 14
+
+###LUNEDì 30/01/2017 8H JAVA
+	
+	Restituzione verifica 2 Java
+	Java advanced: nested classes, member classes, anonymous inner classes
+	[Progetto JSP: MyShop](https://github.com/maboglia/MyShop), MVC, controller, ordini con nested class
+	Hello Swing GUI
+	Creare Jar eseguibili, creare e includere Jar nel progetto 
 
