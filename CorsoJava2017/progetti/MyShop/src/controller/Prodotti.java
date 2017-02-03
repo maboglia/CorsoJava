@@ -17,11 +17,11 @@ public class Prodotti {
 		
 		mostraProdotti = new ArrayList<>();
 		
-		mostraProdotti.add(new Giacca(Taglie.XL));
-		mostraProdotti.add(new Giacca());
-		mostraProdotti.add(new Pantalone());
-		mostraProdotti.add(new Camicia());
-		mostraProdotti.add(new Maglione());
+		mostraProdotti.add(new Giacca(Taglie.M, Colori.BLUE, 59.99));
+		mostraProdotti.add(new Pantalone(Taglie.M, Colori.BLUE, 39.99));
+		mostraProdotti.add(new Camicia(Taglie.M, Colori.RED, 29.99));
+		mostraProdotti.add(new Maglione(Taglie.M, Colori.GREEN, 49.99));
+		mostraProdotti.add(new Scarpe(Taglie.M, Colori.RED, 69.99));
 		
 	}
 
@@ -36,11 +36,14 @@ public class Prodotti {
 	/**
 	 * @return the mostraProdotti
 	 */
+	/**
+	 * @return
+	 */
 	public static String getMostraProdottiProvv() {
 		s = new StringBuilder();
 			for(Abito a : mostraProdotti){
-				System.out.println(a);
-				System.out.println("è un pantalone: "+(a instanceof Giacca));
+				//System.out.println(a);
+				System.out.println("è una giacca: "+(a instanceof Giacca));
 				if (a instanceof Giacca) System.out.println(a.descriviProdotto());
 				s.append(a.descriviProdotto()); 
 				
