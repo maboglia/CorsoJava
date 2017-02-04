@@ -425,10 +425,11 @@ Counter: OOP/java 128h - javascript 41h
 	Hello Swing GUI
 	Creare Jar eseguibili, creare e includere Jar nel progetto 
 
-###VENERDì 03/02/2017
+###VENERDì 03/02/2017 2H Javascript
 
 [Progetto JSP: MyShop](https://github.com/maboglia/MyShop)
 	
 	programmazione front-end con tecnologie client-side
 	mostra nascondi sezioni
 		
+Counter: OOP/java 136h - javascript 43h		
