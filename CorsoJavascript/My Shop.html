@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>My Shop</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="My%20Shop_files/bootstrap.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="My%20Shop_files/bootstrap-theme.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+
+<style>
+.container { padding:0 auto; margin:0auto;}
+.row {display:block; width: 90%; border:0px solid #ccc;}
+#testata, #menu, #footer{ clear:both; border:0px solid #c00;  }
+#content {float:left; width:65%; border:0px solid #fc3;min-height:450px;}
+#sidebar {float:right; width:30%; border:0px solid green;}
+#menu  li {list-style-type: none;  display:inline;  }
+</style>
+
+</head>
+<body>
+
+
+<div class="container">
+
+	<div class="row" id="testata">
+		<h1>header</h1>
+	</div>
+	
+	<div class="row" id="menu">
+		<h1>menu</h1>
+
+<ul>
+	<li><a href="http://localhost:8080/MyShop/index.jsp?pagina=home">home</a></li>
+	<li><a href="http://localhost:8080/MyShop/index.jsp?pagina=prodotti">prodotti</a></li>
+	<li><a href="http://localhost:8080/MyShop/index.jsp?pagina=ordini">ordini</a></li>
+</ul>
+
+	</div>
+	
+	<div class="row">
+		<div id="content" class="col-md-9">
+			
+
+
+
+
+			<h1>content</h1>
+
+			non va!
+
+
+			<h2>null</h2>
+			<h3>null</h3>
+
+				
+
+		</div>
+		<div id="sidebar" class="col-md-3">
+			
+
+<div id="pulsantiServizio">
+	<button id="switchElementi" class="btn btn-primary">Registrati</button>
+</div>
+
+
+
+
+		<div id="carrello" class="elementoScomparsa" style="display: none;">
+
+			<div class="header"><h1>carrello</h1></div>
+
+			<ul id="prodottiCarrello">
+
+			</ul>
+
+		</div>
+
+
+
+<div id="registrazione" style="display: none;">
+
+	<div class="header"><h1>registrazione</h1></div>
+
+	<form method="post" name="doRegistrazione" action="doRegistrazione.jsp">
+	
+		username <input name="username" type="text">
+		<br>
+		password <input name="password" type="text">
+	
+		<br>
+		<br>
+	
+		M: <input name="genere" value="M" type="radio">
+		F: <input name="genere" value="F" type="radio">
+	
+		<br>
+		
+		<select name="eta">
+			<option value="giovane" selected="selected">giovane 18-35</option>
+			<option value="esperto">esperto 36-49</option>
+			<option value="maturo">maturo 50-65</option>	
+		</select>
+		<br>
+		
+		metodi pagamento preferiti
+		contanti <input name="payment" value="contanti" type="checkbox"><br>
+		bonifico <input name="payment" value="bonifico" type="checkbox"><br>
+		carta credito <input name="payment" value="creditcard" type="checkbox"><br>
+		paypal <input name="payment" value="paypal" type="checkbox"><br>
+	
+		<br>
+	
+		<input name="invia" value="registrati" type="submit">
+	
+	</form>
+
+</div>
+
+
+<div id="login">
+	<div class="header"><h1>login</h1></div>
+	<form method="post" name="doLogin" action="login">
+	
+		username <input name="username" type="text">
+		<br>
+		password <input name="password" type="text">
+		<br>
+	
+		<input name="btnLogin" id="btnLogin" value="login" type="submit">	
+
+	</form>
+</div>
+
+		</div>
+	
+	</div>
+	
+	<div class="row" id="footer">
+		
+<h1>footer</h1>
+
+
+	</div>
+
+</div>
+
+<script src="My%20Shop_files/jquery-1.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="My%20Shop_files/bootstrap.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="My%20Shop_files/mioScript.js"></script>
+
+
+</body></html>
