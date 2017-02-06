@@ -18,11 +18,12 @@
     +=
     -=
     stringhe
-    unire le stringhe
-    trovare la lunghezza di una stringa
-    trovare un carattere in una stringa
-    tagliare le stringhe
-    modificare le stringhe: tutto maiuscolo/minuscolo
+        metodi dellestringhe
+        unire le stringhe
+        trovare la lunghezza di una stringa
+        trovare un carattere in una stringa
+        tagliare le stringhe
+        modificare le stringhe: tutto maiuscolo/minuscolo
     Booleans
         operazioni logiche
         comparazione tra numeri e valori booleani

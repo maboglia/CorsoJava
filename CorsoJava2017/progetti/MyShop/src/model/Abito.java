@@ -2,11 +2,20 @@ package model;
 
 public abstract class Abito {
 
-	String misura;
 	Taglie taglia; 
-	String colore;
-	Double prezzo;
+	Colori colore;
+	String misura;
 	String marca;
+	Double prezzo;
 	
 	public abstract String descriviProdotto();
+
+	/**
+	 * @return the prezzo
+	 */
+	public Double getPrezzo() {
+		return prezzo;
+	}
+	
+	
 }
