@@ -433,3 +433,22 @@ Counter: OOP/java 128h - javascript 41h
 	mostra nascondi sezioni
 		
 Counter: OOP/java 136h - javascript 43h		
+
+
+###LUNEDì 06/01/2017 8H JAVA
+	
+	Reflection, Class, Constructor classes
+	MVC: client-side JS su progetto Negozio JSP
+	
+###MERCOLEDì 08/02/2017 2H Javascript
+	
+	Hello JQuery
+
+###VENERDì 10/02/2017 3H Javascript
+
+	File I/O
+	UsingCommonJavaLibraries
+	MVC: client-side JQuery su progetto Negozio JSP
+	
+Counter: OOP/java 144h - javascript 48h		
+	
