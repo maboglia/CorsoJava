@@ -6,13 +6,7 @@ Jquery è un Framework (una collezione o libreria di codice che agevola la risol
 di problemi) che permette di interagire , con semplicità e rapidità, sul DOM ( Document Object
 Model) * di una pagina HTML
 PRINCIPALI CARATTERISTICHE
-1.
-2.
-3.
-4.
-5.
-6.
-7.
+
 Cross browser ( supportato da ie 6+, Firefox 2+, Safari 2+, Opera 9+, chrome e tanti altri)
 Grande community = Grande disponibilità di plugin
 Leggero ( l'attuale versione production della libreria pesa 32Kb)
@@ -21,18 +15,6 @@ Semplice
 Utilizza selettori CSS (anche Css3 )
 Breve, permette di ridurre la quantità di codice necessario rispetto all'uso di Javascript
 * tutti gli elementi che compongono una pagina web ( div, immagini, span, p ... )
- :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
-
-##CHI USA JQUERY?
-1. Google
-2. Wordpress
-3. Technorati
-4. Twitter
-5. Mozilla.org
-6. .....
-7. .....
-8. EpidemiaLab.it
-9. .....
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##jQUERY
@@ -116,6 +98,7 @@ Selettori.
 
 ##SELETTORI
 Prendiamo in esempio questa pagina html
+```javascript
 <body>
 <div id="blocco">
 <p><strong>ELENCO:</strong> III C </p>
@@ -128,10 +111,13 @@ Prendiamo in esempio questa pagina html
 <strong>Fine elenco</strong>
 </div>
 </body>
+```
+
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##SELETTORI
 $("#blocco")
+```javascript
 <body>
 <div id="blocco">
 <p><strong>ELENCO:</strong> III C </p>
@@ -144,10 +130,13 @@ $("#blocco")
 <strong>Fine elenco</strong>
 </div>
 </body>
+```
+
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##SELETTORI
 $(".elenco")
+```javascript
 <body>
 <div id="blocco">
 <p><strong>ELENCO:</strong> III C </p>
@@ -160,10 +149,13 @@ $(".elenco")
 <strong>Fine elenco</strong>
 </div>
 </body>
+```
+
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##SELETTORI
 $("strong")
+```javascript
 <body>
 <div id="blocco">
 <p><strong>ELENCO:</strong> III C </p>
@@ -176,10 +168,13 @@ $("strong")
 <strong>Fine elenco</strong>
 </div>
 </body>
+```
+
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##SELETTORI
 $("p strong")
+```javascript
 <body>
 <div id="blocco">
 <p><strong>ELENCO:</strong> III C </p>
@@ -192,12 +187,15 @@ $("p strong")
 <strong>Fine elenco</strong>
 </div>
 </body>
+```
+
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##I FILTRI
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##FILTRI
+
 I filtri permettono di ottenere una maggiore precisione nella selezione
 degli elementi fatta con i selettori
 • Filtri semplici (Basic Filter)
@@ -211,6 +209,7 @@ degli elementi fatta con i selettori
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##FILTRI
+
 Supponiamo di avere la seguente tabella creata attraverso codice html
 Nome
 Cognome Provincia #
@@ -223,6 +222,7 @@ ADA
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##FILTRI
+
 $("th").css("background-color", "#9bbb59");
 $("tr:odd").css ("background-color", "#dee7d1");
 $("tr:even").css ("background-color", "#eff3ea");
@@ -237,6 +237,7 @@ ADA
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##FILTRI
+
 $( "td:contains('assente')" ).css('color','red');
 Nome
 Cognome Provincia #
@@ -249,6 +250,7 @@ ADA
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##FILTRI
+
 $( "td[align=left]").css('text-align','center');
 Nome Cognome Provincia #
 ADA ADAMO PA presente
@@ -258,8 +260,10 @@ DARIO DEMO TP presente
 EMILIO ERRANTE ME assente
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
-##FILTRI SU ELEMENTI FORM
+##FILTRI  SU ELEMENTI FORM
+
 Supponiamo di avere questo form :
+```javascript
 <form name="nome_form" id="id_form">
 <label>Colori preferiti</label>
 <input type="checkbox" value="rosso" /> Rosso
@@ -277,10 +281,13 @@ stringa+=" "+ $(this).val() +" ";
 alert(stringa);
 }
 </script>
+```
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##FILTRI SU ELEMENTI FORM
+
 Supponiamo di avere questo form :
+```javascript
 <form name="nome_form" id="id_form">
 <label>Colori preferiti</label><br />
 <select id="colori" onchange="dammi_selezionato()">
@@ -298,9 +305,12 @@ stringa+=" "+ $(this).val() + " ";
 alert(stringa);
 } ;
 </script>
+```
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##FILTRI SU ELEMENTI FORM
+```javascript
+
 <form name="nome_form" id="id_form">
 <label>Colori preferiti</label><br />
 <select id="colori"multiple="multiple">
@@ -320,6 +330,8 @@ stringa+=" "+ $(this).val() + " ";
 alert(stringa);
 } ;
 </script>
+```
+
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##ADESSO AZIONE
@@ -334,6 +346,8 @@ http://api.jquery.com/category/manipulation/
 
 ##MANIPOLIAMO IL DOM
 Prendiamo in esempio questa porzione di html
+
+```javascript
 <div id="blocco">
 <h1>Esempio</h1>
 <div id="blocco_interno"></div>
@@ -343,10 +357,13 @@ $("h1").prepend("<span>Primo</span>");
 <h1><span>Primo</span> Esempio</h1>
 <div id="blocco_interno"></div>
 </div>
+```
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##MANIPOLIAMO IL DOM
 Prendiamo in esempio questa porzione di html
+
+```javascript
 <div id="blocco">
 <h1>Esempio</h1>
 <div id="blocco_interno"></div>
@@ -357,10 +374,13 @@ $("h1").before("<span>Primo</span>");
 <h1>Esempio</h1>
 <div id="blocco_interno"></div>
 </div>
+```
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##MANIPOLIAMO IL DOM
 Prendiamo in esempio questa porzione di html
+
+```javascript
 <div id="blocco">
 <h1>Esempio</h1>
 <div id="blocco_interno"></div>
@@ -370,10 +390,13 @@ $("h1").append("<span>Primo</span>");
 <h1>Esempio <span>Primo</span> </h1>
 <div id="blocco_interno"></div>
 </div>
+```
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##MANIPOLIAMO IL DOM
 Prendiamo in esempio questa porzione di html
+
+```javascript
 <div id="blocco">
 <h1>Esempio</h1>
 <div id="blocco_interno"></div>
@@ -384,10 +407,13 @@ $("h1").after("<span>Primo</span>");
 <span>Primo</span>
 <div id="blocco_interno"></div>
 </div>
+```
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##MANIPOLIAMO IL DOM
 Prendiamo in esempio questa porzione di html
+
+```javascript
 <div id="blocco">
 <h1>Esempio</h1>
 <div id="blocco_interno"></div>
@@ -399,9 +425,12 @@ $("#blocco_interno").html("<strong>Ciao , sono un testo dinamico</strong>");
 <div id="blocco_interno"> <strong>Ciao , sono un testo
 dinamico </strong> </div>
 </div>
+```
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##MANIPOLIAMO IL DOM
+
+```javascript
 <div id="blocco">
 <h1>Esempio</h1>
 <div id="blocco_interno"></div>
@@ -413,9 +442,12 @@ $("# blocco_interno).addClass("selezionata");
 <div id="blocco_interno" class="selezionata">
 </div>
 </div>
+```
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##MANIPOLIAMO IL DOM
+
+```javascript
 <div id="blocco">
 <h1>Esempio</h1>
 <div id="blocco_interno" class="selezionata">
@@ -427,9 +459,12 @@ $("#blocco_interno").removeClass("selezionata");
 <span>Primo</span>
 <div id="blocco_interno"></div>
 </div>
+```
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##MANIPOLIAMO IL DOM
+
+```javascript
 ciao
 <form>
 <input type="text" id="testo" name="testo"
@@ -442,9 +477,12 @@ $("span"). html( $("#testo").val());
 value="ciao" />
 </form>
 <span>ciao</span>
+```
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##MANIPOLIAMO IL DOM
+
+```javascript
 <form>
 <input type="text" id="testo" name="testo" />
 </form>
@@ -454,6 +492,7 @@ $("# testo).val('Hello world') ;
 <input type="text" id="testo" name="testo"
 value=" Hello world " />
 </form>
+```
  :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard: :bike: :musical_keyboard:
 
 ##MANIPOLIAMO I CSS
