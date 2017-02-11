@@ -1,10 +1,3 @@
-On Programming
-Why Language Matters
-What Is JavaScript?
-Trying Programs
-Overview of This Book
-Typographic Conventions 
-
 ##BASIC JAVASCRIPT: VALUES, VARIABLES, AND CONTROL FLOW 
 	Values 
 	Numbers 
