@@ -750,7 +750,7 @@ mousedown, mouseup | Inviati ad un elemento quando il mouse è sopra di esso e v
 mouseover, mouseout, mousemove | Eventi inviati all'elemento in cui il puntatore del mouse entre (mouseover), in cui esce (mouseout) o in cui si sta mouvendo (mousemove)
 keydown,keypress, keyup | Eventi inviati quando un tasto viene premuto (keydown) è stato rilasciato (keyup) o è stato premuto (keypress)
 select | Inviato ad un elemento quando viene selezionato del test all'interno di esso. 
-change | Evento inviato ad un elemento che ha cambiato il proprio valore. Limitato a <select> <input> <textarea>
+change | Evento inviato ad un elemento che ha cambiato il proprio valore. 
 submit | Evento inviato quando l'utente tenta di fare il submit di un form
 
 
