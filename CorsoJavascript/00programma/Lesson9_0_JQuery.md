@@ -744,8 +744,7 @@ focusin, focusout | Inviato ad un elemento se esso o un suo discendente rispetti
 load | Inviato ad un elemento quando esso e tutti i suo discendenti sono stati completamente caricati
 resize | Inviato all'elemento windows quando la finestra del browser ha cambiato dimensioni
 scroll | Inviato ad un elemento quando l'utente ha effettuato lo scroll in un differente punto dell'elemento stesso
-unload | Inviato all'oggetto window quando l'utente naviga fuori dalla pagina (chiusura del browser, click su un link,
-a volte anche il semplice refresh)
+unload | Inviato all'oggetto window quando l'utente naviga fuori dalla pagina (chiusura del browser, click su un link, a volte anche il semplice refresh)
 click, dbclick | Inviati ad un elemento quando il mouse è sopra di esso e viene effettuato un click o un doppio click
 mousedown, mouseup | Inviati ad un elemento quando il mouse è sopra di esso e viene rispettivamente premuto o rilasciato il bottone del mouse
 mouseover, mouseout, mousemove | Eventi inviati all'elemento in cui il puntatore del mouse entre (mouseover), in cui esce (mouseout) o in cui si sta mouvendo (mousemove)
@@ -753,6 +752,7 @@ keydown,keypress, keyup | Eventi inviati quando un tasto viene premuto (keydown)
 select | Inviato ad un elemento quando viene selezionato del test all'interno di esso. 
 change | Evento inviato ad un elemento che ha cambiato il proprio valore. Limitato a <select> <input> <textarea>
 submit | Evento inviato quando l'utente tenta di fare il submit di un form
+
 
 #bind
 $(selettore).bind(evento,[dati],function(evento){...})
