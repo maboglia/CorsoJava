@@ -4,22 +4,23 @@
 	<button id="switchElementi" class="btn btn-primary">Registrati</button>
 </div>
 
-
-
-
-<div id="carrello" class="elementoScomparsa">
-
-	<div class="header"><h1>carrello</h1></div>
-
-	<ul>
-		<li>uno</li>
-		<li>due</li>
-		<li>tre</li>
-	</ul>
-
-</div>
-
-
+<% if (session.getValue("isLogged") != null ){%> 
+	<% if (session.getValue("isLogged").equals("true")) { %>
+	
+	<div id="carrello" class="elementoScomparsa">
+	
+		<div class="header"><h1>carrello</h1></div>
+	
+		<ul>
+			<li>uno</li>
+			<li>due</li>
+			<li>tre</li>
+		</ul>
+	
+	</div>
+	
+	<% } %>
+<% } %>
 
 <div id="registrazione">
 
@@ -63,7 +64,7 @@
 
 <div id="login">
 	<div class="header"><h1>login</h1></div>
-	<form method="post" name="doLogin" action="doLogin.jsp">
+	<form method="post" name="doLogin" action="login">
 	
 		username <input type="text" name="username" />
 		<br/>

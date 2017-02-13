@@ -12,15 +12,7 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-
-<style>
-.container { padding:0 auto; margin:0auto;}
-.row {display:block; width: 90%; border:0px solid #ccc;}
-#testata, #menu, #footer{ clear:both; border:0px solid #c00;  }
-#content {float:left; width:65%; border:0px solid #fc3;min-height:450px;}
-#sidebar {float:right; width:30%; border:0px solid green;}
-#menu  li {list-style-type: none;  display:inline;  }
-</style>
+<link rel="stylesheet" href="css/mioStile.css"/>
 
 </head>
 <body>
@@ -60,6 +52,7 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="js/mioScript.js"></script>
+<script src="js/mioScriptJQuery.js"></script>
 
 
 </body>

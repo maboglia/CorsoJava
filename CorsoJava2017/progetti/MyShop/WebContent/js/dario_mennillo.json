@@ -1,0 +1,29 @@
+{
+  "matricola": 6,
+  "nome": "Dario",
+  "cognome": "Mennillo",
+  "residenza": "Torino",
+  "image": "dario.png",
+  "data_nascita": "1989-04-13",
+  "job_title": "formatore",
+  "skill": [
+    "Java",
+    "Html5",
+    "Javascript",
+    "Sql"
+  ],
+  "programmi": [
+    "eclipse",
+    "sublime text",
+    "dreamweaver",
+    "brackets",
+    "intelliJ",
+    "blockly",
+    "paccheto Office"
+  ],
+  "corso": {
+    "materia_pref1": "Java",
+    "materia_pref2": "Html 5",
+    "materia_pref3": "Sql"
+  }
+}
