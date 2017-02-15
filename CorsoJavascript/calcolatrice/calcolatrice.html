@@ -39,6 +39,7 @@
         text-align: right;
         margin:0 auto;
         margin-bottom: 1.5em;
+        overflow: hidden;
 
       }
 
@@ -106,7 +107,7 @@
               <div class="btn btn-primary cbutton">7</div>
               <div class="btn btn-primary cbutton">8</div>
               <div class="btn btn-primary cbutton">9</div>
-              <div class="btn btn-danger cbutton">x</div>
+              <div class="btn btn-danger cbutton">*</div>
             </div>
 
             <div class="col-xs-12">
@@ -137,47 +138,85 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
     <script type="text/javascript">
+      //inizializzo un array di elementi di classe cbutton
       var mieiBottoni = document.getElementsByClassName("cbutton");
       var display = document.getElementById("display");
+      
       //memorizzo calcoli
       var mioCalcolo = '';
 
+      //variabili boolean di controllo
+      var isStart = false;
+      var mySwitch = false;
+
+      //array di operatori
       var mieiOperatori = ["+","-","x", "/"];
 
+      //il bottone cliccato sarà memorizzato in questa variabile 1a
       var myValue = '';
 
       for (var i = 0; i < mieiBottoni.length; i++) {
         
         //aggiungo listener al bottone
         mieiBottoni[i].addEventListener("click", function (argument) {
+          //operazione 1a
           myValue = this.innerHTML;
+
+          if(isStart || mioCalcolo == '0' ){
+            isStart = false;
+            mioCalcolo = '';
+          }
+
 
           
         //sezione operatori
         if (
           myValue == "+" || 
           myValue == "-" || 
-          myValue == "x" || 
+          myValue == "*" || 
           myValue == "/"  
           ){
 
-          display.innerHTML = "calcolo";
+          if(mySwitch){
+            mySwitch = false;
+            
+            //mioCalcolo = eval(mioCalcolo);
+
+            if (mieiOperatori.indexOf(display.innerHTML.slice(-1))>-1){
+              mioCalcolo = mioCalcolo.substring(0, mioCalcolo.length - 1);
+
+            }else{
+              mioCalcolo = eval(mioCalcolo);
+            }
+          }
+          mySwitch=true;
         }
+
+
+
 
         //tasti =, C, numero
         if(myValue == "="){
-          if (mieiOperatori.indexOf(display.innerHTML.slice(-1))==-1)
-          mioCalcolo = eval(mioCalcolo);
 
-      }
+          if (mieiOperatori.indexOf(display.innerHTML.slice(-1))==-1){
+            mioCalcolo = eval(mioCalcolo);
+          }
+
+          isStart = true;
+
+        }
         else if(myValue == "C"){
           mioCalcolo = 0;
+
+          isStart = true;
 
         }
         else {
           mioCalcolo = mioCalcolo + myValue;
         }
 
+
+          //ultimo step stampo a video mioCalcolo
           display.innerHTML = mioCalcolo;
         });
       };
