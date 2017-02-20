@@ -454,9 +454,32 @@ Counter: OOP/java 144h - javascript 48h
 #Settimana 16
 
 
-###LUNEDì 17/02/2017 8H JAVA
+###LUNEDì 13/02/2017 6H JAVA + 2H Javascript
 
-	File I/O
-	UsingCommonJavaLibraries
+	JSP 
+	Javascript calcolatrice
+
+###MERCOLEDì 15/02/2017 2H Javascript
+	
+	Javascript calcolatrice
+
+###VENERDì 17/02/2017 3H Java
+
+	MVC: JSP Servlet controller: doGet
+	
+Counter: OOP/java 153h - javascript 52h		
+
+
+#Settimana 17
+
+###LUNEDì 20/02/2017 4H JAVA 4H Javascript
+
+	java: file IO
+	jquery: effetti, eventi, ajax
+	progetto MVC MyShop
+	Intro JDBC
+	
+
+
 
 
