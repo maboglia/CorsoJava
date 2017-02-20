@@ -120,7 +120,7 @@ function creaCardElement(p){
 		panelFooter.setAttribute('class', 'panel-footer');
 		var btnCart = document.createElement("button");
 		btnCart.setAttribute('class','btn btn-primary');
-		btnCart.setAttribute('onclick', "mettiNelCarrello('"+ p.Abito +"')");
+		//btnCart.setAttribute('onclick', "mettiNelCarrello('"+ p.Abito +"')");
 
 		btnCart.onclick = function () {
 				//alert(p);
