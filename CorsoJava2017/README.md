@@ -74,45 +74,84 @@ _------------------------------------stampato fino a qui------------------------
 
 Counter: OOP/java 25h
 
-## Settimana 3 
+###codice week2
+* Booleani
+* Caratteri
+* QuarantaquattroGatti
+* ScambioVariabili
+* SimpleCalcolatrice
+
+#Settimana 3 
+
 ###MERCOLEDì 2/11/2016 9-14 5h
-INTRODUZIONE ALLA LIBRERIA STANDARD 
-Il comando import - La classe String - La documentazione della libreria standard di Java 
-esercizi sulle stringhe
+
+	INTRODUZIONE ALLA LIBRERIA STANDARD 
+	Il comando import - La classe String - La documentazione della libreria standard di Java 
+	esercizi sulle stringhe
 ###GIOVEDÌ 3/11/2016 9-14 5h
-OPERATORI E GESTIONE DEL FLUSSO DI ESECUZIONE 
-cicli – loop (for, foreach, while, do..while): ripetere uno statement
-condizioni (if...[else if]...[else], switch): condizione che si deve verificare, sempre boolean
-I METODI COSTRUTTORI 
-Caratteristiche di un costruttore - Costruttore di default - Package
+
+	OPERATORI E GESTIONE DEL FLUSSO DI ESECUZIONE 
+	cicli – loop (for, foreach, while, do..while): ripetere uno statement
+	condizioni (if...[else if]...[else], switch): condizione che si deve verificare, sempre boolean
+	I METODI COSTRUTTORI 
+	Caratteristiche di un costruttore - Costruttore di default - Package
 ###VENERDÌ 4/11/2016 9-12 3h
-Javascript introduzione, variabili e tipi
+
+	Javascript introduzione, variabili e tipi
+
 Counter: OOP/java 35h - javascript 3h
 
+###codice week3
+* AltriEsempiFor
+* EsempiFor
+* EsempiWhile
+* stringhe
+* ProvaStringBuffer
+* RicercaLettera
+* StringBuilder
+* Stringhe1
+* Stringhe2
+* StringheCompara
+* StringParsing
+* StringPasswordGenerator
+* TestStringhe
+* Stringhe1
+* Stringhe2
+* TuttiPositiviPari
+* VariableDemo
+* worked
+    * example
+        * uno
+            * BorderMaker
+            * PictureDemo
+            * Picture
+
 #Settimana 4 
+
 ###LUNEDì 7/11/2016 9-13 14-18 8h
-Approfondiamo la classe Studente
-Gli array in Java - Dichiarazione - Creazione - Inizializzazione
-IDENTIFICATORI, TIPI DI DATI ED ARRAY 
-Schema Libero - Case sensitive 
-Commenti - Regole per gli identificatori 
-Array Multidimensionali 
-Limiti degli array in JAVA - dimensione prefissata
-Array (vettori semplici, monodimensionali) 
+	Approfondiamo la classe Studente
+	Gli array in Java - Dichiarazione - Creazione - Inizializzazione
+	IDENTIFICATORI, TIPI DI DATI ED ARRAY 
+	Schema Libero - Case sensitive 
+	Commenti - Regole per gli identificatori 
+	Array Multidimensionali 
+	Limiti degli array in JAVA - dimensione prefissata
+	Array (vettori semplici, monodimensionali) 
 
-array elenco allievi 
-scorro elenco allievi utilizzando un ciclo for 
+	array elenco allievi 
+	scorro elenco allievi utilizzando un ciclo for 
 
 
 
-gestione base di possibili eccezioni: 
-1) provare a risolvere il problema con if() 
-2) usare la gestione eccezioni di JAVA
+	gestione base di possibili eccezioni: 
+	1) provare a risolvere il problema con if() 
+	2) usare la gestione eccezioni di JAVA
 
-creare e gestire array di stringhe all'interno del codice sorgente 
+	creare e gestire array di stringhe all'interno del codice sorgente 
 
 ###MARTEDÌ 8/11/2016 9-12 3h
-* costrutto switch
+	
+	* costrutto switch
 
 *	Introduzione classi
 	* classi, 
@@ -142,6 +181,19 @@ esercizi java sugli array
 
 Counter: OOP/java 48h - javascript 6h	
 
+###codice week4
+* CercaDadiUguali
+* CercaIl7
+* ContoCorrente
+* ContoTester
+* Contrario
+* Dado
+* EsempiSwitch
+* Registro
+* SoloVocali
+* Stringhe3
+* Studente
+* StudenteTester
 
 #Settimana 5 
 ###LUNEDì 14/11/2016 9-13 14-18 8h
@@ -222,6 +274,18 @@ gioco matematico 01 - rock, scissors, paper
 
 Counter: OOP/java 62h - javascript 10h	
 
+###codice week5
+* AccessorMutatorDemo
+* ConstructorDemo
+* geometria
+* GeometriaTest
+* NuovaGeometria
+* Punto
+* Quadrato
+* Rettangolo
+* Segmento
+* Triangolo
+* MethodDemo
 
 #Settimana 6 
 ###LUNEDì 21/11/2016 9-13 14-18 8h Java
@@ -243,6 +307,13 @@ Counter: OOP/java 62h - javascript 10h
 
 Counter: OOP/java 73h - javascript 14h	
 
+###codice week6
+* GUI2D
+    * ItalianFlagComponent
+    * ItalianFlag
+    * ItalianFlagViewer
+    * RectangleComponent
+    * RectangleViewer
 
 #Settimana 7 
 ###LUNEDì 28/11/2016 9-13 14-18 5h Java - 3h Javascript
@@ -274,7 +345,18 @@ Counter: OOP/java 73h - javascript 14h
 ###GIOVEDì 01/12/2016 9-11 2h Java			
 
 Counter: OOP/java 83h - javascript 17h				
-			
+
+###codice week7
+* GUI2D
+* FaceComponent
+* FaceViewer
+* RectangleComponent3
+* RectangleFrame3
+* RectangleViewer3
+* menu
+    * MenuDemo
+    * Menu
+
 #Settimana 8 
 ###LUNEDì 05/12/2016 9-13 14-18 5h Java - 3h Javascript
 
@@ -302,6 +384,16 @@ array, stringhe (metodi sulle stringhe)
 
 Counter: OOP/java 91h - javascript 20h	
 
+###codice week8
+* AritmeticaSbagliata
+* DivisionePerZeroException
+* ErroreArray
+* ErroreFormato2
+* ErroreNullPointer
+* EsempioMappe
+* EsempioNumeri
+* ProvaDivisione
+* ScriviSuFile
 			
 #Settimana 9 
 
@@ -329,6 +421,9 @@ Counter: OOP/java 91h - javascript 20h
 	
 Counter: OOP/java 99h - javascript 26h	
 
+###codice week9
+* ListDivina1
+
 #Settimana 10 
 
 ###LUNEDì 19/12/2016 9-13 14-18 5h Java - 3h Javascript
@@ -346,6 +441,9 @@ Counter: OOP/java 99h - javascript 26h
 	
 Counter: OOP/java 104h - javascript 32h	
 
+###codice week10
+* GestioneDate
+* InfoSistema
 
 #Settimana 11
  
@@ -367,6 +465,19 @@ Counter: OOP/java 104h - javascript 32h
 	Java: Progetti Archivio CD
 
 Counter: OOP/java 112h - javascript 38h	
+
+###codice week11
+* Condizione
+* FileIO
+* Funzioni
+* InputOutput
+* Lista
+* Mappa
+* MiaClasse
+* MioArray
+* Precisione
+* TipiCasting
+* Variabili
 
 
 #Settimana 12
