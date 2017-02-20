@@ -1,11 +1,6 @@
 <%@ page import="java.util.ArrayList" %>
 
-<div id="pulsantiServizio">
-	<button id="switchElementi" class="btn btn-primary">Registrati</button>
-</div>
-
-<% if (session.getValue("isLogged") != null ){%> 
-	<% if (session.getValue("isLogged").equals("true")) { %>
+	<% if (session.getValue("isLogged") != null && session.getValue("isLogged").equals("true")) { %>
 	
 	<div id="carrello" class="elementoScomparsa">
 	
@@ -19,8 +14,11 @@
 	
 	</div>
 	
-	<% } %>
-<% } %>
+	<% } else { %>
+
+<div id="pulsantiServizio">
+	<button id="switchElementi" class="btn btn-primary">Registrati</button>
+</div>
 
 <div id="registrazione">
 
@@ -75,3 +73,6 @@
 
 	</form>
 </div>
+
+
+	<% } %>

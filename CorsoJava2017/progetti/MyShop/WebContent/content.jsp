@@ -2,6 +2,11 @@
 <%@page import="model.*"%>
 <%@page import="java.util.ArrayList"%>
 <%@ page import="controller.Prodotti" %>
+
+
+	<% if (session.getValue("isLogged") != null && session.getValue("isLogged").equals("true")) { %>
+
+
 <%! ArrayList<Abito> elencoProdotti ; %>
 <h1>content</h1>
 
@@ -85,5 +90,12 @@
 
 <h2><%= r %></h2>
 <h3><%= elenco %></h3>
+
+
+	<% } else {%>
+	
+	non sei collegato
+	
+	<% } %>
 
 	
