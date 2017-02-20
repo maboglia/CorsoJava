@@ -29,7 +29,8 @@ public class LoginService extends HttpServlet {
 		if (username.equals("mauro") && password.equals("12345")){
 			
 			session.putValue("isLogged", "true");
-			response.sendRedirect("content.jsp");
+		
+			response.sendRedirect("index.jsp?pagina=prodotti");
 		}
 		else {
 			session.putValue("isLogged", "false");
@@ -38,4 +39,36 @@ public class LoginService extends HttpServlet {
 		
 	}
 
+	/* (non-Javadoc)
+	 * @see javax.servlet.http.HttpServlet#doGet(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+	 */
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		String azioneGet = "test";
+		
+		azioneGet = req.getParameter("azione");
+		HttpSession session = req.getSession();
+		
+		switch (azioneGet) {
+		case "esci":
+			session.putValue("isLogged", "false");
+			resp.sendRedirect("index.jsp?pagina=home");
+			System.out.println("esci");
+			break;
+
+		default:
+			
+			System.out.println("default");			
+			break;
+		}
+
+
+	
+	}
+	
+
+	
+	
+	
 }
