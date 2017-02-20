@@ -472,14 +472,22 @@ Counter: OOP/java 153h - javascript 52h
 
 #Settimana 17
 
-###LUNEDì 20/02/2017 4H JAVA 4H Javascript
+###LUNEDì 20/02/2017 6H JAVA 2H Javascript
 
-	java: file IO
-	jquery: effetti, eventi, ajax
+	java: Jsp standard action
+	jquery: effetti, eventi
 	progetto MVC MyShop
-	Intro JDBC
 	
+Counter: OOP/java 159h - javascript 54h		
 
+
+#Settimana 18
+
+###LUNEDì 
+	
+	Java: JDBC, file IO
+	
+	Jquery: ajax
 
 
 
