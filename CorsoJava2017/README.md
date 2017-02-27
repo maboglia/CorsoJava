@@ -594,23 +594,22 @@ Counter: OOP/java 159h - javascript 54h
 
 #Settimana 18
 
-###LUNEDì 27/02/2017
+###LUNEDì 27/02/2017 7H JAVA 1H Javascript
 	
-jquery
-	hide
-	fade
-	slide
+	jquery
+		hide
+		fade
+		slide
 
-jsp
-	servlet dispatcher
-	mvc myshop
+	jsp
+		servlet dispatcher
+		mvc myshop
 
-java
-	pattern
-		singleton
-		factory
-		mvc
-		dao
+	java
+		pattern
+			factory
+			mvc
+			dao
 
 	jdbc
 		mysql connector j
@@ -619,3 +618,5 @@ java
 		ResulSet
 		executeQuery
 		executeUpdate
+
+Counter: OOP/java 166h - javascript 55h	
