@@ -594,11 +594,28 @@ Counter: OOP/java 159h - javascript 54h
 
 #Settimana 18
 
-###LUNEDì 
+###LUNEDì 27/02/2017
 	
-	Java: JDBC, file IO
-	
-	Jquery: ajax
+jquery
+	hide
+	fade
+	slide
 
+jsp
+	servlet dispatcher
+	mvc myshop
 
+java
+	pattern
+		singleton
+		factory
+		mvc
+		dao
 
+	jdbc
+		mysql connector j
+		Connection
+		Statement
+		ResulSet
+		executeQuery
+		executeUpdate
