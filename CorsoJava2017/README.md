@@ -618,5 +618,29 @@ Counter: OOP/java 159h - javascript 54h
 		ResulSet
 		executeQuery
 		executeUpdate
+###VENERDì 03/02/2017 2H JAVASCRIPT
+	
+	JQuery Ajax
+	MyShop, invocare il controller via Ajax con JQuery
+Counter: OOP/java 166h - javascript 57h	
 
-Counter: OOP/java 166h - javascript 55h	
+#Settimana 19
+
+###LUNEDì 06/03/2017 4H JAVA 4H Javascript
+
+	java
+		pattern
+			singleton	
+			decorator
+		Java NIO
+
+	jdbc
+		mysql connector j
+		Connection
+		PreparedStatement
+		ResulSet
+		executeQuery
+		executeUpdate	
+	JQuery Ajax
+	
+	MyShop, frontend-backend REST-API
