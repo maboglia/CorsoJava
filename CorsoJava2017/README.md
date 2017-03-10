@@ -644,3 +644,12 @@ Counter: OOP/java 166h - javascript 57h
 	JQuery Ajax
 	
 	MyShop, frontend-backend REST-API
+
+###MERCOLEDì 08/03/2017 3H Javascript
+	
+	Hello angularJS
+
+###GIOVEDì 09/03/2017 2H Javascript
+
+	Progetto MyShop clientside+serverside
+[Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/CorsoJava2017/progetti)
