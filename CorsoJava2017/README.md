@@ -317,7 +317,7 @@ Counter: OOP/java 73h - javascript 14h
 
 #Settimana 7 
 ###LUNEDì 28/11/2016 9-13 14-18 5h Java - 3h Javascript
-![Esempio Aggregazione](images/image010.jpg)
+[Esempio Aggregazione](images/image010.jpg)
 *	Ereditarietà in Java
 	Slide OOP 
 		esempio Studente/Professore - Teatro
@@ -628,12 +628,6 @@ Counter: OOP/java 166h - javascript 57h
 
 ###LUNEDì 06/03/2017 4H JAVA 4H Javascript
 
-	java
-		pattern
-			singleton	
-			decorator
-		Java NIO
-
 	jdbc
 		mysql connector j
 		Connection
@@ -653,3 +647,36 @@ Counter: OOP/java 166h - javascript 57h
 
 	Progetto MyShop clientside+serverside
 [Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/tree/master/CorsoJava2017/progetti)
+
+Counter: OOP/java 170h - javascript 66h	
+
+
+
+#Settimana 20
+
+###LUNEDì 13/03/2017 4H JAVA 4H Javascript
+
+	java
+		pattern
+			singleton	
+			decorator
+		Java NIO
+
+	Javascript
+		localstorage
+		sessionstorage
+		drag & drop
+		canvas
+		nodejs, npm
+		AngularJs vs Angular2 
+		hello Angular 2
+
+
+	Progetto MyShop clientside+serverside
+[Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/tree/master/CorsoJava2017/progetti)
+
+###MARTEDì 14/03/2017 2H Javascript
+
+###VENERDì 17/03/2017 2H Javascript
+
+Counter: OOP/java h - javascript h	
