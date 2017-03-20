@@ -3,17 +3,20 @@
 
 ## Settimana 1 
 ###17/10/2016 2h
-Introduzione al corso di programmazione 
+	
+	Introduzione al corso di programmazione 
 ###18/10/2016 3h
-Algoritmi e strutture dati 
-JAVA: LE BASI DEL LINGUAGGIO 
-STRUTTURA DEL JDK, PRIMO APPROCCIO AL CODICE, COMPILAZIONE ED ESECUZIONE DEL PROGRAMMA HELLOWORLD 
-file: HelloWorld.java
-esempi algoritmi
+
+	Algoritmi e strutture dati 
+	JAVA: LE BASI DEL LINGUAGGIO 
+	STRUTTURA DEL JDK, PRIMO APPROCCIO AL CODICE, COMPILAZIONE ED ESECUZIONE DEL PROGRAMMA HELLOWORLD 
+	file: HelloWorld.java
+	esempi algoritmi
 ###21/10/2016 3h
-OOP teoria, definizione
-variabile: definizione
-esempio classe Studente (nome, cognome, eta)
+
+	OOP teoria, definizione
+	variabile: definizione
+	esempio classe Studente (nome, cognome, eta)
 
 ##esempi
 	*	ArrayInteri.java
@@ -660,7 +663,6 @@ Counter: OOP/java 170h - javascript 66h
 		pattern
 			singleton	
 			decorator
-		Java NIO
 
 	Javascript
 		localstorage
@@ -676,7 +678,19 @@ Counter: OOP/java 170h - javascript 66h
 [Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/tree/master/CorsoJava2017/progetti)
 
 ###MARTEDì 14/03/2017 2H Javascript
-
+	angularjs
 ###VENERDì 17/03/2017 2H Javascript
+	angularjs
+Counter: OOP/java 174h - javascript 74h	
 
-Counter: OOP/java h - javascript h	
+###LUNEDì 20/03/2017 4H JAVA 4H Javascript
+
+	java
+		Java NIO
+	
+	Javascript
+		Angular2
+		
+	MVC
+		JSP + Database
+		
