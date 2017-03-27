@@ -1,0 +1,3 @@
+<%
+	response.sendRedirect("doLista.jsp");
+%>
