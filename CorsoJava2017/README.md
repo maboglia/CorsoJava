@@ -84,7 +84,7 @@ Counter: OOP/java 25h
 * ScambioVariabili
 * SimpleCalcolatrice
 
-#Settimana 3 
+# Settimana 3 
 
 ###MERCOLEDì 2/11/2016 9-14 5h
 
@@ -129,7 +129,7 @@ Counter: OOP/java 35h - javascript 3h
             * PictureDemo
             * Picture
 
-#Settimana 4 
+# Settimana 4 
 
 ###LUNEDì 7/11/2016 9-13 14-18 8h
 	Approfondiamo la classe Studente
@@ -198,7 +198,7 @@ Counter: OOP/java 48h - javascript 6h
 * Studente
 * StudenteTester
 
-#Settimana 5 
+# Settimana 5 
 ###LUNEDì 14/11/2016 9-13 14-18 8h
 Recap
 Tipi primitivi 
@@ -290,7 +290,7 @@ Counter: OOP/java 62h - javascript 10h
 * Triangolo
 * MethodDemo
 
-#Settimana 6 
+# Settimana 6 
 ###LUNEDì 21/11/2016 9-13 14-18 8h Java
 *	Ereditarietà in Java
 
@@ -318,9 +318,10 @@ Counter: OOP/java 73h - javascript 14h
     * RectangleComponent
     * RectangleViewer
 
-#Settimana 7 
+# Settimana 7 
 ###LUNEDì 28/11/2016 9-13 14-18 5h Java - 3h Javascript
 [Esempio Aggregazione](images/image010.jpg)
+
 *	Ereditarietà in Java
 	Slide OOP 
 		esempio Studente/Professore - Teatro
@@ -360,7 +361,7 @@ Counter: OOP/java 83h - javascript 17h
     * MenuDemo
     * Menu
 
-#Settimana 8 
+# Settimana 8 
 ###LUNEDì 05/12/2016 9-13 14-18 5h Java - 3h Javascript
 
 ##java
@@ -398,7 +399,7 @@ Counter: OOP/java 91h - javascript 20h
 * ProvaDivisione
 * ScriviSuFile
 			
-#Settimana 9 
+# Settimana 9 
 
 ###LUNEDì 12/12/2016 9-13 14-18 5h Java - 3h Javascript
 
@@ -427,7 +428,7 @@ Counter: OOP/java 99h - javascript 26h
 ###codice week9
 * ListDivina1
 
-#Settimana 10 
+# Settimana 10 
 
 ###LUNEDì 19/12/2016 9-13 14-18 5h Java - 3h Javascript
 
@@ -448,7 +449,7 @@ Counter: OOP/java 104h - javascript 32h
 * GestioneDate
 * InfoSistema
 
-#Settimana 11
+# Settimana 11
  
 ###LUNEDì 9/01/2017 9-13 14-18 5h Java - 3h Javascript
 	recap Java
@@ -483,7 +484,7 @@ Counter: OOP/java 112h - javascript 38h
 * Variabili
 
 
-#Settimana 12
+# Settimana 12
 	
  
 ###MARTEDì 17/01/2017  9-11 2h Javascript
@@ -498,7 +499,7 @@ Counter: OOP/java 112h - javascript 38h
 Counter: OOP/java 114h - javascript 41h		
 
 
-#Settimana 13
+# Settimana 13
  
 ###LUNEDì 23/01/2017 9-14  5h Java
 [introduzione JSP](http://www.bogliaccino.it/corso-jsp-introduzione/)
@@ -528,7 +529,7 @@ Counter: OOP/java 114h - javascript 41h
 	
 Counter: OOP/java 128h - javascript 41h		
 
-#Settimana 14
+# Settimana 14
 
 ###LUNEDì 30/01/2017 8H JAVA
 	
@@ -548,7 +549,7 @@ Counter: OOP/java 128h - javascript 41h
 		
 Counter: OOP/java 136h - javascript 43h		
 
-#Settimana 15
+# Settimana 15
 
 ###LUNEDì 06/02/2017 8H JAVA
 	
@@ -565,7 +566,7 @@ Counter: OOP/java 136h - javascript 43h
 	
 Counter: OOP/java 144h - javascript 48h		
 
-#Settimana 16
+# Settimana 16
 
 
 ###LUNEDì 13/02/2017 6H JAVA + 2H Javascript
@@ -584,7 +585,7 @@ Counter: OOP/java 144h - javascript 48h
 Counter: OOP/java 153h - javascript 52h		
 
 
-#Settimana 17
+# Settimana 17
 
 ###LUNEDì 20/02/2017 6H JAVA 2H Javascript
 
@@ -595,7 +596,7 @@ Counter: OOP/java 153h - javascript 52h
 Counter: OOP/java 159h - javascript 54h		
 
 
-#Settimana 18
+# Settimana 18
 
 ###LUNEDì 27/02/2017 7H JAVA 1H Javascript
 	
@@ -627,7 +628,7 @@ Counter: OOP/java 159h - javascript 54h
 	MyShop, invocare il controller via Ajax con JQuery
 Counter: OOP/java 166h - javascript 57h	
 
-#Settimana 19
+# Settimana 19
 
 ###LUNEDì 06/03/2017 4H JAVA 4H Javascript
 
@@ -655,7 +656,7 @@ Counter: OOP/java 170h - javascript 66h
 
 
 
-#Settimana 20
+# Settimana 20
 
 ###LUNEDì 13/03/2017 4H JAVA 4H Javascript
 
@@ -684,7 +685,7 @@ Counter: OOP/java 170h - javascript 66h
 Counter: OOP/java 174h - javascript 74h	
 
 
-#Settimana 21
+# Settimana 21
 
 ###LUNEDì 20/03/2017 4H JAVA 4H Javascript
 
@@ -707,7 +708,7 @@ Counter: OOP/java 174h - javascript 74h
 Counter: OOP/java 180h - javascript 82h		
 
 
-#Settimana 22
+# Settimana 22
 
 ###LUNEDì 27/03/2017 4H JAVA 4H Javascript
 
@@ -727,4 +728,4 @@ Counter: OOP/java 180h - javascript 82h
 	
 Counter: OOP/java 184h - javascript 93h		
 	
-#Fine corso -- STAGE	
+# Fine corso -- STAGE	
