@@ -683,6 +683,9 @@ Counter: OOP/java 170h - javascript 66h
 	angularjs
 Counter: OOP/java 174h - javascript 74h	
 
+
+#Settimana 21
+
 ###LUNEDì 20/03/2017 4H JAVA 4H Javascript
 
 	java
@@ -693,4 +696,35 @@ Counter: OOP/java 174h - javascript 74h
 		
 	MVC
 		JSP + Database
-		
+###GIOVEDì 23/03/2017 2H Java		
+
+	MVC
+		JSP + Database progetto listaSpesa
+
+###VENERDì 23/03/2017 4H Javascript		
+	
+	Angular.io
+Counter: OOP/java 180h - javascript 82h		
+
+
+#Settimana 22
+
+###LUNEDì 27/03/2017 4H JAVA 4H Javascript
+
+	MVC
+		JSP + Database progetto listaSpesa	
+
+	JS: Angular components, routing
+
+###MARTEDì 28/03/2017 3H Javascript
+
+	JS: Angular components, routing
+	
+###GIOVEDì 30/03/2017 4H Javascript
+
+	JS: Angular services
+	JS: Html5 Canvas
+	
+Counter: OOP/java 184h - javascript 93h		
+	
+#Fine corso -- STAGE	
