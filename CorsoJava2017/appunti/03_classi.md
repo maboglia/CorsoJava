@@ -4,7 +4,7 @@ Roadmap
 * 2. Tipi di dati primitivi
 * 3. Uso di classi
 
-##Uso di classi
+## Uso di classi
 * Le classi, in quanto tipi di dato strutturati,
 prevedono usi e regole più complessi rispetto
 ai tipi semplici
@@ -16,7 +16,7 @@ problemi molto comuni: l’interazione con
 l’utente e il trattamento di sequenze di
 caratteri
 Classi già pronte
-###Come la maggior parte dei linguaggi di
+### Come la maggior parte dei linguaggi di
 programmazione, Java è dotato di una libreria
 ( library ) di classi “pronte all’uso” che coprono
 molte esigenze comuni (e anche meno
@@ -25,7 +25,7 @@ comuni)
 per non sprecare tempo a risolvere problemi
 già risolti o a reinventare la ruota
 
-##Uso di una classe pronta
+## Uso di una classe pronta
 * Quando si deve cercare e poi usare una
 classe pronta all’uso i passi da seguire sono:
 	* Come identificarla ? Dove cercarla ?
@@ -33,7 +33,7 @@ classe pronta all’uso i passi da seguire sono:
 	* Se è istanziabile , come creo le istanze ?
 	* Quali metodi mi servono e come li uso ?
 Roadmap
-###3. Uso di classi
+### 3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
 	* Se è istanziabile , come creo le istanze ?
@@ -52,7 +52,7 @@ prima di programmare
 * Al contrario, leggere la documentazione è una delle
 attività più tipiche durante la programmazione
 Organizzazione delle classi
-###La libreria standard segue il metodo di
+### La libreria standard segue il metodo di
 organizzazione delle classi previsto da Java: le classi
 tra loro “affini” sono raggruppate in package
 * Ogni package ha un nome tipicamente composto da
@@ -72,7 +72,7 @@ java. text Package con classi per la
 gestione ed elaborazione di
 testi e dati in formato testuale
 Uso di classi appartenenti
-##ad un package
+## ad un package
 * Solo le classi appartenenti al package java. lang sono
 automaticamente disponibili in ogni programma
 * Per l’uso di altri package in una classe è necessario
@@ -84,7 +84,7 @@ import java. util . Random
 ma è più tipico importare comunque tutto il package:
 import java. util .*
 
-##I package
+## I package
 * All’atto pratico un package è un insieme di file .class
 tipicamente archiviati in un file compresso .zip o . jar
 * Ogni classe appartiene ad un package: la
@@ -96,14 +96,14 @@ viene assegnata ad un package “anonimo” che
 contiene, oltre ad essa, tutte le classi senza package
 presenti nella stessa directory
 Roadmap
-###3. Uso di classi
+### 3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
 	* Se è istanziabile , come creo le istanze ?
 	* Se è istanziabile , come uso le istanze ?
 	* Quali metodi mi servono e come li uso ?
 
-##La doppia natura delle classi
+## La doppia natura delle classi
 * Le classi disponibili nella libreria standard si
 possono distinguere in due tipologie principali:
 	* Classi istanziabili
@@ -111,7 +111,7 @@ possono distinguere in due tipologie principali:
 * La stessa distinzione è applicabile alle “nostre”
 classi
 Classi istanziabili
-###Una classe istanziabile fornisce il prototipo di
+### Una classe istanziabile fornisce il prototipo di
 una famiglia di oggetti (istanze della classe) che
 hanno struttura simile ma proprietà distinte a
 livello individuale (valori diversi degli attributi e
@@ -120,7 +120,7 @@ quindi risultati diversi prodotti dai metodi)
 new) e quindi l’invocazione di metodi su di esse
 * Esempi: Ossequioso, Valuta, Anno, String , . . .
 
-##Classi non istanziabili
+## Classi non istanziabili
 * Una classe non istanziabile contiene un
 insieme di metodi (ed eventualmente
 attributi) di natura generale non legati alle
@@ -131,7 +131,7 @@ differenziabili tra oggetti distinti
 * Esempi: BuongiornoMain , ValutaDriver ,
 AnnoDriver , Math , Collections , . . .
 Una precisazione
-###La distinzione tra classi istanziabili e non istanziabili
+### La distinzione tra classi istanziabili e non istanziabili
 riguarda il senso logico del loro utilizzo
 * Il termine “classe non istanziabile ” sarà utilizzato per
 indicare una classe che non ha senso istanziare , date
@@ -143,7 +143,7 @@ e attributi tutti static ) ma non avrebbe senso pratico
 natura (astratte) sulle quali non è tecnicamente
 possibile usare l’operatore new
 
-##Istanziabili vs. non istanziabili
+## Istanziabili vs. non istanziabili
 * La stragrande maggioranza delle classi è
 istanziabile ma l’esistenza di alcune classi non
 istanziabili è necessaria
@@ -153,7 +153,7 @@ istanziabili è necessaria
 numerici appartengono a classi non
 istanziabili
 Istanziabili vs. non istanziabili
-###Nel caso di una classe istanziabile attributi e metodi
+### Nel caso di una classe istanziabile attributi e metodi
 rappresentano proprietà possedute da tutti gli oggetti
 istanza della classe
 * Ogni oggetto istanza di una classe ha una sua identità
@@ -165,7 +165,7 @@ un nuovo insieme di attributi e metodi individuali
 metodi sono “unici” a livello della classe (non esistono
 istanze diversificate)
 
-##Classi non istanziabili
+## Classi non istanziabili
 * Una classe non istanziabile rappresenta
 “qualcosa” di concettualmente unico, che non
 esiste e non può esistere in versioni separate
@@ -176,8 +176,8 @@ istanziabile )
 eseguito (la classe System non è istanziabile )
 – esiste un solo punto di inizio di un programma (le
 classi contenenti il main non sono istanziabili )
-Riconoscere una classe non
-##istanziabile
+Riconoscere una classe non istanziabile
+
 * Non ha costruttori
 * Attributi e metodi sono tutti static
 * Quando penso all’esecuzione dei suoi metodi
@@ -187,7 +187,7 @@ classe con almeno un argomento
 – Math . sqrt (2)
 – Math . abs ( - 3)
 
-##In memoria ...
+## In memoria ...
 Math
 E
 2.7182
@@ -204,8 +204,10 @@ static double abs(double a)
 static double cos(double a)
 static double sqrt(double
 static float ulp(float f)
-Classi istanziabili
-###Una classe istanziabile rappresenta “qualcosa”
+
+
+## Classi istanziabili
+### Una classe istanziabile rappresenta “qualcosa”
 che esiste in molteplici versioni individuali che
 hanno una struttura comune ma ciascuna con
 una propria identità:
@@ -216,8 +218,8 @@ istanziabile )
 – esistono molte persone (un’ipotetica classe
 Persona è istanziabile )
 
-##Riconoscere una classe
-istanziabile
+## Riconoscere una classe istanziabile
+
 * Ha costruttori
 * Attributi e metodi sono tutti (o quasi) non
 static
@@ -229,7 +231,8 @@ interni)
 – Persona. codiceFiscale () // NO! QUALE PERSONA?
 – String . toUpperCase () // NO! QUALE STRINGA?
 In memoria (1) ...
-##Persona
+
+## Persona
 String nome;
 String cognome;
 . . .
@@ -238,7 +241,7 @@ public Persona (String _nome, String _cognome)
 public String codiceFiscale()
 . . .
 
-##In memoria (2) ...
+## In memoria (2) ...
 Persona
 String nome;
 String cognome;
@@ -254,11 +257,12 @@ String nome= “Ugo”;
 String cognome “Neri”;
 . . .
 
-##Ogni volta che eseguo new Persona
+## Ogni volta che eseguo new Persona
 ne creo una nuova istanza distinta
 String nome= “Luca”;
 String cognome “Verdi”;
-. . .Due livelli di definizione
+
+Due livelli di definizione
 * Dalla discussione precedente emerge che
 esistono due “livelli” di definizione per
 attributi e metodi
@@ -267,7 +271,7 @@ sono definiti a livello di istanza
 	* Nel caso di classi non istanziabili attributi e
 metodi sono definiti a livello di classe
 
-##Il modificatore static
+## Il modificatore static
 * La parola riservata static viene usata per
 indicare il livello di definizione di un attributo
 o metodo
@@ -276,7 +280,7 @@ metodo è definito a livello di classe
 * Se la parola static non è presente l’attributo o
 metodo è definito a livello di istanza
 Il modificatore static
-###La parola riservata static viene usata per
+### La parola riservata static viene usata per
 indicare il Il
 livello
 di definizione del
@@ -299,7 +303,7 @@ il la termine
 “statico”
 metodo è definito a livello di istanza
 
-##Static vs. non static
+## Static vs. non static
 * Ogni attributo o metodo non static esiste
 concretamente in ogni istanza creata
 – Esiste in “molteplici versioni” se vengono create
@@ -312,7 +316,7 @@ concretamente a livello di classe
 – La sua esistenza non dipende da cosa fa il
 programma
 Tirando le somme
-###Una classe non istanziabile (come Math o
+### Una classe non istanziabile (come Math o
 BuongiornoMain )
 – non contiene nessun costruttore esplicito
 – dovrebbe contenere solo attributi e metodi static
@@ -322,7 +326,7 @@ String )
 – dovrebbe avere almeno un attributo o metodo
 non static
 
-##Classi istanziabili “ibride”
+## Classi istanziabili “ibride”
 * Alcune classi istanziabili (p.e. String ) della
 libreria standard contengono attributi o
 metodi static ed hanno quindi natura ibrida
@@ -332,18 +336,17 @@ segue le proprie regole
 * Salvo rari casi, è sconsigliabile realizzare
 classi istanziabili ibride (sono accettabili
 attributi costanti definiti come static )
-Proprietà a livello
-##di classe e di istanza
-Proprietà collettive a
-livello di classe,
-referenziabili
-indipendentemente
+Proprietà a livello di classe e di istanza
+Proprietà collettive a livello di classe,
+referenziabili indipendentemente
 dall'esistenza di istanze
 Proprietà individuali:
 esistono concretamente
 solo a livello di istanze
+
 Def. classe
 metodi static
+
 Una classe
 istanziabile
 “pura” ha solo
@@ -354,6 +357,7 @@ istanza1
 istanzaN
 attributi non static
 metodi non static
+
 Una classe NON
 istanziabile
 “pura” ha solo
@@ -363,8 +367,7 @@ attributi non static
 . . .
 metodi non static
 
-##Accesso a metodi e
-attributi static
+## Accesso a metodi e attributi static
 * Essendo definiti a livello di classe, attributi e metodi
 static sono acceduti/invocati tramite il nome della
 classe:
@@ -378,8 +381,8 @@ sconsigliabile, accedere tramite una qualunque istanza
 della classe:
 nomeIstanza . nomeMetodoStatic (...)
 nomeIstanza . nomeAttributoStatic
-Accesso a metodi e attributi
-##non static
+
+## Accesso a metodi e attributi non static
 * La sintassi è simile al caso precedente, ma
 ovviamente l’accesso/invocazione è possibile solo
 tramite un’istanza specifica (ed ogni accesso è
@@ -390,7 +393,7 @@ nomeIstanza . nomeAttributoNonStatic
 maggiordomoIta .saluta();
 altraValuta . tassoRif
 
-##Accesso ad attributi e
+## Accesso ad attributi e
 metodi della propria classe
 * All'interno del corpo di un metodo si possono riferire in
 modo abbreviato attributi e metodi definiti nella stessa
@@ -405,8 +408,8 @@ equivalente
 ...= new Ossequioso(BuongiornoMain
 .SALUTO_ITA);
 Ossequioso( BuongiornoMain.SALUTO_ITA);
-Accesso ad attributi e
-##metodi della propria classe
+
+## Accesso ad attributi e metodi della propria classe
 * Se nel corpo di un metodo (non static ) appare il nome
 di un metodo o attributo non static della sua classe è
 sottinteso che sia riferito all’istanza su cui è stato
@@ -423,7 +426,7 @@ si sta eseguendo dollaro.tassoConversione
 (...)
 dollaro. tassoConversione(...)
 
-##Incroci vietati
+## Incroci vietati
 * Nel corpo di un metodo static non si può accedere
 ad attributi e metodi non static della stessa classe
 * Infatti il metodo static deve poter essere invocato a
@@ -434,7 +437,8 @@ almeno un’istanza
 qualunque attributo e metodo della stessa classe (se
 esiste l’istanza ovviamente esiste la classe)
 Errori subdoli
-###Eventuali mescolanze improprie di static e
+
+### Eventuali mescolanze improprie di static e
 non static causano errori di compilazione
 * Si può “accontentare” il compilatore facendo
 grossi errori concettuali (p.e. aggiungendo
@@ -443,7 +447,7 @@ static dove non deve stare)
 compilatore senza pensare al significato della
 modifica può solo peggiorare le cose
 
-##Errori subdoli
+## Errori subdoli
 NON modificare
 MAI il codice per
 accontentare il compilatore
@@ -455,7 +459,7 @@ del modificatore static
 causa errori DISASTROSI
 talvolta ritenuti MISTERIOSI
 
-##Errori subdoli
+## Errori subdoli
 public class Valuta
 {
 private String nome;
@@ -486,7 +490,7 @@ tassoRif ;
 }
 }
 Il “driver” non cambia . . .
-##public class ValutaDriver
+## public class ValutaDriver
 {
 public static void main ( String args [])
 {
@@ -522,7 +526,7 @@ System.out. println(dollaro.
 
 ##. . . ma il risultato sì !
 Roadmap
-###3. Uso di classi
+### 3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
 	* Se è istanziabile , come creo le istanze ?
@@ -542,7 +546,7 @@ stringhe (sequenze) di caratteri che possono essere
 modificate dopo essere state costruite (in Java 6 c’è
 anche una classe molto simile di nome StringBuilder )
 Definizione di variabili
-###tipo nome; oppure
+### tipo nome; oppure
 tipo nome1,..., nomeN ;
 String nome;
 StringBuffer risultato;
@@ -572,7 +576,7 @@ uguale o "compatibile" con la definizione della variabile
 * Ogni classe può avere più costruttori che si
 differenziano per la lista degli argomenti
 Costruttori
-###La classe String ha 15 costruttori alternativi in Java 6
+### La classe String ha 15 costruttori alternativi in Java 6
 (erano 11 in Java 2)
 * La classe StringBuffer ha 4 costruttori alternativi in
 Java 6 (erano 3 in Java 2)
@@ -590,7 +594,7 @@ Ciao ciao
 saluto
 null
 Varianti sul tema
-###L'operatore new può essere usato al
+### L'operatore new può essere usato al
 momento della definizione
 String saluto = new String("Ciao ciao");
 StringBuffer salutino = new StringBuffer("Bye");
@@ -612,7 +616,7 @@ String metodi classe
 StringBuffer metodi classe
 StringBuffer
 Roadmap
-###3. Uso di classi
+### 3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
 	* Se è istanziabile , come creo le istanze ?
@@ -627,7 +631,7 @@ istanze di una classe sono:
 	* confronto
 	* invocazione di metodi
 Operazioni su istanze
-###Le principali operazioni che si possono
+### Le principali operazioni che si possono
 effettuare sulle variabili che riferiscono
 istanze di una classe sono:
 	* assegnamento
@@ -691,7 +695,7 @@ null
 v1 v1
 v2 v2
 Il valore è il riferimento !
-###Il valore di una variabile di tipo strutturato è il
+### Il valore di una variabile di tipo strutturato è il
 riferimento ad un oggetto (istanza di una
 classe)
 * Una stessa variabile può riferire oggetti
@@ -700,7 +704,7 @@ operazioni di assegnazione sul suo valore
 * Se la variabile contiene il valore null non
 riferisce nessun oggetto in quel momento
 
-##Oggetti e riferimenti
+## Oggetti e riferimenti
 * Le variabili hanno un nome, gli oggetti no
 * Per utilizzare un oggetto bisogna passare attraverso
 una variabile che ne contiene il riferimento
@@ -712,8 +716,9 @@ riferimento iniziale non necessariamente rimane legato
 all’oggetto per tutta la sua esistenza
 * Se un oggetto non è (più) riferito da nessuna variabile
 diventa irraggiungibile (e quindi inutilizzabile)
+
 Operazioni su istanze
-###Le principali operazioni che si possono
+### Le principali operazioni che si possono
 effettuare sulle variabili che riferiscono
 istanze di una classe sono:
 	* assegnamento
@@ -733,6 +738,7 @@ verifica se hanno lo stesso valore (cioè riferiscono
 esattamente lo stesso oggetto)
 * Raramente questo è desiderato e utile
 Il valore è il riferimento !
+
 ##String saluto1 = new String ("Buongiorno");
 String saluto2 = new String ("Buongiorno");
 saluto1 == saluto2 ??
@@ -782,7 +788,9 @@ metodi classe
 String metodi classe
 String
 Confronto
-##String saluto1 = new String ("Buongiorno");
+
+## 
+String saluto1 = new String ("Buongiorno");
 String saluto2 = new String ("buongiorno");
 saluto1 == saluto2; // false
 saluto1.equals
@@ -798,7 +806,7 @@ metodi classe
 String metodi classe
 String
 
-##Una particolarità di String
+## Una particolarità di String
 * Usare esplicitamente new oppure la forma
 abbreviata per inizializzare un oggetto String
 non è esattamente la stessa cosa
@@ -818,7 +826,7 @@ metodi classe
 String metodi classe
 String
 
-##Una particolarità di String
+## Una particolarità di String
 String saluto1 = "Buongiorno";
 String saluto2 = "Buongiorno";
 saluto1
@@ -875,7 +883,7 @@ Non confondere stringa vuota
 (detta anche nulla) con riferimento null
 ""
 
-##Operazioni su istanze
+## Operazioni su istanze
 * Le principali operazioni che si possono
 effettuare sulle variabili che riferiscono
 istanze di una classe sono:
@@ -883,7 +891,7 @@ istanze di una classe sono:
 	* confronto
 	* invocazione di metodi
 Metodi
-###I metodi non static rappresentano operazioni
+### I metodi non static rappresentano operazioni
 effettuabili su singoli oggetti
 * La documentazione indica per ogni metodo il
 tipo ritornato e la lista degli argomenti formali
@@ -985,7 +993,7 @@ nomeVar.
 nomeVar . nomeMetodo(lista
 nomeMetodo (lista argomenti attuali)
 Argomenti attuali e formali
-###Ogni volta che si invoca un metodo si deve
+### Ogni volta che si invoca un metodo si deve
 specificare una lista di argomenti attuali
 * Gli argomenti attuali e formali sono in
 corrispondenza posizionale
@@ -1051,7 +1059,7 @@ System.out. println(rovescio);
 	* Se è istanziabile , cosa posso fare con le istanze ?
 	* Quali metodi mi servono e come li uso ?
 Lunghi elenchi
-###La documentazione di ogni classe ( istanziabile o
+### La documentazione di ogni classe ( istanziabile o
 no) contiene l’elenco dei metodi disponibili
 * La classe Math non è istanziabile e contiene 54
 metodi (tutti static ovviamente)
@@ -1071,7 +1079,7 @@ indirizzare la ricerca
 * In subordine, può essere utile anche la ricerca
 su Internet
 La ricerca del metodo
-###Se nessuno ci indirizza e nemmeno Internet ci
+### Se nessuno ci indirizza e nemmeno Internet ci
 aiuta si procede per tentativi seguendo
 l’ordine logico:
 – individuare il package
@@ -1091,7 +1099,7 @@ java. lang e sulla classe Math
 (anche) arrotondare vediamo se c’è un
 metodo con questo nome
 Overloading di metodi
-###Esistono due metodi round nella classe Math
+### Esistono due metodi round nella classe Math
 * I due metodi hanno lo stesso nome ma sono
 distinguibili in base alla lista degli argomenti: uno
 riceve in ingresso un argomento float , l’altro riceve in
@@ -1113,7 +1121,7 @@ definito in 13 versioni diverse
 essi sono (ovviamente) in overloading
 Altro esempio di ricerca
 
-###Supponiamo di voler verificare se una
+### Supponiamo di voler verificare se una
 sequenza di caratteri ne contiene uno in
 particolare: ci sarà un metodo che lo fa per
 noi ?
@@ -1123,7 +1131,7 @@ java. lang e sulle classi String o StringBuffer
 * Stavolta non è facile ipotizzare un nome di
 metodo, scorriamo la lista . . .
 
-##Complicazioni
+## Complicazioni
 * Il metodo contains sembra essere quello che
 ci serve (in effetti lo è) ma richiede
 conoscenze che non abbiamo ancora
@@ -1132,7 +1140,8 @@ alla versione 1.4
 * Il metodo indexOf (in 4 versioni) non fa
 esattamente quello che ci serve ma quasi . . .
 Uso “creativo” dei metodi
-###Il metodo indexOf (nella versione che riceve
+
+### Il metodo indexOf (nella versione che riceve
 in ingresso un char ) restituisce la posizione
 della prima occorrenza nella stringa del char
 specificato
@@ -1141,7 +1150,7 @@ specificato
 o meno distinguendo tra risultati non negativi
 e il risultato - 1
 
-##Ricerche senza successo
+## Ricerche senza successo
 * Ci interessa un metodo che calcoli il logaritmo
 in base 2 di un numero
 * Essendo un’operazione matematica
