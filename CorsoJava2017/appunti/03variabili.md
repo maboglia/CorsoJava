@@ -1,89 +1,68 @@
 3 - Variabili
 
----
-
-Programmazione - Variabili
-
-A.A. 2015/2016
-
----
-
 
 1 / 16
+---
 
 ### Espressioni aritmetiche (1)
 Nel programma HelloWorld abbiamo usato il comando
 System.out.println() per stampare una stringa
+```java
 public class HelloWorld {
 public static void main ( String [] args ) {
 // visualizza un messaggio di saluto
 System . out . println ( " Hello World ! " );
 }
 }
-
+```
 Possiamo in realtà stampare tanti altri tipi di valori
 Ad esempio, possiamo stampare il risultato di una espressione
 
----
-
-Programmazione - Variabili
-
-A.A. 2015/2016
-
----
-
 
 2 / 16
+---
 
 ### Espressioni aritmetiche (2)
 Consideriamo il seguente programma che calcola l’area di un triangolo di
 base 5 cm e altezza 10 cm
+
+```java
 public class AreaTriangolo {
 public static void main ( String [] args ) {
 System . out . println (5*10/2);
 }
 }
+```
 
 Il programma risolve l’espressione 5*10/2 e stampa il risultato a video
 Nota: * rappresenta l’operazione di moltiplicazione
 
----
-
-Programmazione - Variabili
-
-A.A. 2015/2016
-
----
-
 
 3 / 16
+---
 
 ### Espressioni aritmetiche (3)
 Le espressioni aritmetiche più semplici sono costituite da singoli letterali
-Letterali interi: 3425, 12, -34, 0, -4, 34, -1234, ....
-Letterali frazionari: 3.4, 5.2, -0.1, 0.0, -12.45, 1235.3423, ....
+	Letterali interi: 3425, 12, -34, 0, -4, 34, -1234, ....
+	Letterali frazionari: 3.4, 5.2, -0.1, 0.0, -12.45, 1235.3423, ....
 Espressioni più complesse si ottengono utilizzando operatori aritmetici
-moltiplicazione *
-divisione /
-modulo % (resto della divisione tra interi)
-addizione +
-sottrazione Le operazioni sono elencate in ordine decrescente di priorità
+	moltiplicazione *
+	divisione /
+	modulo % (resto della divisione tra interi)
+	addizione +
+	sottrazione 
+Le operazioni sono elencate in ordine decrescente di priorità
 ossia 3+2*5 fa 13, non 25
+
 Le parentesi tonde cambiano l’ordine di valutazione degli operatori
 ossia (3+2)*5 fa 25
+
 Inoltre, tutti gli operatori sono associativi a sinistra
 ossia 3+2+5 corrisponde a (3+2)+5
 quindi 18/6/3 fa 1, non 9
----
-
-Programmazione - Variabili
-
-A.A. 2015/2016
-
----
-
 
 4 / 16
+---
 
 ### Espressioni aritmetiche (4)
 L’operazione di divisione / si comporta diversamente a seconda che sia
@@ -99,21 +78,16 @@ tra due frazionari
 operazioni)
 2 + (25.0/2.0) = 14.5
 
----
-
-Programmazione - Variabili
-
-A.A. 2015/2016
-
----
-
 
 5 / 16
+---
 
 ### Variabili (1)
 Modifichiamo il programma che calcola l’area di un triangolo introducendo
 un po’ di variabili
-public class A reaTria ngolo2 {
+
+```java
+public class AreaTria ngolo2 {
 public static void main ( String [] args ) {
 int base , altezza ;
 int area ;
@@ -123,20 +97,14 @@ area = base * altezza /2;
 System . out . println ( area );
 }
 }
+```
 
 Il programma cosı̀ risulta essere più chiaro:
 Si capisce meglio quali siano la base e l’altezza del triangolo
 Si capisce meglio che cosa calcola il programma
----
-
-Programmazione - Variabili
-
-A.A. 2015/2016
-
----
-
 
 6 / 16
+---
 
 ### Variabili (2)
 
@@ -145,27 +113,16 @@ Il suo scopo è di contenere un valore di un certo tipo
 Serve per memorizzare dati durante l’esecuzione di un programma
 Il nome di una variabile (come il nome di una classe o di un metodo)
 è un identificatore
-I
-I
-I
-
-può essere costituito da lettere, numeri e underscore
-(esempi: num1, i, risultato, costo_tot, ...)
-non deve coincidere con una parola chiave del linguaggio
-(esempi “sbagliati”: class, static, int, ...)
-è bene che sia significativo per il programma
-(meglio base, altezza e area di X1, X2 e X3)
-
----
-
-Programmazione - Variabili
-
-A.A. 2015/2016
-
----
+*	può essere costituito da lettere, numeri e underscore
+	(esempi: num1, i, risultato, costo_tot, ...)
+*	non deve coincidere con una parola chiave del linguaggio
+	(esempi “sbagliati”: class, static, int, ...)
+*	è bene che sia significativo per il programma
+	(meglio base, altezza e area di X1, X2 e X3)
 
 
 7 / 16
+---
 
 ### Variabili (3)
 In Java ogni variabile deve essere dichiarata prima del suo uso
@@ -179,16 +136,9 @@ int area ;
 ATTENZIONE! Ogni variabile deve essere dichiarata UNA SOLA VOLTA
 (la prima volta che compare nel programma)
 
----
-
-Programmazione - Variabili
-
-A.A. 2015/2016
-
----
-
 
 8 / 16
+---
 
 ### Assegnamento
 Si può memorizzare un valore in una variabile tramite l’operazione di
@@ -196,25 +146,21 @@ assegnamento
 Il valore da assegnare a una variabile può essere un letterale o il risultato
 della valutazione di un’espressione
 Esempi di assegnamenti:
+
+```java
 base =5;
 altezza =10;
 area = base * altezza /2;
+```
 
 Dall’ultimo esempio si può notare che le variabili possono essere usate
 anche all’interno di espressioni
 I valori di base e altezza vengono letti e usati nell’espressione
 Il risultato dell’espressione viene scritto nella variabile area
 
----
-
-Programmazione - Variabili
-
-A.A. 2015/2016
-
----
-
 
 9 / 16
+---
 
 ### Dichiarazione + Assegnamento
 
@@ -223,22 +169,18 @@ essere stata dichiarata
 essere stata assegnata almeno una volta (inizializzata)
 Si può combinare dichiarazione e assegnamento (dichiarazione con
 inizializzazione). Ad esempio:
+```java
 int base =5;
 int altezza =10;
 int area = base * altezza /2
-
----
-
-Programmazione - Variabili
-
-A.A. 2015/2016
-
----
-
+```
 
 10 / 16
+---
 
 ### Esempio: Calcolo interessi (1)
+
+```java
 public class Interessi {
 public static void main ( String [] args ) {
 double capitale =100000;
@@ -258,17 +200,10 @@ System . out . print ( " Capitale maturato : " );
 System . out . println ( capitale );
 }
 }
-
----
-
-Programmazione - Variabili
-
-A.A. 2015/2016
-
----
-
+```
 
 11 / 16
+---
 
 ### Esempio: Calcolo interessi (2)
 Risultato dell’esecuzione:
@@ -284,23 +219,17 @@ Il nuovo valore di una variabile può essere calcolato a partire dal
 precedente (capitale=capitale+interesse)
 Il metodo print() visualizza un messaggio senza andare a capo
 
----
-
-Programmazione - Variabili
-
-A.A. 2015/2016
-
----
-
 
 12 / 16
+---
 
 ### Costanti (1)
 Nell’esempio Interessi la variabile tasso non cambia mai
 Nella dichiarazione delle variabili che NON DEVONO mai cambiare valore
 si può utilizzare il modificatore final
+```java
 final double tasso =0.05;
-
+```
 Il modificatore final trasforma la variabile in una costante
 Il compilatore si occuperà di controllare che il valore delle costanti non
 venga mai modificato (ri-assegnato) dopo essere stato inizializzato.
@@ -310,18 +239,13 @@ Si chiede al compilatore di controllare che una variabile non venga
 ri-assegnata per sbaglio.
 Sapendo che una variabile non cambierà mai valore, il compilatore
 può anche eseguire delle ottimizzazioni sull’uso di tale variabile...
----
-
-Programmazione - Variabili
-
-A.A. 2015/2016
-
----
-
 
 13 / 16
+---
 
 ### Costanti (2)
+
+```java
 public class Interessi2 {
 public static void main ( String [] args ) {
 double capitale =100000;
@@ -341,21 +265,16 @@ System . out . print ( " Capitale maturato : " );
 System . out . println ( capitale );
 }
 }
-
----
-
-Programmazione - Variabili
-
-A.A. 2015/2016
-
----
-
+```
 
 14 / 16
+---
 
 ### Input dall’utente (1)
 Per ricevere valori in input dall’utente si usa la classe Scanner, che fa
 parte della Libreria Standard di Java
+
+```java
 import java . util . Scanner ; // richiama la classe Scanner
 public class Somma {
 public static void main ( String [] args ) {
@@ -371,41 +290,30 @@ System . out . print ( " Somma : " );
 System . out . println ( n1 + n2 );
 }
 }
-
----
-
-Programmazione - Variabili
-
-A.A. 2015/2016
-
----
-
+```
 
 15 / 16
+---
 
 ### Input dall’utente (2)
 La classe Scanner deve essere richiamata usando la direttiva import
 prima dell’inizio della classe
+```java
 import java . util . Scanner ;
-
+```
 L’oggetto input (che può essere chiamato anche di↵erentemente) deve
 essere predisposto (creato) prima di iniziare a chiedere i valori all’utente
+```java
 Scanner input = new Scanner ( System . in );
-
+```
 La lettura vera e propria dei valori in input si fa tramite metodi diversi a
 seconda del tipo dei valori attesi
+```java
 x = input . nextInt (); // legge un numero intero
 y = input . nextDouble (); // legge un numero frazionario
-
----
-
-Programmazione - Variabili
-
-A.A. 2015/2016
-
----
-
+```
 
 16 / 16
+---
 
-### 
+ 
