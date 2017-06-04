@@ -15,19 +15,19 @@ Questo modo di programmare prende il nome di
 _PROGRAMMAZIONE IMPERATIVA_
       (nota: imperativa in quanto basata su comandi)
                      
-##Programmazione imperativa (2)
+## Programmazione imperativa (2)
 Nella programmazione imperativa:
 Un programma prevede uno stato globale costituito dai valori delle sue variabili
 I comandi del programma modificano lo stato fino a raggiungere uno stato finale (che include il risultato)
                         
-##Programmazione imperativa (3)
+## Programmazione imperativa (3)
 Ad esempio, il seguente programma (che calcola il prodotto di x e y):
 ha la seguente dinamica:
                                int x=10, y=3, p=0;
 for (int i=0; i<y; i++)
 p+=x;
                  
-##Programmazione orientata agli oggetti (1)
+## Programmazione orientata agli oggetti (1)
 Sebbene sia possibile scrivere programmi interessanti con i tipi di dato visti fino ad ora, spesso i programmi hanno bisogno di manipolare strutture dati che rappresentano più fedelmente le entità del mondo reale.
 Ad esempio, immaginate di dover scrivere programmi per la gestione di...
 Conti bancari: ogni conto bancario ha un proprio saldo, un proprio intestatario, una propria lista di movimenti, ecc...
@@ -36,14 +36,14 @@ Parchi macchine: ogni automobile ha la propria targa, il proprio contachilometri
 Rettangoli: ogni rettangolo ha la propria base, altezza e posizione nel piano.
 Scrivere un programma di questo tipo usando solo interi, array e strighe pùo diventare abbastanza complicato...
                          
-##Programmazione orientata agli oggetti (2)
+## Programmazione orientata agli oggetti (2)
 Notate che ogni entità del mondo reale (e.g. il conto bancario) prevede un proprio stato interno (e.g. saldo, ecc...) e delle proprie funzionalità (e.g. versamento, prelievo, ecc...)
 Per questo motivo un linguaggio di programmazione ORIENTATO AGLI OGGETTI (tipo Java) fornisce meccanismi per definire nuovi tipi di dato basati sul concetto di classe
 Una classe definisce un insieme di oggetti (conti bancari, dipendenti, automobili, rettangoli, ecc...).
 Un oggetto è una struttura dotata di:
 proprie variabili (che rappresentano il suo stato) propri metodi (che realizzano le sue funzionalità)
                         
-##Primo esempio di programmazione con oggetti (1)
+## Primo esempio di programmazione con oggetti (1)
 Scriviamo un programma che usa un conto corrente
 Consiste di due classi:
 UsaConto che contiene il main del programma
@@ -59,7 +59,7 @@ if (cc.saldo>200) cc.preleva(200); if (cc.saldo>900) cc.preleva(900);
 System.out.println("Saldo finale: " + cc.saldo); }
                                                                        }
                            
-##Primo esempio di programmazione con oggetti (2)
+## Primo esempio di programmazione con oggetti (2)
 public class ContoCorrente {
 // variabile che memorizza lo stato del conto
 public double saldo;
@@ -73,7 +73,7 @@ public void versa(double somma) { saldo+=somma;
 public void preleva(double somma) { saldo-=somma;
 } }
                                                                   
-##Primo esempio di programmazione con oggetti (3)
+## Primo esempio di programmazione con oggetti (3)
 Osservazioni:
 La classe UsaConto non è molto diversa dai programmi che abbiamo scritto fino ad ora...
 In UsaConto:
@@ -90,7 +90,7 @@ usati anche da altre classi (e.g. UsaConto)
 I nei metodi non si usa il modificatore static (capiremo più avanti
    perch ́e)
                       
-##Primo esempio di programmazione con oggetti (4)
+## Primo esempio di programmazione con oggetti (4)
 Vediamo ora come gestire più conti correnti
 public class UsaDueConti {
 public static void main(String[] args) {
@@ -105,18 +105,18 @@ System.out.println("Saldo primo conto: " + conto1.saldo);
 System.out.println("Saldo secondo conto: " + conto2.saldo); }
 }
                                                                      
-##L’esecuzione di un programma a oggetti (1))
+## L’esecuzione di un programma a oggetti (1))
 In un programma basato su oggetti, lo stato
 non è più uno stato unico globale (come nel caso della
 programmazione imperativa)
 ma è composto da tutti gli stati interni di tutti gli oggetti attivi
                         
-##L’esecuzione di un programma a oggetti (2)
+## L’esecuzione di un programma a oggetti (2)
 Per descrivere l’esecuzione di un programma a oggetti
 ci si pùo concentrare sulle invocazioni di metodi dei vari oggetti trascurando i dettagli della loro implementazione (i singoli comandi che contengono)
 Un diagramma come questo fa capire che il metodo pagaStipendio() di della classe Dipendente richiama il metodo versa() di ContoCorrente
                         
-##OOP e Ingegneria del Software
+## OOP e Ingegneria del Software
 La programmazione orientata agli oggetti semplifica la realizzazione di programmi complessi:
 1. Si identificano le varie entità da rappresentare tramite classi e oggetti
 2. Si specificano le variabili e i metodi di ogni classe accessibili dalle
@@ -131,7 +131,7 @@ Definisce notazioni (diagrammi), metodologie e procedure che rendono il processo
  1 Programmazione Orientata agli Oggetti: concetti
 2 Programmazione Orientata agli Oggetti: highlights
                       
-##OOP Highlights (1)
+## OOP Highlights (1)
 Riprendiamo l’esempio del conto corrente:
 public class ContoCorrente {
 public double saldo;
@@ -142,7 +142,7 @@ public void versa(double somma) { saldo+=somma;
 public void preleva(double somma) { saldo-=somma;
 } }
                                                                                                 
-##OOP Highlights (2)
+## OOP Highlights (2)
 Riprendiamo anche il primo main che abbiamo considerato:
 public class UsaConto {
 public static void main(String[] args) {
@@ -154,7 +154,7 @@ if (cc.saldo>200) cc.preleva(200); if (cc.saldo>900) cc.preleva(900);
 System.out.println("Saldo finale: " + cc.saldo); }
 }
                                                                                                 
-##OOP Highlights (3)
+## OOP Highlights (3)
 Arricchiamo un po’ il comportamento dei metodi:
 Tracciamo i movimenti stampando dei messaggi
 public class ContoCorrente {
@@ -170,13 +170,13 @@ saldo-=somma;
 System.out.println("Prelevati: " + somma + " euro");
 } }
                                                                       
-##OOP Highlights (4)
+## OOP Highlights (4)
 Abbiamo modificato la classe... dobbiamo mettere mano anche al main (e/o alle altre classi che la usano)?
 NO!
 Highlight: se non modifichiamo l’interfaccia pubblica (nomi dei metodi, parametri, valori di ritorno) possiamo modificare la classe senza compromettere il resto del programma
 Più facile fare manutenzione e aggiornamenti a parti del programma!
                         
-##OOP Highlights (5)
+## OOP Highlights (5)
 Modifiche all’interfaccia pubblica richiedono invece di modificare anche i chiamanti (in questo caso il main)
 Esempio: consentiamo il prelievo solo se c’e’ la disponibilità
 public class ContoCorrente {
@@ -195,7 +195,7 @@ System.out.println("Prelevati: " + somma + " euro"); return true;
 } }
                                                      }
                         
-##OOP Highlights (6)
+## OOP Highlights (6)
 Modifichiamo di conseguenza il main: public class UsaConto {
 public static void main(String[] args) {
 // crea un nuovo conto corrente inizializzato con 1000 euro
@@ -210,7 +210,7 @@ Prima abbiamo aggiunto la stampa dei messaggi per tracciare le operazioni sul co
 ma chi vieta all’utilizzatore di questa classe di modificare a mano il saldo?
                               cc.saldo=10000000;
          
-##OOP Highlights (8)
+## OOP Highlights (8)
 Il saldo è pubblico (public)
 se vogliamo evitare che sia modificabile dall’esterno della classe lo dobbiamo trasformare in privato (private)
 public class ContoCorrente {
@@ -229,11 +229,11 @@ System.out.println("Prelevati: " + somma + " euro"); return true;
 } }
                                                      }
                         
-##OOP Highlights (9)
+## OOP Highlights (9)
 Ora siamo sicuri che le modifiche al saldo avverranno solo tramite i metodi
 Ma.... come farà il main a stampare il saldo? Idee?
                        
-##OOP Highlights (10)
+## OOP Highlights (10)
 Soluzione: Aggiungiamo un metodo public class ContoCorrente {
 private double saldo;
 public ContoCorrente(double saldoIniziale) { saldo=saldoIniziale;
@@ -251,7 +251,7 @@ System.out.println("Prelevati: " + somma + " euro"); return true;
 public double ottieniSaldo() { return saldo;
 } }
                                                               
-##OOP Highlights (11)
+## OOP Highlights (11)
 Il metodo che abbiamo aggiunto consente di accedere al saldo solo “in lettura”
 In questo modo il valore del saldo è sempre sotto controllo dei metodi
 Highlight: la proprietà per cui i dati che rappresentano lo stato interno di un oggetto possono essere accessibili solo tramite i metodi dell’oggetto stesso è detta INCAPSULAMENTO
@@ -265,7 +265,7 @@ Dall’esterno si sa cosa fa un oggetto, ma non come lo fa...
 3 Riferimenti a oggetti
 4 Un esempio complesso (da vedere a casa...)
  
-###Esempio: conti correnti (1)
+### Esempio: conti correnti (1)
 Riprendiamo l’esempio del conto corrente
 public class ContoCorrente {
 private double saldo;
@@ -283,7 +283,7 @@ System.out.println("Prelevati: " + somma + " euro"); return true;
 public double ottieniSaldo() { return saldo;
 } }
                                                             
-###Esempio: conti correnti (2)
+### Esempio: conti correnti (2)
 E un relativo main
 public class UsaDueConti {
 public static void main(String[] args) {
@@ -440,14 +440,14 @@ Stack: area di memoria in cui vengono caricati (allocati) i record di attivazion
 Heap: area di memoria in cui vengono caricati (allocati) tutti i vari oggetti creati nel programma, man mano che vengono creati.
    
 
-####Nell’ambiente delle classi
+#### Nell’ambiente delle classi
 
 * vengono memorizzati il codice dei metodi e le variabili statiche di tutte
 le classi del programma
 * sono le parti condivise dai vari oggetti della classe
 * le variabili statiche sono utilizzabili anche in assenza di oggetti
 
-####Nello stack
+#### Nello stack
 
 * vengono memorizzate le variabili locali dei metodi in esecuzione
 * per le variabili di tipi primitivi viene memorizzato il valore (esempio:
@@ -457,7 +457,7 @@ somma)
 * per ogni oggetto creato vengono memorizzate le variabili d’istanza (ossia, le variabili non statiche)
 * ogni oggetto nell’heap contiene anche il nome della classe di appartenenza
    
-##Riferimenti (1)
+## Riferimenti (1)
 I riferimenti meritano un approfondimento.
 Abbiamo visto che una variabile di un tipo primitivo contiene direttamente il valore del dato
 La dichirazione della variabile x alloca la memoria necessaria per contenere un int
@@ -468,7 +468,7 @@ La modifica di y non modifica x y = 40;
                   x = 33;
                   int y = x;
            
-##Riferimenti (2)
+## Riferimenti (2)
 
 Una variabile di un tipo classe contiene invece un riferimento a un oggetto La dichirazione della variabile primo di tipo Rettangolo alloca la
 memoria necessaria per contenere un riferimento (inizializzato a null)
@@ -476,19 +476,19 @@ La creazione dell’oggetto primo alloca un nuovo oggetto e assegna un riferimen
            Rettangolo primo;
                    primo = new Rettangolo(10,30)
         
-##Riferimenti (3)
+## Riferimenti (3)
 L’assegnamento di primo a secondo copia il contenuto della variabile (il riferimento)
 La modifica di secondo modifica l’oggetto riferito anche da primo
            Rettangolo secondo = primo;
                    secondo.base = 15;
         
-##Riferimenti (4)
+## Riferimenti (4)
 Lo stesso discorso vale anche quando si passa un oggetto a un metodo come parametro
 Viene passato il riferimento
 Ogni modifica fatta all’oggetto all’interno del metodo non viene persa alla quando il metodo termina (il chiamante vedrà l’oggetto modificato)
 Lo stesso discorso vale per gli array (gli array sono in realtà oggetti!)
    
-##Riferimenti (5)
+## Riferimenti (5)
 Una conseguenza del fatto che le variabili di tipo classe contengono riferimenti, è che l’opearatore di confronto == non si comporta (con gli oggetti) come uno si potrebbe aspettare...
 Infatti oggetto1 == oggetto2 vale true solo se oggetto1 e oggetto2 sono (riferimenti al) lo stesso oggetto.
 Esempio:
@@ -497,7 +497,7 @@ Abbiamo che:
 Rettangolo r3 = new Rettangolo(10,12);
                         System.out.println(r1==r2); // stampa true System.out.println(r1==r3); // stampa false
              
-##Riferimenti (6)
+## Riferimenti (6)
 Una soluzione a questo problema pùo essere il metodo equals.
 Tutti gli oggetti (capiremo perchè) dispongono di alcuni metodi di base
 Uno di questi è equals, e permette di confrontare due oggetti Lo abbiamo visto nelle stringhe
@@ -505,19 +505,19 @@ Uno di questi è equals, e permette di confrontare due oggetti Lo abbiamo visto 
 Anche nelle proprie classi si pùo implementare tale metodo (vedremo...)
         s1.equals(s2);
          
-##Garbage collection (1)
+## Garbage collection (1)
 Un’altra conseguenza del fatto che le operazioni (lettura, assegnamento, copia, ...) su variabili di tipo classe lavorino su riferimenti è che si possono ottenere oggetti orfani (privi di riferimenti).
 Ad esempio:
 supponiamo di creare due oggetti di tipo Rettangolo
           Rettangolo primo = new Rettangolo(10,30); Rettangolo secondo = new Rettangolo(20,50);
              
-##Garbage collection (2)
+## Garbage collection (2)
 ora assegniamo secondo a primo
 come è possibile accedere al vecchio valore di primo (il rettangolo di dimensioni 10 e 30) ???
 Il vecchio oggetto è rimasto orfano... (nessun riferimento ad esso)
             Rettangolo primo = secondo;
          
-##Garbage collection (3)
+## Garbage collection (3)
 Il vecchio oggetto non è più utilizzabile!!! (è garbage, spazzatura)
 Il linguaggio Java (come molti linguaggi moderni) prevede un meccanismo di rimozione degli oggetti privi di riferimenti detto Garbage Collector
 Il garbage collector viene eseguito periodicamente dalla Java Virtual Machine. Interrompe per un attimo l’esecuzione del programma e pulisce la memoria dagli oggetti privi di riferimenti
