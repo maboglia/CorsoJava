@@ -1,9 +1,9 @@
-#Package java.lang
+# Package java.lang
 Il package java.lang è il package più importante dell’API di Java, in quanto contiene moltissime classi e interfacce fondamentali per la programmazione Java, tanto che questo package viene importato in automatico in tutti i programmi.
 Oltre alle classe Thread e all’interfaccia Runnable di cui abbiamo parlato nella lezione precedente, questo package contiene classi che già abbiamo utilizzato come la classe String, la Object e la System.
 Ora andremo ad introdurre le classi più utilizzate e famose, in modo tale da avere una visione di insieme del package.
 
-##Classe String
+## Classe String
 La classe String è già stata tratta più volte nelle lezioni precedenti. 
 Abbiamo visto come le stringhe in Java siano degli oggetti. La particolarità di questa classe è quella di essere l’unica classe che è possibile istanziare come se fosse un tipo di dato primitivo.
 Vediamo i metodi più importanti di questa classe:
@@ -38,11 +38,11 @@ Vediamo i metodi più importanti di questa classe:
 	String toUpperCase()
 	Restituisce una nuova stringa equivalente a quella corrente ma con tutti i caratteri maiuscoli
 
-##Classe System
+## Classe System
 La classe System ha il compito di interfacciare il programma Java con il sistema operativo sul quale sussiste la virtual machine.
 Tutto ciò che esiste nella classe System è dichiarato statico. 
 
-###VARIABILI
+### VARIABILI
 Iniziamo subito esaminando tre attributi statici, che rappresentano i flussi (stream) di informazioni scambiati con la console (standard input, standard output, standard error):
 	static PrintStream out
 	static PrintStream err
