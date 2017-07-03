@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>Localizzazione</title>
+</head>
+<body>
+
+
+<div id="output"></div>
+
+<button id="geoRef" >localizzami</button>
+
+
+
+<script type="text/javascript">
+
+	var btnGeo = document.getElementById("geoRef");
+
+	var out = document.getElementById("output");
+
+
+	btnGeo.addEventListener("click", trovaPos);
+
+	if(navigator.geolocation){
+		console.log(navigator.geolocation);
+		navigator.geolocation.getCurrentPosition(trovaPos);
+	}
+»
+
+	function trovaPos (argument) {
+		console.log(argument.coords.latitude);
+		console.log(argument.coords.longitude);
+		console.log(argument.coords.altitude);
+
+		out.innerHTML = "la tua posizione è: " + argument.coords.latitude + " " + argument.coords.longitude;
+
+	}
+
+
+
+</script>
+
+
+</body>
+</html>

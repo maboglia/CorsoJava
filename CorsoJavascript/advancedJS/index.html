@@ -1,0 +1,25 @@
+<!DOCTYPE html />
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	
+	<h1>drag & drop</h1>
+
+	<div id="reportCarrello"></div>
+
+	<div id="prodotti">
+		<div id="p1" class="prodotto" draggable="true" ondragstart="trascinamento(event);">Maglione</div>
+		<div id="p2" class="prodotto" draggable="true" ondragstart="trascinamento(event);">Camicia</div>
+		<div id="p3" class="prodotto" draggable="true" ondragstart="trascinamento(event);">Pantalone</div>
+	</div>
+
+	<div id="droppo" ondrop="droppami(event);" ondragover="dropover(event);"></div>
+
+
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

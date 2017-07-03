@@ -16,10 +16,16 @@ public class Caratteri {
 		
 		c3++;
 		System.out.println("c3 vale " + c3);
-		
-		for (int i = 0; i < 5550; i++ ){
+//		for(int i=1; i <= 100; i++ ){
+//			if( i  == 50)
+//			System.out.println( "il valore è: "  +    i      );
+//		}
+//			
+			
+			
+		for (int i = 0; i < 3000; i++){
 			c4 = (char) i;
-			System.out.println("c4 vale " + c4);
+			System.out.println("carattere n. " + i + " vale " + c4);
 			
 			
 		}

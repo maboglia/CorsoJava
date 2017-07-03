@@ -1,6 +1,6 @@
 package progetti.contocorrente.v1;
 
-public class CompoundInterest {
+public class InteressiComposti {
 	
 	double sommaDepositata = 1000;
 	double percentualeInteresse = 3.5;
@@ -24,7 +24,7 @@ public class CompoundInterest {
 
 	public static void main(String[] args) {
 		
-		CompoundInterest ci = new CompoundInterest();
+		InteressiComposti ci = new InteressiComposti();
 		
 		ci.calcolaInteresse(10);
 	}

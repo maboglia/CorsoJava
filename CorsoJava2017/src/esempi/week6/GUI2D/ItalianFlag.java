@@ -37,8 +37,8 @@ public class ItalianFlag
       g2.fill(leftRectangle);
       g2.setColor(Color.RED);
       g2.fill(rightRectangle);
-      g2.setColor(Color.BLACK);
-      g2.draw(topLine);
-      g2.draw(bottomLine);
+//      g2.setColor(Color.BLACK);
+//      g2.draw(topLine);
+//      g2.draw(bottomLine);
    }
 }
