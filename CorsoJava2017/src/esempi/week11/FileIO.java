@@ -30,7 +30,7 @@ public class FileIO {
 		catch(IOException error){
 			System.out.println(error.getMessage());
 		} finally {
-			
+			System.out.println();
 		}
 
 	}
