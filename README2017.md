@@ -1,37 +1,44 @@
-# TSS2018
+# TSS2017
 ## Corso Tecnico Sviluppo Software
 
 ## Settimana 1 
-#### Counter: OOP/java 0
-
-
+###17/10/2016 2h
+	
 	Introduzione al corso di programmazione 
-
+###18/10/2016 3h
 
 	Algoritmi e strutture dati 
+	JAVA: LE BASI DEL LINGUAGGIO 
+	STRUTTURA DEL JDK, PRIMO APPROCCIO AL CODICE, COMPILAZIONE ED ESECUZIONE DEL PROGRAMMA HELLOWORLD 
+	file: HelloWorld.java
 	esempi algoritmi
+###21/10/2016 3h
 
 	OOP teoria, definizione
 	variabile: definizione
+	esempio classe Studente (nome, cognome, eta)
 
-#### Counter: OOP/java
+##esempi
+	*	ArrayInteri.java
+	*	Booleani.java
+	*	Caratteri.java
+	*	CastInteri.java
+	*	Confronti.java
+	*	ForEsempio.java
+	*	GeneraErrore.java
+	*	HelloWorld.java
+	*	Interi.java
+	*	OperazioniAritmetiche.java
+	*	Pitagora.java
+	*	PrimoIncremento.java
+	*	PromotionErrata.java
+
+Counter: OOP/java 8h
 
 ## Settimana 2 
-#### Counter: OOP/java
-
-
-
-	Javascript introduzione, variabili e tipi
-
-
-
-
-
+###24/10/2016 8h
 Creazione spazio su github e caricamento del materiale
-
-
-
-
+esempio classe Studente (continua)
 
 __LE VARIABILI IN JAVA__ 
 Dichiarazione di una variabile: 
@@ -56,7 +63,7 @@ Operatori (unari) di pre e post-incremento (e decremento)
 Operatori relazionali o di confronto 
 Concatenare le stringhe con + 
 
-
+###MARTEDÌ 25/10/2016 9-13 4h
 Esercizi sui tipi
 
 Flusso di lavoro del programma 
@@ -64,11 +71,11 @@ Flusso di lavoro del programma
 GESTIONE DEL FLUSSO DI ESECUZIONE 
 COSTRUTTI DI PROGRAMMAZIONE SEMPLICI 
 Il costrutto if e il ciclo for
-
+###GIOVEDÌ 27/10/2016 9-14 5h
 Esercizi e primo test di  verifica
+_------------------------------------stampato fino a qui------------------------------------_
 
-
-
+Counter: OOP/java 25h
 
 ###codice week2
 * Booleani
@@ -78,23 +85,24 @@ Esercizi e primo test di  verifica
 * SimpleCalcolatrice
 
 # Settimana 3 
-#### Counter: OOP/java
 
-
+###MERCOLEDì 2/11/2016 9-14 5h
 
 	INTRODUZIONE ALLA LIBRERIA STANDARD 
 	Il comando import - La classe String - La documentazione della libreria standard di Java 
 	esercizi sulle stringhe
-
+###GIOVEDÌ 3/11/2016 9-14 5h
 
 	OPERATORI E GESTIONE DEL FLUSSO DI ESECUZIONE 
 	cicli – loop (for, foreach, while, do..while): ripetere uno statement
 	condizioni (if...[else if]...[else], switch): condizione che si deve verificare, sempre boolean
 	I METODI COSTRUTTORI 
 	Caratteristiche di un costruttore - Costruttore di default - Package
+###VENERDÌ 4/11/2016 9-12 3h
 
+	Javascript introduzione, variabili e tipi
 
-
+Counter: OOP/java 35h - javascript 3h
 
 ###codice week3
 * AltriEsempiFor
@@ -122,9 +130,8 @@ Esercizi e primo test di  verifica
             * Picture
 
 # Settimana 4 
-#### Counter: OOP/java
 
-
+###LUNEDì 7/11/2016 9-13 14-18 8h
 	Approfondiamo la classe Studente
 	Gli array in Java - Dichiarazione - Creazione - Inizializzazione
 	IDENTIFICATORI, TIPI DI DATI ED ARRAY 
@@ -145,7 +152,7 @@ Esercizi e primo test di  verifica
 
 	creare e gestire array di stringhe all'interno del codice sorgente 
 
-
+###MARTEDÌ 8/11/2016 9-12 3h
 	
 	* costrutto switch
 
@@ -163,7 +170,7 @@ Esercizi e primo test di  verifica
 
 	* esercizi metodi ausiliari
 
-
+###GIOVEDÌ 10/11/2016 9-14 5h
 * java  (2h java)
 	*	correzione esercizi metodi ausiliari 
 	* 	Test java base
@@ -175,7 +182,7 @@ Esercizi e primo test di  verifica
 	
 esercizi java sugli array
 
-
+Counter: OOP/java 48h - javascript 6h	
 
 ###codice week4
 * CercaDadiUguali
@@ -192,8 +199,7 @@ esercizi java sugli array
 * StudenteTester
 
 # Settimana 5 
-#### Counter: OOP/java
-
+###LUNEDì 14/11/2016 9-13 14-18 8h
 Recap
 Tipi primitivi 
 tipi complessi 
@@ -236,10 +242,10 @@ Il costrutto switch
 *       * Studente.java
 *       * StudenteTester.java
 
-
+###MARTEDì 15/11/2016 9-12 
 * relazioni tra classi: uso, aggregazione, teoria delle classi 
 
-
+###MERCOLEDì 16/11/2016 9-12 
 * esercitazione luoghi e figure geometriche
  geometria
     * GeometriaTest.class
@@ -251,7 +257,7 @@ Il costrutto switch
     * Triangolo.class
 
 
-
+###GIOVEDì 17/11/2016 9-13 4h javascript
 .
 gioco matematico 01 - rock, scissors, paper
     * 02RockScissorsPaper
@@ -269,7 +275,7 @@ gioco matematico 01 - rock, scissors, paper
 
 
 
-
+Counter: OOP/java 62h - javascript 10h	
 
 ###codice week5
 * AccessorMutatorDemo
@@ -285,11 +291,10 @@ gioco matematico 01 - rock, scissors, paper
 * MethodDemo
 
 # Settimana 6 
-#### Counter: OOP/java
-
+###LUNEDì 21/11/2016 9-13 14-18 8h Java
 *	Ereditarietà in Java
 
-
+###MERCOLEDì 23/11/2016 9-13 4h Javascript 
 *	esercizi javascript per la gestione degli eventi
 
 
@@ -303,7 +308,7 @@ gioco matematico 01 - rock, scissors, paper
 	dato il main di una classe NegozioTester, sviluppare le classi Negozio e Prodotto
 	dato il main di una classe AutomobileTester, sviluppare le classi Automobile e Guidatore
 
-
+Counter: OOP/java 73h - javascript 14h	
 
 ###codice week6
 * GUI2D
@@ -314,8 +319,7 @@ gioco matematico 01 - rock, scissors, paper
     * RectangleViewer
 
 # Settimana 7 
-#### Counter: OOP/java
-
+###LUNEDì 28/11/2016 9-13 14-18 5h Java - 3h Javascript
 [Esempio Aggregazione](images/image010.jpg)
 
 *	Ereditarietà in Java
@@ -340,11 +344,11 @@ gioco matematico 01 - rock, scissors, paper
 		gioco
 			trenino che si muove, collisione
 				
+###MERCOLEDì 30/11/2016 9-12 3h Java
 
+###GIOVEDì 01/12/2016 9-11 2h Java			
 
-
-
-
+Counter: OOP/java 83h - javascript 17h				
 
 ###codice week7
 * GUI2D
@@ -358,8 +362,7 @@ gioco matematico 01 - rock, scissors, paper
     * Menu
 
 # Settimana 8 
-#### Counter: OOP/java
-
+###LUNEDì 05/12/2016 9-13 14-18 5h Java - 3h Javascript
 
 ##java
 * OOP design, ereditarietà
@@ -374,7 +377,7 @@ array, stringhe (metodi sulle stringhe)
 	slideshow banksy, 
 	lampadina accendi-spegni
 
-
+###MARTEDì 06/12/2016 9-12 3h Java 
 	proviamo un altro IDE: IntelliJIdea
 	gestione delle eccezioni, vd cartella appunti
 	blocco try-catch-finally
@@ -383,7 +386,7 @@ array, stringhe (metodi sulle stringhe)
 	
 
 
-
+Counter: OOP/java 91h - javascript 20h	
 
 ###codice week8
 * AritmeticaSbagliata
@@ -397,9 +400,8 @@ array, stringhe (metodi sulle stringhe)
 * ScriviSuFile
 			
 # Settimana 9 
-#### Counter: OOP/java
 
-
+###LUNEDì 12/12/2016 9-13 14-18 5h Java - 3h Javascript
 
 	Java
 	interfacce
@@ -412,7 +414,7 @@ array, stringhe (metodi sulle stringhe)
 	DOM
 
 
-
+###MERCOLEDì 14/12/2016 9-12 3h Java
 	Java
 	JCF: HashSet e TreeSet
 	Vector, HashSet e TreeSet, lettura file canto 1 inferno
@@ -421,15 +423,14 @@ array, stringhe (metodi sulle stringhe)
 	JavaScript
 	Array e Oggetti in JS
 	
-
+Counter: OOP/java 99h - javascript 26h	
 
 ###codice week9
 * ListDivina1
 
 # Settimana 10 
-#### Counter: OOP/java
 
-
+###LUNEDì 19/12/2016 9-13 14-18 5h Java - 3h Javascript
 
 	Java
 	focus date, valute
@@ -438,20 +439,19 @@ array, stringhe (metodi sulle stringhe)
 	info sistema > scrivi su file
 	esercizi per le vacanze
 	
-
+###MARTEDì 20/12/2016 9-12 3h Javascript
 	Oggetti in Javascript
 	esempi js 22-27
 	
-
+Counter: OOP/java 104h - javascript 32h	
 
 ###codice week10
 * GestioneDate
 * InfoSistema
 
 # Settimana 11
-#### Counter: OOP/java
  
-
+###LUNEDì 9/01/2017 9-13 14-18 5h Java - 3h Javascript
 	recap Java
 	gestire le collezioni
 	evoluzione esempio aula, con collezioni e scrittura su file
@@ -459,16 +459,16 @@ array, stringhe (metodi sulle stringhe)
 	javascript: 
 	ideazione e sviluppo pagina web le ricette del mondo per scambio con allievi corso cucina
 
-
+###MARTEDì 10/01/2017  9-11 2h Javascript
 	javascript: 
 	ideazione e sviluppo pagina web le ricette del mondo per scambio con allievi corso cucina
 	
 
-
+###GIOVEDì 12/01/2017 9-13 1h javascript - 3h Java
 	Javascript: ricette del mondo
 	Java: Progetti Archivio CD
 
-
+Counter: OOP/java 112h - javascript 38h	
 
 ###codice week11
 * Condizione
@@ -485,10 +485,9 @@ array, stringhe (metodi sulle stringhe)
 
 
 # Settimana 12
-#### Counter: OOP/java
 	
  
-
+###MARTEDì 17/01/2017  9-11 2h Javascript
 	Javascript: ricette del mondo
 	
 ###VENERDì 20/01/2017  9-12     1h javascript 2h Java
@@ -497,18 +496,17 @@ array, stringhe (metodi sulle stringhe)
 	Hello World JSP 
 	NetBeans e Eclipse, GlassFish e TomCat
 
-
+Counter: OOP/java 114h - javascript 41h		
 
 
 # Settimana 13
-#### Counter: OOP/java
  
-
+###LUNEDì 23/01/2017 9-14  5h Java
 [introduzione JSP](http://www.bogliaccino.it/corso-jsp-introduzione/)
 
 [JSP: le direttive](http://www.bogliaccino.it/corso-jsp-le-direttive/)
 
-
+###MARTEDì 24/01/2017 9-13 4h Java 
 
 [JSP: le direttive](http://www.bogliaccino.it/corso-jsp-le-direttive/)
 
@@ -517,7 +515,7 @@ array, stringhe (metodi sulle stringhe)
 	Progetto JSP: MyShop
 	Java Advanced: inizializzatore statico
 
-
+###MERCOLEDì 25/01/2017 9-12 3h Java
 
 [JSP: le dichiarazioni](http://www.bogliaccino.it/corso-jsp-dichiarazioni/)
 
@@ -529,12 +527,11 @@ array, stringhe (metodi sulle stringhe)
 	Verifica OCA Java - 2: statements e costrutti del linguaggio
 	Progetto JSP: MyShop, JSP View, ricevere dati dal form html
 	
-
+Counter: OOP/java 128h - javascript 41h		
 
 # Settimana 14
-#### Counter: OOP/java
 
-
+###LUNEDì 30/01/2017 8H JAVA
 	
 	Restituzione verifica 2 Java
 	Java advanced: nested classes, member classes, anonymous inner classes
@@ -550,17 +547,16 @@ array, stringhe (metodi sulle stringhe)
 	programmazione front-end con tecnologie client-side
 	mostra nascondi sezioni
 		
-
+Counter: OOP/java 136h - javascript 43h		
 
 # Settimana 15
-#### Counter: OOP/java
 
-
+###LUNEDì 06/02/2017 8H JAVA
 	
 	Reflection, Class, Constructor classes
 	MVC: client-side JS su progetto Negozio JSP
 	
-
+###MERCOLEDì 08/02/2017 2H Javascript
 	
 	Hello JQuery
 
@@ -568,18 +564,17 @@ array, stringhe (metodi sulle stringhe)
 
 	MVC: client-side JQuery su progetto Negozio JSP
 	
-
+Counter: OOP/java 144h - javascript 48h		
 
 # Settimana 16
-#### Counter: OOP/java
 
 
-
+###LUNEDì 13/02/2017 6H JAVA + 2H Javascript
 
 	JSP 
 	Javascript calcolatrice
 
-
+###MERCOLEDì 15/02/2017 2H Javascript
 	
 	Javascript calcolatrice
 
@@ -587,25 +582,23 @@ array, stringhe (metodi sulle stringhe)
 
 	MVC: JSP Servlet controller: doGet
 	
-
+Counter: OOP/java 153h - javascript 52h		
 
 
 # Settimana 17
-#### Counter: OOP/java
 
-
+###LUNEDì 20/02/2017 6H JAVA 2H Javascript
 
 	java: Jsp standard action
 	jquery: effetti, eventi
 	progetto MVC MyShop
 	
-
+Counter: OOP/java 159h - javascript 54h		
 
 
 # Settimana 18
-#### Counter: OOP/java
 
-
+###LUNEDì 27/02/2017 7H JAVA 1H Javascript
 	
 	jquery
 		hide
@@ -633,12 +626,11 @@ array, stringhe (metodi sulle stringhe)
 	
 	JQuery Ajax
 	MyShop, invocare il controller via Ajax con JQuery
-
+Counter: OOP/java 166h - javascript 57h	
 
 # Settimana 19
-#### Counter: OOP/java
 
-
+###LUNEDì 06/03/2017 4H JAVA 4H Javascript
 
 	jdbc
 		mysql connector j
@@ -651,23 +643,22 @@ array, stringhe (metodi sulle stringhe)
 	
 	MyShop, frontend-backend REST-API
 
-
+###MERCOLEDì 08/03/2017 3H Javascript
 	
 	Hello angularJS
 
-
+###GIOVEDì 09/03/2017 2H Javascript
 
 	Progetto MyShop clientside+serverside
 [Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/tree/master/CorsoJava2017/progetti)
 
-
+Counter: OOP/java 170h - javascript 66h	
 
 
 
 # Settimana 20
-#### Counter: OOP/java
 
-
+###LUNEDì 13/03/2017 4H JAVA 4H Javascript
 
 	java
 		pattern
@@ -687,17 +678,16 @@ array, stringhe (metodi sulle stringhe)
 	Progetto MyShop clientside+serverside
 [Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/tree/master/CorsoJava2017/progetti)
 
-
+###MARTEDì 14/03/2017 2H Javascript
 	angularjs
 ###VENERDì 17/03/2017 2H Javascript
 	angularjs
-
+Counter: OOP/java 174h - javascript 74h	
 
 
 # Settimana 21
-#### Counter: OOP/java
 
-
+###LUNEDì 20/03/2017 4H JAVA 4H Javascript
 
 	java
 		Java NIO
@@ -707,7 +697,7 @@ array, stringhe (metodi sulle stringhe)
 		
 	MVC
 		JSP + Database
-
+###GIOVEDì 23/03/2017 2H Java		
 
 	MVC
 		JSP + Database progetto listaSpesa
@@ -715,28 +705,27 @@ array, stringhe (metodi sulle stringhe)
 ###VENERDì 23/03/2017 4H Javascript		
 	
 	Angular.io
-
+Counter: OOP/java 180h - javascript 82h		
 
 
 # Settimana 22
-#### Counter: OOP/java
 
-
+###LUNEDì 27/03/2017 4H JAVA 4H Javascript
 
 	MVC
 		JSP + Database progetto listaSpesa	
 
 	JS: Angular components, routing
 
-
+###MARTEDì 28/03/2017 3H Javascript
 
 	JS: Angular components, routing
 	
-
+###GIOVEDì 30/03/2017 4H Javascript
 
 	JS: Angular services
 	JS: Html5 Canvas
 	
-
+Counter: OOP/java 184h - javascript 93h		
 	
 # Fine corso -- STAGE	
