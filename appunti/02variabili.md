@@ -1,8 +1,5 @@
-3 - Variabili
+# Le Variabili
 
-
-1 / 16
----
 
 ### Espressioni aritmetiche (1)
 Nel programma HelloWorld abbiamo usato il comando
@@ -19,9 +16,6 @@ Possiamo in realtà stampare tanti altri tipi di valori
 Ad esempio, possiamo stampare il risultato di una espressione
 
 
-2 / 16
----
-
 ### Espressioni aritmetiche (2)
 Consideriamo il seguente programma che calcola l’area di un triangolo di
 base 5 cm e altezza 10 cm
@@ -37,9 +31,6 @@ System . out . println (5*10/2);
 Il programma risolve l’espressione 5*10/2 e stampa il risultato a video
 Nota: * rappresenta l’operazione di moltiplicazione
 
-
-3 / 16
----
 
 ### Espressioni aritmetiche (3)
 Le espressioni aritmetiche più semplici sono costituite da singoli letterali
@@ -61,9 +52,6 @@ Inoltre, tutti gli operatori sono associativi a sinistra
 ossia 3+2+5 corrisponde a (3+2)+5
 quindi 18/6/3 fa 1, non 9
 
-4 / 16
----
-
 ### Espressioni aritmetiche (4)
 L’operazione di divisione / si comporta diversamente a seconda che sia
 applicato a letterali interi o frazionari
@@ -78,9 +66,6 @@ tra due frazionari
 operazioni)
 2 + (25.0/2.0) = 14.5
 
-
-5 / 16
----
 
 ### Variabili (1)
 Modifichiamo il programma che calcola l’area di un triangolo introducendo
@@ -103,9 +88,6 @@ Il programma cosı̀ risulta essere più chiaro:
 Si capisce meglio quali siano la base e l’altezza del triangolo
 Si capisce meglio che cosa calcola il programma
 
-6 / 16
----
-
 ### Variabili (2)
 
 Una variabile è una casella di memoria identificata da un nome
@@ -121,9 +103,6 @@ è un identificatore
 	(meglio base, altezza e area di X1, X2 e X3)
 
 
-7 / 16
----
-
 ### Variabili (3)
 In Java ogni variabile deve essere dichiarata prima del suo uso
 Nella dichiarazione di una variabile se ne specifica il nome e il tipo (o
@@ -136,9 +115,6 @@ int area ;
 ATTENZIONE! Ogni variabile deve essere dichiarata UNA SOLA VOLTA
 (la prima volta che compare nel programma)
 
-
-8 / 16
----
 
 ### Assegnamento
 Si può memorizzare un valore in una variabile tramite l’operazione di
@@ -159,9 +135,6 @@ I valori di base e altezza vengono letti e usati nell’espressione
 Il risultato dell’espressione viene scritto nella variabile area
 
 
-9 / 16
----
-
 ### Dichiarazione + Assegnamento
 
 Prima di poter essere usata (letta) in un’espressione una variabile deve:
@@ -174,9 +147,6 @@ int base =5;
 int altezza =10;
 int area = base * altezza /2
 ```
-
-10 / 16
----
 
 ### Esempio: Calcolo interessi (1)
 
@@ -202,9 +172,6 @@ System . out . println ( capitale );
 }
 ```
 
-11 / 16
----
-
 ### Esempio: Calcolo interessi (2)
 Risultato dell’esecuzione:
 Capitale maturato : 115762.5
@@ -219,9 +186,6 @@ Il nuovo valore di una variabile può essere calcolato a partire dal
 precedente (capitale=capitale+interesse)
 Il metodo print() visualizza un messaggio senza andare a capo
 
-
-12 / 16
----
 
 ### Costanti (1)
 Nell’esempio Interessi la variabile tasso non cambia mai
@@ -239,9 +203,6 @@ Si chiede al compilatore di controllare che una variabile non venga
 ri-assegnata per sbaglio.
 Sapendo che una variabile non cambierà mai valore, il compilatore
 può anche eseguire delle ottimizzazioni sull’uso di tale variabile...
-
-13 / 16
----
 
 ### Costanti (2)
 
@@ -267,9 +228,6 @@ System . out . println ( capitale );
 }
 ```
 
-14 / 16
----
-
 ### Input dall’utente (1)
 Per ricevere valori in input dall’utente si usa la classe Scanner, che fa
 parte della Libreria Standard di Java
@@ -292,9 +250,6 @@ System . out . println ( n1 + n2 );
 }
 ```
 
-15 / 16
----
-
 ### Input dall’utente (2)
 La classe Scanner deve essere richiamata usando la direttiva import
 prima dell’inizio della classe
@@ -312,8 +267,5 @@ seconda del tipo dei valori attesi
 x = input . nextInt (); // legge un numero intero
 y = input . nextDouble (); // legge un numero frazionario
 ```
-
-16 / 16
----
 
  
