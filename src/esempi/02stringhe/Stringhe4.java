@@ -1,6 +1,6 @@
 package esempi.week3;
 
-public class Stringhe2 {
+public class Stringhe4 {
 
 	public static void main(String[] args) {
 	

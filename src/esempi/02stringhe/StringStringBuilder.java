@@ -2,7 +2,7 @@ package esempi.week4;
 
 import java.util.Scanner;
 
-public class Stringhe3 {
+public class StringStringBuilder {
 
 	public static void main(String[] args) {
 		

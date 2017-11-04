@@ -3,7 +3,7 @@ package esempi.week2;
 /**
  * Created by mauro on 13/06/16.
  */
-public class Caratteri {
+public class Caratteri2 {
 
     public static void main(String[] args) {
 

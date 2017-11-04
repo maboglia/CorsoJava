@@ -3,7 +3,7 @@ package esempi.week2;
 /**
  * Created by mauro on 13/06/16.
  */
-public class Booleani {
+public class Booleani2 {
 
     static boolean b3;
 
