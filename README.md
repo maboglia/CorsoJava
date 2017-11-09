@@ -70,7 +70,7 @@ Esercizi e primo test di  verifica
 
 
 
-###codice week2
+### codice week2
 * Booleani
 * Caratteri
 * QuarantaquattroGatti
@@ -96,7 +96,7 @@ Esercizi e primo test di  verifica
 
 
 
-###codice week3
+### codice week3
 * AltriEsempiFor
 * EsempiFor
 * EsempiWhile
@@ -177,7 +177,7 @@ esercizi java sugli array
 
 
 
-###codice week4
+### codice week4
 * CercaDadiUguali
 * CercaIl7
 * ContoCorrente
@@ -271,7 +271,7 @@ gioco matematico 01 - rock, scissors, paper
 
 
 
-###codice week5
+### codice week5
 * AccessorMutatorDemo
 * ConstructorDemo
 * geometria
@@ -305,7 +305,7 @@ gioco matematico 01 - rock, scissors, paper
 
 
 
-###codice week6
+### codice week6
 * GUI2D
     * ItalianFlagComponent
     * ItalianFlag
@@ -346,7 +346,7 @@ gioco matematico 01 - rock, scissors, paper
 
 
 
-###codice week7
+### codice week7
 * GUI2D
 * FaceComponent
 * FaceViewer
@@ -385,7 +385,7 @@ array, stringhe (metodi sulle stringhe)
 
 
 
-###codice week8
+### codice week8
 * AritmeticaSbagliata
 * DivisionePerZeroException
 * ErroreArray
@@ -423,7 +423,7 @@ array, stringhe (metodi sulle stringhe)
 	
 
 
-###codice week9
+### codice week9
 * ListDivina1
 
 # Settimana 10 
@@ -444,7 +444,7 @@ array, stringhe (metodi sulle stringhe)
 	
 
 
-###codice week10
+### codice week10
 * GestioneDate
 * InfoSistema
 
@@ -470,7 +470,7 @@ array, stringhe (metodi sulle stringhe)
 
 
 
-###codice week11
+### codice week11
 * Condizione
 * FileIO
 * Funzioni
