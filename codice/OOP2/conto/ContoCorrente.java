@@ -15,6 +15,7 @@ public class ContoCorrente {
 	public ContoCorrente(double saldoIniziale){
 		System.out.println("hai costruito un conto con un versamento iniziale");
 		numConto=numeraConto();
+		saldo += saldoIniziale;
 	}
 	public ContoCorrente(String nome){
 		System.out.println("hai costruito il conto di: " +  nome);
@@ -31,10 +32,17 @@ public class ContoCorrente {
 		
 	}
 	
-	public void prelievo(double ammontare){
-		System.out.println("Prelievo euro " + ammontare);
+	public boolean prelievo(double ammontare){
+		System.out.println("Vuoi prelevare euro " + ammontare);
+		if(saldo - ammontare >= 0){
+			System.out.println("ok, puoi prelevare");
 		saldo = saldo - ammontare;
-		
+			return true;
+		}
+		else {
+			System.out.println("NO! non puoi prelevare!");
+			return false;
+		}
 	}
 	
 	public String stampaInfo(){
