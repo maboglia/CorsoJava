@@ -23,9 +23,11 @@ I comandi del programma modificano lo stato fino a raggiungere uno stato finale 
 ## Programmazione imperativa (3)
 Ad esempio, il seguente programma (che calcola il prodotto di x e y):
 ha la seguente dinamica:
-                               int x=10, y=3, p=0;
+```java
+int x=10, y=3, p=0;
 for (int i=0; i<y; i++)
 p+=x;
+```
                  
 ## Programmazione orientata agli oggetti (1)
 Sebbene sia possibile scrivere programmi interessanti con i tipi di dato visti fino ad ora, spesso i programmi hanno bisogno di manipolare strutture dati che rappresentano più fedelmente le entità del mondo reale.
@@ -49,6 +51,7 @@ Consiste di due classi:
 UsaConto che contiene il main del programma
 ContoCorrente che descrive gli oggetti che rappresentano i conti
 correnti
+```java
 public class UsaConto {
 public static void main(String[] args) {
 // crea un nuovo conto corrente inizializzato con 1000 euro
@@ -57,9 +60,10 @@ cc.versa(700);
 // fa un po’ di prelievi, controllando prima il saldo
 if (cc.saldo>200) cc.preleva(200); if (cc.saldo>900) cc.preleva(900);
 System.out.println("Saldo finale: " + cc.saldo); }
-                                                                       }
+```                                                                       }
                            
 ## Primo esempio di programmazione con oggetti (2)
+```java
 public class ContoCorrente {
 // variabile che memorizza lo stato del conto
 public double saldo;
@@ -72,7 +76,8 @@ public void versa(double somma) { saldo+=somma;
 // metodo per il prelievo di somme
 public void preleva(double somma) { saldo-=somma;
 } }
-                                                                  
+```
+
 ## Primo esempio di programmazione con oggetti (3)
 Osservazioni:
 La classe UsaConto non è molto diversa dai programmi che abbiamo scritto fino ad ora...
@@ -92,6 +97,7 @@ I nei metodi non si usa il modificatore static (capiremo più avanti
                       
 ## Primo esempio di programmazione con oggetti (4)
 Vediamo ora come gestire più conti correnti
+```java
 public class UsaDueConti {
 public static void main(String[] args) {
 // crea un nuovo conto corrente inizializzato con 1000 euro
@@ -104,7 +110,7 @@ conto2.versa(700);
 System.out.println("Saldo primo conto: " + conto1.saldo);
 System.out.println("Saldo secondo conto: " + conto2.saldo); }
 }
-                                                                     
+```                                                                     
 ## L’esecuzione di un programma a oggetti (1))
 In un programma basato su oggetti, lo stato
 non è più uno stato unico globale (come nel caso della
@@ -127,12 +133,13 @@ per volta
 La disciplina che si occupa di organizzare questo lavoro è l’Ingegneria del Software
 Definisce notazioni (diagrammi), metodologie e procedure che rendono il processo di sviluppo di software complessi più e ciente e a dabile.
                        
- Sommario
- 1 Programmazione Orientata agli Oggetti: concetti
+Sommario
+1 Programmazione Orientata agli Oggetti: concetti
 2 Programmazione Orientata agli Oggetti: highlights
                       
 ## OOP Highlights (1)
 Riprendiamo l’esempio del conto corrente:
+```java
 public class ContoCorrente {
 public double saldo;
 public ContoCorrente(double saldoIniziale) { saldo=saldoIniziale;
@@ -141,9 +148,10 @@ public void versa(double somma) { saldo+=somma;
 }
 public void preleva(double somma) { saldo-=somma;
 } }
-                                                                                                
+```                                                                                                
 ## OOP Highlights (2)
 Riprendiamo anche il primo main che abbiamo considerato:
+```java
 public class UsaConto {
 public static void main(String[] args) {
 // crea un nuovo conto corrente inizializzato con 1000 euro
@@ -153,10 +161,11 @@ cc.versa(700);
 if (cc.saldo>200) cc.preleva(200); if (cc.saldo>900) cc.preleva(900);
 System.out.println("Saldo finale: " + cc.saldo); }
 }
-                                                                                                
+```                                                                                                
 ## OOP Highlights (3)
 Arricchiamo un po’ il comportamento dei metodi:
 Tracciamo i movimenti stampando dei messaggi
+```java
 public class ContoCorrente {
 public double saldo;
 public ContoCorrente(double saldoIniziale) { saldo=saldoIniziale;
@@ -169,7 +178,7 @@ public void preleva(double somma) {
 saldo-=somma;
 System.out.println("Prelevati: " + somma + " euro");
 } }
-                                                                      
+```                                                                      
 ## OOP Highlights (4)
 Abbiamo modificato la classe... dobbiamo mettere mano anche al main (e/o alle altre classi che la usano)?
 NO!
@@ -179,6 +188,7 @@ Più facile fare manutenzione e aggiornamenti a parti del programma!
 ## OOP Highlights (5)
 Modifiche all’interfaccia pubblica richiedono invece di modificare anche i chiamanti (in questo caso il main)
 Esempio: consentiamo il prelievo solo se c’e’ la disponibilità
+```java
 public class ContoCorrente {
 public double saldo;
 public ContoCorrente(double saldoIniziale) { saldo=saldoIniziale;
@@ -193,10 +203,13 @@ else {
 saldo-=somma;
 System.out.println("Prelevati: " + somma + " euro"); return true;
 } }
-                                                     }
+```                                                     }
                         
 ## OOP Highlights (6)
-Modifichiamo di conseguenza il main: public class UsaConto {
+Modifichiamo di conseguenza il main: 
+```java
+
+public class UsaConto {
 public static void main(String[] args) {
 // crea un nuovo conto corrente inizializzato con 1000 euro
 ContoCorrente cc = new ContoCorrente(1000); // versa 700 euro
@@ -204,7 +217,7 @@ cc.versa(700);
 // fa un po’ di prelievi, controllando prima il saldo. // posso tenere conto o meno del risultato (true/false) if (!cc.preleva(200)) System.out.println("Fallito"); cc.preleva(900);
 System.out.println("Saldo finale: " + cc.saldo); }
 }
-                                                                  
+```                                                                  
 OOP Highlights (7)
 Prima abbiamo aggiunto la stampa dei messaggi per tracciare le operazioni sul conto...
 ma chi vieta all’utilizzatore di questa classe di modificare a mano il saldo?
@@ -213,6 +226,7 @@ ma chi vieta all’utilizzatore di questa classe di modificare a mano il saldo?
 ## OOP Highlights (8)
 Il saldo è pubblico (public)
 se vogliamo evitare che sia modificabile dall’esterno della classe lo dobbiamo trasformare in privato (private)
+```java
 public class ContoCorrente {
 // ora e’ visibile solo all’interno di questa classe
 private double saldo;
@@ -227,14 +241,17 @@ else {
 saldo-=somma;
 System.out.println("Prelevati: " + somma + " euro"); return true;
 } }
-                                                     }
+```                                                 }
                         
 ## OOP Highlights (9)
 Ora siamo sicuri che le modifiche al saldo avverranno solo tramite i metodi
 Ma.... come farà il main a stampare il saldo? Idee?
                        
 ## OOP Highlights (10)
-Soluzione: Aggiungiamo un metodo public class ContoCorrente {
+Soluzione: Aggiungiamo un metodo 
+
+```java
+public class ContoCorrente {
 private double saldo;
 public ContoCorrente(double saldoIniziale) { saldo=saldoIniziale;
 }
@@ -250,7 +267,8 @@ System.out.println("Prelevati: " + somma + " euro"); return true;
 // restituisce il saldo a chi ne ha bisogno
 public double ottieniSaldo() { return saldo;
 } }
-                                                              
+```
+
 ## OOP Highlights (11)
 Il metodo che abbiamo aggiunto consente di accedere al saldo solo “in lettura”
 In questo modo il valore del saldo è sempre sotto controllo dei metodi
@@ -267,6 +285,7 @@ Dall’esterno si sa cosa fa un oggetto, ma non come lo fa...
  
 ### Esempio: conti correnti (1)
 Riprendiamo l’esempio del conto corrente
+```java
 public class ContoCorrente {
 private double saldo;
 public ContoCorrente(double saldoIniziale) { saldo=saldoIniziale;
@@ -282,9 +301,11 @@ System.out.println("Prelevati: " + somma + " euro"); return true;
 } }
 public double ottieniSaldo() { return saldo;
 } }
-                                                            
+```
+
 ### Esempio: conti correnti (2)
 E un relativo main
+```java
 public class UsaDueConti {
 public static void main(String[] args) {
 // crea un nuovo conto corrente inizializzato con 1000 euro
@@ -297,14 +318,15 @@ conto2.versa(700);
 System.out.println("Saldo primo conto: " + conto1.ottieniSaldo())
 System.out.println("Saldo secondo conto: " + conto2.ottieniSaldo( }
 }
-                                                  ; )
-##Condividere variabili (1)
+```                                                  ; )
+## Condividere variabili (1)
 Supponiamo ora di voler attribuire ad ogni conto un numero identificativo
 il numero del conto....
 dobbiamo aggiungere una variabile alla classe!
   
-##Condividere variabili (2)
-        public class ContoCorrente { private double saldo;
+## Condividere variabili (2)
+```java
+public class ContoCorrente { private double saldo;
 // memorizza il numero del conto
 private int numero;
 // inizializza anche il numero del conto
@@ -314,9 +336,13 @@ numero=numeroConto;
 public void versa(double somma) { ...come prima... } public boolean preleva(double somma) { ...come prima... } public double ottieniSaldo() { return saldo; }
 // fornisce il numero del conto
 public double ottieniNumero() { return numero; } }
-                                                
-##Condividere variabili (3)
-Modifichiamo di conseguenza il main public class UsaDueConti {
+```
+
+## Condividere variabili (3)
+Modifichiamo di conseguenza il main 
+
+```java
+public class UsaDueConti {
 public static void main(String[] args) {
 // crea un nuovo conto NUMERO 10001 con 1000 euro
 ContoCorrente conto1 = new ContoCorrente(1000,10001); // crea un nuovo conto NUMERO 10002 con 200 euro
@@ -327,8 +353,10 @@ conto2.versa(700);
 // ORA QUI POSSIAMO USARE IL NUMERO
 System.out.print("Conto " + conto1.ottieniNumero()); System.out.println(" saldo : "+conto1.ottieniSaldo()); System.out.print("Conto " + conto2.ottieniNumero()); System.out.println(" saldo : "+conto2.ottieniSaldo());
 } }
-                                                        
-##Variabili statiche (1)
+```
+
+
+## Variabili statiche (1)
 In questo modo il numero del conto deve essere deciso dal chiamante (e.g. main)
 Il main è responsabile di gestire i numeri dei conti
 Che succede se il main attribuisce lo stesso numero a due conti
@@ -336,7 +364,7 @@ diversi?
 Sarebbe meglio se al momento della creazione un conto potesse generare il proprio numero da se
 Ad esempio incrementando di uno il numero dell’ultimo conto corrente creato
    
-##Variabili statiche (2)
+## Variabili statiche (2)
 Per rendere possibile ci`o è necessaria un’informazione condivisa da oggetti ContoCorrente diversi
 Serve una variabile contatore che sia visibile a tutti gli oggetti
     ContoCorrente
@@ -344,7 +372,8 @@ Tale variabile “condivisa” conterrà il numero dell’ultimo conto creato
 Un nuovo oggetto incrementerà la variabile condivisa di 1 e userà tale valore come proprio numero di conto
 Una variabile condivisa da tutti gli oggetti di una certa classe la si ottiene con il modificatore static
    
-##Variabili statiche (3)
+## Variabili statiche (3)
+```java
 public class ContoCorrente { private double saldo;
 // memorizza il numero del conto
 private int numero;
@@ -355,8 +384,10 @@ public ContoCorrente(double saldoIniziale) { saldo=saldoIniziale; numeroUltimoCo
 public void versa(double somma) { ...come prima... } public boolean preleva(double somma) { ...come prima... } public double ottieniSaldo() { return saldo; }
 // fornisce il numero del conto
 public double ottieniNumero() { return numero; } }
+```
                                                               i
-##Variabili statiche (4)
+## Variabili statiche (4)
+```java
 public class UsaDueConti {
 public static void main(String[] args) {
 // crea un nuovo conto (NUMERO AUTOMATICO) con 1000 euro
@@ -368,14 +399,16 @@ conto1.preleva(700);
 conto2.versa(700);
 System.out.print("Conto " + conto1.ottieniNumero()); System.out.println(" saldo : "+conto1.ottieniSaldo()); System.out.print("Conto " + conto2.ottieniNumero()); System.out.println(" saldo : "+conto2.ottieniSaldo());
 } }
-                                              
-##Variabili statiche (5)
+```
+
+## Variabili statiche (5)
 Altro esempio di uso di static
 Supponiamo di voler aggiungere al nostro programma la gestione
 degli interessi maturati nei conti
 Dobbiamo memorizzare il tasso da applicare al conto corrente
   
-##Variabili statiche (6)
+## Variabili statiche (6)
+```java
 public class ContoCorrente {
 private double saldo;
 private int numero;
@@ -389,8 +422,9 @@ public double ottieniNumero() { return numero; }
 // aggiorna il saldo aggiungendo gli interessi
 public maturaInteressi() { saldo += saldo*tasso;
 } }
-                                              
-##Variabili statiche (7)
+```
+
+## Variabili statiche (7)
 Ma... supponiamo che il tasso sia lo stesso per tutti i conti correnti.
 oppure (vedremo dopo) che ci siano delle “categorie” di tasso (ad esempio: tasso family e tasso business)
 Per cambiare i tassi di interesse devo prendere un conto corrente per volta e aggiornare la sua variabile tasso
@@ -398,7 +432,8 @@ Per cambiare i tassi di interesse devo prendere un conto corrente per volta e ag
         // supponendo che contiGestiti sia un array di conti correnti
 for (ContoCorrente cc : contiGestiti) cc.tasso+=0.01;
                  
-##Variabili statiche (8)
+## Variabili statiche (8)
+```java
 public class ContoCorrente {
 private double saldo;
 private int numero;
@@ -412,8 +447,9 @@ public double ottieniNumero() { return numero; }
 // aggiorna il saldo aggiungendo gli interessi
 public maturaInteressi() { saldo += saldo*tasso;
 } }
-                                            
-##Variabili statiche (9)
+```
+
+## Variabili statiche (9)
 Ora per cambiare i tassi di interesse in tutti i conti correnti è su ciente fare:
 Note:
 Le variabili statiche possono essere riferite usando il nome della classe invece che il nome di un oggetto
@@ -430,7 +466,7 @@ Quindi non hanno bisogno di creare oggetti
 Possono essere invocati usando il nome della classe Tipicamente sono metodi che ricevono i parametri ed eseguono qualche calcolo generico su essi
 Abbiamo visto esempi di metodi statici nella classe Math Math.random()
     Math.pow()
-          public static int somma(int x, int y) { return x+y; }
+        public static int somma(int x, int y) { return x+y; }
          .....
  Gestione memoria nella JVM (1)
 Per capire meglio come funzionano classi e oggetti diamo uno sguardo “sotto il cofano” della Java Virtual Machine (JVM)
@@ -440,14 +476,14 @@ Stack: area di memoria in cui vengono caricati (allocati) i record di attivazion
 Heap: area di memoria in cui vengono caricati (allocati) tutti i vari oggetti creati nel programma, man mano che vengono creati.
    
 
-#### Nell’ambiente delle classi
+## Nell’ambiente delle classi
 
 * vengono memorizzati il codice dei metodi e le variabili statiche di tutte
 le classi del programma
 * sono le parti condivise dai vari oggetti della classe
 * le variabili statiche sono utilizzabili anche in assenza di oggetti
 
-#### Nello stack
+## Nello stack
 
 * vengono memorizzate le variabili locali dei metodi in esecuzione
 * per le variabili di tipi primitivi viene memorizzato il valore (esempio:
