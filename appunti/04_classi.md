@@ -153,7 +153,8 @@ public ContoCorrente(double saldoIniziale) { saldo=saldoIniziale;
 public void versa(double somma) { saldo+=somma;
 }
 public void preleva(double somma) { saldo-=somma;
-} }
+} 
+}
 ```                                                                                                
 ## OOP Highlights (2)
 Riprendiamo anche il primo main che abbiamo considerato:
@@ -183,12 +184,14 @@ System.out.println("Versati: " + somma + " euro");
 public void preleva(double somma) {
 saldo-=somma;
 System.out.println("Prelevati: " + somma + " euro");
-} }
+} 
+}
 ```                                                                      
 ## OOP Highlights (4)
 Abbiamo modificato la classe... dobbiamo mettere mano anche al main (e/o alle altre classi che la usano)?
 NO!
-Highlight: se non modifichiamo l’interfaccia pubblica (nomi dei metodi, parametri, valori di ritorno) possiamo modificare la classe senza compromettere il resto del programma
+Highlight: se non modifichiamo l’interfaccia pubblica (nomi dei metodi, parametri, valori di ritorno) 
+possiamo modificare la classe senza compromettere il resto del programma
 Più facile fare manutenzione e aggiornamenti a parti del programma!
                         
 ## OOP Highlights (5)
@@ -208,7 +211,8 @@ public boolean preleva(double somma) { if (saldo<somma) return false;
 else {
 saldo-=somma;
 System.out.println("Prelevati: " + somma + " euro"); return true;
-} }
+} 
+}
 ```                                                     }
                         
 ## OOP Highlights (6)
@@ -238,7 +242,8 @@ se vogliamo evitare che sia modificabile dall’esterno della classe lo dobbiamo
 public class ContoCorrente {
 // ora e’ visibile solo all’interno di questa classe
 private double saldo;
-public ContoCorrente(double saldoIniziale) { saldo=saldoIniziale;
+public ContoCorrente(double saldoIniziale) { 
+        saldo=saldoIniziale;
 }
 public void versa(double somma) {
 saldo+=somma;
@@ -278,7 +283,8 @@ System.out.println("Prelevati: " + somma + " euro"); return true;
 } }
 // restituisce il saldo a chi ne ha bisogno
 public double ottieniSaldo() { return saldo;
-} }
+} 
+}
 ```
 
 ## OOP Highlights (11)
@@ -312,7 +318,8 @@ saldo-=somma;
 System.out.println("Prelevati: " + somma + " euro"); return true;
 } }
 public double ottieniSaldo() { return saldo;
-} }
+} 
+}
 ```
 
 ### Esempio: conti correnti (2)
@@ -348,7 +355,8 @@ numero=numeroConto;
 }
 public void versa(double somma) { ...come prima... } public boolean preleva(double somma) { ...come prima... } public double ottieniSaldo() { return saldo; }
 // fornisce il numero del conto
-public double ottieniNumero() { return numero; } }
+public double ottieniNumero() { return numero; } 
+}
 ```
 
 ## Condividere variabili (3)
@@ -364,23 +372,27 @@ conto1.preleva(700);
 // ...e li versa nel secondo
 conto2.versa(700);
 // ORA QUI POSSIAMO USARE IL NUMERO
-System.out.print("Conto " + conto1.ottieniNumero()); System.out.println(" saldo : "+conto1.ottieniSaldo()); System.out.print("Conto " + conto2.ottieniNumero()); System.out.println(" saldo : "+conto2.ottieniSaldo());
-} }
+
+System.out.print("Conto " + conto1.ottieniNumero()); 
+System.out.println(" saldo : "+conto1.ottieniSaldo()); 
+
+System.out.print("Conto " + conto2.ottieniNumero()); 
+System.out.println(" saldo : "+conto2.ottieniSaldo());
+} 
+}
 ```
 
 
 ## Variabili statiche (1)
 In questo modo il numero del conto deve essere deciso dal chiamante (e.g. main)
 Il main è responsabile di gestire i numeri dei conti
-Che succede se il main attribuisce lo stesso numero a due conti
-diversi?
+Che succede se il main attribuisce lo stesso numero a due conti diversi?
 Sarebbe meglio se al momento della creazione un conto potesse generare il proprio numero da se
 Ad esempio incrementando di uno il numero dell’ultimo conto corrente creato
    
 ## Variabili statiche (2)
 Per rendere possibile ciò è necessaria un’informazione condivisa da oggetti ContoCorrente diversi
-Serve una variabile contatore che sia visibile a tutti gli oggetti
-    ContoCorrente
+Serve una variabile contatore che sia visibile a tutti gli oggetti ContoCorrente
 Tale variabile “condivisa” conterrà il numero dell’ultimo conto creato
 Un nuovo oggetto incrementerà la variabile condivisa di 1 e userà tale valore come proprio numero di conto
 Una variabile condivisa da tutti gli oggetti di una certa classe la si ottiene con il modificatore static
@@ -396,9 +408,10 @@ public ContoCorrente(double saldoIniziale) { saldo=saldoIniziale; numeroUltimoCo
 }
 public void versa(double somma) { ...come prima... } public boolean preleva(double somma) { ...come prima... } public double ottieniSaldo() { return saldo; }
 // fornisce il numero del conto
-public double ottieniNumero() { return numero; } }
+public double ottieniNumero() { return numero; } 
+}
 ```
-                                                              i
+
 ## Variabili statiche (4)
 ```java
 public class UsaDueConti {
@@ -411,7 +424,8 @@ conto1.preleva(700);
 // ...e li versa nel secondo
 conto2.versa(700);
 System.out.print("Conto " + conto1.ottieniNumero()); System.out.println(" saldo : "+conto1.ottieniSaldo()); System.out.print("Conto " + conto2.ottieniNumero()); System.out.println(" saldo : "+conto2.ottieniSaldo());
-} }
+} 
+}
 ```
 
 ## Variabili statiche (5)
@@ -434,15 +448,16 @@ public double ottieniSaldo() { return saldo; }
 public double ottieniNumero() { return numero; }
 // aggiorna il saldo aggiungendo gli interessi
 public maturaInteressi() { saldo += saldo*tasso;
-} }
+} 
+}
 ```
 
 ## Variabili statiche (7)
 Ma... supponiamo che il tasso sia lo stesso per tutti i conti correnti.
 oppure (vedremo dopo) che ci siano delle “categorie” di tasso (ad esempio: tasso family e tasso business)
 Per cambiare i tassi di interesse devo prendere un conto corrente per volta e aggiornare la sua variabile tasso
- Anche in questo caso sarebbe più pratico se la variabile tasso fosse condivisa da tutte le classi (quindi static)
-        // supponendo che contiGestiti sia un array di conti correnti
+Anche in questo caso sarebbe più pratico se la variabile tasso fosse condivisa da tutte le classi (quindi static)
+// supponendo che contiGestiti sia un array di conti correnti
 for (ContoCorrente cc : contiGestiti) cc.tasso+=0.01;
                  
 ## Variabili statiche (8)
@@ -459,7 +474,8 @@ public double ottieniSaldo() { return saldo; }
 public double ottieniNumero() { return numero; }
 // aggiorna il saldo aggiungendo gli interessi
 public maturaInteressi() { saldo += saldo*tasso;
-} }
+} 
+}
 ```
 
 ## Variabili statiche (9)
@@ -477,10 +493,11 @@ non pùo utilizzare variabili d’istanza (ossia, non static)
  Di solito i metodi statici vengono creati per funzionalità che non hanno bisogno di uno stato (state-less)
 Quindi non hanno bisogno di creare oggetti
 Possono essere invocati usando il nome della classe Tipicamente sono metodi che ricevono i parametri ed eseguono qualche calcolo generico su essi
-Abbiamo visto esempi di metodi statici nella classe Math Math.random()
-    Math.pow()
+Abbiamo visto esempi di metodi statici nella classe Math 
+        Math.random()
+        Math.pow()
         public static int somma(int x, int y) { return x+y; }
-         .....
+        
 ## Gestione memoria nella JVM (1)
 Per capire meglio come funzionano classi e oggetti diamo uno sguardo “sotto il cofano” della Java Virtual Machine (JVM)
 La memoria usata dalla JVM è concettualmente divisa in tre parti
@@ -491,18 +508,18 @@ Heap: area di memoria in cui vengono caricati (allocati) tutti i vari oggetti cr
 
 ## Nell’ambiente delle classi
 
-* vengono memorizzati il codice dei metodi e le variabili statiche di tutte
-le classi del programma
+* vengono memorizzati il codice dei metodi e le variabili statiche di tutte le classi del programma
 * sono le parti condivise dai vari oggetti della classe
 * le variabili statiche sono utilizzabili anche in assenza di oggetti
 
 ## Nello stack
 
 * vengono memorizzate le variabili locali dei metodi in esecuzione
-* per le variabili di tipi primitivi viene memorizzato il valore (esempio:
-somma)
+* per le variabili di tipi primitivi viene memorizzato il valore (esempio: somma)
 * per le variabili di tipo classe viene memorizzato un riferimento
-(indirizzo di memoria di un oggetto) Nell’heap
+(indirizzo di memoria di un oggetto) 
+
+## Nell’heap
 * per ogni oggetto creato vengono memorizzate le variabili d’istanza (ossia, le variabili non statiche)
 * ogni oggetto nell’heap contiene anche il nome della classe di appartenenza
    
@@ -542,9 +559,11 @@ Una conseguenza del fatto che le variabili di tipo classe contengono riferimenti
 Infatti oggetto1 == oggetto2 vale true solo se oggetto1 e oggetto2 sono (riferimenti al) lo stesso oggetto.
 Esempio:
 Abbiamo che:
-        Rettangolo r1 = new Rettangolo(10,12); Rettangolo r2 = r1;
-Rettangolo r3 = new Rettangolo(10,12);
-                        System.out.println(r1==r2); // stampa true System.out.println(r1==r3); // stampa false
+        Rettangolo r1 = new Rettangolo(10,12); 
+        Rettangolo r2 = r1;
+        Rettangolo r3 = new Rettangolo(10,12);
+        System.out.println(r1==r2); // stampa true 
+        System.out.println(r1==r3); // stampa false
              
 ## Riferimenti (6)
 Una soluzione a questo problema pùo essere il metodo equals.
