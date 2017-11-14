@@ -233,6 +233,7 @@ ma chi vieta all’utilizzatore di questa classe di modificare a mano il saldo?
 ## OOP Highlights (8)
 Il saldo è pubblico (public)
 se vogliamo evitare che sia modificabile dall’esterno della classe lo dobbiamo trasformare in privato (private)
+
 ```java
 public class ContoCorrente {
 // ora e’ visibile solo all’interno di questa classe
@@ -243,13 +244,17 @@ public void versa(double somma) {
 saldo+=somma;
 System.out.println("Versati: " + somma + " euro");
 }
-public boolean preleva(double somma) { if (saldo<somma) return false;
-else {
-saldo-=somma;
-System.out.println("Prelevati: " + somma + " euro"); return true;
-} }
-```                                                 }
-                        
+public boolean preleva(double somma) { 
+        if (saldo<somma) return false;
+        else {
+        saldo-=somma;
+        System.out.println("Prelevati: " + somma + " euro"); 
+        return true;
+        } 
+        }
+}
+```
+
 ## OOP Highlights (9)
 Ora siamo sicuri che le modifiche al saldo avverranno solo tramite i metodi
 Ma.... come farà il main a stampare il saldo? Idee?
@@ -373,7 +378,7 @@ Sarebbe meglio se al momento della creazione un conto potesse generare il propri
 Ad esempio incrementando di uno il numero dell’ultimo conto corrente creato
    
 ## Variabili statiche (2)
-Per rendere possibile ci`o è necessaria un’informazione condivisa da oggetti ContoCorrente diversi
+Per rendere possibile ciò è necessaria un’informazione condivisa da oggetti ContoCorrente diversi
 Serve una variabile contatore che sia visibile a tutti gli oggetti
     ContoCorrente
 Tale variabile “condivisa” conterrà il numero dell’ultimo conto creato
