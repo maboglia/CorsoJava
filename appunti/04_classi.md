@@ -1,7 +1,7 @@
-#Introduzione alla Programmazione Orientata agli Oggetti (Object Oriented Programming – OOP)
+# Introduzione alla Programmazione Orientata agli Oggetti (Object Oriented Programming – OOP)
                       
                  
-#Programmazione imperativa (1)
+## Programmazione imperativa (1)
 Abbiamo visto come programmare utilizzando i seguenti tipi di dati:
 
 * Tipi di dato primitivi (int, double, char, boolean, ecc...) 
@@ -40,7 +40,7 @@ Scrivere un programma di questo tipo usando solo interi, array e strighe pùo di
                          
 ## Programmazione orientata agli oggetti (2)
 Notate che ogni entità del mondo reale (e.g. il conto bancario) prevede un proprio stato interno (e.g. saldo, ecc...) e delle proprie funzionalità (e.g. versamento, prelievo, ecc...)
-Per questo motivo un linguaggio di programmazione ORIENTATO AGLI OGGETTI (tipo Java) fornisce meccanismi per definire nuovi tipi di dato basati sul concetto di classe
+Per questo motivo un linguaggio di programmazione __ORIENTATO AGLI OGGETTI__ (tipo Java) fornisce meccanismi per definire nuovi tipi di dato basati sul concetto di classe
 Una classe definisce un insieme di oggetti (conti bancari, dipendenti, automobili, rettangoli, ecc...).
 Un oggetto è una struttura dotata di:
 proprie variabili (che rappresentano il suo stato) propri metodi (che realizzano le sue funzionalità)
@@ -51,6 +51,7 @@ Consiste di due classi:
 UsaConto che contiene il main del programma
 ContoCorrente che descrive gli oggetti che rappresentano i conti
 correnti
+
 ```java
 public class UsaConto {
 public static void main(String[] args) {
@@ -58,8 +59,11 @@ public static void main(String[] args) {
 ContoCorrente cc = new ContoCorrente(1000); // versa 700 euro
 cc.versa(700);
 // fa un po’ di prelievi, controllando prima il saldo
-if (cc.saldo>200) cc.preleva(200); if (cc.saldo>900) cc.preleva(900);
-System.out.println("Saldo finale: " + cc.saldo); }
+if (cc.saldo>200) cc.preleva(200); 
+if (cc.saldo>900) cc.preleva(900);
+System.out.println("Saldo finale: " + cc.saldo);
+ }
+}
 ```                                                                       }
                            
 ## Primo esempio di programmazione con oggetti (2)
@@ -75,7 +79,8 @@ public void versa(double somma) { saldo+=somma;
 }
 // metodo per il prelievo di somme
 public void preleva(double somma) { saldo-=somma;
-} }
+} 
+}
 ```
 
 ## Primo esempio di programmazione con oggetti (3)
@@ -108,7 +113,8 @@ conto1.preleva(700);
 // ...e li versa nel secondo
 conto2.versa(700);
 System.out.println("Saldo primo conto: " + conto1.saldo);
-System.out.println("Saldo secondo conto: " + conto2.saldo); }
+System.out.println("Saldo secondo conto: " + conto2.saldo); 
+}
 }
 ```                                                                     
 ## L’esecuzione di un programma a oggetti (1))
@@ -215,10 +221,11 @@ public static void main(String[] args) {
 ContoCorrente cc = new ContoCorrente(1000); // versa 700 euro
 cc.versa(700);
 // fa un po’ di prelievi, controllando prima il saldo. // posso tenere conto o meno del risultato (true/false) if (!cc.preleva(200)) System.out.println("Fallito"); cc.preleva(900);
-System.out.println("Saldo finale: " + cc.saldo); }
+System.out.println("Saldo finale: " + cc.saldo); 
+}
 }
 ```                                                                  
-OOP Highlights (7)
+## OOP Highlights (7)
 Prima abbiamo aggiunto la stampa dei messaggi per tracciare le operazioni sul conto...
 ma chi vieta all’utilizzatore di questa classe di modificare a mano il saldo?
                               cc.saldo=10000000;
@@ -316,9 +323,10 @@ conto1.preleva(700);
 // ...e li versa nel secondo
 conto2.versa(700);
 System.out.println("Saldo primo conto: " + conto1.ottieniSaldo())
-System.out.println("Saldo secondo conto: " + conto2.ottieniSaldo( }
+System.out.println("Saldo secondo conto: " + conto2.ottieniSaldo() }
 }
-```                                                  ; )
+```
+
 ## Condividere variabili (1)
 Supponiamo ora di voler attribuire ad ogni conto un numero identificativo
 il numero del conto....
@@ -457,7 +465,7 @@ Si pùo comunque usare anche il nome di un oggetto (es. cc.tasso+=0.01)
 La variabile tasso pùo essere usata anche se non esistono oggetti di tipo ContoCorrente
            ContoCorrente.tasso+=0.01;
          
-Metodi statici
+## Metodi statici
 Anche un metodo puo` essere dichiarato static
 Un metodo “statico” pùo accedere solo a variabili “statiche”
 non pùo utilizzare variabili d’istanza (ossia, non static)
@@ -468,7 +476,7 @@ Abbiamo visto esempi di metodi statici nella classe Math Math.random()
     Math.pow()
         public static int somma(int x, int y) { return x+y; }
          .....
- Gestione memoria nella JVM (1)
+## Gestione memoria nella JVM (1)
 Per capire meglio come funzionano classi e oggetti diamo uno sguardo “sotto il cofano” della Java Virtual Machine (JVM)
 La memoria usata dalla JVM è concettualmente divisa in tre parti
 Ambiente delle classi: area di memoria in cui vengono caricate (allocate) tutte le classi che costituiscono il programma
