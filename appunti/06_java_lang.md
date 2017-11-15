@@ -53,7 +53,7 @@ Infatti, l’oggetto out è di tipo PrintStream e viene usato per indicare l’o
 Esiste anche l’oggetto err, anch’esso di tipo PrintStream, che viene usato per segnalare gli errori che avvengono durante l’esecuzione del programma. Solitamente coincide con l’output di cui sopra.
 Infine esiste l’oggetto in che è di tipo InputStream (package System.io di cui parleremo in una delle prossime lezioni), che serve per ricevere il flusso di informazioni dallo standard input. Tipicamente è la tastiera.
 E’ possibile, però, modificare il puntamento di queste tre variabili verso altre fonti di input o di output. Esistono infatti i metodi statici setOut(), setErr() e setIn().
-###METODI
+### METODI
 Dopo aver parlato delle variabili membro della classe System, diamo uno sguardo ai metodi più interessanti.
 
 il metodo arraycopy() permette di copiare il contenuto di un array in un altro.
@@ -85,12 +85,12 @@ System.setProperty("Claudio.cognome", "De Sio");
 
 Un elenco con tutte le properties di sistema è riportato in basso.
 
-###Classe Runtime
+### Classe Runtime
 Questa classe astrae il concetto di runtime (esecuzione) del programma. Non ha costruttori pubblici e una sua istanza si ottiene chiamando il metodo factory getRuntime().
 Caratteristica interessante di questa classe è permette di eseguire comandi del sistema operativo direttamente da Java, come ad esempio exec (di cui esistono più versioni).
 Bisogna tener conto che l’uso della classe Runtime potrebbe compromettere la portabilità delle applicazioni, infatti questa classe dipende fortemente dal sistema operativo.
 
-###Classi wrapper
+### Classi wrapper
 Nella versione 1.5 di Java è stata introdotta una funzionalità davvero comoda che viene chiamata boxing (inscatolamento) che permette ai valori dei tipi primitivi di essere convertiti in oggetti, e viceversa. In particolare:
 l’autoboxing è un casting automatico che permette ai valori dei tipi primitivi di essere convertiti in oggetti
 l’unboxing effettua il casting inverso
@@ -117,7 +117,7 @@ Boolean z = true;
 L’autoboxing permette al developer di non preoccuparsi delle operazioni di conversione.
 Da notare che è grazie all’autoboxing che possiamo inserire i tipi primitivi all’interno delle Collection in maniera totalmente trasparente e senza preoccuparci di convertire i dati.
 
-###Classe Math
+### Classe Math
 Per terminare la nostra trattazione del java.lang, comunque parziale vista l’immensità del package, esaminiamo brevemente la classe java.lang.Math (diversa dalla classe java.math). 
 Questa classe serve per fare calcoli matematici e ha due attributi:
 static double E		E di Eulero

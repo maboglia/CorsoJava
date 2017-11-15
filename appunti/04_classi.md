@@ -1,4 +1,5 @@
-# Introduzione alla Programmazione Orientata agli Oggetti (Object Oriented Programming – OOP)
+# Introduzione alla Programmazione Orientata agli Oggetti 
+## (Object Oriented Programming – OOP)
                       
                  
 ## Programmazione imperativa (1)
@@ -11,9 +12,7 @@ Abbiamo visto come programmare utilizzando i seguenti tipi di dati:
 I programmi fatti fino ad ora consistevano di una sequenza di comandi
 strutture di controllo (cicli, scelte condizionali, ecc...) ed eventualmente metodi ausiliari
 che consentivano di manipolare i dati per calcolare il risultato voluto.
-Questo modo di programmare prende il nome di
-_PROGRAMMAZIONE IMPERATIVA_
-      (nota: imperativa in quanto basata su comandi)
+Questo modo di programmare prende il nome di __PROGRAMMAZIONE IMPERATIVA__, imperativa in quanto basata su comandi
                      
 ## Programmazione imperativa (2)
 Nella programmazione imperativa:
@@ -423,7 +422,11 @@ ContoCorrente conto2 = new ContoCorrente(200); // preleva 700 euro dal primo con
 conto1.preleva(700);
 // ...e li versa nel secondo
 conto2.versa(700);
-System.out.print("Conto " + conto1.ottieniNumero()); System.out.println(" saldo : "+conto1.ottieniSaldo()); System.out.print("Conto " + conto2.ottieniNumero()); System.out.println(" saldo : "+conto2.ottieniSaldo());
+
+System.out.print("Conto " + conto1.ottieniNumero()); 
+System.out.println(" saldo : "+conto1.ottieniSaldo()); 
+System.out.print("Conto " + conto2.ottieniNumero()); 
+System.out.println(" saldo : "+conto2.ottieniSaldo());
 } 
 }
 ```
@@ -529,10 +532,11 @@ Abbiamo visto che una variabile di un tipo primitivo contiene direttamente il va
 La dichirazione della variabile x alloca la memoria necessaria per contenere un int
 Un assegnamento alla variabile x scrive un valore nella memoria precedentemente allocata
 L’assegnamento di x a y copia il contenuto della variabile (il valore)
-La modifica di y non modifica x y = 40;
-          int x;
-                  x = 33;
-                  int y = x;
+La modifica di y non modifica x 
+        y = 40;
+        int x;
+        x = 33;
+        int y = x;
            
 ## Riferimenti (2)
 
