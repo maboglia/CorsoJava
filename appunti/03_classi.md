@@ -1,4 +1,4 @@
-Roadmap
+---
 * 0. Primi passi con Java
 * 1. Buone abitudini
 * 2. Tipi di dati primitivi
@@ -32,14 +32,14 @@ classe pronta all’uso i passi da seguire sono:
 	* La classe è istanziabile o non istanziabile ?
 	* Se è istanziabile , come creo le istanze ?
 	* Quali metodi mi servono e come li uso ?
-Roadmap
+---
 ### 3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
 	* Se è istanziabile , come creo le istanze ?
 	* Quali metodi mi servono e come li uso ?
 
-##Classi e documentazione
+## Classi e documentazione
 * La libreria Java standard è accompagnata da
 documentazione che illustra lo scopo e l’utilizzo di
 ciascuna classe presente
@@ -95,7 +95,7 @@ riservata package seguita dal nome del package
 viene assegnata ad un package “anonimo” che
 contiene, oltre ad essa, tutte le classi senza package
 presenti nella stessa directory
-Roadmap
+---
 ### 3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
@@ -525,7 +525,7 @@ System.out. println(dollaro.
 }
 
 ##. . . ma il risultato sì !
-Roadmap
+---
 ### 3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
@@ -615,7 +615,7 @@ metodi classe
 String metodi classe
 StringBuffer metodi classe
 StringBuffer
-Roadmap
+---
 ### 3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
@@ -835,7 +835,7 @@ Buongiorno
 metodi classe
 String
 Alcune distinzioni
-##a = "b";
+a = "b";
 a
 a è una variabile di tipo String
 Il riferimento ad un oggetto
@@ -849,12 +849,11 @@ a = 'b';
 a è una variabile di tipo char
 Il valore corrispondente
 al singolo carattere b
-viene copiato “dentro” a
+viene copiato “dentro” alla variabile a
 
-##a
-‘b’Alcune distinzioni
 a = ' ';
 a è una variabile di tipo char
+
 Il valore corrispondente
 al singolo carattere spazio
 (invisibile, detto anche blank)
@@ -1051,7 +1050,7 @@ System.out. println(rovescio);
 }
 }
 
-##Roadmap
+##---
 * 3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?

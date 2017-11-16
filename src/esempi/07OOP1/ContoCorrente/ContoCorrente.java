@@ -12,7 +12,7 @@ scrivere un programma che costruisca un conto bancario
 
 	Il programma deve poi creare un altro conto bancario 
 	chiamato contoMamma, 
-	utilizzando il costruttore che inizializza la variabile bilance.
+	utilizzando il costruttore che inizializza la variabile saldo.
 	Su quest’ultimo conto deve essere poi applicato un interesse del 10%, 
 	a seguito del quale viene stampato il saldo.
 
