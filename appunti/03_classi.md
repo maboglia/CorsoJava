@@ -461,14 +461,8 @@ quali può contenere decine di metodi
 * I libri, gli esempi già fatti, i programmatori più
 esperti possono essere indispensabili per
 indirizzare la ricerca
-* In subordine, può essere utile anche la ricerca
-su Internet
-La ricerca del metodo
-### Se nessuno ci indirizza e nemmeno Internet ci
-aiuta si procede per tentativi seguendo
-l’ordine logico:
-– individuare il package
-– individuare la classe
-– individuare il metodo
-* I nomi delle classi e dei metodi ci dovrebbero
-aiutare
+* individuare il package
+* individuare la classe
+* individuare il metodo
+
+
