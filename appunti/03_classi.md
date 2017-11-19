@@ -302,7 +302,7 @@ non static causano errori di compilazione
 grossi errori concettuali (p.e. aggiungendo
 static dove non deve stare)
 
-##String e StringBuilder
+## String e StringBuilder
 * le classi String e StringBuilder del package
 java.lang
 * La classe String ha lo scopo di rappresentare
@@ -318,7 +318,7 @@ modificate dopo essere state costruite
 * tipo nome; oppure
 * tipo nome1,..., nomeN ;
 * String nome;
-* StringBuffer risultato;
+* StringBuilder risultato;
 * Dopo la definizione esiste solo il 
 riferimento, non un oggetto di tipo nome, null, String !
 
