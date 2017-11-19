@@ -6,9 +6,12 @@ Purtroppo le date sono degli oggetti molto complesse da gestire, che assumono fo
 La classe principale per gestire date e orari è Calendar (che ha sostituito la classe deprecata Date). 
 Altre classi utili sono GregorianCalendar, TimeZone e SimpleTimeZone. 
 
-La complessità è aumentata dal fatto che, oltre a queste classi, è molto probabile che serva utilizzarne altre quali DateFormat e SimpleDateFormat, le quali permettono la trasformazione da stringa a data e viceversa.
+La complessità è aumentata dal fatto che, oltre a queste classi, 
+è molto probabile che serva utilizzarne altre quali DateFormat e SimpleDateFormat, 
+le quali permettono la trasformazione da stringa a data e viceversa.
 
-Visto che sarebbe impossibile analizzare tutte le proprietà e tutti i metodi di queste classi, riportiamo una serie di esempi che ci aiuteranno a prendere confidenza con tali classi.
+Visto che sarebbe impossibile analizzare tutte le proprietà e tutti i metodi di queste classi, 
+riportiamo una serie di esempi che ci aiuteranno a prendere confidenza con tali classi.
 
 Nel primo esempio stampiamo semplicemente la data odierna con l’orario attuale.
 ```java

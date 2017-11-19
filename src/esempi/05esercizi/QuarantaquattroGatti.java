@@ -5,7 +5,7 @@ public class QuarantaquattroGatti {
 	public static void main(String[] args) {
 		
 		String gatti = "Quarantaquattrogattiinfilaperseicolrestodidue";
-		
+			   gatti += "Quarantaquattrogattiinfilaperseicolrestodidue";
 		//System.out.println(gatti.length());
 		
 		
