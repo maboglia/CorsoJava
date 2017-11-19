@@ -1,8 +1,4 @@
----
-* 0. Primi passi con Java
-* 1. Buone abitudini
-* 2. Tipi di dati primitivi
-* 3. Uso di classi
+# Classi Java
 
 ## Uso di classi
 * Le classi, in quanto tipi di dato strutturati,
@@ -32,7 +28,7 @@ classe pronta all’uso i passi da seguire sono:
 	* La classe è istanziabile o non istanziabile ?
 	* Se è istanziabile , come creo le istanze ?
 	* Quali metodi mi servono e come li uso ?
----
+
 ### 3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
@@ -95,7 +91,7 @@ riservata package seguita dal nome del package
 viene assegnata ad un package “anonimo” che
 contiene, oltre ad essa, tutte le classi senza package
 presenti nella stessa directory
----
+
 ### 3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
@@ -525,7 +521,7 @@ System.out. println(dollaro.
 }
 
 ##. . . ma il risultato sì !
----
+
 ### 3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
@@ -615,7 +611,7 @@ metodi classe
 String metodi classe
 StringBuffer metodi classe
 StringBuffer
----
+
 ### 3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
@@ -1050,7 +1046,7 @@ System.out. println(rovescio);
 }
 }
 
-##---
+##
 * 3. Uso di classi
 	* Come identificarla ? Dove cercarla ?
 	* La classe è istanziabile o non istanziabile ?
