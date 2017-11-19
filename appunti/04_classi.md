@@ -29,27 +29,26 @@ p+=x;
 ```
                  
 ## Programmazione orientata agli oggetti (1)
-Sebbene sia possibile scrivere programmi interessanti con i tipi di dato visti fino ad ora, spesso i programmi hanno bisogno di manipolare strutture dati che rappresentano più fedelmente le entità del mondo reale.
+* Sebbene sia possibile scrivere programmi interessanti con i tipi di dato visti fino ad ora, spesso i programmi hanno bisogno di manipolare strutture dati che rappresentano più fedelmente le entità del mondo reale.
 Ad esempio, immaginate di dover scrivere programmi per la gestione di...
-Conti bancari: ogni conto bancario ha un proprio saldo, un proprio intestatario, una propria lista di movimenti, ecc...
-Dipendenti: ogni dipendente di un’azienda ha una propria matricola, un proprio stipendio, un proprio orario di lavoro, ecc...
-Parchi macchine: ogni automobile ha la propria targa, il proprio contachilometri, il proprio storico delle manutenzioni, ecc...
-Rettangoli: ogni rettangolo ha la propria base, altezza e posizione nel piano.
-Scrivere un programma di questo tipo usando solo interi, array e strighe pùo diventare abbastanza complicato...
+* Conti bancari: ogni conto bancario ha un proprio saldo, un proprio intestatario, una propria lista di movimenti, ecc...
+* Dipendenti: ogni dipendente di un’azienda ha una propria matricola, un proprio stipendio, un proprio orario di lavoro, ecc...
+* Parchi macchine: ogni automobile ha la propria targa, il proprio contachilometri, il proprio storico delle manutenzioni, ecc...
+* Rettangoli: ogni rettangolo ha la propria base, altezza e posizione nel piano.
+* Scrivere un programma di questo tipo usando solo interi, array e strighe pùo diventare abbastanza complicato...
                          
 ## Programmazione orientata agli oggetti (2)
-Notate che ogni entità del mondo reale (e.g. il conto bancario) prevede un proprio stato interno (e.g. saldo, ecc...) e delle proprie funzionalità (e.g. versamento, prelievo, ecc...)
-Per questo motivo un linguaggio di programmazione __ORIENTATO AGLI OGGETTI__ (tipo Java) fornisce meccanismi per definire nuovi tipi di dato basati sul concetto di classe
-Una classe definisce un insieme di oggetti (conti bancari, dipendenti, automobili, rettangoli, ecc...).
-Un oggetto è una struttura dotata di:
+* ogni entità del mondo reale (e.g. il conto bancario) prevede un proprio stato interno (e.g. saldo, ecc...) e delle proprie funzionalità (e.g. versamento, prelievo, ecc...)
+* Per questo motivo un linguaggio di programmazione __ORIENTATO AGLI OGGETTI__ (tipo Java) fornisce meccanismi per definire nuovi tipi di dato basati sul concetto di classe
+* Una classe definisce un insieme di oggetti (conti bancari, dipendenti, automobili, rettangoli, ecc...).
+* Un oggetto è una struttura dotata di:
 proprie variabili (che rappresentano il suo stato) propri metodi (che realizzano le sue funzionalità)
                         
 ## Primo esempio di programmazione con oggetti (1)
 Scriviamo un programma che usa un conto corrente
 Consiste di due classi:
-UsaConto che contiene il main del programma
-ContoCorrente che descrive gli oggetti che rappresentano i conti
-correnti
+* UsaConto che contiene il main del programma
+* ContoCorrente che descrive gli oggetti che rappresentano i conti correnti
 
 ```java
 public class UsaConto {
@@ -86,18 +85,14 @@ public void preleva(double somma) { saldo-=somma;
 Osservazioni:
 La classe UsaConto non è molto diversa dai programmi che abbiamo scritto fino ad ora...
 In UsaConto:
-I cc.versa() è una invocazione di un metodo, cc.saldo è una lettura di una variabile
-In ContoCorrente:
-I non c’è il main (ce n’e’ uno solo per tutto il programma)
-I c’è una variabile (saldo) che rappresenta lo stato del conto
-I ci sono due metodi (versa() e preleva()) che descrivono le
-funzionalità del conto
-I c’e’ un metodo speciale (ContoCorrente()) che inizializza il conto I il metodo ContoCorrente() è detto costruttore e viene richiamato
-quando si usa il comano new (non prevede tipo di ritorno)
-I i metodi e la variabile sono pubblici (public) quindi possono essere
-usati anche da altre classi (e.g. UsaConto)
-I nei metodi non si usa il modificatore static (capiremo più avanti
-   perch ́e)
+
+* cc.versa() è una invocazione di un metodo, cc.saldo è una lettura di una variabile In ContoCorrente: 
+* non c’è il main (ce n’e’ uno solo per tutto il programma) 
+* c’è una variabile (saldo) che rappresenta lo stato del conto 
+* ci sono due metodi (versa() e preleva()) che descrivono le funzionalità del conto 
+* c’e’ un metodo speciale (ContoCorrente()) che inizializza il conto I il metodo ContoCorrente() è detto costruttore e viene richiamato quando si usa il comano new (non prevede tipo di ritorno) 
+* i metodi e la variabile sono pubblici (public) quindi possono essere usati anche da altre classi (e.g. UsaConto) 
+* nei metodi non si usa il modificatore static (capiremo più avanti perché)
                       
 ## Primo esempio di programmazione con oggetti (4)
 Vediamo ora come gestire più conti correnti
@@ -129,12 +124,12 @@ Un diagramma come questo fa capire che il metodo pagaStipendio() di della classe
                         
 ## OOP e Ingegneria del Software
 La programmazione orientata agli oggetti semplifica la realizzazione di programmi complessi:
-1. Si identificano le varie entità da rappresentare tramite classi e oggetti
-2. Si specificano le variabili e i metodi di ogni classe accessibili dalle
+* 1. Si identificano le varie entità da rappresentare tramite classi e oggetti
+* 2. Si specificano le variabili e i metodi di ogni classe accessibili dalle
 altre classi (ossia l’interfaccia pubblica della classe)
-3. Si implementano le varie classi separatamente, concentrandosi su una
+* 3. Si implementano le varie classi separatamente, concentrandosi su una
 per volta
-4. Le varie classi possono essere implementate da persone diverse indipendentemente
+* 4. Le varie classi possono essere implementate da persone diverse indipendentemente
 La disciplina che si occupa di organizzare questo lavoro è l’Ingegneria del Software
 Definisce notazioni (diagrammi), metodologie e procedure che rendono il processo di sviluppo di software complessi più e ciente e a dabile.
                        
@@ -460,9 +455,10 @@ Ma... supponiamo che il tasso sia lo stesso per tutti i conti correnti.
 oppure (vedremo dopo) che ci siano delle “categorie” di tasso (ad esempio: tasso family e tasso business)
 Per cambiare i tassi di interesse devo prendere un conto corrente per volta e aggiornare la sua variabile tasso
 Anche in questo caso sarebbe più pratico se la variabile tasso fosse condivisa da tutte le classi (quindi static)
+```java        
 // supponendo che contiGestiti sia un array di conti correnti
 for (ContoCorrente cc : contiGestiti) cc.tasso+=0.01;
-                 
+```                 
 ## Variabili statiche (8)
 ```java
 public class ContoCorrente {
@@ -487,8 +483,9 @@ Note:
 Le variabili statiche possono essere riferite usando il nome della classe invece che il nome di un oggetto
 Si pùo comunque usare anche il nome di un oggetto (es. cc.tasso+=0.01)
 La variabile tasso pùo essere usata anche se non esistono oggetti di tipo ContoCorrente
+```java        
            ContoCorrente.tasso+=0.01;
-         
+ ```        
 ## Metodi statici
 Anche un metodo puo` essere dichiarato static
 Un metodo “statico” pùo accedere solo a variabili “statiche”
@@ -497,16 +494,18 @@ non pùo utilizzare variabili d’istanza (ossia, non static)
 Quindi non hanno bisogno di creare oggetti
 Possono essere invocati usando il nome della classe Tipicamente sono metodi che ricevono i parametri ed eseguono qualche calcolo generico su essi
 Abbiamo visto esempi di metodi statici nella classe Math 
+```java        
         Math.random()
         Math.pow()
         public static int somma(int x, int y) { return x+y; }
+````
         
 ## Gestione memoria nella JVM (1)
 Per capire meglio come funzionano classi e oggetti diamo uno sguardo “sotto il cofano” della Java Virtual Machine (JVM)
 La memoria usata dalla JVM è concettualmente divisa in tre parti
-Ambiente delle classi: area di memoria in cui vengono caricate (allocate) tutte le classi che costituiscono il programma
-Stack: area di memoria in cui vengono caricati (allocati) i record di attivazione dei metodi, e quindi tutte le variabili locali
-Heap: area di memoria in cui vengono caricati (allocati) tutti i vari oggetti creati nel programma, man mano che vengono creati.
+* Ambiente delle classi: area di memoria in cui vengono caricate (allocate) tutte le classi che costituiscono il programma
+* Stack: area di memoria in cui vengono caricati (allocati) i record di attivazione dei metodi, e quindi tutte le variabili locali
+* Heap: area di memoria in cui vengono caricati (allocati) tutti i vari oggetti creati nel programma, man mano che vengono creati.
    
 
 ## Nell’ambiente delle classi
@@ -533,25 +532,28 @@ La dichirazione della variabile x alloca la memoria necessaria per contenere un 
 Un assegnamento alla variabile x scrive un valore nella memoria precedentemente allocata
 L’assegnamento di x a y copia il contenuto della variabile (il valore)
 La modifica di y non modifica x 
+```java        
         y = 40;
         int x;
         x = 33;
         int y = x;
-           
+```           
 ## Riferimenti (2)
 
 Una variabile di un tipo classe contiene invece un riferimento a un oggetto La dichirazione della variabile primo di tipo Rettangolo alloca la
 memoria necessaria per contenere un riferimento (inizializzato a null)
 La creazione dell’oggetto primo alloca un nuovo oggetto e assegna un riferimento alla variabile
+```java        
            Rettangolo primo;
                    primo = new Rettangolo(10,30)
-        
+```        
 ## Riferimenti (3)
 L’assegnamento di primo a secondo copia il contenuto della variabile (il riferimento)
 La modifica di secondo modifica l’oggetto riferito anche da primo
+```java        
            Rettangolo secondo = primo;
                    secondo.base = 15;
-        
+```        
 ## Riferimenti (4)
 Lo stesso discorso vale anche quando si passa un oggetto a un metodo come parametro
 Viene passato il riferimento
@@ -563,32 +565,37 @@ Una conseguenza del fatto che le variabili di tipo classe contengono riferimenti
 Infatti oggetto1 == oggetto2 vale true solo se oggetto1 e oggetto2 sono (riferimenti al) lo stesso oggetto.
 Esempio:
 Abbiamo che:
+```java
         Rettangolo r1 = new Rettangolo(10,12); 
         Rettangolo r2 = r1;
         Rettangolo r3 = new Rettangolo(10,12);
         System.out.println(r1==r2); // stampa true 
         System.out.println(r1==r3); // stampa false
-             
+```             
 ## Riferimenti (6)
 Una soluzione a questo problema pùo essere il metodo equals.
 Tutti gli oggetti (capiremo perchè) dispongono di alcuni metodi di base
 Uno di questi è equals, e permette di confrontare due oggetti Lo abbiamo visto nelle stringhe
   Nelle classi più comuni della Libreria Standard di Java, il metodo equals è implementato in modo da confrontare una per una tutte le variabili interne di una coppia di oggetti
 Anche nelle proprie classi si pùo implementare tale metodo (vedremo...)
+```java
         s1.equals(s2);
-         
+```         
 ## Garbage collection (1)
 Un’altra conseguenza del fatto che le operazioni (lettura, assegnamento, copia, ...) su variabili di tipo classe lavorino su riferimenti è che si possono ottenere oggetti orfani (privi di riferimenti).
 Ad esempio:
 supponiamo di creare due oggetti di tipo Rettangolo
-          Rettangolo primo = new Rettangolo(10,30); Rettangolo secondo = new Rettangolo(20,50);
-             
+```java
+          Rettangolo primo = new Rettangolo(10,30); 
+          Rettangolo secondo = new Rettangolo(20,50);
+```             
 ## Garbage collection (2)
 ora assegniamo secondo a primo
 come è possibile accedere al vecchio valore di primo (il rettangolo di dimensioni 10 e 30) ???
 Il vecchio oggetto è rimasto orfano... (nessun riferimento ad esso)
+```java
             Rettangolo primo = secondo;
-         
+```         
 ## Garbage collection (3)
 Il vecchio oggetto non è più utilizzabile!!! (è garbage, spazzatura)
 Il linguaggio Java (come molti linguaggi moderni) prevede un meccanismo di rimozione degli oggetti privi di riferimenti detto Garbage Collector
