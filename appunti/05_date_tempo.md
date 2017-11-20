@@ -1,4 +1,4 @@
-#Date e orari
+# Date e orari
 
 Sicuramente una delle problematiche ricorrenti di un programmatore è la manipolazione delle date e delle ore. 
 Purtroppo le date sono degli oggetti molto complesse da gestire, che assumono forme diverse a seconda del luogo geografico in cui ci troviamo.
@@ -36,7 +36,7 @@ Col prossimo esempio vediamo come stampare la data odierna usando la classe desc
 ```java
 
 GregorianCalendar calendario = new GregorianCalendar();
-SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy – HH:mm:ss);
+SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy – HH:mm:ss");
 System.out.println(sdf.format(calendario.getTime()));
 
 Il costruttore della classe SimpleDateFormat prende in ingresso una stringa che rappresenta il formato della data che vogliamo stampare. 
