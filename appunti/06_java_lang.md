@@ -1,41 +1,59 @@
 # Package java.lang
-Il package java.lang è il package più importante dell’API di Java, in quanto contiene moltissime classi e interfacce fondamentali per la programmazione Java, tanto che questo package viene importato in automatico in tutti i programmi.
-Oltre alle classe Thread e all’interfaccia Runnable di cui abbiamo parlato nella lezione precedente, questo package contiene classi che già abbiamo utilizzato come la classe String, la Object e la System.
-Ora andremo ad introdurre le classi più utilizzate e famose, in modo tale da avere una visione di insieme del package.
+* Il package java.lang è il package più importante dell’API di Java, in quanto contiene moltissime classi e interfacce fondamentali per la programmazione Java, tanto che questo package viene importato in automatico in tutti i programmi.
+* Oltre alle classe Thread e all’interfaccia Runnable di cui abbiamo parlato nella lezione precedente, questo package contiene classi che già abbiamo utilizzato come la classe String, la Object e la System.
+* Ora andremo ad introdurre le classi più utilizzate e famose, in modo tale da avere una visione di insieme del package.
 
 ## Classe String
-Le stringhe in Java sono oggetti. 
-La particolarità di questa classe è quella di essere l’unica classe che è possibile istanziare come se fosse un tipo di dato primitivo.
-Vediamo i metodi più importanti di questa classe:
+* Le stringhe in Java sono oggetti. 
+* La particolarità di questa classe è quella di essere l’unica classe che è possibile istanziare come se fosse un tipo di dato primitivo.
+
 	
-*	int compareTo(String other)
+```java
+int compareTo(String other)
+```
 	Esegue una comparazione lessicale. Ritorna un intero:
 	< 0 se la stringa corrente è minore della stringa other
 	= 0 se le due stringhe sono identiche
 	> 0 se la stringa corrente è maggiore di other
 	
-*	int indexOf(int ch)
+```java
+int indexOf(int ch)
+```
 	Restituisce l’indice del carattere specificato
 
-*	int lastIndexOf(int ch)
+```java
+int lastIndexOf(int ch)
+```
 	E’ come indexOf() ma viene restituito l’indice dell’ultima occorrenza trovata
 
-*	int length()
+```java
+int length()
+```
 	Restituisce il numero di caratteri di cui è costituita la stringa corrente
 
-*	String replace(char oldChar, char newChar)
+```java
+String replace(char oldChar, char newChar)
+```
 	Restituisce una nuova stringa, dove tutte le occorrenze di oldChar sono rimpiazzate con newChar
 
-*	String substring(int startIndex)
+```java
+String substring(int startIndex)
+```
 	Restituisce una sottostringa della stringa corrente, composta dai caratteri che partono dall’indice startIndex alla fine
 
-*	String substring(int startIndex, int number)
+```java
+String substring(int startIndex, int number)
+```
 	Restituisce una sottostringa della stringa corrente, composta dal numero number di caratteri che partono dall’indice startIndex
 
-*	String toLowerCase()
+```java
+String toLowerCase()
+```
 	Restituisce una nuova stringa equivalente a quella corrente ma con tutti i caratteri minuscoli
 
-*	String toUpperCase()
+```java
+String toUpperCase()
+```
 	Restituisce una nuova stringa equivalente a quella corrente ma con tutti i caratteri maiuscoli
 
 ## Classe System
@@ -44,9 +62,14 @@ Tutto ciò che esiste nella classe System è dichiarato statico.
 
 ### VARIABILI
 Iniziamo subito esaminando tre attributi statici, che rappresentano i flussi (stream) di informazioni scambiati con la console (standard input, standard output, standard error):
-*	static PrintStream out
-*	static PrintStream err
-*	static InputStream in
+```java
+
+static PrintStream out
+
+static PrintStream err
+
+static InputStream in
+```
 
 * Ciascuno di questi tre attributi è un oggetto e sfrutta i metodi della classe relativa.
 * Ad esempio, nelle precedenti lezioni, abbiamo spesso utilizzato il metodo println() della classe PrintStream invocandolo sull’oggetto statico out della classe System.
