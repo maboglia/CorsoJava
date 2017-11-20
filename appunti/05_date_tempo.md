@@ -1,4 +1,4 @@
-# Date e orari
+#Date e orari
 
 Sicuramente una delle problematiche ricorrenti di un programmatore è la manipolazione delle date e delle ore. 
 Purtroppo le date sono degli oggetti molto complesse da gestire, che assumono forme diverse a seconda del luogo geografico in cui ci troviamo.
@@ -33,18 +33,20 @@ Con il metodo get(), ereditato da Calendar, è possibile trarre tutte le informa
 
 Java ha messo a disposizione la classe SimpleDateFormat che permette di trattare le date nel formato più adatto alla nostra esigenza.
 Col prossimo esempio vediamo come stampare la data odierna usando la classe descritta.
+
 ```java
 
 GregorianCalendar calendario = new GregorianCalendar();
 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy – HH:mm:ss");
 System.out.println(sdf.format(calendario.getTime()));
+```
 
-Il costruttore della classe SimpleDateFormat prende in ingresso una stringa che rappresenta il formato della data che vogliamo stampare. 
-Il metodo getTime() della classe GregorianCalendar restituisce un’istanza di Date. 
-Il metodo format() della classe SimpleDateFormat, che restituisce in ingresso una Date, restituisce una stringa che corrisponde al formato che abbiamo impostato.
-E’ possibile sfruttare la classe SimpleDateFormat anche per ottenere un’istanza della classe Calendar.
-
-SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy – HH:mm:ss);
+* Il costruttore della classe SimpleDateFormat prende in ingresso una stringa che rappresenta il formato della data che vogliamo stampare. 
+* Il metodo getTime() della classe GregorianCalendar restituisce un’istanza di Date. 
+* Il metodo format() della classe SimpleDateFormat, che restituisce in ingresso una Date, restituisce una stringa che corrisponde al formato che abbiamo impostato.
+* E’ possibile sfruttare la classe SimpleDateFormat anche per ottenere un’istanza della classe Calendar.
+```java
+SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy – HH:mm:ss");
 String miaData = "15/04/1988";
 GregorianCalendar calendario = new GregorianCalendar();
 try {
@@ -72,7 +74,7 @@ try {
 } catch(ParseException exc) {
 	exc.printStackTrace();
 }
-``
+```
 Volendo confrontare due date possiamo utilizzare i metodi after(), before() e equals() presenti nella classe Date.
 ```java
 GregorianCalendar c1 = 
@@ -82,8 +84,10 @@ new gregorianCalendar(2013, GregorianCalendar.FEBRUARY, 05);
 
 Date data1 = c1.getTime();
 Date data2 = c2.getTime();
-``
+```
 Il metodo:
+```java
 data1.after(data2) 	restituirà false
 data1.equals(data2) 	restituirà false
 data1.before(data2)	restituirà true
+```
