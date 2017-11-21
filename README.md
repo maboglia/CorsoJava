@@ -1,6 +1,6 @@
 # TSS2018
 ## Corso Tecnico Sviluppo Software
-
+![Java](/images/programming-languages.jpg)
 ## Settimana 1 
 #### Counter: OOP/java 0
 
