@@ -25,7 +25,7 @@ microprogettazione Corso OOP 2017-2018
     * Pre/post incremento e concatenazione stringhe
     * Variabili locali
     * Metodi
-    * Il metodo Main ed i sottoprogrammi
+    * Il metodo main() ed i sottoprogrammi
     * Metodi di classe: La parola chiave Static
     * Passaggio dei parametri per riferimento e per valore
     * Modificatori
