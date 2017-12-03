@@ -8,6 +8,7 @@
 	Introduzione al corso di programmazione 
 
 
+![Java](/images/Competitive-Programming-1.jpg)
 	Algoritmi e strutture dati 
 	esempi algoritmi
 
@@ -19,9 +20,6 @@
 ## Settimana 2 
 #### Counter: OOP/java
 
-
-
-	Javascript introduzione, variabili e tipi
 
 
 
@@ -153,13 +151,14 @@ Esercizi e primo test di  verifica
 	* classi, 
 	* struttura delle classi, 
 	* progettazione delle classi in UML, 
-	* stato interno, 
+	* stato interno
 		* metodi costruttori, overloading
- 		* metodi getter e setter, 
+ 		* metodi getter e setter
 	*	incapsulamento, 
 	* overload dei costruttori 
 
-	* @override toString() (solo in caso di extends)
+	* override - (solo in caso di extends)
+	* @override toString() 
 
 	* esercizi metodi ausiliari
 
@@ -167,11 +166,6 @@ Esercizi e primo test di  verifica
 * java  (2h java)
 	*	correzione esercizi metodi ausiliari 
 	* 	Test java base
-
-* javascript
-	*	javascript funzionale
-	*	oggetti javascript
-	*	primo JSON short bio studente
 	
 esercizi java sugli array
 
@@ -204,7 +198,7 @@ gestione della memoria in Java
 
 * tipo di utilizzo classe, creo oggetto, attraverso l'oggetto mediante l'opertore dot (.) accedo ai suoi metodi e variabili 
 
-##Esercizi sul Flusso di lavoro del programma 
+## Esercizi sul Flusso di lavoro del programma 
 GESTIONE DEL FLUSSO DI ESECUZIONE 
 COSTRUTTI DI PROGRAMMAZIONE SEMPLICI 
 Il costrutto if 
@@ -215,60 +209,36 @@ Il costrutto do
 Cicli for migliorato 
 Il costrutto switch
 
-##progetto conto corrente
-*contocorrente
-*   * v1
-*       * CompoundInterest.java
-*       * ContoCorrente.java
-*       * ContoTester.java
+## progetto conto corrente
+* contocorrente
+	* CompoundInterest
+	* ContoCorrente
+	* ContoTester
 
-##progetto agenda
-*agenda
-*   * Agenda2.java
-*   * Agenda.java
-*   * Appuntamento.java
-*   * ProvaAgenda2.java
-*   * ProvaAgenda.java
+## progetto agenda
+* Appuntamento
+* Agenda
+* ProvaAgenda
+* Agenda2
+* ProvaAgenda2
 
 ##progetto aula.v3
-*   * v3
-*       * Registro.java
-*       * Studente.java
-*       * StudenteTester.java
+* Registro
+* Studente
+* StudenteTester
 
 
 * relazioni tra classi: uso, aggregazione, teoria delle classi 
 
 
-* esercitazione luoghi e figure geometriche
- geometria
-    * GeometriaTest.class
-    * NuovaGeometria.class
-    * Punto.class
-    * Quadrato.class
-    * Rettangolo.class
-    * Segmento.class
-    * Triangolo.class
-
-
-
-.
-gioco matematico 01 - rock, scissors, paper
-    * 02RockScissorsPaper
-* css
-* style.css
-* index.html
-* js
-    *        * script.js
-    * masterJS
-* css
-* style.css
-* index.html
-* js
-    *        * script.js
-
-
-
+* esercitazione luoghi e figure geometriche geometria
+	* GeometriaTest.class
+	* NuovaGeometria.class
+	* Punto.class
+	* Quadrato.class
+	* Rettangolo.class
+	* Segmento.class
+	* Triangolo.class
 
 
 ### codice week5
@@ -288,10 +258,6 @@ gioco matematico 01 - rock, scissors, paper
 #### Counter: OOP/java
 
 *	Ereditarietà in Java
-
-
-*	esercizi javascript per la gestione degli eventi
-
 
 ###VENERDì 25/11/2016 9-12 3h Java
 
@@ -333,15 +299,6 @@ gioco matematico 01 - rock, scissors, paper
 			ereditarietà, 
 			late binding
 
-*	Javascript
-
-		esercizi base
-			operatori, booleans, logici
-		gioco
-			trenino che si muove, collisione
-				
-
-
 
 
 
@@ -367,22 +324,6 @@ gioco matematico 01 - rock, scissors, paper
 
 * Esercitazione 02 Java - scritta - OCA Java 1
 
-##javascript: 
-array, stringhe (metodi sulle stringhe)
-* esercizi: 
-	todo-list, 
-	slideshow banksy, 
-	lampadina accendi-spegni
-
-
-	proviamo un altro IDE: IntelliJIdea
-	gestione delle eccezioni, vd cartella appunti
-	blocco try-catch-finally
-	le parole chiave throws e throw
-	esercitazione-homework progetto negozio alimentari, come da specifiche
-	
-
-
 
 
 ### codice week8
@@ -406,10 +347,6 @@ array, stringhe (metodi sulle stringhe)
 	esempio classificazione animali, mammiferi
 	esercitazione negozio alimentari con eccezioni, interfacce e hashmap
 	restituzione esercitazione 2 java
-	
-	Javascript
-	array e oggetti
-	DOM
 
 
 
@@ -418,8 +355,6 @@ array, stringhe (metodi sulle stringhe)
 	Vector, HashSet e TreeSet, lettura file canto 1 inferno
 
 ###VENERDì 16/12/2016 9-12 3h Javascript
-	JavaScript
-	Array e Oggetti in JS
 	
 
 
@@ -438,9 +373,6 @@ array, stringhe (metodi sulle stringhe)
 	info sistema > scrivi su file
 	esercizi per le vacanze
 	
-
-	Oggetti in Javascript
-	esempi js 22-27
 	
 
 
@@ -456,16 +388,6 @@ array, stringhe (metodi sulle stringhe)
 	gestire le collezioni
 	evoluzione esempio aula, con collezioni e scrittura su file
 	
-	javascript: 
-	ideazione e sviluppo pagina web le ricette del mondo per scambio con allievi corso cucina
-
-
-	javascript: 
-	ideazione e sviluppo pagina web le ricette del mondo per scambio con allievi corso cucina
-	
-
-
-	Javascript: ricette del mondo
 	Java: Progetti Archivio CD
 
 
@@ -489,7 +411,6 @@ array, stringhe (metodi sulle stringhe)
 	
  
 
-	Javascript: ricette del mondo
 	
 ###VENERDì 20/01/2017  9-12     1h javascript 2h Java
 	
@@ -577,11 +498,9 @@ array, stringhe (metodi sulle stringhe)
 
 
 	JSP 
-	Javascript calcolatrice
 
 
 	
-	Javascript calcolatrice
 
 ###VENERDì 17/02/2017 3H Java
 
@@ -596,7 +515,7 @@ array, stringhe (metodi sulle stringhe)
 
 
 	java: Jsp standard action
-	jquery: effetti, eventi
+
 	progetto MVC MyShop
 	
 
@@ -607,11 +526,6 @@ array, stringhe (metodi sulle stringhe)
 
 
 	
-	jquery
-		hide
-		fade
-		slide
-
 	jsp
 		servlet dispatcher
 		mvc myshop
@@ -674,23 +588,13 @@ array, stringhe (metodi sulle stringhe)
 			singleton	
 			decorator
 
-	Javascript
-		localstorage
-		sessionstorage
-		drag & drop
-		canvas
-		nodejs, npm
-		AngularJs vs Angular2 
-		hello Angular 2
 
 
 	Progetto MyShop clientside+serverside
 [Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/tree/master/CorsoJava2017/progetti)
 
 
-	angularjs
 ###VENERDì 17/03/2017 2H Javascript
-	angularjs
 
 
 
@@ -703,7 +607,6 @@ array, stringhe (metodi sulle stringhe)
 		Java NIO
 	
 	Javascript
-		Angular2
 		
 	MVC
 		JSP + Database
@@ -726,17 +629,8 @@ array, stringhe (metodi sulle stringhe)
 	MVC
 		JSP + Database progetto listaSpesa	
 
-	JS: Angular components, routing
-
-
-
-	JS: Angular components, routing
-	
-
-
-	JS: Angular services
-	JS: Html5 Canvas
-	
-
 	
 # Fine corso -- STAGE	
+
+
+

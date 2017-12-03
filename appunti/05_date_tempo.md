@@ -1,19 +1,20 @@
-#Date e orari
+# Date e orari
 
-Sicuramente una delle problematiche ricorrenti di un programmatore è la manipolazione delle date e delle ore. 
-Purtroppo le date sono degli oggetti molto complesse da gestire, che assumono forme diverse a seconda del luogo geografico in cui ci troviamo.
+
+Le date sono degli oggetti molto complesse da gestire: assumono forme diverse a seconda del luogo geografico in cui ci troviamo.
+La  manipolazione delle date e delle ore è una delle attività ricorrenti di un programmatore. 
 
 La classe principale per gestire date e orari è Calendar (che ha sostituito la classe deprecata Date). 
+
 Altre classi utili sono GregorianCalendar, TimeZone e SimpleTimeZone. 
+Inoltre sono disponibili le più moderne LocalDate e LocalDateTime.
 
-La complessità è aumentata dal fatto che, oltre a queste classi, 
-è molto probabile che serva utilizzarne altre quali DateFormat e SimpleDateFormat, 
-le quali permettono la trasformazione da stringa a data e viceversa.
+Oltre a queste classi, è molto probabile che serva utilizzarne altre quali: DateFormat e SimpleDateFormat, 
+che permettono la trasformazione da stringa a data e viceversa.
 
-Visto che sarebbe impossibile analizzare tutte le proprietà e tutti i metodi di queste classi, 
-riportiamo una serie di esempi che ci aiuteranno a prendere confidenza con tali classi.
+## Primo esempio 
+stampiamo semplicemente la data odierna con l’orario attuale.
 
-Nel primo esempio stampiamo semplicemente la data odierna con l’orario attuale.
 ```java
 GregorianCalendar calendario = new GregorianCalendar();
 int anno = calendario.get(Calendar.YEAR);
@@ -27,12 +28,14 @@ System.out.println(giorno + "/" + mese + "/" + anno);
 System.out.println(ore + ":" + minuti + ":" + secondi);
 ```
 
-La classe GregorianCalendar è molto semplice da utilizzare. 
+La classe __GregorianCalendar__ è molto semplice da utilizzare. 
 Sono disponibili diversi costruttori. Il costruttore senza parametri inizializza l’oggetto con la data e l’ora attuale. 
 Con il metodo get(), ereditato da Calendar, è possibile trarre tutte le informazioni disponibili.
 
 Java ha messo a disposizione la classe SimpleDateFormat che permette di trattare le date nel formato più adatto alla nostra esigenza.
-Col prossimo esempio vediamo come stampare la data odierna usando la classe descritta.
+
+## Secondo esempio 
+come stampare la data odierna usando __SimpleDateFormat__ per formattare l'output.
 
 ```java
 
@@ -45,6 +48,7 @@ System.out.println(sdf.format(calendario.getTime()));
 * Il metodo getTime() della classe GregorianCalendar restituisce un’istanza di Date. 
 * Il metodo format() della classe SimpleDateFormat, che restituisce in ingresso una Date, restituisce una stringa che corrisponde al formato che abbiamo impostato.
 * E’ possibile sfruttare la classe SimpleDateFormat anche per ottenere un’istanza della classe Calendar.
+
 ```java
 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yy – HH:mm:ss");
 String miaData = "15/04/1988";
@@ -56,26 +60,31 @@ try {
 }
 ```
 
-Il metodo parse() della classe SimpleDateFormat riceve in ingresso una stringa e restituisce un oggetto Date.
-Il metodo setTime della classe GregorianCalendar ci permette di impostare la data. 
-Abbiamo utilizzato il blocco try-catch perché questa operazione potrebbe sollevare una ParseException, nel caso in cui una stringa passata al metodo parse(), non rappresenti una data convertibile.
+Il metodo __parse()__ della classe SimpleDateFormat riceve in ingresso una stringa e restituisce un oggetto Date.
+Il metodo __setTime()__ della classe GregorianCalendar ci permette di impostare la data.
+
+Bisogna utilizzare un blocco try-catch perché potrebbe essere sollevata una __ParseException__, nel caso in cui una stringa passata al metodo parse(), non rappresenti una data convertibile.
 
 
-Come ultimo esempio vediamo come convertire una data dal formato americano in quello italiano utilizzando le tecniche analizzate in precedenza.
+## Terzo esempio 
+come convertire una data dal formato americano in quello italiano utilizzando le tecniche analizzate in precedenza.
+
 ```java
 SimpleDateFormat formatIT = new SimpleDateFormat("dd/MM/yyyy"); 
 SimpleDateFormat formatUS = new SimpleDateFormat("yyyy/MM/dd");
 
 Date dataIT;
 try {
-	dataIT = formatUS.parse("2007/04/05");
+	dataIT = formatUS.parse("2017/12/25");
 	String dataUS = formatIT.format(dataIT);
 	System.out.println(dataUS);
 } catch(ParseException exc) {
 	exc.printStackTrace();
 }
 ```
-Volendo confrontare due date possiamo utilizzare i metodi after(), before() e equals() presenti nella classe Date.
+
+Volendo confrontare due date possiamo utilizzare i metodi __after()__, __before()__ e __equals()__ presenti nella classe Date.
+
 ```java
 GregorianCalendar c1 = 
 new gregorianCalendar(2013, GregorianCalendar.FEBRUARY, 05);
@@ -85,7 +94,9 @@ new gregorianCalendar(2013, GregorianCalendar.FEBRUARY, 05);
 Date data1 = c1.getTime();
 Date data2 = c2.getTime();
 ```
+
 Il metodo:
+
 ```java
 data1.after(data2) 	restituirà false
 data1.equals(data2) 	restituirà false
