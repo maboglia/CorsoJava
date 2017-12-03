@@ -1,49 +1,6 @@
-# Introduzione alla Programmazione Orientata agli Oggetti 
-## (Object Oriented Programming – OOP)
-                      
-                 
-## Programmazione imperativa (1)
-Abbiamo visto come programmare utilizzando i seguenti tipi di dati:
+# OOP: esempio del conto corrente 
+___(C. Horstmann)___ 
 
-* Tipi di dato primitivi (int, double, char, boolean, ecc...) 
-* Le stringhe
-* Gli array
-
-I programmi fatti fino ad ora consistevano di una sequenza di comandi
-strutture di controllo (cicli, scelte condizionali, ecc...) ed eventualmente metodi ausiliari
-che consentivano di manipolare i dati per calcolare il risultato voluto.
-Questo modo di programmare prende il nome di __PROGRAMMAZIONE IMPERATIVA__, imperativa in quanto basata su comandi
-                     
-## Programmazione imperativa (2)
-Nella programmazione imperativa:
-Un programma prevede uno stato globale costituito dai valori delle sue variabili
-I comandi del programma modificano lo stato fino a raggiungere uno stato finale (che include il risultato)
-                        
-## Programmazione imperativa (3)
-Ad esempio, il seguente programma (che calcola il prodotto di x e y):
-ha la seguente dinamica:
-```java
-int x=10, y=3, p=0;
-for (int i=0; i<y; i++)
-p+=x;
-```
-                 
-## Programmazione orientata agli oggetti (1)
-* Sebbene sia possibile scrivere programmi interessanti con i tipi di dato visti fino ad ora, spesso i programmi hanno bisogno di manipolare strutture dati che rappresentano più fedelmente le entità del mondo reale.
-Ad esempio, immaginate di dover scrivere programmi per la gestione di...
-* Conti bancari: ogni conto bancario ha un proprio saldo, un proprio intestatario, una propria lista di movimenti, ecc...
-* Dipendenti: ogni dipendente di un’azienda ha una propria matricola, un proprio stipendio, un proprio orario di lavoro, ecc...
-* Parchi macchine: ogni automobile ha la propria targa, il proprio contachilometri, il proprio storico delle manutenzioni, ecc...
-* Rettangoli: ogni rettangolo ha la propria base, altezza e posizione nel piano.
-* Scrivere un programma di questo tipo usando solo interi, array e strighe pùo diventare abbastanza complicato...
-                         
-## Programmazione orientata agli oggetti (2)
-* ogni entità del mondo reale (e.g. il conto bancario) prevede un proprio stato interno (e.g. saldo, ecc...) e delle proprie funzionalità (e.g. versamento, prelievo, ecc...)
-* Per questo motivo un linguaggio di programmazione __ORIENTATO AGLI OGGETTI__ (tipo Java) fornisce meccanismi per definire nuovi tipi di dato basati sul concetto di classe
-* Una classe definisce un insieme di oggetti (conti bancari, dipendenti, automobili, rettangoli, ecc...).
-* Un oggetto è una struttura dotata di:
-proprie variabili (che rappresentano il suo stato) propri metodi (che realizzano le sue funzionalità)
-                        
 ## Primo esempio di programmazione con oggetti (1)
 Scriviamo un programma che usa un conto corrente
 Consiste di due classi:
@@ -133,9 +90,6 @@ per volta
 La disciplina che si occupa di organizzare questo lavoro è l’Ingegneria del Software
 Definisce notazioni (diagrammi), metodologie e procedure che rendono il processo di sviluppo di software complessi più e ciente e a dabile.
                        
-Sommario
-1 Programmazione Orientata agli Oggetti: concetti
-2 Programmazione Orientata agli Oggetti: highlights
                       
 ## OOP Highlights (1)
 Riprendiamo l’esempio del conto corrente:
@@ -499,106 +453,4 @@ Abbiamo visto esempi di metodi statici nella classe Math
         Math.pow()
         public static int somma(int x, int y) { return x+y; }
 ````
-        
-## Gestione memoria nella JVM (1)
-Per capire meglio come funzionano classi e oggetti diamo uno sguardo “sotto il cofano” della Java Virtual Machine (JVM)
-La memoria usata dalla JVM è concettualmente divisa in tre parti
-* Ambiente delle classi: area di memoria in cui vengono caricate (allocate) tutte le classi che costituiscono il programma
-* Stack: area di memoria in cui vengono caricati (allocati) i record di attivazione dei metodi, e quindi tutte le variabili locali
-* Heap: area di memoria in cui vengono caricati (allocati) tutti i vari oggetti creati nel programma, man mano che vengono creati.
-   
-
-## Nell’ambiente delle classi
-
-* vengono memorizzati il codice dei metodi e le variabili statiche di tutte le classi del programma
-* sono le parti condivise dai vari oggetti della classe
-* le variabili statiche sono utilizzabili anche in assenza di oggetti
-
-## Nello stack
-
-* vengono memorizzate le variabili locali dei metodi in esecuzione
-* per le variabili di tipi primitivi viene memorizzato il valore (esempio: somma)
-* per le variabili di tipo classe viene memorizzato un riferimento
-(indirizzo di memoria di un oggetto) 
-
-## Nell’heap
-* per ogni oggetto creato vengono memorizzate le variabili d’istanza (ossia, le variabili non statiche)
-* ogni oggetto nell’heap contiene anche il nome della classe di appartenenza
-   
-## Riferimenti (1)
-I riferimenti meritano un approfondimento.
-Abbiamo visto che una variabile di un tipo primitivo contiene direttamente il valore del dato
-La dichirazione della variabile x alloca la memoria necessaria per contenere un int
-Un assegnamento alla variabile x scrive un valore nella memoria precedentemente allocata
-L’assegnamento di x a y copia il contenuto della variabile (il valore)
-La modifica di y non modifica x 
-```java        
-        y = 40;
-        int x;
-        x = 33;
-        int y = x;
-```           
-## Riferimenti (2)
-
-Una variabile di un tipo classe contiene invece un riferimento a un oggetto La dichirazione della variabile primo di tipo Rettangolo alloca la
-memoria necessaria per contenere un riferimento (inizializzato a null)
-La creazione dell’oggetto primo alloca un nuovo oggetto e assegna un riferimento alla variabile
-```java        
-           Rettangolo primo;
-                   primo = new Rettangolo(10,30)
-```        
-## Riferimenti (3)
-L’assegnamento di primo a secondo copia il contenuto della variabile (il riferimento)
-La modifica di secondo modifica l’oggetto riferito anche da primo
-```java        
-           Rettangolo secondo = primo;
-                   secondo.base = 15;
-```        
-## Riferimenti (4)
-Lo stesso discorso vale anche quando si passa un oggetto a un metodo come parametro
-Viene passato il riferimento
-Ogni modifica fatta all’oggetto all’interno del metodo non viene persa alla quando il metodo termina (il chiamante vedrà l’oggetto modificato)
-Lo stesso discorso vale per gli array (gli array sono in realtà oggetti!)
-   
-## Riferimenti (5)
-Una conseguenza del fatto che le variabili di tipo classe contengono riferimenti, è che l’opearatore di confronto == non si comporta (con gli oggetti) come uno si potrebbe aspettare...
-Infatti oggetto1 == oggetto2 vale true solo se oggetto1 e oggetto2 sono (riferimenti al) lo stesso oggetto.
-Esempio:
-Abbiamo che:
-```java
-        Rettangolo r1 = new Rettangolo(10,12); 
-        Rettangolo r2 = r1;
-        Rettangolo r3 = new Rettangolo(10,12);
-        System.out.println(r1==r2); // stampa true 
-        System.out.println(r1==r3); // stampa false
-```             
-## Riferimenti (6)
-Una soluzione a questo problema pùo essere il metodo equals.
-Tutti gli oggetti (capiremo perchè) dispongono di alcuni metodi di base
-Uno di questi è equals, e permette di confrontare due oggetti Lo abbiamo visto nelle stringhe
-  Nelle classi più comuni della Libreria Standard di Java, il metodo equals è implementato in modo da confrontare una per una tutte le variabili interne di una coppia di oggetti
-Anche nelle proprie classi si pùo implementare tale metodo (vedremo...)
-```java
-        s1.equals(s2);
-```         
-## Garbage collection (1)
-Un’altra conseguenza del fatto che le operazioni (lettura, assegnamento, copia, ...) su variabili di tipo classe lavorino su riferimenti è che si possono ottenere oggetti orfani (privi di riferimenti).
-Ad esempio:
-supponiamo di creare due oggetti di tipo Rettangolo
-```java
-          Rettangolo primo = new Rettangolo(10,30); 
-          Rettangolo secondo = new Rettangolo(20,50);
-```             
-## Garbage collection (2)
-ora assegniamo secondo a primo
-come è possibile accedere al vecchio valore di primo (il rettangolo di dimensioni 10 e 30) ???
-Il vecchio oggetto è rimasto orfano... (nessun riferimento ad esso)
-```java
-            Rettangolo primo = secondo;
-```         
-## Garbage collection (3)
-Il vecchio oggetto non è più utilizzabile!!! (è garbage, spazzatura)
-Il linguaggio Java (come molti linguaggi moderni) prevede un meccanismo di rimozione degli oggetti privi di riferimenti detto Garbage Collector
-Il garbage collector viene eseguito periodicamente dalla Java Virtual Machine. Interrompe per un attimo l’esecuzione del programma e pulisce la memoria dagli oggetti privi di riferimenti
-    
-
+  

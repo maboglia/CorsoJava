@@ -1,21 +1,20 @@
-#Package java.util	
+# Package java.util	
+___source: Manuale Java 7 - Claudio De Sio Cesari___
 
->source: Manuale Java 7 - Claudio De Sio Cesari
+## Framework Collections	
+* Metodi delle Collection e delle Map	
+* Implementazione di Set e SortedSet	
+* Implementazione di Map e SortedMap	
+* Implementazione di List	
+* Implementazione di Queue	
+* Algoritmi del Java Collections Framework	
+* Collections e Generics	
+* Classe StringTokenizer	
 
-Framework Collections	
-Metodi delle Collection e delle Map	
-Implementazione di Set e SortedSet	
-Implementazione di Map e SortedMap	
-Implementazione di List	
-Implementazione di Queue	
-Algoritmi del Java Collections Framework	
-Collections e Generics	
-Classe StringTokenizer	
-
-###Package java.util
+### Package java.util
 Il package java.util contiene una serie di classi utili come il framework "Collections" per gestire collezioni eterogenee di ogni tipo, il modello a eventi, classi per la gestione facilitata delle date e degli orari, classi per la gestione dell’internazionalizzazione e tante altre utilità come un separatore di stringhe (StringTokenizer), un generatore di numeri casuali ecc.
 
-##Framework Collections
+## Framework Collections
 Nella normale attività di programmazione ci si trova spesso a dover gestire un insieme di dati. 
 
 In Java, le soluzioni per la gestione di un insieme di oggetti sono molteplici e, come sempre, a seconda delle circostanze, bisogna individuare la soluzione migliore da adottare.
@@ -60,7 +59,7 @@ Map è una collezione che associa chiavi ai suoi elementi. Le mappe non possono 
 Essa non è propriamente una Collection poiché non implementa l’interfaccia Collection.
 
 Metodi delle Collection e delle Map
-####COLLECTION
+#### COLLECTION
 I metodi delle Collection sono i seguenti:
 * public boolean add(Object o)
 aggiunge un oggetto alla Collection
@@ -87,7 +86,7 @@ restituisce la collection sottoforma di array
 * public Object[] toArray(Object[] a)
 restituisce la collection sottoforma di array
 
-####MAP
+#### MAP
 I metodi delle Map sono i seguenti:
 * public void clear()
 permette di svuotare la map
@@ -114,102 +113,7 @@ restituisce il numero di elementi presenti nella map
 * public Collection values()
 restituisce la map sottoforma di Collection
 
-####Implementazione di Set e SortedSet
-L’interfaccia Set rappresenta un insieme di elementi senza duplicati, ciò impone la presenza di una tecnica che consenta di distinguere gli oggetti. 
-L’interfaccia Set prevede, tra l’altro, un’interfaccia derivata SortedSet che rappresenta la versione ordinata di Set.
-Un’implementazione di Set è HashSet.
-Un’implementazione di SortedSet è TreeSet.
-Entrambe non ammettono elementi duplicati.
-HashSet risulta più performante di TreeSet in quanto gestisce l’ordinamento.
-####Esempio di HashSet e TreeSet
-
-HashSet | TreeSet
------------- | -------------
-HashSet hash = new HashSet();	|	TreeSet tree = new TreeSet();
-hash.add("c");			|		tree.add("c");
-hash.add("a");			|		tree.add("a");
-hash.add("b");			|		tree.add("b");
-hash.add("b");			|		tree.add("b");
-Iterator it = hash.iterator();	|	Iterator it = tree.iterator();
-while (it.hasNext) {			|	while (it.hasNext()) {
-   System.out.print(it.next());	|	System.out.print(it.next());
-}				|			}
-
-L’output sarà:
-	c a b			|			a b c
-
-Come si può vedere dagli output, l’elemento duplicato (b) non è stato aggiunto e nel caso del TreeSet sono stati anche ordinati.
-
-Per scorrere facilmente le tabelle abbiamo usato un’implementazione dell’interfaccia Iterator, che permette di iterare sugli elementi della collezione.
-
-Dalla versione 6 di Java gli oggetti TreeSet sono "bidirezionali", infatti è possibile anche ottenere un’istanza di Iterator che itera al contrario invocando il metodo descendingIterator().
-
-####Implementazione di Map e SortedMap
-L’interfaccia Map rappresenta un insieme di elementi, ad ognuno dei quali viene associata una chiave univoca. Non sono permessi elementi duplicati e null.
-
-E’ preferibile usare le mappe piuttosto che i set in quanto è possibile ricercare facilmente un oggetto all’interno di una mappa a partire dalla sua chiave univoca ed anche perché è possibile accedere agli oggetti in modo veloce.
-
-Le implementazioni di Map sono HashTable e HashMap.
-Un’implementazione di SortedMap è TreeMap. 
-
-Entrambe non ammettono elementi duplicati.
-HashMap risulta più performante di HashTable, in quanto quest’ultima è sincronizzata di default mentre HashMap non lo è (i metodi di accesso agli oggetti non sono Synchronized)
-HashMap risulta più performante di TreeMap, in quanto quest’ultima gestisce l’ordinamento
-####Esempio di HashTable e HashMap.
-HashTable | HashMap
------------- | -------------
-HashTable hash = new HashTable();	|	HashMap map = new HashMap();
-hash.put("1", "Data attuale");		|	map.put("1", "Data attuale");
-hash.put("2", new Date());			|	map.put("2", new Date());
-hash.put("3", hash);				|	map.put("3", hash);
-int size = hash.size();			|	int size = hash.size();
-for (int i=1; 1<=size; i++) {		|	for (int i=1; 1<=size; i++) {
-   out.print(hash.get(""+i));		   |	out.print(hash.get(""+i));
-}							|	}
-
-E’ possibile aggiungere elementi mediante il metodo put(Object key, Object value) e si recuperano mediante il metodo get(Object key). 
-In particolare, il metodo get() permette un recupero molto performante dell’elemento della collezione, mediante la specifica della chiave.
-
-Vediamo un esempio riguardante l’iterazione sulle mappe.
-```java
-HashMap<Integer, String> map = new HashMap<Integer, String>();
-map.put(1, "Sam");
-map.put(2, "John");
-map.put(3, "Sunny");
-map.put(4, "Linda");
-  
-Iterator<Map.Entry<Integer, String>> it = map.entrySet().iterator();
-while (it.hasNext()) {
-	Map.Entry<Integer, String> entry = it.next();
-	System.out.println("Chiave: " + entry.getKey());
-	System.out.println("Valore: " + entry.getValue());
-}
-```
-
-Per iterare sulle mappe occorre utilizzare, oltre al solito iterator, anche:
-* la classe innestata Map.Entry astrae una coppia di tipo chiave-valore che rappresenta un elemento di una mappa
-* il metodo entrySet() restituisce un insieme ordinato (in base alle chiavi) degli elementi della mappa
-
-####Implementazione di List
-
-L’interfaccia List rappresenta un insieme di elementi. Sono permessi elementi duplicati.
-Gli oggetti vengono memorizzati in locazioni di memoria contigue quindi è possibile accedere a ciascun oggetto molto velocemente mediante il suo indice all’interno della collezione. Naturalmente non è adatta per operazioni di ricerca poiché occorrerebbe scorrere tutta la lista per ricercare un oggetto al suo interno. È possibile scorrere facilmente la lista sia mediante la classe iterator che mediante accesso diretto utilizzando l’indice dell’oggetto.
-
-Le implementazioni di List sono ArrayList e Vector.
-ArrayList ha prestazioni nettamente superiori rispetto a Vector in quanto quest’ultima è sincronizzata di default mentre ArrayList non lo è (i metodi di accesso agli oggetti non sono Synchronized).
-Esempio di ArrayList e Vector.
-ArrayList | Vector
------------- | -------------
-ArrayList lista = new ArrayList();	|Vector vett = new Vector();
-lista.add("abhijit");				|vett.add("abhijit");
-lista.add("smitesh");				|vett.add("smitesh");
-lista.add("melissa");				|vett.add("melissa");
-Iterator it = lista.iterator();		|Iterator it = vett.iterator();
-while (it.hasNext()) {			|while (it.hasNext()) {
-   out.print(it.next());		   	  | out.print(it.next());
-}							|}
-
-##Implementazione di Queue
+## Implementazione di Queue
 L’interfaccia Queue rappresenta un insieme di elementi gestiti mediante FIFO. 
 Questa interfaccia estende Collection definendo nuovi metodi per l’inserimento, la rimozione e l’utilizzo dei dati. Ognuno di questi metodi è presente in due forme:
 la prima lancia un’eccezione se l’operazione fallisce
@@ -230,12 +134,9 @@ while (!coda.isEmpty()) {
 La PriorityQueue è una coda che estrae gli elementi secondo la priorità assegnata.
 
 
-##Algoritmi del Java Collections Framework
+## Algoritmi del Java Collections Framework
 
-Nei paragrafi precedenti abbiamo visto diversi tipi di Collection e alcune semplici implementazioni. 
-Occorre specificare però che in implementazioni più complesse occorre usare metodi che consentano di sfruttare tutte le features offerte dal Collection Framework.
-
-Nello specifico, infatti, esistono classi ed algoritmi aggiuntivi come, ad esempio, quelli di ordinamento che se avessimo usato array o altre strutture avremmo dovuto definire ad-hoc.
+Tra le carateristiche offerte dal Collection Framework esistono classi ed algoritmi come, ad esempio, quelli di ordinamento che se avessimo usato array o altre strutture avremmo dovuto definire ad-hoc.
 Infatti, Collections ha metodi che implementano complicati algoritmi come:
 
 * sort() (ordina)
@@ -243,12 +144,15 @@ Infatti, Collections ha metodi che implementano complicati algoritmi come:
 * max() (restituisce l’elemento massimo)
 * reverse() (inverte l’ordine degli elementi)
 * binarySeach() (ricerca binaria)
-Altri metodi, detti "di convenienza", permettono la creazione di:
-collection immutabili di un numero definito di oggetti identici (metodo ncopies())
-un oggetto singleton, che si può istanziare una sola volta (metodo singleton())
 
-ESEMPIO
-Ora vediamo come è semplice utilizzare gli algoritmi per ordinare una lista.
+Altri metodi, detti "di convenienza", permettono la creazione di:
+* collection immutabili di un numero definito di oggetti identici (metodo ncopies())
+* un oggetto singleton, che si può istanziare una sola volta (metodo singleton())
+
+## ESEMPIO
+
+utilizzare gli algoritmi per ordinare una lista.
+
 ```java
 public static void main(String[] args) {
 	List<Persona> persone = new ArrayList<Persona>();
@@ -281,15 +185,6 @@ private static void print(Collection<Persona> coll) {
 	}
 }
 ```
-Sono stati usati due metodi per ordinare la lista:
-
-Collections.sort(persone) che riceve in input una List di oggetti che implementano l’interfaccia Comparable. 
-Nell’esempio gli elementi vengono ordinati in base all’età
-
-Collections.sort(persone, new CognomeComparator()) che riceve in input una List di oggetti e un’istanza di una classe che implementa l’interfaccia Comparator. 
-Nell’esempio gli elementi vengono ordinati in base al cognome. Naturalmente è possibile creare diversi Comparator che permettono di ordinare la lista in altrettanti modi
-
-Per completezza si riporta anche la classe Persona. 
 ```java
 private String nome;
 private String cognome;
@@ -322,48 +217,12 @@ public int compareTo(Persona p) {
 	else 						return -1;	
 }
 ```
+Sono stati usati due metodi per ordinare la lista:
 
-###Classe StringTokenizer
-Spesso risulta necessario manipolare dei token di testo.
-Una semplice classe che permette di separare i contenuti di una stringa in più parti, chiamate token, è la classe StringTokenizer.
-Questa classe si utilizza solitamente per estrarre le parole di una stringa.
-L’utilizzo di base è estremamente semplice, occorrono:
-una stringa da "navigare", cioè da cui estrarre i token
-un delimitatore, che serve per identificare i token
-Un token è, quindi, la sequenza massima di caratteri consecutivi che non sono delimitatori.
-CREARE OGGETTO STRINGTOKENIZER
-Occorre creare in prima istanza l’oggetto StringTokenizer, usando il costruttore dell’omonima classe. 
-Il costruttore può accettare da 1 a 3 parametri:
-la stringa da cui estrarre i token
-il delimitatore, che può essere:
-esplicito [st2 – st3]
-di default " \t\n\r\f" (notare che il primo delimitatore e uno spazio) [st1]
-un booleano che, se settato a true, considera token anche gli stessi delimitatori
-```java
-StringTokenizer st1 = new StringTokenizer("Stringa da dividere");
-StringTokenizer st2 = new StringTokenizer("Stringa sezionata", ";");
-StringTokenizer st3 = new StringTokenizer("Ciao Mamma", "a", true);
+Collections.sort(persone) che riceve in input una List di oggetti che implementano l’interfaccia Comparable. 
+Nell’esempio gli elementi vengono ordinati in base all’età
 
-Output [st1]
-	Stringa
-	da
-	dividere
-Output [st2]
-	Stringa selezionata
-Output [st3]
-	Ci
-	a
-	o M
-	a
-	mm
-	a
-```	
-Per scandire l’intero testo si può usare un ciclo while con all’interno l’invocazione del metodo hasMoreTokens() che ritorna true se sono presenti altri token, altrimenti false.
-Per stampare il token appena recuperato si può invocare il metodo nextToken() sull’oggetto StringTokenizer.
+Collections.sort(persone, new CognomeComparator()) che riceve in input una List di oggetti e un’istanza di una classe che implementa l’interfaccia Comparator. 
 
-StringTokenizer st = new StringTokenizer("Stringa da dividere");
-while (st.hasMoreTokens()) {
-	// Due metodi per fare la stessa cosa
-System.out.println(st.nextToken());
-System.out.println(st.nextElement().toString());
-}
+Nell’esempio gli elementi vengono ordinati in base al cognome. Naturalmente è possibile creare diversi Comparator che permettono di ordinare la lista in altrettanti modi
+

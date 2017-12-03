@@ -76,9 +76,9 @@ catch (Exception e) {
 
 // ... altri comandi non monitorati ....
          
-#La gerarchia delle eccezioni
+# La gerarchia delle eccezioni
 La classe Exception descrive un'eccezine generica
-Situazioni anomale piuòspecifiche sono descritte da sottoclassi di Exception
+Situazioni anomale più specifiche sono descritte da sottoclassi di Exception
   
 ## Gestire eccezioni (1)
 
@@ -97,10 +97,12 @@ catch (ArithmeticException e) {
 System.out.println("Non faccio la divisione..."); // gestita l'anomalia, l'esecuzione riprende...
 }
 System.out.println("Fine Programma"); }
-```                                                            }
+}
+```
 ## Gestire eccezioni (2)
 
 * Altro esempio: la classe ErroreFormato... 
+
 ```java
 import java.util.Scanner;
 import java.util.InputMismatchException; 
@@ -122,17 +124,20 @@ ok = false;
 ## Gestire eccezioni (3)
 
 * Un costrutto try-catch può gestire più tipi di eccezione contemporaneamente
-I vari gestori (ognuno denotato da un catch) vengono controllati in sequenza
-Viene eseguito (solo) il primo catch che prevede un tipo di eccezione che è supertipo dell'eccezione che si è verificata
-Quindi, è meglio non mettere Exception per prima (verrebbe richiamata in tutti i casi)
-La variabile e è un oggetto che può contenere informazioni utili sull'errore che si è verificato... (vedere documentazione)
-```java
+* I vari gestori (ognuno denotato da un catch) vengono controllati in sequenza
+* Viene eseguito (solo) il primo catch che prevede un tipo di eccezione che è supertipo dell'eccezione che si è verificata
+* Quindi, è meglio non mettere Exception per prima (verrebbe richiamata in tutti i casi)
+* La variabile e è un oggetto che può contenere informazioni utili sull'errore che si è verificato... (vedere documentazione)
 
-          try { ....
+```java
+try { 
+  //istruzioni da controllare
 }
 catch (NumberFormatException e) {
-.... }
-catch (Exception e) { ....
+  //codice
+}
+catch (Exception e) {
+  //codice
 }
 ```                                     
 ## Gestire eccezioni (4)
@@ -142,7 +147,7 @@ bisogna avere un'idea di quali sono le eccezioni più comuni e in quali casi si 
 bisogna leggere la documentazione dei metodi di libreria che si utilizzano
   ad esempio: 
 * la documentazione della classe Scanner spiega che il metodo nextInt() può lanciare l'eccezione InputMismatchException
-In alcuni casi le eccezioni non vanno gestite: segnalano un errore di programmazione che deve essere corretto!
+* In alcuni casi le eccezioni non vanno gestite: segnalano un errore di programmazione che deve essere corretto!
 * esempio: la classe ErroreArray lanciava un eccezione a causa di un errore nel ciclo for
    
 ## Eccezioni checked e unchecked
@@ -153,19 +158,19 @@ Le eccezioni si dividono in:
 * Unchecked (o non controllate) per le quali il gestore non è obbligatorio Tutte le eccezioni che abbiamo visto fino ad ora sono unchecked!
 * Per essere unchecked un'eccezione deve essere una sottoclasse di RuntimeException, altrimenti è checked
 
-Esempi tipici di eccezioni checked:
+### Esempi tipici di eccezioni checked:
 * le eccezioni che descrivono errori di input/output (lettura o scrittura su file, comunicazione via rete, ecc...)
 * le eccezioni definite dal programmatore (vedremo)
     
 ## Lanciare eccezioni (1)
 
 * Il meccanismo delle eccezioni può anche essere usato per segnalare situazioni di errore
-Il comando throw consente di lanciare un'eccezione quando si vuole
-Si può usare la classe Exception, una sua sottoclasse già definita, o
+* Il comando throw consente di lanciare un'eccezione quando si vuole
+* Si può usare la classe Exception, una sua sottoclasse già definita, o
 una sua sottoclasse definita dal programmatore stesso
-throw si aspetta di essere seguito da un oggetto, che solitamente è
+* __throw__ si aspetta di essere seguito da un oggetto, che solitamente è
 costruito al momento (tramite new)
-Il costruttore di una eccezione prende come parametro (opzionale) una stringa di descrizione
+* Il costruttore di una eccezione prende come parametro (opzionale) una stringa di descrizione
 ```java
            throw new Exception("Operazione non consentita");
                 throw new AritmeticException ();
@@ -178,33 +183,39 @@ Il costruttore di una eccezione prende come parametro (opzionale) una stringa di
 Ma in realtà l'uso più sensato di throw è all'interno dei metodi...
  ```java
         try {
-.....
-throw new Exception("errore generico"); .....
+//.....
+throw new Exception("errore generico"); 
+
+
 }
 catch(Exception e) {
-... }
+///... 
+}
 ```                                           
 ## Lanciare eccezioni (3)
 
-* L'utilizzo di throw dentro a un metodo consente di interrompere il metodo in caso di situazioni anomale
-parametri ricevuti errati
-operazione prevista dal metodo non realizzabile (esempio: prelievo dal conto corrente di una somma superiore al saldo)
-....
-Chi invoca il metodo dovrà preoccuparsi di implementare un gestore delle eccezioni possibilmente sollevate
-Questo consente di evitare valori di ritorno dei metodi che servono solo a dire se l'operazione è andata a buon fine
-in caso di problemi si lancia l'eccezione, non si restituisce un valore particolare
+* L'utilizzo di throw dentro a un metodo consente di interrompere il metodo in caso di situazioni anomale:
+  * parametri ricevuti errati
+  * operazione prevista dal metodo non realizzabile 
+  * (esempio: prelievo dal conto corrente di una somma superiore al saldo
+  
+* Chi invoca il metodo dovrà preoccuparsi di implementare un gestore delle eccezioni possibilmente sollevate
+* Questo consente di evitare valori di ritorno dei metodi che servono solo a dire se l'operazione è andata a buon fine
+* in caso di problemi si lancia l'eccezione, non si restituisce un valore particolare
     
 ## Lanciare eccezioni (4)
 
 * Un metodo che contiene dei comandi throw deve elencare le eccezioni che possono essere sollevate
-L'elenco deve essere fatto nell'intestazione, usando la parola chiave
-*throws*
- Attenzione alla s finale:
+* L'elenco deve essere fatto nell'intestazione, usando la parola chiave __throws__
+
 * throws si usa nell'intestazione del metodo
 * throw si usa all'interno (nel punto in cui si verifica l'errore)
          public void preleva(int somma)
+
+```java
 throws IOException , IllegalParameterException { ... }
-             
+```
+
 ## Lanciare eccezioni (4)
 
 * Esempio: controllo correttezza parametri
@@ -220,7 +231,7 @@ else base=x;
 ```                                                       
 ## Lanciare eccezioni (5)
 
-* Dove la classe EccezioneBaseNegativa è definita banalmente così:
+* Dove la classe EccezioneBaseNegativa è definita così:
 ```java
 public class EccezioneBaseNegativa extends Exception {
 EccezioneBaseNegativa() { super ();
