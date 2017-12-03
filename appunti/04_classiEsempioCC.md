@@ -19,8 +19,8 @@ if (cc.saldo>900) cc.preleva(900);
 System.out.println("Saldo finale: " + cc.saldo);
  }
 }
-```                                                                       }
-                           
+}
+```                                                                                                  
 ## Primo esempio di programmazione con oggetti (2)
 ```java
 public class ContoCorrente {
