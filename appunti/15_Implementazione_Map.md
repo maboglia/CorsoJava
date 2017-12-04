@@ -29,10 +29,10 @@ In particolare, il metodo get() permette un recupero molto performante dell’el
 
 ```java
 HashMap<Integer, String> map = new HashMap<Integer, String>();
-map.put(1, "Sam");
-map.put(2, "John");
-map.put(3, "Sunny");
-map.put(4, "Linda");
+map.put(1, "pippo");
+map.put(2, "pluto");
+map.put(3, "paperino");
+map.put(4, "quiquoqua");
   
 Iterator<Map.Entry<Integer, String>> it = map.entrySet().iterator();
 while (it.hasNext()) {
@@ -41,7 +41,7 @@ while (it.hasNext()) {
 	System.out.println("Valore: " + entry.getValue());
 }
 ```
-
+## Map.Entry ed entrySet()
 Per iterare sulle mappe occorre utilizzare, oltre al solito iterator, anche:
-* la classe innestata Map.Entry astrae una coppia di tipo chiave-valore che rappresenta un elemento di una mappa
+* la classe innestata Map.Entry, la quale astrae una coppia di tipo chiave-valore che rappresenta un elemento di una mappa
 * il metodo entrySet() restituisce un insieme ordinato (in base alle chiavi) degli elementi della mappa

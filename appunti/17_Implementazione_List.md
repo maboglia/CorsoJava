@@ -15,9 +15,9 @@ ArrayList ha prestazioni nettamente superiori rispetto a Vector in quanto questâ
 ArrayList | Vector
 ------------ | -------------
 ArrayList lista = new ArrayList();	|Vector vett = new Vector();
-lista.add("abhijit");				|vett.add("abhijit");
-lista.add("smitesh");				|vett.add("smitesh");
-lista.add("melissa");				|vett.add("melissa");
+lista.add("paperino");				|vett.add("paperino");
+lista.add("pluto");				|vett.add("pluto");
+lista.add("pippo");				|vett.add("pippo");
 Iterator it = lista.iterator();		|Iterator it = vett.iterator();
 while (it.hasNext()) {			|while (it.hasNext()) {
    out.print(it.next());		   	  | out.print(it.next());
