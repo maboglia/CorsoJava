@@ -75,7 +75,7 @@
     * finalize()
 * Benefits of Java
 
-## Operators and Statements 51
+## Operators and Statements
 * Understanding Java Operators
 * Working with Binary Arithmetic Operators
     * Arithmetic Operators
@@ -213,7 +213,7 @@
     * Subclasses
     * Printing an Exception
 
-# Oracle Certified Professional Java SE 8 Programmer II    
+# Oracle Certified Professional Java SE 8 Programmer
 
 
 ## Advanced Class Design	
