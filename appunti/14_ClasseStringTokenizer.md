@@ -20,26 +20,28 @@ StringTokenizer st1 = new StringTokenizer("Stringa da dividere");
 StringTokenizer st2 = new StringTokenizer("Stringa sezionata", ";");
 StringTokenizer st3 = new StringTokenizer("Ciao Mamma", "a", true);
 
-Output [st1]
-	Stringa
-	da
-	dividere
-Output [st2]
-	Stringa selezionata
-Output [st3]
-	Ci
-	a
-	o M
-	a
-	mm
-	a
+// Output [st1]
+// 	Stringa
+// 	da
+// 	dividere
+// Output [st2]
+// 	Stringa selezionata
+// Output [st3]
+// 	Ci
+// 	a
+// 	o M
+// 	a
+// 	mm
+// 	a
 ```	
 Per scandire l’intero testo si può usare un ciclo while con all’interno l’invocazione del metodo hasMoreTokens() che ritorna true se sono presenti altri token, altrimenti false.
 Per stampare il token appena recuperato si può invocare il metodo nextToken() sull’oggetto StringTokenizer.
 
+```java
 StringTokenizer st = new StringTokenizer("Stringa da dividere");
 while (st.hasMoreTokens()) {
 	// Due metodi per fare la stessa cosa
 System.out.println(st.nextToken());
 System.out.println(st.nextElement().toString());
 }
+```

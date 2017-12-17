@@ -8,7 +8,7 @@ System.out.println() per stampare una stringa
 public class HelloWorld {
 public static void main ( String [] args ) {
 // visualizza un messaggio di saluto
-System . out . println ( " Hello World ! " );
+System.out.println ( " Hello World ! " );
 }
 }
 ```
@@ -23,7 +23,7 @@ base 5 cm e altezza 10 cm
 ```java
 public class AreaTriangolo {
 public static void main ( String [] args ) {
-System . out . println (5*10/2);
+System.out.println (5*10/2);
 }
 }
 ```
@@ -77,14 +77,14 @@ Modifichiamo il programma che calcola l’area di un triangolo introducendo
 un po’ di variabili
 
 ```java
-public class AreaTria ngolo2 {
+public class AreaTriangolo2 {
 public static void main ( String [] args ) {
 int base , altezza ;
 int area ;
 base =5;
 altezza =10;
 area = base * altezza /2;
-System . out . println ( area );
+System.out.println ( area );
 }
 }
 ```
@@ -95,7 +95,7 @@ System . out . println ( area );
 
 ### Variabili (2)
 
-	Una variabile è una casella di memoria identificata da un nome
+	Una variabile è un'area di memoria identificata da un nome
 	Il suo scopo è di contenere un valore di un certo tipo
 	Serve per memorizzare dati durante l’esecuzione di un programma
 	Il nome di una variabile (come il nome di una classe o di un metodo)
@@ -156,43 +156,9 @@ int area = base * altezza /2;
 ```
 
 
-### Esempio: Calcolo interessi (1)
+### Esempio: 
+[Calcolo interessi](../esempi/Interessi.java)
 
-```java
-public class Interessi {
-public static void main ( String [] args ) {
-double capitale =100000;
-double tasso =0.05;
-double interesse ;
-// calcola l ’ interesse maturato dopo un anno
-interesse = capitale * tasso ;
-capitale = capitale + interesse ;
-// calcola l ’ interesse maturato dopo due anni
-interesse = capitale * tasso ;
-capitale = capitale + interesse ;
-// calcola l ’ interesse maturato dopo tre anni
-interesse = capitale * tasso ;
-capitale = capitale + interesse ;
-// stampa il risultato
-System . out . print ( " Capitale maturato : " );
-System . out . println ( capitale );
-}
-}
-```
-
-### Esempio: Calcolo interessi (2)
-Risultato dell’esecuzione:
-Capitale maturato : 115762.5
-
-	In questo esempio:
-	Alcune variabili sono inizializzate nella dichiarazione
-	Le variabili hanno tipo double (virgola mobile a precisione doppia) e
-	le operazioni su tali variabili sono come tra letterali frazionari
-	(divisione reale)
-	Le variabili cambiano valore durante l’esecuzione
-	Il nuovo valore di una variabile può essere calcolato a partire dal
-	precedente (capitale=capitale+interesse)
-	Il metodo print() visualizza un messaggio senza andare a capo
 
 
 ### Costanti (1)
@@ -212,66 +178,19 @@ final double tasso =0.05;
 	Sapendo che una variabile non cambierà mai valore, il compilatore
 	può anche eseguire delle ottimizzazioni sull’uso di tale variabile...
 
-### Costanti (2)
+### Esempio: 
+[Costanti](../esempi/Interessi2.java)
 
-```java
-public class Interessi2 {
-public static void main ( String [] args ) {
-double capitale =100000;
-final double tasso =0.05;
-double interesse ;
-// calcola l ’ interesse maturato dopo un anno
-interesse = capitale * tasso ;
-capitale = capitale + interesse ;
-// calcola l ’ interesse maturato dopo due anni
-interesse = capitale * tasso ;
-capitale = capitale + interesse ;
-// calcola l ’ interesse maturato dopo tre anni
-interesse = capitale * tasso ;
-capitale = capitale + interesse ;
-// stampa il risultato
-System . out . print ( " Capitale maturato : " );
-System . out . println ( capitale );
-}
-}
-```
+
 
 ### Input dall’utente (1)
 	Per ricevere valori in input dall’utente si usa la classe Scanner, che fa
 	parte della Libreria Standard di Java
 
-```java
-import java . util . Scanner ; // richiama la classe Scanner
-public class Somma {
-public static void main ( String [] args ) {
-// predispone il programma per la lettura dell ’ input
-Scanner input = new Scanner ( System . in );
-System . out . println ( " Inserisci due numeri interi : " );
-int n1 , n2 ;
-// attende l ’ inserimento di due numeri e li assegna
-n1 = input . nextInt ();
-n2 = input . nextInt ();
-// calcola e stampa la somma
-System . out . print ( " Somma : " );
-System . out . println ( n1 + n2 );
-}
-}
-```
-
+	
 ### Input dall’utente (2)
 	La classe Scanner deve essere richiamata usando la direttiva import
 	prima dell’inizio della classe
-```java
-import java . util . Scanner ;
-```
-L’oggetto input (che può essere chiamato anche di↵erentemente) deve
-essere predisposto (creato) prima di iniziare a chiedere i valori all’utente
-```java
-Scanner input = new Scanner ( System . in );
-```
-La lettura vera e propria dei valori in input si fa tramite metodi diversi a
-seconda del tipo dei valori attesi
-```java
-x = input . nextInt (); // legge un numero intero
-y = input . nextDouble (); // legge un numero frazionario
-```
+
+### Esempio: 
+[richiama la classe Scanner](../esempi/Somma.java)
