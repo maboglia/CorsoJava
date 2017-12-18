@@ -1,7 +1,7 @@
 
 ### Classe StringTokenizer
 Spesso risulta necessario manipolare dei token di testo.
-Una semplice classe che permette di separare i contenuti di una stringa in più parti, chiamate token, è la classe StringTokenizer.
+Una semplice classe che permette di separare i contenuti di una stringa in più parti, chiamate token, è la classe __StringTokenizer__.
 Questa classe si utilizza solitamente per estrarre le parole di una stringa.
 L’utilizzo di base è estremamente semplice, occorrono:
 una stringa da "navigare", cioè da cui estrarre i token
