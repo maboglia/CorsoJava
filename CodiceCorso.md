@@ -19,7 +19,7 @@
 * [Somma](esempi/Somma.java)
 * [TipiCasting](esempi/TipiCasting.java)
 * [Variabili](esempi/Variabili.java)
-* [VariableDemo]VariableDemo.java
+* [VariableDemo](VariableDemo.java)
 
 ## 02stringhe
 * [ProvaStringBuffer](esempi/ProvaStringBuffer.java)
@@ -33,7 +33,7 @@
 * [StringParsing](esempi/StringParsing.java)
 * [StringPasswordGenerator](esempi/StringPasswordGenerator.java)
 * [StringStringBuilder](esempi/StringStringBuilder.java)
-* [TestStringhe]TestStringhe.java
+* [TestStringhe](TestStringhe.java)
 
 ## 03Array
 * [ArrayInteri](esempi/ArrayInteri.java)
@@ -97,10 +97,11 @@
 * [Menu](esempi/Menu.java)
 
 [MiaClasse](esempi/MiaClasse.java)
-* Studenti
-*     [Registro](esempi/Registro.java)
-*     [Studente](esempi/Studente.java)
-*     [StudenteTester](esempi/StudenteTester.java)
+
+### Studenti
+* [Registro](esempi/Registro.java)
+* [Studente](esempi/Studente.java)
+* [StudenteTester](esempi/StudenteTester.java)
 
 ## 08Eccezioni
 * [AritmeticaSbagliata](esempi/AritmeticaSbagliata.java)
