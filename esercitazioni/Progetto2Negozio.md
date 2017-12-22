@@ -14,13 +14,14 @@ Il sistema deve gestire:
  caratterizzato da un codice univoco, da una descrizione
  e dal prezzo lordo di vendita. Per esempio:
  
- Codice	Descrizione	Prezzo
- * C00001	Pasta Barilla	0.7
- * C00002	Latte TappoRosso	1.65
- * C00003	Caffe' Latazza	2.5
- * C00004	Caffe' Illy	2.0
- * C00005	Biscotti Cioccolato 2.0
- * C00006	Vino Rosso	2.0
+Codice|Descrizione|Prezzo
+---|---|---
+00001|Pasta Barilla|0.7
+00002|Latte TappoRosso|1.65
+00003|Caffe' Latazza|2.5
+00004|Caffe' Illy|2.0
+00005|Biscotti Cioccolato|2.0
+C00006|Vino Rosso|2.0
 
 ### Gli sconti
  E' possibile stabilire un prezzo promozionale (sconto)
