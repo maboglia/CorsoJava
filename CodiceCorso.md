@@ -84,24 +84,24 @@
 * [Dado](esempi/esempi/07OOP1/Dado.java)
 
 ### geometria
-* [GeometriaTest](esempi/esempi/07OOP1/GeometriaTest.java)
-* [NuovaGeometria](esempi/esempi/07OOP1/NuovaGeometria.java)
-* [Punto](esempi/esempi/07OOP1/Punto.java)
-* [Quadrato](esempi/esempi/07OOP1/Quadrato.java)
-* [Rettangolo](esempi/esempi/07OOP1/Rettangolo.java)
-* [Segmento](esempi/esempi/07OOP1/Segmento.java)
-* [Triangolo](esempi/esempi/07OOP1/Triangolo.java)
+* [GeometriaTest](esempi/esempi/07OOP1/geometria/GeometriaTest.java)
+* [NuovaGeometria](esempi/esempi/07OOP1/geometria/NuovaGeometria.java)
+* [Punto](esempi/esempi/07OOP1/geometria/Punto.java)
+* [Quadrato](esempi/esempi/07OOP1/geometria/Quadrato.java)
+* [Rettangolo](esempi/esempi/07OOP1/geometria/Rettangolo.java)
+* [Segmento](esempi/esempi/07OOP1/geometria/Segmento.java)
+* [Triangolo](esempi/esempi/07OOP1/geometria/Triangolo.java)
 
 ### menu
-* [MenuDemo](esempi/esempi/07OOP1/MenuDemo.java)
-* [Menu](esempi/esempi/07OOP1/Menu.java)
+* [MenuDemo](esempi/esempi/07OOP1/menu/MenuDemo.java)
+* [Menu](esempi/esempi/07OOP1/menu/Menu.java)
 
 [MiaClasse](esempi/esempi/07OOP1/MiaClasse.java)
 
 ### Studenti
-* [Registro](esempi/esempi/07OOP1/Registro.java)
-* [Studente](esempi/esempi/07OOP1/Studente.java)
-* [StudenteTester](esempi/esempi/07OOP1/StudenteTester.java)
+* [Registro](esempi/esempi/07OOP1/Studenti/Registro.java)
+* [Studente](esempi/esempi/07OOP1/Studenti/Studente.java)
+* [StudenteTester](esempi/esempi/07OOP1/Studenti/StudenteTester.java)
 
 ## 08Eccezioni
 * [AritmeticaSbagliata](esempi/esempi/08Eccezioni/AritmeticaSbagliata.java)
@@ -122,27 +122,27 @@
 ## 10Gui
 
 ### gui
-* [CorniceHelloWB](esempi/esempi/10Gui/CorniceHelloWB.java)
-* [CorniceVuota](esempi/esempi/10Gui/CorniceVuota.java)
-* [RettangoloBase](esempi/esempi/10Gui/RettangoloBase.java)
-* [RettangoloTester](esempi/esempi/10Gui/RettangoloTester.java)
+* [CorniceHelloWB](esempi/esempi/10Gui/gui/CorniceHelloWB.java)
+* [CorniceVuota](esempi/esempi/10Gui/gui/CorniceVuota.java)
+* [RettangoloBase](esempi/esempi/10Gui/gui/RettangoloBase.java)
+* [RettangoloTester](esempi/esempi/10Gui/gui/RettangoloTester.java)
 ### GUI2DFace
-* [FaceComponent](esempi/esempi/10Gui/FaceComponent.java)
-* [FaceViewer](esempi/esempi/10Gui/FaceViewer.java)
-* [RectangleComponent3](esempi/esempi/10Gui/RectangleComponent3.java)
-* [RectangleFrame3](esempi/esempi/10Gui/RectangleFrame3.java)
-* [RectangleViewer3](esempi/esempi/10Gui/RectangleViewer3.java)
+* [FaceComponent](esempi/esempi/10Gui/GUI2DFace/FaceComponent.java)
+* [FaceViewer](esempi/esempi/10Gui/GUI2DFace/FaceViewer.java)
+* [RectangleComponent3](esempi/esempi/10Gui/GUI2DFace/RectangleComponent3.java)
+* [RectangleFrame3](esempi/esempi/10Gui/GUI2DFace/RectangleFrame3.java)
+* [RectangleViewer3](esempi/esempi/10Gui/GUI2DFace/RectangleViewer3.java)
 
 ### GUI2DFlag
-* [ItalianFlagComponent](esempi/esempi/10Gui/ItalianFlagComponent.java)
-* [ItalianFlag](esempi/esempi/10Gui/ItalianFlag.java)
-* [ItalianFlagViewer](esempi/esempi/10Gui/ItalianFlagViewer.java)
-* [RectangleComponent](esempi/esempi/10Gui/RectangleComponent.java)
-* [RectangleViewer](esempi/esempi/10Gui/RectangleViewer.java)
+* [ItalianFlagComponent](esempi/esempi/10Gui/GUI2DFlag/ItalianFlagComponent.java)
+* [ItalianFlag](esempi/esempi/10Gui/GUI2DFlag/ItalianFlag.java)
+* [ItalianFlagViewer](esempi/esempi/10Gui/GUI2DFlag/ItalianFlagViewer.java)
+* [RectangleComponent](esempi/esempi/10Gui/GUI2DFlag/RectangleComponent.java)
+* [RectangleViewer](esempi/esempi/10Gui/GUI2DFlag/RectangleViewer.java)
     * uno
-        * [BorderMaker](esempi/esempi/10Gui/BorderMaker.java)
-        * [PictureDemo](esempi/esempi/10Gui/PictureDemo.java)
-        * [Picture](esempi/esempi/10Gui/Picture.java)
+        * [BorderMaker](esempi/esempi/10Gui/GUI2DFlag/uno/BorderMaker.java)
+        * [PictureDemo](esempi/esempi/10Gui/GUI2DFlag/uno/PictureDemo.java)
+        * [Picture](esempi/esempi/10Gui/GUI2DFlag/uno/Picture.java)
 
 ## 11FileIO
 * [FileIO](esempi/esempi/11FileIO/FileIO.java)
