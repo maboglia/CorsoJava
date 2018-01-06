@@ -10,7 +10,7 @@ public class TipiCasting {
 		
 		System.out.println(valore2);
 		
-		//promotion
+		//promozione
 		long valoreLong1 = valore1;
 		System.out.println(valoreLong1);
 		
@@ -31,26 +31,26 @@ public class TipiCasting {
         int intValue2 = 42;
 
         int result1 = intValue1 + intValue2;
-        System.out.println("Addition: " + result1);
+        System.out.println("Addizione: " + result1);
 
         int result2 = intValue1 - intValue2;
-        System.out.println("Subtraction: " + result2);
+        System.out.println("Sottrazione: " + result2);
 
         int result3 = intValue1 * intValue2;
-        System.out.println("Multiplication: " + result3);
+        System.out.println("Moltiplicazione: " + result3);
 
         double result4 = (double) intValue1 / intValue2;
-        System.out.println("Division: " + result4);
+        System.out.println("Divisione: " + result4);
 
         double result5 = (double) intValue1 % intValue2;
-        System.out.println("Remainder: " + result5);
+        System.out.println("Resto della divisione: " + result5);
 
         double doubleValue = -3.99999;
         long rounded = Math.round(doubleValue);
-        System.out.println("Rounded: " + rounded);
+        System.out.println("Arrotondamento: " + rounded);
 
         double absValue = Math.abs(doubleValue);
-        System.out.println("Absolute: " + absValue);
+        System.out.println("Valore assoluto: " + absValue);
 		
 		
 	}

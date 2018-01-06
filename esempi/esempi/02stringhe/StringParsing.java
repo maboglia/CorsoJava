@@ -16,7 +16,7 @@ public class StringParsing {
         String sub = s1.substring(13);
         System.out.println(sub);
 
-        String s2="       Benvenuti al corso Java!           ";
+        String s2="Benvenuti al corso Java!           ";
         System.out.println("Lunghezza della stringa:"+s2.length());
 
         String s3 = s2.trim();
