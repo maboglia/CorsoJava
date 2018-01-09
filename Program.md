@@ -1,103 +1,99 @@
-#Contenuti del corso.  
-	
+# Contenuti del corso
 
-##Concetti introduttivi
+## Concetti introduttivi
+
 Caratteristiche del linguaggio Java, sua diffusione ed evoluzione. Strutturazione di semplici programmi. Definizione di classi. Definizione e assegnazione di variabili e attributi. Definizione di metodi e metodi costruttori. Convenzioni di scrittura del codice.
-	
 
-##Tipi di dato
+## Tipi di dato
+
 Tipi di dato elementari e relativi operatori. Tipi enum. Tipi di dato strutturati.  Operazioni su tipi strutturati e invocazione di metodi. Il modificatore static. Classi e oggetti standard. Package. Classi standard per I/O utente. 
-	
 
-##Definizione di metodi
+## Definizione di metodi
+
 Argomenti formali e attuali. Overloading. Argomento implicito. Passaggio degli argomenti. Variabili locali. Ciclo di vita delle variabili e degli oggetti. Regole di visibilita'.
-	
 
-##Strutture di controllo
+## Strutture di controllo
+
 Strutture di selezione: if-else, switch. Cicli for, while, do-while. Cicli annidati.
-	
 
-##Progetto di classi.
+## Progetto di classi.
+
 Identificazione delle classi. Astrazione sui dati e sui metodi. Composizione di classi. Information hiding e modificatori di accesso. Ereditarieta'. Overriding di metodi. Polimorfismo. La classe Object. Classi astratte. La nozione di interface.
-	
 
-##Gestione delle eccezioni
+## Gestione delle eccezioni
+
 Definizione di eccezione. Classificazione e gerarchia di eccezioni. Struttura try-catch. Dichiarazione throws.
-	
 
-##Input/Output con Stream
+## Input/Output con Stream
+
 Stream e loro classificazione. Classi filtro. Stream di byte, di testo e di oggetti. Stream con compressione.
-	
 
-##Ricorsione
+## Ricorsione
+
 Strutture dati ricorsive. Metodi ricorsivi. Confronto tra ricorsione e iterazione.
-	
 
-##Programmazione generica
+## Programmazione generica
+
 Classi e metodi generici. Parametri di tipo.
-	
 
-##Strutture dati
+## Strutture dati
+
 Array e Collection. Java Collection Framework. Algoritmi operanti su array e collection. Cenni a strutture dati classiche: lista concatenata, pila, coda, albero, albero binario.
- 
 
+* Java Course Introduction
 
+* Basic Java keywords explained – Practice Session
 
+* Basic Java keywords explained – Debriefing
 
- *	Java Course Introduction
+* Packages, Import Statements, Instance Members, Default Constructor
 
- *	Basic Java keywords explained – Practice Session
+* Access and Non Access Modifiers
 
- *	Basic Java keywords explained – Debriefing
+* Tools – IntelliJ Idea 14.1, Junit 4.12, Maven 3
 
- *	Packages, Import Statements, Instance Members, Default Constructor
+* if/else statements and booleans
 
- *	Access and Non Access Modifiers
+* loops: for, while and do while loop
 
- *	Tools – IntelliJ Idea 14.1, Junit 4.12, Maven 3
+* for each loop and arrays part 1
 
- *	if/else statements and booleans
+* arrays and enums
 
- *	loops: for, while and do while loop
+* enums and switch statement
 
- *	for each loop and arrays part 1
+* switch statement
 
- *	arrays and enums
+* Java Logging with sl4j and logback
 
- *	enums and switch statement
+* deep dive into public static void main
 
- *	switch statement
+* Checked and Unchecked Exceptions in Java
 
- *	Java Logging with sl4j and logback
+* Interfaces in Java
 
- *	deep dive into public static void main
+* Inheritance in Java
 
- *	Checked and Unchecked Exceptions in Java
+* Object finalizer method
 
- *	Interfaces in Java
+* Object clone method
 
- *	Inheritance in Java
+* Object toString method
 
- *	Object finalizer method
+* Java autoboxing, Static Imports, Number Types and more
 
- *	Object clone method
+* HashCode and Equals
 
- *	Object toString method
+* Java Collections Framework Introduction
 
- *	Java autoboxing, Static Imports, Number Types and more
+* ArrayList
 
- *	HashCode and Equals
+* Linked List Data Structure
 
- *	Java Collections Framework Introduction
+* LinkedList vs ArrayList
 
- *	ArrayList
+* Identity vs Equality in Java
 
- *	Linked List Data Structure
+* Comparable interface in Java
 
- *	LinkedList vs ArrayList
-
- *	Identity vs Equality in Java
-
- *	Comparable interface in Java
-
- *	Shallow vs. Deep Copy in Java
+* Shallow vs. Deep Copy in Java
