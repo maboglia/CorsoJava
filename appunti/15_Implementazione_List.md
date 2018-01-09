@@ -10,6 +10,37 @@ Non è adatta per operazioni di ricerca poiché occorrerebbe scorrere tutta la l
 
 ArrayList ha prestazioni nettamente superiori rispetto a Vector in quanto quest’ultima è sincronizzata di default mentre ArrayList non lo è (i metodi di accesso agli oggetti non sono Synchronized).
 
+
+## I metodi delle Collection sono i seguenti:
+
+* public boolean add(Object o)
+aggiunge un oggetto alla Collection
+* public boolean addAll(Collection c)
+aggiunge una collection di oggetti alla collection considerata
+* public void clear()
+svuota la collection
+* public boolean contains(Object o)
+verifica l’esistenza di un oggetto all’interno della collection
+* public boolean containsAll(Collection c)
+verifica l’esistenza di una collection all’interno della collection considerata
+* public boolean isEmpty()
+verifica se la collection è vuota
+* public Iterator iterator()
+restituisce un’istanza di Iterator che permette di scorrere gli elementi
+* public boolean remove(Object o)
+rimuove un oggetto dalla collection
+* public boolean removeAll(Collection c)
+rimuove una collection dalla collection considerata
+* public int size()
+restituisce il numero di elementi presenti nella collection
+* public Object[] toArray()
+restituisce la collection sottoforma di array
+* public Object[] toArray(Object[] a)
+restituisce la collection sottoforma di array
+
+
+
+
 ## Esempio di ArrayList e Vector.
 
 ArrayList | Vector

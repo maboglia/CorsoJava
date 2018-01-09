@@ -7,8 +7,41 @@ Le implementazioni di Map sono HashTable e HashMap.
 Un’implementazione di SortedMap è TreeMap. 
 
 Entrambe non ammettono elementi duplicati.
+
 HashMap risulta più performante di HashTable, in quanto quest’ultima è sincronizzata di default mentre HashMap non lo è (i metodi di accesso agli oggetti non sono Synchronized)
+
 HashMap risulta più performante di TreeMap, in quanto quest’ultima gestisce l’ordinamento
+
+
+## I metodi delle Map sono i seguenti:
+
+* public void clear()
+permette di svuotare la map
+* public boolean containsKey(Object arg0)
+verifica l’esistenza di un oggetto all’interno della map in base alla sua chiave
+* public boolean containsValue(Object arg0)
+verifica l’esistenza di un oggetto all’interno della map in base al suo valore
+* public Set entrySet()
+restituisce la map sottoforma di Set
+* public Object get(Object arg0)
+restituisce l’oggetto in base alla sua chiave
+* public boolean isEmpty()
+verifica se la map è vuota
+* public Set keySet()
+restituisce le chiavi della map sottoforma di Set
+* public Object put(Object arg0, Object arg1)
+aggiunge un oggetto alla map
+* public void putAll(Map arg0)
+aggiunge una map di oggetti alla map considerata
+* public Object remove(Object arg0)
+rimuove un oggetto dalla map
+* public int size()
+restituisce il numero di elementi presenti nella map
+* public Collection values()
+restituisce la map sottoforma di Collection
+
+
+
 
 ## Esempio di HashTable e HashMap.
 HashTable | HashMap
