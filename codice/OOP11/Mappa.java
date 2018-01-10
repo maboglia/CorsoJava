@@ -38,6 +38,11 @@ public class Mappa {
 //		System.out.println(capoluoghi.size());
 //		System.out.println(capoluoghi.get("lombardia"));
 		Set cc = capoluoghi.keySet();
+		Set es = capoluoghi.entrySet();
+		
+		for (Object object : es) {
+			System.out.println(object);
+		}
 		
 		for (Object object : cc) {
 			System.out.println(object);

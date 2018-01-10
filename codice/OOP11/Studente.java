@@ -1,5 +1,5 @@
 
-public class Studente{
+public class Studente implements Comparable<Studente>{
 
 	String matricola;
 	String nome;
@@ -16,12 +16,12 @@ public class Studente{
 //restituire 0 se this == other	
 //restituire >0 se this > other	
 	
-//	@Override
-//	public int compareTo(Studente o) {
-//
-//		int comparaCognome = this.matricola.compareTo(o.matricola);
-//		return comparaCognome;
-//	}
+	@Override
+	public int compareTo(Studente o) {
+
+		int comparaCognome = this.matricola.compareTo(o.matricola);
+		return comparaCognome;
+	}
 	
 	@Override
 	public String toString() {

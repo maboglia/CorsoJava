@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
+import java.util.TreeSet;
 
 
 class Persona{
@@ -27,6 +28,7 @@ public class MieListe {
 		List<Integer> collegati = new LinkedList<>();
 		
 		Set<Integer> set = new HashSet<>();
+		Set<Persona> setPersone = new TreeSet<>();
 		int e =0;
 		
 		for (int i = 0; i < 1000; i++) {
