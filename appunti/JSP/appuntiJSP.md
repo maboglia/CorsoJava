@@ -1,6 +1,32 @@
 
 # Corso JSP
 
+## Corso JSP - In breve
+### corso-jsp-introduzione
+- [Corso JSP](#corso-jsp)
+	- [Corso JSP - In breve](#corso-jsp---in-breve)
+		- [corso-jsp-introduzione](#corso-jsp-introduzione)
+	- [Corso JSP - Le direttive](#corso-jsp---le-direttive)
+		- [corso-jsp-le-direttive](#corso-jsp-le-direttive)
+	- [Corso JSP - Le variabili](#corso-jsp---le-variabili)
+		- [corso-jsp-le-variabili](#corso-jsp-le-variabili)
+	- [Corso JSP - argomenti](#corso-jsp---argomenti)
+		- [corso-jsp-argomenti](#corso-jsp-argomenti)
+	- [Corso JSP - jsp:forward](#corso-jsp---jspforward)
+	- [Corso JSP - Le dichiarazioni](#corso-jsp---le-dichiarazioni)
+		- [corso-jsp-dichiarazioni](#corso-jsp-dichiarazioni)
+	- [Corso JSP - Ciclo DO WHILE](#corso-jsp---ciclo-do-while)
+		- [corso-jsp-ciclo-do-while](#corso-jsp-ciclo-do-while)
+	- [Corso JSP - Funzione contatore accessi + esempio uso dichiarazioni e espressioni](#corso-jsp---funzione-contatore-accessi-esempio-uso-dichiarazioni-e-espressioni)
+		- [corso-jsp-dichiarazioni-espressioni](#corso-jsp-dichiarazioni-espressioni)
+	- [Corso JSP - Esempio JSTL Core](#corso-jsp---esempio-jstl-core)
+		- [corso-jsp-esempio-jstl-core](#corso-jsp-esempio-jstl-core)
+	- [Corso JSP - Esempio JSTL Functions](#corso-jsp---esempio-jstl-functions)
+		- [corso-jsp-esempio-jstl-functions](#corso-jsp-esempio-jstl-functions)
+	- [Corso JSP - Esempio Java Server Faces](#corso-jsp---esempio-java-server-faces)
+		- [corso-jsp-java-server-faces](#corso-jsp-java-server-faces)
+
+
 ## Corso JSP - Le direttive
 ### corso-jsp-le-direttive
 Corso JSP - Le direttive
@@ -161,30 +187,7 @@ out.print("La condizione è falsa");//stamperà la condizione è falsa
 </html>
 ```
 
-## Corso JSP - In breve
-### corso-jsp-introduzione
-- [Corso JSP](#corso-jsp)
-	- [Corso JSP - Le direttive](#corso-jsp---le-direttive)
-		- [corso-jsp-le-direttive](#corso-jsp-le-direttive)
-	- [Corso JSP - Le variabili](#corso-jsp---le-variabili)
-		- [corso-jsp-le-variabili](#corso-jsp-le-variabili)
-	- [Corso JSP - In breve](#corso-jsp---in-breve)
-		- [corso-jsp-introduzione](#corso-jsp-introduzione)
-	- [Corso JSP - argomenti](#corso-jsp---argomenti)
-		- [corso-jsp-argomenti](#corso-jsp-argomenti)
-	- [Corso JSP - jsp:forward](#corso-jsp---jspforward)
-	- [Corso JSP - Le dichiarazioni](#corso-jsp---le-dichiarazioni)
-		- [corso-jsp-dichiarazioni](#corso-jsp-dichiarazioni)
-	- [Corso JSP - Ciclo DO WHILE](#corso-jsp---ciclo-do-while)
-		- [corso-jsp-ciclo-do-while](#corso-jsp-ciclo-do-while)
-	- [Corso JSP - Funzione contatore accessi + esempio uso dichiarazioni e espressioni](#corso-jsp---funzione-contatore-accessi-esempio-uso-dichiarazioni-e-espressioni)
-		- [corso-jsp-dichiarazioni-espressioni](#corso-jsp-dichiarazioni-espressioni)
-	- [Corso JSP - Esempio JSTL Core](#corso-jsp---esempio-jstl-core)
-		- [corso-jsp-esempio-jstl-core](#corso-jsp-esempio-jstl-core)
-	- [Corso JSP - Esempio JSTL Functions](#corso-jsp---esempio-jstl-functions)
-		- [corso-jsp-esempio-jstl-functions](#corso-jsp-esempio-jstl-functions)
-	- [Corso JSP - Esempio Java Server Faces](#corso-jsp---esempio-java-server-faces)
-		- [corso-jsp-java-server-faces](#corso-jsp-java-server-faces)
+
 
 
 * JSP è una specifica di Sun Microsystems, poi acquistata da Oracle leggi qui la storia
