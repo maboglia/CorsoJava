@@ -1,31 +1,37 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" import="java.util.Date" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+    pageEncoding="UTF-8"%>
+
+<%@ include file="header.jsp" %>
+
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h1 class="mt-5">A Bootstrap 4 Starter Template</h1>
+          <p class="lead">Complete with pre-defined file paths and responsive navigation!</p>
+          <ul class="list-unstyled">
+            <li>Bootstrap 4.0.0</li>
+            <li>jQuery 3.3.0</li>
+          </ul>
+        </div>
+      </div>
 
 
+<%-- questo è un commento in JSP --%>
 
-        <%!    Date theDate = new Date();
+<%!  String s = "Hello, JSP!"; String t = "rosso";    %>
 
-            Date getDate() {
-                System.out.println("In getDate() method");
-                return theDate;
-            }
-        %>
-        Hello! The time is now <%= getDate()%>
-	
-	        <h1>Request</h1>
-        <%= "IP Address: "+request.getRemoteAddr() %><br>
-        <%= "Server: "+request.getLocalAddr() %><br>
-        <%= "Server Name: "+request.getLocalName() %><br>
-        <%= "Protocol: "+request.getProtocol() %><br>
-        <%= "RemoteHost "+request.getRemoteHost() %><br>
-	
 
-</body>
-</html>
+<%-- quella che segue è un'espressione e corrisponde ad out.print(s) --%>
+
+<p class="<%= t %>">ciao</p>
+
+<%= s %>
+<%-- infatti se --%>
+<%
+	for(int i = 1; i <= 6; i++){
+	out.print(   "<h"+i+">" +   s +  "</h"+i+">" );
+	}
+
+
+%>
+
+<%@ include file="footer.html" %>
