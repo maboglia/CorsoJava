@@ -1,3 +1,5 @@
+<%@page import="model.Prodotto"%>
+<%@page import="controller.ProdottiJar"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -12,14 +14,16 @@
 	function(){
 		$(".prodotti").click(function(event) {
 			let prod = $(this).text();
+			let codProd = $(this).attr("rel");
 
 			$.ajax({
 			  method: "POST",
 			  url: "prodotti",
-			  data: { prodotto: prod, codProdotto: "C00001" }
+			  data: { prodotto: prod, codProdotto: codProd }
 			})
 			  .done(function( msg ) {
-			    alert( "Scheda prodotto: " + msg );
+			    //alert( "Scheda prodotto: " + msg );
+			    $("#scontrino").append("<li>" + msg + "</li>")
 			  });
 		});
 
@@ -34,18 +38,21 @@
 <body>
 
 
-
-<jsp:useBean id="p" class="model.Prodotto" />
-<jsp:setProperty property="descrizione" name="p" value="Pasta"/>
-<jsp:getProperty property="descrizione" name="p"/>
-
+<h2>prodotti in magazzino</h2>
 <ul>
-<li><a href="#" class="prodotti"><%= p %></a></li>
-<li><a href="#" class="prodotti">Acqua tonica</a></li>
 
+<% for(Prodotto p : ProdottiJar.elencoProdotti){ %>		
+		<li><a href="#" class="prodotti" rel="<%= p.getCodice() %>"><%= p.getDescrizione() %></a></li>
+<% } %>
+
+
+<h2>prodotti acquistati</h2>
 </ul>
 
+<ol id="scontrino">
 
+
+</ol>
 
 </body>
 </html>

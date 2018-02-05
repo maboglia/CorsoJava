@@ -30,13 +30,19 @@ public class ProdottiController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String s = request.getParameter("codProdotto");
+		Prodotto selezionato = null;
+		for(Prodotto p : ProdottiJar.elencoProdotti){
+			if (p.getCodice().equals(s))
+				selezionato = p;
+		}
+		
+		
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
-		Prodotto p = new Prodotto();
-		p.setCodice("C00002");
-		p.setDescrizione("Birra Peroni");
-		p.setPrezzo(1.5);
-		out.print(p);
+
+
+		out.print(selezionato);
 	}
 
 }
