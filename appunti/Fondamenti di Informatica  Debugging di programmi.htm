@@ -1,0 +1,448 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Fondamenti di Informatica: Debugging di programmi</title>
+	<base href="http://www.dis.uniroma1.it/~fi/" />
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="keywords" content="programmazione Python fondamenti informatica " />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" href="css/corporate.css" />
+	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="alternate" type="application/rss+xml" title="Fondamenti di Informatica: revisions for Debugging (RSS)" href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/revisions.xml" />
+	<link rel="alternate" type="application/rss+xml" title="Fondamenti di Informatica: recently edited pages (RSS)" href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/recentchanges.xml" />
+</head>
+<body  >
+<div class="header">
+
+<h2>Fondamenti di Informatica I - A.A. 2013-2014</h2>
+
+<h3>Corso di Laurea in Ingegneria Informatica e Automatica</h3>
+
+<!--	<h2>Fondamenti di Informatica : <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/backlinks" title="Display a list of pages linking to Debugging">Debugging</a></h2>
+-->
+	<a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=HomePage">HomePage</a> |
+	<a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=AvvisiCorso">Avvisi</a> | <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=InfoAuto">Canali</a> | <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=ProgrammaCorso">Programma</a> | <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=TestiCorso">Materiale didattico</a> | <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=EserciziCorso">Esercitazioni</a> | <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=EsamiCorso">Esami</a> | <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=anniprecedenti">Anni Precedenti (Java)</a> | <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=UserSettings">Login</a> 	
+</div>
+
+<!--starting page content-->
+<div class="page">
+<h4>Debugging di programmi</h4>
+
+<br />
+<div class="floatr">
+<a class="ext" href="http://en.wikipedia.org/wiki/Computer_bug#Etymology"><img class="center" src="http://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/H96566k.jpg/250px-H96566k.jpg" alt="Probabilmente il primo bug trovato in un programma" title="Probabilmente il primo bug trovato in un programma" /></a><span class="exttail">&#8734;</span><font size="1">Probabilmente il primo bug trovato in un programma</font>
+</div>
+Per risolvere un problema di calcolo dobbiamo dapprima pensare a un algoritmo risolutivo. Questo algoritmo andrà poi tradotto in un linguaggio di programmazione come Java per ottenere un programma effettivamente eseguibile da un calcolatore. Scrivere programmi che funzionano perfettamente sin dall'inizio è però quasi impossibile, anche se l'algoritmo che è alla sua base è corretto. Dobbiamo essere quindi in grado di identificare eventuali errori nei nostri programmi e correggerli. Questo compito è universalmente noto come <a class="ext" href="http://it.wikipedia.org/wiki/Debugging">debugging</a><span class="exttail">&#8734;</span>, cioè la rimozione dei <a class="ext" href="http://en.wikipedia.org/wiki/Computer_bug">bug</a><span class="exttail">&#8734;</span> (errori).<br />
+<br />
+Se questo vi sembra un problema da niente, ecco una <a class="ext" href="http://en.wikipedia.org/wiki/Computer_bug#Famous_computer_bugs">lista di eventi catastrofici famosi</a><span class="exttail">&#8734;</span> dovuti a bug nascosti nel software e non corretti in tempo dai programmatori!<br />
+<br />
+In questo articolo illustreremo la tecnica più semplice per scovare bug nei nostri programmi: quella delle stampe a video. L'idea è quella di aggiungere in punti opportuni del nostro programma delle operazioni di stampa su schermo che ci permettono di tracciare il funzionamento del programma stesso, ispezionando il contenuto delle sue variabili e identificano la posizione corrente durante l'esecuzione. Forse non avrebbe salvato nel 1996 l'Ariane 5 dall'<a class="ext" href="http://spaceflightnow.com/cluster2/000714feature/ariane501_qt.html">autodistruzione</a><span class="exttail">&#8734;</span> entro 40 secondi dal decollo per un problema nel software del sistema di riferimento inerziale, ma per i nostri scopi è imbattibile.<br />
+<br />
+Per illustrare il procedimento di debugging mediante stampe, useremo come esempio l'esercizio dato al <a class="ext" href="http://www.dis.uniroma1.it/~demetres/didattica/fi2007/appello070112/compitoA.html">compito A dell'appello del 12 Gennaio 2007</a><span class="exttail">&#8734;</span>.<br />
+<br />
+<h5>Problema di calcolo</h5>
+
+<br />
+Scrivere un metodo <tt>espansa</tt> che, data una matrice v di oggetti String (con un numero arbitrario di righe M e di colonne N), restituisce una nuova matrice con 2*M righe e 2*N colonne ottenuta dalla matrice originale "espandendo" ogni elemento in una matrice 2*2 di elementi uguali.<br />
+<br />
+Ad esempio, data in ingresso la matrice:<br />
+<br />
+<tt>A B C<br />
+D E F</tt><br />
+<br />
+la matrice prodotta deve essere:<br />
+<br />
+<tt>A A B B C C<br />
+A A B B C C<br />
+D D E E F F <br />
+D D E E F F</tt><br />
+<br />
+Scrivere la soluzione in modo da poter compilare il seguente programma di prova senza doverlo modificare:<br />
+<br />
+<!--start GeSHi-->
+<div class="code" style="font-family: monospace;"><span class="kw2">public</span> <span class="kw2">class</span> ProvaEserc2 <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="kw2">public</span> <span class="kw2">static</span> <span class="kw4">void</span> main<span class="br0">&#40;</span><a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span> args<span class="br0">&#41;</span><span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> u = <span class="br0">&#123;</span> <span class="br0">&#123;</span> <span class="st0">&quot;a00&quot;</span>, <span class="st0">&quot;a01&quot;</span> <span class="br0">&#125;</span>,<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#123;</span> <span class="st0">&quot;a10&quot;</span>, <span class="st0">&quot;a11&quot;</span><span class="br0">&#125;</span><span class="br0">&#125;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> r = Eserc2.<span class="me1">espansa</span><span class="br0">&#40;</span>u<span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3ASystem+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;TEST 1:&quot;</span><span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;stampa<span class="br0">&#40;</span><span class="st0">&quot;Matrice originale:&quot;</span>, u<span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> c = <span class="br0">&#123;</span> <span class="br0">&#123;</span> <span class="st0">&quot;a00&quot;</span>, <span class="st0">&quot;a00&quot;</span>, <span class="st0">&quot;a01&quot;</span>,<span class="st0">&quot;a01&quot;</span> <span class="br0">&#125;</span>,<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#123;</span> <span class="st0">&quot;a00&quot;</span>, <span class="st0">&quot;a00&quot;</span>, <span class="st0">&quot;a01&quot;</span>,<span class="st0">&quot;a01&quot;</span> <span class="br0">&#125;</span>,<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#123;</span> <span class="st0">&quot;a10&quot;</span>, <span class="st0">&quot;a10&quot;</span>, <span class="st0">&quot;a11&quot;</span>,<span class="st0">&quot;a11&quot;</span><span class="br0">&#125;</span>,<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="br0">&#123;</span> <span class="st0">&quot;a10&quot;</span>, <span class="st0">&quot;a10&quot;</span>, <span class="st0">&quot;a11&quot;</span>,<span class="st0">&quot;a11&quot;</span><span class="br0">&#125;</span><span class="br0">&#125;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;stampa<span class="br0">&#40;</span><span class="st0">&quot;Matrice espansa calcolata:&quot;</span>, r<span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;stampa<span class="br0">&#40;</span><span class="st0">&quot;Matrice espansa corretta:&quot;</span>, c<span class="br0">&#41;</span>;<br />
+<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> u2 = <span class="br0">&#123;</span> <span class="br0">&#123;</span> <span class="st0">&quot;a00&quot;</span>, <span class="st0">&quot;a01&quot;</span> <span class="br0">&#125;</span><span class="br0">&#125;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> r2 = Eserc2.<span class="me1">espansa</span><span class="br0">&#40;</span>u2<span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3ASystem+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;TEST 2:&quot;</span><span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;stampa<span class="br0">&#40;</span><span class="st0">&quot;Matrice originale:&quot;</span>, u2<span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> c2 = <span class="br0">&#123;</span> <span class="br0">&#123;</span> <span class="st0">&quot;a00&quot;</span>, <span class="st0">&quot;a00&quot;</span>, <span class="st0">&quot;a01&quot;</span>,<span class="st0">&quot;a01&quot;</span> <span class="br0">&#125;</span>,<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">&#123;</span> <span class="st0">&quot;a00&quot;</span>, <span class="st0">&quot;a00&quot;</span>, <span class="st0">&quot;a01&quot;</span>,<span class="st0">&quot;a01&quot;</span> <span class="br0">&#125;</span><span class="br0">&#125;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;stampa<span class="br0">&#40;</span><span class="st0">&quot;Matrice&nbsp; espansa calcolata:&quot;</span>, r2<span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;stampa<span class="br0">&#40;</span><span class="st0">&quot;Matrice&nbsp; espansa corretta:&quot;</span>, c2<span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+<br />
+&nbsp; &nbsp; <span class="kw2">private</span> <span class="kw2">static</span> <span class="kw4">void</span> stampa<span class="br0">&#40;</span><a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a> s, <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> v<span class="br0">&#41;</span><span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3ASystem+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span>s<span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> i=<span class="nu0">0</span>; i&lt;v.<span class="me1">length</span>; i++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> j=<span class="nu0">0</span>; j&lt;v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span>; j++<span class="br0">&#41;</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3ASystem+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">print</span><span class="br0">&#40;</span>v<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#91;</span>j<span class="br0">&#93;</span>+<span class="st0">&quot; &quot;</span><span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3ASystem+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span></div>
+<!--end GeSHi-->
+<form action="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/grabcode" method="post">
+<input type="hidden" name="wakka" value="Debugging/grabcode" />
+<input type="submit" class="grabcode" name="save" value="Grab" title="Download" /><input type="hidden" name="filename" value="" /><input type="hidden" name="code" value="public+class+ProvaEserc2+%7B%0A%09public+static+void+main%28String%5B%5D+args%29%7B%0A%09++++String%5B%5D%5B%5D+u+%3D+%7B+%7B+%22a00%22%2C+%22a01%22+%7D%2C%0A%09+++++++++++++++++++++%7B+%22a10%22%2C+%22a11%22%7D%7D%3B%0A%09++++String%5B%5D%5B%5D+r+%3D+Eserc2.espansa%28u%29%3B%0A%09++++System.out.println%28%22TEST+1%3A%22%29%3B%0A%09++++stampa%28%22Matrice+originale%3A%22%2C+u%29%3B%0A%09++++String%5B%5D%5B%5D+c+%3D+%7B+%7B+%22a00%22%2C+%22a00%22%2C+%22a01%22%2C%22a01%22+%7D%2C%0A%09+++++++++++++++++++++%7B+%22a00%22%2C+%22a00%22%2C+%22a01%22%2C%22a01%22+%7D%2C%0A%09+++++++++++++++++++++%7B+%22a10%22%2C+%22a10%22%2C+%22a11%22%2C%22a11%22%7D%2C%0A%09+++++++++++++++++++++%7B+%22a10%22%2C+%22a10%22%2C+%22a11%22%2C%22a11%22%7D%7D%3B%0A%09++++stampa%28%22Matrice+espansa+calcolata%3A%22%2C+r%29%3B%0A%09++++stampa%28%22Matrice+espansa+corretta%3A%22%2C+c%29%3B%0A%0A%09++++String%5B%5D%5B%5D+u2+%3D+%7B+%7B+%22a00%22%2C+%22a01%22+%7D%7D%3B%0A%09++++String%5B%5D%5B%5D+r2+%3D+Eserc2.espansa%28u2%29%3B%0A%09++++System.out.println%28%22TEST+2%3A%22%29%3B%0A%09++++stampa%28%22Matrice+originale%3A%22%2C+u2%29%3B%0A%09++++String%5B%5D%5B%5D+c2+%3D+%7B+%7B+%22a00%22%2C+%22a00%22%2C+%22a01%22%2C%22a01%22+%7D%2C%0A%09++++++++++++++++++++++%7B+%22a00%22%2C+%22a00%22%2C+%22a01%22%2C%22a01%22+%7D%7D%3B%0A%09++++stampa%28%22Matrice++espansa+calcolata%3A%22%2C+r2%29%3B%0A%09++++stampa%28%22Matrice++espansa+corretta%3A%22%2C+c2%29%3B%0A%09%7D%0A%0A%09private+static+void+stampa%28String+s%2C+String%5B%5D%5B%5D+v%29%7B%0A%09++++System.out.println%28s%29%3B%0A%09++++for+%28int+i%3D0%3B+i%3Cv.length%3B+i%2B%2B%29+%7B%0A%09++++++++for+%28int+j%3D0%3B+j%3Cv%5B0%5D.length%3B+j%2B%2B%29+System.out.print%28v%5Bi%5D%5Bj%5D%2B%22+%22%29%3B%0A%09++++++++System.out.println%28%29%3B%0A%09++++%7D%0A%09%7D%0A%7D" /></form>
+<br />
+<br />
+<h5>Prima soluzione (quasi corretta)</h5>
+
+<br />
+Un possibile algoritmo di calcolo consiste nell'allocare dapprima spazio per la matrice di uscita, di cui conosciamo le dimensioni essendo esse il doppio di quelle della matrice di ingresso. Per riempire le celle cella matrice di uscita, scorriamo poi ogni cella (i,j) della matrice di ingresso, e replichiamo il valore della cella nelle quattro celle della matrice di uscita con righe comprese tra 2i e 2i+1 e colonne comprese tra 2j e 2j+1.<br />
+<br />
+Proviamo a implementare questo algoritmo in Java come segue (si veda il <a class="ext" href="http://www.soloingegneria.com/index.php?option=com_smf&amp;Itemid=26&amp;topic=1084.0">post di leopard</a><span class="exttail">&#8734;</span> a riguardo):<br />
+<br />
+<!--start GeSHi-->
+<div class="code" style="font-family: monospace;"><span class="kw2">public</span> <span class="kw2">class</span> Eserc2<span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="kw2">public</span> <span class="kw2">static</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> espansa<span class="br0">&#40;</span><a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> v<span class="br0">&#41;</span><span class="br0">&#123;</span>&nbsp; &nbsp; <br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> s = <span class="kw2">new</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="nu0">2</span>*v.<span class="me1">length</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span>*v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span><span class="br0">&#93;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw4">int</span> p=<span class="nu0">0</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw4">int</span> t=<span class="nu0">0</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> i=<span class="nu0">0</span>; i&lt;v.<span class="me1">length</span>; i++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> j=<span class="nu0">0</span>; j&lt;v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span>; j++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> k=t; k&lt;t<span class="nu0">+2</span>; k++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> h=p; h&lt;p<span class="nu0">+2</span>; h++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;s<span class="br0">&#91;</span>k<span class="br0">&#93;</span><span class="br0">&#91;</span>h<span class="br0">&#93;</span>=v<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#91;</span>j<span class="br0">&#93;</span>;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;p=p<span class="nu0">+2</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;t=t<span class="nu0">+2</span>; <br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw2">return</span> s;&nbsp; &nbsp;<br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span></div>
+<!--end GeSHi-->
+<form action="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/grabcode" method="post">
+<input type="hidden" name="wakka" value="Debugging/grabcode" />
+<input type="submit" class="grabcode" name="save" value="Grab" title="Download" /><input type="hidden" name="filename" value="" /><input type="hidden" name="code" value="public+class+Eserc2%7B%0A%09public+static+String%5B%5D%5B%5D+espansa%28String%5B%5D%5B%5D+v%29%7B++++%0A%09++++String%5B%5D%5B%5D+s+%3D+new+String%5B2%2Av.length%5D%5B2%2Av%5B0%5D.length%5D%3B%0A%09++++int+p%3D0%3B%0A%09++++int+t%3D0%3B%0A%09++++for+%28int+i%3D0%3B+i%3Cv.length%3B+i%2B%2B%29+%7B%0A%09++++++++for+%28int+j%3D0%3B+j%3Cv%5B0%5D.length%3B+j%2B%2B%29+%7B%0A%09++++++++++++for+%28int+k%3Dt%3B+k%3Ct%2B2%3B+k%2B%2B%29+%7B%0A%09++++++++++++++++for+%28int+h%3Dp%3B+h%3Cp%2B2%3B+h%2B%2B%29+%7B%0A%09++++++++++++++++++++s%5Bk%5D%5Bh%5D%3Dv%5Bi%5D%5Bj%5D%3B%0A%09%09++++++++++++%7D%0A%09++++++++++++%7D%0A%09++++++++++++p%3Dp%2B2%3B%0A%09++++++++%7D%0A%09++++++++t%3Dt%2B2%3B+%0A%09++++%7D%0A%09++++return+s%3B%09%0A%09%7D%0A%7D" /></form>
+<br />
+<br />
+Nel codice sopra, i due cicli for più esterni scandiscono le celle <tt>v[i][j]</tt> della matrice di ingresso <tt>v</tt>, mentre i due cicli for più interni servono per replicare il valore della cella <tt>v[i][j]</tt> nel corrispondente sottoquadrato di lato 2 della matrice di uscita <tt>s</tt> che parte da <tt>s[t][p]</tt> e si estende a <tt>s[t+1][p+1]</tt>. Notiamo che gli indici <tt>p</tt> e <tt>t</tt> della matrice di uscita partono da zero e vengono incrementati di 2 ogni volta che i corrispondenti indici <tt>i</tt> e <tt>j</tt> della matrice di ingresso vengono incrementati di 1. L'idea è che in questo modo <tt>t</tt> sia sempre il doppio di <tt>i</tt> e <tt>p</tt> sia sempre il doppio di <tt>j</tt><br />
+<br />
+Proviamo a compilare ed eseguire il programma di prova dato:<br />
+<br />
+<!--start GeSHi-->
+<div class="code" style="font-family: monospace;">&gt; javac ProvaEserc2.<span class="me1">java</span> <br />
+&gt; java ProvaEserc2 <br />
+<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AException+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">Exception</span></a> in thread <span class="st0">&quot;main&quot;</span> java.<span class="me1">lang</span>.<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AArrayIndexOutOfBoundsException+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">ArrayIndexOutOfBoundsException</span></a>: <span class="nu0">4</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;at Eserc2.<span class="me1">espansa</span><span class="br0">&#40;</span>Eserc2.<span class="me1">java</span>:<span class="nu0">9</span><span class="br0">&#41;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;at ProvaEserc2.<span class="me1">main</span><span class="br0">&#40;</span>ProvaEserc2.<span class="me1">java</span>:<span class="nu0">5</span><span class="br0">&#41;</span></div>
+<!--end GeSHi-->
+<form action="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/grabcode" method="post">
+<input type="hidden" name="wakka" value="Debugging/grabcode" />
+<input type="submit" class="grabcode" name="save" value="Grab" title="Download" /><input type="hidden" name="filename" value="" /><input type="hidden" name="code" value="%3E+javac+ProvaEserc2.java+%0A%3E+java+ProvaEserc2+%0AException+in+thread+%22main%22+java.lang.ArrayIndexOutOfBoundsException%3A+4%0A%09++++at+Eserc2.espansa%28Eserc2.java%3A9%29%0A%09++++at+ProvaEserc2.main%28ProvaEserc2.java%3A5%29" /></form>
+<br />
+<br />
+Il programma viene compilato senza errori, ma ci segnala un errore di esecuzione di tipo ArrayIndexOutOfBoundsException alla riga 9 del file Eserc2.java. La riga in questione è:<br />
+<br />
+<!--start GeSHi-->
+<div class="code" style="font-family: monospace;">s<span class="br0">&#91;</span>k<span class="br0">&#93;</span><span class="br0">&#91;</span>h<span class="br0">&#93;</span>=v<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#91;</span>j<span class="br0">&#93;</span>;</div>
+<!--end GeSHi-->
+<form action="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/grabcode" method="post">
+<input type="hidden" name="wakka" value="Debugging/grabcode" />
+<input type="submit" class="grabcode" name="save" value="Grab" title="Download" /><input type="hidden" name="filename" value="" /><input type="hidden" name="code" value="s%5Bk%5D%5Bh%5D%3Dv%5Bi%5D%5Bj%5D%3B" /></form>
+<br />
+Il problema sembra essere che almeno uno degli indici utilizzati per accedere a <tt>s[k][h]</tt> oppure a <tt>v[i][j]</tt> non è valido, cioè sfora i limiti della matrice.<br />
+<br />
+<h5>Debugging mediante stampe</h5>
+
+<br />
+Per scovare il problema, proviamo ad aggiungere una stampa dei valori degli indici <tt>i</tt>, <tt>j</tt>, <tt>k</tt> e <tt>h</tt> usati dall'assegnazione <tt>s[k][h]=v[i][j];</tt> subito prima di eseguirla, e stampiamo inoltre all'inizio le dimensioni delle matrici di ingresso e di uscita:<br />
+<br />
+<!--start GeSHi-->
+<div class="code" style="font-family: monospace;"><span class="kw2">public</span> <span class="kw2">class</span> Eserc2<span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="kw2">public</span> <span class="kw2">static</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> espansa<span class="br0">&#40;</span><a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> v<span class="br0">&#41;</span><span class="br0">&#123;</span>&nbsp; &nbsp; <br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> s = <span class="kw2">new</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="nu0">2</span>*v.<span class="me1">length</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span>*v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span><span class="br0">&#93;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3ASystem+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;[debug] v ha dimensioni &quot;</span>+v.<span class="me1">length</span>+<span class="st0">&quot;x&quot;</span>+v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span><span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3ASystem+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;[debug] s ha dimensioni &quot;</span>+s.<span class="me1">length</span>+<span class="st0">&quot;x&quot;</span>+s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span><span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw4">int</span> p=<span class="nu0">0</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw4">int</span> t=<span class="nu0">0</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> i=<span class="nu0">0</span>; i&lt;v.<span class="me1">length</span>; i++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> j=<span class="nu0">0</span>; j&lt;v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span>; j++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> k=t; k&lt;t<span class="nu0">+2</span>; k++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> h=p; h&lt;p<span class="nu0">+2</span>; h++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3ASystem+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;[debug] s[&quot;</span>+k+<span class="st0">&quot;][&quot;</span>+h+<span class="st0">&quot;]=v[&quot;</span>+i+<span class="st0">&quot;][&quot;</span>+j+<span class="st0">&quot;]&quot;</span><span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;s<span class="br0">&#91;</span>k<span class="br0">&#93;</span><span class="br0">&#91;</span>h<span class="br0">&#93;</span>=v<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#91;</span>j<span class="br0">&#93;</span>;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;p=p<span class="nu0">+2</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;t=t<span class="nu0">+2</span>; <br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw2">return</span> s;&nbsp; &nbsp;<br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span></div>
+<!--end GeSHi-->
+<form action="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/grabcode" method="post">
+<input type="hidden" name="wakka" value="Debugging/grabcode" />
+<input type="submit" class="grabcode" name="save" value="Grab" title="Download" /><input type="hidden" name="filename" value="" /><input type="hidden" name="code" value="public+class+Eserc2%7B%0A%09public+static+String%5B%5D%5B%5D+espansa%28String%5B%5D%5B%5D+v%29%7B++++%0A%09++++String%5B%5D%5B%5D+s+%3D+new+String%5B2%2Av.length%5D%5B2%2Av%5B0%5D.length%5D%3B%0A%09++++System.out.println%28%22%5Bdebug%5D+v+ha+dimensioni+%22%2Bv.length%2B%22x%22%2Bv%5B0%5D.length%29%3B%0A%09++++System.out.println%28%22%5Bdebug%5D+s+ha+dimensioni+%22%2Bs.length%2B%22x%22%2Bs%5B0%5D.length%29%3B%0A%09++++int+p%3D0%3B%0A%09++++int+t%3D0%3B%0A%09++++for+%28int+i%3D0%3B+i%3Cv.length%3B+i%2B%2B%29+%7B%0A%09++++++++for+%28int+j%3D0%3B+j%3Cv%5B0%5D.length%3B+j%2B%2B%29+%7B%0A%09++++++++++++for+%28int+k%3Dt%3B+k%3Ct%2B2%3B+k%2B%2B%29+%7B%0A%09++++++++++++++++for+%28int+h%3Dp%3B+h%3Cp%2B2%3B+h%2B%2B%29+%7B%0A%09++++++++++++++++++++System.out.println%28%22%5Bdebug%5D+s%5B%22%2Bk%2B%22%5D%5B%22%2Bh%2B%22%5D%3Dv%5B%22%2Bi%2B%22%5D%5B%22%2Bj%2B%22%5D%22%29%3B%0A%09++++++++++++++++++++s%5Bk%5D%5Bh%5D%3Dv%5Bi%5D%5Bj%5D%3B%0A%09%09++++++++++++%7D%0A%09++++++++++++%7D%0A%09++++++++++++p%3Dp%2B2%3B%0A%09++++++++%7D%0A%09++++++++t%3Dt%2B2%3B+%0A%09++++%7D%0A%09++++return+s%3B%09%0A%09%7D%0A%7D" /></form>
+<br />
+<br />
+Ricompiliamo e rieseguiamo il programma:<br />
+<br />
+<!--start GeSHi-->
+<div class="code" style="font-family: monospace;">&gt; javac ProvaEserc2.<span class="me1">java</span> <br />
+&gt; java ProvaEserc2<br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> v ha dimensioni 2x2<br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s ha dimensioni 4x4<br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">4</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AException+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">Exception</span></a> in thread <span class="st0">&quot;main&quot;</span> java.<span class="me1">lang</span>.<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AArrayIndexOutOfBoundsException+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">ArrayIndexOutOfBoundsException</span></a>: <span class="nu0">4</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;at Eserc2.<span class="me1">espansa</span><span class="br0">&#40;</span>Eserc2.<span class="me1">java</span>:<span class="nu0">10</span><span class="br0">&#41;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;at ProvaEserc2.<span class="me1">main</span><span class="br0">&#40;</span>ProvaEserc2.<span class="me1">java</span>:<span class="nu0">5</span><span class="br0">&#41;</span></div>
+<!--end GeSHi-->
+<form action="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/grabcode" method="post">
+<input type="hidden" name="wakka" value="Debugging/grabcode" />
+<input type="submit" class="grabcode" name="save" value="Grab" title="Download" /><input type="hidden" name="filename" value="" /><input type="hidden" name="code" value="%3E+javac+ProvaEserc2.java+%0A%3E+java+ProvaEserc2%0A%5Bdebug%5D+v+ha+dimensioni+2x2%0A%5Bdebug%5D+s+ha+dimensioni+4x4%0A%5Bdebug%5D+s%5B0%5D%5B0%5D%3Dv%5B0%5D%5B0%5D%0A%5Bdebug%5D+s%5B0%5D%5B1%5D%3Dv%5B0%5D%5B0%5D%0A%5Bdebug%5D+s%5B1%5D%5B0%5D%3Dv%5B0%5D%5B0%5D%0A%5Bdebug%5D+s%5B1%5D%5B1%5D%3Dv%5B0%5D%5B0%5D%0A%5Bdebug%5D+s%5B0%5D%5B2%5D%3Dv%5B0%5D%5B1%5D%0A%5Bdebug%5D+s%5B0%5D%5B3%5D%3Dv%5B0%5D%5B1%5D%0A%5Bdebug%5D+s%5B1%5D%5B2%5D%3Dv%5B0%5D%5B1%5D%0A%5Bdebug%5D+s%5B1%5D%5B3%5D%3Dv%5B0%5D%5B1%5D%0A%5Bdebug%5D+s%5B2%5D%5B4%5D%3Dv%5B1%5D%5B0%5D%0AException+in+thread+%22main%22+java.lang.ArrayIndexOutOfBoundsException%3A+4%0A%09++++at+Eserc2.espansa%28Eserc2.java%3A10%29%0A%09++++at+ProvaEserc2.main%28ProvaEserc2.java%3A5%29" /></form>
+<br />
+<br />
+Le stampe rivelano che la cella <tt>(0,0)</tt> della matrice di ingresso <tt>v</tt> viene correttamente copiata nelle quattro celle <tt>(0,0)</tt>, <tt>(0,1)</tt>, <tt>(1,0)</tt>, <tt>(1,1)</tt> della matrice di uscita <tt>s</tt>. Lo stesso vale per la cella <tt>(0,1)</tt> di <tt>v</tt>, che viene correttamente copiata nelle quattro celle  <tt>(0,2)</tt>, <tt>(0,3)</tt>, <tt>(1,2)</tt>, <tt>(1,3)</tt> di <tt>s</tt>. Purtroppo però passando alla prima cella della seconda riga di <tt>v</tt>, cioè <tt>(1,0)</tt>, l'assegnazione tenta di scrivere sulla cella <tt>(2,4)</tt> di <tt>s</tt>, che non esiste (gli indici di colonna di <tt>s</tt> vanno da 0 a 3, e quindi il fatto che <tt>h</tt> vale 4 genera un errore di tipo ArrayIndexOutOfBoundsException).<br />
+<br />
+Perché <tt>h</tt> arriva a valere 4? Per capirlo, ricordiamo che <tt>h</tt> va da <tt>p</tt> a <tt>p+1</tt>, quindi dovremmo studiare il valore di <tt>p</tt>. Aggiungiamo un'altra stampa che ci mostra i valori di <tt>p</tt> e <tt>t</tt> corrispondenti a una data coppia di <tt>i</tt> e <tt>j</tt>:<br />
+<br />
+<!--start GeSHi-->
+<div class="code" style="font-family: monospace;"><span class="kw2">public</span> <span class="kw2">class</span> Eserc2<span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="kw2">public</span> <span class="kw2">static</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> espansa<span class="br0">&#40;</span><a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> v<span class="br0">&#41;</span><span class="br0">&#123;</span>&nbsp; &nbsp; <br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> s = <span class="kw2">new</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="nu0">2</span>*v.<span class="me1">length</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span>*v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span><span class="br0">&#93;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3ASystem+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;[debug] v ha dimensioni &quot;</span>+v.<span class="me1">length</span>+<span class="st0">&quot;x&quot;</span>+v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span><span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3ASystem+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;[debug] s ha dimensioni &quot;</span>+s.<span class="me1">length</span>+<span class="st0">&quot;x&quot;</span>+s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span><span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw4">int</span> p=<span class="nu0">0</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw4">int</span> t=<span class="nu0">0</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> i=<span class="nu0">0</span>; i&lt;v.<span class="me1">length</span>; i++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> j=<span class="nu0">0</span>; j&lt;v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span>; j++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3ASystem+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;[debug] i=&quot;</span>+i+<span class="st0">&quot; | j=&quot;</span>+j+<span class="st0">&quot; | t=&quot;</span>+t+<span class="st0">&quot; | p=&quot;</span>+p<span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> k=t; k&lt;t<span class="nu0">+2</span>; k++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> h=p; h&lt;p<span class="nu0">+2</span>; h++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3ASystem+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;[debug] s[&quot;</span>+k+<span class="st0">&quot;][&quot;</span>+h+<span class="st0">&quot;]=v[&quot;</span>+i+<span class="st0">&quot;][&quot;</span>+j+<span class="st0">&quot;]&quot;</span><span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;s<span class="br0">&#91;</span>k<span class="br0">&#93;</span><span class="br0">&#91;</span>h<span class="br0">&#93;</span>=v<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#91;</span>j<span class="br0">&#93;</span>;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;p=p<span class="nu0">+2</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;t=t<span class="nu0">+2</span>; <br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw2">return</span> s;&nbsp; &nbsp;<br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span></div>
+<!--end GeSHi-->
+<form action="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/grabcode" method="post">
+<input type="hidden" name="wakka" value="Debugging/grabcode" />
+<input type="submit" class="grabcode" name="save" value="Grab" title="Download" /><input type="hidden" name="filename" value="" /><input type="hidden" name="code" value="public+class+Eserc2%7B%0A%09public+static+String%5B%5D%5B%5D+espansa%28String%5B%5D%5B%5D+v%29%7B++++%0A%09++++String%5B%5D%5B%5D+s+%3D+new+String%5B2%2Av.length%5D%5B2%2Av%5B0%5D.length%5D%3B%0A%09++++System.out.println%28%22%5Bdebug%5D+v+ha+dimensioni+%22%2Bv.length%2B%22x%22%2Bv%5B0%5D.length%29%3B%0A%09++++System.out.println%28%22%5Bdebug%5D+s+ha+dimensioni+%22%2Bs.length%2B%22x%22%2Bs%5B0%5D.length%29%3B%0A%09++++int+p%3D0%3B%0A%09++++int+t%3D0%3B%0A%09++++for+%28int+i%3D0%3B+i%3Cv.length%3B+i%2B%2B%29+%7B%0A%09++++++++for+%28int+j%3D0%3B+j%3Cv%5B0%5D.length%3B+j%2B%2B%29+%7B%0A%09++++++++++++System.out.println%28%22%5Bdebug%5D+i%3D%22%2Bi%2B%22+%7C+j%3D%22%2Bj%2B%22+%7C+t%3D%22%2Bt%2B%22+%7C+p%3D%22%2Bp%29%3B%0A%09++++++++++++for+%28int+k%3Dt%3B+k%3Ct%2B2%3B+k%2B%2B%29+%7B%0A%09++++++++++++++++for+%28int+h%3Dp%3B+h%3Cp%2B2%3B+h%2B%2B%29+%7B%0A%09++++++++++++++++++++System.out.println%28%22%5Bdebug%5D+s%5B%22%2Bk%2B%22%5D%5B%22%2Bh%2B%22%5D%3Dv%5B%22%2Bi%2B%22%5D%5B%22%2Bj%2B%22%5D%22%29%3B%0A%09++++++++++++++++++++s%5Bk%5D%5Bh%5D%3Dv%5Bi%5D%5Bj%5D%3B%0A%09%09++++++++++++%7D%0A%09++++++++++++%7D%0A%09++++++++++++p%3Dp%2B2%3B%0A%09++++++++%7D%0A%09++++++++t%3Dt%2B2%3B+%0A%09++++%7D%0A%09++++return+s%3B%09%0A%09%7D%0A%7D" /></form>
+<br />
+<br />
+Ricompiliamo e rieseguiamo il programma:<br />
+<br />
+<!--start GeSHi-->
+<div class="code" style="font-family: monospace;">&gt; javac ProvaEserc2.<span class="me1">java</span> <br />
+&gt; java ProvaEserc2<br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> v ha dimensioni 2x2<br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s ha dimensioni 4x4<br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> i=<span class="nu0">0</span> | j=<span class="nu0">0</span> | t=<span class="nu0">0</span> | p=<span class="nu0">0</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> i=<span class="nu0">0</span> | j=<span class="nu0">1</span> | t=<span class="nu0">0</span> | p=<span class="nu0">2</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> i=<span class="nu0">1</span> | j=<span class="nu0">0</span> | t=<span class="nu0">2</span> | p=<span class="nu0">4</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">4</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AException+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">Exception</span></a> in thread <span class="st0">&quot;main&quot;</span> java.<span class="me1">lang</span>.<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AArrayIndexOutOfBoundsException+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">ArrayIndexOutOfBoundsException</span></a>: <span class="nu0">4</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;at Eserc2.<span class="me1">espansa</span><span class="br0">&#40;</span>Eserc2.<span class="me1">java</span>:<span class="nu0">13</span><span class="br0">&#41;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;at ProvaEserc2.<span class="me1">main</span><span class="br0">&#40;</span>ProvaEserc2.<span class="me1">java</span>:<span class="nu0">5</span><span class="br0">&#41;</span></div>
+<!--end GeSHi-->
+<form action="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/grabcode" method="post">
+<input type="hidden" name="wakka" value="Debugging/grabcode" />
+<input type="submit" class="grabcode" name="save" value="Grab" title="Download" /><input type="hidden" name="filename" value="" /><input type="hidden" name="code" value="%3E+javac+ProvaEserc2.java+%0A%3E+java+ProvaEserc2%0A%5Bdebug%5D+v+ha+dimensioni+2x2%0A%5Bdebug%5D+s+ha+dimensioni+4x4%0A%5Bdebug%5D+i%3D0+%7C+j%3D0+%7C+t%3D0+%7C+p%3D0%0A%5Bdebug%5D+s%5B0%5D%5B0%5D%3Dv%5B0%5D%5B0%5D%0A%5Bdebug%5D+s%5B0%5D%5B1%5D%3Dv%5B0%5D%5B0%5D%0A%5Bdebug%5D+s%5B1%5D%5B0%5D%3Dv%5B0%5D%5B0%5D%0A%5Bdebug%5D+s%5B1%5D%5B1%5D%3Dv%5B0%5D%5B0%5D%0A%5Bdebug%5D+i%3D0+%7C+j%3D1+%7C+t%3D0+%7C+p%3D2%0A%5Bdebug%5D+s%5B0%5D%5B2%5D%3Dv%5B0%5D%5B1%5D%0A%5Bdebug%5D+s%5B0%5D%5B3%5D%3Dv%5B0%5D%5B1%5D%0A%5Bdebug%5D+s%5B1%5D%5B2%5D%3Dv%5B0%5D%5B1%5D%0A%5Bdebug%5D+s%5B1%5D%5B3%5D%3Dv%5B0%5D%5B1%5D%0A%5Bdebug%5D+i%3D1+%7C+j%3D0+%7C+t%3D2+%7C+p%3D4%0A%5Bdebug%5D+s%5B2%5D%5B4%5D%3Dv%5B1%5D%5B0%5D%0AException+in+thread+%22main%22+java.lang.ArrayIndexOutOfBoundsException%3A+4%0A%09++++at+Eserc2.espansa%28Eserc2.java%3A13%29%0A%09++++at+ProvaEserc2.main%28ProvaEserc2.java%3A5%29" /></form>
+<br />
+<br />
+Risulta chiaro che viene violata la proprietà secondo cui <tt>p</tt> deve essere il doppio di <tt>j</tt>. Il punto è che <tt>p</tt> continua a crescere sempre di 2, mentre passando alla riga successiva di <tt>v</tt>, <tt>p</tt> dovrebbe azzerarsi come accade per <tt>j</tt>!<br />
+<br />
+L'errore è che l'istruzione <tt>int p=0;</tt> dovrebbe essere eseguita ogni volta che si inizia a scandire una nuova riga di <tt>v</tt>, quindi <tt>int p=0;</tt> dovrebbe essere portata all'inizio del corpo del primo for, prima di entrare nel secondo for.<br />
+<br />
+<h5>Seconda soluzione (corretta)</h5>
+
+<br />
+Modifichiamo il programma come appena detto:<br />
+<br />
+<!--start GeSHi-->
+<div class="code" style="font-family: monospace;"><span class="kw2">public</span> <span class="kw2">class</span> Eserc2<span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="kw2">public</span> <span class="kw2">static</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> espansa<span class="br0">&#40;</span><a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> v<span class="br0">&#41;</span><span class="br0">&#123;</span>&nbsp; &nbsp; <br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> s = <span class="kw2">new</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="nu0">2</span>*v.<span class="me1">length</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span>*v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span><span class="br0">&#93;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3ASystem+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;[debug] v ha dimensioni &quot;</span>+v.<span class="me1">length</span>+<span class="st0">&quot;x&quot;</span>+v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span><span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3ASystem+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;[debug] s ha dimensioni &quot;</span>+s.<span class="me1">length</span>+<span class="st0">&quot;x&quot;</span>+s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span><span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw4">int</span> t=<span class="nu0">0</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> i=<span class="nu0">0</span>; i&lt;v.<span class="me1">length</span>; i++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw4">int</span> p=<span class="nu0">0</span>; <span class="co1">// questo dovrebbe essere qui!</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> j=<span class="nu0">0</span>; j&lt;v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span>; j++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3ASystem+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;[debug] i=&quot;</span>+i+<span class="st0">&quot; | j=&quot;</span>+j+<span class="st0">&quot; | t=&quot;</span>+t+<span class="st0">&quot; | p=&quot;</span>+p<span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> k=t; k&lt;t<span class="nu0">+2</span>; k++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> h=p; h&lt;p<span class="nu0">+2</span>; h++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3ASystem+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">System</span></a>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;[debug] s[&quot;</span>+k+<span class="st0">&quot;][&quot;</span>+h+<span class="st0">&quot;]=v[&quot;</span>+i+<span class="st0">&quot;][&quot;</span>+j+<span class="st0">&quot;]&quot;</span><span class="br0">&#41;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;s<span class="br0">&#91;</span>k<span class="br0">&#93;</span><span class="br0">&#91;</span>h<span class="br0">&#93;</span>=v<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#91;</span>j<span class="br0">&#93;</span>;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;p=p<span class="nu0">+2</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;t=t<span class="nu0">+2</span>; <br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw2">return</span> s;&nbsp; &nbsp;<br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span></div>
+<!--end GeSHi-->
+<form action="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/grabcode" method="post">
+<input type="hidden" name="wakka" value="Debugging/grabcode" />
+<input type="submit" class="grabcode" name="save" value="Grab" title="Download" /><input type="hidden" name="filename" value="" /><input type="hidden" name="code" value="public+class+Eserc2%7B%0A%09public+static+String%5B%5D%5B%5D+espansa%28String%5B%5D%5B%5D+v%29%7B++++%0A%09++++String%5B%5D%5B%5D+s+%3D+new+String%5B2%2Av.length%5D%5B2%2Av%5B0%5D.length%5D%3B%0A%09++++System.out.println%28%22%5Bdebug%5D+v+ha+dimensioni+%22%2Bv.length%2B%22x%22%2Bv%5B0%5D.length%29%3B%0A%09++++System.out.println%28%22%5Bdebug%5D+s+ha+dimensioni+%22%2Bs.length%2B%22x%22%2Bs%5B0%5D.length%29%3B%0A%09++++int+t%3D0%3B%0A%09++++for+%28int+i%3D0%3B+i%3Cv.length%3B+i%2B%2B%29+%7B%0A%09++++++++int+p%3D0%3B+%2F%2F+questo+dovrebbe+essere+qui%21%0A%09++++++++for+%28int+j%3D0%3B+j%3Cv%5B0%5D.length%3B+j%2B%2B%29+%7B%0A%09++++++++++++System.out.println%28%22%5Bdebug%5D+i%3D%22%2Bi%2B%22+%7C+j%3D%22%2Bj%2B%22+%7C+t%3D%22%2Bt%2B%22+%7C+p%3D%22%2Bp%29%3B%0A%09++++++++++++for+%28int+k%3Dt%3B+k%3Ct%2B2%3B+k%2B%2B%29+%7B%0A%09++++++++++++++++for+%28int+h%3Dp%3B+h%3Cp%2B2%3B+h%2B%2B%29+%7B%0A%09++++++++++++++++++++System.out.println%28%22%5Bdebug%5D+s%5B%22%2Bk%2B%22%5D%5B%22%2Bh%2B%22%5D%3Dv%5B%22%2Bi%2B%22%5D%5B%22%2Bj%2B%22%5D%22%29%3B%0A%09++++++++++++++++++++s%5Bk%5D%5Bh%5D%3Dv%5Bi%5D%5Bj%5D%3B%0A%09%09++++++++++++%7D%0A%09++++++++++++%7D%0A%09++++++++++++p%3Dp%2B2%3B%0A%09++++++++%7D%0A%09++++++++t%3Dt%2B2%3B+%0A%09++++%7D%0A%09++++return+s%3B%09%0A%09%7D%0A%7D" /></form>
+<br />
+<br />
+Ricompiliamo infine e rieseguiamo il programma:<br />
+<br />
+<!--start GeSHi-->
+<div class="code" style="font-family: monospace;">&gt; javac ProvaEserc2.<span class="me1">java</span> <br />
+&gt; java ProvaEserc2<br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> v ha dimensioni 2x2<br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s ha dimensioni 4x4<br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> i=<span class="nu0">0</span> | j=<span class="nu0">0</span> | t=<span class="nu0">0</span> | p=<span class="nu0">0</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> i=<span class="nu0">0</span> | j=<span class="nu0">1</span> | t=<span class="nu0">0</span> | p=<span class="nu0">2</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> i=<span class="nu0">1</span> | j=<span class="nu0">0</span> | t=<span class="nu0">2</span> | p=<span class="nu0">0</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> i=<span class="nu0">1</span> | j=<span class="nu0">1</span> | t=<span class="nu0">2</span> | p=<span class="nu0">2</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+TEST <span class="nu0">1</span>:<br />
+Matrice originale:<br />
+a00 a01 <br />
+a10 a11 <br />
+Matrice espansa calcolata:<br />
+a00 a00 a01 a01 <br />
+a00 a00 a01 a01 <br />
+a10 a10 a11 a11 <br />
+a10 a10 a11 a11 <br />
+Matrice espansa corretta:<br />
+a00 a00 a01 a01 <br />
+a00 a00 a01 a01 <br />
+a10 a10 a11 a11 <br />
+a10 a10 a11 a11 <br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> v ha dimensioni 1x2<br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s ha dimensioni 2x4<br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> i=<span class="nu0">0</span> | j=<span class="nu0">0</span> | t=<span class="nu0">0</span> | p=<span class="nu0">0</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> i=<span class="nu0">0</span> | j=<span class="nu0">1</span> | t=<span class="nu0">0</span> | p=<span class="nu0">2</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+<span class="br0">&#91;</span>debug<span class="br0">&#93;</span> s<span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">3</span><span class="br0">&#93;</span>=v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">1</span><span class="br0">&#93;</span><br />
+TEST <span class="nu0">2</span>:<br />
+Matrice originale:<br />
+a00 a01 <br />
+Matrice&nbsp; espansa calcolata:<br />
+a00 a00 a01 a01 <br />
+a00 a00 a01 a01 <br />
+Matrice&nbsp; espansa corretta:<br />
+a00 a00 a01 a01 <br />
+a00 a00 a01 a01 <br />
+&gt;</div>
+<!--end GeSHi-->
+<form action="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/grabcode" method="post">
+<input type="hidden" name="wakka" value="Debugging/grabcode" />
+<input type="submit" class="grabcode" name="save" value="Grab" title="Download" /><input type="hidden" name="filename" value="" /><input type="hidden" name="code" value="%3E+javac+ProvaEserc2.java+%0A%3E+java+ProvaEserc2%0A%5Bdebug%5D+v+ha+dimensioni+2x2%0A%5Bdebug%5D+s+ha+dimensioni+4x4%0A%5Bdebug%5D+i%3D0+%7C+j%3D0+%7C+t%3D0+%7C+p%3D0%0A%5Bdebug%5D+s%5B0%5D%5B0%5D%3Dv%5B0%5D%5B0%5D%0A%5Bdebug%5D+s%5B0%5D%5B1%5D%3Dv%5B0%5D%5B0%5D%0A%5Bdebug%5D+s%5B1%5D%5B0%5D%3Dv%5B0%5D%5B0%5D%0A%5Bdebug%5D+s%5B1%5D%5B1%5D%3Dv%5B0%5D%5B0%5D%0A%5Bdebug%5D+i%3D0+%7C+j%3D1+%7C+t%3D0+%7C+p%3D2%0A%5Bdebug%5D+s%5B0%5D%5B2%5D%3Dv%5B0%5D%5B1%5D%0A%5Bdebug%5D+s%5B0%5D%5B3%5D%3Dv%5B0%5D%5B1%5D%0A%5Bdebug%5D+s%5B1%5D%5B2%5D%3Dv%5B0%5D%5B1%5D%0A%5Bdebug%5D+s%5B1%5D%5B3%5D%3Dv%5B0%5D%5B1%5D%0A%5Bdebug%5D+i%3D1+%7C+j%3D0+%7C+t%3D2+%7C+p%3D0%0A%5Bdebug%5D+s%5B2%5D%5B0%5D%3Dv%5B1%5D%5B0%5D%0A%5Bdebug%5D+s%5B2%5D%5B1%5D%3Dv%5B1%5D%5B0%5D%0A%5Bdebug%5D+s%5B3%5D%5B0%5D%3Dv%5B1%5D%5B0%5D%0A%5Bdebug%5D+s%5B3%5D%5B1%5D%3Dv%5B1%5D%5B0%5D%0A%5Bdebug%5D+i%3D1+%7C+j%3D1+%7C+t%3D2+%7C+p%3D2%0A%5Bdebug%5D+s%5B2%5D%5B2%5D%3Dv%5B1%5D%5B1%5D%0A%5Bdebug%5D+s%5B2%5D%5B3%5D%3Dv%5B1%5D%5B1%5D%0A%5Bdebug%5D+s%5B3%5D%5B2%5D%3Dv%5B1%5D%5B1%5D%0A%5Bdebug%5D+s%5B3%5D%5B3%5D%3Dv%5B1%5D%5B1%5D%0ATEST+1%3A%0AMatrice+originale%3A%0Aa00+a01+%0Aa10+a11+%0AMatrice+espansa+calcolata%3A%0Aa00+a00+a01+a01+%0Aa00+a00+a01+a01+%0Aa10+a10+a11+a11+%0Aa10+a10+a11+a11+%0AMatrice+espansa+corretta%3A%0Aa00+a00+a01+a01+%0Aa00+a00+a01+a01+%0Aa10+a10+a11+a11+%0Aa10+a10+a11+a11+%0A%5Bdebug%5D+v+ha+dimensioni+1x2%0A%5Bdebug%5D+s+ha+dimensioni+2x4%0A%5Bdebug%5D+i%3D0+%7C+j%3D0+%7C+t%3D0+%7C+p%3D0%0A%5Bdebug%5D+s%5B0%5D%5B0%5D%3Dv%5B0%5D%5B0%5D%0A%5Bdebug%5D+s%5B0%5D%5B1%5D%3Dv%5B0%5D%5B0%5D%0A%5Bdebug%5D+s%5B1%5D%5B0%5D%3Dv%5B0%5D%5B0%5D%0A%5Bdebug%5D+s%5B1%5D%5B1%5D%3Dv%5B0%5D%5B0%5D%0A%5Bdebug%5D+i%3D0+%7C+j%3D1+%7C+t%3D0+%7C+p%3D2%0A%5Bdebug%5D+s%5B0%5D%5B2%5D%3Dv%5B0%5D%5B1%5D%0A%5Bdebug%5D+s%5B0%5D%5B3%5D%3Dv%5B0%5D%5B1%5D%0A%5Bdebug%5D+s%5B1%5D%5B2%5D%3Dv%5B0%5D%5B1%5D%0A%5Bdebug%5D+s%5B1%5D%5B3%5D%3Dv%5B0%5D%5B1%5D%0ATEST+2%3A%0AMatrice+originale%3A%0Aa00+a01+%0AMatrice++espansa+calcolata%3A%0Aa00+a00+a01+a01+%0Aa00+a00+a01+a01+%0AMatrice++espansa+corretta%3A%0Aa00+a00+a01+a01+%0Aa00+a00+a01+a01+%0A%3E" /></form>
+<br />
+<br />
+Ora tutto sembra essere corretto, <tt>p</tt> si riazzera come dovrebbe! Possiamo quindi rimuovere le stampe di debugging e il nostro programma finale è pronto:<br />
+<br />
+<!--start GeSHi-->
+<div class="code" style="font-family: monospace;"><span class="kw2">public</span> <span class="kw2">class</span> Eserc2<span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="kw2">public</span> <span class="kw2">static</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> espansa<span class="br0">&#40;</span><a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> v<span class="br0">&#41;</span><span class="br0">&#123;</span>&nbsp; &nbsp; <br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="br0">&#93;</span> s = <span class="kw2">new</span> <a href="http://www.google.com/search?hl=en&amp;q=allinurl%3AString+java.sun.com&amp;bntI=I%27m%20Feeling%20Lucky"><span class="kw3">String</span></a><span class="br0">&#91;</span><span class="nu0">2</span>*v.<span class="me1">length</span><span class="br0">&#93;</span><span class="br0">&#91;</span><span class="nu0">2</span>*v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span><span class="br0">&#93;</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw4">int</span> t=<span class="nu0">0</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> i=<span class="nu0">0</span>; i&lt;v.<span class="me1">length</span>; i++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw4">int</span> p=<span class="nu0">0</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> j=<span class="nu0">0</span>; j&lt;v<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span>.<span class="me1">length</span>; j++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> k=t; k&lt;t<span class="nu0">+2</span>; k++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="kw1">for</span> <span class="br0">&#40;</span><span class="kw4">int</span> h=p; h&lt;p<span class="nu0">+2</span>; h++<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;s<span class="br0">&#91;</span>k<span class="br0">&#93;</span><span class="br0">&#91;</span>h<span class="br0">&#93;</span>=v<span class="br0">&#91;</span>i<span class="br0">&#93;</span><span class="br0">&#91;</span>j<span class="br0">&#93;</span>;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;p=p<span class="nu0">+2</span>;<br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;t=t<span class="nu0">+2</span>; <br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="br0">&#125;</span><br />
+&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;<span class="kw2">return</span> s;&nbsp; &nbsp;<br />
+&nbsp; &nbsp; <span class="br0">&#125;</span><br />
+<span class="br0">&#125;</span></div>
+<!--end GeSHi-->
+<form action="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/grabcode" method="post">
+<input type="hidden" name="wakka" value="Debugging/grabcode" />
+<input type="submit" class="grabcode" name="save" value="Grab" title="Download" /><input type="hidden" name="filename" value="" /><input type="hidden" name="code" value="public+class+Eserc2%7B%0A%09public+static+String%5B%5D%5B%5D+espansa%28String%5B%5D%5B%5D+v%29%7B++++%0A%09++++String%5B%5D%5B%5D+s+%3D+new+String%5B2%2Av.length%5D%5B2%2Av%5B0%5D.length%5D%3B%0A%09++++int+t%3D0%3B%0A%09++++for+%28int+i%3D0%3B+i%3Cv.length%3B+i%2B%2B%29+%7B%0A%09++++++++int+p%3D0%3B%0A%09++++++++for+%28int+j%3D0%3B+j%3Cv%5B0%5D.length%3B+j%2B%2B%29+%7B%0A%09++++++++++++for+%28int+k%3Dt%3B+k%3Ct%2B2%3B+k%2B%2B%29+%7B%0A%09++++++++++++++++for+%28int+h%3Dp%3B+h%3Cp%2B2%3B+h%2B%2B%29+%7B%0A%09++++++++++++++++++++s%5Bk%5D%5Bh%5D%3Dv%5Bi%5D%5Bj%5D%3B%0A%09%09++++++++++++%7D%0A%09++++++++++++%7D%0A%09++++++++++++p%3Dp%2B2%3B%0A%09++++++++%7D%0A%09++++++++t%3Dt%2B2%3B+%0A%09++++%7D%0A%09++++return+s%3B%09%0A%09%7D%0A%7D" /></form>
+<br />
+<br />
+<h5>Per saperne di più</h5>
+
+<br />
+<ul><li><a class="ext" href="http://it.wikipedia.org/wiki/Debugging">Debugging, Wikipedia (italiano)</a><span class="exttail">&#8734;</span>
+</li><li><a class="ext" href="http://en.wikipedia.org/wiki/Debugging">Debugging, Wikipedia (inglese, molto più dettagliato)</a><span class="exttail">&#8734;</span>
+</li><li><a class="ext" href="http://www.hacknot.info/hacknot/action/showEntry?eid=85">Articolo di Harlan Mills sul debugging manuale (inglese)</a><span class="exttail">&#8734;</span></li></ul>
+<br />
+<ul class="thread"><li><a class="ext" href="http://www.dis.uniroma1.it/~demetres">Camil Demetrescu</a><span class="exttail">&#8734;</span>, 27 Novembre 2007</li></ul>
+<br />
+</div>
+<div class="footer">
+<form action="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=TextSearch" method="get">
+<input type="hidden" name="wakka" value="TextSearch" />
+<a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/history" title="Click to view recent edits to this page">Page History</a> ::
+<a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/revisions" title="Click to view recent revisions list for this page">2009-04-28 14:01:30</a> <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=Debugging/revisions.xml" title="Click to view recent page revisions in XML format."><img src="images/xml.png" width="36" height="14" align="middle" style="border : 0px;" alt="XML" /></a> ::
+Owner: <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=CamilDemetrescu">CamilDemetrescu</a> ::
+ 
+Search: <input name="phrase" size="15" class="searchbox" />
+</form>
+</div>
+
+<div class="smallprint">
+<a class="ext" href="http://validator.w3.org/check/referer">Valid XHTML 1.0 Transitional</a><span class="exttail">&#8734;</span> ::
+<a class="ext" href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a><span class="exttail">&#8734;</span> ::
+Powered by <a class="ext" href="http://wikkawiki.org/">Wikka Wakka Wiki 1.1.6.3</a><span class="exttail">&#8734;</span></div>
+
+<div class="smallprint">Page was generated in 0.4942 seconds</div>
+</body>
+</html>

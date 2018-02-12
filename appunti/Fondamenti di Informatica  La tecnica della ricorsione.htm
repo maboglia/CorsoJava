@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Fondamenti di Informatica: La tecnica della ricorsione</title>
+	<base href="http://www.dis.uniroma1.it/~fi/" />
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+	<meta name="keywords" content="programmazione Python fondamenti informatica " />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" href="css/corporate.css" />
+	<link rel="stylesheet" type="text/css" href="css/print.css" media="print" />
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	<link rel="alternate" type="application/rss+xml" title="Fondamenti di Informatica: revisions for TecnicaRicorsione (RSS)" href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=TecnicaRicorsione/revisions.xml" />
+	<link rel="alternate" type="application/rss+xml" title="Fondamenti di Informatica: recently edited pages (RSS)" href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=TecnicaRicorsione/recentchanges.xml" />
+</head>
+<body  >
+<div class="header">
+
+<h2>Fondamenti di Informatica I - A.A. 2013-2014</h2>
+
+<h3>Corso di Laurea in Ingegneria Informatica e Automatica</h3>
+
+<!--	<h2>Fondamenti di Informatica : <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=TecnicaRicorsione/backlinks" title="Display a list of pages linking to TecnicaRicorsione">TecnicaRicorsione</a></h2>
+-->
+	<a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=HomePage">HomePage</a> |
+	<a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=AvvisiCorso">Avvisi</a> | <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=InfoAuto">Canali</a> | <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=ProgrammaCorso">Programma</a> | <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=TestiCorso">Materiale didattico</a> | <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=EserciziCorso">Esercitazioni</a> | <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=EsamiCorso">Esami</a> | <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=anniprecedenti">Anni Precedenti (Java)</a> | <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=UserSettings">Login</a> 	
+</div>
+
+<!--starting page content-->
+<div class="page">
+<h4>La tecnica della ricorsione</h4>
+
+<br />
+La <em>ricorsione</em> è una tecnica potente di risoluzione di problemi di calcolo. Consiste nel ridurre la risoluzione di un problema di calcolo su dati di ingresso di una certa grandezza alla risoluzione dello stesso problema su dati di grandezza più piccola.<br />
+<br />
+Definire un <em>algoritmo ricorsivo</em> richiede di:<br />
+<br />
+<ol type="1"><li> Definire una opportuna nozione di "grandezza" dei dati di ingresso.
+</li><li> Identificare una grandezza dei dati di ingresso sufficientemente piccola da rendere semplice la soluzione del problema (<strong>passo base</strong>).
+</li><li> Per dati più grandi, ridurre il problema a un problema più piccolo, la cui soluzione permetta di risolvere facilmente il problema iniziale (<strong>passo ricorsivo</strong>).</li></ol>
+<br />
+Illustriamo ora in dettaglio questi tre passi mediante un esempio.<br />
+<br />
+<strong>Esempio.</strong> Definire un algoritmo ricorsivo per il seguente problema:<br />
+<br />
+<div class="indent"><em>Dato un intero n non negativo, calcolare la somma dei primi n numeri.</em></div>
+<br />
+<ol type="1"><li> <em>Definire una opportuna nozione di "grandezza" dei dati di ingresso</em>: la grandezza del problema è <em>n</em>.
+</li><li> <em>Identificare una grandezza dei dati di ingresso sufficientemente piccola da rendere semplice la soluzione del problema</em> (<strong>passo base</strong>): per n=0, il risultato è banalmente 0.
+</li><li> <em>Per dati più grandi, ridurre il problema a un problema più piccolo, la cui soluzione permetta di risolvere facilmente il problema iniziale</em> (<strong>passo ricorsivo</strong>): se n&gt;0, calcoliamo innanzitutto la somma x dei primi n-1 numeri. La soluzione al problema originario sarà facilmente x+n. Diremo che il problema più piccolo (somma dei primi n-1 numeri) viene risolto "ricorsivamente".</li></ol>
+<br />
+Questo algoritmo può essere facilmente tradotto in Java come segue:<br />
+<br />
+<!--start GeSHi-->
+<div class="code" style="font-family: monospace;"><span class="kw2">public</span> <span class="kw2">static</span> <span class="kw4">int</span> sommaNumeri<span class="br0">&#40;</span><span class="kw4">int</span> n<span class="br0">&#41;</span> <span class="br0">&#123;</span><br />
+&nbsp; &nbsp; <span class="kw1">if</span> <span class="br0">&#40;</span>n==<span class="nu0">0</span><span class="br0">&#41;</span> <span class="kw2">return</span> <span class="nu0">0</span>;&nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">// passo base</span><br />
+&nbsp; &nbsp; <span class="kw4">int</span> x = sommaNumeri<span class="br0">&#40;</span>n<span class="nu0">-1</span><span class="br0">&#41;</span>; <span class="co1">// passo ricorsivo: calcolo &quot;ricorsivamente&quot; un problema di dimensione n-1 (il metodo chiama se stesso su n-1)</span><br />
+&nbsp; &nbsp; <span class="kw2">return</span> x+n;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="co1">// passo ricorsivo: calcolo la soluzione del problema iniziale usando il risultato del problema più piccolo</span><br />
+<span class="br0">&#125;</span></div>
+<!--end GeSHi-->
+<form action="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=TecnicaRicorsione/grabcode" method="post">
+<input type="hidden" name="wakka" value="TecnicaRicorsione/grabcode" />
+<input type="submit" class="grabcode" name="save" value="Grab" title="Download" /><input type="hidden" name="filename" value="" /><input type="hidden" name="code" value="public+static+int+sommaNumeri%28int+n%29+%7B%0A%09if+%28n%3D%3D0%29+return+0%3B+++++++%2F%2F+passo+base%0A%09int+x+%3D+sommaNumeri%28n-1%29%3B+%2F%2F+passo+ricorsivo%3A+calcolo+%22ricorsivamente%22+un+problema+di+dimensione+n-1+%28il+metodo+chiama+se+stesso+su+n-1%29%0A%09return+x%2Bn%3B+++++++++++++++%2F%2F+passo+ricorsivo%3A+calcolo+la+soluzione+del+problema+iniziale+usando+il+risultato+del+problema+pi%F9+piccolo%0A%7D" /></form>
+<br />
+<br />
+</div>
+<div class="footer">
+<form action="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=TextSearch" method="get">
+<input type="hidden" name="wakka" value="TextSearch" />
+<a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=TecnicaRicorsione/history" title="Click to view recent edits to this page">Page History</a> ::
+<a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=TecnicaRicorsione/revisions" title="Click to view recent revisions list for this page">2009-05-05 09:45:32</a> <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=TecnicaRicorsione/revisions.xml" title="Click to view recent page revisions in XML format."><img src="images/xml.png" width="36" height="14" align="middle" style="border : 0px;" alt="XML" /></a> ::
+Owner: <a href="http://www.dis.uniroma1.it/~fi/wikka.php?wakka=CamilDemetrescu">CamilDemetrescu</a> ::
+ 
+Search: <input name="phrase" size="15" class="searchbox" />
+</form>
+</div>
+
+<div class="smallprint">
+<a class="ext" href="http://validator.w3.org/check/referer">Valid XHTML 1.0 Transitional</a><span class="exttail">&#8734;</span> ::
+<a class="ext" href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a><span class="exttail">&#8734;</span> ::
+Powered by <a class="ext" href="http://wikkawiki.org/">Wikka Wakka Wiki 1.1.6.3</a><span class="exttail">&#8734;</span></div>
+
+<div class="smallprint">Page was generated in 0.0497 seconds</div>
+</body>
+</html>
