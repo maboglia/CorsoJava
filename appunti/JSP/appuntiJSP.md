@@ -1,34 +1,29 @@
-
 # Corso JSP
 
-## Corso JSP - In breve
-### corso-jsp-introduzione
+<!-- TOC -->
+
 - [Corso JSP](#corso-jsp)
-	- [Corso JSP - In breve](#corso-jsp---in-breve)
-		- [corso-jsp-introduzione](#corso-jsp-introduzione)
-	- [Corso JSP - Le direttive](#corso-jsp---le-direttive)
-		- [corso-jsp-le-direttive](#corso-jsp-le-direttive)
-	- [Corso JSP - Le variabili](#corso-jsp---le-variabili)
-		- [corso-jsp-le-variabili](#corso-jsp-le-variabili)
-	- [Corso JSP - argomenti](#corso-jsp---argomenti)
-		- [corso-jsp-argomenti](#corso-jsp-argomenti)
-	- [Corso JSP - jsp:forward](#corso-jsp---jspforward)
-	- [Corso JSP - Le dichiarazioni](#corso-jsp---le-dichiarazioni)
-		- [corso-jsp-dichiarazioni](#corso-jsp-dichiarazioni)
-	- [Corso JSP - Ciclo DO WHILE](#corso-jsp---ciclo-do-while)
-		- [corso-jsp-ciclo-do-while](#corso-jsp-ciclo-do-while)
-	- [Corso JSP - Funzione contatore accessi + esempio uso dichiarazioni e espressioni](#corso-jsp---funzione-contatore-accessi-esempio-uso-dichiarazioni-e-espressioni)
-		- [corso-jsp-dichiarazioni-espressioni](#corso-jsp-dichiarazioni-espressioni)
-	- [Corso JSP - Esempio JSTL Core](#corso-jsp---esempio-jstl-core)
-		- [corso-jsp-esempio-jstl-core](#corso-jsp-esempio-jstl-core)
-	- [Corso JSP - Esempio JSTL Functions](#corso-jsp---esempio-jstl-functions)
-		- [corso-jsp-esempio-jstl-functions](#corso-jsp-esempio-jstl-functions)
-	- [Corso JSP - Esempio Java Server Faces](#corso-jsp---esempio-java-server-faces)
-		- [corso-jsp-java-server-faces](#corso-jsp-java-server-faces)
+    - [Corso JSP - Le direttive](#corso-jsp---le-direttive)
+    - [Corso JSP - Le variabili](#corso-jsp---le-variabili)
+    - [oggetti impliciti](#oggetti-impliciti)
+    - [Ciclo di vita di una pagina JSP](#ciclo-di-vita-di-una-pagina-jsp)
+    - [Elementi di una pagina JSP](#elementi-di-una-pagina-jsp)
+    - [JDBC e interazione con database](#jdbc-e-interazione-con-database)
+    - [Uso avanzato](#uso-avanzato)
+    - [Corso JSP - argomenti](#corso-jsp---argomenti)
+        - [corso-jsp-argomenti](#corso-jsp-argomenti)
+    - [Corso JSP - jsp:forward](#corso-jsp---jspforward)
+    - [Corso JSP - Le dichiarazioni](#corso-jsp---le-dichiarazioni)
+    - [Corso JSP - Ciclo DO WHILE](#corso-jsp---ciclo-do-while)
+    - [Corso JSP - Funzione contatore accessi + esempio uso dichiarazioni e espressioni](#corso-jsp---funzione-contatore-accessi-esempio-uso-dichiarazioni-e-espressioni)
+    - [Corso JSP - Esempio JSTL Core](#corso-jsp---esempio-jstl-core)
+    - [Corso JSP - Esempio JSTL Functions](#corso-jsp---esempio-jstl-functions)
+    - [Corso JSP - Esempio Java Server Faces](#corso-jsp---esempio-java-server-faces)
+
+<!-- /TOC -->
 
 
 ## Corso JSP - Le direttive
-### corso-jsp-le-direttive
 Corso JSP - Le direttive
 Le direttive permettono di definire la struttura di tutto il documento JSP. Indicano gli aspetti principali del servlet in cui sarà convertito il file JSP.
 
@@ -117,10 +112,6 @@ Esempi librerie standard
 * JSTL function
 
 ## Corso JSP - Le variabili
-
-### corso-jsp-le-variabili
-
-Corso JSP - Le variabili
 Le variabili  in Java devono essere definite e tipizzate, i tipi principali sono (utilizzati negli esempi)
 
 * String,
@@ -187,9 +178,6 @@ out.print("La condizione è falsa");//stamperà la condizione è falsa
 </html>
 ```
 
-
-
-
 * JSP è una specifica di Sun Microsystems, poi acquistata da Oracle leggi qui la storia
 * Serve per creare e gestire pagine web dinamiche
 * Permette di mescolare in una pagina codice HTML per generare la parte statica, con contenuto dinamico generato a partire da marcatori speciali <% ....  %>
@@ -204,18 +192,13 @@ pagina JSP -> Servlet
 * Questo servlet generato processa qualsiasi richiesta per questa pagina JSP
 * Se si modifica il codice della pagina JSP, allora si rigenera e ricompila automaticamente il servlet e si ricarica la volta successiva
 
-oggetti impliciti
+## oggetti impliciti
 JSP utilizza gli oggetti impliciti (built-in)
-
-
 
 * Gli oggetti impliciti sono oggetti istanziati automaticamente dall’ambiente JSP, non dobbiamo preoccuparci di importarli e istanziarli.
 * Per utilizzarli è sufficiente usare la sintassi nomeOggetto.nomeMetodo
 
-
-
 questi oggetti sono disponibili per l’uso in pagine JSP e sono:
-
 
 * out: per scrivere codice HTML nella risposta (System.out di Java)
 * session: dati specifici della sessione utente corrente
@@ -227,9 +210,7 @@ questi oggetti sono disponibili per l’uso in pagine JSP e sono:
 * exception: eventuali eccezioni lanciate dal server; utile per pagine di errore
 * pageContext: dati di contesto per l’esecuzione della pagina
 
-
 Gli oggetti impliciti possono essere 
-
 
 * oggetti legati alla servlet relativa alla pagina JSP
 * oggetti legati all’input e all’output della pagina JSP
@@ -239,35 +220,25 @@ Gli oggetti impliciti possono essere
 Ambito
 Definisce dove e per quanto tempo saranno accessibili gli oggetti: oggetti impliciti, JavaBeans, ...
 
-
-
-
-
 * di pagina: l'oggetto è accessibile dal servlet che rappresenta la pagina
 * di richiesta:  l'oggetto viene creato e poi distrutto  dopo l'uso
 * di sessione: l'oggetto è accessibile durante tutta la sessione
 * di applicazione: l'oggetto è accessibile dal servlet che rappresenta la pagina
 
-
-Ciclo di vita di una pagina JSP
+## Ciclo di vita di una pagina JSP
 La pagina viene salvata in una cartella pubblica del server web
-
 alla prima richiesta ricevuta dal Web server la pagina JSP è automaticamente:
-
 
 * tradotta in un sorgente Java chiamato Servlet
 * compilata come programma Java
 * caricata in memoria ed eseguita
-
 
 successivamente la pagina JSP (la servlet) viene solo eseguita.
 In fase di debug il web server verifica se la pagina JSP è più recente del servlet corrispondente.
 
 Rispetto ad altre tecnologie server side come PHP o ASP, questa è una differenza vantaggiosa in termini di velocità di risposta: dopo la prima esecuzione, il codice risulterà già compilato e disponibile immediatamente. Con PHP e ASP il webserver interpreterà il codice ad ogni richiesta prima di servire la pagina di risposta.
 
-
-Elementi di una pagina JSP
-
+## Elementi di una pagina JSP
 
 * codice HTML
 * marcatori JSP
@@ -299,32 +270,7 @@ Elementi di una pagina JSP
 * azioni personalizzate - custom tags (vedi sotto tag libraries)
 
 
-
-
-Costrutti del linguaggio
-Supporta i costrutti e la sintassi standard di Java, ecco alcuni esempi:
-
-
-esempi disponibili:
-
-* variabili
-* costrutti condizionali (if, if else, switch case) 
-* cicli for
-* cicli while
-* cicli while, do-while
-* eccezioni e blocchi try catch
-* array
-
-* array di stringhe
-* array tipo intero
-* array tipo List
-* array tipo Vector
-* array multidimensionale
-
-
-
-
-JDBC e interazione con database
+## JDBC e interazione con database
 
 * Leggi scrivi su file di testo
 * Leggi e scrivi su database
@@ -344,7 +290,7 @@ Le Tag Libraries
 * Librerie di Tag personalizzate
 * EL - expressions language - espressioni dinamiche
 
- Uso avanzato
+## Uso avanzato
 
 * Hello World con JSF - Java Server Faces
 * Hibernate, JSTL e MySql
@@ -357,10 +303,6 @@ Edizione del corso
 
 * Anno formativo 2015-2016 - "Tecnico di sviluppo software", Torino
 * Anno formativo 2013 - "Programmazione web server-side con JSP" - corso IFTS - ITIS Pininfarina (TO)
-
- 
-
----
 
 
 ## Corso JSP - argomenti
@@ -387,8 +329,6 @@ Primo approccio a JSP
  
 
 Elementi fondamentali di JSP - Sintassi e caratteristiche degli oggetti principali: scriptlet, azioni standard, servlet
-
-
 
 * Direttive <%@   (page | includi | taglib)
 * Codice Java <%  (dichiarazioni | java | espressioni)
@@ -473,7 +413,6 @@ per trovarne altri, dopo l'indirizzo del server (es. localhost:8080) scrivi /exa
 
 
 ## Corso JSP - Le dichiarazioni
-### corso-jsp-dichiarazioni
 
 * JSP: usare le dichiarazioni ```<%! ... %>```
 * le espressioni ```<%= ... %>```
@@ -511,8 +450,6 @@ Copia e completa il codice
 ```
 
 ## Corso JSP - Ciclo DO WHILE 
-
-### corso-jsp-ciclo-do-while
 
 * Ciclo DO WHILE con JSP
  (il ciclo viene eseguito almeno una volta)
@@ -556,8 +493,6 @@ Author : mauro
 
 ## Corso JSP - Funzione contatore accessi + esempio uso dichiarazioni e espressioni
 
-### corso-jsp-dichiarazioni-espressioni
-
 * Corso JSP - Funzione contatore accessi + esempio uso dichiarazioni e espressioni
 
 ```html
@@ -590,8 +525,6 @@ Questa pagina è stata caricata <%= conta %> volte.
 ```
 
 ## Corso JSP - Esempio JSTL Core
-
-### corso-jsp-esempio-jstl-core
 
 
 Corso JSP - JSTL e EL
@@ -656,8 +589,6 @@ JSP Standard Tag Library e Expression Language
 ```
 
 ## Corso JSP - Esempio JSTL Functions
-### corso-jsp-esempio-jstl-functions
-Corso JSP - JSTL
 
 ```html
 <%-- 
@@ -698,9 +629,6 @@ Corso JSP - JSTL
 ```
 
 ## Corso JSP - Esempio Java Server Faces
-
-### corso-jsp-java-server-faces
-
 
 Corso JSP - Java Server Faces - Hello world JSF con Netbeans 7.3
 
@@ -761,4 +689,3 @@ Benvenuto: <h:outputText value="#{accesso.login}" />
 
 <h:/form>---
 ```
-
