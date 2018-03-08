@@ -141,9 +141,10 @@ Dopodiché andremo a descrivere i principali metodi offerti dalla classe Files.
 
 Per ottenere un’istanza di Path, occorre utilizzare l’oggetto FileSystem o più semplicemente l’oggetto Paths. 
 
+```java
 Path path1 = Filesystems.getDefault().getPath(“/root/aFile.txt”);
 Path path2 = Paths.get(“C:\\Program Files\\Notepadpp”);
-
+```
 Un oggetto di tipo Path, che rappresenta un percorso che punta a un file o una directory, è legato al sistema operativo nel quale abbiamo avviato il programma che ne fa uso, infatti la sintassi di definizione del percorso deve usare le convenzioni del sistema medesimo. 
 Una volta ottenuto un oggetto Path è possibile utilizzare una serie di metodi potenti e semplici da utilizzare.
 
