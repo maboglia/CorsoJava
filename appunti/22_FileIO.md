@@ -14,13 +14,13 @@ classe OutputStream	| per output di byte verso un file
 ## Character Stream
 
 **Reader** e **Writer** sono le due superclassi astratte per i character stream.
-Queste due classi hanno la caratteristica di obbligare le sottoclassi a leggere e scrivere dividendo i dati in “pezzi” di 16 bit ognuno, quindi compatibili con il tipo char di Java.
+Queste due classi hanno la caratteristica di obbligare le sottoclassi a leggere e scrivere dividendo i dati in "pezzi" di 16 bit ognuno, quindi compatibili con il tipo char di Java.
 
 ## Byte Stream
 
 **InputStream** e **OutputStream** sono le due superclassi astratte per i byte stream.
 
-Queste due classi hanno la caratteristica di obbligare le sottoclassi a leggere e scrivere dividendo i dati in “pezzi” di 8 bit ognuno. Praticamente esistono gerarchie di classi parallele alle classi viste per i character stream.
+Queste due classi hanno la caratteristica di obbligare le sottoclassi a leggere e scrivere dividendo i dati in "pezzi" di 8 bit ognuno. Praticamente esistono gerarchie di classi parallele alle classi viste per i character stream.
 
 I programmi dovrebbero utilizzare i byte stream per le informazioni di tipo non testuale, come, ad esempio, immagini o suoni.
 
@@ -142,8 +142,8 @@ Dopodiché andremo a descrivere i principali metodi offerti dalla classe Files.
 Per ottenere un’istanza di Path, occorre utilizzare l’oggetto FileSystem o più semplicemente l’oggetto Paths. 
 
 ```java
-Path path1 = Filesystems.getDefault().getPath(“/root/aFile.txt”);
-Path path2 = Paths.get(“C:\\Program Files\\Notepadpp”);
+Path path1 = Filesystems.getDefault().getPath("/root/aFile.txt");
+Path path2 = Paths.get("C:\\Program Files\\Notepadpp");
 ```
 Un oggetto di tipo Path, che rappresenta un percorso che punta a un file o una directory, è legato al sistema operativo nel quale abbiamo avviato il programma che ne fa uso, infatti la sintassi di definizione del percorso deve usare le convenzioni del sistema medesimo. 
 Una volta ottenuto un oggetto Path è possibile utilizzare una serie di metodi potenti e semplici da utilizzare.
@@ -156,16 +156,16 @@ import static java.lang.System.out;
 public class PathDemo {
 	public static void main(String[] args) {
 		// Creazione path per puntare a un file
-		Path path = Paths.get(“C:\\MY_JAVA_SOURCES\\Test.java”);
+		Path path = Paths.get("C:\\MY_JAVA_SOURCES\\Test.java");
 
 		// Informazioni sul path
-		out.format(“toString: %s%n”, path.toString());
-		out.format(“getFileName: %s%n”, path.getFileName());
-		out.format(“getName(0): %s%n”, path.getName(0));
-		out.format(“getNameCount: %s%n”, path.getNameCount());
-		out.format(“subpath(1,2): %s%n”, path.subpath(1,2));
-		out.format(“getParent: %s%n”, path.getParent());
-		out.format(“getRoot: %s%n”, path.getRoot());
+		out.format("toString: %s%n", path.toString());
+		out.format("getFileName: %s%n", path.getFileName());
+		out.format("getName(0): %s%n", path.getName(0));
+		out.format("getNameCount: %s%n", path.getNameCount());
+		out.format("subpath(1,2): %s%n", path.subpath(1,2));
+		out.format("getParent: %s%n", path.getParent());
+		out.format("getRoot: %s%n", path.getRoot());
 	}
 }
 ```
