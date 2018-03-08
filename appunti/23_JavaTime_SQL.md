@@ -25,13 +25,14 @@ Usa le classi del package java.time invece di java.util.Date e java.sql.Date con
 myPreparedStatement.setObject( 
     … ,                                         // qui passa il numero ordinale dell'argomento.
     myJavaUtilDate.toInstant()                  // Converti da `java.util.Date` nel più moderno `java.time.Instant` (UTC).
-        .atZone( ZoneId.of( "Africa/Tunis" ) )  // Sette un time zone particolare, per determinare la data. Instanziando un `ZonedDateTime`.
+        .atZone( ZoneId.of( "Europe/Rome" ) )  // Sette un time zone particolare, per determinare la data. Instanziando un `ZonedDateTime`.
         .toLocalDate()                          // Estrai la data di tipo `java.time.LocalDate` dall'oggetto.
 )
 ```
 ### esempi
 ```java
-LocalDate todayLocalDate = LocalDate.now( ZoneId.of( "America/Montreal" ) );  // Use proper "continent/region" time zone names; never use 3-4 letter codes like "EST" or "IST".
+LocalDate todayLocalDate = LocalDate.now( ZoneId.of( "Europe/Paris" ) );  
+// Usare "continent/region" come region name; non usare quelli codificati da 3 lettere.
 
 LocalDate localDate = ResultSet.getObject( 1 , LocalDate.class );
 
