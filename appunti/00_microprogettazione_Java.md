@@ -1,4 +1,113 @@
-microprogettazione Corso OOP 2017-2018
+# Corso OOP JAVA 2017-2018
+
+## Diario delle lezioni
+
+## Lezione 1 
+
+Introduzione al corso. 
+Background: parte I - Fondamenti di informatica
+
+## Lezione 2 
+
+Background: parte II - Linguaggi di programmazione e algoritmi 
+
+## Lezione 3 
+
+Background: parte II - Introduzione a Java 
+
+## Lezione 4 
+
+Introduzione a Eclipse 
+Espressioni, variabili e input dall'utente 
+
+## Lezione 5 
+
+Tipi primitivi di Java 
+
+## Lezione 6 
+
+Istruzioni condizionali ed espressioni booleane 
+
+## Lezione 7 
+
+Blocchi e cicli 
+
+## Lezione 8 
+
+Programmazione procedurale: metodi ausiliari 
+
+## Lezione 9 
+
+Stringhe e altre classi della libreria di Java 
+
+## Lezione 10 
+
+Array 
+
+## Lezione 11 
+
+Schemi di programmi iterativi 
+
+## Lezione 12 
+
+
+## Lezione 13 
+
+Array bidimensionali - Il gioco del Tris
+
+Introduzione alla programmazione orientata agli oggetti 
+
+## Lezione 14 
+
+
+## Lezione 15 
+
+Gestione della memoria nella programmazione orientata agli oggetti 
+
+## Lezione 16 
+
+Metodi, costruttori, overloading
+
+## Lezione 17 
+
+Packages 
+Ereditarietà 
+
+## Lezione 18 
+
+Esempio complesso
+
+## Lezione 19 
+
+Ereditarietà, tipi e gerarchie, overriding
+
+## Lezione 20 
+
+Classi parzialmente definite: Classi Astratte e Interfacce 
+Vettori 
+
+## Lezione 21 
+
+Eccezioni 
+Input/Ouput su file e serializzazione di oggetti 
+
+## Lezione 22 
+
+La struttura dati Albero e la ricorsione 
+
+## Lezione 23 
+
+Strutture dati del Java Collections Framework 
+
+## Lezione 24 
+
+Graphical User Interface  - Cenni Swing - JavaFX - Android
+
+## Lezione 25 
+
+Cenni di Ingegneria del Software: modelli del processo di sviluppo del software e diagrammi UML
+
+
 
 ## Fondamenti di programmazione
 * Dal problema al programma
