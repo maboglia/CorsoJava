@@ -1,40 +1,33 @@
 # TSS2018
+
 ## Corso Tecnico Sviluppo Software
+
 ![Java](/images/programming-languages.jpg)
-## Settimana 1 
+### Argomento 1 
 
-#### Counter: OOP/java 0
+__Counter: OOP/java 0__
 
 
-	Introduzione al corso di programmazione 
+* Introduzione al corso di programmazione 
 
 
 ![Java](/images/Competitive-Programming-1.jpg)
-	Algoritmi e strutture dati 
-	esempi algoritmi
+* Algoritmi e strutture dati 
+* esempi algoritmi
 
-	OOP teoria, definizione
-	variabile: definizione
+* OOP teoria, definizione
+* variabile: definizione
 
-#### Counter: OOP/java
+__Counter: OOP/java__
 
-## Settimana 2 
-#### Counter: OOP/java
-
-
-
-
-
+### Argomento 2 
+__Counter: OOP/java__
 
 Creazione spazio su github e caricamento del materiale
 
-
-
-
-
 __LE VARIABILI IN JAVA__ 
 Dichiarazione di una variabile: 
-Variabili d'istanza -Variabili locali - Parametri formali 
+Variabili d'istanza - Variabili locali - Parametri formali 
 
 classe ProvaStudente
 argomenti passati al metodo main 
@@ -66,9 +59,6 @@ Il costrutto if e il ciclo for
 
 Esercizi e primo test di  verifica
 
-
-
-
 ### codice week2
 * Booleani
 * Caratteri
@@ -76,21 +66,21 @@ Esercizi e primo test di  verifica
 * ScambioVariabili
 * SimpleCalcolatrice
 
-# Settimana 3 
-#### Counter: OOP/java
+## Argomento 3 
+__Counter: OOP/java__
 
 
 
-	INTRODUZIONE ALLA LIBRERIA STANDARD 
-	Il comando import - La classe String - La documentazione della libreria standard di Java 
-	esercizi sulle stringhe
+* INTRODUZIONE ALLA LIBRERIA STANDARD 
+* Il comando import - La classe String - La documentazione della libreria standard di Java 
+* esercizi sulle stringhe
 
 
-	OPERATORI E GESTIONE DEL FLUSSO DI ESECUZIONE 
-	cicli – loop (for, foreach, while, do..while): ripetere uno statement
-	condizioni (if...[else if]...[else], switch): condizione che si deve verificare, sempre boolean
-	I METODI COSTRUTTORI 
-	Caratteristiche di un costruttore - Costruttore di default - Package
+* OPERATORI E GESTIONE DEL FLUSSO DI ESECUZIONE 
+* cicli – loop (for, foreach, while, do..while): ripetere uno statement
+* condizioni (if...[else if]...[else], switch): condizione che si deve verificare, sempre boolean
+* I METODI COSTRUTTORI 
+* Caratteristiche di un costruttore - Costruttore di default - Package
 
 
 
@@ -120,42 +110,40 @@ Esercizi e primo test di  verifica
             * PictureDemo
             * Picture
 
-# Settimana 4 
-#### Counter: OOP/java
+## Argomento 4 
+__Counter: OOP/java__
 
 
-	Approfondiamo la classe Studente
-	Gli array in Java - Dichiarazione - Creazione - Inizializzazione
-	IDENTIFICATORI, TIPI DI DATI ED ARRAY 
-	Schema Libero - Case sensitive 
-	Commenti - Regole per gli identificatori 
-	Array Multidimensionali 
-	Limiti degli array in JAVA - dimensione prefissata
-	Array (vettori semplici, monodimensionali) 
+* Approfondiamo la classe Studente
+* Gli array in Java - Dichiarazione - Creazione - Inizializzazione
+* IDENTIFICATORI, TIPI DI DATI ED ARRAY 
+* Schema Libero - Case sensitive 
+* Commenti - Regole per gli identificatori 
+* Array Multidimensionali 
+* Limiti degli array in JAVA - dimensione prefissata
+* Array (vettori semplici, monodimensionali) 
 
-	array elenco allievi 
-	scorro elenco allievi utilizzando un ciclo for 
-
-
-
-	gestione base di possibili eccezioni: 
-	1) provare a risolvere il problema con if() 
-	2) usare la gestione eccezioni di JAVA
-
-	creare e gestire array di stringhe all'interno del codice sorgente 
+* array elenco allievi 
+* scorro elenco allievi utilizzando un ciclo for 
 
 
-	
+
+* gestione base di possibili eccezioni: 
+* 1) provare a risolvere il problema con if() 
+* 2) usare la gestione eccezioni di JAVA
+
+* creare e gestire array di stringhe all'interno del codice sorgente 
+
 	* costrutto switch
 
-*	Introduzione classi
+* Introduzione classi
 	* classi, 
 	* struttura delle classi, 
 	* progettazione delle classi in UML, 
 	* stato interno
-		* metodi costruttori, overloading
- 		* metodi getter e setter
-	*	incapsulamento, 
+	* metodi costruttori, overloading
+ 	* metodi getter e setter
+	* incapsulamento, 
 	* overload dei costruttori 
 
 	* override - (solo in caso di extends)
@@ -165,9 +153,9 @@ Esercizi e primo test di  verifica
 
 
 * java  (2h java)
-	*	correzione esercizi metodi ausiliari 
-	* 	Test java base
-	
+	* correzione esercizi metodi ausiliari 
+	* Test java base
+* 
 esercizi java sugli array
 
 
@@ -186,8 +174,8 @@ esercizi java sugli array
 * Studente
 * StudenteTester
 
-# Settimana 5 
-#### Counter: OOP/java
+## Argomento 5 
+__Counter: OOP/java__
 
 Recap
 Tipi primitivi 
@@ -255,20 +243,18 @@ Il costrutto switch
 * Triangolo
 * MethodDemo
 
-# Settimana 6 
-#### Counter: OOP/java
+## Argomento 6 
+__Counter: OOP/java__
 
-*	Ereditarietà in Java
-
-###VENERDì 25/11/2016 9-12 3h Java
+* Ereditarietà in Java
 
 * Teoria:
-	Class design: diversi ruoli degli oggetti/attori del progetto
-	diverse classi con differenti relazioni tra esse
+* Class design: diversi ruoli degli oggetti/attori del progetto
+* diverse classi con differenti relazioni tra esse
 
 * Esercizi
-	dato il main di una classe NegozioTester, sviluppare le classi Negozio e Prodotto
-	dato il main di una classe AutomobileTester, sviluppare le classi Automobile e Guidatore
+* dato il main di una classe NegozioTester, sviluppare le classi Negozio e Prodotto
+* dato il main di una classe AutomobileTester, sviluppare le classi Automobile e Guidatore
 
 
 
@@ -280,25 +266,23 @@ Il costrutto switch
     * RectangleComponent
     * RectangleViewer
 
-# Settimana 7 
-#### Counter: OOP/java
+## Argomento 7 
+__Counter: OOP/java__
 
 [Esempio Aggregazione](images/image010.jpg)
 
-*	Ereditarietà in Java
-	Slide OOP 
-		esempio Studente/Professore - Teatro
-	
-	Esercitazione guidata:
-		
-		zaino
-			arraylist
-			relazione d'uso
-		
-		dipendenti, 
-			arraylist, 
-			ereditarietà, 
-			late binding
+* Ereditarietà in Java
+* Slide OOP 
+	* esempio Studente/Professore - Teatro
+* Esercitazione guidata:
+	* 
+	* zaino
+	* arraylist
+	* relazione d'uso
+	* dipendenti, 
+	* arraylist, 
+	* ereditarietà, 
+	* late binding
 
 
 
@@ -315,8 +299,8 @@ Il costrutto switch
     * MenuDemo
     * Menu
 
-# Settimana 8 
-#### Counter: OOP/java
+## Argomento 8 
+__Counter: OOP/java__
 
 
 ##java
@@ -337,63 +321,48 @@ Il costrutto switch
 * EsempioNumeri
 * ProvaDivisione
 * ScriviSuFile
-			
-# Settimana 9 
-#### Counter: OOP/java
 
+## Argomento 9 
+__Counter: OOP/java__
 
-
-	Java
-	interfacce
-	esempio classificazione animali, mammiferi
-	esercitazione negozio alimentari con eccezioni, interfacce e hashmap
-	restituzione esercitazione 2 java
-
-
-
-	Java
-	JCF: HashSet e TreeSet
-	Vector, HashSet e TreeSet, lettura file canto 1 inferno
-
-###VENERDì 16/12/2016 9-12 3h Javascript
-	
-
+* Java
+* interfacce
+* esempio classificazione animali, mammiferi
+* esercitazione negozio alimentari con eccezioni, interfacce e hashmap
+* restituzione esercitazione 2 java
+* Java
+* JCF: HashSet e TreeSet
+* Vector, HashSet e TreeSet, lettura file canto 1 inferno
 
 ### codice week9
+
 * ListDivina1
 
-# Settimana 10 
-#### Counter: OOP/java
+## Argomento 10 
+__Counter: OOP/java__
 
-
-
-	Java
-	focus date, valute
-	recap 
-	JCF
-	info sistema > scrivi su file
-	esercizi per le vacanze
-	
-	
-
+* Java
+* focus date, valute
+* recap 
+* JCF
+* info sistema > scrivi su file
+* esercizi per le vacanze
 
 ### codice week10
 * GestioneDate
 * InfoSistema
 
-# Settimana 11
-#### Counter: OOP/java
+## Argomento 11
+__Counter: OOP/java__
  
-
-	recap Java
-	gestire le collezioni
-	evoluzione esempio aula, con collezioni e scrittura su file
-	
-	Java: Progetti Archivio CD
-
-
+* recap Java
+* gestire le collezioni
+* evoluzione esempio aula, con collezioni e scrittura su file
+* 
+* Java: Progetti Archivio CD
 
 ### codice week11
+
 * Condizione
 * FileIO
 * Funzioni
@@ -406,232 +375,162 @@ Il costrutto switch
 * TipiCasting
 * Variabili
 
-
-# Settimana 12
-#### Counter: OOP/java
-	
- 
-
-	
-###VENERDì 20/01/2017  9-12     1h javascript 2h Java
-	
+## Argomento 12
+__Counter: OOP/java__
 [introduzione JSP](http://www.bogliaccino.it/corso-jsp-introduzione/)
-	Hello World JSP 
-	NetBeans e Eclipse, GlassFish e TomCat
+* Hello World JSP 
+* NetBeans e Eclipse, GlassFish e TomCat
 
+## Argomento 13
 
-
-
-# Settimana 13
-#### Counter: OOP/java
- 
+__Counter: OOP/java__
 
 [introduzione JSP](http://www.bogliaccino.it/corso-jsp-introduzione/)
-
 [JSP: le direttive](http://www.bogliaccino.it/corso-jsp-le-direttive/)
-
-
-
 [JSP: le direttive](http://www.bogliaccino.it/corso-jsp-le-direttive/)
-
 [JSP: le espressioni](http://www.bogliaccino.it/corso-jsp-le-espressioni/)
 
-	Progetto JSP: MyShop
-	Java Advanced: inizializzatore statico
-
-
+* Progetto JSP: MyShop
+* Java Advanced: inizializzatore statico
 
 [JSP: le dichiarazioni](http://www.bogliaccino.it/corso-jsp-dichiarazioni/)
 
-	Progetto JSP: MyShop, il pattern MVC Model View Controller
-	Java Advanced: enumerazioni
-
-###VENERDì 27/01/2017 9-11 2h Java
-
-	Verifica OCA Java - 2: statements e costrutti del linguaggio
-	Progetto JSP: MyShop, JSP View, ricevere dati dal form html
-	
+* Progetto JSP: MyShop, il pattern MVC Model View Controller
+* Java Advanced: enumerazioni
 
 
-# Settimana 14
-#### Counter: OOP/java
+* Verifica OCA Java - 2: statements e costrutti del linguaggio
+* Progetto JSP: MyShop, JSP View, ricevere dati dal form html
+* 
 
 
-	
-	Restituzione verifica 2 Java
-	Java advanced: nested classes, member classes, anonymous inner classes
+## Argomento 14
+__Counter: OOP/java__
+
+
+* Restituzione verifica 2 Java
+* Java advanced: nested classes, member classes, anonymous inner classes
 [Progetto JSP: MyShop](https://github.com/maboglia/MyShop)
-	MVC, controller, ordini con nested class
-	Hello Swing GUI
-	Creare Jar eseguibili, creare e includere Jar nel progetto 
+* MVC, controller, ordini con nested class
+* Hello Swing GUI
+* Creare Jar eseguibili, creare e includere Jar nel progetto 
 
-###VENERDì 03/02/2017 2H Javascript
 
 [Progetto JSP: MyShop](https://github.com/maboglia/MyShop)
-	
-	programmazione front-end con tecnologie client-side
-	mostra nascondi sezioni
-		
+* programmazione front-end con tecnologie client-side
+* mostra nascondi sezioni
 
 
-# Settimana 15
-#### Counter: OOP/java
+## Argomento 15
+__Counter: OOP/java__
 
 
-	
-	Reflection, Class, Constructor classes
-	MVC: client-side JS su progetto Negozio JSP
-	
-
-	
-	Hello JQuery
-
-###VENERDì 10/02/2017 3H Javascript
-
-	MVC: client-side JQuery su progetto Negozio JSP
-	
+* Reflection, Class, Constructor classes
+* MVC: client-side JS su progetto Negozio JSP
+* Hello JQuery
+* MVC: client-side JQuery su progetto Negozio JSP
 
 
-# Settimana 16
-#### Counter: OOP/java
+## Argomento 16
+__Counter: OOP/java__
+* JSP 
+* MVC: JSP Servlet controller: doGet
 
 
+## Argomento 17
+__Counter: OOP/java__
+
+* java: Jsp standard action
+* progetto MVC MyShop
 
 
-	JSP 
+## Argomento 18
+__Counter: OOP/java__
 
 
-	
+* jsp
+	* servlet dispatcher
+	* mvc myshop
 
-###VENERDì 17/02/2017 3H Java
+* java
+	* pattern
+	* factory
+	* mvc
+	* dao
 
-	MVC: JSP Servlet controller: doGet
-	
-
-
-
-# Settimana 17
-#### Counter: OOP/java
-
-
-
-	java: Jsp standard action
-
-	progetto MVC MyShop
-	
-
-
-
-# Settimana 18
-#### Counter: OOP/java
+* jdbc
+	* mysql connector j
+	* Connection
+	* Statement
+	* ResulSet
+	* executeQuery
+	* executeUpdate
+* JQuery Ajax
+* MyShop, invocare il controller via Ajax con JQuery
 
 
-	
-	jsp
-		servlet dispatcher
-		mvc myshop
-
-	java
-		pattern
-			factory
-			mvc
-			dao
-
-	jdbc
-		mysql connector j
-		Connection
-		Statement
-		ResulSet
-		executeQuery
-		executeUpdate
-###VENERDì 03/02/2017 2H JAVASCRIPT
-	
-	JQuery Ajax
-	MyShop, invocare il controller via Ajax con JQuery
-
-
-# Settimana 19
-#### Counter: OOP/java
+## Argomento 19
+__Counter: OOP/java__
 
 
 
-	jdbc
-		mysql connector j
-		Connection
-		PreparedStatement
-		ResulSet
-		executeQuery
-		executeUpdate	
-	JQuery Ajax
-	
-	MyShop, frontend-backend REST-API
+* jdbc
+	* mysql connector j
+	* Connection
+	* PreparedStatement
+	* ResulSet
+	* executeQuery
+	* executeUpdate* 
+* JQuery Ajax
+* MyShop, frontend-backend REST-API
+
+* Hello angularJS
+
+* Progetto MyShop clientside+serverside
+[Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/tree/master/CorsoJava2017/progetti)
+
+## Argomento 20
+__Counter: OOP/java__
 
 
-	
-	Hello angularJS
+
+* java
+	* pattern
+	* singleton* 
+	* decorator
 
 
 
-	Progetto MyShop clientside+serverside
+* Progetto MyShop clientside+serverside
 [Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/tree/master/CorsoJava2017/progetti)
 
 
+## Argomento 21
+__Counter: OOP/java__
 
 
 
-# Settimana 20
-#### Counter: OOP/java
+* java
+	* Java NIO
+* 
+* Javascript
+	* 
+* MVC
+	* JSP + Database
 
 
+* MVC
+	* JSP + Database progetto listaSpesa
 
-	java
-		pattern
-			singleton	
-			decorator
+* Angular.io
 
-
-
-	Progetto MyShop clientside+serverside
-[Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/tree/master/CorsoJava2017/progetti)
+## Argomento 22
+__Counter: OOP/java__
 
 
-###VENERDì 17/03/2017 2H Javascript
+* MVC
+	* JSP + Database progetto listaSpesa* 
 
-
-
-# Settimana 21
-#### Counter: OOP/java
-
-
-
-	java
-		Java NIO
-	
-	Javascript
-		
-	MVC
-		JSP + Database
-
-
-	MVC
-		JSP + Database progetto listaSpesa
-
-###VENERDì 23/03/2017 4H Javascript		
-	
-	Angular.io
-
-
-
-# Settimana 22
-#### Counter: OOP/java
-
-
-
-	MVC
-		JSP + Database progetto listaSpesa	
-
-	
-# Fine corso -- STAGE	
 
 
 

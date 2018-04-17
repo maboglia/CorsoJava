@@ -175,3 +175,10 @@ public class PathDemo {
 L’altro elemento fondamentale di NIO 2.0 è la classe Files, che serve per compiere svariate operazioni sui file e sulle directory, come lettura, scrittura, spostamento, ecc. 
 
 Esistono tantissimi metodi di utilità in questa classe (oltre 55) anche se la maggior parte è abbastanza intuitiva.
+
+
+## File di configurazione nella cartella WEB-INF
+
+```java
+InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream("/my.properties");
+```
