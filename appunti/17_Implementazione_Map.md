@@ -49,10 +49,10 @@ HashTable | HashMap
 HashTable hash = new HashTable();	|	HashMap map = new HashMap();
 hash.put("1", "Data attuale");		|	map.put("1", "Data attuale");
 hash.put("2", new Date());			|	map.put("2", new Date());
-hash.put("3", hash);				|	map.put("3", hash);
-int size = hash.size();			|	int size = hash.size();
+hash.put("3", hash);				|	map.put("3", map);
+int size = hash.size();			|	int size = map.size();
 for (int i=1; 1<=size; i++) {		|	for (int i=1; 1<=size; i++) {
-   out.print(hash.get(""+i));		   |	out.print(hash.get(""+i));
+   out.print(hash.get(""+i));		   |	out.print(map.get(""+i));
 }							|	}
 
 E’ possibile aggiungere elementi mediante il metodo put(Object key, Object value) e si recuperano mediante il metodo get(Object key). 

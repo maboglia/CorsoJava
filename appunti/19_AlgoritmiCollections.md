@@ -50,6 +50,7 @@ private static void print(Collection<Persona> coll) {
 }
 ```
 ```java
+public class Persona implements Comparable<Persona>{
 private String nome;
 private String cognome;
 private int eta;

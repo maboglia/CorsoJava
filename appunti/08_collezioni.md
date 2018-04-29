@@ -1,21 +1,17 @@
 # Framework Collections
 
-Nella normale attività di programmazione ci si trova spesso a dover gestire un insieme di dati. 
-
-In Java, le soluzioni per la gestione di un insieme di oggetti sono molteplici e, come sempre, a seconda delle circostanze, bisogna individuare la soluzione migliore da adottare.
-
 Tutte le classi che permettono di gestire gruppi di oggetti, costituiscono il Java Collections Framework. 
 
-Una Collection è quindi un contenitore in cui più oggetti vengono raggruppati in una singola entità, o meglio è una struttura dati che ha metodi usati per inserire, togliere, recuperare e gestire la struttura stessa.
+Una Collection è un contenitore in cui più oggetti vengono raggruppati in una singola entità, o meglio è una struttura dati che ha metodi usati per inserire, togliere, recuperare e gestire la struttura stessa.
 
 Il Java Collection Framework è costituito dai seguenti elementi:
 
-* Interfacce, che definiscono le operazioni classica di una generica collezione di oggetti
-	Possono essere suddivise in due macro-categorie:
-	* Collection, che sono ottimizzate per operazioni di inserimento, modifica e cancellazione di elementi all’interno di un insieme di oggetti
-	* Map, che sono ottimizzate per operazioni di ricerca
-* Classi, che implementano le interfacce utilizzando differenti tipi di strutture dati 
-* Algoritmi, che consistono in metodi per compiere operazioni sulle Collezioni, quali ad esempio operazioni di ordinamento e di ricerca
+* __Interfacce__, che definiscono le operazioni classica di una generica collezione di oggetti
+	Possono essere suddivise in __due macro-categorie__:
+	* __Collection__, che sono ottimizzate per operazioni di inserimento, modifica e cancellazione di elementi all’interno di un insieme di oggetti
+	* __Map__, che sono ottimizzate per operazioni di ricerca
+* __Classi__, che implementano le interfacce utilizzando differenti tipi di strutture dati 
+* __Algoritmi__, che consistono in metodi per compiere operazioni sulle Collezioni, quali ad esempio operazioni di ordinamento e di ricerca
 
 I vantaggi di avere questo framework a disposizione sono tanti: possibilità di scrivere meno codice, incremento della performance, interoperabilità tra classi non relazionate tra loro, riusabilità, algoritmi complessi già a disposizione (ad esempio quelli per l’ordinamento), ecc.
 
