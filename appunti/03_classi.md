@@ -37,8 +37,6 @@ Ad esempio, immaginate di dover scrivere programmi per la gestione di...
 * Parchi macchine: ogni automobile ha la propria targa, il proprio contachilometri, il proprio storico delle manutenzioni, ecc...
 * Rettangoli: ogni rettangolo ha la propria base, altezza e posizione nel piano.
 * Scrivere un programma di questo tipo usando solo interi, array e strighe pùo diventare abbastanza complicato...
-                         
-## Programmazione orientata agli oggetti
 * ogni entità del mondo reale (e.g. il conto bancario) prevede un proprio stato interno (e.g. saldo, ecc...) e delle proprie funzionalità (e.g. versamento, prelievo, ecc...)
 * Per questo motivo un linguaggio di programmazione __ORIENTATO AGLI OGGETTI__ (tipo Java) fornisce meccanismi per definire nuovi tipi di dato basati sul concetto di classe
 * Una classe definisce un insieme di oggetti (conti bancari, dipendenti, automobili, rettangoli, ecc...).
@@ -76,7 +74,6 @@ classe pronta all’uso i passi da seguire sono:
 * La libreria Java standard è accompagnata da
 documentazione che illustra lo scopo e l’utilizzo di
 ciascuna classe presente
-
 * La documentazione è molto ampia, non ha scopo
 didattico, ma piuttosto di __Reference manual__
 * non è pensabile e non è molto utile studiare
@@ -223,7 +220,8 @@ MATH.PI //3.1415
 ```
 
 ## Classi istanziabili
-### Una classe istanziabile rappresenta “qualcosa”
+
+Una classe istanziabile rappresenta “qualcosa”
 che esiste in molteplici versioni individuali che
 hanno una struttura comune ma ciascuna con
 una propria identità:
