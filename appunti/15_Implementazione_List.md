@@ -53,3 +53,51 @@ Iterator it = lista.iterator();		|Iterator it = vett.iterator();
 while (it.hasNext()) {			|while (it.hasNext()) {
    out.print(it.next());		   	  | out.print(it.next());
 }							|}
+
+
+
+## La classe ArrayList 
+public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, Serializable 
+Package 
+java.util 
+La classe ArrayList permette di gestire array di oggetti dinamici. E indica il tipo di elementi contenuti nell’array. 
+Costruttore 
+ArrayList() 
+Costruisce una array dinamico di oggetti con una capacità iniziale di 10 elementi. 
+Alcuni Metodi 
+### add 
+* boolean add (Object oggetto)
+Inserisce l'oggetto specificato alla fine del vettore restituisce true 
+* void add (int indice,Object oggetto)
+Inserisce l'oggetto nella posizione specificata all'interno del vettore, spostando gli elementi già presenti di una posizione verso destra 
+restituisce true 
+
+### clear 
+* void clear() 
+* elimina tutti gli elementi presenti nel vettore 
+ 
+### contains 
+* boolean contains(Object oggetto)
+* restituisce true se il vettore contiene l'elemento specificato; false altrimenti 1 
+
+### get 
+* Object get(int indice)
+* restituisce l'elemento che si trova nella posizione specificata 
+* 
+### remove 
+* Object remove(int indice)
+* rimuove l'elemento che si trova nella posizione specificata, spostando gli elementi già presenti di una posizione verso sinistra 
+
+### isEmpty 
+* boolean isEmpty()
+* restituisce true se l'array è vuoto; false altrimenti 
+* 
+### set 
+* Object set(int indice,Object oggetto)
+sostituisce l'elemento nella posizione indicata, con l'oggetto specificato 
+restituisce l'elemento che si trovava in precedenza nella posizione indicata e che è stato 
+sostituito 
+
+### size 
+* int size() 
+* restituisce il numero di elementi dell'array 

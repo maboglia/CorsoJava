@@ -205,3 +205,88 @@ Cenni di Ingegneria del Software: modelli del processo di sviluppo del software 
 * Connection Pooling
 * Gestione dei dati: JDBC
 * DB
+
+
+
+
+## Programma Micro
+
+* Introduzione alla programmazione orientata agli oggetti.
+* Introduzione a Java e al processo di compilazione. Programmi Java.
+* Oggetti, variabili, riferimenti.
+* Classi, metodi e variabili di istanza.
+* Tipi di dati fondamentali.
+* La classe String e i principali metodi.
+* Operatori aritmetici, relazionali e di uguaglianza. Regole di precedenza.
+* Input da console (classe Scanner) e con dialog box. Output con oggetto System.out.
+* Strutture di controllo.
+* La classe Math e i principali metodi.
+* Generazione di numeri pseudo-random: classe Random.
+* Array e ArrayList.
+* Classi wrapper per i tipi di dati primitivi. Boxing e unboxing.
+* For generico (for each).
+* Copia array. Array estendibili.
+* Array multidimensionali.
+* Progettazione di nuove classi e metodi.
+* Concetti di: coesione, dipendenza, programmazione per contratti, parametro implicito, effetti collaterali e pacchetto.
+* Regole di visibilità, binding degli identificatori, specificatori di accesso, variabili e metodi static.
+* Programmazione con parametri. Classi e metodi con parametri. Limitazioni. Type erasure.
+* Cenni sull'uso di un debugger. Il debugger di Eclipse. Correzione di un programma Java per il conteggio delle sillabe in una parola.
+* La programmazione orientata agli oggetti.
+* Determinazione delle classi.
+* Schede CRC e diagrammi UML.
+* Interfacce e polimorfismo.
+* Classi interne. Classe Timer.
+* Classi anonime. Lambda espressioni.
+* Sovraccarico (Overloading) e Sovrascrittura (Overriding) di metodi.
+* Ereditarietà. Polimorfismo con ereditarietà. Riutilizzo del codice.
+* Classi astratte. Parallelo con Interfacce.
+* Specificatori d'accesso: package e protected
+* Classe Object. Metodi equals, toString e clone.
+* Meccanismo di gestione delle eccezioni. Eccezioni controllate e non. Costrutto try-catch-finally.
+* Flussi di byte e di caratteri. Files. Accesso sequenziale e random.
+* Flussi di oggetti. Serializzazione e deserializzazione.
+* Realizzazione di applicazioni grafiche in Java. Classe JFrame.
+* Classe JComponent e sovrascrittura di paintComponent. JApplet.
+* Gestione delle forme, dei font e dei colori.
+* Gestione degli eventi. Eventi e ricevitori. Classi JButton, JPanel, JLabel e JTextField. Uso di ActionEvent, ActionListener, MouseEvent e MouseListener.
+* Costruzione di interfacce grafiche utente. Gestori di layout: BorderLayout, FlowLayout, GridLayout.
+* Pulsanti radio: classe JRadioButton. Scelta esclusiva tra pulsanti radio: classe ButtonGroup. Caselle di controllo: classe JCheckBox. Caselle combinate: classe JComboBox.
+* Aggiunta di menu a finestre grafiche: classi JMenuBar, JMenu, JMenuItem.
+* Output su più linee in una finestra grafica: classe JTextArea.
+* Consultazione della libreria Swing.
+
+
+## Basic Java
+
+cap|titolo
+---|---
+1 |Java Course Introduction
+2 |Basic Java keywords explained – Practice Session
+3 |Basic Java keywords explained – Debriefing
+4 |Packages, Import Statements, Instance Members, Default Constructor
+5 |Access and Non Access Modifiers
+6 |Tools – IntelliJ Idea 14.1, Junit 4.12, Maven 3
+7 |if/else statements and booleans
+8 |loops: for, while and do while loop
+9 |for each loop and arrays part 1
+10| arrays and enums
+11| enums and switch statement
+12| switch statement
+13| Java Logging with sl4j and logback
+14| deep dive into public static void main
+15| Checked and Unchecked Exceptions in Java
+16| Interfaces in Java
+17| Inheritance in Java
+18| Object finalizer method
+19| Object clone method
+20| Object toString method
+21| Java autoboxing, Static Imports, Number Types and more
+22| HashCode and Equals
+23| Java Collections Framework Introduction
+24| ArrayList
+25| Linked List Data Structure
+26| LinkedList vs ArrayList
+27| Identity vs Equality in Java
+28| Comparable interface in Java
+29| Shallow vs. Deep Copy in Java

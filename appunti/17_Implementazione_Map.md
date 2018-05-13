@@ -76,5 +76,5 @@ while (it.hasNext()) {
 ```
 ## Map.Entry ed entrySet()
 Per iterare sulle mappe occorre utilizzare, oltre al solito iterator, anche:
-* la classe innestata Map.Entry, la quale astrae una coppia di tipo chiave-valore che rappresenta un elemento di una mappa
+* la classe innestata __Map.Entry__, la quale astrae una coppia di tipo chiave-valore che rappresenta un elemento di una mappa
 * il metodo entrySet() restituisce un insieme ordinato (in base alle chiavi) degli elementi della mappa
