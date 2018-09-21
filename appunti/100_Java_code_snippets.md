@@ -1,24 +1,4 @@
-# Appunti Java
-
-## Fondamenti di programmazione
-
-* Dal problema al programma
-* La nozione di algoritmo
-* Linguaggi per la descrizione di algoritmi.
-* I diagrammi di flusso
-* Paradigmi di programmazione
-* Tipi di dato semplici
-* Strutture di controllo sequenziali, condizionali ed iterative 
-* Tipi di dato complessi e oggetti
-* Funzioni e metodi
-* Il ciclo di vita del software e le qualità dei programmi
-* Astrazione e decomposizione
-* La programmazione modulare
-* Strutture dati fondamentali: liste, hash table 
-
-
-
-## snippets
+# Java code snippets
 
 ```java
 Math.PI
@@ -265,9 +245,6 @@ int[][] m = {{1, 2, 3, 4},
 ```
 
 
-Tipi primitivi
-tipi complessi
-
 ## static
 ```java
 //uso una classe con metodi statici, accedo ad esse senza istanziare nuovi oggetti:
@@ -280,30 +257,6 @@ Persona p2 = new Persona();
 p1.setEta(23);
 ```
 
-## Flusso di lavoro del programma
-
-* GESTIONE DEL FLUSSO DI ESECUZIONE
-* COSTRUTTI DI PROGRAMMAZIONE
-* Il costrutto if
-* Il costrutto while
-* Il costrutto for
-* Il costrutto do
-* Cicli for migliorato
-* Il costrutto switch
-
-
-### costrutti condizionali
-
-* if()
-* if... else if... else
-* switch() // un if elegante
-
-### costrutti iterativi
-* for
-* for: per scorrere p.es un array in entrambe le direzioni
-* for(each): scorre solo in una direzione
-* while
-* do...while
 
 ### esercizio:
 * costruire un programma che chieda in input l'altezza degli studenti di una classe (altezza espressa in cm )
