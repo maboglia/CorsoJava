@@ -1,5 +1,7 @@
 ### Primitive Variables
 
+![tipi primitivi](img/tipi.png)
+
 Variables that store value.
 
 
