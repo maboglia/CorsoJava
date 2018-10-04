@@ -1,6 +1,8 @@
-### Primitive Variables
+# Tipi di dato primitivi
 
 ![tipi primitivi](img/tipi.png)
+
+### Primitive Variables
 
 Variables that store value.
 
