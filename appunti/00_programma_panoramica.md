@@ -18,11 +18,9 @@
 
 * Multi-thread
 
-#### Semplice e familiare
+### Semplice e familiare
 
 * Basato su C
-
-
 
 * Sviluppato da zero
 
@@ -36,7 +34,7 @@
 
 
 
-#### Orientato a oggetti
+### Orientato a oggetti
 
 
 
@@ -62,7 +60,7 @@
 
 
 
-#### Indipendente dalla piattaforma
+### Indipendente dalla piattaforma
 
 
 
@@ -76,13 +74,13 @@
 
 
 
-#### Interpretato
+### Interpretato
 
 
 
 * Il bytecode deve essere interpretato
 
-[![](http://www.bogliaccino.it/wp-content/uploads/2013/09/java_processo-400x87.jpg "java_processo")](http://www.bogliaccino.it/corso-android-2-java-fondamentale/java_processo/)
+[![](http://www.bogliaccino.it/img/java_processo-400x87.jpg "java_processo")](http://www.bogliaccino.it/corso-android-2-java-fondamentale/java_processo/)
 
 
 
@@ -96,7 +94,7 @@
 
 
 
-#### sicuro
+### sicuro
 
 
 
@@ -112,7 +110,7 @@
 
 
 
-#### Robusto
+### Robusto
 
 
 
@@ -126,7 +124,7 @@
 
 
 
-#### Distribuito e dinamico
+### Distribuito e dinamico
 
 
 
@@ -146,7 +144,7 @@
 
 
 
-#### Multi-thread
+### Multi-thread
 
 
 
@@ -168,7 +166,7 @@
 
 * mostrare come, una volta creata una classe possiamo creare oggetti di questa classe e utilizzarli
 
-#### Java è un linguaggio orientato agli oggetti
+### Java è un linguaggio orientato agli oggetti
 
 * Java è un linguaggio orientato agli oggetti in cui quasi tutto è un oggetto
 
@@ -182,7 +180,7 @@
 
 * In Java quasi tutto è un oggetto, ci sono solo due eccezioni: le variabili semplici e gli array
 
-#### Le classi in Java
+### Le classi in Java
 
 * Il primo passo per definire una classe in Java è creare un file che deve chiamarsi esattamente come la classe e con estensione .java
 
@@ -196,21 +194,21 @@
 
 * Metodi: sono utilizzati per modificare o consultare lo stato di un oggetto. Sono equivalenti alle funzioni o procedimenti di altri linguaggi di programmazione
 
-#### Struttura di una classe
+### Struttura di una classe
 
 Esempio in aula
 
-#### Esempio di classe
+### Esempio di classe
 
 Esempio in aula
 
-#### Creazione e utilizzazione di oggetti
+### Creazione e utilizzazione di oggetti
 
 Esempio in aula
 
 ### Incapsulamento e visibilità in Java
 
-#### Interfaccia e implementazione
+### Interfaccia e implementazione
 
 * Quando disegniamo un software ci sono due aspetti che risultano fondamentali:
 
@@ -224,7 +222,7 @@ Esempio in aula
 
 * Implementazione: definita creando alcuni determinati attributi e scrivendo il codice dei differenti metodi
 
-#### Incapsulamento
+### Incapsulamento
 
 
 
@@ -234,7 +232,7 @@ Esempio in aula
 
 * In Java l’incapsulamento è strettamente relazionato con la visibilità
 
-#### Visibilità
+### Visibilità
 
 
 
@@ -248,7 +246,7 @@ Esempio in aula
 
 * Se non indichiamo la v.: sono accessibili solo dalle classi del nostro pacchetto
 
-#### Accesso agli attributi della classe
+### Accesso agli attributi della classe
 
 
 
@@ -280,7 +278,7 @@ class NomeClasse{  private double nome1, nome2;
 
 * Vantaggi: possiamo cambiare la rappresentazione interna, verificare che i valori siano corretti, modificare altri aspetti dell’oggetto
 
-#### Modifica di rappresentazione interna di una classe
+### Modifica di rappresentazione interna di una classe
 
 * Uno dei maggiori vantaggi di occultare gli attributi è che in futuro potremo cambiarli senza la necessità di cambiare l’interfaccia
 
@@ -294,7 +292,7 @@ esempio
 
 * Mostrare alcuni casi in cui l’ereditarietà può essere molto utile
 
-#### Come riutilizzare il codice
+### Come riutilizzare il codice
 
 * Uno dei grandi vantaggi della programmazione a oggetti è la facilità nel riutillizzare il codice
 
@@ -312,9 +310,9 @@ b)Creiamo una nuova classe che erediti da Geopunto:
 
 NuovoGeopunto {Geopunto + attributo: altitudine}
 
-#### Estendere la classe
+### Estendere la classe
 
-#### Quando utilizzare l’ereditarietà
+### Quando utilizzare l’ereditarietà
 
 * Per modificare classi già esistenti
 
@@ -342,7 +340,7 @@ NuovoGeopunto {Geopunto + attributo: altitudine}
 
 * Descrivere alcuni strumenti di Java utili quando lavoriamo col polimorfismo
 
-#### L’ ereditarietà e la classe Object
+### L’ ereditarietà e la classe Object
 
 * L’ ereditarietà ci permette di creare nuove classi a partire da altre già esistenti
 
@@ -356,13 +354,13 @@ NuovoGeopunto {Geopunto + attributo: altitudine}
 
 * toString(), getClass(), equals(Object o), …
 
-#### L’ ereditarietà e la classe Object
+### L’ ereditarietà e la classe Object
 
 * Un oggetto della classe figlia appartiene anche alla classe padre ed agli ascendenti
 
 * Per esempio un oggetto della classe vista prima ComplessoAmpliato appartiene tanto alla classe Complesso, quanto a Object
 
-#### Il polimorfismo
+### Il polimorfismo
 
 * Il polimorfismo consiste nel dichiarare un oggetto di una classe, però istanziandolo come un discendente di tale classe (non si può fare il contrario!)
 ```
@@ -370,7 +368,7 @@ NuovoGeopunto {Geopunto + attributo: altitudine}
 
   new <Classe_figlia> (<parametri>);
 ```
-#### Perché si usa il polimorfismo
+### Perché si usa il polimorfismo
 
 * Quando stiamo sviluppando una applicazione Android e vogliamo inserire un bottone, spesso vogliamo aggiungere una grafica di sfondo
 
@@ -380,11 +378,11 @@ NuovoGeopunto {Geopunto + attributo: altitudine}
 
 Ma magari non sappiamo che tipo di disegno sarà!
 
-#### Conversione di tipi (TYPE CAST)
+### Conversione di tipi (TYPE CAST)
 
 mostra esempio in aula
 
-#### Uso di INSTANCEOF
+### Uso di INSTANCEOF
 
 * La keyword riservata instanceof permette di verificare se un oggetto appartiene ad una classe
 
