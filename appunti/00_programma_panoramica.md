@@ -80,7 +80,7 @@
 
 * Il bytecode deve essere interpretato
 
-[![](http://www.bogliaccino.it/img/java_processo-400x87.jpg "java_processo")](http://www.bogliaccino.it/corso-android-2-java-fondamentale/java_processo/)
+[!["java_processo"](http://www.bogliaccino.it/img/java_processo-400x87.jpg)](http://www.bogliaccino.it/corso-android-2-java-fondamentale/java_processo/)
 
 
 
