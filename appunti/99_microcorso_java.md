@@ -1,12 +1,13 @@
 # Linguaggio Java
-## Concetti base
+
 
 ### La prima applicazione Java
 
 File HelloWorld.java
+
 public class HelloWorld {
 public static void main (String args[]) {
-System.out.println (“Hello world!”);
+System.out.println ("Hello world!");
 }
 }
 > javac HelloWorld.java
@@ -23,14 +24,11 @@ Esecuzione
 
 ### Metodi ...
 * Contengono le istruzioni
-* Attivati solo dall’interno di un altro metodo
-* Eventuale uso di parametri & valore di
-ritorno
-* Tra i vari metodi esiste il metodo main da
-cui si “parte”
+* Attivati solo dall'interno di un altro metodo
+* Eventuale uso di parametri & valore di ritorno
+* Tra i vari metodi esiste il metodo main da cui si "parte"
 
-### Lettere minuscole VS Maiuscole
-Metodi
+### Lettere minuscole VS Maiuscole Metodi
 
 
 ### Analoghi alle funzioni di altri linguaggi (C, PHP)
@@ -55,99 +53,21 @@ tipoRestituito nomeMetodo (
 * Possono essere:
   * Dati primitivi
   * Reference
-* Avviene come in C: sempre per valore
+* Avviene  sempre per valore
 * Nel caso di parametri reference, quello che
-viene copiato è il reference, NON l’oggetto
+viene copiato è il reference, NON l'oggetto
   * Equivale al passaggio per riferimento
 
 ### Valore di ritorno
-* Analogo al linguaggio C
-* Il tipo del metodo e il tipo ritornato devo
-coincidere
+* Analogo ad altri linguaggi
+* Il tipo del metodo e il tipo ritornato devo coincidere
 
-### Possibilità di definire metodi ricorsivi
-Tipi primitivi, Costanti e
-Operatori
-Tipo primitivo
+### Possibilità di definire 
+* metodi ricorsivi
+* [Tipi primitivi](02_tipi.md), 
+* Costanti e 
+* [Operatori](02_operatori.md)
 
-### In un linguaggio ad oggetti puro i dati
-dovrebbero essere definiti sotto forma
-di oggetti
-
-### Per efficienza
-* Java definisce dati primitivi
-* La dichiarazione di una istanza (variabile)
-alloca spazio
-* Un valore è associato direttamente alla
-variabile (e.g, i ==
-)
-0
-
-### Ne vengono definiti dimensioni e codifica
-
-### Rappresentazione indipendente dalla
-piattaforma
-Tipo
-boolean
-char
-byte
-short
-int
-long
-float
-double
-void
-Dimensione
-1
-16
-8
-16
-32
-64
-32
-64
-bit
-bit
-bit
-bit
-bit
-bit
-bit
-bit
--
-Codifica
--
-Unicode
-Intero con segno
-Intero con segno
-Intero con segno
-Intero con segno
-IEEE 754 sp
-IEEE 754 dp
--
-C2
-C2
-C2
-C2
-5Costanti
-
-###  I tipi numerici, i char e le stringhe
-seguono la sintassi C
-*  Esempi
-123 (int)
-256789L (L o l = long)
-0567 (ottale) 0xff34 (hex)
-123.75 0.12375e+3 (float o double)
-’a’ ’%’ ’\n’
-’\123’ (\ introduce codice ASCII)
-”1” ”prova\n”
-
-### Tipo boolean
-* Esempi
-true
-false
-
-### Non esiste il tipo reference
 
 ### Modificatore final
 final float pigreco = 3.14;
@@ -158,76 +78,27 @@ static
 (per non sprecare spazio per ogni istanza)
 6Operatori per Interi e Reali
 
-### Operatori aritmetici , relazionali , e di
-assegnazione seguono la sintassi del C
-* Aritmetici: + - ### / %
-* Relazionali: == != > < >= <=
-* Bitwise (interi): & | ^ << >> ~
-* Di assegnazione: = += -= *= /=
-&= |= ^=
-* Di assegnazione/incremento: ++ --
-%=
+## Strutture elementari
 
-### I caratteri sono considerati interi
-(come in C)
-Operatori per Booleani
+## Commenti
 
-### Seguono la sintassi del C
-&& (AND) || (OR) ! (NOT)
-
-### Attenzione:
-* Fenomeno short-circuit
-... f1(x) && f2(y) && f3(z) ...
-f2 e f3 possono NON essere valutate
-* Gli operatori logici agiscono solo su booleani
-  * Un intero NON viene considerato un booleano
-come in C
-  * Gli operatori relazionali forniscono valori
-booleani
-
-Operatori su reference
-
-### Per i puntatori/reference, sono definiti:
-* Gli operatori relazionali == e !=
-  * N.B. test sul puntatore NON sull’oggetto
-* Le assegnazioni
-* L’operatore “punto”
-* NON è prevista l’aritmetica dei puntatori
-Operatori matematici
-
-### Operazioni matematiche complesse sono
-permesse dalla classe (!) Math (package
-java.lang):
-Math.sin (x) calcola sin(x)
-Math.sqrt (x) calcola x^(1/2)
-Math.PI ritorna pi
-Math.abs (x) calcola |x|
-Math.exp (x) calcola e^x
-Math.pow (x, y) calcola x^y
-...
-* Esempio
-z = Math.sin (x) – Math.PI / Math.sqrt(y)
-8Strutture elementari
-Commenti
-
-### Commenti tipo C (multilinea)
-/### questo e` un commento
+### Commenti multilinea
+/* questo e` un commento
 che si estende su due linee */
 
 ### Commenti su linea singola
 // questo e` un commento monolinea
 
 ### Commenti di documentazione
-/*### commento per javadoc
+/** commento per javadoc
 .... */
-9Blocchi e regole di scope
+
+## Blocchi e regole di scope
 
 ### I blocchi
-* Sono simili ai blocchi del C
 * Definiti da { e }
 
 ### Visibilità (scope)
-* Analoga a quella del linguaggio C
 * I parametri sono locali al metodo
 * Le variabili possono essere
   * Locali al metodo
@@ -235,10 +106,11 @@ che si estende su due linee */
   * Vasto uso di definizioni locali
 
 ### Ogni blocco
+
 * Introduce un nuovo scope per le variabili
 * Le variabili si possono dichiarare
-  * All’inizio del blocco
-  * All’interno del blocco
+  * All'inizio del blocco
+  * All'interno del blocco
 {
 int x;
 for (int i=0; i<N; i++){
@@ -251,36 +123,33 @@ int y;
 
 ## Costrutti Condizionali
 
-### Stessa tipologia e sintassi del C
 * if-else
 * switch
 
-### Attenzione: gli interi NON sono
-booleani
-* NON è possibile fare test del tipo
-if(x)
-con x intero
-* Occorre usare operatori relazionali
-if (x != 0)
-Costrutti iterativi
+### Attenzione: gli interi NON sono booleani
+* NON è possibile fare test del tipo `if(x)` con x intero
+* Occorre usare operatori relazionali `if (x != 0)`
 
-### Semantica e sintassi analoga al C
+## Costrutti iterativi
+
+### Semantica e sintassi
+
 * while
 * do-while
 * for
 * break
 * continue
-11Input Output (Elementare)
 
-### L’input/output di caratteri e di interi è
-relativamente spartano
 
-### Richiede l’utilizzo di concetti “complessi”
+## Input Output (Elementare)
+
+### L'input/output di caratteri e di interi è relativamente spartano
+
+### Richiede l'utilizzo di concetti "complessi"
 * Eccezioni
 * I/O
-usualmente introdotti in sezioni
-avanzate dei corsi Java
-12Output
+
+## Output
 
 ### Comandi:
 System.out.println (...)
@@ -288,18 +157,15 @@ System.out.print (...)
 
 ### Esempi:
 * Visualizzare il valore di una variabile
-System.out.print (x);
+`System.out.print (x);`
 * Visualizzare una stringa
-System.out.print (“Valore =“);
+`System.out.print ("Valore =");`
 * Visualizzazione con sequenze di escape
-System.out.print (“\tValore =\n”);
-* Utilizzo dell’operatore di concatenazione di
-stringhe (vedere String)
-System.out.println (“Concatenazione” +
-“ di” + “ stringhe”);
-  * In costrutto di concatenazione vale anche per
-tipi diversi dal tipo String
-System.out.println (“Valore = “ + x);
+`System.out.print ("\tValore =\n");`
+* Utilizzo dell'operatore di concatenazione di stringhe
+`System.out.println ("Concatenazione" + " di" + " stringhe");`
+* Il costrutto di concatenazione vale anche per tipi diversi dal tipo String
+`System.out.println ("Valore = " + x);`
 
 
 ## Input
@@ -325,20 +191,17 @@ System.in.read (s)
 } catch (Exception e) {}
 ...
 for (int i=0; i<s.length; i++) {
-if (s[i]>=‘0’ && s[i]<=‘9’)
-val = val ### 10 + s[i] – ‘0’;
+if (s[i]>=‘0' && s[i]<=‘9')
+val = val ### 10 + s[i] – ‘0';
 }
 ...
 ## Input/Output in modalità grafiche
 
-### Java è stato progettato per lavorare in
-modalità grafiche
+### Java è stato progettato per lavorare in modalità grafiche
 
-### Una possibilità è utilizzare la classe
-JOptionPane definita nel package
-javax.swing
+### Una possibilità è utilizzare la classe JOptionPane definita nel package javax.swing
 
-### Richiede l’utilizzo di concetti “avanzati”
+
 (package swing)
 // Importa Classe JOPtionPane
 import javax.swing.JOptionPane;
@@ -349,770 +212,33 @@ int nValue;
 ...
 // Input
 inputS = JOptionPane.showInputDialog
-(“Messaggio");
+("Messaggio");
 nValue = Integer.parseInt (inputS);
 ...
 // Output
 // (previa creazione della stringa output)
 JOptionPane.showMessageDialog (
-null, output, “Messaggio”,
+null, output, "Messaggio",
 JOptionPane.INFORMATION_MESSAGE );
 
-## Array
 
-* Sequenze ordinate di
-  * Tipi primitivi (int, float, etc.)
-  * Riferimenti ad oggetti ( vedere classi! )
-* Elementi dello stesso tipo
-* Indirizzati da indici
-* Raggiungibili con l’operatore di
-indicizzazione (parentesi quadre [])
-* Raggruppati sotto lo stesso nome
+## [array](03_array.md)
+## [Stringhe e Caratteri](03_stringhe.md)
 
-### Non possono contenere oggetti (solo
-dati primitivi o reference a oggetti)
+## [Metodi & Classi: Concetti base](03_classi.md)
 
-### In Java gli array sono Oggetti
-* Sono allocati nell’area di memoria riservata
-agli oggetti creati dinamicamente (heap)
-
-### Dimensione
-* Può essere stabilita a run-time (quando
-l’oggetto viene creato)
-* È fissa (non può essere modificata)
-* E’ nota e ricavabile per ogni array
-Array Mono-dimensionali
-(vettori)
-
-## Dichiarazione di Array
-
-### Dichiarazione di un riferimento a un
-array
-* Stile Java (array di int)
-int [ ] vet;
-* Stile C/C++
-int vet[ ];
-
-### La dichiarazione di un array non
-assegna alcun spazio
-vet == null
-Creazione di un Array
-
-### L’operatore new crea un array:
-* Con costante numerica
-int[] vet;
-...
-vet = new int[10];
-*  Con costante simbolica
-final int ARRAY_SIZE = 10;
-int[] vet;
-...
-vet = new int[ARRAY_SIZE];
-*  Con valore definito a run-time
-int[] vet;
-... definizione di x (run-time) ...
-vet = new int[x];
-* L’operatore new inizializza le variabili
-  * 0 - per variabili di tipo numerico (inclusi i char)
-  * false - per le variabili di tipo boolean
-
-### Utilizzando un inizializzatore (che
-permette anche di riempire l’array)
-...
-int[] primi = {2,3,5,7,11,13};
-...
-int [] pari = {0, 2, 4, 6, 8, 10,};
-// La virgola finale e’ facoltativa
-// (elenchi lunghi)
-
-### Dichiarazione e creazione possono
-avvenire contestualmente
-
-## Operazioni su Array
-
-### L’attributo length indica la lunghezza
-dell’array (numero di elementi)
-* Gli elementi vanno da 0 a length-1
-for (int i=0; i<vet.length; i++)
-vet[i] = i;
-
-### In Java viene fatto il bounds checking
-* Maggior sicurezza
-* Maggior lentezza di accesso
-
-### Il riferimento ad array
-* Non è un puntatore al primo elemento
-* È un puntatore all’oggetto array
-* Incrementandolo non si ottiene il secondo
-elemento
-
-## Array di oggetti
-
-### Per gli array di oggetti (e.g., Integer)
-Integer [] vet = new Integer [5];
-ogni elemento e’ un riferimento
-
-### L’inizializzazione va completata con
-quella dei singoli elementi
-vet[0] = new Integer (1);
-vet[1] = new Integer (2);
-...
-vet[4] = new Integer (5);
-
-### Confrontare con
-int [] vet = new {1, 2, 3, 4, 5};
-Array Multi-dimensionali
-(Matrici)
-6
-### Array contenenti riferimenti ad altri array
-
-Sintatticamente sono estensioni degli array a una dimensione
-
-### Sono possibili righe di lunghezza diverse
-(matrice = array di array)
-* Esempio
-int[][] triangle = new int[3][]
-triangle
-
-### Le righe non sono memorizzate in posizioni adiacenti
-* Possono essere spostate facilmente
-* Esempio
-// Scambio di due righe
-double[][] balance = new double[5][6];
-...
-double[] temp = balance[i];
-balance[i] = balance[j];
-balance[j] = temp;
-8Linguaggio Java
-Stringhe e Caratteri
-Caratteristiche principali
-
-### Classi disponibili
-* String
-  * Modella stringhe (sequenze – array di caratteri)
-  * Non modificabile (dichiarata final)
-* StringBuffer
-  * Modificabile
-* Character
-* CharacterSet
-
-## Classe String
-
-### Definizione
-String myString;
-myString = new String (“stringa esempio”);
-* Oppure
-String myString =
-new String (“stringa esempio”);
-* Solo per il tipo String vale
-String myString = “stringa esempio”;
-* Il carattere “ può essere incluso come \”
-* Il nome della stringa è il riferimento alla
-stringa stessa
-* Confrontare due stringhe NON significa
-confrontare i riferimenti
-
-### I metodi che gestiscono il tipo String
-NON modificano la stringa ma ne
-creano una nuova
-
-### Concatenazione di stringhe
-* Operatore concat
-  * myString1.concat(myString2)
-  * String s2 = “Ciao”.concat(“ a tutti”).concat(“!”);
-  * String s2 = “Ciao”.concat(“ a tutti”.concat(“!”));
-* Utile per definire stringhe che occupano più
-di una riga
-3* Operatore +
-“questa stringa” + ”e` formata da tre” +
-“stringhe”
-* La concatenazione funziona anche con altri
-tipi, che vengono automaticamente
-convertiti in stringhe
-System.out.println (”pi Greco = ” + 3.14);
-System.out.println (”x = ” + x);
-
-### Lunghezza stringa
-* int length()
-  * myString.length()
-  * “Ciao”.length() restituisce 4
-  * “”.length() restituisce 0
-* Se la lunghezza è N, i caratteri sono
-indicizzati da 0 a N-1
-
-### Carattere i-esimo
-* char charAt (int)
-  * myString.charAt(i)
-
-### Confronta stringa con s
-* boolean equals (String s)
-  * myString.equals (“stringa”)
-ritorna true o false
-* boolean equalsIgnoreCase (String s)
-  * myString.equalsIgnoreCase (“StRiNgA”)
-4
-### Confronta con s facendone la differenza
-* int compareTo (String str)
-  * myString.compareTo (“stringa”)
-ritorna un valore >=< 0
-
-### Trasforma int in String
-* String valueOf (int)
-* Disponibile per tutti tipi primitivi
-
-### Restituisce indice prima occorrenza di c
-* int indexOf (char c)
-* int indexOf (char c, int fromCtrN)
-
-### Altri metodi
-* String toUpperCase (String str)
-* String toLowerCase (String str)
-* String substring (
-int startIndex, int endIndex)
-* String substring (int startIndex)
-5
-### Esempio
-...
-String s1, s2;
-s1 = new String(“Prima stringa”);
-s2 = new String(“Prima stringa”);
-System.out.println(s1);
-/// Prima stringa
-System.out.println(“Lunghezza di s1 = ” +
-s1.length());
-// 26
-if (s1.equals(s2)) ...
-// true
-if (s1 == s2) ...
-// false
-String s3 = s3.substring (2, 6);
-// s3 == “ima s“
-...
-StringTokenizer
-
-### La classe StringTokenizer permette
-l’estrazione di sottostringhe
-* StringTokenizer (String str, String delim)
-  * Costruisce un estrattore di token per la stringa
-str
-  * delim e’ il delimitatore ricercato tra i token
-estratti
-* La classe StringTokenizer mette quindi a
-disposizione metodi per la gestione dei
-token
-  * public boolean hasMoreTokens()
-  * public String nextToken()
-6
-###  Esempio
-// il numero di token e’ noto: nome, eta’, reddito
-String str;
-StringTokenizer st = new StringTokenizer(str," ");
-// Anche: StringTokenizer st =
-//
-new StringTokenizer (str);
-while (st.hasMoreTokens()){
-String token = st.nextToken();
-... Integer.parseInt(token) ...
-// int eta = Integer.parseInt (st.nextToken ());
-// double reddito = Double.parseDouble
-//
-(st.nextToken ());
-}
-Classe StringBuffer
-
-### Un oggetto String
-* NON è modificabile
-* Una volta creato non possiamo aggiungere,
-eliminare, modificare caratteri (i metodi
-visti creano nuove stringhe)
-* Tale restrizione è dovuta a ragioni di
-efficienza
-7
-### Le considerazione precedenti non sono
-vere per la classe StringBuffer
-
-### Esempio
-StringBuffer myStringBuffer = new
-stringBuffer (“stringa modificabile”);
-myStringBuffer.setCharAt (8, ‘M’);
-// Trasforma in “stringa Modificabile”
-
-### Si usa raramente
-
-### Un oggetto StringBuffer non può essere
-utilizzato per operazioni di I/O
-System.out.println
-(myStringBuffer.toString());
-
-### Metodi:
-* Aggiunta di caratteri
-myStringBuffer.append (“aggiunta”);
-* insert
-* delete
-* reverse
-8Classe Character
-
-### La classe involucro Character si trova in
-java.lang
-
-### Include metodi statici per verificare le
-proprietà di un carattere
-
-### Esempio
-String s = “Stringa Generica.”
-char c = s.charAt (0);
-... Character.isUpperCase(c) ... // true
-... Character.isDigit(c) ...
-// false
-...
-
-### Predicati vari
-* boolean
-* boolean
-* boolean
-* boolean
-* boolean
-* boolean
-isLetter (char c)
-isDigit (char c)
-isLetterOrDigit (char c)
-isSpaceChar (char c)
-isLowerCase (char c)
-isUpperCase (char c)
-
-### Trasformazioni varie
-* char toUpperCase (char c)
-* char toLowerCase (char c)
-9Linguaggio Java
-Metodi & Classi: Concetti base
-Classi: Concetti Base
-
-### Estendono il concetto di “struttura” del
-linguaggio C
-
-### Definiscono:
-* I dati (detti campi o attributi)
-* Le azioni (dette metodi o funzioni membro)
-che sui dati agiscono
-
-### Possono essere definite
-* Dal programmatore (ex. Automobile)
-* Dall’ambiente Java (ex. String, System,
-etc.)
-1
-### La “gestione” di una classe avviene
-mediante
-* Definizione della classe
-* Instanziazione di Oggetti della classe
-Definizione di un Classe
-2
-### Definizione
-class <nomeClasse) {
-<campi>
-<metodi>
-}
-
-### Esempi
-* Classe contenente dati ma non azioni
-class DataOnly {
-boolena b;
-char c;
-int i;
-float f;
-}
-* Classe contenente dati e azioni
-class Automobile {
-String colore;
-String marca;
-boolean accesa;
-Nome
-Automobile
-Attributi
-void mettiInMoto() {
-accesa = true;
-}
-void vernicia (String nuovoCol) { Messaggi/
-Metodi
-colore = nuovoCol;
-}
-colore
-marca
-accesa
-mettiInMoto
-vernicia
-stampaStato
-void stampaStato () {
-System.out.println(“Questa auto e` una “+
-marca + “ “ + colore);
-if (accesa)
-System.out.println(“Il motore e` acceso”);
-else
-System.out.println(“Il motore e` spento”);
-}
-}
-3
-### Dati & Metodi
-* Public: visibili all’esterno della classe
-* Private: visibili solo dall’interno della classe
-* Protected: ...
-* Nessuna specifica (amichevole): ...
-
-### La definizione di classe non rappresenta
-alcun oggetto.
-Polimorfismo (overloading)
-4
-### Una classe può avere più metodi con lo
-stesso nome
-
-### I metodi devono essere distinguibili in
-base al
-* Numero dei parametri
-* Tipo dei parametri
-
-### Il metodo da eseguire viene scelto in
-base al
-* Numero e tipo di parametri
-* Non esiste alcuna discriminazione sul valore
-di ritorno
-
-### Esempio
-class Automobile {
-String colore;
-void vernicia () {
-colore = “bianco”;
-}
-void vernicia (int i) {
-switch (i) {
-case 1: colore = “nero”; break;
-...
-}
-}
-void vernicia (String nuovoCol) {
-colore = nuovoCol;
-}
-}
-5Instanziare una Classe
-
-### Crea degli oggetti appartenenti a una
-classe
-
-### Gli oggetti sono caratterizzati da
-* Classe di appartenenza - tipo (ne descrive
-attributi e metodi)
-* Stato (valore attuale degli attributi)
-* Identificatore univoco (reference - handle
-- puntatore)
-6
-### Per creare un oggetto occorre
-* Dichiarare una istanza
-  * Tecnica analoga a quella utilizzata per i tipi
-primitivi
-  * La dichiarazione non alloca spazio ma solo una
-riferimento (puntatore) che per default vale
-null
-* Allocazione e inizializzazione
-  * Riservano lo spazio necessario creando
-effettivamente l’oggetto appartenente a quella
-classe
-a
-Oggetto
-Automobile
-Creare un Oggetto
-
-### Il costrutto new
-* Crea una nuova istanza della classe
-specificata, allocandone la memoria
-* Restituisce il riferimento all’oggetto creato
-Automobile a = new Automobile ();
-Motorcycle m = new Motorcycle ();
-String s = new String (“ABC”);
-* Chiama il costruttore del nuovo oggetto
-(vedere in seguito)
-7Utilizzo della Classe
-
-### Per “gestire” una classe occorre
-* Accedere ai metodi della classe
-  * Messaggi
-* Accedere agli attributi della classe
-8Messaggi
-
-### L’invio di un messaggio provoca
-l’esecuzione del metodo
-
-### Inviare un messaggio ad un oggetto
-* Usare la notazione “puntata”
-rif-oggetto.messaggio(parametri)
-* Sintassi analoga alla chiamata di funzioni in
-linguaggio C
-
-### I metodi definiscono l’implementazione
-delle operazioni
-
-### I messaggi che un oggetto può
-accettare coincidono con i nomi dei
-metodi
-mettiInMoto, vernicia, etc.
-
-### I messaggi includono i parametri
-vernicia(“Rosso”)
-
-### Esempi
-Automobile a = new Automobile();
-a.mettiInMoto();
-a.vernicia(“Blu”);
-9
-### Caso particolare
-* Metodi che devono inviare messaggi allo
-stesso oggetto cui appartengono
-* In questo caso la notazione puntata è
-superflua in quanto è sottinteso il
-riferimento
-public class Libro {
-int nPagine;
-public void leggiPagina (int nPagina) {...}
-public void leggiTutto () {
-for (int i=0; i<nPagine; i++)
-leggiPagina (i);
-}
-}
-Attributi
-
-### Stessa notazione “puntata” dei messaggi
-rif-oggetto.attributo
-* Il riferimento viene usato come una
-qualunque variabile
-Automobile a=new Automobile();
-a.colore = “Blu”;
-boolean x = a.accesa;
-10* I metodi che fanno riferimento ad
-attributi dello stesso oggetto possono
-tralasciare il rif-oggetto
-public class Automobile {
-String colore;
-void vernicia(){
-colore = “Verde”;
-// colore si riferisce
-// all’oggetto corrente
-}
-}
-Esempio (messaggi e attributi)
-public class Automobile {
-String colore;
-public void vernicia () {
-colore = “bianco”;
-}
-public void vernicia (String nuovoCol) {
-colore = nuovoCol;
-}
-}
-...
-Automobile a1, a2;
-a1 = new Automobile ();
-a1.vernicia (“verde”);
-a2 = new Automobile ();
-11Construttore
-Costruttore
-
-### Specifica le operazioni di
-inizializzazione (attributi, etc.) che
-vogliamo vengano eseguite su ogni
-oggetto della classe appena viene creato
-
-### Tale metodo ha
-* Lo stesso nome della classe
-* Tipo non specificato
-
-### Non possono esistere attributi non
-inizializzati
-* Gli attributi vengono inizializzati comunque
-con valori di default
-12
-### Se non viene dichiarato un costruttore,
-ne viene creato uno di default vuoto e
-senza parametri
-
-### Spesso si usa l’overloading definendo
-diversi costruttori
-
-### Si osservi che la distruzione di oggetti
-(garbage-collection) non è a carico del
-programmatore
-Esempio (costruttori con overloading)
-Class Window {
-String title;
-String color;
-// Finestra senza titolo ne` colore
-Window () {
-...
-}
-// Finestra con titolo senza colore
-Window (String t) {
-...
-title = t;}
-// Finestra con titolo e colore
-Window (String t, String c) {
-...
-title = t; color = c;}
-}
-13Puntatore Auto-referenziante
-Operatore this
-
-### La parola riservata this e’
-utilizzata quale puntatore auto-
-referenziante
-*  this riferisce l’oggetto (e.g., classe)
-corrente
-
-### Utilizzato per
-* Referenziare la classe appena
-istanziata
-14* Evitare il conflitto tra nomi
-class Automobile{
-String colore;
-...
-...
-void vernicia (String colore) {
-this.colore = colore;
-}
-}
-. . .
-Automobile a2, a1 = new Automobile;
-a1.vernicia(“bianco”); // a1 == this
-a2.vernicia(“rosso”);
-// this == a2
-* Evitare il conflitto tra nomi
-class Automobile{
-String colore;
-...
-...
-void vernicia (String colore) {
-this.colore = colore;
-}
-}
-. . .
-Automobile a2, a1 = new Automobile;
-a1.vernicia(“bianco”); // a1 == this
-a2.vernicia(“rosso”);
-// this == a2
-15Notazioni Puntate
-
-### Le notazioni puntate possono essere
-combinate
-System.out.println(“Hello world!”);
-* System è una classe del package
-java.lang
-* out è una variabile di classe contenente il
-riferimento ad un oggetto della classe
-PrintStream che punta allo standard
-output
-* println è un metodo della classe
-PrintStream che stampa una linea di
-testo
-Operazioni su reference
-
-### Definiti gli operatori relazionali == e !=
-* Attenzione: il test di uguaglianza viene
-fatto sul puntatore (reference) e NON
-sull’oggetto
-* Stabiliscono se i reference si riferiscono
-allo stesso oggetto
-
-### È definita l’assegnazione
-
-### È definito l’operatore punto (notazione
-puntata)
-
-### NON è prevista l’aritmetica dei
-puntatori
-16Visibilità ed encapsulation
-
-### Motivazione
-* Modularità = diminuire le interazioni
-* Info Hiding = delegare responsabilità
-
-### Supporto sintattico
-* private
-  * attributo/metodo visibile solo da istanze della
-stessa classe
-* public
-  * attributo/metodo visibile ovunque
-17Accesso
-Metodo della
-stessa classe Metodo di
-altra classe
-Private Si No
-Public Si Si
-Getters e setters
-
-### Aggiungere metodi per leggere scrivere
-un attributo privato
-
-### Può infrangere (indirettamente)
-l’encapsulation
-String getColor() {
-return color;
-}
-void setColor(String newColor) {
-color = newColor;
-}
-18class Automobile {
-public String colore;
-}
-Automobile a = new Automobile();
-a.colore = “bianco”; // ok
-class Automobile {
-private String colore;
-public void vernicia(String colore)
-{this.colore = colore;}
-// ok
-}
-Automobile a = new Automobile();
-a.colore = “bianco”; // error
-a.vernicia(“verde”); // ok
-Variabili e metodi di classe
-19Variabili di classe
-
-### Rappresentano proprietà comuni a tutte
-le istanze
-
-### Esistono anche in assenza di istanze
-(oggetti)
-
-### Dichiarazione: static
-
-### Accesso: nome-classe . attributo
-class Automobile {
-static int numeroRuote = 4;
-}
-Automobile.numeroRuote;
-Metodi di classe
-
-### Funzioni non associate ad alcuna istanza
-* Dichiarazione: static
-* Accesso: nome-classe . metodo()
-class HelloWorld {
-public static void main (String args[]) {
-System.out.println(“Hello World!”);
-}
-}
-double y = Math.cos(x);
-// cos metodo static
-20Linguaggio Java
-Ereditarietà
-Ereditarietà
+## Ereditarietà
 
 ### Meccanismo Java che realizza la
 * Specializzazione
 * Generalizzazione
-permettendo l’estensione di “vecchie
-classi” in “nuove classi”
+* permettendo l'estensione di "vecchie classi" in "nuove classi"
 
-### La classe che eredita da un’altra
+### La classe che eredita da un'altra
 * Eredita attributi e operazioni
-* Può modificare attributi/operazioni
-ereditati (override)
+* Può modificare attributi/operazioni ereditati (override)
 * Può aggiungere attributi/operazioni
-1
+
 ### Sintassi
 public class <nuovaClasse> extends
 <vecchiaClasse> {
@@ -1181,8 +307,8 @@ public void aumentaStipendio
 stipendio *= 1 + percentuale / 100;
 }
 public void stampa() {
-System.out.println(“Impiegato” + nome +
-“ ” + stipendio);
+System.out.println("Impiegato" + nome +
+" " + stipendio);
 }
 }
 class Dirigente extends Impiegato {
@@ -1197,29 +323,30 @@ int bonus = grado ### 3;
 stipendio *= 1+(percentuale+bonus)/100;
 }
 public void stampa() {
-System.out.println(“Dirigente” + nome +
-“ ” + stipendio);
+System.out.println("Dirigente" + nome +
+" " + stipendio);
 }
 public void aumentaGrado() {
 grado++;
 }
 }
-4Visibilità: costrutto “protected”
+
+Visibilità: costrutto "protected"
 class Impiegato {
 private String nome;
 private double stipendio;
 }
 class Dirigente extends Impiegato {
 void stampa() {
-System.out.println(“Dirigente” + nome +
-“ ” + stipendio);
+System.out.println("Dirigente" + nome +
+" " + stipendio);
 }
 }
 INACCESSIBILI
 
 ### Visibilità di attributi e metodi
 * public: sono accessibili senza restrizioni
-* private: sono accessibili solo all’interno
+* private: sono accessibili solo all'interno
 della classe in cui sono definiti
 * protected: sono accessibili dalla classe e in
 più sono accessibili dalle classi derivate da
@@ -1237,9 +364,9 @@ Private
 Puntatori this e super
 
 ### Puntatori
-* this riferisce l’oggetto corrente
-* super riferisce l’oggetto “sopra” this
-(“superoggetto”) ovvero la superclasse
+* this riferisce l'oggetto corrente
+* super riferisce l'oggetto "sopra" this
+("superoggetto") ovvero la superclasse
 class AutomobileElettrica extends Automobile {
 boolean batterieCariche;
 void ricarica() {
@@ -1252,7 +379,7 @@ super.mettiInMoto();
 }
 6Ereditarietà e costruttori
 
-### Ogni oggetto contiene un’istanza della
+### Ogni oggetto contiene un'istanza della
 propria superclasse
 * La superclasse deve essere inizializzata
 * Il compilatore Java inserisce
@@ -1261,7 +388,7 @@ costruttore di default del superoggetto
 * La chiamata al costruttore del superoggetto
 viene inserita come PRIMA istruzione del
 nuovo costruttore
-  * L’esecuzione dei costruttori procede dalla radice
+  * L'esecuzione dei costruttori procede dalla radice
 verso il basso nella gerarchia di ereditarietà
   * È garantito che quando un metodo di una classe
 viene eseguito (costruttore compreso), la
@@ -1269,15 +396,15 @@ superclasse sia già inizializzata completamente
 7Esempio
 class Arte {
 Arte() {
-System.out.println(“Costruttore Arte”); }
+System.out.println("Costruttore Arte"); }
 }
 class Disegno extends Arte {
 Disegno() {
-System.out.println(“Costruttore Disegno”); }
+System.out.println("Costruttore Disegno"); }
 }
 class DisegnoAnimato extends Disegno {
 DisegnoAnimato() {
-System.out.println(“Costruttore DisegnoAnimato”);
+System.out.println("Costruttore DisegnoAnimato");
 }
 }
 DisegnoAnimato d = new DisegnoAnimato();
@@ -1287,19 +414,13 @@ Costruttore classe Disegno Animato
 Costruttori con parametri
 
 ### Se i costruttori hanno parametri
-* Il compilatore non è in grado di inserire
-automaticamente la chiamata
-* Le istanze delle superclassi devono essere
-inizializzate correttamente tramite
-chiamate esplicite ai costruttori (utilizzando
-la variabile super)
-* La chiamata del costruttore della
-superclasse deve essere la PRIMA
-istruzione del costruttore
+* Il compilatore non è in grado di inserire automaticamente la chiamata
+* Le istanze delle superclassi devono essere inizializzate correttamente tramite chiamate esplicite ai costruttori (utilizzando la variabile super)
+* La chiamata del costruttore della superclasse deve essere la PRIMA istruzione del costruttore
   * Il compilatore lo controlla
-  * L’ordine di inizializzazione degli oggetti è
-sempre quello giusto
-8Esempio
+  * L'ordine di inizializzazione degli oggetti è sempre quello giusto
+
+Esempio
 class Dirigente extends Impiegato {
 int grado;
 Dirigente(String n, double s) {
@@ -1312,14 +433,14 @@ super.aumentaStipendio(percentuale+bonus);
 }
 ...
 }
-La classe Object
-9Albero di derivazione
+
+## La classe Object - Albero di derivazione
 
 ### Tutte le classi in Java derivano dalla
 classe Object
 
 ### Non si può definire una classe che non
-eredita da nessun’altra classe
+eredita da nessun'altra classe
 * Ogni classe esclusa Object ha una
 superclasse
 * Se non specificato altrimenti, una classe
@@ -1334,7 +455,7 @@ La classe Object
 ### Contiene alcuni metodi generali Esempi
 * String toString()
   * Restituisce una stringa che rappresenta
-univocamente l’oggetto
+univocamente l'oggetto
 * boolean equals(Object obj)
   * Restituisce vero se obj e this sono lo stesso
 oggetto
@@ -1344,7 +465,7 @@ ridefiniti (overridden) nelle classi
 derivate
 10Dynamic binding
 
-### Per binding si intende l’associazione
+### Per binding si intende l'associazione
 messaggio – metodo
 Automobile a;
 for(int i=0; i<garage.length; i++){
@@ -1367,11 +488,11 @@ mettiInMoto
 11
 ### Due scelte possibili
 * Statico
-  * Associazione fatta in base al tipo compile time
+  * Associazione fatta in base al mpile time
 * Dinamico (default in Java)
   * Associazione fatta in base al tipo run time
-  * Java sceglie il corretto metodo dell’appropriata
-sottoclasse associata all’oggetto
+  * Java sceglie il corretto metodo dell'appropriata
+sottoclasse associata all'oggetto
 
 ### N.B. se le classi non sono legate da
 ereditarietà è possibile una scelta sola
@@ -1381,19 +502,19 @@ Aereo a;
 a.mettiInMoto();
 Moto Aereo
 mettiInMoto mettiInMoto
-L’attributo final
+L'attributo final
 
 ### Definisce un dato elemento come non
 più modificabile
 * Applicato a variabile la trasforma in
 costante
 * Applicato a un metodo
-  * Ne impedisce l’overriding in classi derivate
-  * Ne rende possibile l’inlining (binding statico -
+  * Ne impedisce l'overriding in classi derivate
+  * Ne rende possibile l'inlining (binding statico -
 più efficiente)
 * Applicato a una classe
   * Impedisce di derivare da essa altre classi (la
-classe deve essere una foglia dell’albero di
+classe deve essere una foglia dell'albero di
 ereditarietà)
 12Casting di oggetti
 Type Casting di Oggetti
@@ -1402,7 +523,7 @@ Type Casting di Oggetti
 riferimento ad oggetto soltanto tra tipi
 in relazione di ereditarietà
 
-### L’oggetto rimane invariato
+### L'oggetto rimane invariato
 EssereVivente
 Animale
 Vegetale
@@ -1458,222 +579,16 @@ procedura
   * Insieme di classi
 Regole
 
-### Un package è un insieme logico di classi
+[package](20_JavaPackages.md) 
 
-### Fisicamente le classi stanno su uno o più
-file, tutti contenuti in una stessa
-directory
 
-### Ogni package definisce un suo scope
-(ambiente di visibilità dei nomi)
-* Stessi nomi in package diversi senza
-conflitti
-2Nomi
-
-### Un package è identificato univocamente
-da un nome costruito gerarchicamente
-(notazione puntata)
-java.util
-grafica.altaRisoluzione.mioPackage
-
-### Convenzione per generare nomi unici
-* Usare come prefisso del nome del package
-il proprio nome internet invertito
-it.polito.softeng.mioPackage
-Creazione di un package
-
-### Tutti i file del package devono
-contenere la riga
-package <nomePackage>;
-quale prima riga del file (tranne i
-commenti)
-
-### Specifica che la classe pubblica
-contenuta in quel file fa parte di quel
-package
-3Utilizzo di un package
-
-### Un package può essere utilizzato
-* Mediante importazione del package
-* Mediante riferimento esplicito
-
-### Importare un package significa
-* Importare la singola classe del package
-import
-nomePackage.nomeClass;
-* Importare tutte le classi del package
-import
-nomePackage;
-* Esempi
-import java.util.ArrayList;
-import java.util.*;
-import java.util;
-
-### Riferimento esplicito (senza import)
-* Specificare il nome per intero
-... java.util.ArrayList ...
-  * Invece di
-import java.util.*;
-... ArrayList ...
-
-### Collisioni
-* Se due package definiscono classi omonime
-possono essere importati entrambi
-* La collisione si verifica solo quando si
-utilizzano gli elementi in conflitto
-4Storage (directory)
-
-### La directory in cui il package risiede
-deve avere un path che corrisponde a
-quello del nome
-java.util
-<->
-java/util
-
-### Il path è relativo a uno dei percorsi di
-ricerca automatica definiti nella
-variabile di ambiente CLASSPATH
-
-### Un sottoalbero di package può essere
-sostituito da un
-* File zippato ( .zip)
-* File archiviato ( .jar)
-Esempio
-CLASSPATH=c:\java\jdk\lib;c:\java\mylibs
-
-### Per installare il package
-didattica.esercizi
-/
-si hanno 2 possibilità
-java
-jdk mylibs
-lib didattica
-didattica esercizi
-esercizi
-5Visibilità
-
-### Le regole di encapsulation / visibilità si
-applicano anche ai package
-
-### Euristica: minimizzare il numero di
-classi/attributi/metodi visibili al di fuori
-di un package
-Modificatori di visibilità
-
-### Su attributi o metodi di classi entro
-package
-* private: visibile solo da istanze della stessa
-classe
-* public: visibile da istanze di qualsiasi classe
-all’interno del package
-  * anche da istanze all’esterno del package SE la
-classe è public
-* package VALORE DI DEFAULT: visibile da
-istanze di qualsiasi classe, all’interno del
-package
-6Accesso
-Metodo della
-stessa classe
-entro package Metodo di
-altra classe
-entro package Metodo di altra
-classe fuori
-package
-Private
-attributo/metodo Si No No
-Package
-attributo/metodo Si Si No
-Public
-attributo/metodo
-su package class Si Si No
-Public
-attributo/metodo
-su public class Si Si Si
-Modificatori di visibilità
-
-### Classi all’interno di un package
-* public: elementi (attributi metodi) public
-della classe sono visibili anche fuori dal
-package
-* package (VALORE DI DEFAULT): elementi
-(attributi metodi) public della classe sono
-visibili solo all’interno del package
-7Librerie (package) Standard
-
-### Il package java.lang contiene alcune
-classi basilari
-
-### Viene importato automaticamente (non
-occorre import)
-java
-applet
-awt
-data
-event
-transfer
-beans
-image
-io
-lang
-math
-net
-rmi
-util
-peer
 Librerie grafiche
-Tipi Primitivi – Classi Wrapper
-8Tipi primitivi
+[Tipi Primitivi – Classi Wrapper](02_tipi.md)
 
-### In un mondo OO ideale, vi sono solo
-classi e istanze di classi
-
-### Java
-* Per efficenza usa tipi primitivi per int,
-float etc.
-* Per completezza
-  * Definisce anche classi per interi, float etc.
-(classi wrapper)
-  * Definisce operazioni per passare dai dati
-primitivi alle classi wrapper
-Classi “Wrapper” per tipi Primitivi
-
-### Se si vogliono trattare anche i dati
-primitivi come oggetti si possono
-utilizzare le classi “wrapper”
-
-### Un oggetto di una classe “wrapper”
-incorpora un dato primitivo e fornisce
-metodi per operare su di esso
-
-### Le classi wrapper dei tipi primitivi sono
-definite nel package java.lang
-9
-### Corrispondenza
-Tipo Primitivo
-boolean
-char
-byte
-short
-int
-long
-float
-double
-void
-ClasseWrapper
-Boolean
-Character
-Byte
-Short
-Integer
-Long
-Float
-Double
-Void
-Classi Astratte
-10Classi Astratte
+## Classi Astratte
 
 ### Un metodo astratto è un metodo di cui
-non viene specificata l’implementazione
+non viene specificata l'implementazione
 
 ### Una classe astratta è una classe avente
 almeno un metodo astratto
@@ -1694,7 +609,7 @@ Uso delle Classi Astratte
 (istanziabile) da una astratta occorre
 definire tutte le implementazioni
 mancanti ovvero
-* Ereditare la classe facendo l’overriding di
+* Ereditare la classe facendo l'overriding di
 tutti i metodi astratti
 
 ### Permette di trattare omogeneamente
@@ -1703,21 +618,21 @@ oggetti con caratteristiche diverse
 11Interfacce
 Interfacce
 
-### Un’interfaccia è una classe
+### Un'interfaccia è una classe
 completamente astratta , cioè del tutto
 priva della parte di implementazione
 * Tutti i metodi sono astratti
 * Non vi sono attributi
-  * È possibile definire solo “attributi” final (in
+  * È possibile definire solo "attributi" final (in
 pratica costanti)
-  * Definendo un attributo in un’interfaccia questo
+  * Definendo un attributo in un'interfaccia questo
 viene automaticamente considerato final
 12
-### Un’interfaccia
-* Ha tutti i vantaggi e le indicazioni d’uso
+### Un'interfaccia
+* Ha tutti i vantaggi e le indicazioni d'uso
 delle classi astratte
 * Presenta maggior flessibilità rispetto
-all’ereditarietà di una classe astratta
+all'ereditarietà di una classe astratta
 Memorizzazione
 13Tipi di memoria
 
@@ -1745,8 +660,8 @@ stato
 14Memorizzazione delle Variabili
 
 ### Variabili di istanza
-* Memorizzate all’interno degli oggetti
-(nell’heap)
+* Memorizzate all'interno degli oggetti
+(nell'heap)
 
 ### Variabili automatiche ( locali )
 * Memorizzate nello stack
@@ -1755,7 +670,7 @@ stato
 * Memorizzate in aree statiche
 Variabili di istanza
 
-### Dichiarate all’interno di una classe
+### Dichiarate all'interno di una classe
 (attributi)
 Class Window {
 boolean visible;
@@ -1772,7 +687,7 @@ visible
 ogni istanza della classe
 15Variabili automatiche (locali)
 
-### Dichiarate all’interno dei metodi
+### Dichiarate all'interno dei metodi
 Class Window {
 ...
 void resize () {
@@ -1783,10 +698,10 @@ for (i=0; i<5; i++)
 ### Memorizzate nello stack
 
 ### Create/inizializzate automaticamente
-all’ingresso del blocco in cui sono
+all'ingresso del blocco in cui sono
 dichiarate
 
-### Distrutte automaticamente all’uscita
+### Distrutte automaticamente all'uscita
 Variabili statiche
 
 ### Dichiarate nelle classi o nei metodi con
@@ -1821,7 +736,7 @@ distruggere gli oggetti
 recuperare lo spazio nella memoria heap
   * Quando necessario (per esempio quando si
 esaurisce lo spazio disponibile in memoria
-principale) esegue un’analisi dei riferimenti e
+principale) esegue un'analisi dei riferimenti e
 distrugge gli oggetti per i quali non esistono più
 riferimenti
 17Linguaggio Java
@@ -1838,9 +753,9 @@ eccezioni
 * Separare la gestione delle eccezioni dalla
 gestione del caso nominale
 * Permettere al client di una funzione di
-gestire l’eccezione in modo appropriato (il
+gestire l'eccezione in modo appropriato (il
 server spesso non conosce il modo migliore
-per gestire l’errore)
+per gestire l'errore)
 1
 ### Esempio
 readFile {
@@ -1882,20 +797,20 @@ rappresenta quanto è successo
 derivata da Throwable (derivata da Object)
 * Tali oggetti sono le eccezioni
 
-### Si dice che l’eccezione
-* Viene “gettata” (thrown) e
-* In seguito deve essere “gestita” ovvero
-“catturata” (catch)
+### Si dice che l'eccezione
+* Viene "gettata" (thrown) e
+* In seguito deve essere "gestita" ovvero
+"catturata" (catch)
 
 ### Costrutti per la gestione delle eccezioni
 * try { } ... catch {}
-  * “Getta” l’eccezione a livello di un blocco di
+  * "Getta" l'eccezione a livello di un blocco di
 istruzioni
-  * La “cattura” effettuandone la gestione
+  * La "cattura" effettuandone la gestione
 * throws
-  * “Getta” l’eccezione a livello di metodi
+  * "Getta" l'eccezione a livello di metodi
 * throw
-  * “Getta” l’eccezione a livello di codice / istruzioni
+  * "Getta" l'eccezione a livello di codice / istruzioni
 3try ... catch
 
 ### Cattura le eccezioni generate in una
@@ -1915,7 +830,7 @@ try {
 ...
 }
 catch(MalformedURLException mue) {
-// qui recupero l’errore “malformedURL”
+// qui recupero l'errore "malformedURL"
 ...
 }
 catch(IOException e) {
@@ -1926,7 +841,7 @@ catch(IOException e) {
 ### Costrutti try-catch possono essere
 annidati (catch che include try-catch)
 4
-### Il blocco “finally” esegue istruzioni al
+### Il blocco "finally" esegue istruzioni al
 termine del blocco try-catch
 * Senza di eccezioni
 * Con eccezioni
@@ -1975,7 +890,7 @@ throws <classeEccezione 1 >
 ### Esempio
 * Chi chiama il metodo leggi deve sapere se la
 lettura è andata a buon fine oppure no
-* Con try-catch gestiamo l’eccezione a livello
+* Con try-catch gestiamo l'eccezione a livello
 del chiamato (metodo leggi)
 ...
 byte b[] = new byte[10];
@@ -1986,7 +901,7 @@ System.in.read (b);
 }
 ...
 6* Sapere se la lettura è andata a buon fine, non
-“interessa” tanto al chiamato (metodo leggi)
+"interessa" tanto al chiamato (metodo leggi)
 quanto al chiamante
 static String leggi (String val) throws
 IOException {
@@ -2000,24 +915,24 @@ return (val);
 }
 throw
 
-### Permette di “gettare” in modo
-“esplicito” una eccezione a livello di
+### Permette di "gettare" in modo
+"esplicito" una eccezione a livello di
 codice
 throw <oggettoEccezione>
 
 ### Provoca
-* L’interruzione dell’esecuzione del metodo
-* L’avvio della fase di cattura dell’eccezione
+* L'interruzione dell'esecuzione del metodo
+* L'avvio della fase di cattura dell'eccezione
 generata
 * Dato che le eccezioni sono oggetti, chi getta
-l’eccezione deve creare l’oggetto eccezione
+l'eccezione deve creare l'oggetto eccezione
 (operatore new) che la descrive
 7
 ### Esempio
 ...
 if ( y==0 ){
 throw new ArithmeticException (
-“Frazione con denominatore nullo.”);
+"Frazione con denominatore nullo.");
 }
 z = x/y;
 ...
@@ -2043,7 +958,7 @@ costituiscono situazioni non recuperabili
   * Accesso a posizione inesistente di un array
 * ClassCastException
   * Cast di un riferimento a un sottotipo di cui
-l’oggeto non è instanza
+l'oggeto non è instanza
 * NegativeArraySizeException
   * Creazione di un array di dimensione negativa
 * NullPointerException
@@ -2068,8 +983,8 @@ non sono sufficienti
 
 ### Si realizza creando sottoclassi di
 Throwable
-* Tali sottoclassi sono del tutto “assimilabili”
-a classi “standard”, e.g., possono
+* Tali sottoclassi sono del tutto "assimilabili"
+a classi "standard", e.g., possono
   * ereditare attributi e metodi
   * ridefinire il metodo costruttore
   * definire dei metodi get/set
@@ -2088,7 +1003,7 @@ try ... catch (NewExc e) ...
 static String leggi (String val) throws
 NewExc ...
 ...
-throw new NewExc (“messaggio”) ...
+throw new NewExc ("messaggio") ...
 10Eccezioni controllate e non
 
 ### Le eccezioni si dividono in
@@ -2096,7 +1011,7 @@ throw new NewExc (“messaggio”) ...
   * Istanze di RuntimeException o delle sue
 sottoclassi
   * Il compilatore si assicura esplicitamente che
-quando un metodo solleva una’eccezione la tratti
+quando un metodo solleva una'eccezione la tratti
 esplicitamente
   * Questo può essere fatto mediante i costrutti
 try-catch o throws
@@ -2105,9 +1020,9 @@ compilazione
 * Non controllate
   * Sono tutte le altre eccezioni, ovvero istanze di
 Exception ma non di RuntimeException
-  * L’eccezione può non essere gestita
+  * L'eccezione può non essere gestita
 esplicitamente dal codice
-  * Viene “passata” automaticamente da metodo
+  * Viene "passata" automaticamente da metodo
 chiamato a metodo chiamante
   * Il compilatore non si lamenta
 
@@ -2121,9 +1036,9 @@ troppo pesante la scrittura del codice
 controllata)
 11Linguaggio Java
 Streams
-Generalità sull’I/O
+Generalità sull'I/O
 
-### L’Input/Output è descritto nel package
+### L'Input/Output è descritto nel package
 java.io
 
 ### Modalità principali di manipolazione
@@ -2136,7 +1051,7 @@ nome
   * Classi di scrittura: contengono OutputStream
 nel nome
 1
-### Usualmente l’I/O da file
+### Usualmente l'I/O da file
 * Richiede la gestione di eccezioni controllate
 * La radice della gerarchia di queste
 eccezioni è IOExcetion
@@ -2149,9 +1064,9 @@ I/O orientato a caratteri singoli
 2import java.io.*;
 ...
 public ... throws IOException {
-File <inF> = new File (“<nameIn>”);
+File <inF> = new File ("<nameIn>");
 FileReader <inR> = new FileReader (<inF>);
-File <outF> = new File (“<nameOut>”);
+File <outF> = new File ("<nameOut>");
 FileWriter <outW> = new FileWriter (<outF>);
 int c;
 while ((c = <inR>.read()) != -1)
@@ -2161,20 +1076,20 @@ while ((c = <inR>.read()) != -1)
 }
 
 ### I costrutti
-File <inF> = new File (“<nameIn>");
+File <inF> = new File ("<nameIn>");
 FileReader <inR> = new FileReader (inF);
-File <outF> = new File (“<nameOut>");
+File <outF> = new File ("<nameOut>");
 FileWriter <outW> = new FileWriter (outF);
 possono essere scritti come segue
 FileReader <inR> = new FileReader
-(”<nameIn>”);
+("<nameIn>");
 FileWriter <outW> = new FileWriter
-(“<nameOut>”);
+("<nameOut>");
 3
 ### Metodi generali
   * Chiusura del file
 public void close () throws IOException
-  * Scrittura dei caratteri nel “buffer”
+  * Scrittura dei caratteri nel "buffer"
 public void flush () throw IOEXception
 
 ### Modalità di lettura
@@ -2211,7 +1126,7 @@ dalla classe BufferedReader
 ### I metodi di tale classe
 * Sono analoghi a quelli della classe Writer
 (metodo write)
-* L’I/O bufferizzato è più efficiente
+* L'I/O bufferizzato è più efficiente
   * Lettura di una riga (conclusa dai caratteri \n
 = linefeed, \r = carriage return) intera
 public String readLine ()
@@ -2220,9 +1135,9 @@ Ritorna null al raggiungimento di EOF
 5import java.io.*;
 ...
 public ...throws IOException {
-FileReader <inR> = new FileReader (“<nameIn>”);
+FileReader <inR> = new FileReader ("<nameIn>");
 BufferedReader <inB> = new BufferedReader (<inR>);
-FileWriter <outF> = new FileWriter (“<nameOut>”);
+FileWriter <outF> = new FileWriter ("<nameOut>");
 BufferedWriter <outB> = new BufferedReader (<outF>);
 String str;
 ...
@@ -2235,18 +1150,18 @@ while ((str = <inB>.readLine ()) != null)
 
 ### I costrutti
 FileReader <inR> = new FileReader
-(“<nameIn>”);
+("<nameIn>");
 BufferedReader <inB> = new BufferedReader
 (<inR>);
 FileWriter <outF> = new FileWriter
-(“<nameOut>”);
+("<nameOut>");
 BufferedWriter <outW> = new BufferedWriter
 (outF);
 possono essere scritti come
 BufferedReader <inB> = new BufferedReader
-(new FileReader (“<nameIn>”));
+(new FileReader ("<nameIn>"));
 BufferedWriter <outW> = new BufferedWriter
-(new FileWriter (“<nameOut>”));
+(new FileWriter ("<nameOut>"));
 6La classe file
 
 ### La classe file permette controlli su
@@ -2257,18 +1172,18 @@ BufferedWriter <outW> = new BufferedWriter
   * Crea un oggetto di tipo file
 public File (String pathName)
 e.g.,
-File <x> = new File (“<nameIn>”);
+File <x> = new File ("<nameIn>");
 File <y> = new File (
-“c:\dir1\dir2”, “<nameOut>”);
+"c:\dir1\dir2", "<nameOut>");
 
 ### Check file/direttory
-  * Verifica che l’oggetto esista
+  * Verifica che l'oggetto esista
 public boolean exists()
 e.g., if (<x>.exists ()) ...
-  * Verifica se l’oggetto è un file
+  * Verifica se l'oggetto è un file
 public boolean isFile()
 e.g., if (<x>.isFile ()) ...
-  * Verifica se l’oggetto è una directory
+  * Verifica se l'oggetto è una directory
 public boolean isDirectory()
   * Restituisce il nome del file o directory
 public String getName(
@@ -2283,7 +1198,7 @@ public boolean canWrite()
 public boolean canRead ()
 
 ### Contenuto di una directory
-  * Restituisce l’array di stringhe contenenti I nomi
+  * Restituisce l'array di stringhe contenenti I nomi
 dei file/direcotory nel direttorio corrente
 String [] list ()
 e.g.,
@@ -2322,7 +1237,7 @@ System.arraycopy (<arraySrc>, <offsetSrc>,
   * Confronta due array
 Arrays.equals (<array1>, <array2>);
   * Ordina un array (di oggetti che implementino
-l’interfaccia Comparable)
+l'interfaccia Comparable)
 Arrays.sort (<array>);
   * Ricerca binaria (o dicotomica)
 Arrays.binarySearch (<array>);
@@ -2331,7 +1246,7 @@ Introduzione, Tassonomia
 2Collections & Map
 
 ### Collezione di elementi
-* Mantenuti mediante “reference”
+* Mantenuti mediante "reference"
 * Di tipo generico (Object)
 * Definiti nel package java.util
 
@@ -2348,7 +1263,7 @@ Tassonomia
 * Frecce
 punteggiate: interfaccie
 tratteggiate: classi astratte
-continue: classi “normali”
+continue: classi "normali"
 in grassetto: classi più comuni
   * Classe implementa interfaccia o classe astratta
   * Classe astratta implementa parzialmente una
@@ -2400,9 +1315,9 @@ veloce)
   *  Set implementati come un albero
 * LinkedHashSet
   * Sottoclasse di HashSet
-  * Mantiene l’ordine di inserimento dei dati grazie
+  * Mantiene l'ordine di inserimento dei dati grazie
 a una lista (in aggiunta alla hash)
-  * Gli iterator forniscono l’ordine di inserzione
+  * Gli iterator forniscono l'ordine di inserzione
 Map
 
 ### Gruppo di coppie di oggetti
@@ -2421,10 +1336,10 @@ per ottimizzare le prestazioni
   * Disponibilità del metodo subMap() che fornisce
 un sotto-albero
 * LinkedHashMap
-  * Sottoclasse dell’HashMap
-  * Mantiene l’ordine di inserimento dei dati grazie
+  * Sottoclasse dell'HashMap
+  * Mantiene l'ordine di inserimento dei dati grazie
 a una lista (in aggiunta alla hash)
-  * Gli iterator forniscono l’ordine di inserzione
+  * Gli iterator forniscono l'ordine di inserzione
 Strutture obsolete
 
 ### Vengono mantenute per compatibilità
@@ -2434,7 +1349,7 @@ Strutture obsolete
 * Stack
 * BitSet
 
-### Evitarne l’utilizzo
+### Evitarne l'utilizzo
 7Funzionalità – Utilizzo
 Funzionalità di una Collection
   * Aggiunta di un elemento alla fine; restituisce
@@ -2456,7 +1371,7 @@ boolean containsAll (Collection c)
 true in questo caso
 boolean isEmpty (Object o)
 e.g., if (<x>.isEmpty()) ...
-  * Rimuove l’oggetto o
+  * Rimuove l'oggetto o
 boolean remove (Object o)
   * Rimuove elemento di posizione index
 Object remove (int index)
@@ -2464,7 +1379,7 @@ Object remove (int index)
 void removeAll (Collection c)
   * Restituisce il numero di elementi del contenitore
 int size ()
-  * Restituisce l’array di object contenente tutti gli
+  * Restituisce l'array di object contenente tutti gli
 elementi
 Object [] toArray()
   * Restituisce un iteratore per scorrere la
@@ -2477,9 +1392,9 @@ package java.util.*;
 ArrayList c1 = new ArrayList ();
 ArrayList c2 = new ArrayList ();
 ...
-c1.add (“one”);
-c1.add (“two”);
-c1.add (“three”);
+c1.add ("one");
+c1.add ("two");
+c1.add ("three");
 c2.addAll (c1);
 if (c2.isEmpty()) // false
 { ... }
@@ -2512,8 +1427,8 @@ inserire
 LinkedList <x> = new LinkedList ();
 * Definizione generica
 List <x> = new LinkedList ();
-  * Utilizza l’interfaccia List invece
-dell’implementazione LinkedList
+  * Utilizza l'interfaccia List invece
+dell'implementazione LinkedList
   * Aumenta la libertà a livello di codice per
 successive modifiche, e.g.
 List <x> = new ArrayList ();
@@ -2523,16 +1438,16 @@ List <x> = new ArrayList ();
 void addFirst (Object o)
   * Aggiunge in ultima posizione
 void addLast (Object o)
-  * Restituisce l’elemento di posizione index
+  * Restituisce l'elemento di posizione index
 Object get(int index)
   * Estrae il primo elemento della lista
 Object getFirst()
-  * Estrae l’ultimo elemento della lista
+  * Estrae l'ultimo elemento della lista
 Object getLast()
-  * Restituisce l’indice dell’ultimo elemento uguale a
+  * Restituisce l'indice dell'ultimo elemento uguale a
 c
 int lastIndexOf (Object c)
-  * Eliminano e restituiscono il primo (l’ultimo)
+  * Eliminano e restituiscono il primo (l'ultimo)
 elemento
 Object removeFirst ()
 Object removeLast ()
@@ -2540,15 +1455,15 @@ Object removeLast ()
 ### Esempio
 LinkedList ll = new LinkedList();
 // Crea LikedList
-ll.add(“10”);
+ll.add("10");
 ll.add(new Integer(11);
 ll.addLast(new Integer(13));
 ll.addFirst(new Integer(20));
 11
 ### Funzionalità di un SortedSet (TreeSet)
-  * Estrae l’elemento più piccolo
+  * Estrae l'elemento più piccolo
 Object first()
-  * Estrae l’elemento più grande
+  * Estrae l'elemento più grande
 Object last()
   * Crea un sottoset dal set completo estraendono
 una porzione
@@ -2579,7 +1494,7 @@ Object get(int index)
 ### Esempio
 Vector v = new Vector(3);
 // 3 ref a null
-v.add(“10”);
+v.add("10");
 // 10 in posizione 0
 v.add(new Integer(11));
 // 11 in posizione 1
@@ -2600,7 +1515,7 @@ Object put(Object key, Object value)
 Object remove (Object key)
   * Restituisce elementi data la chiave
 Object get (Object key)
-  * Controlla l’esistenza di una chiave oppure di un
+  * Controlla l'esistenza di una chiave oppure di un
 valore
 boolean containsKey (Object key)
 boolean containsValue (Object value)
@@ -2631,12 +1546,12 @@ Iterator
 ### Astrae il problema di iterare su tutti gli
 elementi di una collection
 
-### L’iterazione è permessa da
-  * Crea l’iteratore
+### L'iterazione è permessa da
+  * Crea l'iteratore
 public Iterator (Collection c)
   * Esiste un elemento successivo?
 public boolean hasNext()
-  * Preleva l’elemento successivo
+  * Preleva l'elemento successivo
 public Object next()
 
 ### Esempio
@@ -2655,7 +1570,7 @@ myList.next ()).<accessoAttributo>);
 15
 ### Esempio
 Vector v = new Vector(3);
-v.add (“10”);
+v.add ("10");
 ...
 Iterator iv = v.iterator();
 while (iv.hasNext()) {
@@ -2664,7 +1579,7 @@ while (iv.hasNext()) {
 
 ### Esempio
 LinkedList ll = new LinkedList();
-ll.add (“10”);
+ll.add ("10");
 ...
 Iterator il = ll.iterator();
 while (il.hasNext()) {
@@ -2673,7 +1588,7 @@ while (il.hasNext()) {
 Prestazioni & Algoritmi
 16Vector/ArrayList vs. LinkedList
 
-### Tempo d’accesso a elemento i-esimo
+### Tempo d'accesso a elemento i-esimo
 * Vector: costante
 * Linked List: lineare
 
@@ -2707,7 +1622,7 @@ su List
   * Ordinamento dei dati
 binarySearch()
 sort()
-  * Contrario dell’ordinamento
+  * Contrario dell'ordinamento
 shuffle()
   * Ottiene valori specifici
 min()

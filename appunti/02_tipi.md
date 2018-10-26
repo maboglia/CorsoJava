@@ -2,6 +2,101 @@
 
 ![tipi primitivi](img/tipi.png)
 
+
+
+## Tipo primitivo
+
+### In un linguaggio ad oggetti puro i dati dovrebbero essere definiti sotto forma di oggetti
+
+### Per efficienza
+* Java definisce dati primitivi
+* La dichiarazione di una istanza (variabile) alloca spazio
+* Un valore è associato direttamente alla variabile 
+* (e.g, i == 0) 
+
+### Ne vengono definiti dimensioni e codifica
+
+### Rappresentazione indipendente dalla piattaforma
+
+## Tipi primitivi
+* boolean
+* char
+* byte
+* short
+* int
+* long
+* float
+* double
+
+
+* void
+
+
+###  I tipi numerici, i char e le stringhe seguono la sintassi C
+
+*  Esempi
+123 (int)
+256789L (L o l = long)
+0567 (ottale) 0xff34 (hex)
+123.75 0.12375e+3 (float o double)
+'a' '%' '\n'
+'\123' (\ introduce codice ASCII)
+"1" "prova\n"
+
+### Tipo boolean
+* Esempi
+true
+false
+
+
+
+### In un mondo OO ideale, vi sono solo
+classi e istanze di classi
+
+### Java
+* Per efficenza usa tipi primitivi per int,
+float etc.
+* Per completezza
+  * Definisce anche classi per interi, float etc.
+(classi wrapper)
+  * Definisce operazioni per passare dai dati
+primitivi alle classi wrapper
+Classi "Wrapper" per tipi Primitivi
+
+### Se si vogliono trattare anche i dati
+primitivi come oggetti si possono
+utilizzare le classi "wrapper"
+
+### Un oggetto di una classe "wrapper"
+incorpora un dato primitivo e fornisce
+metodi per operare su di esso
+
+### Le classi wrapper dei tipi primitivi sono
+definite nel package java.lang
+9
+### Corrispondenza
+Tipo Primitivo
+boolean
+char
+byte
+short
+int
+long
+float
+double
+void
+ClasseWrapper
+Boolean
+Character
+Byte
+Short
+Integer
+Long
+Float
+Double
+Void
+
+
 ### Primitive Variables
 
 Variables that store value.
