@@ -249,4 +249,301 @@ public class EccezioneBaseNegativa extends Exception {
     super(msg);
     } 
 }
-```                                              
+```          
+
+
+
+Exceptions
+Motivazione
+
+### Terminologia
+* Errore: sbaglio del programmatore (non
+gestibile)
+* Eccezione: evento anomalo recuperabile
+
+### La portabilità richiede la gestione delle
+eccezioni
+* Separare la gestione delle eccezioni dalla
+gestione del caso nominale
+* Permettere al client di una funzione di
+gestire l'eccezione in modo appropriato (il
+server spesso non conosce il modo migliore
+per gestire l'errore)
+1
+### ```java
+File {
+open the file;
+determine its size;
+allocate that much memory;
+read the file into memory;
+close the file;
+}
+readFile()
+(client)
+open file()
+(server)
+errorCodeType readFile {
+```initialize errorCode = 0;
+open the file;
+if (theFileIsOpen) {
+determine the length of the file;
+if (gotTheFileLength) {
+allocate that much memory;
+if (gotEnoughMemory) {
+read the file into memory;
+if (readFailed) {errorCode = -1;}
+} else {errorCode = -2;}
+} else {errorCode = -3;}
+close the file;
+if (theFileDidntClose && errorCode == 0) {
+errorCode = -4;
+} else {errorCode = errorCode and -4;}
+} else {errorCode = -5;}
+return errorCode;
+}
+2Concetti fondamentali
+
+### Una istruzione non terminata
+* Causa la creazione di un oggetto che
+rappresenta quanto è successo
+* Tale oggetto appartiene a una classe
+derivata da Throwable (derivata da Object)
+* Tali oggetti sono le eccezioni
+
+### Si dice che l'eccezione
+* Viene "gettata" (thrown) e
+* In seguito deve essere "gestita" ovvero
+"catturata" (catch)
+
+### Costrutti per la gestione delle eccezioni
+* try { } ... catch {}
+  * "Getta" l'eccezione a livello di un blocco di
+istruzioni
+  * La "cattura" effettuandone la gestione
+* throws
+  * "Getta" l'eccezione a livello di metodi
+* throw
+  * "Getta" l'eccezione a livello di codice / istruzioni
+3try ... catch
+
+### Cattura le eccezioni generate in una
+regione di codice
+try {
+// codice in cui possono verificarsi le eccezioni
+...
+}
+catch (IOException e) {
+// codice per gestire IOException e
+...
+}
+
+### Per catturare eccezioni di classi diverse
+si possono usare blocchi catch multipli
+try {
+...
+}
+catch(MalformedURLException mue) {
+// qui recupero l'errore "malformedURL"
+...
+}
+catch(IOException e) {
+// qui recupero tutti altri errori di IO
+...
+}
+
+### Costrutti try-catch possono essere
+annidati (catch che include try-catch)
+4
+### Il blocco "finally" esegue istruzioni al
+termine del blocco try-catch
+* Senza di eccezioni
+* Con eccezioni
+* In presenza di return, break e continue
+try {
+...
+}
+catch (...) {
+...
+}
+catch (...) {
+...
+}
+...
+finally {
+...
+}
+
+### ```java
+ System.in.read può provocare una
+eccezione controllata di tipo IOException
+* Occorre quindi inserirla in un blocco
+try...catch...
+byte b[] = new byte[10];
+try {
+System.in.read (b);
+} catch (Exception e) {
+...
+}
+...
+5throws
+```
+### Permette a un metodo di gettare
+eccezioni
+<tipoMetodo> <nomeMetodo> (<argomenti>)
+throws <classeEccezione 1 >
+[, <classeEccezione 2 >
+...
+[, <classeEccezione n > ]...] {
+...
+}
+
+### Le eccezioni gettate sono catturate
+(responsabilità) dal chiamante
+
+### ```java
+i chiama il metodo leggi deve sapere se la
+lettura è andata a buon fine oppure no
+* Con try-catch gestiamo l'eccezione a livello
+del chiamato (metodo leggi)
+...
+byte b[] = new byte[10];
+try {
+System.in.read (b);
+} catch (Exception e) {
+...
+}
+...
+```6* Sapere se la lettura è andata a buon fine, non
+"interessa" tanto al chiamato (metodo leggi)
+quanto al chiamante
+static String leggi (String val) throws
+IOException {
+byte b[] = new byte[10];
+System.in.read (b); // Senza try ... Catch
+val = "";
+for (int i=0; i<b.length; i++) {
+val = val + (char) b[i];
+}
+return (val);
+}
+throw
+
+### Permette di "gettare" in modo
+"esplicito" una eccezione a livello di
+codice
+throw <oggettoEccezione>
+
+### Provoca
+* L'interruzione dell'esecuzione del metodo
+* L'avvio della fase di cattura dell'eccezione
+generata
+* Dato che le eccezioni sono oggetti, chi getta
+l'eccezione deve creare l'oggetto eccezione
+(operatore new) che la descrive
+7
+### ```java
+
+if ( y==0 ){
+throw new ArithmeticException (
+"Frazione con denominatore nullo.");
+}
+z = x/y;
+...
+Classi di Eccezioni
+
+### È una classe, subclass di Throwable o
+discendenti, definita in java.lang
+* Error: hard failure
+```* Exception: non sistemiche
+* RuntimeException: il compilatore non forza il
+catch
+8
+### Error
+* Gli errori sono trattabili ma in genere
+costituiscono situazioni non recuperabili
+* OutOfMemoryError
+
+### Exception
+* ArithmeticException
+  * Condizioni eccezionali in operazioni aritmetiche
+(e.g., divisione per zero)
+* ArrayIndexOutOfBoundsException
+  * Accesso a posizione inesistente di un array
+* ClassCastException
+  * Cast di un riferimento a un sottotipo di cui
+l'oggeto non è instanza
+* NegativeArraySizeException
+  * Creazione di un array di dimensione negativa
+* NullPointerException
+  * Tentativo di accesso a un elemento tramite un
+riferimento uguale a null
+* NumberFormatException
+  * Conversione di una stringa in un valore numerico
+senza che la stringa abbia formato opportuno
+* ClassNotFoundException
+* InstantiationException
+* NoSuchMethodException
+* IllegalAccessException
+* EmptyStackException
+
+### RuntimeException
+* NullPointerException
+9Definizione di una eccezione
+
+### È possibile dichiarare eccezioni proprie,
+se quelle fornite dal sistema (java.lang)
+non sono sufficienti
+
+### Si realizza creando sottoclassi di
+Throwable
+* Tali sottoclassi sono del tutto "assimilabili"
+a classi "standard", e.g., possono
+  * ereditare attributi e metodi
+  * ridefinire il metodo costruttore
+  * definire dei metodi get/set
+  * etc.
+
+### ```java
+ic class NewExc extends
+ArithmeticException {
+public NewExc (String msg) {
+super (msg);
+}
+}
+...
+try ... catch (NewExc e) ...
+...
+static String leggi (String val) throws
+NewExc ...
+...
+```throw new NewExc ("messaggio") ...
+10Eccezioni controllate e non
+
+### Le eccezioni si dividono in
+* Controllate
+  * Istanze di RuntimeException o delle sue
+sottoclassi
+  * Il compilatore si assicura esplicitamente che
+quando un metodo solleva una'eccezione la tratti
+esplicitamente
+  * Questo può essere fatto mediante i costrutti
+try-catch o throws
+  * In caso contrario segnala un errore di
+compilazione
+* Non controllate
+  * Sono tutte le altre eccezioni, ovvero istanze di
+Exception ma non di RuntimeException
+  * L'eccezione può non essere gestita
+esplicitamente dal codice
+  * Viene "passata" automaticamente da metodo
+chiamato a metodo chiamante
+  * Il compilatore non si lamenta
+
+### Le eccezioni controllate vincolano il
+programmatore ad occuparsi della loro
+gestione
+
+### Le eccezioni controllate possono rendere
+troppo pesante la scrittura del codice
+(e.g., NullPointerException non è
+controllata)

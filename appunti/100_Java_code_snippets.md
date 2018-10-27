@@ -441,7 +441,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class ListaArray {
     public static void main(String[] args) {
-    List<String> elenco = new ArrayList<>();
+        List<String> elenco = new ArrayList<>();
         elenco.add("MT_09");
         elenco.add("CBR600");
         elenco.add("VSTROM");
@@ -455,4 +455,132 @@ public class ListaArray {
         System.out.println("Africa è in posizione " + posizione);
     }
 }
+```
+
+### Sintassi
+```java
+public class <nuovaClasse> extends
+<vecchiaClasse> {
+. . .
+}
+Esempio 1
+Automobile
+colore
+marca
+accesa
+mettiInMoto
+vernicia
+stampaStato
+
+### Automobile elettrica
+AutomobileElettrica
+batterieCariche
+ricarica
+mettiInMoto
+* eredita
+  * attributi (colore, marca, accesa)
+  * operazioni (vernicia, stampaStato)
+* modifica (override)
+  * mettiInMoto
+* aggiunge
+  * attributi (batterieCariche)
+  * operazioni (ricarica )
+2class Automobile {
+String colore;
+String marca;
+boolean accesa;
+void mettiInMoto() {accesa = true;}
+void vernicia (String nuovoCol) { ... }
+void stampaStato () { . . .}
+}
+class AutomobileElettrica extends Automobile {
+boolean batterieCariche;
+void ricarica() {batterieCariche=true;}
+void mettiInMoto() {
+if(batterieCariche) accesa=true;
+else accesa=false;
+}
+}
+Esempio 2
+Impiegato
+nome
+stipendio
+aumentaStipendio
+stampa
+Dirigente
+Segretario
+grado
+aumentaStipendio
+stampa
+aumentaGrado
+stampa
+3class Impiegato {
+private String nome;
+private double stipendio;
+public Impiegato(String n, double s) {
+nome = n;
+stipendio = s;
+}
+public void aumentaStipendio
+(double percentuale) {
+stipendio *= 1 + percentuale / 100;
+}
+public void stampa() {
+System.out.println("Impiegato" + nome +
+" " + stipendio);
+}
+}
+class Dirigente extends Impiegato {
+int grado;
+public Dirigente(String n, double s) {
+nome = n;
+stipendio = s;
+}
+public void aumentaStipendi (double percentuale) {
+int bonus = grado ### 3;
+// 3% di bonus per ogni grado
+stipendio *= 1+(percentuale+bonus)/100;
+}
+public void stampa() {
+System.out.println("Dirigente" + nome +
+" " + stipendio);
+}
+public void aumentaGrado() {
+grado++;
+}
+}
+
+Visibilità: costrutto "protected"
+class Impiegato {
+private String nome;
+private double stipendio;
+}
+class Dirigente extends Impiegato {
+void stampa() {
+System.out.println("Dirigente" + nome +
+" " + stipendio);
+}
+}
+```
+
+```java
+class Arte {
+Arte() {
+System.out.println("Costruttore Arte"); }
+}
+class Disegno extends Arte {
+Disegno() {
+System.out.println("Costruttore Disegno"); }
+}
+class DisegnoAnimato extends Disegno {
+DisegnoAnimato() {
+System.out.println("Costruttore DisegnoAnimato");
+}
+}
+DisegnoAnimato d = new DisegnoAnimato();
+Costruttore classe Arte
+Costruttore classe Disegno
+Costruttore classe Disegno Animato
+Costruttori con parametri
+
 ```
