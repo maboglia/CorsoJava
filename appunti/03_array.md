@@ -1,5 +1,6 @@
-
 # Array
+
+[gist](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72)
 
 * Sequenze ordinate di
   * Tipi primitivi (int, float, etc.)
