@@ -52,7 +52,7 @@
 * Array e ArrayList.
 * Array monodimensionali
 * Array multidimensionali
-* Copia array
+* Copia di array
 * Array estendibili.
 * Array multidimensionali.
 
@@ -76,7 +76,8 @@
 ## Java API
 
 * Caso particolare: la classe String e i principali metodi.
-* Classe ObjectMetodi equals, toString e clone.
+* Classe Object
+  * Metodi equals, toString e clone.
 * Classi wrapper per i tipi di dati primitivi
 * La classe Math e i principali metodi.
 * La classe Random: generazione di numeri pseudo-random.
