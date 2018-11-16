@@ -173,6 +173,16 @@
 * Gestione dei dati: JDBC
 * Crud su DB
 
+## JSP e Servlet
+
+* Primo approccio a JSP
+* Installazione ed esecuzione della prima pagina JSP
+* Elementi fondamentali di JSP 
+* Utilizzo degli elementi fondamentali
+* Utilizzo di JavaBeans
+* Lavorare con i database
+* Elementi Avanzati di una pagina JSP
+* Uso di Etichette personalizzate
 
 ## Introduzione al framework Spring
 
