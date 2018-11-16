@@ -1,6 +1,6 @@
 # Java Fondamentale
 
-### Caratteristiche di Java
+## Caratteristiche di Java
 
 * Semplice e familiare
 
@@ -18,7 +18,7 @@
 
 * Multi-thread
 
-### Semplice e familiare
+## Semplice e familiare
 
 * Basato su C
 
@@ -34,7 +34,7 @@
 
 
 
-### Orientato a oggetti
+## Orientato a oggetti
 
 
 
@@ -60,7 +60,7 @@
 
 
 
-### Indipendente dalla piattaforma
+## Indipendente dalla piattaforma
 
 
 
@@ -74,7 +74,7 @@
 
 
 
-### Interpretato
+## Interpretato
 
 
 
@@ -94,7 +94,7 @@
 
 
 
-### sicuro
+## sicuro
 
 
 
@@ -110,7 +110,7 @@
 
 
 
-### Robusto
+## Robusto
 
 
 
@@ -124,7 +124,7 @@
 
 
 
-### Distribuito e dinamico
+## Distribuito e dinamico
 
 
 
@@ -144,7 +144,7 @@
 
 
 
-### Multi-thread
+## Multi-thread
 
 
 

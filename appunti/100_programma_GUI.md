@@ -1,6 +1,6 @@
 #  Realizzazione di applicazioni grafiche in Java. 
 
-## Classe JFrame.
+## Swing
 
 * Classe JComponent e sovrascrittura di paintComponent. 
 * JApplet.
@@ -18,3 +18,5 @@
 * Aggiunta di menu a finestre grafiche: classi JMenuBar, JMenu, JMenuItem.
 * Output su più linee in una finestra grafica: classe JTextArea.
 * Consultazione della libreria Swing.
+
+## JavaFX

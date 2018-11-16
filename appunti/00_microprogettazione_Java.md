@@ -124,7 +124,6 @@
 * Classi astratte
 * Lambda espressioni.
 
-
 ## Eccezioni
 
 * Meccanismo di gestione delle eccezioni
