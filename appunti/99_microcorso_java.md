@@ -357,9 +357,9 @@ a.mettiInMoto();
 ### Due scelte possibili
 
 * Statico
-  * Associazione fatta in base al compile time
+  * Associazione fatta in base al tipo a compile time
 * Dinamico (default in Java)
-  * Associazione fatta in base al tipo run time
+  * Associazione fatta in base al tipo a run time
   * Java sceglie il corretto metodo dell'appropriata sottoclasse associata all'oggetto
 
 ### N.B. se le classi non sono legate da ereditarietà è possibile una scelta sola

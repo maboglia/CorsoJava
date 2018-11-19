@@ -36,13 +36,16 @@
 
 ### Struttura di una classe
 
-* Esempio
 
-### Esempio di classe
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+System.out.println("Hello World");
+    }
 
-* Esempio
-
-### Creazione e utilizzazione di oggetti
+}
+```
+### Creazione e uso di oggetti
 
 * Esempio
 

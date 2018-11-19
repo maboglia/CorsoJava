@@ -1,7 +1,5 @@
 # Array
 
-[gist](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72)
-
 * Sequenze ordinate di
   * Tipi primitivi (int, float, etc.)
   * Riferimenti ad oggetti ( vedere classi! )
@@ -144,3 +142,7 @@ L'array è una struttura dati efficiente ogni volta che il numero di elementi è
     * `Arrays.sort (<array>);`
 * Ricerca binaria (o dicotomica)
     * `Arrays.binarySearch (<array>);`
+
+
+
+[esempi ed esercizi su array](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72)

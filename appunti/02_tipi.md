@@ -73,56 +73,26 @@ metodi per operare su di esso
 
 ### Le classi wrapper dei tipi primitivi sono
 definite nel package java.lang
-9
+
+
 ### Corrispondenza
-Tipo Primitivo
-boolean
-char
-byte
-short
-int
-long
-float
-double
-void
-ClasseWrapper
-Boolean
-Character
-Byte
-Short
-Integer
-Long
-Float
-Double
-Void
+
+| Tipo Primitivo | ClasseWrapper |
+| -------------- | ------------- |
+| boolean        | Boolean       |
+| char           | Character     |
+| byte           | Byte          |
+| short          | Short         |
+| int            | Integer       |
+| long           | Long          |
+| float          | Float         |
+| double         | Double        |
+| void           | Void          |
 
 
-### Primitive Variables
+## Examples
 
-Variables that store value.
-
-
-Java defines few types like int (numbers), float(floating point numbers), char (characters). Variables of these types store the value of the variable directly. These are not objects. These are called primitive variables. 
-
-An example is shown below: Primitive Variables contains bits representing the value of the variable.
-
-```
-int value = 5;
-
-```
-Different primitive types in java are char, boolean, byte, short, int, long, double, or float. Because of these primitive types, Java is NOT considered to be a pure objected oriented language.
-
-Numeric Data Types
-- Types  : byte, short, int, long, float, double
-- Number of bits : 8, 16, 32, 64, 32, 64
-- Range  : -x to x-1 where x = Power(2, number of bits -1)
-
-char Data Type
-- Used to store characters. Size of character is 16 bits.
-
-Examples
-
-```
+```java
 int i = 15;
 long longValue = 1000000000000l;
 byte b = (byte)254;
