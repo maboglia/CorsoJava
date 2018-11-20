@@ -13,10 +13,13 @@
 
 ## [EsempiJava_02](https://gist.github.com/maboglia/fb505ccbfd10186ea092b3d5349045d5)
 
+* Costrutti
 * cicli
 * condizioni
 * Array
 * collezioni
+
+## [Array](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72)
 
 ## 02stringhe
 * [ProvaStringBuffer](esempi/02stringhe/ProvaStringBuffer.java)
@@ -32,29 +35,6 @@
 * [StringStringBuilder](esempi/02stringhe/StringStringBuilder.java)
 * [TestStringhe](esempi/02stringhe/TestStringhe.java)
 
-## 03Array
-* [ArrayInteri](esempi/03Array/ArrayInteri.java)
-* [MioArray](esempi/03Array/MioArray.java)
-
-## 04Costrutti
-* [AltriEsempiFor](esempi/04Costrutti/AltriEsempiFor.java)
-* [Condizione](esempi/04Costrutti/Condizione.java)
-* [EsempiFor](esempi/04Costrutti/EsempiFor.java)
-* [EsempiSwitch](esempi/04Costrutti/EsempiSwitch.java)
-* [EsempiWhile](esempi/04Costrutti/EsempiWhile.java)
-* [ForEsempio](esempi/04Costrutti/ForEsempio.java)
-
-## 05esercizi
-* [EserciziArray](esempi/05esercizi/_03EserciziArray.java)
-* [Contrario](esempi/05esercizi/Contrario.java)
-* [Pitagora](esempi/05esercizi/Pitagora.java)
-* [QuarantaquattroGatti](esempi/05esercizi/QuarantaquattroGatti.java)
-* [RightChoice](esempi/05esercizi/RightChoice.java)
-* [RockScissorsPaper](esempi/05esercizi/RockScissorsPaper.java)
-* [ScambioVariabili](esempi/05esercizi/ScambioVariabili.java)
-* [SimpleCalcolatrice](esempi/05esercizi/SimpleCalcolatrice.java)
-* [SoloVocali](esempi/05esercizi/SoloVocali.java)
-* [TuttiPositiviPari](esempi/05esercizi/TuttiPositiviPari.java)
 
 ## 06Date
 * [GestioneDate](esempi/06Date/GestioneDate.java)
