@@ -1,8 +1,22 @@
 # Esempi Java
 
-## [01 Operatori&Tipi](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3)
+## [EsempiJava_01](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3)
+
+* operatori e tipi
+* espressioni
+* variabili
+* Math
+* Scanner
+
 ## [Esercizi Base](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e)
 
+
+## [EsempiJava_02](https://gist.github.com/maboglia/fb505ccbfd10186ea092b3d5349045d5)
+
+* cicli
+* condizioni
+* Array
+* collezioni
 
 ## 02stringhe
 * [ProvaStringBuffer](esempi/02stringhe/ProvaStringBuffer.java)
