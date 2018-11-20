@@ -32,11 +32,11 @@
 
 ## Sintassi java
 
-    * Operatori di assegnazione, relazionali e booleani
-    * Operatori aritmetici, relazionali e di uguaglianza
-    * Regole di precedenza.
-    * Pre/post incremento e concatenazione stringhe
-    * Variabili locali
+* Operatori di assegnazione, relazionali e booleani
+* Operatori aritmetici, relazionali e di uguaglianza
+* Regole di precedenza.
+* Pre/post incremento e concatenazione stringhe
+* Variabili locali
 * Metodi
     * Il metodo main() ed i sottoprogrammi
     * Metodi di classe: La parola chiave Static
@@ -208,4 +208,3 @@
   * Configurazione di un DAO JDBC
   * SimpleJdbcInsert
   * SqlQuery e MappingSqlQuery
-

@@ -1,24 +1,5 @@
 # Tipi di dati semplici
 
-* 01 - Interi.java
-* 02 - PrimoIncremento.java
-* 03 - ForEsempio.java
-* 04 - ForDecremento.java
-* 05 - Elementari.java
-* 06 - Divisione.java
-* 07 - Modulo.java
-* 08 - Caratteri.java
-* 09 - Confronti.java
-* 10 - Booleani.java
-* 11 - NoCortoCircuito.java
-* 12 - CortoCircuito.java
-* 13 - CastInteri.java
-* 14 - PromoErrata.java
-* 15 - Promo.java
-* 16 - Sveglia.java
-* 17 - Pitagora.java
-
-
 ## Errore di conversione da int a byte (perdita di dati)
 ```java
 class Interi{
@@ -232,7 +213,6 @@ class PromoErrata{
 ```
 
 ## Espressione con operandi di tipo diverso.
-*Variante del listato PromoErrata.java*
 
 ```java
 class Promo{

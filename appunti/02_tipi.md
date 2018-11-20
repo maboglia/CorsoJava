@@ -2,7 +2,7 @@
 
 ![tipi primitivi](img/tipi.png)
 
-
+[Esempi gist](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3)
 
 ## Tipo primitivo
 
