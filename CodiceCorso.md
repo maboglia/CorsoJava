@@ -1,27 +1,7 @@
 # Esempi Java
 
-## 01Operatori&Tipi
+## [01 Operatori&Tipi](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3)
 
-* [Booleani2](esempi/01Operatori&Tipi/Booleani2.java)
-* [Booleani](esempi/01Operatori&Tipi/Booleani.java)
-* [Caratteri2](esempi/01Operatori&Tipi/Caratteri2.java)
-* [Caratteri](esempi/01Operatori&Tipi/Caratteri.java)
-* [CastInteri](esempi/01Operatori&Tipi/CastInteri.java)
-* [Confronti](esempi/01Operatori&Tipi/Confronti.java)
-* [GeneraErrore](esempi/01Operatori&Tipi/GeneraErrore.java)
-* [InputOutput](esempi/01Operatori&Tipi/InputOutput.java)
-* [Interessi2](esempi/01Operatori&Tipi/Interessi2.java)
-* [Interessi](esempi/01Operatori&Tipi/Interessi.java)
-* [Interi](esempi/01Operatori&Tipi/Interi.java)
-* [MetticiTesta](esempi/01Operatori&Tipi/MetticiTesta.java)
-* [OperazioniAritmetiche](esempi/01Operatori&Tipi/OperazioniAritmetiche.java)
-* [Precisione](esempi/01Operatori&Tipi/Precisione.java)
-* [PrimoIncremento](esempi/01Operatori&Tipi/PrimoIncremento.java)
-* [PromotionErrata](esempi/01Operatori&Tipi/PromotionErrata.java)
-* [Somma](esempi/01Operatori&Tipi/Somma.java)
-* [TipiCasting](esempi/01Operatori&Tipi/TipiCasting.java)
-* [Variabili](esempi/01Operatori&Tipi/Variabili.java)
-* [VariableDemo](esempi/01Operatori&Tipi/VariableDemo.java)
 
 ## 02stringhe
 * [ProvaStringBuffer](esempi/02stringhe/ProvaStringBuffer.java)
