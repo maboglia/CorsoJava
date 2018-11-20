@@ -1,6 +1,7 @@
 # Esempi Java
 
 ## [01 Operatori&Tipi](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3)
+## [Esercizi Base](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e)
 
 
 ## 02stringhe
