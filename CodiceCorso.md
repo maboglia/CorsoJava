@@ -2,11 +2,20 @@
 
 ## [EsempiJava_01](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3)
 
+### argomenti
+
 * operatori e tipi
 * espressioni
 * variabili
 * Math
 * Scanner
+* Metodi ausiliari
+* Stringhe
+* package 
+  * java.lang
+  * java.util
+
+### code snippets
 
 * 000_Commenti.java
 * 000_TipiPrimitivi.java
@@ -27,7 +36,20 @@
 * 018_AreaTriangolo.java
 * 019_LanciaDadi.java
 * 020_Stringhe.java
-
+* 021_Stringhe1.java
+* 022_Stringhe2.java
+* 023_Stringhe3.java
+* 024_Stringhe4.java
+* 025_StringExample.java
+* 026_RicercaLettera.java
+* 027_StringParsing.java
+* 028_TestStringhe.java
+* 029_ProvaStringBuffer.java
+* 030_StringPasswordGenerator.java
+* 031_StringheCompara.java
+* 032_StringBuilder.java
+* 033_StringStringBuilder.java
+* 034_MioScanner.java
 
 ## [Esercizi Base](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e)
 
