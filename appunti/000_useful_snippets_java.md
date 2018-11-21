@@ -47,51 +47,52 @@ Tipi di dato e operatori
 ========================
 
 **Assignment Operators**
-Operatore| Significato
----|---
-\= | assignment
-+= | addition assignment
-\-= | subtraction assignment
-\*= | multiplication assignment
-/= | division assignment
-%= | remainder assignment
+
+| Operatore | Significato               |
+| --------- | ------------------------- |
+| \=        | assignment                |
+| +=        | addition assignment       |
+| \-=       | subtraction assignment    |
+| \*=       | multiplication assignment |
+| /=        | division assignment       |
+| %=        | remainder assignment      |
 
 **Primitive Data Types**
 
- type   |    bits
-------- | ----------
-byte    | 8 bits
-short   | 16 bits
-int     | 32 bits
-long    | 64 bits
-float   | 32 bits
-double  | 64 bits
-char    | 16 bits
-boolean | true/false
+ | type    | bits       |
+ | ------- | ---------- |
+ | byte    | 8 bits     |
+ | short   | 16 bits    |
+ | int     | 32 bits    |
+ | long    | 64 bits    |
+ | float   | 32 bits    |
+ | double  | 64 bits    |
+ | char    | 16 bits    |
+ | boolean | true/false |
 
 **Arithmetic Operators**
-Operatore| Significato
----|---
-+|addition
-\-|subtraction
-\*|multiplication
-/|division
-%|remainder
-++var|preincrement
-\--var|predecrement
-var++|postincrement
-var--|postdecrement
+| Operatore | Significato    |
+| --------- | -------------- |
+| +         | addition       |
+| \-        | subtraction    |
+| \*        | multiplication |
+| /         | division       |
+| %         | remainder      |
+| ++var     | preincrement   |
+| \--var    | predecrement   |
+| var++     | postincrement  |
+| var--     | postdecrement  |
 
 **Relational Operators**
 
-Operatore| Significato
----|---
-<|less than
-<=|less than or equal to
-\>|greater than
-\>=|greater than or equal to
-\==|equal to
-!=|not equal
+| Operatore | Significato              |
+| --------- | ------------------------ |
+| <         | less than                |
+| <=        | less than or equal to    |
+| \>        | greater than             |
+| \>=       | greater than or equal to |
+| \==       | equal to                 |
+| !=        | not equal                |
 
 Strutture del linguaggio
 ========================
@@ -172,12 +173,12 @@ statements;
 
 **Logical Operators**
 
-Operatore| Significato
----|---
-&&|short circuit AND
-\|\||short circuit OR
-!|NOT
-^|exclusive OR
+| Operatore | Significato       |
+| --------- | ----------------- |
+| &&        | short circuit AND |
+| \|\|      | short circuit OR  |
+| !         | NOT               |
+| ^         | exclusive OR      |
 
 Array
 =====
