@@ -8,8 +8,51 @@
 * Math
 * Scanner
 
+* 000_Commenti.java
+* 000_TipiPrimitivi.java
+* 001_1_Booleani.java
+* 001_Booleani.java
+* 002_1_Caratteri.java
+* 002_Caratteri.java
+* 003_Interi.java
+* 009_OperazioniAritmetiche.java
+* 010_Confronti.java
+* 011_OperatoreIncremento.java
+* 012_Cast.java
+* 013_Promotion.java
+* 014_VariableDemo.java
+* 015_MetodiAusiliari.java
+* 016_ScannerDemo.java
+* 017_ClasseWrapper.java
+* 018_AreaTriangolo.java
+* 019_LanciaDadi.java
+* 020_Stringhe.java
+
+
 ## [Esercizi Base](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e)
 
+* 001_CercaNumero.java
+* 002_NumeriPariDispari.java
+* 003_Media.java
+* 004_ScambiaValori.java
+* 005_TestNumeriInteri.java
+* 006_TestNumeriLong.java
+* 007_Tabellina.java
+* 008_CalcolaPotenze.java
+* 009_max2n.java
+* 010_max2nb.java
+* 011_max10n.java
+* 012_valoreAssoluto.java
+* 013_SommaDispari.java
+* 014_Somma.java
+* 015_Potenza.java
+* 016_Intervallo.java
+* 017_divisioneConResto.java
+* 017_equazioneIgrado.java
+* 019_equazioneIIgrado.java
+* 020_prodottoAddizioni.java
+* 021_mcdDivisioni.java
+* 022_Sequenza.java
 
 ## [EsempiJava_02](https://gist.github.com/maboglia/fb505ccbfd10186ea092b3d5349045d5)
 
@@ -21,19 +64,32 @@
 
 ## [Array](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72)
 
-## 02stringhe
-* [ProvaStringBuffer](esempi/02stringhe/ProvaStringBuffer.java)
-* [RicercaLettera](esempi/02stringhe/RicercaLettera.java)
-* [StringBuilder](esempi/02stringhe/StringBuilder.java)
-* [Stringhe1](esempi/02stringhe/Stringhe1.java)
-* [Stringhe2](esempi/02stringhe/Stringhe2.java)
-* [Stringhe3](esempi/02stringhe/Stringhe3.java)
-* [Stringhe4](esempi/02stringhe/Stringhe4.java)
-* [StringheCompara](esempi/02stringhe/StringheCompara.java)
-* [StringParsing](esempi/02stringhe/StringParsing.java)
-* [StringPasswordGenerator](esempi/02stringhe/StringPasswordGenerator.java)
-* [StringStringBuilder](esempi/02stringhe/StringStringBuilder.java)
-* [TestStringhe](esempi/02stringhe/TestStringhe.java)
+* 001_EsempiFor.java
+* 002_AltriEsempiFor.java
+* 003_EsempiWhile.java
+* 004_ForEsempio.java
+* 005_EsempiSwitch.java
+* 006_Condizione.java
+* 007_Pitagora.java
+* 008_SoloVocali.java
+* 009_SimpleCalcolatrice.java
+* 010_QuarantaquattroGatti.java
+* 011_MioArray.java
+* 012_EsercizioArray1.java
+* 013_EsercizioArray2.java
+* 014_EsercizioArray3.java
+* 015_arrayConta9.java
+* 016_ArrayInteri.java
+* 017_RightChoice.java
+* 018_Contrario.java
+* 019_EnhancedFor.java
+* 020_TuttiPositiviPari.java
+* 021_Tabellina.java
+* 022_TestaCroce.java
+* 023_TodoList.java
+* 024_PietraForbiciCarta.java
+* 025_RockScissorsPaper.java
+* 026_Algoritmi.java
 
 
 ## 06Date
