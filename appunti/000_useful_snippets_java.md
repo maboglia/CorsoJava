@@ -5,21 +5,15 @@ Input / Output
 
 **Console Input**
 
-**Scanner** input = new Scanner(**System**.in);
-
-**int** intValue = input.nextInt();
-
-**long** longValue = input.nextLong();
-
-**double** doubleValue = input.nextDouble();
-
-**float** floatValue = input.nextFloat();
-
-**String** string = input.next();
+* **Scanner** `input = new Scanner(**System**.in);`
+* **int** `intValue = input.nextInt();`
+* **long** `longValue = input.nextLong();`
+* **double** `doubleValue = input.nextDouble();`
+* **float** `floatValue = input.nextFloat();`
+* **String** `string = input.next();`
 
 **Console Output**
-
-**System**.out.println(anyValue);
+* `System.out.println(anyValue);`
 
 **GUI Input Dialog**
 
@@ -98,34 +92,37 @@ Tipi di dato e operatori
 Strutture del linguaggio
 ========================
 
-[optional]
-
-...
-
-else if (condition2) {
-
-statements;
-
-}
-
-[optional]
-
-...
-
-else {
-
-statements;
-
-}
-
-if (condition) {
-
-statements;
-
-}
 
 **if Statements**
 
+```java
+if (condition) {
+    
+    statements;
+
+}
+
+[optional]
+else if (condition2) {
+    
+    statements;
+
+}
+
+
+
+[optional]
+else {
+    
+statements;
+
+}
+
+```
+
+**switch Statements**
+
+```java
 switch (Expression) {
 
 case value1:
@@ -147,8 +144,10 @@ default:
 statements;
 
 }
+```
 
-**switch Statements**
+**loop Statements**
+```java
 
 while (condition) {
 
@@ -162,15 +161,13 @@ statements;
 
 } while (condition);
 
-for (init; condition;
 
-adjustment) {
+for (init; condition; adjustment) {
 
 statements;
 
 }
-
-**loop Statements**
+```
 
 **Logical Operators**
 
@@ -272,67 +269,43 @@ String s = "Welcome";
 
 String s = new String(char[]);
 
-int length = s.length();
-
-char ch = s.charAt(index);
-
-int d = s.compareTo(s1);
-
-boolean b = s.equals(s1);
-
-boolean b = s.startsWith(s1);
-
-boolean b = s.endsWith(s1);
-
-String s1 = s.trim();
-
-String s1 = s.toUpperCase();
-
-String s1 = s.toLowerCase();
-
-int index = s.indexOf(ch);
-
-int index = s.lastIndexOf(ch);
-
-String s1 = s.substring(ch);
-
-String s1 = s.substring(i,j);
-
-char[] chs = s.toCharArray();
-
-String s1 = s.replaceAll(regex,repl);
-
-String[] tokens = s.split(regex);
+* `int length = s.length();`
+* `char ch = s.charAt(index);`
+* `int d = s.compareTo(s1);`
+* `boolean b = s.equals(s1);`
+* `boolean b = s.startsWith(s1);`
+* `boolean b = s.endsWith(s1);`
+* `String s1 = s.trim();`
+* `String s1 = s.toUpperCase();`
+* `String s1 = s.toLowerCase();`
+* `int index = s.indexOf(ch);`
+* `int index = s.lastIndexOf(ch);`
+* `String s1 = s.substring(ch);`
+* `String s1 = s.substring(i,j);`
+* `char[] chs = s.toCharArray();`
+* `String s1 = s.replaceAll(regex,repl);`
+* `String[] tokens = s.split(regex);`
 
 ArrayList Class
 ===============
 
-ArrayList<E> list = new ArrayList<E>();
-
-list.add(object);
-
-list.add(index, object);
-
-list.clear();
-
-Object o = list.get(index);
-
-boolean b = list.isEmpty();
-
-boolean b = list.contains(object);
-
-int i = list.size();
-
-list.remove(index);
-
-list.set(index, object);
-
-int i = list.indexOf(object);
-
-int i = list.lastIndexOf(object);
+* `ArrayList<E> list = new ArrayList<E>();`
+* `list.add(object);`
+* `list.add(index, object);`
+* `list.clear();`
+* `Object o = list.get(index);`
+* `boolean b = list.isEmpty();`
+* `boolean b = list.contains(object);`
+* `int i = list.size();`
+* `list.remove(index);`
+* `list.set(index, object);`
+* `int i = list.indexOf(object);`
+* `int i = list.lastIndexOf(object);`
 
 Compare objects
 ===============
+
+**Object Class**
 
 Object o = new Object();
 
@@ -340,10 +313,8 @@ o.toString();
 
 o.equals(o1);
 
-Object Class
+**Comparable Interface**
 
 c.compareTo(Comparable)
 
 c is a Comparable object
-
-Comparable Interface
