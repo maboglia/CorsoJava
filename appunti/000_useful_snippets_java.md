@@ -71,6 +71,7 @@ Tipi di dato e operatori
  | boolean | true/false |
 
 **Arithmetic Operators**
+
 | Operatore | Significato    |
 | --------- | -------------- |
 | +         | addition       |
