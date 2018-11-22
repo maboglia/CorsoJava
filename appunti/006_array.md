@@ -4,11 +4,11 @@
   * Tipi primitivi (int, float, etc.)
   * Riferimenti ad oggetti ( vedere classi! )
 * Elementi dello stesso tipo
-* Indirizzati da indici
-* Raggiungibili con l'operatore di indicizzazione (parentesi quadre [])
-* Raggruppati sotto lo stesso nome
+    * Indirizzati da indici
+    * Raggiungibili con l'operatore di indicizzazione: le **parentesi quadre** []
+    * Raggruppati sotto lo stesso nome
 
-### Non possono contenere oggetti (solo dati primitivi o reference a oggetti)
+Non possono contenere oggetti (solo dati primitivi o reference a oggetti)
 
 ### In Java gli array sono Oggetti
 * Sono allocati nell'area di memoria riservata agli oggetti creati dinamicamente (heap)
@@ -21,49 +21,63 @@
 ## Dichiarazione di Array
 
 ### Dichiarazione di un riferimento a un array
-* int[] voti;
-* int voti[];
+* `int[] voti;`
+* `int voti[];`
 
-### La dichiarazione di un array non
-assegna alcun spazio
-voti == null
-Creazione di un Array
+### La dichiarazione di un array non assegna alcuno spazio
+`voti == null`
+
+## Creazione di un Array
 
 ### L'operatore new crea un array:
 * Con costante numerica
+
+```java
 int[] voti;
 ...
 voti = new int[10];
+```
+
 *  Con costante simbolica
+```java
 final int ARRAY_SIZE = 10;
 int[] voti;
 ...
 voti = new int[ARRAY_SIZE];
+```
+
 *  Con valore definito a run-time
+```java
 int[] voti;
 ... definizione di x (run-time) ...
 voti = new int[x];
+```
+
 * L'operatore new inizializza le variabili
   * 0 - per variabili di tipo numerico (inclusi i char)
   * false - per le variabili di tipo boolean
 
-### Utilizzando un inizializzatore (che permette anche di riempire l'array)
-...
+### Utilizzando un inizializzatore 
+(che permette anche di riempire l'array)
+
+```java
 int[] primi = {2,3,5,7,11,13};
 ...
 int [] pari = {0, 2, 4, 6, 8, 10,};
 // La virgola finale e' facoltativa
 // (elenchi lunghi)
+```
 
-### Dichiarazione e creazione possono avvenire contestualmente
+**Dichiarazione e creazione possono avvenire contestualmente**
 
-## Operazioni su Array
-
-### L'attributo length indica la lunghezza dell'array (numero di elementi)
+**L'attributo length indica la lunghezza dell'array, cioè il numero di elementi**
 
 * Gli elementi vanno da 0 a length-1
+
+```java
 for (int i=0; i<voti.length; i++)
 voti[i] = i;
+```
 
 ### In Java viene fatto il bounds checking
 
@@ -82,14 +96,12 @@ Per gli array di oggetti (e.g., Integer) `Integer [] voti = new Integer [5];` og
 
 ### L'inizializzazione va completata con quella dei singoli elementi
 
+```java
 voti[0] = new Integer (1);
 voti[1] = new Integer (2);
 ...
 voti[4] = new Integer (5);
-
-### Confrontare con
-
-int [] voti = new {1, 2, 3, 4, 5};
+```
 
 ## Array Multi-dimensionali (Matrici)
 
@@ -97,26 +109,29 @@ int [] voti = new {1, 2, 3, 4, 5};
 
 Sintatticamente sono estensioni degli array a una dimensione
 
-### Sono possibili righe di lunghezza diverse (matrice = array di array)
+### Sono possibili righe di lunghezza diverse 
+(matrice = array di array)
 
 
+```java
 int[][] triangle = new int[3][]
-triangle
+```
+
 
 ### Le righe non sono memorizzate in posizioni adiacenti
 * Possono essere spostate facilmente
-* Esempio
 
+```java
 // Scambio di due righe
 double[][] balance = new double[5][6];
 ...
 double[] temp = balance[i];
 balance[i] = balance[j];
 balance[j] = temp;
-
+```
 L'array è una struttura dati efficiente ogni volta che il numero di elementi è noto
 
-### Permettono di contenere
+### Gli Array possono contenere
 
 * Dati primitivi
 * Oggetti
@@ -127,6 +142,7 @@ L'array è una struttura dati efficiente ogni volta che il numero di elementi è
 * Bound-checking
 
 ### Ri-dimensionamento poco efficiente
+
 * Utilizzo di altre strutture qualora il numero di dati sia ignoto
 
 ### Il pacchetto java.util contiene metodi statici di utilità

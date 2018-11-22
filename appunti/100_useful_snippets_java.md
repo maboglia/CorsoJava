@@ -1,11 +1,9 @@
-    
-
 Input / Output
 ==============
 
 **Console Input**
 
-* **Scanner** `input = new Scanner(**System**.in);`
+* **Scanner** `input = new Scanner(System.in);`
 * **int** `intValue = input.nextInt();`
 * **long** `longValue = input.nextLong();`
 * **double** `doubleValue = input.nextDouble();`
@@ -13,29 +11,26 @@ Input / Output
 * **String** `string = input.next();`
 
 **Console Output**
+
 * `System.out.println(anyValue);`
 
 **GUI Input Dialog**
 
-**String** string = **JOptionPane**.showInputDialog("Enter input");
+**String** string = JOptionPane.showInputDialog("Enter input");
 
-**int** intValue = **Integer**.parseInt(string);
+**int** intValue = Integer.parseInt(string);
 
-**double** doubleValue = **Double**.parseDouble(string);
+**double** doubleValue = Double.parseDouble(string);
 
 **Message Dialog**
 
-**JoptionPane**.showMessageDialog(null, "Enter input");
+JoptionPane.showMessageDialog(null, "Enter input");
 
 **printf Method**
 
-System.out.printf("%b %c %d %f %e %s",
+`System.out.printf("%b %c %d %f %e %s", true, 'A', 45, 45.5, 45.5, "Welcome");`
 
-true, 'A', 45, 45.5, 45.5, "Welcome");
-
-System.out.printf("%-5d %10.2f %10.2e %8s",
-
-45, 45.5, 45.5, "Welcome");
+`System.out.printf("%-5d %10.2f %10.2e %8s", 45, 45.5, 45.5, "Welcome");`
 
 Tipi di dato e operatori
 ========================
@@ -182,15 +177,16 @@ Array
 =====
 
 **Array Monodimensionali**
-
+```
 int[] list = new int[10];
 
 list.length;
 
 int[] list = {1, 2, 3, 4};
 
+```
 **Array Multidimensionali**
-
+```
 int[][] list = new int[10][10];
 
 list.length;
@@ -199,8 +195,9 @@ list[0].length;
 
 int[][] list = {{1, 2}, {3, 4}};
 
+```
 **Array irregolari**
-
+```
 int[][] m = {{1, 2, 3, 4},
 
 {1, 2, 3},
@@ -209,30 +206,22 @@ int[][] m = {{1, 2, 3, 4},
 
 {1}};
 
+```
+
 Static Constants/Methods di uso frequente
 =========================================
 
-Math.PI
-
-Math.random()
-
-Math.pow(a, b)
-
-System.currentTimeMillis()
-
-System.out.println(anyValue)
-
-JoptionPane.showMessageDialog(null, message)
-
-JOptionPane.showInputDialog(prompt-message)
-
-Integer.parseInt(string)
-
-Double.parseDouble(string)
-
-Arrays.sort(type[] list)
-
-Arrays.binarySearch(type[] list, type key)
+* `Math.PI`
+* `Math.random()`
+* `Math.pow(a, b)`
+* `System.currentTimeMillis()`
+* `System.out.println(anyValue)`
+* `JoptionPane.showMessageDialog(null, message)`
+* `JOptionPane.showInputDialog(prompt-message)`
+* `Integer.parseInt(string)`
+* `Double.parseDouble(string)`
+* `Arrays.sort(type[] list)`
+* `Arrays.binarySearch(type[] list, type key)`
 
 Text File
 =========
@@ -242,32 +231,28 @@ Text File
 Scanner input = new Scanner(new File(filename));
 
 **Text File Input**
-
+```
 PrintWriter output = new PrintWriter(filename);
-
 output.print(...);
-
 output.println(...);
-
 output.printf(...);
 
+```
 **File Class**
 
+```
 File file = new File(filename);
-
 file.exists()
-
 file.renameTo(File)
-
 file.delete()
-
+```
 
 String Class
 ============
-
+```
 String s = "Welcome";
-
 String s = new String(char[]);
+```
 
 * `int length = s.length();`
 * `char ch = s.charAt(index);`

@@ -1,16 +1,12 @@
 # Package inJava
 
-### Un package è un insieme logico di classi
+## Un package è un insieme logico di classi
 
-### Fisicamente le classi stanno su uno o più
-file, tutti contenuti in una stessa
-directory
+* Fisicamente le classi stanno su uno o più file, tutti contenuti in una stessa directory
+* Ogni package definisce un suo scope (ambiente di visibilità dei nomi)
+* Stessi nomi in package diversi senza conflitti
 
-### Ogni package definisce un suo scope
-(ambiente di visibilità dei nomi)
-* Stessi nomi in package diversi senza
-conflitti
-2Nomi
+## Nomi
 
 ### Un package è identificato univocamente
 da un nome costruito gerarchicamente
@@ -113,57 +109,10 @@ classe è public
 * package VALORE DI DEFAULT: visibile da
 istanze di qualsiasi classe, all'interno del
 package
-6Accesso
-Metodo della
-stessa classe
-entro package Metodo di
-altra classe
-entro package Metodo di altra
-classe fuori
-package
-Private
-attributo/metodo Si No No
-Package
-attributo/metodo Si Si No
-Public
-attributo/metodo
-su package class Si Si No
-Public
-attributo/metodo
-su public class Si Si Si
-Modificatori di visibilità
+
 
 ### Classi all'interno di un package
-* public: elementi (attributi metodi) public
-della classe sono visibili anche fuori dal
-package
-* package (VALORE DI DEFAULT): elementi
-(attributi metodi) public della classe sono
-visibili solo all'interno del package
-7Librerie (package) Standard
-
-### Il package java.lang contiene alcune
-classi basilari
-
-### Viene importato automaticamente (non
-occorre import)
-java
-applet
-awt
-data
-event
-transfer
-beans
-image
-io
-lang
-math
-net
-rmi
-util
-peer
-
-# Package java.util
-Il package java.util contiene una serie di classi utili come il framework "Collections" per gestire collezioni eterogenee di ogni tipo, il modello a eventi, classi per la gestione facilitata delle date e degli orari, classi per la gestione dell’internazionalizzazione e tante altre utilità come un separatore di stringhe (StringTokenizer), un generatore di numeri casuali ecc.
+* public: elementi (attributi metodi) public della classe sono visibili anche fuori dal package 
+* package (VALORE DI DEFAULT): elementi (attributi metodi) public della classe sono visibili solo all'interno del package
 
 

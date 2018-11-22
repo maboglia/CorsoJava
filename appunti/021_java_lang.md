@@ -170,3 +170,61 @@ static double PI	Pi greca
 * 	esponenziale, radice quadrata
 *   arrotondamento classico, per eccesso e per difetto
 *   generazione di numeri casuali
+
+
+
+
+## Classe StringBuffer
+
+### Un oggetto String
+* NON è modificabile
+* Una volta creato non possiamo aggiungere, eliminare, modificare caratteri (i metodi visti creano nuove stringhe)
+* Tale restrizione è dovuta a ragioni di efficienza
+
+### Le considerazione precedenti non sono vere per la classe StringBuffer
+
+### Esempio
+StringBuffer myStringBuffer = new
+stringBuffer ("stringa modificabile");
+myStringBuffer.setCharAt (8, ‘M');
+// Trasforma in "stringa Modificabile"
+
+### Si usa raramente
+
+### Un oggetto StringBuffer non può essere utilizzato per operazioni di I/O
+System.out.println
+(myStringBuffer.toString());
+
+### Metodi:
+* Aggiunta di caratteri 
+myStringBuffer.append ("aggiunta");
+* insert
+* delete
+* reverse
+
+## Classe Character
+
+### La classe involucro Character si trova in java.lang
+
+### Include metodi statici per verificare le proprietà di un carattere
+
+### Esempio
+String s = "Stringa Generica."
+char c = s.charAt (0);
+... Character.isUpperCase(c) ... // true
+... Character.isDigit(c) ...
+// false
+...
+
+### Predicati vari
+* boolean isLetter (char c)
+* boolean isDigit (char c)
+* boolean isLetterOrDigit (char c)
+* boolean isSpaceChar (char c)
+* boolean isLowerCase (char c)
+* boolean isUpperCase (char c)
+
+### Trasformazioni varie
+
+* char toUpperCase (char c)
+* char toLowerCase (char c)

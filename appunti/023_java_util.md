@@ -1,3 +1,34 @@
+
+# Package java.util
+Il package java.util contiene una serie di classi utili come il framework "Collections" per gestire collezioni eterogenee di ogni tipo, il modello a eventi, classi per la gestione facilitata delle date e degli orari, classi per la gestione dell’internazionalizzazione e tante altre utilità come un separatore di stringhe (StringTokenizer), un generatore di numeri casuali ecc.
+
+## StringTokenizer
+
+### La classe StringTokenizer permette l'estrazione di sottostringhe
+* StringTokenizer (String str, String delim)
+ * Costruisce un estrattore di token per la stringa str
+* delim e' il delimitatore ricercato tra i token estratti
+* La classe StringTokenizer mette quindi a disposizione metodi per la gestione dei token
+  * public boolean hasMoreTokens()
+  * public String nextToken()
+
+###  Esempio
+// il numero di token e' noto: nome, eta', reddito
+String str;
+StringTokenizer st = new StringTokenizer(str," ");
+// Anche: StringTokenizer st =
+//
+new StringTokenizer (str);
+while (st.hasMoreTokens()){
+String token = st.nextToken();
+... Integer.parseInt(token) ...
+// int eta = Integer.parseInt (st.nextToken ());
+// double reddito = Double.parseDouble
+//
+(st.nextToken ());
+}
+
+
 ### Classe StringTokenizer
 Spesso risulta necessario manipolare dei token di testo.
 Una semplice classe che permette di separare i contenuti di una stringa in più parti, chiamate token, è la classe 
@@ -47,3 +78,4 @@ System.out.println(st.nextToken());
 System.out.println(st.nextElement().toString());
 }
 ```
+
