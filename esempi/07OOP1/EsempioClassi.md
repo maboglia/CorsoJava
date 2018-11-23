@@ -1,17 +1,5 @@
 # Le classi
 
-01 - Sottocartella 01 -> Triangolo.java
-02 - Sottocartella 01 -> Triangolo2.java
-03 - Sottocartella 02 -> Triangolo.java
-04 - Sottocartella 03 -> Triangolo.java
-05 - Sottocartella 04 -> Triangolo.java
-06 - Sottocartella 05 -> Classe.java
-07 - Sottocartella 06 -> Triangolo.java
-08 - Sottocartella 07 -> Statica.java
-09 - Sottocartella 08 -> CostruttoriStringa.java
-10 - Sottocartella 09 -> BufferStringhe.java
-
-
 ## Variabili e metodi static
 
 ```java

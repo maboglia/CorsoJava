@@ -9,7 +9,7 @@ public class SimpleWordCounter {
     
     public static void main(String[] args) {
         try {
-            File f = new File("ciaFactBook2008.txt");
+            File f = new File("divina.txt");
             Scanner sc;
             sc = new Scanner(f);
             // sc.useDelimiter("[^a-zA-Z']+");
