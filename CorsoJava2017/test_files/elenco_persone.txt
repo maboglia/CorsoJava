@@ -1,4 +1,0 @@
-P;Mauro;Bbbbbbbbboglia;MBR45T46Z321K
-P;Paolo;Biglia;PBR45T64Z123T
-M;Carlo;Baglia;CBR45T46Z321K;mat666
-M;Franco;Abbaglia;FBR45T64Z123T;mat789
