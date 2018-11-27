@@ -1,4 +1,4 @@
-# Corso OOP JAVA - Micro
+# Corso OOP JAVA
 
 ## Fondamenti di programmazione
 
