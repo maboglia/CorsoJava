@@ -24,7 +24,7 @@
 
 * Sviluppato da zero
 
-* Estremamente semplice: senza puntatori, macro, registri, tipizzazione
+* Estremamente semplice: senza puntatori, macro, registri
 
 * Apprendimento rapido
 
@@ -32,11 +32,7 @@
 
 * Riduzione del numero di errori
 
-
-
 ## Orientato a oggetti
-
-
 
 * Orientato a oggetti dalla base
 

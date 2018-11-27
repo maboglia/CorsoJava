@@ -1,8 +1,6 @@
 # Classi Java
 
-# Classi: Concetti Base
-
-### Estendono il concetto di "struttura" 
+Le classi estendono il concetto di "struttura" di altri linguaggi
 
 ### Definiscono:
 
@@ -20,22 +18,25 @@
 ## Definizione di una Classe
 
 ### Definizione
+```java
 class <nomeClasse) {
 <campi>
 <metodi>
 }
-
+```
 ### Esempi
 * Classe contenente dati ma non azioni
 
+```java
 class DataOnly {
 boolena b;
 char c;
 int i;
 float f;
 }
-
+```
 * Classe contenente dati e azioni
+```java
 
 class Automobile {
 String colore;
@@ -66,6 +67,7 @@ else
 System.out.println("Il motore e` spento");
 }
 }
+```
 
 
 ### Dati & Metodi
@@ -131,9 +133,11 @@ colore = nuovoCol;
 * Crea una nuova istanza della classe specificata, allocandone la memoria
 * Restituisce il riferimento all'oggetto creato
 
+```java
 Automobile a = new Automobile ();
 Motorcycle m = new Motorcycle ();
 String s = new String ("ABC");
+```
 
 * Chiama il costruttore del nuovo oggetto (vedere in seguito)
 
@@ -161,9 +165,11 @@ String s = new String ("ABC");
 * vernicia("Rosso")
 
 ### Esempi
+```java
 Automobile a = new Automobile();
 a.mettiInMoto();
 a.vernicia("Blu");
+```
 
 
 ### Caso particolare
@@ -403,35 +409,3 @@ double y = Math.cos(x);
 
 
 
-
-## Introduzione alla Programmazione Orientata agli Oggetti 
-### (Object Oriented Programming – OOP)
-
-                      
-                 
-## Programmazione imperativa
-Abbiamo visto come programmare utilizzando i seguenti tipi di dati:
-
-* Tipi di dato primitivi (int, double, char, boolean, ecc...) 
-* Le stringhe
-* Gli array
-
-I programmi fatti fino ad ora consistevano di una sequenza di comandi
-strutture di controllo (cicli, scelte condizionali, ecc...) ed eventualmente metodi ausiliari
-che consentivano di manipolare i dati per calcolare il risultato voluto.
-Questo modo di programmare prende il nome di __PROGRAMMAZIONE IMPERATIVA__, imperativa in quanto basata su comandi
-                     
-## Programmazione imperativa
-Nella programmazione imperativa:
-Un programma prevede uno stato globale costituito dai valori delle sue variabili
-I comandi del programma modificano lo stato fino a raggiungere uno stato finale (che include il risultato)
-                        
-## Programmazione imperativa
-Ad esempio, il seguente programma (che calcola il prodotto di x e y):
-ha la seguente dinamica:
-```java
-int x=10, y=3, p=0;
-for (int i=0; i<y; i++)
-p+=x;
-```
-                 

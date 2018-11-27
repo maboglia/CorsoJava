@@ -208,3 +208,18 @@
   * Configurazione di un DAO JDBC
   * SimpleJdbcInsert
   * SqlQuery e MappingSqlQuery
+
+## Bibliografia e risorse
+
+* [Programma OCA](100_programma_OCA.md)
+* [Programma OCP](100_programma_OCP.md)
+* [Programma GUI](100_programma_GUI.md)
+* [Programma GUI](100_programma_GUI.md)
+* Programmazione di base e avanzata con Java – Valter Savitch (it)
+* Java 9 Guida allo sviluppo in ambienti Windows, macOS e * GNU/Linux - Pellegrino Principe (it)
+* Manuale di Java – Claudio de Sio – Hoepli Informatica (it)
+* Concetti di informatica e fondamenti di Java - Cay Horstmann (it)
+* [Guida Java html.it](https://www.html.it/guide/guida-java/) (it)
+* [Java SE Documentation – Oracle/Sun (en)](https://docs.oracle.com/en/java/)
+* [Java tutorials – Oracle/Sun (en)](https://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html)
+* OCA Java Study Guide – Oracle (en)
