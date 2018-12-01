@@ -53,28 +53,28 @@
 
 ## [Esercizi Base](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e)
 
-* 001_CercaNumero.java
-* 002_NumeriPariDispari.java
-* 003_Media.java
-* 004_ScambiaValori.java
-* 005_TestNumeriInteri.java
-* 006_TestNumeriLong.java
-* 007_Tabellina.java
-* 008_CalcolaPotenze.java
-* 009_max2n.java
-* 010_max2nb.java
-* 011_max10n.java
-* 012_valoreAssoluto.java
-* 013_SommaDispari.java
-* 014_Somma.java
-* 015_Potenza.java
-* 016_Intervallo.java
-* 017_divisioneConResto.java
-* 017_equazioneIgrado.java
-* 019_equazioneIIgrado.java
-* 020_prodottoAddizioni.java
-* 021_mcdDivisioni.java
-* 022_Sequenza.java
+* [001_CercaNumero.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-001_cercanumero-java)
+* [002_NumeriPariDispari.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-002_numeriparidispari-java)
+* [003_Media.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-003_media-java)
+* [004_ScambiaValori.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-004_scambiavalori-java)
+* [005_TestNumeriInteri.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-005_testnumeriinteri-java)
+* [006_TestNumeriLong.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-006_testnumerilong-java)
+* [007_Tabellina.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-007_tabellina-java)
+* [008_CalcolaPotenze.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-008_calcolapotenze-java)
+* [009_max2n.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-009_max2n-java)
+* [010_max2nb.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-010_max2nb-java)
+* [011_max10n.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-011_max10n-java)
+* [012_valoreAssoluto.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-012_valoreassoluto-java)
+* [013_SommaDispari.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-013_sommadispari-java)
+* [014_Somma.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-014_somma-java)
+* [015_Potenza.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-015_potenza-java)
+* [016_Intervallo.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-016_intervallo-java)
+* [017_divisioneConResto.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-017_divisioneconresto-java)
+* [017_equazioneIgrado.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-017_equazioneigrado-java)
+* [019_equazioneIIgrado.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-019_equazioneiigrado-java)
+* [020_prodottoAddizioni.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-020_prodottoaddizioni-java)
+* [021_mcdDivisioni.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-021_mcddivisioni-java)
+* [022_Sequenza.java](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e#file-022_sequenza-java)
 
 ## [EsempiJava_02](https://gist.github.com/maboglia/fb505ccbfd10186ea092b3d5349045d5)
 
@@ -86,32 +86,32 @@
 
 ## [Array](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72)
 
-* 001_EsempiFor.java
-* 002_AltriEsempiFor.java
-* 003_EsempiWhile.java
-* 004_ForEsempio.java
-* 005_EsempiSwitch.java
-* 006_Condizione.java
-* 007_Pitagora.java
-* 008_SoloVocali.java
-* 009_SimpleCalcolatrice.java
-* 010_QuarantaquattroGatti.java
-* 011_MioArray.java
-* 012_EsercizioArray1.java
-* 013_EsercizioArray2.java
-* 014_EsercizioArray3.java
-* 015_arrayConta9.java
-* 016_ArrayInteri.java
-* 017_RightChoice.java
-* 018_Contrario.java
-* 019_EnhancedFor.java
-* 020_TuttiPositiviPari.java
-* 021_Tabellina.java
-* 022_TestaCroce.java
-* 023_TodoList.java
-* 024_PietraForbiciCarta.java
-* 025_RockScissorsPaper.java
-* 026_Algoritmi.java
+* [001_EsempiFor.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-001_esempifor-java)
+* [002_AltriEsempiFor.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-002_altriesempifor-java)
+* [003_EsempiWhile.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-003_esempiwhile-java)
+* [004_ForEsempio.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-004_foresempio-java)
+* [005_EsempiSwitch.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-005_esempiswitch-java)
+* [006_Condizione.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-006_condizione-java)
+* [007_Pitagora.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-007_pitagora-java)
+* [008_SoloVocali.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-008_solovocali-java)
+* [009_SimpleCalcolatrice.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-009_simplecalcolatrice-java)
+* [010_QuarantaquattroGatti.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-010_quarantaquattrogatti-java)
+* [011_MioArray.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-011_mioarray-java)
+* [012_EsercizioArray1.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-012_esercizioarray1-java)
+* [013_EsercizioArray2.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-013_esercizioarray2-java)
+* [014_EsercizioArray3.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-014_esercizioarray3-java)
+* [015_arrayConta9.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-015_arrayconta9-java)
+* [016_ArrayInteri.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-016_arrayinteri-java)
+* [017_RightChoice.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-017_rightchoice-java)
+* [018_Contrario.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-018_contrario-java)
+* [019_EnhancedFor.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-019_enhancedfor-java)
+* [020_TuttiPositiviPari.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-020_tuttipositivipari-java)
+* [021_Tabellina.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-021_tabellina-java)
+* [022_TestaCroce.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-022_testacroce-java)
+* [023_TodoList.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-023_todolist-java)
+* [024_PietraForbiciCarta.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-024_pietraforbicicarta-java)
+* [025_RockScissorsPaper.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-025_rockscissorspaper-java)
+* [026_Algoritmi.java](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72#file-026_algoritmi-java)
 
 
 ## 06Date
