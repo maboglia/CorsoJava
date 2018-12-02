@@ -7,22 +7,16 @@
 * Linguaggi per la descrizione di algoritmi.
 * I diagrammi di flusso
 * Paradigmi di programmazione.
-* Tipi di dato semplici
-* Strutture di controllo sequenziali, condizionali ed iterative 
-* Tipi di dato complessi e oggetti
-* Funzioni e metodi.
-* Il ciclo di vita del software e le qualità dei programmi
-* Astrazione e decomposizione
-* La programmazione modulare.
-* Strutture dati fondamentali: collezioni, liste, mappe 
 
 ## Installazione ambiente di sviluppo 
 
 * Introduzione alla programmazione orientata agli oggetti.
+* Il ciclo di vita del software e le qualità dei programmi
 * Introduzione linguaggio Java
 * Introduzione a Java e al processo di compilazione
 * Compilazione ed esecuzione
 * Primi programmi Java.
+
   
 ## Input/Output  
 
@@ -32,29 +26,36 @@
 
 ## Sintassi java
 
-* Operatori di assegnazione, relazionali e booleani
-* Operatori aritmetici, relazionali e di uguaglianza
+* Operatori
+  * assegnazione, 
+  * relazionali
+  * booleani 
+  * aritmetici
+  * uguaglianza
+  * concatenazione stringhe
+
 * Regole di precedenza.
-* Pre/post incremento e concatenazione stringhe
+* Pre/post incremento
 * Variabili locali
+* Scope delle variabili
+* Tipi di dato
+    * Tipi di dato primitivi
+    * Tipi reference: tipi di dato complessi e oggetti
+* Astrazione e decomposizione: funzioni e metodi
 * Metodi
     * Il metodo main() ed i sottoprogrammi
     * Metodi di classe: La parola chiave Static
     * Passaggio dei parametri per riferimento e per valore
     * Modificatori
 * Gestione e importazione dei package
-* Scope delle variabili
-* Tipi di dato
-    * Tipi di dato primitivi
-    * Tipi reference.
+* La programmazione modulare.
 * Casting e Promotion
 * Boxing e unboxing.
-* Array e ArrayList.
+* Strutture dati fondamentali: collezioni, liste, mappe 
 * Array monodimensionali
 * Array multidimensionali
 * Copia di array
-* Array estendibili.
-* Array multidimensionali.
+* Array e ArrayList.
 
 ## Strutture condizionali
 
@@ -68,10 +69,9 @@
 * Cicli finiti, infiniti, annidati
 * while
 * do...while
-* for
-* for: per scorrere p.es un array in entrambe le direzioni
+* for: per scorrere per esempio un array in entrambe le direzioni
 * for(each): scorre solo in una direzione
-* Labels, Break e Continue
+* Labels: break e continue
 
 ## Java API
 
