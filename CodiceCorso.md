@@ -19,7 +19,7 @@
 
 * [000_Commenti.java](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3#file-000_commenti-java)
 * [000_TipiPrimitivi.java](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3#file-000_tipiprimitivi-java)
-* [001_1_Booleani.java](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3#file-001_1_booleani-java)#
+* [001_1_Booleani.java](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3#file-001_1_booleani-java)
 * [001_Booleani.java](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3#file-001_booleani-java)
 * [002_1_Caratteri.java](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3#file-002_1_caratteri-java)
 * [002_Caratteri.java](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3#file-002_caratteri-java)
