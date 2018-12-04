@@ -5,6 +5,7 @@
   * Contiene gli elementi che esistono per tutta la durata del programma
 * Heap o memoria dinamica
   * Contiene gli elementi creati durante il programma
+  * qui agisce il Garbage Collector
 * Stack
   * Contiene gli elementi creati durante una chiamata di procedura
 
@@ -26,15 +27,16 @@
 
 ## Variabili di istanza
 
-### Dichiarate all'interno di una classe
+* Dichiarate all'interno di una classe
+
 (attributi)
-Class Window {
+`Class Window {
 boolean visible;
-...
+`...
 
-### Memorizzate in ogni istanza della classe
+* Memorizzate in ogni istanza della classe
 
-### Create/inizializzate alla creazione di ogni istanza della classe
+* Create/inizializzate alla creazione di ogni istanza della classe
 
 ## Variabili automatiche (locali)
 
