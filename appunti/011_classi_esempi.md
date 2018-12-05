@@ -39,33 +39,30 @@ float f;
 ```java
 
 class Automobile {
-String colore;
-String marca;
-boolean accesa;
-Nome
-Automobile
-Attributi
-void mettiInMoto() {
-accesa = true;
-}
-void vernicia (String nuovoCol) { Messaggi/
-Metodi
-colore = nuovoCol;
-}
-colore
-marca
-accesa
-mettiInMoto
-vernicia
-stampaStato
-void stampaStato () {
-System.out.println("Questa auto e` una "+
-marca + " " + colore);
-if (accesa)
-System.out.println("Il motore e` acceso");
-else
-System.out.println("Il motore e` spento");
-}
+    
+    //Attributi
+    String colore;
+    String marca;
+    boolean accesa;
+    
+    //metti i in moto
+    void mettiInMoto() {
+        accesa = true;
+    }
+    
+    //vernicia
+    void vernicia (String nuovoCol) { 
+        colore = nuovoCol;
+    }
+    
+    // stampaStato
+    void stampaStato () {
+        System.out.println("Questa automobile è una "+ marca + " " + colore);
+        if (accesa)
+        System.out.println("Il motore è acceso");
+        else
+        System.out.println("Il motore è spento");
+    }
 }
 ```
 
@@ -76,21 +73,22 @@ System.out.println("Il motore e` spento");
 * Protected: ...
 * Nessuna specifica (amichevole): ...
 
-### La definizione di classe non rappresenta alcun oggetto.
+La definizione di classe non rappresenta alcun oggetto.
 
 ## Polimorfismo (overloading)
 
-### Una classe può avere più metodi con lo stesso nome
+Una classe può avere più metodi con lo stesso nome
 
-### I metodi devono essere distinguibili in base al
+### I metodi devono essere distinguibili in base a
 
 * Numero dei parametri
 * Tipo dei parametri
 
-### Il metodo da eseguire viene scelto in base al
+### Il metodo da eseguire viene scelto in base a
 
 * Numero e tipo di parametri
-* Non esiste alcuna discriminazione sul valore di ritorno
+
+Il metodo da eseguire **NON** viene scelto in base al valore di ritorno
 
 ### Esempio
 ```java
@@ -110,26 +108,29 @@ colore = nuovoCol;
 }
 }
 ```
+
 ## Instanziare una Classe
 
 ### Crea degli oggetti appartenenti a una classe
 
 ### Gli oggetti sono caratterizzati da
+
 * Classe di appartenenza - tipo (ne descrive attributi e metodi)
 * Stato (valore attuale degli attributi)
 * Identificatore univoco (reference - handle - puntatore)
 
 ### Per creare un oggetto occorre
+
 * Dichiarare una istanza
 * Tecnica analoga a quella utilizzata per i tipi primitivi
 * La dichiarazione non alloca spazio ma solo una riferimento (puntatore) che per default vale null
 * Allocazione e inizializzazione
 * Riservano lo spazio necessario creando effettivamente l'oggetto appartenente a quella classe
 
-
 ## Creare un Oggetto
 
 ### Il costrutto new
+
 * Crea una nuova istanza della classe specificata, allocandone la memoria
 * Restituisce il riferimento all'oggetto creato
 
@@ -251,7 +252,7 @@ Esempio (costruttori con overloading)
 Class Window {
 String title;
 String color;
-// Finestra senza titolo ne` colore
+// Finestra senza titolo nè colore
 Window () {
 ...
 }
