@@ -12,31 +12,35 @@ Scrivere un programma che stampi le tabellina del numero dato come argomento
 
 ## Esercizio
 Stampare a video la seguente figura:
-\******
-\*****
-\****
-\***
-\**
-\*
+```java
+******
+*****
+****
+***
+**
+*
+```
+## Esercizio
+Stampare a video la seguente figura:
+```java
+#
+##
+###
+####
+#####
+######
+```
 
 ## Esercizio
 Stampare a video la seguente figura:
-\#
-\##
-\###
-\####
-\#####
-\######
-
-
-## Esercizio
-Stampare a video la seguente figura:
+```java
 1      654321
 12      54321
 123      4321
 1234      321
 12345      21
 123456      1
+```
 
 ## Esercizio
 Scrivere un programma che stampi i primi 100 elementi della successione di Fibonacci.
