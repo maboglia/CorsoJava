@@ -1,8 +1,10 @@
 #Assessment Test
 
-##1.
-###What is the result of the following class? 
-####Scegli tutte le risposte possibili
+## 1.
+### What is the result of the following class? 
+
+Scegli tutte le risposte possibili
+```java
 	1: public class _C {
 	2: private static int $;
 	3: public static void main(String[] main) {
@@ -10,6 +12,7 @@
 	5: System.out.print($);
 	6: System.out.print(a_b);
 	7: } }
+```
 * A. Compiler error on line 1.
 * B. Compiler error on line 2.
 * C. Compiler error on line 4.
@@ -19,8 +22,9 @@
 * G. nullnull
 
 
-##2.
-###What is the result of the following code?
+## 2.
+### What is the result of the following code?
+```java
 	String s1 = "Java";
 	String s2 = "Java";
 	StringBuilder sb1 = new StringBuilder();
@@ -29,15 +33,18 @@
 	System.out.println(s1.equals(s2));
 	System.out.println(sb1.toString() == s1);
 	System.out.println(sb1.toString().equals(s1));
+```
 * A. true is printed out exactly once.
 * B. true is printed out exactly twice.
 * C. true is printed out exactly three times.
 * D. true is printed out exactly four times.
 * E. The code does not compile.
 
-##3.
-###What is the output of the following code? 
-####Scegli tutte le risposte possibili
+## 3.
+### What is the output of the following code? 
+
+Scegli tutte le risposte possibili
+```java
 	1: interface HasTail { int getTailLength(); }
 	2: abstract class Puma implements HasTail {
 	3: protected int getTailLength() {return 4;}
@@ -50,6 +57,7 @@
 	10: 
 	11: public int getTailLength(int length) {return 2;}
 	12: }
+```
 * A. 2
 * B. 4
 * C. The code will not compile because of line 3.
@@ -58,8 +66,9 @@
 * F. The code will not compile because of line 11.
 * G. The output cannot be determined from the code provided.
 
-##4.
-###What is the output of the following program?
+## 4.
+### What is the output of the following program?
+```java
 	1: public class FeedingSchedule {
 	2: public static void main(String[] args) {
 	3: boolean keepGoing = true;
@@ -75,6 +84,7 @@
 	13: }
 	14: System.out.println(x);
 	15: } }
+```
 * A. 4
 * B. 5
 * C. 6
@@ -84,8 +94,9 @@
 
 
 
-##5.
-###What is the output of the following code snippet?
+## 5.
+### What is the output of the following code snippet?
+```java
 	13: System.out.print("a");
 	14: try {
 	15: System.out.print("b");
@@ -96,6 +107,7 @@
 	20: System.out.print("d");
 	21: }
 	22: System.out.print("e");
+```
 * A. abe
 * B. abce
 * C. abde
@@ -104,8 +116,9 @@
 * F. An uncaught exception is thrown.
 
 
-##6.
-###What is the result of the following program?
+## 6.
+### What is the result of the following program?
+```java
 	1: public class MathFunctions {
 	2: public static void addToInt(int x, int amountToAdd) {
 	3: x = x + amountToAdd;
@@ -116,6 +129,7 @@
 	8: MathFunctions.addToInt(a, b);
 	9: System.out.println(a);
 } }
+```
 * A. 10
 * B. 15
 * C. 25
@@ -123,8 +137,9 @@
 * E. Compiler error on line 8.
 * F. None of the above.
 
-##7.
-###What is the result of the following code?
+## 7.
+### What is the result of the following code?
+```java
 	int[] array = {6,9,8};
 	List<Integer> list = new ArrayList<>();
 	list.add(array[0]);
@@ -132,14 +147,16 @@
 	list.set(1, array[1]);
 	list.remove(0);
 	System.out.println(list);
+```
 * A. [8]
 * B. [9]
 * C. Something like [Ljava.lang.String;@160bc7c0
 * D. An exception is thrown.
 * E. The code does not compile.
 
-##8.
-###What is the output of the following code?
+## 8.
+### What is the output of the following code?
+```java
 	1: public class Deer {
 	2: public Deer() { System.out.print("Deer"); }
 	3: public Deer(int age) { System.out.print("DeerAge"); }
@@ -153,6 +170,7 @@
 	11: public Reindeer(int age) { System.out.print("Reindeer"); }
 	12: public boolean hasHorns() { return true; }
 	13: }
+```
 * A. DeerReindeer,false
 * B. DeerReindeer,true
 * C. ReindeerDeer,false
@@ -160,11 +178,14 @@
 * E. DeerAgeReindeer,false
 * F. DeerAgeReindeer,true
 * G. The code will not compile because of line 7.
-H. The code will not compile because of line 12.
+* H. The code will not compile because of line 12.
 
-##9.
-###Which of the following statements are true? 
-####Scegli tutte le risposte possibili
+## 9.
+### Which of the following statements are true? 
+
+Scegli tutte le risposte possibili
+```java
+```
 * A. Checked exceptions are intended to be thrown by the JVM (and not the programmer).
 * B. Checked exceptions are required to be caught or declared.
 * C. Errors are intended to be thrown by the JVM (and not the programmer).
@@ -173,9 +194,11 @@ H. The code will not compile because of line 12.
 * F. Runtime exceptions are required to be caught or declared.
 
 
-##10. 
-###Which are true of the following code? 
-####Scegli tutte le risposte possibili
+## 10. 
+### Which are true of the following code? 
+
+Scegli tutte le risposte possibili
+```java
 	1: import java.util.*;
 	2: public class Grasshopper {
 	3: public Grasshopper(String n) {
@@ -189,6 +212,7 @@ H. The code will not compile because of line 12.
 	11: one = null;
 	12: }
 	13: private String name; }
+```
 * A. Immediately after line 9, no grasshopper objects are eligible for garbage collection.
 * B. Immediately after line 10, no grasshopper objects are eligible for garbage collection.
 * C. Immediately after line 9, only one grasshopper object is eligible for garbage collection.
@@ -198,8 +222,9 @@ H. The code will not compile because of line 12.
 * G. The code does not compile.
 
 
-##11. 
-###What is the output of the following program?
+## 11. 
+### What is the output of the following program?
+```java
 	1: public class FeedingSchedule {
 	2: public static void main(String[] args) {
 	3: int x = 5, j = 0;
@@ -212,6 +237,7 @@ H. The code will not compile because of line 12.
 	10: } while(j <= 2);
 	11: System.out.println(x);
 	12: } }
+```
 * A. 10
 * B. 12
 * C. 13
@@ -219,8 +245,9 @@ H. The code will not compile because of line 12.
 * E. The code will not compile because of line 4.
 * F. The code will not compile because of line 6.
 
-##12. 
-###What is the result of the following program?
+## 12. 
+### What is the result of the following program?
+```java
 	1: public class Egret {
 	2: private String color;
 	3: public Egret() {
@@ -234,6 +261,7 @@ H. The code will not compile because of line 12.
 	11: System.out.println("Color:" + e.color);
 	12: }
 	13: }
+```
 * A. Color:
 * B. Color:null
 * C. Color:White
@@ -241,8 +269,9 @@ H. The code will not compile because of line 12.
 * E. Compiler error on line 10.
 * F. Compiler error on line 11.
 
-##13. 
-###What is the output of the following program?
+## 13. 
+### What is the output of the following program?
+```java
 	1: public class BearOrShark {
 	2: public static void main(String[] args) {
 	3: int luck = 10;
@@ -250,6 +279,7 @@ H. The code will not compile because of line 12.
 	5: System.out.print("Bear");
 	6: } if(luck<10) System.out.print("Shark");
 	7: } }
+```
 * A. Bear
 * B. Shark
 * C. BearShark
@@ -257,9 +287,11 @@ H. The code will not compile because of line 12.
 * E. The code will not compile because of line 6.
 * F. The code compiles without issue but does not produce any output.
 
-##14. 
-###Assuming we have a valid, non-null HenHouse object whose value is initialized by the blank line shown here, which of the following are possible outputs of this application? 
-####Scegli tutte le risposte possibili
+## 14. 
+### Assuming we have a valid, non-null HenHouse object whose value is initialized by the blank line shown here, which of the following are possible outputs of this application? 
+
+Scegli tutte le risposte possibili
+```java
 	1: class Chicken {}
 	2: interface HenHouse { public java.util.List<Chicken> getChickens(); }
 	3: public class ChickenSong {
@@ -270,6 +302,7 @@ H. The code will not compile because of line 12.
 	8: chicken = house.getChickens().get(i++)) {
 	9: System.out.println("Cluck");
 	10: } } }
+```
 * A. The code will not compile because of line 6.
 * B. The code will not compile because of lines 7–8.
 * C. The application will compile but not produce any output.
@@ -277,9 +310,11 @@ H. The code will not compile because of line 12.
 * E. The application will output Cluck more than once.
 * F. The application will compile but produce an exception at runtime.
 
-##15. 
-###Which of the following statements can be inserted in the blank line so that the code will compile successfully? 
-####Scegli tutte le risposte possibili
+## 15. 
+### Which of the following statements can be inserted in the blank line so that the code will compile successfully? 
+
+Scegli tutte le risposte possibili
+```java
 
 	public interface CanSwim {}
 	public class Amphibian implements CanSwim {}
@@ -292,18 +327,22 @@ H. The code will not compile because of line 12.
 		} 
 	}
 
+```
 * A. CanSwim
 * B. Long
 * C. Amphibian
 * D. Tadpole
 * E. Object
 
-##16. 
-###What individual changes, if any, would allow the following code to compile? 
-####Scegli tutte le risposte possibili
+## 16. 
+### What individual changes, if any, would allow the following code to compile? 
+
+Scegli tutte le risposte possibili
+```java
 	1: public interface Animal { public default String getName() { return null; } }
 	2: interface Mammal { public default String getName() { return null; } }
 	3: abstract class Otter implements Mammal, Animal {}
+```
 * A. The code compiles without issue.
 * B. Remove the default method modifier and method implementation on line 1.
 * C. Remove the default method modifier and method implementation on line 2.
@@ -313,14 +352,16 @@ H. The code will not compile because of line 12.
 * G. Override the getName() method with a concrete method in the Otter class.
 
 
-##17. 
-###Which of the following lines can be inserted at line 11 to print true? (Choose all thatapply)
+## 17. 
+### Which of the following lines can be inserted at line 11 to print true? (Choose all thatapply)
+```java
 	10: public static void main(String[] args) {
 	11: // INSERT CODE HERE
 	12: }
 	13: private static boolean test(Predicate<Integer> p) {
 	14: return p.test(5);
 	15: }
+```
 * A. System.out.println(test(i -> i == 5));
 * B. System.out.println(test(i -> {i == 5;}));
 * C. System.out.println(test((i) -> i == 5));
@@ -328,9 +369,11 @@ H. The code will not compile because of line 12.
 * E. System.out.println(test((int i) -> {return i == 5;}));
 * F. System.out.println(test((i) -> {return i == 5;}));
 
-##18. 
-###Which of the following print out a date representing April 1, 2015? 
-####Scegli tutte le risposte possibili
+## 18. 
+### Which of the following print out a date representing April 1, 2015? 
+
+Scegli tutte le risposte possibili
+
 * A. System.out.println(LocalDate.of(2015, Calendar.APRIL, 1));
 * B. System.out.println(LocalDate.of(2015, Month.APRIL, 1));
 * C. System.out.println(LocalDate.of(2015, 3, 1));
@@ -338,8 +381,9 @@ H. The code will not compile because of line 12.
 * E. System.out.println(new LocalDate(2015, 3, 1));
 * F. System.out.println(new LocalDate(2015, 4, 1));
 
-##19. 
-###Bytecode is in a file with which extension?
+## 19. 
+### Bytecode is in a file with which extension?
+
 * A. .bytecode
 * B. .bytes
 * C. .class
@@ -347,9 +391,11 @@ H. The code will not compile because of line 12.
 * E. .javac
 * F. .java
 
-##20. 
-###Which of the following are checked exceptions? 
-####Scegli tutte le risposte possibili
+## 20. 
+### Which of the following are checked exceptions? 
+
+Scegli tutte le risposte possibili
+
 * A. Exception
 * B. IllegalArgumentException
 * C. IOException
