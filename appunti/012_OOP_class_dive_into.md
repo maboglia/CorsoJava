@@ -63,7 +63,7 @@ classi (ed eventualmente altri componenti)
 gerarchica dei package simile a quella delle cartelle
 (directory) su un disco
 
-##Esempi di package
+## Esempi di package
 * java.lang Package fondamentale con
 classi di uso molto comune
 * java.io Package per l’Input/Output
