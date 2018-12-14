@@ -1,11 +1,35 @@
 I membri della classe Math.
 --------------------------------------
-Costanti pubbliche statiche:
-double E
-double PI
+
+Questa classe serve per fare calcoli matematici e ha due attributi:
+
+```java
+static double E	; //E di Eulero
+static double PI; //Pi greca
+```
+
+### Consta di 31 metodi che rappresentano: le funzioni matematiche di 
+
+* valore assoluto, 
+* tangente, 
+* logaritmo, 
+* potenza, 
+* massimo, 
+* minimo, 
+* seno, 
+* coseno, 
+* esponenziale, 
+* radice quadrata
+* arrotondamento classico, per eccesso e per difetto
+* generazione di numeri casuali
 
 
-Metodi pubblici statici:
+## Costanti pubbliche statiche:
+* double E
+* double PI
+
+
+## Metodi pubblici statici:
 
 * double **abs**(double a)
 * float **abs**(float a)

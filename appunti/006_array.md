@@ -1,5 +1,40 @@
 # Array
 
+
+## Snippets Tipi di Array
+
+**Array Monodimensionali**
+```
+int[] list = new int[10];
+
+list.length;
+
+int[] list = {1, 2, 3, 4};
+
+```
+**Array Multidimensionali**
+```
+int[][] list = new int[10][10];
+
+list.length;
+
+list[0].length;
+
+int[][] list = {{1, 2}, {3, 4}};
+
+```
+**Array irregolari**
+```
+int[][] m = {{1, 2, 3, 4},
+
+{1, 2, 3},
+
+{1, 2},
+
+{1}};
+
+```
+
 * Sequenze ordinate di
   * Tipi primitivi (int, float, etc.)
   * Riferimenti ad oggetti ( vedere classi! )

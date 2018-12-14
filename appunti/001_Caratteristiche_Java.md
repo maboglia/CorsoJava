@@ -1,5 +1,21 @@
 # Java Fondamentale
 
+* Java è un linguaggio di alto livello
+e orientato agli oggetti, creato dalla S u n M i c r o s y s t e m nel 1995.
+
+Le motivazioni, che guidarono lo sviluppo di Java, erano quelle di creare un linguaggio semplice e familiare. 
+
+Le caratteristiche del linguaggio di programmazione Java sono:
+
+* La tipologia di linguaggio o r i e n t a t o a g l i o g g e t t i (ereditarietà, polimorfismo, ...)
+* la g e s t i o n e d e l l a m e m o r i a effettuata automaticamente dal sistema,
+ il quale si preoccupa dell'allocazione e
+della successiva deallocazione della memoria (il programmatore viene liberato dagli obblighi
+di gestione della
+memoria 
+* la p o r t a b i l i t à , cioè la capacità di un programma di poter essere eseguito su piattaforme diverse senza dover
+essere e modificato e ricompilato
+
 ## Caratteristiche di Java
 
 * Semplice e familiare

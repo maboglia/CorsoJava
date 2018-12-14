@@ -1,3 +1,31 @@
+
+# Classe StringBuffer
+
+### Un oggetto String
+* NON è modificabile
+* Una volta creato non possiamo aggiungere, eliminare, modificare caratteri (i metodi visti creano nuove stringhe)
+* Tale restrizione è dovuta a ragioni di efficienza
+
+### Le considerazione precedenti non sono vere per la classe StringBuffer
+
+### Esempio
+`StringBuffer myStringBuffer = new stringBuffer ("stringa modificabile");
+
+myStringBuffer.setCharAt (8, ‘M'); // Trasforma in "stringa Modificabile"`
+
+### Si usa raramente
+
+### Un oggetto StringBuffer non può essere utilizzato per operazioni di I/O
+`System.out.println (myStringBuffer.toString());`
+
+### Metodi:
+* Aggiunta di caratteri 
+`myStringBuffer.append ("aggiunta");`
+* insert
+* delete
+* reverse
+
+
 I più importanti metodi di cui sono dotati gli oggetti di tipo StringBuffer.
 --------------------------------------------------------------------------------------
 Tipo restituito|Metodi e parametri|Descrizione

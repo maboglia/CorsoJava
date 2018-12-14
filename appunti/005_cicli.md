@@ -1,3 +1,84 @@
+
+Strutture del linguaggio
+========================
+
+
+**if Statements**
+
+```java
+if (condition) {
+    
+    statements;
+
+}
+
+[optional]
+else if (condition2) {
+    
+    statements;
+
+}
+
+
+
+[optional]
+else {
+    
+statements;
+
+}
+
+```
+
+**switch Statements**
+
+```java
+switch (Expression) {
+
+case value1:
+
+statements;
+
+break;
+
+...
+
+case valuen:
+
+statements;
+
+break;
+
+default:
+
+statements;
+
+}
+```
+
+**loop Statements**
+```java
+
+while (condition) {
+
+statements;
+
+}
+
+do {
+
+statements;
+
+} while (condition);
+
+
+for (init; condition; adjustment) {
+
+statements;
+
+}
+```
+
 ## Cicli definiti
 
 Se il numero di iterazioni è prevedibile dal contenuto delle variabili all'inizio del ciclo.

@@ -1,60 +1,10 @@
 # Package java.lang
 * Il package java.lang è il package più importante dell’API di Java, in quanto contiene moltissime classi e interfacce fondamentali per la programmazione Java, tanto che questo package viene importato in automatico in tutti i programmi.
-* Oltre alle classe Thread e all’interfaccia Runnable di cui abbiamo parlato nella lezione precedente, questo package contiene classi che già abbiamo utilizzato come la classe String, la Object e la System.
-* Ora andremo ad introdurre le classi più utilizzate e famose, in modo tale da avere una visione di insieme del package.
+* Oltre alle classe Thread e all’interfaccia Runnable questo package contiene classi come 
+* String, 
+* Object 
+* System.
 
-## Classe String
-* Le stringhe in Java sono oggetti. 
-* La particolarità di questa classe è quella di essere l’unica classe che è possibile istanziare come se fosse un tipo di dato primitivo.
-
-	
-```java
-int compareTo(String other)
-```
-	Esegue una comparazione lessicale. Ritorna un intero:
-	< 0 se la stringa corrente è minore della stringa other
-	= 0 se le due stringhe sono identiche
-	> 0 se la stringa corrente è maggiore di other
-	
-```java
-int indexOf(int ch)
-```
-	Restituisce l’indice del carattere specificato
-
-```java
-int lastIndexOf(int ch)
-```
-	E’ come indexOf() ma viene restituito l’indice dell’ultima occorrenza trovata
-
-```java
-int length()
-```
-	Restituisce il numero di caratteri di cui è costituita la stringa corrente
-
-```java
-String replace(char oldChar, char newChar)
-```
-	Restituisce una nuova stringa, dove tutte le occorrenze di oldChar sono rimpiazzate con newChar
-
-```java
-String substring(int startIndex)
-```
-	Restituisce una sottostringa della stringa corrente, composta dai caratteri che partono dall’indice startIndex alla fine
-
-```java
-String substring(int startIndex, int number)
-```
-	Restituisce una sottostringa della stringa corrente, composta dal numero number di caratteri che partono dall’indice startIndex
-
-```java
-String toLowerCase()
-```
-	Restituisce una nuova stringa equivalente a quella corrente ma con tutti i caratteri minuscoli
-
-```java
-String toUpperCase()
-```
-	Restituisce una nuova stringa equivalente a quella corrente ma con tutti i caratteri maiuscoli
 
 ## Classe System
 La classe System ha il compito di interfacciare il programma Java con il sistema operativo sul quale sussiste la virtual machine.
@@ -119,112 +69,8 @@ Un elenco con tutte le properties di sistema è riportato in basso.
 * Caratteristica interessante di questa classe è permette di eseguire comandi del sistema operativo direttamente da Java, come ad esempio exec (di cui esistono più versioni).
 * Bisogna tener conto che l’uso della classe Runtime potrebbe compromettere la portabilità delle applicazioni, infatti questa classe dipende fortemente dal sistema operativo.
 
-### Classi wrapper
-* Nella versione 1.5 di Java è stata introdotta una funzionalità davvero comoda che viene chiamata boxing (inscatolamento) che permette ai valori dei tipi primitivi di essere convertiti in oggetti, e viceversa. In particolare:
-* l’autoboxing è un casting automatico che permette ai valori dei tipi primitivi di essere convertiti in oggetti
-* l’unboxing effettua il casting inverso
-* Gli oggetti che rappresentano i tipi primitivi sono detti classi wrapper (in italiano "involucro") che sono classi che fanno da contenitore a un tipo di dato primitivo, astraendo proprio il concetto di tipo. 
-__N.B. Tutte le classi wrapper sono classi final per cui non possono essere estese.__
+## Altre classi del package `java.lang`
 
-* In Java, ogni tipo primitivo possiede una corrispondente classe wrapper: Byte, Short, Integer, Long, Float, Double, Boolean, Character. 
-* Ciascuna di queste classi permette di manipolare i valori di tipo primitivo come se fossero valori di oggetti. 
-* Spesso abbiamo a che fare con tipi primitivi (int, double, boolean, …) che sono tipi semplici e, quindi, non possiedono metodi. 
-* I wrapper, invece, essendo degli oggetti, sono dotati di metodi ed attributi.
-* Prima dell’introduzione dell’autoboxing, programmando in Java ci si poteva trovare nella necessità di convertire un tipo primitivo nella sua corrispondente classe wrapper.
-
-```java
-Integer x = new Integer(10);
-Double y = new Double(5.5f);
-Boolean z = Boolean.parseBoolean("true");
-````
-
-Occorreva prima creare un nuovo oggetto di una classe wrapper.
-Le stesse operazioni precedenti possono essere ora eseguite mediante il seguente codice.
-```java
-
-Integer x = 10;
-Double y = 5.5f;
-Boolean z = true;
-```
-L’autoboxing permette al developer di non preoccuparsi delle operazioni di conversione.
-Da notare che è grazie all’autoboxing che possiamo inserire i tipi primitivi all’interno delle Collection in maniera totalmente trasparente e senza preoccuparci di convertire i dati.
-
-### Classe Math
-Per terminare la nostra trattazione del java.lang, comunque parziale vista l’immensità del package, esaminiamo brevemente la classe java.lang.Math (diversa dalla classe java.math). 
-Questa classe serve per fare calcoli matematici e ha due attributi:
-
-```java
-static double E		E di Eulero
-static double PI	Pi greca
-```
-
-### Consta di 31 metodi che rappresentano: le funzioni matematiche di 
-* 	valore assoluto, 
-* 	tangente, 
-* 	logaritmo, 
-* 	potenza, 
-* 	massimo, 
-* 	minimo, 
-* 	seno, 
-* 	coseno, 
-* 	esponenziale, radice quadrata
-*   arrotondamento classico, per eccesso e per difetto
-*   generazione di numeri casuali
-
-
-
-
-## Classe StringBuffer
-
-### Un oggetto String
-* NON è modificabile
-* Una volta creato non possiamo aggiungere, eliminare, modificare caratteri (i metodi visti creano nuove stringhe)
-* Tale restrizione è dovuta a ragioni di efficienza
-
-### Le considerazione precedenti non sono vere per la classe StringBuffer
-
-### Esempio
-StringBuffer myStringBuffer = new
-stringBuffer ("stringa modificabile");
-myStringBuffer.setCharAt (8, ‘M');
-// Trasforma in "stringa Modificabile"
-
-### Si usa raramente
-
-### Un oggetto StringBuffer non può essere utilizzato per operazioni di I/O
-System.out.println
-(myStringBuffer.toString());
-
-### Metodi:
-* Aggiunta di caratteri 
-myStringBuffer.append ("aggiunta");
-* insert
-* delete
-* reverse
-
-## Classe Character
-
-### La classe involucro Character si trova in java.lang
-
-### Include metodi statici per verificare le proprietà di un carattere
-
-### Esempio
-String s = "Stringa Generica."
-char c = s.charAt (0);
-... Character.isUpperCase(c) ... // true
-... Character.isDigit(c) ...
-// false
-...
-
-### Predicati vari
-* boolean isLetter (char c)
-* boolean isDigit (char c)
-* boolean isLetterOrDigit (char c)
-* boolean isSpaceChar (char c)
-* boolean isLowerCase (char c)
-* boolean isUpperCase (char c)
-
-### Trasformazioni varie
-
-* char toUpperCase (char c)
-* char toLowerCase (char c)
+* Classe String
+* Classi wrapper
+* Classe Math

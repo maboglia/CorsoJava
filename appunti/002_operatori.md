@@ -2,21 +2,79 @@
 
 aritmetici, relazionali, di assegnazione 
 
-* Aritmetici: + - * / %
-* Relazionali: == != > < >= <=
-* Bitwise (interi): & | ^ << >> ~
-* Di assegnazione: = += -= *= /= &= |= ^=
-* Di assegnazione/incremento: ++ -- %=
+## Tabelle riassuntive: tipi di dato e operatori 
+
+**Primitive Data Types**
+
+ | type    | bits       |
+ | ------- | ---------- |
+ | byte    | 8 bits     |
+ | short   | 16 bits    |
+ | int     | 32 bits    |
+ | long    | 64 bits    |
+ | float   | 32 bits    |
+ | double  | 64 bits    |
+ | char    | 16 bits    |
+ | boolean | true/false |
 
 **I caratteri sono considerati interi**
 
+**Assignment Operators**
+* Di assegnazione: = += -= *= /= &= |= ^=
+* Di assegnazione/incremento: ++ -- %=
+
+| Operatore | Significato               |
+| --------- | ------------------------- |
+| \=        | assignment                |
+| +=        | addition assignment       |
+| \-=       | subtraction assignment    |
+| \*=       | multiplication assignment |
+| /=        | division assignment       |
+| %=        | remainder assignment      |
+
+**Arithmetic Operators**
+* Aritmetici: + - * / %
+
+| Operatore | Significato    |
+| --------- | -------------- |
+| +         | addition       |
+| \-        | subtraction    |
+| \*        | multiplication |
+| /         | division       |
+| %         | remainder      |
+| ++var     | preincrement   |
+| \--var    | predecrement   |
+| var++     | postincrement  |
+| var--     | postdecrement  |
+
+**Relational Operators**
+* Relazionali: == != > < >= <=
+
+| Operatore | Significato              |
+| --------- | ------------------------ |
+| <         | less than                |
+| <=        | less than or equal to    |
+| \>        | greater than             |
+| \>=       | greater than or equal to |
+| \==       | equal to                 |
+| !=        | not equal                |
+
+
+
 ### Operatori per Booleani
 
-&& (AND) 
-|| (OR) 
-! (NOT)
 
-### Attenzione:
+**Logical Operators**
+* Bitwise (interi): & | ^ << >> ~
+
+| Operatore | Significato       |
+| --------- | ----------------- |
+| &&        | short circuit AND |
+| \|\|      | short circuit OR  |
+| !         | NOT               |
+| ^         | exclusive OR      |
+
+#### Attenzione:
 
 * Gli operatori logici agiscono solo su booleani
   * Un intero NON viene considerato un booleano
@@ -46,5 +104,3 @@ aritmetici, relazionali, di assegnazione
 Esempio
 
 * `z = Math.sin (x) – Math.PI / Math.sqrt(y)`
-
-

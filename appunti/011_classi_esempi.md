@@ -29,7 +29,7 @@ class <nomeClasse) {
 
 ```java
 class DataOnly {
-boolena b;
+boolean b;
 char c;
 int i;
 float f;
@@ -402,10 +402,11 @@ Automobile.numeroRuote;
 class HelloWorld {
 public static void main (String args[]) {
 System.out.println("Hello World!");
-}
-}
+
+//p.es  cos(x): metodo static della classe Math, ritorna un double
 double y = Math.cos(x);
-// cos metodo static
+}
+}
 ```
 
 
