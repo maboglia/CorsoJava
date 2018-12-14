@@ -1,9 +1,45 @@
 # Package java.lang
 * Il package java.lang è il package più importante dell’API di Java, in quanto contiene moltissime classi e interfacce fondamentali per la programmazione Java, tanto che questo package viene importato in automatico in tutti i programmi.
-* Oltre alle classe Thread e all’interfaccia Runnable questo package contiene classi come 
-* String, 
-* Object 
-* System.
+* Object
+
+* System
+
+* Boolean
+* Byte
+* Character
+* Double
+* Float
+* Integer
+* Long
+* Short
+
+* String 
+* 
+* Math
+
+* Class
+* ClassLoader
+* ClassValue
+* Compiler
+* Enum
+* InheritableThreadLocal
+* Number
+* Package
+* Process
+* ProcessBuilder
+* ProcessBuilder.Redirect
+* Runtime
+* RuntimePermission
+* SecurityManager
+* StackTraceElement
+* StrictMath
+* StringBuffer
+* StringBuilder
+* Thread
+* ThreadGroup
+* ThreadLocal
+* Throwable
+* Void
 
 
 ## Classe System
@@ -53,14 +89,14 @@ Per esempio, potremmo ottenere la versione di Java che si sta usando mediante il
 
 System.out.print("Versione Java Runtime Environment (JRE): ");
 System.out.println(System.getProperty("java.version"));
-    
+* 
 System.out.print("Directory di installazione Java: ");
 System.out.println(System.getProperty("java.home"));
 ```
 Oppure si potrebbe impostare una nuova proprietà mediante il codice:
 ```java
 
-System.setProperty("Claudio.cognome", "De Sio");
+System.setProperty("User.lastName", "Belushi");
 ```
 Un elenco con tutte le properties di sistema è riportato in basso.
 

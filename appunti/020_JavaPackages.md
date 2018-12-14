@@ -396,15 +396,12 @@ work the same on all platforms.
 * javax.swing.border Provides classes and interface for drawing
 specialized borders around a Swing component.
 
-* javax.swing.colorch
-ooser Contains classes and interfaces used by the
-JColorChooser component.
+* javax.swing.colorchooser Contains classes and interfaces used by the JColorChooser component.
 
 * javax.swing.event Provides for events fired by Swing components.
 
-* javax.swing.filechoo Contains classes and interfaces used by the
-JFileChooser component.
-ser
+* javax.swing.filechooser Contains classes and interfaces used by the JFileChooser component.
+
 
 * javax.swing.plaf
 Provides one interface and many abstract classes
