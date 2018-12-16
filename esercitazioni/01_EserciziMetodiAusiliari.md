@@ -31,3 +31,138 @@ Scrivere un programma Concatena che chiede all'utente di inserire tre singole pa
 Per esempio, se l'utente inserisce "gatto", "cane" e "topo" il programma stamperà gatto*cane*topo.
 
 La concatenazione delle tre parole dovrà essere fatta utilizzando un metodo ausiliario che prende due stringhe e restituisce la stringa ottenuta concatenando la prima parola ricevuta, un asterisco e la seconda parola ricevuta.
+
+
+## Esercizio 11
+Scope
+Provare ad eseguire il programma su carta e,
+successivamente, verificare la risposta eseguendo
+il programma su calcolatore:
+
+class Nascoste {
+  static int x,y; //Def. var. globali
+
+  static void f() {
+    int x;
+    x = 1;  // Locale
+    y = 1;  // Globale
+    System.out.println(x);
+    System.out.println(y);
+  }
+
+  public static void main (String[] args) {
+    x = 0; // Globale
+    y = 0; // Globale
+    f();
+    System.out.println(x);
+    System.out.println(y);
+  }
+}
+
+## Esercizio 12
+Lifetime
+Provare ad eseguire il programma su carta e,
+successivamente, verificare la risposta eseguendo
+il programma su calcolatore:
+
+class Automatiche {
+
+  static void f() {
+    int i = 0;
+    i++;
+    System.out.println(i);
+  }
+
+  public static void main (String[] args) {
+    f();
+    f();
+  }
+}
+
+## Esercizio 13
+Che cosa visualizza il programma seguente?
+Provare ad eseguire il programma su carta e,
+successivamente, verificare la risposta
+eseguendo il programma su calcolatore:
+
+class EsercizioScope1 {
+
+  static int x, y;
+
+  static int metodo1(int x) {
+    x = 1;
+    y = 1;
+    System.out.println("metodo1 " + x + " " + y);
+    return x + y;
+  }
+
+  static void metodo2() {
+    int y;
+    x = 2; 
+    y = metodo1(x);
+    System.out.println("metodo2 " + x + " " + y);
+  }
+
+  public static void main (String[] args) {
+    x = 0;
+    y = 0;
+    metodo2();
+    System.out.println("main " + x + " " + y);
+  }
+}
+
+## Esercizio 14
+Che cosa visualizza il programma seguente?
+Provare ad eseguire il programma su carta e,
+successivamente, verificare la risposta
+eseguendo il programma su calcolatore:
+
+class EsercizioScope2 {
+
+  static int x, y;
+
+  static int metodo1(int x) {
+    y = ++x;
+    System.out.println("metodo1 " + x + " " + y);
+    return x + y;
+  }
+
+  static void metodo2() {
+    int y = 2;
+    y = metodo1(y);
+    x = y++; 
+    System.out.println("metodo2 " + x + " " + y);
+  }
+
+  public static void main (String[] args) {
+    x = 0;
+    y = 0;
+    metodo2();
+    System.out.println("main " + x + " " + y);
+  }
+}
+
+## Esercizio 15
+Overloading
+Che cosa visualizza il programma seguente?
+Provare ad eseguire il programma su carta e,
+successivamente, verificare la risposta
+eseguendo il programma su calcolatore:
+
+class Overloading {
+
+  static int quarta (int x) {
+    return x * x * x * x;
+  }
+
+  static double quarta (double x) {
+    return x * x * x * x;
+  }
+
+  public static void main (String[] args) {
+    int a = 3; 
+    double b = 3.7;
+    System.out.println(quarta(a));
+    System.out.println(quarta(b));
+  }
+}

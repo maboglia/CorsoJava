@@ -424,3 +424,56 @@ in grado di ignorarla e passare a quella successiva.
 In caso di errori di IO il metodo lancia una IOException.
 
 ---
+
+Esercizi:
+Quali classi? Quali attributi e metodi per ciascuna classe?
+
+
+## Es. 1) Problema: Gioco dei Dadi
+Simulare un gioco di dadi, vince chi lancia il numero più alto.
+Ci sono due giocatori, ognuno con il suo dado che lanciano a turno.
+Il vincitore vince 1.00 €, il perdente lo perde.
+
+
+## Es. 2) Problema: Conti Correnti
+Simulare un Conto Corrente Generico. Ogni conto corrente ha un saldo su cui è
+possibile: prelevare, depositare, verificarne la disponibilità.
+Oltre ad un conto corrente generico ad un utente possono anche essere assegnati altri
+due tipi di conti:
+– Conto Corrente con Interessi:
+oltre al versamento normale vi è la possibilità di un versamento con
+interessi; ci deve quindi essere la possibilità di stabilire un tasso di interesse
+e ci deve essere una nuova operazione di versamento con interesse, in cui la
+quantità di soldi versata viene incrementata del 3%.
+– Conto Corrente con Spese:
+oltre al versamento normale vi è la possibilità di un versamento con spese,
+ovvero ad ogni operazione di prelievo vi è una spesa di 1€.
+
+
+## Es. 3) Problema: Biblioteca Illegale
+Simulare una biblioteca illegale composta da libri fotocopiati.
+Per ogni libro è indicato il numero di pagine, un editore, un autore ed un genere.
+Ho due tipologie di libri: libri fotocopiati a colori e libri fotocopiati in B/N.
+Per ogni tipologia di libro ho il prezzo di ogni pagina; deve inoltre essere possibile
+calcolare il prezzo di un tot di pagine ed il prezzo totale del libro.
+Per ogni editore è nota solo la ragione sociale.
+Per ogni autore ho semplicemente nome e cognome.
+Per ogni genere ho il nome ed una breve descrizione.
+Ho poi una fotocopiatrice di cui conosco il numero di fogli a disposizione ed il
+guadagno che mi produce fotocopiando i libri.
+Tale fotocopiatrice quindi, indicato un libro ed il numero di pagine da fotocopiare,
+decrementa il numero di fogli a disposizione ed incrementa l'indicatore dei miei
+guadagni.
+Vi è infine la possibilità di controllare se sono finiti i fogli ed in tal caso caricarne
+altri.
+
+## Es. 4) Problema: Centro d'Assistenza
+Simulare un centro d'assistenza per auto.
+Tale centro ha un nome ed un proprietario.
+E' composto da un meccanico (che ripara l'auto), da un carrozziere (che la rivernicia),
+da un autolavaggio (che la lava).
+Quando da assistenza all'auto verifica se questa è da riparare, riverniciare o lavare ed
+affida il lavoro rispettivamente al meccanico (che la ripara), al carrozziere (che la
+rivernicia) o all'autolavaggio (che la lava).
+Per ogni auto conosco il nome del modello e posso verificare se è rotta, con la
+vernice rovinata o se è sporca.

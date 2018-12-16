@@ -89,6 +89,30 @@ L’intero procedimento (chiedere quanti caratteri voglia inserire, leggere i ca
 
 Risolvere questo esercizio senza usare array.
 
+## Esercizio  1
+Una classe di 10 studenti ha sostenuto un esame.
+I voti sono espressi con lettere: 'O' = ottimo
+(corrispondente al 10), 'B' = buono (8),
+'S' = sufficiente (6), 'I' = insufficiente (4).
+Scrivere un  programma che consenta il calcolo
+della media aritmetica dei voti di tale esame.
+Usare System.in.read() per le operazioni di
+input.
+
+## Esercizio  2
+Scrivere un programma per stampare 44 caratteri
+(inseriti da tastiera) in fila per 6 con resto
+di 2.
+Suggerimento: la condizione per troncare in file
+e' if (i % (44 / 6) == 0)
+
+## Esercizio  3
+Scrivere un programma che stampi 10 caratteri
+(letti da tastiera) ed i relativi codici ASCII.
+
+## Esercizio  4
+Scrivere un programma che inverta un array
+precaricato.
 
 
 
