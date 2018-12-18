@@ -49,25 +49,6 @@
 true
 false
 
-## Classi "Wrapper" per tipi Primitivi
-
-* Se si vogliono trattare anche i dati primitivi come oggetti si possono utilizzare le classi "wrapper"
-* Un oggetto di una classe "wrapper" incorpora un dato primitivo e fornisce metodi per operare su di esso
-* Le classi wrapper dei tipi primitivi sono definite nel package java.lang
-
-### Corrispondenza
-
-| Tipo Primitivo | ClasseWrapper |
-| -------------- | ------------- |
-| boolean        | Boolean       |
-| char           | Character     |
-| byte           | Byte          |
-| short          | Short         |
-| int            | Integer       |
-| long           | Long          |
-| float          | Float         |
-| double         | Double        |
-| void           | Void          |
 
 
 ## Esempi
