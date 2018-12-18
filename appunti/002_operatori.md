@@ -104,3 +104,18 @@ aritmetici, relazionali, di assegnazione
 Esempio
 
 * `z = Math.sin (x) – Math.PI / Math.sqrt(y)`
+
+## Caratteri speciali
+
+Literal|Represents
+---|---
+\n|New line
+\t|Horizontal tab
+\b|Backspace
+\r|Carriage return
+\f|Form feed
+\ \ |Backslash
+\\"|Double quote
+\ddd|Octal character
+\xdd|Hexadecimal character
+\udddd|Unicode character
