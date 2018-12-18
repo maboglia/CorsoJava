@@ -109,13 +109,13 @@ Esempio
 
 Literal|Represents
 ---|---
-\n|New line
-\t|Horizontal tab
-\b|Backspace
-\r|Carriage return
-\f|Form feed
-\ \ |Backslash
-\\"|Double quote
-\ddd|Octal character
-\xdd|Hexadecimal character
-\udddd|Unicode character
+`\n`|New line
+`\t`|Horizontal tab
+`\b`|Backspace
+`\r`|Carriage return
+`\f`|Form feed
+`\\` |Backslash
+`\"`|Double quote
+`\ddd`|Octal character
+`\xdd`|Hexadecimal character
+`\udddd`|Unicode character
