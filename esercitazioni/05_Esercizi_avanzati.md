@@ -1,5 +1,40 @@
 # Esercitazioni Java - Raccolta tracce d'esame
 
+
+##    Esercizio 2: 
+
+Progettare e realizzare una classe Java CassaCambioDollari, che rappresenta casse automatiche che consentono di cambiare dollari in euro. 
+
+
+Delle casse sono d'interesse le seguenti funzionalità:
+* cassaVuota: crea una cassa contenete 0 euro come scorta e con un tasso di cambio euro/dollaro pari a 0;
+* quantiEuro: restituisce la quantità di euro presenti nella scorta della cassa;
+* mettiEuro: aggiunge q euro nella cassa, dove q è un reale;
+* fissaCambio: fissa il tasso di cambio euro/dollaro della cassa;
+* qualeCambio: restituisce il tasso di cambio praticato dalla cassa;
+* cambia: prende come parametro una quantità di dollari (un reale) e restituisce la quantità di euro (un reale) corrispondente secondo il proprio tasso e aggiornando opportunamente la propria scorta. 
+* 
+* Se la quantità di euro nella scorta è insufficiente non effettua il cambio (restituisce 0) e stampa il messaggio "Scorta insufficiente". 
+    
+    
+Il tasso di cambio euro/dollaro si definisce come numero di euro che possono essere acquistati con un dollaro.
+
+
+## Esercizio 3
+
+Progettare e realizzare una classe Java Termometro, che rappresenta un termometro per la misurazione della temperatura d'ambiente. 
+
+Dei termometri sono d'interesse le seguenti funzionalità:
+* Creazione di un oggetto Termometro avente come temperatura misurata 0;
+* Misurazione della temperatura, che memorizza nell'oggetto la temperatura data (misurata in gradi Celsius);
+* Restituzione della temperatura misurata (in gradi Celsius);
+* Restituzione della temperatura misurata in gradi Fahrenheit. 
+* Si usi la formula di conversione: f = c * 9/5 + 32;
+* Restituzione del tipo di tempertura: "molto caldo" (t >45), "caldo" (45 <=t > 35), "gradevole" (35 <= t >18), "freddo" (18 <= t > 0), "molto freddo" (<= 0);
+* Restituzione di una stringa che rappresenta le informazioni associate al termometro: temperatura in Celsius, temperatura in Fahrenheit e tipo della temperature ("molto caldo", "caldo", ecc.). 
+* Le temperature devono essere rappresentate come interi.
+
+
 ## Gestione di una biblioteca
 
 Una biblioteca ha dato l'incarico di implementare un software per la gestione

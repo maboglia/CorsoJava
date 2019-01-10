@@ -7,6 +7,26 @@
 * Gli oggetti che rappresentano i tipi primitivi sono detti classi wrapper (in italiano "involucro") che sono classi che fanno da contenitore a un tipo di dato primitivo, astraendo proprio il concetto di tipo. 
 __N.B. Tutte le classi wrapper sono classi final per cui non possono essere estese.__
 
+## Classi "Wrapper" per tipi Primitivi
+
+* Se si vogliono trattare anche i dati primitivi come oggetti si possono utilizzare le classi "wrapper"
+* Un oggetto di una classe "wrapper" incorpora un dato primitivo e fornisce metodi per operare su di esso
+* Le classi wrapper dei tipi primitivi sono definite nel package java.lang
+
+### Corrispondenza
+
+| Tipo Primitivo | ClasseWrapper |
+| -------------- | ------------- |
+| boolean        | Boolean       |
+| char           | Character     |
+| byte           | Byte          |
+| short          | Short         |
+| int            | Integer       |
+| long           | Long          |
+| float          | Float         |
+| double         | Double        |
+| void           | Void          |
+
 * In Java, ogni tipo primitivo possiede una corrispondente classe wrapper: Byte, Short, Integer, Long, Float, Double, Boolean, Character. 
 * Ciascuna di queste classi permette di manipolare i valori di tipo primitivo come se fossero valori di oggetti. 
 * Spesso abbiamo a che fare con tipi primitivi (int, double, boolean, …) che sono tipi semplici e, quindi, non possiedono metodi. 
