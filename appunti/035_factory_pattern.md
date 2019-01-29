@@ -1,3 +1,7 @@
+# factory pattern
+
+![factory](img/dao_pattern_uml_diagram.jpeg)
+
 Step 1
 
 Create an interface.
