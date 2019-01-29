@@ -1,23 +1,24 @@
 # Dizionari e mappe
 
-Un dizionario è una raccolta di coppie chiave-valore. La classe astratta Dictionary definisce l'uso dei dizionari nel pacchetto java.util.
+* Un dizionario è una raccolta di coppie chiave-valore. 
+* La classe astratta Dictionary definisce l'uso dei dizionari nel pacchetto java.util.
+* I dizionari hanno diversi tipi di implementazioni (Hashtable, Properties, ...).
 
-I dizionari hanno diversi tipi di implementazioni (Hashtable, Properties, ...).
-Metodi:
-..|..
+
+Metodo|Descrizione
 ---|---
 Enumeration elements()|Restituisce l'enumerazione dei valori presenti nel dizionario.
-Object get(Object key)	|Restituisce il valore dell'elemento con chiave key, o null se tale elemento non fa parte dell'insieme.
+Object get(Object key)|Restituisce il valore dell'elemento con chiave key, o null se tale elemento non fa parte dell'insieme.
 boolean isEmpty|Restituisce true se l'insieme è vuoto.
 Enumeration keys()|Restituisce l'enumerazione delle chiavi presenti nel dizionario.
 Object put(Object key, Object value)|Nel caso non esista un elemento con chiave key, lo crea con valore value. In caso contrario, ne aggiorna semplicemente il valore. In caso di aggiornamento, il vecchio valore viene restituito, altrimenti sarà ritornato null.
 Object remove(Object key)|Rimuove dall'insieme l'elemento con chiave key. Se l'elemento non esiste, restituisce null, altrimenti ritorna il suo valore.
-int size()|	Restituisce il numero degli elementi presenti nell'insieme.
+int size()|Restituisce il numero degli elementi presenti nell'insieme.
 
 
-Properties deriva da Hashtable e definisce nuovi metodi:
+### Properties deriva da Hashtable e definisce nuovi metodi:
 
-..|..
+Metodo|Descrizione
 ---|---
 String getProperty(String key)|Restituisce il valore dalla proprietà chiamata key, o null se tale proprietà non esiste.
 String getProperty(String key, String defaultValue)|Restituisce il valore dalla proprietà chiamata key, o defaultValue se tale proprietà non esiste.
