@@ -11,9 +11,9 @@ L'impiego di JDBC è semplice, e solitamente si articola attraverso quattro pass
 
 4\. I risultati ottenuti possono essere manipolati sfruttando le classi JDBC e del codice Java studiato per il compito.
 
-```php
 
 Si realizzi la tabella che sarà impiegata per il test, sfruttando il seguente codice SQL:
+```java
 CREATE TABLE Persone (
 Nome VARCHAR (50) NOT NULL,
 Cognome VARCHAR (50) NOT NULL,
@@ -22,7 +22,7 @@ Indirizzo VARCHAR (50) NOT NULL
 
 ```
 
-```php
+```java
 
 import java.sql.*;
 public class JDBCTest1 {
@@ -81,7 +81,7 @@ connettersi ad un database
 
 Per connettersi ad un database è prima di tutto necessario caricare in memoria il driver corrispondente, affinché questo sia già disponibile nel momento in cui si richiederanno ulteriori servizi. Da JDBC 4 non è più necessario. La sintassi per effettuare l'operazione è la seguente:
 
-```php
+```java
 
 Class.forName(stringa_driver);
 
@@ -92,7 +92,7 @@ java.sql.Connection
 
 A questo punto entrano in gioco l'interfaccia java.sql.Connection e la classe java.sql.DriverManager. La prima descrive le funzionalità necessarie per entrare in comunicazione con uno specifico database, mentre DriverManager offre una serie di metodi statici, utili per stabilire qualsiasi tipo di connessione consentita dai driver JDBC già caricati in memoria. Il modello generalmente osservato dai programmatori Java è il seguente:
 
-```php
+```java
 
 	Connection conn = DriverManager.getConnection(url_database);
 
@@ -146,7 +146,7 @@ Ad esempio: String stringa = resultSet.getString("Nome"); Il seguente elenco rip
 
 Il seguente codice aggiorna la tabella Persone del database in uso, creando automaticamente un nuovo record.
 
-```php
+```java
 
 import java.io.*;
 import java.sql.*;
@@ -288,7 +288,7 @@ Il codice SQL, con PreparedStatement, va specificato al momento della creazione 
 
 L'esempio del paragrafo precedente può allora essere riscritto alla seguente maniera:
 
-```php
+```java
 
 
 import java.io.*;
@@ -391,7 +391,7 @@ Si crei un database inizialmente vuoto, quindi si inserisca al suo interno una t
 *   AnnoNascita, di tipo Numerico.
 Si popoli la tabella con qualche record arbitrario
 
-```php
+```java
 
 import java.sql.*;
 public class JDBCTest6 {
@@ -449,7 +449,7 @@ connection.close();
 
 ```
 
-```php
+```java
 
 import java.sql.*;
 public class JDBCTest7 {

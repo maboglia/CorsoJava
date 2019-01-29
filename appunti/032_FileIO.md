@@ -243,6 +243,7 @@ Nota: fare attenzione a non chiamare close() su un canale BufferedReader non ass
 Scrivere una classe pubblica LetturaFile con un metodo pubblico void stampaFile(String s) che, dato il nome di un file s, ne stampa a video tutte le righe, oppure lancia un'eccezione non verificata se si incontrano errori nella lettura.
 
 LetturaFile.java
+```java
 import java.io.*;
 
 public class LetturaFile {
@@ -272,14 +273,14 @@ public class LetturaFile {
         }
     }
 }
-
+```
 Notare che FileNotFoundException è una sottoclasse di IOException e quindi togliendo il catch(FileNotFoundException e) il programma sarebbe comunque corretto, solo che darebbe lo stesso errore sia in caso di errore di apertura file (new FileReader(...)) che di lettura file (b.readLine()).
 
 Programma di prova:
 
-    public static void main(String[] args){
+    `public static void main(String[] args){
         stampaFile("LetturaFile.java");
-    }
+    }`
 
 
 ## Esempio 2

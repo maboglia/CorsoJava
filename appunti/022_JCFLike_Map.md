@@ -1,17 +1,21 @@
 # Implementazione di Map e SortedMap
-L’interfaccia Map rappresenta un insieme di elementi, ad ognuno dei quali viene associata una chiave univoca. Non sono permessi elementi duplicati e null.
+
+L’interfaccia Map rappresenta un insieme di elementi, ad ognuno dei quali viene associata una chiave univoca. 
+
+Non sono permessi elementi duplicati e null.
 
 E’ preferibile usare le mappe piuttosto che i set in quanto è possibile ricercare facilmente un oggetto all’interno di una mappa a partire dalla sua chiave univoca ed anche perché è possibile accedere agli oggetti in modo veloce.
 
 Le implementazioni di Map sono HashTable e HashMap.
+
 Un’implementazione di SortedMap è TreeMap. 
 
 Entrambe non ammettono elementi duplicati.
 
-HashMap risulta più performante di HashTable, in quanto quest’ultima è sincronizzata di default mentre HashMap non lo è (i metodi di accesso agli oggetti non sono Synchronized)
+HashMap risulta più performante di HashTable, in quanto quest’ultima è sincronizzata di default mentre HashMap non lo è 
+(i metodi di accesso agli oggetti non sono Synchronized)
 
 HashMap risulta più performante di TreeMap, in quanto quest’ultima gestisce l’ordinamento
-
 
 ## I metodi delle Map sono i seguenti:
 
@@ -78,3 +82,40 @@ while (it.hasNext()) {
 Per iterare sulle mappe occorre utilizzare, oltre al solito iterator, anche:
 * la classe innestata __Map.Entry__, la quale astrae una coppia di tipo chiave-valore che rappresenta un elemento di una mappa
 * il metodo entrySet() restituisce un insieme ordinato (in base alle chiavi) degli elementi della mappa
+
+
+Funzionalità di una Map
+  * Elimina ogni elemento della map
+void clear()
+  * Aggiunge la coppia key-value alla Map
+Object put(Object key, Object value)
+  * Rimuove elementi singoli
+Object remove (Object key)
+  * Restituisce elementi data la chiave
+Object get (Object key)
+  * Controlla l'esistenza di una chiave oppure di un
+valore
+boolean containsKey (Object key)
+boolean containsValue (Object value)
+  * Restituisce il numero elementi
+int size()
+  * Controlla esistano elementi nella map
+boolean isEmpty()
+13
+### Funzionalità di un SortedMap (TreeMap)
+  * Produce meccanismo di confronto
+Comparator comparator ()
+  * Produce la chiave più piccola
+Object firstKey ()
+  * Produce la chiave più grande
+Object lastKey ()
+  * Crea una sotto-map dalla map completa
+estraendono una porzione
+SortedMap subMap (<from>, <to>)
+  * Crea una sotto-map con elementi minori di
+quello indicato
+SortedMap headMap (<to>)
+  * Crea una sotto-map con elementi maggiori o
+uguali a quello indicato
+SortedMap tailMap (<from>)
+
