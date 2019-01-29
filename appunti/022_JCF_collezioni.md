@@ -210,33 +210,7 @@ dell'implementazione LinkedList
 successive modifiche, e.g.
 List <x> = new ArrayList ();
 10
-### Funzionalità di una LinkedList
-  * Aggiunge in prima posizione
-```void addFirst (Object o)
-  * Aggiunge in ultima posizione
-void addLast (Object o)
-  * Restituisce l'elemento di posizione index
-Object get(int index)
-  * Estrae il primo elemento della lista
-Object getFirst()
-  * Estrae l'ultimo elemento della lista
-Object getLast()
-  * Restituisce l'indice dell'ultimo elemento uguale a
-c
-int lastIndexOf (Object c)
-  * Eliminano e restituiscono il primo (l'ultimo)
-elemento
-Object removeFirst ()
-Object removeLast ()
 
-```java
-edList ll = new LinkedList();
-// Crea LikedList
-ll.add("10");
-ll.add(new Integer(11);
-ll.addLast(new Integer(13));
-ll.addFirst(new Integer(20));
-11
 ### Funzionalità di un SortedSet (TreeSet)
   * Estrae l'elemento più piccolo
 Object first()
@@ -283,40 +257,7 @@ v.get(0);
 // rende 20
 ```v.add(11, new Integer(30));
 // exception (out of bounds)
-Funzionalità di una Map
-  * Elimina ogni elemento della map
-void clear()
-  * Aggiunge la coppia key-value alla Map
-Object put(Object key, Object value)
-  * Rimuove elementi singoli
-Object remove (Object key)
-  * Restituisce elementi data la chiave
-Object get (Object key)
-  * Controlla l'esistenza di una chiave oppure di un
-valore
-boolean containsKey (Object key)
-boolean containsValue (Object value)
-  * Restituisce il numero elementi
-int size()
-  * Controlla esistano elementi nella map
-boolean isEmpty()
-13
-### Funzionalità di un SortedMap (TreeMap)
-  * Produce meccanismo di confronto
-Comparator comparator ()
-  * Produce la chiave più piccola
-Object firstKey ()
-  * Produce la chiave più grande
-Object lastKey ()
-  * Crea una sotto-map dalla map completa
-estraendono una porzione
-SortedMap subMap (<from>, <to>)
-  * Crea una sotto-map con elementi minori di
-quello indicato
-SortedMap headMap (<to>)
-  * Crea una sotto-map con elementi maggiori o
-uguali a quello indicato
-SortedMap tailMap (<from>)
+
 Iterator
 14Iterator
 
@@ -362,17 +303,8 @@ ll.add ("10");
 while (il.hasNext()) {
 // agire su il.next()
 }
-Prestazioni & Algoritmi
-16Vector/ArrayList vs. LinkedList
+```
 
-### Tempo d'accesso a elemento i-esimo
-* Vector: costante
-```* Linked List: lineare
-
-### Tempo di inserimento in testa e di
-cancellazione in mezzo
-* Vector: lineare
-* Linked List: costante
 HashMap
 
 ### Get e set a tempo costante (se no

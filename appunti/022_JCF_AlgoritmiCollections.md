@@ -84,11 +84,9 @@ public int compareTo(Persona p) {
 ```
 Sono stati usati due metodi per ordinare la lista:
 
-Collections.sort(persone) che riceve in input una List di oggetti che implementano l’interfaccia Comparable. 
+`Collections.sort(persone)` che riceve in input una List di oggetti che implementano l’interfaccia Comparable. 
 Nell’esempio gli elementi vengono ordinati in base all’età
 
-Collections.sort(persone, new CognomeComparator()) che riceve in input una List di oggetti e un’istanza di una classe che implementa l’interfaccia Comparator. 
+`Collections.sort(persone, new CognomeComparator())` che riceve in input una List di oggetti e un’istanza di una classe che implementa l’interfaccia Comparator. 
 
 Nell’esempio gli elementi vengono ordinati in base al cognome. Naturalmente è possibile creare diversi Comparator che permettono di ordinare la lista in altrettanti modi
-
-
