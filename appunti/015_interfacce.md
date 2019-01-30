@@ -1,7 +1,7 @@
 # Interfacce
 
 ### Un'interfaccia è una classe
-completamente astratta , cioè del tutto priva della parte di implementazione
+completamente astratta, cioè del tutto priva della parte di implementazione
 
 * Tutti i metodi sono astratti
 * Non vi sono attributi
@@ -23,7 +23,7 @@ cosa dovrebbero fare le classi senza specificare come farlo.
 Quindi un'interfaccia non è una classe ma un insieme di
 requisiti per le classi che si vogliono conformare ad essa.
 
-## SINTASSI:
+## Sintassi:
 ```java
 public interface NomeInterfaccia
 {
@@ -31,19 +31,13 @@ public interface NomeInterfaccia
 }
 ```
 
-SI UTILIZZA LA PAROLA
-CHIAVE interface ANZICHÈ
-class
+Si utilizza la parola chiave interface anzichè class
 
-I METODI SONO IMPLICITAMENTE
-PUBBLICI E ASTRATTI, NON BISOGNA
-INDICARLO
+I metodi sono implicitamente pubblici e astratti, non bisogna indicarlo
 
-Se una classe decide di soddisfare i requisiti di
-un'interfaccia si dice che la classe implementa l'interfaccia.
+Se una classe decide di soddisfare i requisiti di un'interfaccia si dice che la classe implementa l'interfaccia.
 
-Per indicare che una classe implementa un'interfaccia
-si utilizza la seguente sintassi:
+Per indicare che una classe implementa un'interfaccia si utilizza la seguente sintassi:
 
 ```java
 public class NomeClasse implements NomeInterfaccia
@@ -52,28 +46,22 @@ public class NomeClasse implements NomeInterfaccia
 }
 ```
 
-Tale classe deve implementare tutti i metodi elencati
-nell'interfaccia.
+Tale classe deve implementare tutti i metodi elencati nell'interfaccia.
 
 ### proprietà
-Le interfacce non sono classi; non si può utilizzare new
-per crearne oggetti.
+Le interfacce non sono classi; non si può utilizzare new per crearne oggetti.
 
-I metodi di un'interfaccia sono automaticamente public
-(quindi non è necessario scriverlo)
+I metodi di un'interfaccia sono automaticamente public (quindi non è necessario scriverlo)
 
-Gli attributi di un'interfaccia sono sempre public static final
+Gli attributi di un'interfaccia sono sempre public static final 
 (non è necessario scriverlo).
 
-Un'interfaccia con il nome NomeInterfaccia va salvata nel
-file NomeInterfaccia.java (come accade per le classi).
+Un'interfaccia con il nome NomeInterfaccia va salvata nel file NomeInterfaccia.java (come accade per le classi).
 
 ### ereditarietà multipla
-Abbiamo visto che una sottoclasse può estendere solo 1
-superclasse (non permettendo l'ereditarietà multipla)
+Una sottoclasse può estendere solo 1 superclasse (non permettendo l'ereditarietà multipla)
 
-Con le interfacce invece la situazione è diversa: una classe
-può implementare quante interfacce vuole.
+Con le interfacce invece la situazione è diversa: una classe può implementare quante interfacce vuole.
 
 ### variabili
 Posso dichiarare variabili del tipo dell'interfaccia e,

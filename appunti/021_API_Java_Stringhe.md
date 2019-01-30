@@ -1,3 +1,58 @@
+# String e StringBuilder
+
+* le classi String e StringBuilder del package java.lang
+* La classe String ha lo scopo di rappresentare stringhe (sequenze) di caratteri che non devono essere modificate dopo essere state costruite
+(oggetti immutabili)
+* La classe StringBuilder ha lo scopo di rappresentare stringhe (sequenze) di caratteri che possono essere modificate dopo essere state costruite 
+
+
+
+
+## Definizione di variabili
+
+* tipo nome; oppure
+* tipo nome1,..., nomeN ;
+* String nome;
+* StringBuilder risultato;
+* Dopo la definizione esiste solo il riferimento, non un oggetto di tipo nome, null, String !
+
+## null
+
+* Il valore speciale null è il valore iniziale di default per qualunque variabile di tipo strutturato.
+* indica che il riferimento è nullo e non c'e' nessun oggetto riferito
+* nome non è un oggetto di tipo String è solo un riferimento utilizzabile per accedere ad un oggetto String
+
+## Operatore new
+* L'operatore new NomeClasse crea un nuovo oggetto con le proprietà definite in NomeClasse (istanza dellaclasse) e ritorna il riferimento ad esso
+* L'operatore new dà luogo all’invocazione di un metodo costruttore passandogli gli argomenti necessari
+* Il costruttore invocato deve essere di una classe uguale o "compatibile" con la definizione della variabile
+* Ogni classe può avere più costruttori che si differenziano per la lista degli argomenti
+
+## Costruttori
+* La scelta del costruttore da invocare avviene tramite gli argomenti attuali che vengono passati
+
+* New di un oggetto String
+```java
+String saluto;
+saluto = new String("Ciao ciao");
+```
+* L'operatore new può essere usato al momento della definizione
+```java
+String saluto = new String("Ciao ciao");
+```
+* Solo per la classe String , in quanto di uso molto comune, Java offre la forma compatta
+```java
+String s = "Ciao ciao";
+```
+
+
+## Una particolarità di String
+
+* Usare esplicitamente new oppure la forma abbreviata per inizializzare un oggetto String non è esattamente la stessa cosa 
+* Se si usa esplicitamente new, la Java Virtual Machine crea oggetti distinti anche se di contenuto uguale 
+* Se non si usa esplicitamente new, la Java Virtual Machine evita di creare oggetti distinti ma dal contenuto uguale
+
+
 I più importanti metodi di cui sono dotati gli oggetti di tipo String.
 --------------------------------------------------------------------------------------
 Tipo restituito|Metodi e parametri|Descrizione
