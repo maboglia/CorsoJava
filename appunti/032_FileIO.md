@@ -2,13 +2,14 @@
 
 ## Package java.io
 Per eseguire l’elaborazione dei file in Java, è necessario importare il package java.io, che contiene le definizioni delle seguenti classi di flussi:
-una per l’input
+
 classe|descrizione
 ---|---
 classe Reader		| per input di caratteri da un file
 classe InputStream	| per input di byte da un file una per l’output
 classe Writer		| per output di caratteri verso un file
 classe OutputStream	| per output di byte verso un file
+
 ## Il flusso - Stream
 
 ## Character Stream
@@ -33,7 +34,7 @@ un int (da 0 a 255) che rappresenta il byte letto
 il valore -1 se il file è terminato
 
 
-## Classe IOException
+## IOException
 
 
 
@@ -174,7 +175,7 @@ public class PathDemo {
 
 L’altro elemento fondamentale di NIO 2.0 è la classe Files, che serve per compiere svariate operazioni sui file e sulle directory, come lettura, scrittura, spostamento, ecc. 
 
-Esistono tantissimi metodi di utilità in questa classe (oltre 55) anche se la maggior parte è abbastanza intuitiva.
+Esistono tantissimi metodi di utilità in questa classe.
 
 
 ## File di configurazione nella cartella WEB-INF

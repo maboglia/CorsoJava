@@ -79,3 +79,19 @@ int metodo1( ) {
 }
 NomeInterfacca a = new NomeClasse ( );
 ```
+
+## TIpi di interfacce
+
+* Normali
+* Single Abstract method - @FunctionalInterface
+* Marker
+
+Con java 1.8 le interfacce sono state modificate: è possibile implementare due tipi di metodi (!!!)
+
+  * default
+  * static
+
+## Lambda expressions
+Con le interfacce contententi un singolo metodo astratto, è possibile utilizzare le espressioni lambda
+
+Integer raddoppiato = (o) -> o * 2 ;

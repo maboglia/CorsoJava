@@ -3,22 +3,24 @@
 <!-- TOC -->
 
 - [Corso JSP](#corso-jsp)
-    - [Corso JSP - Le direttive](#corso-jsp---le-direttive)
-    - [Corso JSP - Le variabili](#corso-jsp---le-variabili)
-    - [oggetti impliciti](#oggetti-impliciti)
-    - [Ciclo di vita di una pagina JSP](#ciclo-di-vita-di-una-pagina-jsp)
-    - [Elementi di una pagina JSP](#elementi-di-una-pagina-jsp)
-    - [JDBC e interazione con database](#jdbc-e-interazione-con-database)
-    - [Uso avanzato](#uso-avanzato)
-    - [Corso JSP - argomenti](#corso-jsp---argomenti)
-        - [corso-jsp-argomenti](#corso-jsp-argomenti)
-    - [Corso JSP - jsp:forward](#corso-jsp---jsp-forward)
-    - [Corso JSP - Le dichiarazioni](#corso-jsp---le-dichiarazioni)
-    - [Corso JSP - Ciclo DO WHILE](#corso-jsp---ciclo-do-while)
-    - [Corso JSP - Funzione contatore accessi + esempio uso dichiarazioni e espressioni](#corso-jsp---funzione-contatore-accessi-esempio-uso-dichiarazioni-e-espressioni)
-    - [Corso JSP - Esempio JSTL Core](#corso-jsp---esempio-jstl-core)
-    - [Corso JSP - Esempio JSTL Functions](#corso-jsp---esempio-jstl-functions)
-    - [Corso JSP - Esempio Java Server Faces](#corso-jsp---esempio-java-server-faces)
+  - [Corso JSP - Le direttive](#corso-jsp---le-direttive)
+  - [Corso JSP - Le variabili](#corso-jsp---le-variabili)
+  - [oggetti impliciti](#oggetti-impliciti)
+  - [Ciclo di vita di una pagina JSP](#ciclo-di-vita-di-una-pagina-jsp)
+  - [Elementi di una pagina JSP](#elementi-di-una-pagina-jsp)
+  - [JDBC e interazione con database](#jdbc-e-interazione-con-database)
+  - [Uso avanzato](#uso-avanzato)
+  - [Corso JSP - argomenti](#corso-jsp---argomenti)
+    - [corso-jsp-argomenti](#corso-jsp-argomenti)
+  - [Lavorare con i database](#lavorare-con-i-database)
+  - [* Esercitazione guidata Java Server Faces](#esercitazione-guidata-java-server-faces)
+  - [Corso JSP - jsp:forward](#corso-jsp---jspforward)
+  - [Corso JSP - Le dichiarazioni](#corso-jsp---le-dichiarazioni)
+  - [Corso JSP - Ciclo DO WHILE](#corso-jsp---ciclo-do-while)
+  - [Corso JSP - Funzione contatore accessi + esempio uso dichiarazioni e espressioni](#corso-jsp---funzione-contatore-accessi--esempio-uso-dichiarazioni-e-espressioni)
+  - [Corso JSP - Esempio JSTL Core](#corso-jsp---esempio-jstl-core)
+  - [Corso JSP - Esempio JSTL Functions](#corso-jsp---esempio-jstl-functions)
+  - [Corso JSP - Esempio Java Server Faces](#corso-jsp---esempio-java-server-faces)
 
 <!-- /TOC -->
 
@@ -330,7 +332,7 @@ Primo approccio a JSP
 
 Elementi fondamentali di JSP - Sintassi e caratteristiche degli oggetti principali: scriptlet, azioni standard, servlet
 
-* Direttive <%@   (page | includi | taglib)
+* Direttive <%@   (page | include | taglib)
 * Codice Java <%  (dichiarazioni | java | espressioni)
 * jsp:action (include | forward | usebean | getproperty | setproperty)
 
@@ -346,7 +348,7 @@ Elementi fondamentali di JSP - Sintassi e caratteristiche degli oggetti principa
 
 -> Esercizio utilizzo di JavaBeans
 
-Lavorare con i database
+## Lavorare con i database
 
 * Correzione in aula dell'esercitazione e individuazione best practices.
 * Approfondimento ed esercizi con i JavaBeans. Introduzione database con JSP.

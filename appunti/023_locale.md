@@ -45,28 +45,40 @@ La classe Locale possiede, inoltre, alcuni metodi che restituiscono informazioni
 
 
 
-#CLASSE RESOURCEBUNDLE
+## CLASSE RESOURCEBUNDLE
 
 nomeResBundle = ResourceBundle.getBundle("nomeBundle", nomeLocale)
 
-Un ruolo molto importante nel processo di internazionalizzazione sono le risorse, cioè file di proprietà che fanno riferimento ad un ResourceBundle. Sono semplici file di testo che contengono i messaggi, label, bottoni, parole che cambiano da una lingua all'altra e possono essere tradotti anche da persone che non conoscono la programmazione in quanto non si lavora sul codice ma all'esterno dell'applicazione.
+Un ruolo molto importante nel processo di internazionalizzazione sono le risorse, cioè file di proprietà che fanno riferimento ad un ResourceBundle. 
+
+Sono semplici file di testo che contengono i messaggi, label, bottoni, parole che cambiano da una lingua all'altra e possono essere tradotti anche da persone che non conoscono la programmazione in quanto non si lavora sul codice ma all'esterno dell'applicazione.
+
 Queste risorse hanno un formato molto semplice, in quanto contengono praticamente coppie (Chiave : valore) dove:
-la chiave è una stringa
-il valore è la traduzione, cioè una stringa tradotta nella lingua del particolare Locale
+* la chiave è una stringa
+* il valore è la traduzione, cioè una stringa tradotta nella lingua del particolare Locale
+
 Per creare l'oggetto ResourceBundle bisogna invocare il metodo getBundle() passandogli come parametri il nome del bundle (cioè la risorsa) e il nome del locale.
-Il metodo getBundle() per prima cosa cerca il file bundle specificato nel costruttore (nell'esempio seguente  "mioBundle"), se non lo trova cerca i file di proprietà di default.
+
+Il metodo getBundle() per prima cosa cerca il file bundle specificato nel costruttore, se non lo trova cerca i file di proprietà di default.
+
 Per recuperare il testo memorizzato nel file di proprietà basta evocare il metodo getString() sull'oggetto ResourceBundle.
 
+```
 mioMessaggio = resourceBundle.getBundle("mioBundle", mioLocale);
 String testo = mioMessaggio.getString("header");
 System.out.println("testo");
+```
 
 La stringa che ritorna dall'esempio è quella che corrisponde alla chiave che abbiamo specificato e sarà nella lingua identificata dal Locale.
+
 Poiché nei file properties non variano le chiavi ma le corrispondenti traduzioni, si possono aggiungere altre risorse senza cambiare nulla nel codice.
 
 
-# ESEMPIO LOCALE E RESOURCEBUNDLE
-## file example.java: contiene il codice per la dichiarazione e la gestione del Locale e del ResourceBundle.
+## ESEMPIO LOCALE E RESOURCEBUNDLE
+
+### file example.java: 
+contiene il codice per la dichiarazione e la gestione del Locale e del ResourceBundle.
+
 ```java
 /* Example.java */
 
@@ -89,6 +101,7 @@ public class Example {
 	}
 }
 ```
+
 ## file properties.
 ```java
 /* MyBundle.properties */

@@ -1,12 +1,6 @@
 # Ereditarietà in Java
 
-* Definire il concetto di ereditarietà
-
-* Descrivere la forma nella qual possiamo creare una nuova classe in java estendendone una già esistente
-
-* Mostrare alcuni casi in cui l’ereditarietà può essere molto utile
-
-### Come riutilizzare il codice
+## Riutilizzare il codice
 
 * Uno dei grandi vantaggi della programmazione a oggetti è la facilità nel riutilizzare il codice
 
@@ -14,15 +8,15 @@
 
 * Per esempio immaginiamo di disporre di un sistema di georeferenziazione in cui la classe principale è
 
-Geopunto {attributi: longitudine, latitudine}
+```Geopunto {attributi: longitudine, latitudine}```
 
 * Dobbiamo modificare il sistema per aggiungere un nuovo attributo, l’altitudine
 
-a)Modifichiamo direttamente la classe Geopunto Errore
+a) Modifichiamo direttamente la classe Geopunto Errore
 
-b)Creiamo una nuova classe che erediti da Geopunto:
+b) Creiamo una nuova classe che erediti da Geopunto:
 
-NuovoGeopunto {Geopunto + attributo: altitudine}
+```NuovoGeopunto {Geopunto + attributo: altitudine}```
 
 ### Estendere la classe
 
@@ -43,3 +37,4 @@ NuovoGeopunto {Geopunto + attributo: altitudine}
 * Esiste una parte del codice comune a tutte quante, p.es Piva, indirizzo, SpedireLettera()
 
 * Crei una classe addizionale che raccolga il codice comune, es ParteCommerciale da cui ereditino le parti comuni
+

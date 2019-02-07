@@ -1,13 +1,48 @@
 # Eccezioni
-## Situazioni anomale a run-time (1)
+
+## Situazioni anomale a run-time
 
 * Java prevede un sofisticato utilizzo dei tipi (primitivi e classi) che consente di individuare molti errori al momento della compilazione del programma (prima dell'esecuzione vera e propria)
-* Ciò nonostante si possono verificare varie situazioni impreviste o anomale durante l'esecuzione del programma
-che possono causare l'interruzione del programma stesso 
+* Ciò nonostante si possono verificare varie situazioni impreviste o anomale durante l'esecuzione del programma che possono causare l'interruzione del programma stesso
 * Ad esempio:
   * Tentativi di accedere a posizioni di un array che sono fuori dai limiti
   * Errori aritmetici (divisione per zero, ...)
   * Errori di formato: (errore di input dell'utente)
+
+
+
+### Le eccezioni si dividono in
+**Checked** (o controllate) per le quali il compilatore richiede che ci sia un gestore
+
+* **Controllate**
+  * Istanze di RuntimeException o delle sue sottoclassi
+  * Il compilatore si assicura esplicitamente che quando un metodo solleva una'eccezione la tratti esplicitamente
+  * Questo può essere fatto mediante i costrutti try-catch o throws
+  * In caso contrario segnala un errore di compilazione
+  * Le eccezioni controllate vincolano il programmatore ad occuparsi della loro gestione
+  * Le eccezioni controllate possono rendere troppo pesante la scrittura del codice
+
+
+**Unchecked** (o non controllate) per le quali il gestore non è obbligatorio
+  * Per essere unchecked un'eccezione *deve essere una sottoclasse di **RuntimeException***, altrimenti è checked
+* **Non controllate**
+  * Sono tutte le altre eccezioni, ovvero istanze di Exception ma non di RuntimeException
+  * L'eccezione può non essere gestita esplicitamente dal codice
+  * Viene "passata" automaticamente da metodo chiamato a metodo chiamante
+
+
+### Esempi tipici di eccezioni checked:
+
+* le eccezioni che descrivono errori di input/output 
+  * lettura o scrittura su file, 
+  * comunicazione via rete, ecc...
+* le eccezioni definite dal programmatore
+
+
+## La gerarchia delle eccezioni
+
+La classe **Exception** descrive un'eccezione generica, situazioni anomale più specifiche sono descritte dalle sottoclassi di Exception
+                                                          
 
 
 Le RuntimeException comprese nel pacchetto java.lang
@@ -30,66 +65,20 @@ SecurityException|Violazione delle norme di sicurezza.
 StringIndexOutOfBoundsException|Indice non valido per i caratteri di una stringa.
 UnsupportedOperationException|Operazione non supportata.
 
-     
-### ErroreArray
-
-* Un po' di esempi:
-```java
-public class ErroreArray {
-  public static void main(String[] args) {
-  int[] a = {5,3,6,5,4};
-  // attenzione al <=...
-  for (int i=0; i<=a.length; i++) 
-  System.out.println(a[i]);
-  System.out.println("Ciao"); 
-  }
-}
-```
-
-### ErroreAritmetico
-
-```java
-import java.util.Scanner; 
-public class ErroreAritmetico {
-  public static void main(String[] args) { 
-  Scanner input = new Scanner(System.in);
-  System.out.println("Inserisci due interi"); 
-  int x = input.nextInt();
-  int y = input.nextInt();
-  System.out.println(x/y);
-  // che succede se y == 0??
-  } 
-}
-```                                                                   
-### ErroreFormato
-
-```java
-import java.util.Scanner; 
-public class ErroreFormato {
-  public static void main(String[] args) { 
-  Scanner input = new Scanner(System.in); 
-  System.out.println("Inserisci un intero"); 
-  int x = input.nextInt();
-
-  // che succede se l'utente inserisce un carattere?
-  System.out.println(x); 
-  }
-}
-```                                                               
 
 ## Gestione delle eccezioni
 
 * In Java, le situazioni anomale che si possono verificare a run-time possono essere controllate tramite meccanismi di gestione delle eccezioni
 * Esistono classi che descrivono le possibili anomalie
 * Ogni volta che la Java Virtual Machine si trova in una situazione anomala;
-  * 1. sospende il programma
-  * 2. crea un oggetto della classe corrispondente all'anomalia che si è
-  verificata
-  * 3a. passa il controllo a un gestore di eccezioni (implementato dal
-  programmatore)
-  * 3b. se il programmatore non ha previsto nessun gestore, interrompe il
-  programma e stampa il messaggio di errore
-   
+  1. sospende il programma
+  2. crea un oggetto della classe corrispondente all'anomalia che si è
+    verificata
+  3. passa il controllo a un gestore di eccezioni (implementato dal
+    programmatore)
+  4. se il programmatore non ha previsto nessun gestore, interrompe il
+    programma e stampa il messaggio di errore
+
 ## Il costrutto try-catch
 
 * Il costrutto try-catch consente di 
@@ -112,64 +101,6 @@ try {
 // ... altri blocchi di codice NON monitorati ....
 ```
 
-         
-# La gerarchia delle eccezioni
-La classe Exception descrive un'eccezione generica, situazioni anomale più specifiche sono descritte dalle sottoclassi di Exception
-
-
-### Esempio gestione eccezione: ErroreAritmetico2
-
-
-```java
-import java.util.Scanner;
-public class ErroreAritmetico2 {
-  public static void main(String[] args) { 
-  Scanner input = new Scanner(System.in);
-
-  System.out.println("Inserisci due interi");
-  int x = input.nextInt();
-
-  int y = input.nextInt();
-
-  try { System.out.println(x/y);
-  System.out.println("CIAO");
-
-  }
-  catch (ArithmeticException e) {
-  // se si verifica un eccezione di tipo ArithmeticException
-  // nella divisione x/y il programma salta qui (non stampa CIAO)
-  System.out.println("Non faccio la divisione..."); // gestita l'anomalia, l'esecuzione riprende...
-  }
-  System.out.println("Fine Programma"); }
-}
-```
-### Esempio gestione eccezione: ErroreFormato2
-
-
-```java
-import java.util.Scanner;
-import java.util.InputMismatchException; 
-
-public class ErroreFormato2 {
-  public static void main(String[] args) {
-    Scanner input = new Scanner(System.in); 
-    System.out.println("Inserisci un intero"); 
-    int x; 
-    boolean ok;
-    do {
-      ok = true; 
-      try {
-        x = input.nextInt();
-        System.out.println(x); 
-      }
-      catch (InputMismatchException e) { 
-        input.nextLine(); // annulla l'input ricevuto System.out.println("Ritenta...");
-        ok = false;
-      }
-    } while (!ok);
-  } 
-}
-```                                                              
 ## Gestire le eccezioni
 
 * Un costrutto try-catch può gestire più tipi di eccezione contemporaneamente
@@ -189,7 +120,7 @@ catch (Exception e) {
   //codice
 }
 ```                                     
-## Gestire eccezioni
+## quando definire un gestore di eccezioni
 
 * Per capire quando preoccuparsi di definire un gestore di eccezioni:
   * bisogna avere un'idea di quali sono le eccezioni più comuni e in quali casi si verificano (esperienza)
@@ -198,16 +129,6 @@ catch (Exception e) {
   * in alcuni casi le eccezioni non vanno gestite: segnalano un errore di programmazione che deve essere corretto!
     * verifica la correttezza dei cicli nel caso di scorrimento di una collezione
 
-* Le eccezioni si dividono in:
-  * Checked (o controllate) per le quali il compilatore richiede che ci sia un gestore
-  * Unchecked (o non controllate) per le quali il gestore non è obbligatorio
-  * Per essere unchecked un'eccezione deve essere una sottoclasse di RuntimeException, altrimenti è checked
-
-### Esempi tipici di eccezioni checked:
-* le eccezioni che descrivono errori di input/output 
-  * lettura o scrittura su file, 
-  * comunicazione via rete, ecc...
-* le eccezioni definite dal programmatore
     
 ## Il comando throw
 
@@ -245,6 +166,280 @@ catch (Exception e) {
 throws IOException , IllegalParameterException { ... }
 ```
 
+
+
+### Terminologia
+
+* **Errore**: problema con la logica applicativa, errore del programmatore (non gestibile)
+* **Eccezione**: evento anomalo recuperabile
+
+
+### Una istruzione non terminata
+
+* Causa la creazione di un oggetto che rappresenta quanto è successo
+* Tale oggetto appartiene a una classe derivata da Throwable
+* Tali oggetti sono le eccezioni
+
+### Si dice che l'eccezione
+
+* Viene "gettata" (thrown) e
+* In seguito deve essere "gestita" ovvero "catturata" (catch)
+
+### Costrutti per la gestione delle eccezioni
+
+* try { } ... catch {}
+  * "Getta" l'eccezione a livello di un blocco di istruzioni
+  * "Cattura" l'eccezione effettuandone la gestione 
+* throws 
+  * "Getta" l'eccezione a livello di metodi 
+* throw  
+  * "Getta" l'eccezione a livello di codice / istruzioni
+
+
+## try ... catch
+
+* Cattura le eccezioni generate in una regione di codice
+
+```java
+try {
+  // codice in cui possono verificarsi le eccezioni
+...
+}
+catch (IOException e) {
+  // codice per gestire IOException e
+...
+}
+```
+
+### Per catturare eccezioni di classi diverse si possono usare blocchi catch multipli
+
+
+```java
+try {
+...
+}
+catch(MalformedURLException mue) {
+// qui recupero l'errore "malformedURL"
+...
+}
+catch(IOException e) {
+// qui recupero tutti altri errori di IO
+...
+}
+```
+
+### Costrutti try-catch possono essere annidati 
+(catch che include try-catch) 
+
+### Il blocco "finally" esegue istruzioni al termine del blocco try-catch
+
+* sia che si verifichino le eccezioni
+* sia che NON si verifichino le eccezioni
+* Anche in presenza di istruzioni **```return, break e continue```**
+
+```java
+try {
+...
+}
+catch (...) {
+...
+}
+catch (...) {
+...
+}
+...
+finally {
+...
+}
+```
+
+
+### Permette a un metodo di gettare
+eccezioni
+<tipoMetodo> <nomeMetodo> (<argomenti>)
+throws <classeEccezione 1 >
+[, <classeEccezione 2 >
+...
+[, <classeEccezione n > ]...] {
+...
+}
+
+### Le eccezioni gettate sono catturate
+(responsabilità) dal chiamante
+si chiama il metodo leggi deve sapere se la
+lettura è andata a buon fine oppure no
+
+```java
+* Con try-catch gestiamo l'eccezione a livello
+del chiamato (metodo leggi)
+...
+byte b[] = new byte[10];
+try {
+System.in.read (b);
+} catch (Exception e) {
+...
+}
+...
+```6* Sapere se la lettura è andata a buon fine, non
+"interessa" tanto al chiamato (metodo leggi)
+quanto al chiamante
+static String leggi (String val) throws
+IOException {
+byte b[] = new byte[10];
+System.in.read (b); // Senza try ... Catch
+val = "";
+for (int i=0; i<b.length; i++) {
+val = val + (char) b[i];
+}
+return (val);
+}
+```
+
+### throw
+
+Permette di "gettare" in modo "esplicito" una eccezione a livello di codice ```throw <oggettoEccezione>```
+
+### Provoca
+* L'interruzione dell'esecuzione del metodo
+* L'avvio della fase di cattura dell'eccezione generata
+* Dato che le eccezioni sono oggetti, chi getta l'eccezione deve creare l'oggetto eccezione (operatore new) che la descrive
+
+```java
+
+if ( y==0 ){
+throw new ArithmeticException (
+"Frazione con denominatore nullo.");
+}
+z = x/y;
+```
+
+## Classi di Eccezioni
+
+* È una classe, subclass di Throwable o discendenti, definita in java.lang
+* Error: hard failure
+* Exception: non sistemiche
+* RuntimeException: il compilatore non forza il catch
+* Error
+* Gli errori sono trattabili ma in genere costituiscono situazioni non recuperabili
+* OutOfMemoryError
+* Exception
+
+
+## Definizione di una eccezione
+
+* È possibile dichiarare eccezioni proprie, se quelle fornite dal sistema (java.lang) non sono sufficienti
+
+* Si realizza creando sottoclassi di Throwable
+* Tali sottoclassi sono del tutto "assimilabili" a classi "standard", e.g., possono
+  * ereditare attributi e metodi
+  * ridefinire il metodo costruttore
+  * definire dei metodi get/set
+  * etc.
+
+## Esempi
+
+
+     
+### EccezioneArray
+
+```java
+public class EccezioneArray {
+  public static void main(String[] args) {
+  int[] a = {5,3,6,5,4};
+  // attenzione al <=...
+  for (int i=0; i<=a.length; i++) 
+  System.out.println(a[i]);
+  System.out.println("Ciao"); 
+  }
+}
+```
+
+### EccezioneAritmetico
+
+```java
+import java.util.Scanner; 
+public class EccezioneAritmetico {
+  public static void main(String[] args) { 
+  Scanner input = new Scanner(System.in);
+  System.out.println("Inserisci due interi"); 
+  int x = input.nextInt();
+  int y = input.nextInt();
+  System.out.println(x/y);
+  // che succede se y == 0??
+  } 
+}
+```
+                                                                   
+### EccezioneFormato
+
+```java
+import java.util.Scanner; 
+public class EccezioneFormato {
+  public static void main(String[] args) { 
+  Scanner input = new Scanner(System.in); 
+  System.out.println("Inserisci un intero"); 
+  int x = input.nextInt();
+
+  // che succede se l'utente inserisce un carattere?
+  System.out.println(x); 
+  }
+}
+```                                                               
+
+### Esempio gestione eccezione: EccezioneAritmetico
+
+
+```java
+import java.util.Scanner;
+public class EccezioneAritmetico {
+  public static void main(String[] args) { 
+  Scanner input = new Scanner(System.in);
+
+  System.out.println("Inserisci due interi");
+  int x = input.nextInt();
+
+  int y = input.nextInt();
+
+  try { System.out.println(x/y);
+  System.out.println("CIAO");
+
+  }
+  catch (ArithmeticException e) {
+  // se si verifica un eccezione di tipo ArithmeticException
+  // nella divisione x/y il programma salta qui (non stampa CIAO)
+  System.out.println("Non faccio la divisione..."); // gestita l'anomalia, l'esecuzione riprende...
+  }
+  System.out.println("Fine Programma"); }
+}
+```
+### Esempio gestione eccezione: EccezioneFormato
+
+
+```java
+import java.util.Scanner;
+import java.util.InputMismatchException; 
+
+public class EccezioneFormato {
+  public static void main(String[] args) {
+    Scanner input = new Scanner(System.in); 
+    System.out.println("Inserisci un intero"); 
+    int x; 
+    boolean ok;
+    do {
+      ok = true; 
+      try {
+        x = input.nextInt();
+        System.out.println(x); 
+      }
+      catch (InputMismatchException e) { 
+        input.nextLine(); // annulla l'input ricevuto System.out.println("Ritenta...");
+        ok = false;
+      }
+    } while (!ok);
+  } 
+}
+```                                                              
+
 ### Esempio: controllo correttezza parametri - Rettangolo
 
 ```java
@@ -273,132 +468,11 @@ public class EccezioneBaseNegativa extends Exception {
 }
 ```          
 
-
-
-Exceptions
-Motivazione
-
-### Terminologia
-* Errore: sbaglio del programmatore (non
-gestibile)
-* Eccezione: evento anomalo recuperabile
-
-### La portabilità richiede la gestione delle
-eccezioni
-* Separare la gestione delle eccezioni dalla
-gestione del caso nominale
-* Permettere al client di una funzione di
-gestire l'eccezione in modo appropriato (il
-server spesso non conosce il modo migliore
-per gestire l'errore)
-1
-### ```java
-File {
-open the file;
-determine its size;
-allocate that much memory;
-read the file into memory;
-close the file;
-}
-readFile()
-(client)
-open file()
-(server)
-errorCodeType readFile {
-```initialize errorCode = 0;
-open the file;
-if (theFileIsOpen) {
-determine the length of the file;
-if (gotTheFileLength) {
-allocate that much memory;
-if (gotEnoughMemory) {
-read the file into memory;
-if (readFailed) {errorCode = -1;}
-} else {errorCode = -2;}
-} else {errorCode = -3;}
-close the file;
-if (theFileDidntClose && errorCode == 0) {
-errorCode = -4;
-} else {errorCode = errorCode and -4;}
-} else {errorCode = -5;}
-return errorCode;
-}
-2Concetti fondamentali
-
-### Una istruzione non terminata
-* Causa la creazione di un oggetto che
-rappresenta quanto è successo
-* Tale oggetto appartiene a una classe
-derivata da Throwable (derivata da Object)
-* Tali oggetti sono le eccezioni
-
-### Si dice che l'eccezione
-* Viene "gettata" (thrown) e
-* In seguito deve essere "gestita" ovvero
-"catturata" (catch)
-
-### Costrutti per la gestione delle eccezioni
-* try { } ... catch {}
-  * "Getta" l'eccezione a livello di un blocco di
-istruzioni
-  * La "cattura" effettuandone la gestione
-* throws
-  * "Getta" l'eccezione a livello di metodi
-* throw
-  * "Getta" l'eccezione a livello di codice / istruzioni
-3try ... catch
-
-### Cattura le eccezioni generate in una
-regione di codice
-try {
-// codice in cui possono verificarsi le eccezioni
-...
-}
-catch (IOException e) {
-// codice per gestire IOException e
-...
-}
-
-### Per catturare eccezioni di classi diverse
-si possono usare blocchi catch multipli
-try {
-...
-}
-catch(MalformedURLException mue) {
-// qui recupero l'errore "malformedURL"
-...
-}
-catch(IOException e) {
-// qui recupero tutti altri errori di IO
-...
-}
-
-### Costrutti try-catch possono essere
-annidati (catch che include try-catch)
-4
-### Il blocco "finally" esegue istruzioni al
-termine del blocco try-catch
-* Senza di eccezioni
-* Con eccezioni
-* In presenza di return, break e continue
-try {
-...
-}
-catch (...) {
-...
-}
-catch (...) {
-...
-}
-...
-finally {
-...
-}
-
-### ```java
- System.in.read può provocare una
-eccezione controllata di tipo IOException
+### System.in.read 
+* può provocare una eccezione controllata di tipo IOException 
 * Occorre quindi inserirla in un blocco
+
+```java
 try...catch...
 byte b[] = new byte[10];
 try {
@@ -406,166 +480,5 @@ System.in.read (b);
 } catch (Exception e) {
 ...
 }
-...
-5throws
+
 ```
-### Permette a un metodo di gettare
-eccezioni
-<tipoMetodo> <nomeMetodo> (<argomenti>)
-throws <classeEccezione 1 >
-[, <classeEccezione 2 >
-...
-[, <classeEccezione n > ]...] {
-...
-}
-
-### Le eccezioni gettate sono catturate
-(responsabilità) dal chiamante
-
-### ```java
-i chiama il metodo leggi deve sapere se la
-lettura è andata a buon fine oppure no
-* Con try-catch gestiamo l'eccezione a livello
-del chiamato (metodo leggi)
-...
-byte b[] = new byte[10];
-try {
-System.in.read (b);
-} catch (Exception e) {
-...
-}
-...
-```6* Sapere se la lettura è andata a buon fine, non
-"interessa" tanto al chiamato (metodo leggi)
-quanto al chiamante
-static String leggi (String val) throws
-IOException {
-byte b[] = new byte[10];
-System.in.read (b); // Senza try ... Catch
-val = "";
-for (int i=0; i<b.length; i++) {
-val = val + (char) b[i];
-}
-return (val);
-}
-throw
-
-### Permette di "gettare" in modo
-"esplicito" una eccezione a livello di
-codice
-throw <oggettoEccezione>
-
-### Provoca
-* L'interruzione dell'esecuzione del metodo
-* L'avvio della fase di cattura dell'eccezione
-generata
-* Dato che le eccezioni sono oggetti, chi getta
-l'eccezione deve creare l'oggetto eccezione
-(operatore new) che la descrive
-7
-### ```java
-
-if ( y==0 ){
-throw new ArithmeticException (
-"Frazione con denominatore nullo.");
-}
-z = x/y;
-...
-Classi di Eccezioni
-
-### È una classe, subclass di Throwable o
-discendenti, definita in java.lang
-* Error: hard failure
-```* Exception: non sistemiche
-* RuntimeException: il compilatore non forza il
-catch
-8
-### Error
-* Gli errori sono trattabili ma in genere
-costituiscono situazioni non recuperabili
-* OutOfMemoryError
-
-### Exception
-* ArithmeticException
-  * Condizioni eccezionali in operazioni aritmetiche
-(e.g., divisione per zero)
-* ArrayIndexOutOfBoundsException
-  * Accesso a posizione inesistente di un array
-* ClassCastException
-  * Cast di un riferimento a un sottotipo di cui
-l'oggeto non è instanza
-* NegativeArraySizeException
-  * Creazione di un array di dimensione negativa
-* NullPointerException
-  * Tentativo di accesso a un elemento tramite un
-riferimento uguale a null
-* NumberFormatException
-  * Conversione di una stringa in un valore numerico
-senza che la stringa abbia formato opportuno
-* ClassNotFoundException
-* InstantiationException
-* NoSuchMethodException
-* IllegalAccessException
-* EmptyStackException
-
-### RuntimeException
-* NullPointerException
-9Definizione di una eccezione
-
-### È possibile dichiarare eccezioni proprie,
-se quelle fornite dal sistema (java.lang)
-non sono sufficienti
-
-### Si realizza creando sottoclassi di
-Throwable
-* Tali sottoclassi sono del tutto "assimilabili"
-a classi "standard", e.g., possono
-  * ereditare attributi e metodi
-  * ridefinire il metodo costruttore
-  * definire dei metodi get/set
-  * etc.
-
-### ```java
-ic class NewExc extends
-ArithmeticException {
-public NewExc (String msg) {
-super (msg);
-}
-}
-...
-try ... catch (NewExc e) ...
-...
-static String leggi (String val) throws
-NewExc ...
-...
-```throw new NewExc ("messaggio") ...
-10Eccezioni controllate e non
-
-### Le eccezioni si dividono in
-* Controllate
-  * Istanze di RuntimeException o delle sue
-sottoclassi
-  * Il compilatore si assicura esplicitamente che
-quando un metodo solleva una'eccezione la tratti
-esplicitamente
-  * Questo può essere fatto mediante i costrutti
-try-catch o throws
-  * In caso contrario segnala un errore di
-compilazione
-* Non controllate
-  * Sono tutte le altre eccezioni, ovvero istanze di
-Exception ma non di RuntimeException
-  * L'eccezione può non essere gestita
-esplicitamente dal codice
-  * Viene "passata" automaticamente da metodo
-chiamato a metodo chiamante
-  * Il compilatore non si lamenta
-
-### Le eccezioni controllate vincolano il
-programmatore ad occuparsi della loro
-gestione
-
-### Le eccezioni controllate possono rendere
-troppo pesante la scrittura del codice
-(e.g., NullPointerException non è
-controllata)

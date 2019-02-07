@@ -1,5 +1,10 @@
 # Corso Tecnico Sviluppo Software
 
+* [programma completo](000_programma_Java.md)
+* [schema argomenti](000_schema.md)
+
+## Unità formative
+
 ## Lab 1 
 
 * [Fondamenti di programmazione](https://github.com/maboglia/Fondamenti) 
@@ -19,7 +24,6 @@
 * esempio classe Studente (nome, cognome, eta)
 
 
-Counter: OOP/java 8h
 --------------------
 
 ## Lab 2 
@@ -49,7 +53,6 @@ __OPERATORI DI BASE__
 * Gestione del flusso di esecuzione 
 * Costrutti di programmazione semplici 
 
-#### Counter: OOP/java 25h
 
 ### codice Lab2
 
@@ -77,7 +80,6 @@ __OPERATORI DI BASE__
 	* Il costrutto switch
 
 
-#### Counter: OOP/java 35h
 
 ### codice Lab3
 
@@ -104,7 +106,6 @@ __OPERATORI DI BASE__
 * creare e gestire array di stringhe all'interno del codice sorgente 
 
 
-#### Counter: OOP/java 48h
 
 ### codice Lab4
 
@@ -154,7 +155,6 @@ Classi istanziabili
 * esercitazione luoghi e figure geometriche
 * gioco - rock, scissors, paper
 
-#### Counter: OOP/java 62h
 
 ## Lab 6 
 
@@ -164,7 +164,6 @@ Classi istanziabili
   * diverse classi con differenti relazioni tra esse
 
 
-#### Counter: OOP/java 73h
 
 ### codice Lab6
 * Esercizi
@@ -178,7 +177,6 @@ Classi istanziabili
 * OOP design, ereditarietà
 * Ereditarietà in Java
 
-#### Counter: OOP/java 83h
 
 ### codice Lab7
 
@@ -206,8 +204,8 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * gestione delle eccezioni
 * blocco try-catch-finally
 * le parole chiave throws e throw
+* [eccezioni](017_eccezioni.md)
 
-#### Counter: OOP/java 91h
 
 ### codice Lab8
 
@@ -218,34 +216,37 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 **Advanced OOP design**
 
-* interfacce
+* [interfacce](015_interfacce.md)
 	
-#### Counter: OOP/java 99h
 
 ### codice Lab9
 * esempio classificazione animali, mammiferi
 
 ## Lab 10 
 
-* focus date, valute
+* [focus date, valute](022_API_Java_date_time.md)
 * JCF
 * JCF: HashSet e TreeSet
-* Vector, HashSet e TreeSet, lettura file canto 1 inferno
+* Vector, HashSet e TreeSet, 
+
+esercizio: lettura file canto 1 inferno
 	
-#### Counter: OOP/java 104h
 
 ### codice Lab10
 
 * info sistema > scrivi su file
 * Parsing della divina commedia
-* esercitazione negozio alimentari con eccezioni, interfacce e hashmap
+* esercitazione negozio alimentari 
+  * con eccezioni, 
+  * interfacce e 
+  * hashmap
 
 
 ## Lab 11
  
-* gestire le collezioni
+* la classe Collections
+* gestire le collezioni 
 
-#### Counter: OOP/java 112h
 
 ### codice Lab11
 
@@ -254,45 +255,49 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ## Lab 12
 
-[introduzione JSP](http://www.bogliaccino.it/corso-jsp-introduzione/)
-	Hello World JSP 
-	NetBeans e Eclipse, GlassFish e TomCat
+* [introduzione JSP](058_JSP_1.md)
+*	Hello World JSP 
+*	NetBeans e Eclipse, GlassFish e TomCat
 
-#### Counter: OOP/java 114h
 
 ## Lab 13
- 
-* [introduzione JSP](http://www.bogliaccino.it/corso-jsp-introduzione/)
-* [JSP: le direttive](http://www.bogliaccino.it/corso-jsp-le-direttive/)
-* [JSP: le direttive](http://www.bogliaccino.it/corso-jsp-le-direttive/)
-* [JSP: le espressioni](http://www.bogliaccino.it/corso-jsp-le-espressioni/)
-* Progetto JSP: MyShop
-* Java Advanced: inizializzatore statico
-* [JSP: le dichiarazioni](http://www.bogliaccino.it/corso-jsp-dichiarazioni/)
 
-* Progetto JSP: MyShop, il pattern MVC Model View Controller
+### JAVA WEB
+* [approfondimento JSP](059_JSP_2.md)
+* [JSP: le direttive]
+* [JSP: le direttive]
+* [JSP: le espressioni]
+* [JSP: le dichiarazioni]
+* Progetti JSP: 
+  * MyShop
+  * Progetto JSP: MyShop, il pattern MVC Model View Controller
+  * Progetto JSP: MyShop, JSP View, ricevere dati dal form html
+
+### Elementi Sintassi JAVA
+
 * Java Advanced: enumerazioni
+* Java Advanced: inizializzatore statico
 
 * Verifica OCA Java - 2: statements e costrutti del linguaggio
-* Progetto JSP: MyShop, JSP View, ricevere dati dal form html
-	
-#### Counter: OOP/java 128h
 
 ## Lab 14
 
-	
-* Java advanced: nested classes, member classes, anonymous inner classes
+### Elementi Sintassi JAVA
+* Java advanced: 
+  * nested classes, 
+  * member classes, 
+  * anonymous inner classes
+  * Creare Jar eseguibili, creare e includere Jar nel progetto 
+
 * [Progetto JSP: MyShop](https://github.com/maboglia/MyShop)
 * MVC, controller, ordini con nested class
 * Hello Swing GUI
-* Creare Jar eseguibili, creare e includere Jar nel progetto 
 
 
 * [Progetto JSP: MyShop](https://github.com/maboglia/MyShop)
 * programmazione front-end con tecnologie client-side
 * mostra nascondi sezioni
 		
-#### Counter: OOP/java 136h
 
 ## Lab 15
 
@@ -301,7 +306,6 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * MVC: client-side JS su progetto Negozio JSP
 * MVC: client-side JQuery su progetto Negozio JSP
 	
-#### Counter: OOP/java 144h
 
 ## Lab 16
 
@@ -309,7 +313,6 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * JSP 
 * MVC: JSP Servlet controller: doGet
 	
-#### Counter: OOP/java 153h
 
 
 ## Lab 17
@@ -317,7 +320,6 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * java: Jsp standard action
 * progetto MVC MyShop
 	
-#### Counter: OOP/java 159h
 
 
 ## Lab 18
@@ -325,23 +327,19 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * jsp
   * servlet dispatcher
   * mvc myshop
+
+### Elementi Sintassi JAVA
+
 * java
   * pattern
 	* factory
 	* mvc
 	* dao
-* jdbc
-  * mysql connector j
-  * Connection
-  * Statement
-  * ResulSet
-  * executeQuery
-  * executeUpdate
 
-#### Counter: OOP/java 166h
 
 ## Lab 19
 
+### Elementi Sintassi JAVA
 
 * jdbc
   * mysql connector j
@@ -349,36 +347,37 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
   * PreparedStatement
   * ResulSet
   * executeQuery
-  * executeUpdate 
+  * executeUpdate
+
 * JQuery Ajax
 * MyShop, frontend-backend REST-API
 * Hello angularJS
 * Progetto MyShop clientside+serverside
 * [Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/tree/master/CorsoJava2017/progetti)
 
-#### Counter: OOP/java 170h
 
 
 
 ## Lab 20
 
+### Elementi Sintassi JAVA
 * pattern
   * singleton	
-  * decorator
+  * [decorator](034_decorator_pattern.md)
 
 * Progetto MyShop clientside+serverside
 * [Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/tree/master/CorsoJava2017/progetti)
 
-#### Counter: OOP/java 174h
 
 
 ## Lab 21
 
+### Elementi Sintassi JAVA
 * Java NIO
+
 * MVC
 * JSP + Database
 	
-#### Counter: OOP/java 180h
 
 
 ## Lab 22
@@ -386,4 +385,3 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * JSP + Database progetto listaSpesa	
 
 	
-#### Counter: OOP/java 184h

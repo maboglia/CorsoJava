@@ -43,7 +43,8 @@ public class TestDeprecated {
 La compilazione di questa classe non darà alcun segnale, procederà tutto normalmente. Sarà la compilazione della classe che userà TestDeprecated a ricevere segnalazioni di warning dal compilatore quando viene utilizzato il metodo metodoA().
 
 * @OVERRIDE
-* L’annotazione @Override è probabilmente la più utile in quanto consente di evitare degli errori, che in fase di codifica spesso accadono. L’annotazione dice che l’elemento indicato è un elemento che fa l’override (sovrascrive) del relativo elemento, del genitore da cui eredita.
+* L’annotazione @Override è probabilmente la più utile in quanto consente di evitare degli errori, che in fase di codifica spesso accadono. 
+* L’annotazione dice che l’elemento indicato è un elemento che fa l’override (sovrascrive) del relativo elemento, del genitore da cui eredita.
 
 
 ```java
@@ -67,14 +68,15 @@ class B extends A{
 * è stato inserito un errore di battitura nel nome del metodo. 
 * Senza l’annotazione @Override la compilazione sarebbe andata a buon fine e non ci saremmo accorti dell’errore.
 
-```java
 * @SUPPRESSWARNING
 * L’annotazione @SuppressWarning è utile quando vogliamo sopprimere le indicazioni di warning da parte del compilatore, ad esempio, perché stiamo usando dei metodi deprecati.
 
+```java
 @SuppressWarnings({"deprecation"})
 public void usaMetodoDeprecato() {
 TestDeprecated t = new TestDeprecated();
 t.metodoA();
 }
 ```
+
 Pur usando dei metodi deprecated, al compilatore abbiamo segnalato di sopprimere i warning.
