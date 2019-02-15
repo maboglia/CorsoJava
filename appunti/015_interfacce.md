@@ -92,6 +92,6 @@ Con java 1.8 le interfacce sono state modificate: è possibile implementare due 
   * static
 ---
 ## Lambda expressions
-Con le interfacce contententi un singolo metodo astratto, è possibile utilizzare le espressioni lambda
+Con le interfacce contenenti un singolo metodo astratto, è possibile utilizzare le espressioni lambda
 
 Integer raddoppiato = (o) -> o * 2 ;
