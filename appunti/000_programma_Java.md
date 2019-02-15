@@ -1,6 +1,7 @@
 # Corso OOP JAVA
 
 ---
+
 ## Fondamenti di programmazione
 
 * Dal problema al programma
@@ -10,6 +11,7 @@
 * Paradigmi di programmazione.
 
 ---
+
 ## Installazione ambiente di sviluppo 
 
 * Introduzione alla programmazione orientata agli oggetti.
@@ -21,6 +23,7 @@
 
   
 ---
+
 ## Input/Output  
 
 * Input/Output utente
@@ -28,6 +31,7 @@
 * Output con oggetto System.out.
 
 ---
+
 ## Sintassi java
 
 * Operatori
@@ -62,6 +66,7 @@
 * Array e ArrayList.
 
 ---
+
 ## Strutture condizionali
 
 * Strutture di controllo.
@@ -70,6 +75,7 @@
 * operatore ternario
 
 ---
+
 ## Strutture ITERATIVE
 
 * Cicli finiti, infiniti, annidati
@@ -80,6 +86,7 @@
 * Labels: break e continue
 
 ---
+
 ## Java API
 
 * Caso particolare: la classe String e i principali metodi.
@@ -92,6 +99,7 @@
 
 
 ---
+
 ## Programmazione ad oggetti
 
 * La programmazione orientata agli oggetti.
@@ -133,6 +141,7 @@
 * Lambda espressioni.
 
 ---
+
 ## Eccezioni
 
 * Meccanismo di gestione delle eccezioni
@@ -148,6 +157,7 @@
 * Test unitari
 
 ---
+
 ## Framework Collections
 
 * Foreach ed Iterator
@@ -158,6 +168,7 @@
 * Tipi Generics
 
 ---
+
 ## Input/Output
 
 * Introduzione all'I/O: input da tastiera
@@ -172,6 +183,7 @@
 * Serializzazione e deserializzazione.
 
 ---
+
 ## Introduzione a JDBC
 
 * Convenzioni JDBC URL Naming
@@ -185,6 +197,7 @@
 * Crud su DB
 
 ---
+
 ## JSP e Servlet
 
 * Primo approccio a JSP
@@ -197,9 +210,11 @@
 * Uso di Etichette personalizzate
 
 ---
+
 ## Introduzione al framework Spring
 
 ---
+
 ## Panoramica sulle componenti di base e sui moduli aggiuntivi
 
 * Dependency Injection e IoC (Inversion Of Control)
@@ -212,6 +227,7 @@
 * Gestione centralizzata degli Errori e delle eccezioni
 
 ---
+
 ## I vantaggi derivanti dall'utilizzo di Spring nella gestione delle eccezioni e nell'accesso ai dati
 
 * Supporto DAO
@@ -226,6 +242,7 @@
   * SqlQuery e MappingSqlQuery
 
 ---
+
 ## Bibliografia e risorse
 
 * [Programma OCA](100_programma_OCA.md)
