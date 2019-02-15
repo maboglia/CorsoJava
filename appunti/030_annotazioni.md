@@ -23,9 +23,8 @@ class ClasseAnnotata() {
 
 Nell’esempio abbiamo annotato la classe con l’annotazione Autore ed i due attributi name e company.
 
-## Tipi di annotations
+## Tipi di annotations:  @DEPRECATED
 
-* @DEPRECATED
 *L’annotazione @Deprecated viene usata per specificare che l’elemento indicato è un elemento deprecato, cioè, attivo (per mantenere retrocompatibilità) ma non consigliato in quanto è stato rimpiazzato da uno nuovo e supportato.
 ```java
 public class TestDeprecated {
@@ -42,7 +41,7 @@ public class TestDeprecated {
 
 La compilazione di questa classe non darà alcun segnale, procederà tutto normalmente. Sarà la compilazione della classe che userà TestDeprecated a ricevere segnalazioni di warning dal compilatore quando viene utilizzato il metodo metodoA().
 
-* @OVERRIDE
+## Tipi di annotations: @OVERRIDE
 * L’annotazione @Override è probabilmente la più utile in quanto consente di evitare degli errori, che in fase di codifica spesso accadono. 
 * L’annotazione dice che l’elemento indicato è un elemento che fa l’override (sovrascrive) del relativo elemento, del genitore da cui eredita.
 
@@ -68,7 +67,7 @@ class B extends A{
 * è stato inserito un errore di battitura nel nome del metodo. 
 * Senza l’annotazione @Override la compilazione sarebbe andata a buon fine e non ci saremmo accorti dell’errore.
 
-* @SUPPRESSWARNING
+## Tipi di annotations: @SUPPRESSWARNING
 * L’annotazione @SuppressWarning è utile quando vogliamo sopprimere le indicazioni di warning da parte del compilatore, ad esempio, perché stiamo usando dei metodi deprecati.
 
 ```java
