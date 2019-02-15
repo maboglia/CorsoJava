@@ -77,7 +77,7 @@ int metodo1( ) {
 //codice del metodo
 }
 }
-NomeInterfacca a = new NomeClasse ( );
+NomeInterfaccia a = new NomeClasse ( );
 ```
 ---
 ## TIpi di interfacce
