@@ -1,5 +1,5 @@
 # Interfacce
-
+---
 ### Un'interfaccia è una classe
 completamente astratta, cioè del tutto priva della parte di implementazione
 
@@ -7,7 +7,7 @@ completamente astratta, cioè del tutto priva della parte di implementazione
 * Non vi sono attributi
   * È possibile definire solo "attributi" final (in pratica costanti)
   * Definendo un attributo in un'interfaccia questo viene automaticamente considerato final
-
+---
 ### Un'interfaccia
 * Ha tutti i vantaggi e le indicazioni d'uso delle classi astratte
 * Presenta maggior flessibilità rispetto all'ereditarietà di una classe astratta
@@ -22,7 +22,7 @@ cosa dovrebbero fare le classi senza specificare come farlo.
 
 Quindi un'interfaccia non è una classe ma un insieme di
 requisiti per le classi che si vogliono conformare ad essa.
-
+---
 ## Sintassi:
 ```java
 public interface NomeInterfaccia
@@ -47,7 +47,7 @@ public class NomeClasse implements NomeInterfaccia
 ```
 
 Tale classe deve implementare tutti i metodi elencati nell'interfaccia.
-
+---
 ### proprietà
 Le interfacce non sono classi; non si può utilizzare new per crearne oggetti.
 
@@ -57,12 +57,12 @@ Gli attributi di un'interfaccia sono sempre public static final
 (non è necessario scriverlo).
 
 Un'interfaccia con il nome NomeInterfaccia va salvata nel file NomeInterfaccia.java (come accade per le classi).
-
+---
 ### ereditarietà multipla
 Una sottoclasse può estendere solo 1 superclasse (non permettendo l'ereditarietà multipla)
 
 Con le interfacce invece la situazione è diversa: una classe può implementare quante interfacce vuole.
-
+---
 ### variabili
 Posso dichiarare variabili del tipo dell'interfaccia e,
 sfruttando il polimorfismo, assegnargli oggetti di classi che
@@ -79,7 +79,7 @@ int metodo1( ) {
 }
 NomeInterfacca a = new NomeClasse ( );
 ```
-
+---
 ## TIpi di interfacce
 
 * Normali
@@ -90,7 +90,7 @@ Con java 1.8 le interfacce sono state modificate: è possibile implementare due 
 
   * default
   * static
-
+---
 ## Lambda expressions
 Con le interfacce contententi un singolo metodo astratto, è possibile utilizzare le espressioni lambda
 
