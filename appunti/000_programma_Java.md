@@ -50,7 +50,8 @@
     * Tipi di dato primitivi
     * Tipi reference: tipi di dato complessi e oggetti
 * Astrazione e decomposizione: funzioni e metodi
-* Metodi
+---
+### Metodi
     * Il metodo main() ed i sottoprogrammi
     * Metodi di classe: La parola chiave Static
     * Passaggio dei parametri per riferimento e per valore
