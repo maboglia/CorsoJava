@@ -1,5 +1,6 @@
 # Corso OOP JAVA
 
+---
 ## Fondamenti di programmazione
 
 * Dal problema al programma
@@ -8,6 +9,7 @@
 * I diagrammi di flusso
 * Paradigmi di programmazione.
 
+---
 ## Installazione ambiente di sviluppo 
 
 * Introduzione alla programmazione orientata agli oggetti.
@@ -18,12 +20,14 @@
 * Primi programmi Java.
 
   
+---
 ## Input/Output  
 
 * Input/Output utente
 * Input da console (classe Scanner) e con dialog box
 * Output con oggetto System.out.
 
+---
 ## Sintassi java
 
 * Operatori
@@ -57,6 +61,7 @@
 * Copia di array
 * Array e ArrayList.
 
+---
 ## Strutture condizionali
 
 * Strutture di controllo.
@@ -64,6 +69,7 @@
 * switch
 * operatore ternario
 
+---
 ## Strutture ITERATIVE
 
 * Cicli finiti, infiniti, annidati
@@ -73,6 +79,7 @@
 * for(each): scorre solo in una direzione
 * Labels: break e continue
 
+---
 ## Java API
 
 * Caso particolare: la classe String e i principali metodi.
@@ -84,6 +91,7 @@
 * La classe Timer: schedulare un'azione, che verrà eseguita ogni tot millisecondi.
 
 
+---
 ## Programmazione ad oggetti
 
 * La programmazione orientata agli oggetti.
@@ -124,6 +132,7 @@
 * Classi astratte
 * Lambda espressioni.
 
+---
 ## Eccezioni
 
 * Meccanismo di gestione delle eccezioni
@@ -138,6 +147,7 @@
 * Correzione di un programma Java.
 * Test unitari
 
+---
 ## Framework Collections
 
 * Foreach ed Iterator
@@ -147,6 +157,7 @@
 * Implementazioni di Map e SortedMap
 * Tipi Generics
 
+---
 ## Input/Output
 
 * Introduzione all'I/O: input da tastiera
@@ -160,6 +171,7 @@
 * Files
 * Serializzazione e deserializzazione.
 
+---
 ## Introduzione a JDBC
 
 * Convenzioni JDBC URL Naming
@@ -172,6 +184,7 @@
 * Gestione dei dati: JDBC
 * Crud su DB
 
+---
 ## JSP e Servlet
 
 * Primo approccio a JSP
@@ -183,9 +196,11 @@
 * Elementi Avanzati di una pagina JSP
 * Uso di Etichette personalizzate
 
+---
 ## Introduzione al framework Spring
 
-### Panoramica sulle componenti di base e sui moduli aggiuntivi
+---
+## Panoramica sulle componenti di base e sui moduli aggiuntivi
 
 * Dependency Injection e IoC (Inversion Of Control)
 * The IoC Container: Core ed application Context
@@ -196,7 +211,8 @@
 * Creazione ed uso dei Bean Spring: esempi concreti
 * Gestione centralizzata degli Errori e delle eccezioni
 
-### I vantaggi derivanti dall'utilizzo di Spring nella gestione delle eccezioni e nell'accesso ai dati
+---
+## I vantaggi derivanti dall'utilizzo di Spring nella gestione delle eccezioni e nell'accesso ai dati
 
 * Supporto DAO
   * Consistenza nella gestione delle eccezioni
@@ -209,6 +225,7 @@
   * SimpleJdbcInsert
   * SqlQuery e MappingSqlQuery
 
+---
 ## Bibliografia e risorse
 
 * [Programma OCA](100_programma_OCA.md)

@@ -18,6 +18,59 @@ Il costruttore senza parametri inizializza l’oggetto con la data e l’ora att
 Con il metodo get(), ereditato da Calendar, è possibile ricevere tutte le informazioni disponibili per l'oggetto di tipo data.
 
 
+## Novità in Java 8: LocalDate, LocalTime, LocalDateTime
+
+```java
+      LocalDate oggi = LocalDate.now(); // Data di oggi
+      System.out.println("oggi: " + oggi);
+
+      //settare una data precisa (mese 1-based)
+      LocalDate mauroBirthday = LocalDate.of(1969, 7, 28);
+      //Per il mese possiamo usare le costanti di Month
+      mauroBirthday = LocalDate.of(1969, Month.JULY, 28);
+      
+      System.out.println("mauroBirthday: " + mauroBirthday);
+
+      LocalDate inizioCorsi = LocalDate.of(2017, Month.OCTOBER, 12);
+      LocalDate natale = LocalDate.of(2017, Month.DECEMBER, 25);
+
+      System.out.println("Fino a  natale: " + inizioCorsi.until(natale));
+	  System.out.println("Fino a  natale: " + inizioCorsi.until(natale, ChronoUnit.DAYS));
+ 
+	  LocalDate festaLiberazione = LocalDate.of(2017, Month.APRIL, 25);
+      LocalDate natale = LocalDate.of(2017, Month.DECEMBER, 25);
+
+      System.out
+            .println("Fino a  natale: " + festaLiberazione.until(natale));
+      System.out.println("Fino a  natale: "
+            + festaLiberazione.until(natale, ChronoUnit.DAYS));
+
+      System.out.println(oggi.plusMonths(1));
+      System.out.println(oggi.minusMonths(1));
+
+      DayOfWeek inizioMillenio = LocalDate.of(2000, 1, 1).getDayOfWeek();
+      System.out.println("inizioMillenio: " + inizioMillenio);
+      System.out.println(inizioMillenio.getValue());
+      System.out.println(DayOfWeek.SATURDAY.plus(3));	  
+	
+
+        LocalDateTime ldt = LocalDateTime.now();
+        System.out.println(ldt);
+
+        LocalDate ld = LocalDate.of(2009, 1, 28);
+        System.out.println(ld);
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("M/d/yyyy");
+        System.out.println(dtf.format(ld));
+
+
+
+```
+
+
+
+
+
 ### Primo esempio 
 stampiamo semplicemente la data odierna con l’orario attuale.
 
@@ -112,25 +165,6 @@ data1.equals(data2) restituirà false
 data1.before(data2)	restituirà true
 ```
 
-## Novità in Java 8: LocalDate, LocalTime, LocalDateTime
-
-```java
-      LocalDate oggi = LocalDate.now(); // Data di oggi
-      System.out.println("oggi: " + oggi);
-
-      //settare una data precisa (mese 1-based)
-      LocalDate mauroBirthday = LocalDate.of(1969, 7, 28);
-      //Per il mese possiamo usare le costanti di Month
-      mauroBirthday = LocalDate.of(1969, Month.JULY, 28);
-      
-      System.out.println("mauroBirthday: " + mauroBirthday);
-
-      LocalDate inizioCorsi = LocalDate.of(2017, Month.OCTOBER, 12);
-      LocalDate natale = LocalDate.of(2017, Month.DECEMBER, 25);
-
-      System.out.println("Fino a  natale: " + inizioCorsi.until(natale));
-      System.out.println("Fino a  natale: " + inizioCorsi.until(natale, ChronoUnit.DAYS));
-```
 
 I membri resi disponibili dalla classe Date.
 --------------------------------------------------------------
