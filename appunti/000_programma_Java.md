@@ -50,7 +50,9 @@
     * Tipi di dato primitivi
     * Tipi reference: tipi di dato complessi e oggetti
 * Astrazione e decomposizione: funzioni e metodi
+
 ---
+
 ### Metodi
     * Il metodo main() ed i sottoprogrammi
     * Metodi di classe: La parola chiave Static
@@ -125,16 +127,22 @@
     * La parola riservata super
     * Modificatori d'accesso: package, private e protected
     * Impedire l'ereditarietà: la parola riservata final
+
 ---
+
 ### Polimorfismo
     * Overloading e Overriding
     * Sovraccarico (Overloading) e Sovrascrittura (Overriding) di metodi.
     * Polimorfismo con ereditarietà
+
 ---
+
 ### Interfacce
     * Interfacce e polimorfismo.
     * Interfacce, classi astratte e classi innestate
+
 ---
+
 ### Advanced Class design
 
 * Binding dinamico
