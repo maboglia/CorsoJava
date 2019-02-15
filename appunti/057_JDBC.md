@@ -4,12 +4,10 @@ JDBC
 L'impiego di JDBC è semplice, e solitamente si articola attraverso quattro passi:
 
 1. Per prima cosa, è necessario caricare il driver idoneo per l'utilizzo del particolare database che si intende sfruttare. Può essere caricato un apposito driver JDBC installato in precedenza nel sistema, oppure può essere sfruttato il ponte JDBCODBC. Non è importante il nome o il funzionamento interno del particolare driver selezionato: l'interfaccia di programmazione sarà sempre la medesima.
----
 2. Si apre una connessione verso il particolare database necessario all'applicazione, sfruttando il driver caricato al passo precedente.
----
 3. Si impiegano l'interfaccia di JDBC ed il linguaggio SQL per interagire con la base di dati. Generalmente, viene sottoposta al DBMS una query volta all'ottenimento di alcuni risultati.
----
 4. I risultati ottenuti possono essere manipolati sfruttando le classi JDBC e del codice Java studiato per il compito.
+---
 
 
 Si realizzi la tabella che sarà impiegata per il test, sfruttando il seguente codice SQL:
@@ -22,7 +20,6 @@ Indirizzo VARCHAR (50) NOT NULL
 );
 
 ```
----
 
 ```java
 
@@ -90,7 +87,8 @@ connection.close();
 connettersi ad un database
 ----------------------------
 
-Per connettersi ad un database è prima di tutto necessario caricare in memoria il driver corrispondente, affinché questo sia già disponibile nel momento in cui si richiederanno ulteriori servizi. Da JDBC 4 non è più necessario. La sintassi per effettuare l'operazione è la seguente:
+Da JDBC 4 non è più necessario caricare in memoria il driver corrispondente,  questo è già disponibile. 
+Comunque, la sintassi per effettuare l'operazione è la seguente:
 
 ```java
 
@@ -102,7 +100,10 @@ Class.forName(stringa_driver);
 java.sql.Connection
 ---------------------
 
-A questo punto entrano in gioco l'interfaccia java.sql.Connection e la classe java.sql.DriverManager. La prima descrive le funzionalità necessarie per entrare in comunicazione con uno specifico database, mentre DriverManager offre una serie di metodi statici, utili per stabilire qualsiasi tipo di connessione consentita dai driver JDBC già caricati in memoria. Il modello generalmente osservato dai programmatori Java è il seguente:
+A questo punto entrano in gioco l'interfaccia `java.sql.Connection` e la classe `java.sql.DriverManager`. 
+La prima descrive le funzionalità necessarie per entrare in comunicazione con uno specifico database, mentre `DriverManager` offre una serie di metodi statici, utili per stabilire qualsiasi tipo di connessione consentita dai driver `JDBC` già caricati in memoria. 
+
+Il modello generalmente osservato è il seguente:
 
 ```java
 
@@ -111,7 +112,7 @@ A questo punto entrano in gioco l'interfaccia java.sql.Connection e la classe ja
 ```
 ---
 
-Una volta ottenuta una connessione attiva, diventa possibile sfruttare i metodi descritti da Connection. I più frequentemente utilizzati sono:  
+Una volta ottenuta una connessione attiva, diventa possibile sfruttare i metodi descritti da `Connection`. I più frequentemente utilizzati sono:  
 
 *   close(). Chiude la connessione.
   
@@ -127,6 +128,7 @@ In particolare, mediante SQL è possibile compiere tre principali operazioni:
 1. Eseguire selezioni e ricerche all'interno di una o più tabelle, con l'istruzione SELECT. 
 2. Modificare il contenuto di una tabella, con istruzioni come DELETE, INSERT e UPDATE. 
 3. Modificare la struttura del database, ad esempio con CREATE TABLE.
+---
 
 L'interfaccia java.sql.Statement comprende i metodi necessari per fornire al DBMS le istruzioni SQL appena descritte:
 
