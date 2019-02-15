@@ -116,19 +116,26 @@
     * Membri statici e membri dinamici
     * Modificatori d'accesso e visibilità: public, private, friendly, static
     * Classi e metodi con parametri
-* Ereditarietà
+---
+
+### Ereditarietà
     * Riutilizzo del codice.
     * Strutture ereditarie
     * La parola riservata super
     * Modificatori d'accesso: package, private e protected
     * Impedire l'ereditarietà: la parola riservata final
-* Polimorfismo
+---
+### Polimorfismo
     * Overloading e Overriding
     * Sovraccarico (Overloading) e Sovrascrittura (Overriding) di metodi.
     * Polimorfismo con ereditarietà
-* Interfacce
+---
+### Interfacce
     * Interfacce e polimorfismo.
     * Interfacce, classi astratte e classi innestate
+---
+### Advanced Class design
+
 * Binding dinamico
 * Casting con oggetti
 * Cast e instanceof
@@ -211,11 +218,8 @@
 
 ---
 
-## Introduzione al framework Spring
 
----
-
-## Panoramica sulle componenti di base e sui moduli aggiuntivi
+## Introduzione al framework Spring - Panoramica sulle componenti di base e sui moduli aggiuntivi
 
 * Dependency Injection e IoC (Inversion Of Control)
 * The IoC Container: Core ed application Context
