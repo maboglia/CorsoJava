@@ -14,6 +14,7 @@ viene ristretto a contenere una sola servlet, allora
 l'applicazione ha un solo punto di accesso e questa
 servlet ha i controllo totale sul flusso dell'applicazione.
 
+---
 ## Passaggio dati fra servlet-JSP:
 * I Java Data Bean istanziati dalla servlet devono
 essere passati alla JSP prima di trasferire ad essa
@@ -29,6 +30,7 @@ __Questi metodi sono:__
 * getAttribute(String)
 
 
+---
 ## Trasferimento del controllo dalla servlet alla JSP
 
 * Quando all'interno di una servlet, dopo aver preparato

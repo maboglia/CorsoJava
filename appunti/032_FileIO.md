@@ -1,5 +1,6 @@
 # File Input/Output
 
+---
 ## Package java.io
 Per eseguire l’elaborazione dei file in Java, è necessario importare il package java.io, che contiene le definizioni delle seguenti classi di flussi:
 
@@ -10,13 +11,16 @@ classe InputStream	| per input di byte da un file una per l’output
 classe Writer		| per output di caratteri verso un file
 classe OutputStream	| per output di byte verso un file
 
+---
 ## Il flusso - Stream
 
+---
 ## Character Stream
 
 **Reader** e **Writer** sono le due superclassi astratte per i character stream.
 Queste due classi hanno la caratteristica di obbligare le sottoclassi a leggere e scrivere dividendo i dati in "pezzi" di 16 bit ognuno, quindi compatibili con il tipo char di Java.
 
+---
 ## Byte Stream
 
 **InputStream** e **OutputStream** sono le due superclassi astratte per i byte stream.
@@ -34,32 +38,42 @@ un int (da 0 a 255) che rappresenta il byte letto
 il valore -1 se il file è terminato
 
 
+---
 ## IOException
 
 
 
+---
 ## Le classi astratte di Reader e InputStream
 
 Reader e InputStream definiscono gli stessi metodi, ma per differenti tipi di dati.
 In particolare, Reader dichiara i metodi per leggere flussi di caratteri da una sorgente, mentre InputStream dichiara i metodi per leggere byte ed array di byte.
 
+---
 ## Le classi astratte di Writer e OutputStream
 
     Il metodo write() della classe Writer si  occupa di scrivere flussi di caratteri in una destinazione specifica. Il carattere è passato come argomento di tipo int.
     Il metodo write() della classe InputStream si occupa di scrivere un byte alla volta. Il byte è passato come argomento di tipo int.
 
+---
 ## Chiusura degli stream
 
+---
 ## Lettura da tastiera
 
+---
 ## Metodo BufferedReader
 
+---
 ## Metodo Scanner
 
+---
 ## Gestione dei file – Classe File
 
+---
 ## Serializzazione di oggetti
 
+---
 ## Primo esempio di serializzazione
 
 Tutte le classi che implementano l’interfaccia Serializable possono essere salvate su persistenza attraverso un ObjectOutputStream e caricate con un ObjectInputStream. Queste ultime sono classi che implementano le interfacce ObjectOutput e ObjectInput e consentono agli oggetti di essere letti o scritti in uno stream (possibilmente un file).
@@ -111,8 +125,10 @@ Scriviamo un blocco di codice di prova per serializzare e deserializzare un ogge
 
     System.out.println(f.getId() + " " + f.getNome());
 
+---
 ## Secondo esempio di serializzazione
 
+---
 ## NIO 2.0
 
 Una delle novità più importanti della versione 7 di Java è senza dubbio rappresentata dalle innovazioni apportate alle API per la gestione dei file. 
@@ -128,8 +144,10 @@ La differenza sostanziale tra le API classiche (package java.io) e le nuove API 
 le prime lavorano con stream di byte e stream di caratteri
 le seconde lavorano principalmente con buffer, channel e selector
 
+---
 ## Buffer, channel e selector
 
+---
 ## Novità principali
 
 Le novità più importanti di NIO 2.0 risiedono essenzialmente nell’introduzione della classe Files e dell’interfaccia (e sue implementazioni) Path, che forniscono metodi più semplici ed efficienti per l’utilizzo di operazioni legate ai file. Infatti, sebbene la tradizionale classe java.io.File sia ancora disponibile, è stato introdotto un nuovo meccanismo che ha al centro le nuove classi java.nio.Path e java.nio.Files. 
@@ -138,6 +156,7 @@ Delle nuove caratteristiche offerte da NIO 2.0, tratteremo quelle di maggior imp
 
 Dopodiché andremo a descrivere i principali metodi offerti dalla classe Files.
 
+---
 ## Interfaccia Path
 
 Per ottenere un’istanza di Path, occorre utilizzare l’oggetto FileSystem o più semplicemente l’oggetto Paths. 
@@ -171,6 +190,7 @@ public class PathDemo {
 }
 ```
 
+---
 ## Classe Files
 
 L’altro elemento fondamentale di NIO 2.0 è la classe Files, che serve per compiere svariate operazioni sui file e sulle directory, come lettura, scrittura, spostamento, ecc. 
@@ -178,6 +198,7 @@ L’altro elemento fondamentale di NIO 2.0 è la classe Files, che serve per com
 Esistono tantissimi metodi di utilità in questa classe.
 
 
+---
 ## File di configurazione nella cartella WEB-INF
 
 ```java
@@ -186,6 +207,7 @@ InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream("
 
 Lettura sequenziale di file di testo (e canali di input)
 
+---
 ## Passo 1: apertura file in lettura
 
 Per leggere un file di testo avente come nome la stringa s, creare innanzitutto un oggetto java.io.FileReader come segue (dopo aver importato java.io.*):
@@ -201,6 +223,7 @@ catch(FileNotFoundException e){
 
 Si noti che il costruttore FileReader(s) lancia una eccezione verificata FileNotFoundException se non è possibile aprire il file s.
 
+---
 ## Passo 2: creazione canale di lettura associato al file da leggere
 
 Poiché non è possibile usare direttamente l'oggetto FileReader f per leggere dal file, bisogna creare un secondo oggetto di classe java.io.BufferedReader passando f al costruttore BufferedReader in modo da creare un canale di lettura associato al file.
@@ -210,6 +233,7 @@ BufferedReader b = new BufferedReader(f);
 
 Nota importante: la parte introduttiva della documentazione standard della classe BufferedReader fornisce un esempio di creazione di un canale di lettura associato a un file (passi 1 e 2).
 
+---
 ## Passo 3: lettura di stringhe dal canale di lettura
 
 A questo punto, invocando ripetutamente il metodo readLine() sull'oggetto BufferedReader b si leggono una alla volta le righe del file. Quando readLine() restituisce null vuole dire che le righe del file sono state tutte lette e l'oggetto BufferedReader ha esaurito il suo scopo.
@@ -230,6 +254,7 @@ catch(IOException e){
 
 Si noti che il metodo readLine potrebbe lanciare una eccezione verificata di tipo IOException.
 
+---
 ## Passo 4: chiusura canale di input associato al file
 
 Quando la lettura del file è stata ultimata, è buona norma chiudere il canale di input associato al file invocando il metodo close():
@@ -239,6 +264,7 @@ b.close();
 
 Nota: fare attenzione a non chiamare close() su un canale BufferedReader non associato a un file, ma ad esempio al canale standard System.in.
 
+---
 ## Esempio 1
 
 Scrivere una classe pubblica LetturaFile con un metodo pubblico void stampaFile(String s) che, dato il nome di un file s, ne stampa a video tutte le righe, oppure lancia un'eccezione non verificata se si incontrano errori nella lettura.
@@ -284,6 +310,7 @@ Programma di prova:
     }`
 
 
+---
 ## Esempio 2
 
 Una variante dell'esercizio precedente assume che il metodo non prenda come parametro un nome di file, ma un canale di lettura BufferedReader assumendo che sia stato già creato al momento dell'invocazione.
@@ -329,6 +356,7 @@ Programma di prova:
 
 Scrittura sequenziale di file di testo (e canali di output)
 
+---
 ## Passo 1: creazione canale di scrittura associato al file
 
 Per creare un file di testo con nome miofile.txt, creare un oggetto java.io.PrintStream come segue (dopo aver importato java.io.*):
@@ -349,6 +377,7 @@ Si noti che il costruttore PrintStream(s) (si legga la documentazione):
     lancia una eccezione verificata FileNotFoundException se non è possibile aprire il file per la scrittura (la documentazione recita: "If the given file object does not denote an existing, writable regular file and a new regular file of that name cannot be created, or if some other error occurs while opening or creating the file").
 
 
+---
 ## Passo 2: scrittura sul canale di output associato al file
 
 Da questo punto in poi, l'oggetto p può essere usato per scrivere con i metodi print e println della classe PrintStream (si noti che System.out è un oggetto PrintStream). Ad esempio:
@@ -356,6 +385,7 @@ Da questo punto in poi, l'oggetto p può essere usato per scrivere con i metodi 
 p.println("prova scrittura su file");
 
 
+---
 ## Passo 3: chiusura canale di output associato al file
 
 Quando la scrittura del file è stata ultimata, è buona norma chiudere il canale di output associato al file invocando il metodo close():
@@ -370,6 +400,7 @@ p.close(); // chiude il terminale di output
 System.out.println("questa stringa non verrà mai stampata");
 
 
+---
 ## Esempio 1
 
 Scrivere una classe pubblica ScritturaFile con un metodo pubblico void scriviSuFile(Object[] v, String s) che, dato un array v di oggetti e una stringa s, crea un file di nome s contenente le stringhe associate agli oggetti dell'array, oppure lancia un'eccezione non verificata se si incontrano errori nella scrittura del file.
@@ -407,6 +438,7 @@ Programma di prova:
     }
 
 
+---
 ## Esempio 2
 
 Una variante dell'esercizio precedente assume che il metodo non prenda come parametro un nome di file, ma un canale di scrittura PrintStream assumendo che sia stato già creato al momento dell'invocazione (ad esempio associandolo a un file o al terminale di output System.out).
@@ -437,9 +469,11 @@ Programma di prova:
 Streams
 Generalità sull'I/O
 
+---
 ### L'Input/Output è descritto nel package
 java.io
 
+---
 ### Modalità principali di manipolazione
 * Stream di caratteri
   * Classi di lettura: contengono Reader nel nome
@@ -450,6 +484,7 @@ nome
   * Classi di scrittura: contengono OutputStream
 nel nome
 1
+---
 ### Usualmente l'I/O da file
 * Richiede la gestione di eccezioni controllate
 * La radice della gerarchia di queste
@@ -474,6 +509,7 @@ while ((c = <inR>.read()) != -1)
 <outW>.close ();
 }
 
+---
 ### I costrutti
 File <inF> = new File ("<nameIn>");
 FileReader <inR> = new FileReader (inF);
@@ -485,12 +521,14 @@ FileReader <inR> = new FileReader
 FileWriter <outW> = new FileWriter
 ("<nameOut>");
 3
+---
 ### Metodi generali
   * Chiusura del file
 public void close () throws IOException
   * Scrittura dei caratteri nel "buffer"
 public void flush () throw IOEXception
 
+---
 ### Modalità di lettura
   * Il metodo read restituisce (-1) al
 raggiungimento di EOF
@@ -501,6 +539,7 @@ lunghezza di un vettori di caratteri
 public int read (char [] charArray) throws
 IOException
 
+---
 ### Modalità di scrittura
   * Scrittura di caratteri singoli
 public void write (int c) throws
@@ -519,9 +558,11 @@ public void write (String s, int da, int a)
 throws IOException
 4I/O orientato alle righe
 
+---
 ### La lettura di righe intere è permessa
 dalla classe BufferedReader
 
+---
 ### I metodi di tale classe
 * Sono analoghi a quelli della classe Writer
 (metodo write)
@@ -547,6 +588,7 @@ while ((str = <inB>.readLine ()) != null)
 <outB>.close ();
 }
 
+---
 ### I costrutti
 FileReader <inR> = new FileReader
 ("<nameIn>");
@@ -563,10 +605,12 @@ BufferedWriter <outW> = new BufferedWriter
 (new FileWriter ("<nameOut>"));
 6La classe file
 
+---
 ### La classe file permette controlli su
 * File
 * Directory
 
+---
 ### Definisce/rappresenta nomi/path
   * Crea un oggetto di tipo file
 public File (String pathName)
@@ -575,6 +619,7 @@ File <x> = new File ("<nameIn>");
 File <y> = new File (
 "c:\dir1\dir2", "<nameOut>");
 
+---
 ### Check file/direttory
   * Verifica che l'oggetto esista
 public boolean exists()
@@ -596,6 +641,7 @@ public boolean canWrite()
   * Controlla se il file può essere letto
 public boolean canRead ()
 
+---
 ### Contenuto di una directory
   * Restituisce l'array di stringhe contenenti I nomi
 dei file/direcotory nel direttorio corrente
