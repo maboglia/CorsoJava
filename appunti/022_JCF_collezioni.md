@@ -12,7 +12,7 @@ Il Java Collection Framework è costituito dai seguenti elementi:
     * __Map__, che sono ottimizzate per operazioni di ricerca
 * __Classi__, che implementano le interfacce utilizzando differenti tipi di strutture dati 
 * __Algoritmi__, che consistono in metodi per compiere operazioni sulle Collezioni, quali ad esempio operazioni di ordinamento e di ricerca
-
+---
 I vantaggi di avere questo framework a disposizione sono tanti: possibilità di scrivere meno codice, incremento della performance, interoperabilità tra classi non relazionate tra loro, riusabilità, algoritmi complessi già a disposizione (ad esempio quelli per l’ordinamento), ecc.
 
 Andremo ora ad analizzare le caratteristiche del framework e studiamo le principali classi concrete che permettono di gestire al meglio le nostre collezioni di oggetti.
@@ -26,7 +26,7 @@ Lo scopo di queste interfacce è permettere la manipolazione delle implementazio
 Questo implica che capire a cosa servono queste interfacce significa capire la maggior parte dell’utilizzo del framework.
 
 Esistono implementazioni dell’interfaccia Collection che ammettono elementi duplicati e altre che non lo permettono, collezioni ordinate e non ordinate.
-
+---
 La libreria non mette a disposizione alcuna implementazione diretta di Collection, ma solo delle sue dirette sottointerfacce come Set e List.
 
 * Un Set è un tipo di collezione che, astraendo il concetto di insieme matematico, non ammette elementi duplicati.
@@ -40,13 +40,14 @@ La libreria non mette a disposizione alcuna implementazione diretta di Collectio
 * Questa interfaccia, quindi, permette di gestire collezioni di oggetti ordinati identificabili univocamente mediante un indice che rappresenta la sua posizione all’interno della lista.
 
 * Una Queue permette di gestire collezioni di oggetti gestiti con la filosofia FIFO (First In First Out) in modo che il primo oggetto inserito sia il primo candidato ad essere letto.
-
+---
 * Map è una collezione che associa chiavi ai suoi elementi. Le mappe non possono contenere chiavi duplicate e ogni chiave può essere associata a un solo valore.
 
 * Map non è propriamente una Collection poiché non implementa l’interfaccia Collection.
 
 ---
 
+---
 ## Framework Collections	
 * [Implementazione di List](./15_Implementazione_List.md)	
 * [Implementazione di Set](./15_Implementazione_Set.md)	
@@ -57,10 +58,10 @@ La libreria non mette a disposizione alcuna implementazione diretta di Collectio
 * Collections e Generics	
 * Classe StringTokenizer	
 
-___source: Manuale Java 7 - Claudio De Sio Cesari___
+___source: Manuale Java - Claudio De Sio Cesari___
 
-
-Collections & Map
+---
+## Collections & Map
 
 ### Collezione di elementi
 * Mantenuti mediante "reference"
@@ -71,8 +72,10 @@ Collections & Map
 * Ordinati / non ordinati
 * Con duplicati / senza duplicati
 
+---
 ### Gruppo di oggetti singoli
 
+---
 ### List
 * Contiene elementi con ordine specifico
 (e.g., stesso ordine di inserzione)
@@ -90,6 +93,7 @@ Collections & Map
   * Mantenuto per compatibilità
   * Più lento di ArrayList
 
+---
 ## Set
 * No elementi duplicati (elementi non inseriti se presenti)
 * No ordine (esiste un ordinamento ma è interno)
@@ -102,6 +106,7 @@ Collections & Map
   * Mantiene l'ordine di inserimento dei dati grazie a una lista (in aggiunta alla hash)
   * Gli iterator forniscono l'ordine di inserzione
 
+---
 ## Map
 
 ### Gruppo di coppie di oggetti
@@ -123,6 +128,7 @@ Collections & Map
   * Mantiene l'ordine di inserimento dei dati grazie a una lista (in aggiunta alla hash)
   * Gli iterator forniscono l'ordine di inserzione
 
+---
 ## Strutture obsolete
 
 ### Vengono mantenute per compatibilità
@@ -134,6 +140,7 @@ Collections & Map
 * BitSet
 
 
+---
 ## Funzionalità di una Collection
 
   * Aggiunta di un elemento alla fine; restituisce false se non inserisce
@@ -163,177 +170,18 @@ Collections & Map
   * Restituisce un iteratore per scorrere la collection
     * Iterator iterator()
 
-```java
-age java.util.*;
-...
-ArrayList c1 = new ArrayList ();
-ArrayList c2 = new ArrayList ();
-...
-c1.add ("one");
-c1.add ("two");
-c1.add ("three");
-c2.addAll (c1);
-if (c2.isEmpty()) // false
-{ ... }
-c2.clear ();
-```if (c2.isEmtpy()) // true
-{ ...}
-System.out.println (c1);
-9
-```java
-ic class Cat { ... }
-public class Dog { ... }
-...
-List cats = new ArrayList ();
-for (int i=0; i<n; i++) {
-cats.add (new Cat (...)};
-}
-cats.add (new Dog (...)};
-...
-for (int i=0; i<n; i++) {
-((Cat) cats.get (i)) ...
-// Dog: rilevato a run-time
-```}
-* Soluzione
-  * Sovrascrivere in Cat il metodo add
-  * Il metodo add in Cat accetta solo cat da
-inserire
+---
 
-```java
-finizione specifica
-LinkedList <x> = new LinkedList ();
-* Definizione generica
-List <x> = new LinkedList ();
-  * Utilizza l'interfaccia List invece
-dell'implementazione LinkedList
-  * Aumenta la libertà a livello di codice per
-successive modifiche, e.g.
-List <x> = new ArrayList ();
-10
 
-### Funzionalità di un SortedSet (TreeSet)
-  * Estrae l'elemento più piccolo
-Object first()
-  * Estrae l'elemento più grande
-Object last()
-```  * Crea un sottoset dal set completo estraendono
-una porzione
-SortedSet subSet (<from>, <to>)
-  * Crea un sottoset con elementi minori di quello
-indicato
-SortedSet headSet (<to>)
-  * Crea un sottoset con elementi maggiori o uguali
-a quello indicato
-SortedSet tailSet (<from>)
+## Iterator
 
-### Funzionalità di un Vector
-* Obsoleto
-* Molto utilizzato
-* Mantenuto per compatibilità
-  * Crea Vector di 10 posizioni, capacity increment
-= 1
-Vector()
-  * Crea Vector di dimensione size
-Vector(int size)
-  * Restituisce la dimensione del Vector
-int capacity ()
-  * Come add ma sostituisce
-set(int index, Object o)
-  * Restituisce elemento index
-Object get(int index)
-12
-```java
-or v = new Vector(3);
-// 3 ref a null
-v.add("10");
-// 10 in posizione 0
-v.add(new Integer(11));
-// 11 in posizione 1
-v.add(0, new Integer(13));
-// 13 in posizione 0, poi 10 e 11
-v.set(0, new Integer(20));
-// 20 in posiz 0 (replace)
-v.get(0);
-// rende 20
-```v.add(11, new Integer(30));
-// exception (out of bounds)
+Astrae il problema di iterare su tutti gli elementi di una collection
 
-Iterator
-14Iterator
 
-### Astrae il problema di iterare su tutti gli
-elementi di una collection
+### L'iterazione
+  * Crea l'iteratore: `public Iterator (Collection c)`
+  * Esiste un elemento successivo? `public boolean hasNext()`
+  * Preleva l'elemento successivo `public Object next()`
 
-### L'iterazione è permessa da
-  * Crea l'iteratore
-public Iterator (Collection c)
-  * Esiste un elemento successivo?
-public boolean hasNext()
-  * Preleva l'elemento successivo
-public Object next()
 
-```java
 
-ArrayList myList = new ArrayList ();
-...
-// Riempio la struttura, e.g.:
-// for (int i=0; i<10; i++)
-//
-myList.add (new myObject (i));
-...
-Iterator it = myList.iterator ();
-while (it.hasNext ())
-((myObject)
-myList.next ()).<accessoAttributo>);
-```15
-```java
-or v = new Vector(3);
-v.add ("10");
-...
-Iterator iv = v.iterator();
-while (iv.hasNext()) {
-// agire su iv.next()
-}
-
-```java
-edList ll = new LinkedList();
-ll.add ("10");
-...
-```Iterator il = ll.iterator();
-while (il.hasNext()) {
-// agire su il.next()
-}
-```
-
-HashMap
-
-### Get e set a tempo costante (se no
-collisioni)
-
-### Size iniziale
-* initial capacity (default = 16)
-
-### Riallocazione automatica quando load
-factor superato
-* load factor (default = .75)
-17Algoritmi
-
-### Definiti static su Arrays, lavorano su
-array di Object
-  * Merge sort, n log(n)
-sort()
-  * Ricerca binaria o dicotomica (assume array
-ordinato)
-binarySearch()
-
-### Definiti static su Collections, lavorano
-su List
-  * Ordinamento dei dati
-binarySearch()
-sort()
-  * Contrario dell'ordinamento
-shuffle()
-  * Ottiene valori specifici
-min()
-max()
-18

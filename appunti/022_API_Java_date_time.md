@@ -5,19 +5,12 @@ La  manipolazione delle date e delle ore è una delle attività ricorrenti di un
 
 Se lavoriamo con Java 7, a classe principale per gestire date e orari è Calendar (che ha sostituito la classe Date, dichiarata **deprecata__). 
 
-Altre classi utili sono __GregorianCalendar__, SimpleTimeZone e SimpleTimeZone. 
+Altre classi utili sono __GregorianCalendar__, **SimpleTimeZone** e **SimpleTimeZone**. 
 Inoltre sono disponibili le più moderne LocalDate e LocalDateTime.
-
-Oltre a queste classi, è molto probabile che serva utilizzarne altre quali: DateFormat e SimpleDateFormat, 
+Oltre a queste classi, è molto probabile che serva utilizzarne altre quali: **DateFormat** e **SimpleDateFormat**, 
 che permettono la trasformazione da stringa a data e viceversa.
 
-La classe __GregorianCalendar__ è molto semplice da utilizzare. 
-
-Sono disponibili diversi costruttori. 
-Il costruttore senza parametri inizializza l’oggetto con la data e l’ora attuale. 
-Con il metodo get(), ereditato da Calendar, è possibile ricevere tutte le informazioni disponibili per l'oggetto di tipo data.
-
-
+---
 ## Novità in Java 8: LocalDate, LocalTime, LocalDateTime
 
 ```java
@@ -67,10 +60,103 @@ Con il metodo get(), ereditato da Calendar, è possibile ricevere tutte le infor
 
 ```
 
+## Convertire LocalDate a java.sql.Date
+
+```java
+import java.sql.Date;
+//...
+LocalDate locald = LocalDate.of(1969, 07, 28);
+Date date = Date.valueOf(locald); 
+r.setDateOfBirth(date);
+```
+
+---
+## l'operazione contraria è
+```java
+Date date = r.getDate();
+LocalDate localD = date.toLocalDate();
+```
+
+r è il record e .getDate() il metodo per farsi ritornare la data. 
+Se avessi un campo dataNascita ilmetodo dovrebbe chiamarsi getDateNascita().
+
+Usa le classi del package java.time invece di java.util.Date e java.sql.Date con JDBC 4.2 o superiore.
+
+---
+## Esempio con PreparedStatement
+
+```java
+myPreparedStatement.setObject( 
+    … ,                                         // qui passa il numero ordinale dell'argomento.
+    myJavaUtilDate.toInstant()                  // Converti da `java.util.Date` nel più moderno `java.time.Instant` (UTC).
+        .atZone( ZoneId.of( "Europe/Rome" ) )  // Sette un time zone particolare, per determinare la data. Instanziando un `ZonedDateTime`.
+        .toLocalDate()                          // Estrai la data di tipo `java.time.LocalDate` dall'oggetto.
+)
+```
+---
+### esempi
+```java
+LocalDate todayLocalDate = LocalDate.now( ZoneId.of( "Europe/Paris" ) );  
+// Usare "continent/region" come region name; non usare quelli codificati da 3 lettere.
+
+LocalDate localDate = ResultSet.getObject( 1 , LocalDate.class );
+
+//la questione è irrelevante in JDBC 4.2 o successive.
+```
+
+---
+## Converti a java.sql.Date
+
+```java
+java.sql.Date sqlDate = java.sql.Date.valueOf( todayLocalDate );
+
+//viceversa
+
+LocalDate localDate = sqlDate.toLocalDate();
+```
+
+---
+### Nuovi metodi di java.util.Date 
+* java.util.Date.from( Instant ) 
+* java.util.Date::toInstant.
+
+```java
+Instant instant = myUtilDate.toInstant();
+
+ZoneId zoneId = ZoneId.of ( "America/Montreal" );
+ZonedDateTime zdt = ZonedDateTime.ofInstant ( instant , zoneId );
+LocalDate localDate = zdt.toLocalDate();
+```
+
+```java
+public class MainClass {
+
+  public static void main(String[] args) {
+    java.util.Date utilDate = new java.util.Date();
+    java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+    System.out.println("utilDate:" + utilDate);
+    System.out.println("sqlDate:" + sqlDate);
+
+  }
+
+}
+
+//http://www.java2s.com/Tutorial/Java/0040__Data-Type/ConvertfromajavautilDateObjecttoajavasqlDateObject.htm
+```
+---
+## GreorianCalendar
 
 
 
+La classe __GregorianCalendar__ è molto semplice da utilizzare. 
 
+Sono disponibili diversi costruttori. 
+Il costruttore senza parametri inizializza l’oggetto con la data e l’ora attuale. 
+Con il metodo get(), ereditato da Calendar, è possibile ricevere tutte le informazioni disponibili per l'oggetto di tipo data.
+
+
+
+---
 ### Primo esempio 
 stampiamo semplicemente la data odierna con l’orario attuale.
 
@@ -88,10 +174,12 @@ System.out.println(ore + ":" + minuti + ":" + secondi);
 ```
 
 
+---
 ## Formattare la data: SimpleDateFormat
 
 	la classe SimpleDateFormat che permette di trattare le date nel formato più adatto alla nostra esigenza.
 
+---
 ### Secondo esempio 
 come stampare la data odierna usando __SimpleDateFormat__ per formattare l'output.
 
@@ -124,6 +212,7 @@ try {
 Bisogna utilizzare un blocco try-catch perché potrebbe essere sollevata una __ParseException__, nel caso in cui una stringa passata al metodo parse(), non rappresenti una data convertibile.
 
 
+---
 ## Terzo esempio 
 come convertire una data dal formato americano in quello italiano utilizzando le tecniche analizzate in precedenza.
 
@@ -165,16 +254,17 @@ data1.equals(data2) restituirà false
 data1.before(data2)	restituirà true
 ```
 
+## Java Legacy
 
 I membri resi disponibili dalla classe Date.
 --------------------------------------------------------------
-Costruttori pubblici:
+### Costruttori pubblici:
 ..|..
 ---|---
 Date()|			Costruisce un oggetto Date che incapsula la data e l'ora correnti.
 Date(long t)|		Costruisce un oggetto Date che incapsula la data e l'ora espressi dall'argomento t. L'argomento è un long che riporta i millisecondi trascorsi dal 1è Gennaio 1970 sino alla data rappresentata.
-
-Metodi pubblici:
+---
+### Metodi pubblici:
 ..|..
 ---|---
 boolean after(Date d)|	Restituisce true se la data di invocazione è successiva alla data d.
@@ -188,17 +278,17 @@ int hashCode()|		Calcola un codice hash per l'oggetto.
 void setTime(long t)|	Imposta la data rappresentata con un argomento di tipo long, che esprime i millisecondi trascorsi dal 1 Gennaio 1970 sino alla data rappresentata.
 String toString()|	Fornisce una rappresentazione in stringa della data.
 
-I membri pi� importanti classe GregorianCalendar.
+## Classe GregorianCalendar.
 
-Costruttori pubblici:
+### Costruttori pubblici:
 
 GregorianCalendar		Costruisce un GregorianCalendar che rappresenta la data e l'ora correnti.
 
 ..|..
 ---|---
 GregorianCalendar(int	year, int month, int date)|	Costruisce un GregorianCalendar che rappresenta la data espressa mediante gli argomenti forniti. GregorianCalendar(int	year, int month, int date,int hour, int minute)||Costruisce un GregorianCalendar che rappresenta la data e l'ora espressa mediante gli argomenti forniti. 
-
-Metodi pubblici:
+---
+### Metodi pubblici:
 ..|..
 ---|---
 boolean after(Object o)|	Restituisce true se la data rappresentata È successiva alla data espressa dall'oggetto o, che deve essere istanza di Calendar.
