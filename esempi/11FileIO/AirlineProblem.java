@@ -9,7 +9,7 @@ public class AirlineProblem {
     public static void main(String[] args){
         Scanner scannerToReadAirlines = null;
         try{
-            scannerToReadAirlines = new Scanner(new File("airlines.txt"));
+            scannerToReadAirlines = new Scanner(new File("test_files/airlines.txt"));
         }
         catch(IOException e){
             System.out.println("Could not connect to file airlines.txt.");
