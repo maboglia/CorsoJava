@@ -39,16 +39,16 @@ Dei termometri sono d'interesse le seguenti funzionalità:
 
 Una biblioteca ha dato l'incarico di implementare un software per la gestione
 dei prestiti di libri. Si costruiscano le seguenti classi:
-- Data: serve per costruire "l'orologio" virtuale. Implementare tre
+* Data: serve per costruire "l'orologio" virtuale. Implementare tre
 variabili d'istanza e i metodi: int getDay(), int getMonth(), int
 getYear(), void setDay(int aDay), void setMonth(int aMonth), void
 setYear(int aYear), void nextDay(), Boolean isEqual(Data date).
-- Abbonato: costruisce l'oggetto utente. Essa ha due variabili
+* Abbonato: costruisce l'oggetto utente. Essa ha due variabili
 d'istanza e i seguenti metodi: String getCognome(), String getNome()
-- Libro: costruisce l'oggetto libro. Ha tre variabili d'istanza:
+* Libro: costruisce l'oggetto libro. Ha tre variabili d'istanza:
 titolo, utente a cui è prestato, data scadenza del prestito. Ha
 inoltre i relativi metodi accessori.
-- Archivio: essa implementa due arrayList, una contenente gli abbonati
+* Archivio: essa implementa due arrayList, una contenente gli abbonati
 alla biblioteca e l'altra i libri presenti, oltre ad un riferimento
 alla data, e i seguenti metodi: void nuovoLibro(String unTitolo),
 void nuovoUtente(String unNome, String unCognome), int
@@ -60,13 +60,13 @@ Consigli:
 Le classi Data, Abbonato e Libro non presentano particolari difficoltà
 d'esecuzione. La classe Archivio, invece, può risultare di difficile
 implementazione, in particolare:
-- presta(Libro unLibro, Abbonato unUtente): si passa in rassegna
+* presta(Libro unLibro, Abbonato unUtente): si passa in rassegna
 l'arraylist contenente i libri, se una copia del libro cercato
 esiste e non è in prestito, viene assegnata una data di scadenza per
 la restituzione e l'utente che l'ha preso in prestito;
-- aggiorna(): aggiorna la data, se un libro deve essere restituito nel
+* aggiorna(): aggiorna la data, se un libro deve essere restituito nel
 medesimo giorno, allora si resettano i dati sull'utente possessore.
-- numLibri(Abbonato anAbb): restituisce quanti libri possiede un dato
+* numLibri(Abbonato anAbb): restituisce quanti libri possiede un dato
 utente
 
 ## Corso di laurea
@@ -225,8 +225,7 @@ totLunghezze per tale calcolo.
 ## magazzino di articoli
 
 Un rivenditore vuole gestire un magazzino di articoli. Sviluppare una classe
-Articolo
-avente come variabili d’istanza un codice (stringa), un prezzo (intero) ed un
+Articolo avente come variabili d’istanza un codice (stringa), un prezzo (intero) ed un
 quantitativo di disponibilità a (intero). Definire i relativi metodi di accesso
 ed un costruttore. Il magazzino è rappresentato dalla seguente classe:
 
@@ -368,11 +367,11 @@ Si progetti e si implementi una gerarchia di classi JAVA che sia in grado di sod
 
 Sviluppare un programma per la gestione dei medici e dei pazienti.
 
-## R1: Pazienti
+### R1: Pazienti
 
 
 Il programma funziona attraverso la classe principale __Sanita__. Il programma permette di
-inserire medici e pazienti all'interno del sistema della sanit&agrave;.
+inserire medici e pazienti all'interno del sistema della sanità.
 I pazienti sono caratterizzati da nome, cognome e codice fiscale.
 
 Le persone possono essere registrate come pazienti presso il sistema
@@ -397,7 +396,7 @@ Nome | Cognome | Codice Fiscale
 Giovanni | Rossi | RSSGNN33B30F316I
 Giuseppe | Verdi | VRDGPP76F09B666I
 
-## R2: Medici
+### R2: Medici
 
 
 I medici hanno le stesse caratteristiche dei pazienti ed inoltre sono
@@ -416,7 +415,7 @@ di __ErrMedicoInesistente__.
 E' possibile conoscere la matricola di un medico tramite il metodo __getMatricola()__ dell'interfaccia
 Medico.
 
-## R3: Assegnazione Medici
+### R3: Assegnazione Medici
 
 E' possibile assegnare un medico ad un paziente tramite il metodo __assegnaMedico()__ della classe Sanita
 che riceve come parametri la matricola del medico ed il codice fiscale
@@ -429,7 +428,7 @@ assegnato tramite il metodo __getMedico()__ dell'interfaccia Persona.
 
 N.B. I medici possono essere a loro volta pazienti di un altro medico.
 
-## R4: Elenco Pazienti
+### R4: Elenco Pazienti
 
 Dato un medico, deve essere possibile ottenere la lista dei pazienti
 tramite il metodo __getPazienti()__ dell'interfaccia
@@ -438,7 +437,7 @@ Medico.
 La lista dei pazienti di un medico deve essere in ordine alfabetico
 crescente in base a cognome e nome.
 
-## R5: Caricamento da file
+### R5: Caricamento da file
 
 Tramite il metodo __caricaDati()__,
 che riceve come parametro il path di un file, deve essere possibile
@@ -464,13 +463,13 @@ Esercizi:
 Quali classi? Quali attributi e metodi per ciascuna classe?
 
 
-## Es. 1) Problema: Gioco dei Dadi
+## Gioco dei Dadi
 Simulare un gioco di dadi, vince chi lancia il numero più alto.
 Ci sono due giocatori, ognuno con il suo dado che lanciano a turno.
 Il vincitore vince 1.00 €, il perdente lo perde.
 
 
-## Es. 2) Problema: Conti Correnti
+## Conti Correnti
 Simulare un Conto Corrente Generico. Ogni conto corrente ha un saldo su cui è
 possibile: prelevare, depositare, verificarne la disponibilità.
 Oltre ad un conto corrente generico ad un utente possono anche essere assegnati altri
@@ -485,7 +484,7 @@ oltre al versamento normale vi è la possibilità di un versamento con spese,
 ovvero ad ogni operazione di prelievo vi è una spesa di 1€.
 
 
-## Es. 3) Problema: Biblioteca Illegale
+## Biblioteca Illegale
 Simulare una biblioteca illegale composta da libri fotocopiati.
 Per ogni libro è indicato il numero di pagine, un editore, un autore ed un genere.
 Ho due tipologie di libri: libri fotocopiati a colori e libri fotocopiati in B/N.
@@ -502,7 +501,7 @@ guadagni.
 Vi è infine la possibilità di controllare se sono finiti i fogli ed in tal caso caricarne
 altri.
 
-## Es. 4) Problema: Centro d'Assistenza
+## Centro d'Assistenza
 Simulare un centro d'assistenza per auto.
 Tale centro ha un nome ed un proprietario.
 E' composto da un meccanico (che ripara l'auto), da un carrozziere (che la rivernicia),

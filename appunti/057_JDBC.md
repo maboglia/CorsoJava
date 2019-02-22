@@ -20,6 +20,7 @@ Indirizzo VARCHAR (50) NOT NULL
 );
 
 ```
+---
 
 ```java
 
@@ -30,18 +31,14 @@ public static void main(String[] args) {
 String DRIVER = "com.mysql.jdbc.Driver";
 // Indirizzo del database.
 String DB_URL = "jdbc:mysql://localhost:3306/javatest";
-try {
-// Carico il driver. Da JDBC 4 non è più necessario...
-Class.forName(DRIVER);
-} catch (ClassNotFoundException e1) {
-// Il driver non può essere caricato.
-System.out.println("Driver non trovato...");
-System.exit(1);
-}
-```
----
-
-```java
+	/*try {
+	// Carico il driver. Da JDBC 4 non è più necessario...
+	Class.forName(DRIVER);
+	} catch (ClassNotFoundException e1) {
+	// Il driver non può essere caricato.
+	System.out.println("Driver non trovato...");
+	System.exit(1);
+	}*/
 // Preparo il riferimento alla connessione.
 Connection connection = null;
 try {
@@ -100,7 +97,10 @@ Class.forName(stringa_driver);
 java.sql.Connection
 ---------------------
 
-A questo punto entrano in gioco l'interfaccia `java.sql.Connection` e la classe `java.sql.DriverManager`. 
+A questo punto entrano in gioco 
+* l'interfaccia `java.sql.Connection` 
+* e la classe `java.sql.DriverManager`. 
+
 La prima descrive le funzionalità necessarie per entrare in comunicazione con uno specifico database, mentre `DriverManager` offre una serie di metodi statici, utili per stabilire qualsiasi tipo di connessione consentita dai driver `JDBC` già caricati in memoria. 
 
 Il modello generalmente osservato è il seguente:
@@ -124,10 +124,13 @@ L'interfaccia Statement
 -------------------------
 
 Il linguaggio SQL comprende istruzioni utili per interagire con una base di dati. 
+
 In particolare, mediante SQL è possibile compiere tre principali operazioni: 
+
 1. Eseguire selezioni e ricerche all'interno di una o più tabelle, con l'istruzione SELECT. 
 2. Modificare il contenuto di una tabella, con istruzioni come DELETE, INSERT e UPDATE. 
 3. Modificare la struttura del database, ad esempio con CREATE TABLE.
+
 ---
 
 L'interfaccia java.sql.Statement comprende i metodi necessari per fornire al DBMS le istruzioni SQL appena descritte:
