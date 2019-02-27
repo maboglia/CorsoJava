@@ -58,19 +58,14 @@ In particolare, Reader dichiara i metodi per leggere flussi di caratteri da una 
 ---
 ## Chiusura degli stream
 
----
 ## Lettura da tastiera
 
----
 ## Metodo BufferedReader
 
----
 ## Metodo Scanner
 
----
 ## Gestione dei file – Classe File
 
----
 ## Serializzazione di oggetti
 
 ---
@@ -486,16 +481,19 @@ nel nome
 1
 ---
 ### Usualmente l'I/O da file
+
 * Richiede la gestione di eccezioni controllate
-* La radice della gerarchia di queste
-eccezioni è IOExcetion
+* La radice della gerarchia di queste eccezioni è IOExcetion
+
+```java
 public ... ( ... ) throws IOException {
 ...
-// Stream - I/O
-...
+// Stream - I/O 
+// I/O orientato a caratteri singoli
+
 }
-I/O orientato a caratteri singoli
-2import java.io.*;
+
+import java.io.*;
 ...
 public ... throws IOException {
 File <inF> = new File ("<nameIn>");
@@ -508,36 +506,37 @@ while ((c = <inR>.read()) != -1)
 <inR>.close ();
 <outW>.close ();
 }
+```
 
 ---
+
 ### I costrutti
-File <inF> = new File ("<nameIn>");
-FileReader <inR> = new FileReader (inF);
-File <outF> = new File ("<nameOut>");
-FileWriter <outW> = new FileWriter (outF);
+
+`File <inF> = new File ("<nameIn>");`
+`FileReader <inR> = new FileReader (inF);`
+`File <outF> = new File ("<nameOut>");`
+`FileWriter <outW> = new FileWriter (outF);`
+
 possono essere scritti come segue
-FileReader <inR> = new FileReader
-("<nameIn>");
-FileWriter <outW> = new FileWriter
-("<nameOut>");
-3
+
+`FileReader <inR> = new FileReader("<nameIn>");`
+`FileWriter <outW> = new FileWriter("<nameOut>");`
+
 ---
 ### Metodi generali
+
   * Chiusura del file
-public void close () throws IOException
+`public void close () throws IOException`
   * Scrittura dei caratteri nel "buffer"
-public void flush () throw IOEXception
+`public void flush () throw IOEXception`
 
 ---
 ### Modalità di lettura
-  * Il metodo read restituisce (-1) al
-raggiungimento di EOF
+  * Il metodo read restituisce (-1) al raggiungimento di EOF
   * Lettura di caratteri singoli
-public int read () throws IOException
-  * Lettura di un numero di caratteri pari alla
-lunghezza di un vettori di caratteri
-public int read (char [] charArray) throws
-IOException
+`public int read () throws IOException`
+  * Lettura di un numero di caratteri pari alla lunghezza di un vettori di caratteri
+`public int read (char [] charArray) throws IOException`
 
 ---
 ### Modalità di scrittura
@@ -556,7 +555,9 @@ IOException
   * Scrittura parziale di una stringa
 public void write (String s, int da, int a)
 throws IOException
-4I/O orientato alle righe
+
+
+I/O orientato alle righe
 
 ---
 ### La lettura di righe intere è permessa
@@ -589,23 +590,21 @@ while ((str = <inB>.readLine ()) != null)
 }
 
 ---
-### I costrutti
-FileReader <inR> = new FileReader
-("<nameIn>");
-BufferedReader <inB> = new BufferedReader
-(<inR>);
-FileWriter <outF> = new FileWriter
-("<nameOut>");
-BufferedWriter <outW> = new BufferedWriter
-(outF);
-possono essere scritti come
-BufferedReader <inB> = new BufferedReader
-(new FileReader ("<nameIn>"));
-BufferedWriter <outW> = new BufferedWriter
-(new FileWriter ("<nameOut>"));
-6La classe file
 
----
+### I costrutti
+
+FileReader <inR> = new FileReader("<nameIn>");
+BufferedReader <inB> = new BufferedReader(<inR>);
+FileWriter <outF> = new FileWriter("<nameOut>");
+BufferedWriter <outW> = new BufferedWriter(outF);
+
+possono essere scritti come
+
+BufferedReader <inB> = new BufferedReader(new FileReader ("<nameIn>"));
+BufferedWriter <outW> = new BufferedWriter(new FileWriter ("<nameOut>"));
+
+## La classe file
+
 ### La classe file permette controlli su
 * File
 * Directory
@@ -615,39 +614,38 @@ BufferedWriter <outW> = new BufferedWriter
   * Crea un oggetto di tipo file
 public File (String pathName)
 e.g.,
-File <x> = new File ("<nameIn>");
-File <y> = new File (
-"c:\dir1\dir2", "<nameOut>");
+`File <x> = new File ("<nameIn>");`
+`File <y> = new File ("c:\dir1\dir2", "<nameOut>");`
 
 ---
 ### Check file/direttory
   * Verifica che l'oggetto esista
-public boolean exists()
+`public boolean exists()`
 e.g., if (<x>.exists ()) ...
   * Verifica se l'oggetto è un file
-public boolean isFile()
+`public boolean isFile()`
 e.g., if (<x>.isFile ()) ...
   * Verifica se l'oggetto è una directory
-public boolean isDirectory()
+`public boolean isDirectory()`
   * Restituisce il nome del file o directory
-public String getName(
+`public String getName()`
   * Restituisce la stringa che descrive il path
 completo del file
-public String getAbsolutePath (
-7  * Restituisce dimensione in byte
-public long length ()
+`public String getAbsolutePath ()`
+  * Restituisce dimensione in byte
+`public long length ()`
   * Controlla se il file può essere scritto
-public boolean canWrite()
+`public boolean canWrite()`
   * Controlla se il file può essere letto
-public boolean canRead ()
+`public boolean canRead ()`
 
 ---
 ### Contenuto di una directory
   * Restituisce l'array di stringhe contenenti I nomi
 dei file/direcotory nel direttorio corrente
-String [] list ()
+`String [] list ()`
 e.g.,
-String fileName[] = <x>.list ();
-for (int i=0; i<fileName.length; i++)
-System.out.println (filename[i]);
+`String fileName[] = <x>.list ();`
+`for (int i=0; i<fileName.length; i++)`
+`System.out.println (filename[i]);`
 

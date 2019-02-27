@@ -2,22 +2,28 @@
 
 ![factory](img/dao_pattern_uml_diagram.jpeg)
 
-Step 1
+---
+
+## Step 1
 
 Create an interface.
 
-Shape.java
-
+**Shape.java**
+```java
 public interface Shape {
    void draw();
 }
+```
 
-Step 2
+---
+
+## Step 2
 
 Create concrete classes implementing the same interface.
 
-Rectangle.java
+**Rectangle.java**
 
+```java
 public class Rectangle implements Shape {
 
    @Override
@@ -25,9 +31,11 @@ public class Rectangle implements Shape {
       System.out.println("Inside Rectangle::draw() method.");
    }
 }
+```
 
-Square.java
+**Square.java**
 
+```java
 public class Square implements Shape {
 
    @Override
@@ -35,9 +43,11 @@ public class Square implements Shape {
       System.out.println("Inside Square::draw() method.");
    }
 }
+```
 
-Circle.java
+**Circle.java**
 
+```java
 public class Circle implements Shape {
 
    @Override
@@ -45,13 +55,17 @@ public class Circle implements Shape {
       System.out.println("Inside Circle::draw() method.");
    }
 }
+```
 
-Step 3
+---
+
+## Step 3
 
 Create a Factory to generate object of concrete class based on given information.
 
-ShapeFactory.java
+**ShapeFactory.java**
 
+```java
 public class ShapeFactory {
 	
    //use getShape method to get object of type shape 
@@ -72,13 +86,17 @@ public class ShapeFactory {
       return null;
    }
 }
+```
 
-Step 4
+---
+
+## Step 4
 
 Use the Factory to get object of concrete class by passing an information such as type.
 
-FactoryPatternDemo.java
+**FactoryPatternDemo.java**
 
+```java
 public class FactoryPatternDemo {
 
    public static void main(String[] args) {
@@ -103,8 +121,11 @@ public class FactoryPatternDemo {
       shape3.draw();
    }
 }
+```
 
-Step 5
+---
+
+## Step 5
 
 Verify the output.
 

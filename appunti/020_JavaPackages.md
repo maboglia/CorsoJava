@@ -1,8 +1,5 @@
 # Package in Java
 
-
-
-
 ## Organizzazione delle classi
 * La libreria standard segue il metodo di
 organizzazione delle classi previsto da Java: le classi

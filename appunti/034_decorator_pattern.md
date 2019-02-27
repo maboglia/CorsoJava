@@ -1,19 +1,27 @@
-Step 1
+# decorator pattern
+
+---
+
+## Step 1
 
 Create an interface.
 
 Shape.java
-
+```java
 public interface Shape {
    void draw();
 }
+```
 
-Step 2
+---
+
+## Step 2
 
 Create concrete classes implementing the same interface.
 
 Rectangle.java
 
+```java
 public class Rectangle implements Shape {
 
    @Override
@@ -21,9 +29,11 @@ public class Rectangle implements Shape {
       System.out.println("Shape: Rectangle");
    }
 }
+```
 
 Circle.java
 
+```java
 public class Circle implements Shape {
 
    @Override
@@ -31,13 +41,17 @@ public class Circle implements Shape {
       System.out.println("Shape: Circle");
    }
 }
+```
 
-Step 3
+---
+
+## Step 3
 
 Create abstract decorator class implementing the Shape interface.
 
 ShapeDecorator.java
 
+```java
 public abstract class ShapeDecorator implements Shape {
    protected Shape decoratedShape;
 
@@ -49,13 +63,17 @@ public abstract class ShapeDecorator implements Shape {
       decoratedShape.draw();
    }	
 }
+```
 
-Step 4
+---
+
+## Step 4
 
 Create concrete decorator class extending the ShapeDecorator class.
 
 RedShapeDecorator.java
 
+```java
 public class RedShapeDecorator extends ShapeDecorator {
 
    public RedShapeDecorator(Shape decoratedShape) {
@@ -72,13 +90,17 @@ public class RedShapeDecorator extends ShapeDecorator {
       System.out.println("Border Color: Red");
    }
 }
+```
 
-Step 5
+---
+
+## Step 5
 
 Use the RedShapeDecorator to decorate Shape objects.
 
 DecoratorPatternDemo.java
 
+```java
 public class DecoratorPatternDemo {
    public static void main(String[] args) {
 
@@ -97,11 +119,15 @@ public class DecoratorPatternDemo {
       redRectangle.draw();
    }
 }
+```
 
-Step 6
+---
+
+## Step 6
 
 Verify the output.
 
+```java
 Circle with normal border
 Shape: Circle
 
@@ -112,3 +138,4 @@ Border Color: Red
 Rectangle of red border
 Shape: Rectangle
 Border Color: Red
+```
