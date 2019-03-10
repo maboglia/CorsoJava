@@ -43,7 +43,7 @@ Per esempio
 * Comparator<T>
   * int compare(T o1, T o2)
 
-Queste interfacce, già presenti in Java da molto tempo, possono essere definite interfacce funzionali. 
+Queste interfacce, già presenti in Java da molto tempo, possono essere definite interfacce funzionali.
 Da Java 8 si possono usare con tali interfacce le **Espressioni Lambda**
 
 ---
@@ -51,14 +51,16 @@ Da Java 8 si possono usare con tali interfacce le **Espressioni Lambda**
 ## Espressioni Lambda
 
 ```java
-Comparator<Utente> comparator = new COparator<Utente>(){
+Comparator<Utente> comparator = new Comparator<Utente>(){
     @Override
     public int compare(Utente u1, Utente u2){
         return u1.getId.compareTo(u2.getId());
     }
 };
 ```
+
 con le Lambda diventa
+
 ```java
 Comparator<Utente> comparator = (u1, u2) -> u1.getId.compareTo(u2.getId());
 ```
