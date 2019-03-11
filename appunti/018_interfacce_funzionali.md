@@ -77,6 +77,12 @@ Comparator<Utente> comparator = (u1, u2) -> u1.getId.compareTo(u2.getId());
 * Function<T, R>
   * R apply(T t)
 
+---
+
+![FunctionaInterface_01.png](./img/FunctionaInterface_01.png)
+
+---
+
 ### Esempio uso Predicate<T>
 
 ```java
@@ -91,6 +97,10 @@ Comparator<Utente> comparator = (u1, u2) -> u1.getId.compareTo(u2.getId());
         utenti.removeIf(utente->!utente.isAssente());
 
 ```
+
+---
+
+![FunctionaInterface_02.png](./img/FunctionaInterface_02.png)
 
 ---
 
@@ -118,3 +128,19 @@ Comparator<Utente> comparator = (u1, u2) -> u1.getId.compareTo(u2.getId());
     }
 
 ```
+
+---
+
+![FunctionaInterface_03.png](./img/FunctionaInterface_03.png)
+
+---
+### Esempio uso Supplier<T>
+
+![FunctionaInterface_04.png](./img/FunctionaInterface_04.png)
+
+---
+
+### Esempio uso Function<T, R>
+
+![FunctionaInterface_05.png](./img/FunctionaInterface_05.png)
+
