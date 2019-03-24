@@ -1,7 +1,8 @@
 # De Sio Cesari - Manuale di Java
 
+_manuali consigliati in italiano_
 
-## Modulo 1 - Introduzione a Java 7
+## Modulo 1 - Introduzione a Java
 * 1.1 Introduzione a Java
 * 1.1.1 Cosa è Java
 * 1.1.2 Breve storia di Java
