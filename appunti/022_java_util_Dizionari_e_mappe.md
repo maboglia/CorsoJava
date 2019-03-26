@@ -27,3 +27,10 @@ load(java.io.InputStream in)|Carica dal canale di input in un insieme di proprie
 Enumerations propertyNames()|Restituisce l'enumerazione dei nomi di ogni proprietà conservata nell'insieme.
 Object setProperty(String key,String value)	|Nel caso non esista una	proprietà chiamata key, la crea con valore value. In caso contrario, ne aggiorna semplicemente il valore. In caso di aggiornamento, il  vecchio valore viene restituito, altrimenti sarà ritornato null.
 void store(java.io.OutputStream out,String header)|Salva tutte le proprietà nel canale out, facendole precedere dall'intestazione header.
+
+## L'interfaccia enumeration stabilisce due metodi:
+
+1. `boolean hasMoreElements()`
+   Restituisce true fin quando ci sono elementi da esaminare.
+2. `Object nextElement()`
+   Restituisce l'elemento successivo.

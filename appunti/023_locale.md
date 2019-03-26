@@ -5,7 +5,7 @@ Occorre tener presente che, nella maggior parte dei casi, con internazionalizati
 
 
 
-#CLASSE LOCALE
+# CLASSE LOCALE
 
 ```java
 nomeLocale = new Locale("language", "country", ["variant"]);
@@ -63,7 +63,7 @@ Il metodo getBundle() per prima cosa cerca il file bundle specificato nel costru
 
 Per recuperare il testo memorizzato nel file di proprietà basta evocare il metodo getString() sull'oggetto ResourceBundle.
 
-```
+```java
 mioMessaggio = resourceBundle.getBundle("mioBundle", mioLocale);
 String testo = mioMessaggio.getString("header");
 System.out.println("testo");
@@ -87,8 +87,8 @@ public class Example {
 		String language;	 // stringa per il codice della lingua
 		String country;	 // stringa per il codice del paese
 
-		language = new String("en");
-		country = new String("US");
+		language = new String("it");
+		country = new String("IT");
 
 		Locale mioLocale;	 // dichiarazione Locale
 		Resourcebundle testo;	 // dichiarazione ResourceBundle
