@@ -2,14 +2,14 @@
 <!-- TOC -->
 
 - [1. Java Jax-RS maven archetype](#1-java-jax-rs-maven-archetype)
-  - [1.1. crea il progetto maven da CLI - linead i comando](#11-crea-il-progetto-maven-da-cli---linead-i-comando)
+  - [1.1. crea il progetto maven da CLI - linea di comando](#11-crea-il-progetto-maven-da-cli---linea-di-comando)
   - [1.2. fissa il problema delle dipendenze di javax con le nuove JDK](#12-fissa-il-problema-delle-dipendenze-di-javax-con-le-nuove-jdk)
   - [1.3. evitare l'errore sulla index.jsp](#13-evitare-lerrore-sulla-indexjsp)
   - [1.4. build con maven e run su tomcat](#14-build-con-maven-e-run-su-tomcat)
 
 <!-- /TOC -->
 
-## 1.1. crea il progetto maven da CLI - linead i comando
+## 1.1. crea il progetto maven da CLI - linea di comando
 
 ```java
 mvn archetype:generate -DarchetypeGroupId=org.glassfish.jersey.archetypes \
