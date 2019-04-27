@@ -97,8 +97,6 @@ I voti sono espressi con lettere: 'O' = ottimo
 'S' = sufficiente (6), 'I' = insufficiente (4).
 Scrivere un  programma che consenta il calcolo
 della media aritmetica dei voti di tale esame.
-Usare System.in.read() per le operazioni di
-input.
 
 ## Esercizio  
 Scrivere un programma per stampare 44 caratteri
