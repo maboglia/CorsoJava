@@ -1,22 +1,5 @@
-
-```java
-public class HelloWorld {
-public static void main ( String [] args ) {
-// visualizza un messaggio di saluto
-System.out.println ( " Hello World ! " );
-}
-}
-```
-
 # Espressioni aritmetiche
 
-Nel programma HelloWorld abbiamo usato il comando
-System.out.println() per stampare una stringa
-
-Possiamo in realtà stampare tanti altri tipi di valori
-Ad esempio, possiamo stampare il risultato di una espressione
-
-Consideriamo il seguente programma che calcola l'area di un triangolo di base 5 cm e altezza 10 cm
 
 ```java
 public class AreaTriangolo {
@@ -31,12 +14,12 @@ Il programma risolve l'espressione 5*10/2 e stampa il risultato a video
 
 ### Espressioni aritmetiche e precedenza
 
-Le espressioni aritmetiche più semplici sono costituite da singoli letterali
+singoli "letterali"
 
 * Letterali interi: 3425, 12, -34, 0, -4, 34, -1234, ....
 * Letterali frazionari: 3.4, 5.2, -0.1, 0.0, -12.45, 1235.3423, ....
 
-Espressioni più complesse si ottengono utilizzando operatori aritmetici
+operatori aritmetici
 
 * moltiplicazione *
 * divisione /

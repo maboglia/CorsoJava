@@ -1,4 +1,5 @@
-#Un metodo e' ...
+# Un metodo e' ...
+
 * Un  insieme  di   istruzioni   con un nome 
 * Uno  strumento  per  risolvere gradualmente i problemi  scomponendoli  in sottoproblemi
 * Uno strumento per strutturare  il codice
