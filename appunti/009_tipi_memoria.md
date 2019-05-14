@@ -31,6 +31,9 @@
 * Memorizzate in ogni istanza della classe
 * Create/inizializzate alla creazione di ogni istanza della classe
 
+---
+
+
 ## Variabili automatiche (locali)
 
 ### Dichiarate all'interno dei metodi
@@ -47,6 +50,9 @@
 * Memorizzate in aree statiche
 * Create/inizializzate al caricamento della classe
 
+---
+
+
 ## Static area
 
 ## Distruzione di Oggetti
@@ -57,6 +63,9 @@
 *  Garbage collector
   * Componente del Run Time che ha il compito di recuperare lo spazio nella memoria heap
   * Quando necessario (per esempio quando si esaurisce lo spazio disponibile in memoria principale) esegue un'analisi dei riferimenti e distrugge gli oggetti per i quali non esistono più riferimenti
+
+
+---
 
 
       
@@ -84,6 +93,9 @@ La memoria usata dalla JVM è concettualmente divisa in tre parti
 ## Nell’heap
 * per ogni oggetto creato vengono memorizzate le variabili d’istanza (ossia, le variabili non statiche)
 * ogni oggetto nell’heap contiene anche il nome della classe di appartenenza
+
+---
+
    
 ## Riferimenti (1)
 I riferimenti meritano un approfondimento.
@@ -119,7 +131,10 @@ Lo stesso discorso vale anche quando si passa un oggetto a un metodo come parame
 Viene passato il riferimento
 Ogni modifica fatta all’oggetto all’interno del metodo non viene persa alla quando il metodo termina (il chiamante vedrà l’oggetto modificato)
 Lo stesso discorso vale per gli array (gli array sono in realtà oggetti!)
-   
+  
+---
+
+ 
 ## Riferimenti (5)
 Una conseguenza del fatto che le variabili di tipo classe contengono riferimenti, è che l’opearatore di confronto == non si comporta (con gli oggetti) come uno si potrebbe aspettare...
 Infatti oggetto1 == oggetto2 vale true solo se oggetto1 e oggetto2 sono (riferimenti al) lo stesso oggetto.
@@ -140,7 +155,11 @@ Uno di questi è equals, e permette di confrontare due oggetti Lo abbiamo visto 
 Anche nelle proprie classi si pùo implementare tale metodo (vedremo...)
 ```java
         s1.equals(s2);
-```         
+```  
+
+---
+
+
 ## Garbage collection (1)
 Un’altra conseguenza del fatto che le operazioni (lettura, assegnamento, copia, ...) su variabili di tipo classe lavorino su riferimenti è che si possono ottenere oggetti orfani (privi di riferimenti).
 Ad esempio:

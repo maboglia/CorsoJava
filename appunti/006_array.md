@@ -12,6 +12,10 @@ list.length;
 int[] list = {1, 2, 3, 4};
 
 ```
+
+---
+
+
 **Array Multidimensionali**
 ```
 int[][] list = new int[10][10];
@@ -23,6 +27,10 @@ list[0].length;
 int[][] list = {{1, 2}, {3, 4}};
 
 ```
+
+---
+
+
 **Array irregolari**
 ```
 int[][] m = {{1, 2, 3, 4},
@@ -34,6 +42,9 @@ int[][] m = {{1, 2, 3, 4},
 {1}};
 
 ```
+
+---
+
 
 * Sequenze ordinate di
   * Tipi primitivi (int, float, etc.)
@@ -48,6 +59,9 @@ Non possono contenere oggetti (solo dati primitivi o reference a oggetti)
 ### In Java gli array sono Oggetti
 * Sono allocati nell'area di memoria riservata agli oggetti creati dinamicamente (heap)
 
+---
+
+
 ### Dimensione
 * Può essere stabilita a run-time (quando l'oggetto viene creato)
 * È fissa (non può essere modificata)
@@ -61,6 +75,9 @@ Non possono contenere oggetti (solo dati primitivi o reference a oggetti)
 
 ### La dichiarazione di un array non assegna alcuno spazio
 `voti == null`
+
+---
+
 
 ## Creazione di un Array
 
@@ -80,6 +97,9 @@ int[] voti;
 ...
 voti = new int[ARRAY_SIZE];
 ```
+
+---
+
 
 *  Con valore definito a run-time
 ```java
@@ -114,6 +134,9 @@ for (int i=0; i<voti.length; i++)
 voti[i] = i;
 ```
 
+---
+
+
 ### In Java viene fatto il bounds checking
 
 * Maggior sicurezza
@@ -137,6 +160,9 @@ voti[1] = new Integer (2);
 ...
 voti[4] = new Integer (5);
 ```
+
+---
+
 
 ## Array Multi-dimensionali (Matrici)
 
@@ -175,6 +201,9 @@ L'array è una struttura dati efficiente ogni volta che il numero di elementi è
 
 * Type-checking
 * Bound-checking
+
+---
+
 
 ### Ri-dimensionamento poco efficiente
 

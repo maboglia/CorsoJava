@@ -1,5 +1,8 @@
 # Le Variabili
 
+
+---
+
 ## Variabili
 
 * Una variabile è un'area di memoria identificata da un nome
@@ -9,6 +12,9 @@
 * può essere costituito da lettere, numeri e underscore 
 * non deve coincidere con una parola chiave del linguaggio
 * è meglio scegliere un identificatore che sia significativo per il programma
+
+
+---
 
 ### esempio
 
@@ -32,6 +38,9 @@ Usando le variabili il programma risulta essere più chiaro:
 * Si capisce meglio quali siano la base e l'altezza del triangolo
 * Si capisce meglio che cosa calcola il programma
 
+
+---
+
 ### Dichiarazione
 
 * In Java ogni variabile deve essere dichiarata prima del suo uso
@@ -42,6 +51,9 @@ Usando le variabili il programma risulta essere più chiaro:
 
 __ATTENZIONE!__ Ogni variabile deve essere dichiarata UNA SOLA VOLTA
 (la prima volta che compare nel programma)
+
+
+---
 
 ### Assegnamento
 
@@ -58,6 +70,9 @@ area = base * altezza /2;
 * I valori di base e altezza vengono letti e usati nell'espressione
 * Il risultato dell'espressione viene scritto nella variabile area
 
+
+---
+
 ### Dichiarazione + Assegnamento
 
 Prima di poter essere usata in un'espressione una variabile deve:
@@ -72,6 +87,9 @@ int base =5;
 int altezza =10;
 int area = base * altezza /2;
 ```
+
+
+---
 
 ## Costanti
 
@@ -89,11 +107,17 @@ final double tasso =0.05;
  può anche eseguire delle ottimizzazioni sull'uso di tale variabile.
 
 
+
+---
+
 ### Input dall'utente
 
 * Per ricevere valori in input dall'utente si può usare la classe Scanner, contenuta nel package **java.util**
 
 * 
+
+---
+
 ### Input dall'utente
 
 * La classe Scanner deve essere richiamata usando la direttiva import prima dell'inizio del corpo della classe

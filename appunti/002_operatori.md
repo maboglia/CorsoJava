@@ -19,6 +19,9 @@ aritmetici, relazionali, di assegnazione
 
 **I caratteri sono considerati interi**
 
+---
+
+
 **Assignment Operators**
 * Di assegnazione: = += -= *= /= &= |= ^=
 * Di assegnazione/incremento: ++ -- %=
@@ -31,6 +34,9 @@ aritmetici, relazionali, di assegnazione
 | \*=       | multiplication assignment |
 | /=        | division assignment       |
 | %=        | remainder assignment      |
+
+---
+
 
 **Arithmetic Operators**
 * Aritmetici: + - * / %
@@ -46,6 +52,9 @@ aritmetici, relazionali, di assegnazione
 | \--var    | predecrement   |
 | var++     | postincrement  |
 | var--     | postdecrement  |
+
+---
+
 
 **Relational Operators**
 * Relazionali: == != > < >= <=

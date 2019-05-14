@@ -13,6 +13,9 @@
 | Array                 | Gestione File - I/O          | Design Patterns        | Ajax-JSON-XML     |
 | Strutture dati        | Stream - I/O                 | MVC Pattern            | Networking Java   |
 
+---
+
+
 ## Java Concepts
 
 | n.  | titolo                                                             |

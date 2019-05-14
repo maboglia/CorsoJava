@@ -12,6 +12,9 @@ System.out.println (5*10/2);
 Il programma risolve l'espressione 5*10/2 e stampa il risultato a video
 
 
+---
+
+
 ### Espressioni aritmetiche e precedenza
 
 singoli "letterali"
@@ -32,6 +35,9 @@ Le operazioni sono elencate in **ordine decrescente di priorità** ossia 3+2*5 
 Le parentesi tonde cambiano l'ordine di valutazione degli operatori ossia (3+2)*5 fa 25
 
 Inoltre, tutti gli operatori sono associativi a sinistra ossia 3+2+5 corrisponde a (3+2)+5 quindi 18/6/3 fa 1, non 9
+
+---
+
 
 ### operazione di divisione
 

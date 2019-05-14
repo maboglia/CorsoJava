@@ -30,6 +30,9 @@ statements;
 
 ```
 
+---
+
+
 **switch Statements**
 
 ```java
@@ -56,6 +59,9 @@ statements;
 }
 ```
 
+---
+
+
 **loop Statements**
 ```java
 
@@ -79,6 +85,9 @@ statements;
 }
 ```
 
+---
+
+
 ## Cicli definiti
 
 Se il numero di iterazioni è prevedibile dal contenuto delle variabili all'inizio del ciclo.
@@ -91,6 +100,10 @@ for (int i=0; i<n; ++i) {
 }
 
 ```
+
+---
+
+
 ## Cicli indefiniti
 
 Se il numero di iterazioni non è noto all'inizio del ciclo.
@@ -103,6 +116,10 @@ while(true) {
 }
 
 ```
+
+---
+
+
 ## Cicli annidati
 
 Se un ciclo appare nel corpo di un altro ciclo.
@@ -115,6 +132,10 @@ for (int i=0; i<n; i++) {
 }
 
 ```
+
+---
+
+
 ## Cicli con filtro
 
 Vengono passati in rassegna un insieme di valori e per ognuno di essi viene fatto un test per verificare se il valore ha o meno una certa proprietà in base alla quale decideremo se prenderlo in considerazione o meno.
@@ -127,6 +148,10 @@ for (int i=1; i<100; ++i) { // passa in rassegna tutti i numeri fra 1 e 100
 }
 
 ```
+
+---
+
+
 ## Cicli con filtro e interruzione
 
 Se il ciclo viene interrotto dopo aver filtrato un valore con una data proprietà.
@@ -142,6 +167,10 @@ for (int i=0; i<v.length; ++i) // passa in rassegna tutti gli indici dell'array 
 // qui trovato vale true se e solo se vi sono numeri negativi in v
 
 ```
+
+---
+
+
 ## Cicli con accumulatore
 
 Vengono passati in rassegna un insieme di valori e ne viene tenuta una traccia cumulativa usando una opportuna variabile.
@@ -162,6 +191,10 @@ for (int i=0; i<s.length(); ++i) { // passa in rassegna tutti gli indici dei car
 }
 
 ```
+
+---
+
+
 ## Cicli misti
 
 Esempio di ciclo definito con filtro e accumulatore: calcola la somma dei soli valori positivi di un array

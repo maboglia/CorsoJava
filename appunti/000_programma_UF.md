@@ -5,6 +5,9 @@
 
 ## Unità formative
 
+---
+
+
 ## Lab 1 
 
 * [Fondamenti di programmazione](https://github.com/maboglia/Fondamenti) 
@@ -25,6 +28,9 @@
 
 
 --------------------
+
+---
+
 
 ## Lab 2 
 
@@ -60,6 +66,9 @@ __OPERATORI DI BASE__
 * Esercizi sui tipi e sui metodi ausiliari
 * primo esempio classe Studente
 
+---
+
+
 ## Lab 3 
 
 **INTRODUZIONE ALLA LIBRERIA STANDARD** 
@@ -85,6 +94,9 @@ __OPERATORI DI BASE__
 
 * esercizi sulle stringhe
 * **Esercizi sul Flusso di lavoro del programma** 
+
+
+---
 
 
 ## Lab 4 
@@ -114,6 +126,9 @@ __OPERATORI DI BASE__
   * array elenco allievi 
   * scorro elenco allievi utilizzando un ciclo for
   * gestione base di possibili errori/eccezioni: if
+
+---
+
 
 ## Lab 5 
 
@@ -156,6 +171,9 @@ Classi istanziabili
 * gioco - rock, scissors, paper
 
 
+---
+
+
 ## Lab 6 
 
 **Ereditarietà in Java**
@@ -169,6 +187,9 @@ Classi istanziabili
 * Esercizi
   * dato il main di una classe NegozioTester, sviluppare le classi Negozio e Prodotto
   * dato il main di una classe AutomobileTester, sviluppare le classi Automobile e Guidatore
+
+
+---
 
 
 ## Lab 7 
@@ -191,6 +212,9 @@ Classi istanziabili
   * ereditarietà, 
   * late binding
 
+---
+
+
 ## Lab 8 
 
 * proviamo un altro IDE: IntelliJIdea
@@ -211,6 +235,9 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 * progetto negozio alimentari, come da specifiche
 
+
+---
+
 			
 ## Lab 9 
 
@@ -221,6 +248,9 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ### codice Lab9
 * esempio classificazione animali, mammiferi
+
+---
+
 
 ## Lab 10 
 
@@ -242,6 +272,9 @@ esercizio: lettura file canto 1 inferno
   * hashmap
 
 
+---
+
+
 ## Lab 11
  
 * la classe Collections
@@ -253,11 +286,17 @@ esercizio: lettura file canto 1 inferno
 * esempio aula, con collezioni e scrittura su file
 
 
+---
+
+
 ## Lab 12
 
 * [introduzione JSP](058_JSP_1.md)
 *	Hello World JSP 
 *	NetBeans e Eclipse, GlassFish e TomCat
+
+
+---
 
 
 ## Lab 13
@@ -280,6 +319,9 @@ esercizio: lettura file canto 1 inferno
 
 * Verifica OCA Java - 2: statements e costrutti del linguaggio
 
+---
+
+
 ## Lab 14
 
 ### Elementi Sintassi JAVA
@@ -299,6 +341,9 @@ esercizio: lettura file canto 1 inferno
 * mostra nascondi sezioni
 		
 
+---
+
+
 ## Lab 15
 
 	
@@ -306,6 +351,9 @@ esercizio: lettura file canto 1 inferno
 * MVC: client-side JS su progetto Negozio JSP
 * MVC: client-side JQuery su progetto Negozio JSP
 	
+
+---
+
 
 ## Lab 16
 
@@ -315,11 +363,17 @@ esercizio: lettura file canto 1 inferno
 	
 
 
+---
+
+
 ## Lab 17
 
 * java: Jsp standard action
 * progetto MVC MyShop
 	
+
+
+---
 
 
 ## Lab 18
@@ -335,6 +389,9 @@ esercizio: lettura file canto 1 inferno
 	* factory
 	* mvc
 	* dao
+
+
+---
 
 
 ## Lab 19
@@ -358,6 +415,9 @@ esercizio: lettura file canto 1 inferno
 
 
 
+---
+
+
 ## Lab 20
 
 ### Elementi Sintassi JAVA
@@ -370,6 +430,9 @@ esercizio: lettura file canto 1 inferno
 
 
 
+---
+
+
 ## Lab 21
 
 ### Elementi Sintassi JAVA
@@ -378,6 +441,9 @@ esercizio: lettura file canto 1 inferno
 * MVC
 * JSP + Database
 	
+
+
+---
 
 
 ## Lab 22

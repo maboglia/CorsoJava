@@ -16,6 +16,9 @@ memoria
 * la p o r t a b i l i t à , cioè la capacità di un programma di poter essere eseguito su piattaforme diverse senza dover
 essere e modificato e ricompilato
 
+---
+
+
 ## Caratteristiche di Java
 
 * Semplice e familiare
@@ -34,6 +37,9 @@ essere e modificato e ricompilato
 
 * Multi-thread
 
+---
+
+
 ## Semplice e familiare
 
 * Basato su C
@@ -47,6 +53,9 @@ essere e modificato e ricompilato
 * Semplificazione della programmazione
 
 * Riduzione del numero di errori
+
+---
+
 
 ## Orientato a oggetti
 
@@ -72,6 +81,9 @@ essere e modificato e ricompilato
 
 
 
+---
+
+
 ## Indipendente dalla piattaforma
 
 
@@ -84,6 +96,9 @@ essere e modificato e ricompilato
 
 * Linguaggio macchina bytecodes
 
+
+
+---
 
 
 ## Interpretato
@@ -106,6 +121,9 @@ essere e modificato e ricompilato
 
 
 
+---
+
+
 ## sicuro
 
 
@@ -122,6 +140,9 @@ essere e modificato e ricompilato
 
 
 
+---
+
+
 ## Robusto
 
 
@@ -134,6 +155,9 @@ essere e modificato e ricompilato
 
 * Il controllo del codice avviene sia a tempo di compilazione sia a tempo di esecuzione (runtime)
 
+
+
+---
 
 
 ## Distribuito e dinamico
@@ -154,6 +178,9 @@ essere e modificato e ricompilato
 
 
 
+
+
+---
 
 
 ## Multi-thread

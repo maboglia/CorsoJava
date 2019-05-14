@@ -6,6 +6,9 @@
 
 * mostrare come, una volta creata una classe possiamo creare oggetti di questa classe e utilizzarli
 
+---
+
+
 ### Java è un linguaggio orientato agli oggetti
 
 * Java è un linguaggio orientato agli oggetti in cui quasi tutto è un oggetto
@@ -20,6 +23,9 @@
 
 * In Java quasi tutto è un oggetto, ci sono solo due eccezioni: le variabili semplici e gli array
 
+---
+
+
 ### Le classi in Java
 
 * Il primo passo per definire una classe in Java è creare un file che deve chiamarsi esattamente come la classe e con estensione .java
@@ -33,6 +39,9 @@
 * Costruttore: metodo che si utilizza per inizializzare un oggetto
 
 * Metodi: sono utilizzati per modificare o consultare lo stato di un oggetto. Sono equivalenti alle funzioni o procedimenti di altri linguaggi di programmazione
+
+---
+
 
 ### Struttura di una classe
 
@@ -65,6 +74,9 @@ System.out.println("Hello World");
 
 * Implementazione: definita creando alcuni determinati attributi e scrivendo il codice dei differenti metodi
 
+---
+
+
 ### Incapsulamento
 
 * L’incapsulamento consiste nell’occultamento degli attributi di un oggetto in modo che possano essere manipolati solo attraverso metodi appositamente implementati
@@ -85,6 +97,9 @@ System.out.println("Hello World");
 
 * Se non indichiamo la v.: sono accessibili solo dalle classi del nostro pacchetto
 
+---
+
+
 ### Accesso agli attributi della classe
 
 * Gli attributi di una classe sono strettamente relazionati con la sua implementazione. Conviene contrassegnarli come private e impedirne l’accesso dall’esterno
@@ -93,12 +108,15 @@ System.out.println("Hello World");
 
 * In pratica:
 
-class NomeClasse{
-   private double nome1, nome2;
+`class NomeClasse{
+   private double nome1, nome2;`
 
 * Non permettiamo di accedere agli attributi perciò risulta impossibile consultarli e modificarli
 
 * Soluzione: creare i metodi getter e setter
+
+---
+
 
 Metodi **getter e setter**
 
@@ -122,6 +140,9 @@ Un linguaggio di programmazione __ORIENTATO AGLI OGGETTI__ (tipo Java) fornisce 
 * Una classe definisce un insieme di oggetti (conti bancari, dipendenti, automobili, rettangoli, ecc...).
 * Un oggetto è una struttura dotata di:
 proprie variabili (che rappresentano il suo stato) propri metodi (che realizzano le sue funzionalità)
+
+
+---
 
 
 ## Uso di classi
@@ -149,6 +170,9 @@ classe pronta all’uso i passi da seguire sono:
 	* La classe è istanziabile o non istanziabile ?
 	* Se è istanziabile , come creo le istanze ?
 	* Quali metodi mi servono e come li uso ?
+
+---
+
 
 ## Classi e documentazione
 * La libreria Java standard è accompagnata da
@@ -181,6 +205,9 @@ quindi risultati diversi prodotti dai metodi)
 * L’uso tipico è la costruzione di istanze (tramite
 new) e quindi l’invocazione di metodi su di esse
 
+---
+
+
 ## Classi non istanziabili
 * Una classe non istanziabile contiene un
 insieme di metodi (ed eventualmente
@@ -203,6 +230,9 @@ e attributi tutti static ) ma non avrebbe senso pratico
 natura (astratte) sulle quali non è tecnicamente
 possibile usare l’operatore new
 
+---
+
+
 ## Istanziabili vs. non istanziabili
 * La stragrande maggioranza delle classi è
 istanziabile ma l’esistenza di alcune classi non
@@ -224,6 +254,9 @@ un nuovo insieme di attributi e metodi individuali
 * Nel caso di una classe non istanziabile attributi e
 metodi sono “unici” a livello della classe (non esistono
 istanze diversificate)
+
+---
+
 
 ## Classi non istanziabili
 * Una classe non istanziabile rappresenta
@@ -254,6 +287,9 @@ MATH.PI //3.1415
 
 ```
 
+---
+
+
 ## Classi istanziabili
 
 Una classe istanziabile rappresenta “qualcosa”
@@ -266,6 +302,9 @@ String è istanziabile )
 istanziabile )
 – esistono molte persone (un’ipotetica classe
 Persona è istanziabile )
+
+---
+
 
 ## Riconoscere una classe istanziabile
 
@@ -281,6 +320,9 @@ interni)
 sono definiti a livello di istanza
 * Nel caso di classi non istanziabili attributi e
 metodi sono definiti a livello di classe
+
+---
+
 
 
 ## Operazioni su istanze
@@ -304,6 +346,9 @@ metodi sono definiti a livello di classe
 * Il rapporto variabili - oggetti riferiti è dinamico, il riferimento iniziale non necessariamente rimane legato all’oggetto per tutta la sua esistenza
 * Se un oggetto non è (più) riferito da nessuna variabile diventa irraggiungibile (e quindi interviene il garbage collector)
 
+---
+
+
 ## Operazioni su istanze
 * Le principali operazioni che si possono effettuare sulle variabili che riferiscono istanze di una classe sono:
 	* assegnamento
@@ -323,6 +368,7 @@ p.e. saluto3 != null
 * Il metodo booleano equalsIgnoreCase fa lo stesso senza distinguere maiuscole/minuscole
 
 
+---
 
 
 ## Operazioni su istanze
@@ -345,6 +391,9 @@ ricevere in ingresso da chi lo invoca
 	* un nome
 	* un tipo
 
+---
+
+
 
 ## Invocazione di metodi
 * L’invocazione di un metodo non static su un
@@ -366,6 +415,9 @@ metodi (tutti static ovviamente)
 70 metodi di cui 13 static
 * La classe StringBuffer è “ istanziabile pura” e
 contiene 53 metodi (nessuno static ovviamente)
+
+---
+
 
 ## La ricerca del metodo
 * Capire se esistono una classe e/o un metodo

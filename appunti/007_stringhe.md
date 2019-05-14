@@ -13,6 +13,9 @@ Caratteristiche principali
 * Character
 * CharacterSet
 
+---
+
+
 ## Classe String
 
 ### Definizione
@@ -43,6 +46,9 @@ confrontare i riferimenti
 `System.out.println ("pi Greco = " + 3.14);`
 `System.out.println ("x = " + x);`
 
+---
+
+
 ### Lunghezza stringa
 * int length()
   * myString.length()
@@ -67,6 +73,9 @@ confrontare i riferimenti
 ### Trasforma int in String
 * String valueOf (int)
 * Disponibile per tutti tipi primitivi
+
+---
+
 
 ### Restituisce indice prima occorrenza di c
 * int indexOf (char c)

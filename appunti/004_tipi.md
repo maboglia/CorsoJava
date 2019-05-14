@@ -4,12 +4,18 @@
 
 [Esempi gist](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3)
 
+
+---
+
 ## Tipo primitivo
 
 
 
 * In un linguaggio ad oggetti puro, vi sono solo classi e istanze di classi:
 * i dati dovrebbero essere definiti sotto forma di oggetti
+
+
+---
 
 ## Java definisce alcuni tipi primitivi
 
@@ -19,6 +25,9 @@
 * (e.g, i == 0) 
 * Ne vengono definiti dimensioni e codifica
 * Rappresentazione indipendente dalla piattaforma
+
+
+---
 
 ## Tipi primitivi
 
@@ -33,6 +42,9 @@
 * void
 
 
+
+---
+
 ###  I tipi numerici, i char
 
 *  Esempi
@@ -44,12 +56,18 @@
 * `'\123'` (\ introduce codice ASCII)
 
 
+
+---
+
 ### Tipo boolean
 * Esempi
 true
 false
 
 
+
+
+---
 
 ## Esempi
 
