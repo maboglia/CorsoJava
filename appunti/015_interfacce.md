@@ -13,6 +13,9 @@ completamente astratta, cioè del tutto priva della parte di implementazione
 * Presenta maggior flessibilità rispetto all'ereditarietà di una classe astratta
 
 
+---
+
+
 Si può pensare a un'interfaccia come a una classe astratta
 che ha tutti e soli metodi astratti (ci sono però differenze).
 
@@ -31,6 +34,9 @@ public interface NomeInterfaccia
 }
 ```
 
+---
+
+
 Si utilizza la parola chiave interface anzichè class
 
 I metodi sono implicitamente pubblici e astratti, non bisogna indicarlo
@@ -45,6 +51,9 @@ public class NomeClasse implements NomeInterfaccia
   //codice relativo alla classe
 }
 ```
+
+---
+
 
 Tale classe deve implementare tutti i metodi elencati nell'interfaccia.
 ---
@@ -68,6 +77,9 @@ Posso dichiarare variabili del tipo dell'interfaccia e,
 sfruttando il polimorfismo, assegnargli oggetti di classi che
 implementano tali interfacce.
 
+---
+
+
 ```java
 public interface NomeInterfaccia {
 int metodo1( );
@@ -80,6 +92,10 @@ int metodo1( ) {
 NomeInterfaccia a = new NomeClasse ( );
 ```
 ---
+
+---
+
+
 ## TIpi di interfacce
 
 * Normali

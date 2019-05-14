@@ -18,6 +18,9 @@ b) Creiamo una nuova classe che erediti da Geopunto:
 
 ```NuovoGeopunto {Geopunto + attributo: altitudine}```
 
+---
+
+
 ### Estendere la classe
 
 ### Quando utilizzare l’ereditarietà

@@ -24,6 +24,9 @@ concretamente a livello di classe
 * Esiste in un’unica versione
 * La sua esistenza non dipende da cosa fa il programma
 
+---
+
+
 
 ### Una classe non istanziabile 
 * non contiene nessun costruttore esplicito
@@ -42,6 +45,9 @@ segue le proprie regole
 * Salvo rari casi, è sconsigliabile realizzare
 classi istanziabili ibride (sono accettabili
 attributi costanti definiti come static )
+
+---
+
 
 ## Accesso a metodi e attributi static
 * Essendo definiti a livello di classe, attributi e metodi
@@ -62,6 +68,9 @@ nomeIstanza.nomeMetodoStatic (...)
 nomeIstanza.nomeAttributoStatic
 ```
 
+---
+
+
 ## Accesso a metodi e attributi non static
 * La sintassi è simile al caso precedente, ma
 ovviamente l’accesso/invocazione è possibile solo
@@ -78,6 +87,9 @@ classe
 * Se nel corpo di un metodo appare il nome di un metodo
 o attributo static della sua classe è sottinteso che sia
 preceduto dal nome della classe stessa
+
+---
+
 
 ## Accesso ad attributi e metodi della propria classe
 * Se nel corpo di un metodo (non static ) appare il nome

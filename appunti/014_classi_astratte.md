@@ -13,6 +13,9 @@ abstract void stampa();
 
 Un metodo astratto è un metodo di cui non viene specificata l'implementazione
 
+---
+
+
 
 ### Una classe astratta
 * È una classe non completamente definita
@@ -33,6 +36,9 @@ generica che la si può pensare come una base per le altre
 classi piuttosto che come una classe di cui creare un
 oggetto.
 
+---
+
+
 ### METODO ASTRATTO
 
 Voglio obbligare tutte le sottoclassi di una classe A ad avere
@@ -50,6 +56,9 @@ Le Classi Astratte, oltre ad avere Metodi Astratti, possono avere
  metodi ed attributi *normali*.
 
 Se una classe è astratta, non posso istanziarla.
+
+---
+
 
 **NON POSSO CREARE OGGETTI DI UNA CLASSE ASTRATTA**
 

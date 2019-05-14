@@ -20,6 +20,9 @@
 
 * In Java quasi tutto è un oggetto, ci sono solo due eccezioni: le variabili semplici e gli array
 
+---
+
+
 ### Le classi in Java
 
 * Il primo passo per definire una classe in Java è creare un file che deve chiamarsi esattamente come la classe e con estensione .java
@@ -35,6 +38,9 @@
 * Metodi: sono utilizzati per modificare o consultare lo stato di un oggetto. Sono equivalenti alle funzioni o procedimenti di altri linguaggi di programmazione
 
 ### Struttura di una classe
+
+
+---
 
 
 ```java
@@ -65,6 +71,9 @@ System.out.println("Hello World");
 
 * Implementazione: definita creando alcuni determinati attributi e scrivendo il codice dei differenti metodi
 
+---
+
+
 ### Incapsulamento
 
 * L’incapsulamento consiste nell’occultamento degli attributi di un oggetto in modo che possano essere manipolati solo attraverso metodi appositamente implementati
@@ -85,6 +94,9 @@ System.out.println("Hello World");
 
 * Se non indichiamo la v.: sono accessibili solo dalle classi del nostro pacchetto
 
+---
+
+
 ### Accesso agli attributi della classe
 
 * Gli attributi di una classe sono strettamente relazionati con la sua implementazione. Conviene contrassegnarli come private e impedirne l’accesso dall’esterno
@@ -99,6 +111,9 @@ class NomeClasse{
 * Non permettiamo di accedere agli attributi perciò risulta impossibile consultarli e modificarli
 
 * Soluzione: creare i metodi getter e setter
+
+---
+
 
 Metodi **getter e setter**
 
