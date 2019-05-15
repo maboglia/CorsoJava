@@ -66,9 +66,6 @@ false
 
 
 
-
----
-
 ## Esempi
 
 ```java
@@ -83,6 +80,9 @@ boolean isGood = false;
 char ch = 'a';
 char ch2 = ';';
 ```
+
+---
+
 
 ```java
 
