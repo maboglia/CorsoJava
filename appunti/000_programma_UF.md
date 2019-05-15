@@ -31,7 +31,6 @@
 
 ---
 
-
 ## Lab 2 
 
 __LE VARIABILI IN JAVA__ 
@@ -49,7 +48,10 @@ __TIPI DI DATI PRIMITIVI__
 * Tipo di dato logico - booleano 
 * Tipo di dato primitivo letterale
 
+---
+
 __OPERATORI DI BASE__ 
+
 * Operatore d'assegnazione 
 * Operatori aritmetici 
 * Operatori (unari) di pre e post-incremento (e decremento) 
@@ -67,7 +69,6 @@ __OPERATORI DI BASE__
 * primo esempio classe Studente
 
 ---
-
 
 ## Lab 3 
 
@@ -88,36 +89,33 @@ __OPERATORI DI BASE__
 	* Cicli for migliorato 
 	* Il costrutto switch
 
-
-
 ### codice Lab3
 
 * esercizi sulle stringhe
 * **Esercizi sul Flusso di lavoro del programma** 
 
-
 ---
-
 
 ## Lab 4 
 
-**IDENTIFICATORI, TIPI DI DATI ED ARRAY** 
+**IDENTIFICATORI E TIPI DI DATO** 
+
+* Schema Libero
+* Case sensitive 
+* Commenti
+* Regole per gli identificatori 
+
+---
+
+**ARRAY** 
 
 * Gli array in Java 
   * Dichiarazione 
   * Creazione 
   * Inizializzazione
-* Schema Libero
-* Case sensitive 
-* Commenti
-* Regole per gli identificatori 
 * Array (vettori semplici, monodimensionali) 
 * Array Multidimensionali 
-* Limiti degli array in JAVA
-  * dimensione prefissata
-* creare e gestire array di stringhe all'interno del codice sorgente 
-
-
+* Limiti degli array in JAVA: dimensione prefissata
 
 ### codice Lab4
 
@@ -146,17 +144,19 @@ __OPERATORI DI BASE__
   * @override toString() (solo in caso di extends)
 
 
-
 **I METODI COSTRUTTORI** 
 * Caratteristiche di un costruttore
 * Costruttore di default
 * Package
 
+---
 
-La classe Math
-* uso una classe con metodi statici
+## La classe Math
+
+* uso di una classe con metodi statici
 * accedere a proprietà e metodi senza istanziare nuovi oggetti 
-Classi istanziabili
+
+## Classi istanziabili
 * tipo di utilizzo classe
   * creo oggetto, 
   * attraverso l'oggetto, con l'opertore dot (.) accedo ai suoi metodi e variabili 
@@ -170,9 +170,7 @@ Classi istanziabili
 * esercitazione luoghi e figure geometriche
 * gioco - rock, scissors, paper
 
-
 ---
-
 
 ## Lab 6 
 
@@ -180,8 +178,6 @@ Classi istanziabili
 * Teoria:
   * Class design: diversi ruoli degli oggetti/attori del progetto
   * diverse classi con differenti relazioni tra esse
-
-
 
 ### codice Lab6
 * Esercizi

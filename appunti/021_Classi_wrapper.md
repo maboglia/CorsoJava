@@ -41,6 +41,7 @@ Boolean z = Boolean.parseBoolean("true");
 
 Occorreva prima creare un nuovo oggetto di una classe wrapper.
 Le stesse operazioni precedenti possono essere ora eseguite mediante il seguente codice.
+
 ```java
 
 Integer x = 10;
@@ -86,6 +87,7 @@ char c = s.charAt (0);
 ...
 
 ### Predicati vari
+
 * boolean isLetter (char c)
 * boolean isDigit (char c)
 * boolean isLetterOrDigit (char c)

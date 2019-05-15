@@ -57,19 +57,19 @@ I più importanti metodi di cui sono dotati gli oggetti di tipo String.
 --------------------------------------------------------------------------------------
 Tipo restituito|Metodi e parametri|Descrizione
 ---|----|---
-int|charAt(int i)|		Restituisce il carattere alla posizione i.
-boolean|endsWith(String s)	|	Restituisce true se l'oggetto di invocazione termina con la sottostringa s.
-boolean|equals(String s)	|	Restituisce true quando l'oggetto di invocazione e s rappresentano la medesima sequenza.
-int|indexOf(char c)	|		Restituisce la prima posizione del carattere c, oppure -1 nel caso tale carattere non faccia parte della stringa.
-int|indexOf(char c, int i)	|	Come il precedente, con la differenza che la ricerca del carattere c prende piede dalla posizione i.
-int|indexOf(String s)	|	Restituisce la prima posizione della sottostringa s, oppure -1 nel caso tale sottostringa non compaia nell'oggetto di invocazione.
+int|charAt(int i)|Restituisce il carattere alla posizione i.
+boolean|endsWith(String s)	|Restituisce true se l'oggetto di invocazione termina con la sottostringa s.
+boolean|equals(String s)	|Restituisce true quando l'oggetto di invocazione e s rappresentano la medesima sequenza.
+int|indexOf(char c)	|Restituisce la prima posizione del carattere c, oppure -1 nel caso tale carattere non faccia parte della stringa.
+int|indexOf(char c, int i)	|Come il precedente, con la differenza che la ricerca del carattere c prende piede dalla posizione i.
+int|indexOf(String s)	|Restituisce la prima posizione della sottostringa s, oppure -1 nel caso tale sottostringa non compaia nell'oggetto di invocazione.
 int|indexOf(String s, int i)	|Come il precedente, con la differenza che la ricerca della sottostringa s prende piede dalla posizione i.
-int|length()	|		Restituisce la lunghezza della stringa.
+int|length()	|Restituisce la lunghezza della stringa.
 String|replace(char c1, char c2)	|Restituisce una nuova stringa, ottenuta dall'oggetto di invocazione sostituendo il carattere c2 ad ogni occorrenza del carattere c1.
-boolean|starsWith(String s)	|	Restituisce true se l'oggetto di invocazione inizia con la sottostringa s.
-String|toLowerCase()	|		Restituisce una nuova stringa, ottenuta traslando verso il minuscolo ogni carattere dell'oggetto di invocazione.
-String|toUpperCase()	|		Restituisce una nuova stringa, ottenuta traslando verso il maiuscolo ogni carattere dell'oggetto di invocazione.
-String|trim()	|			Restituisce una nuova stringa, ottenuta dall'oggetto di invocazione eliminando gli spazi che precedono il primo carattere significativo e quelli che seguono l'ultimo. In pratica, " ciao ".trim() restituisce "ciao".
+boolean|starsWith(String s)	|Restituisce true se l'oggetto di invocazione inizia con la sottostringa s.
+String|toLowerCase()	|Restituisce una nuova stringa, ottenuta traslando verso il minuscolo ogni carattere dell'oggetto di invocazione.
+String|toUpperCase()	|Restituisce una nuova stringa, ottenuta traslando verso il maiuscolo ogni carattere dell'oggetto di invocazione.
+String|trim()	|Restituisce una nuova stringa, ottenuta dall'oggetto di invocazione eliminando gli spazi che precedono il primo carattere significativo e quelli che seguono l'ultimo. In pratica, " ciao ".trim() restituisce "ciao".
 
 
 
@@ -193,38 +193,31 @@ System.out.println(st.nextToken());
 System.out.println(st.nextElement().toString());
 }
 ```
-La classe StringTokenizer fornisce un basilare scanner per
-l'interpretazione del testo. Tramite essa, � possibile
-prendere in esame una stringa, spezzandola in pi� parti
-(token) secondo determinate regole. StringTokenizer implementa
-l'interfaccia Enumeration, in modo che i singoli token in cui
-viene scomposta una stringa possano essere sfogliati in
-maniera classica e semplice. 
-La seguente tabella riporta i  membri pubblici della classe
-StringTokenizer.
 
-Costruttori pubblici:
 
-..|..
+### Costruttori pubblici:
+
+Costruttore|definizione
 ---|---
-StringTokenizer(String str)|	Costruisce uno StringTokenizer per la tsringa str, che come delimitatori usa i caratteri "\t\n\r\f".
+StringTokenizer(String str)|Costruisce uno StringTokenizer per la stringa str, che come delimitatori usa i caratteri "\t\n\r\f".
 StringTokenizer(String str,	String delim)|  Costruisce uno StringTokenizer per la stringa str, che come delimitatori usa i caratteri contenuti nella stringa delim.
-StringTokenizer(String str,	String delim, boolean returnDelims)|	Costruisce uno StringTokenizer per la stringa str, che come delimitatori usa i caratteri contenuti nella stringa delim. Se returnDelims � true, i caratteri divisori verranno restituiti come token.
+StringTokenizer(String str,	String delim, boolean returnDelims)|Costruisce uno StringTokenizer per la stringa str, che come delimitatori usa i caratteri contenuti nella stringa delim. Se returnDelims � true, i caratteri divisori verranno restituiti come token.
 
 Metodi pubblici:
-..|..
+Metodo|Definizione
 ---|---
-int countTokens()|		Restituisce il numero dei token elaborati.
-boolean hasMoreElements()|	Come il successivo hasMoreTokens().
-boolean hasMoreTokens()|		Restituisce true se ci sono ancora dei token da considerare.
-Object nextElement()|		Restituisce il token successivo, sotto forma di Object.
-String nextToken()|		Restituisce il token successivo, sotto forma di String.
-String nextToken(String delim)|	Imposta una nuova serie di caratteri delimitatori, quindi restituisce il token successivo.
+int countTokens()|Restituisce il numero dei token elaborati.
+boolean hasMoreElements()|Come il successivo hasMoreTokens().
+boolean hasMoreTokens()|Restituisce true se ci sono ancora dei token da considerare.
+Object nextElement()|Restituisce il token successivo, sotto forma di Object.
+String nextToken()|Restituisce il token successivo, sotto forma di String.
+String nextToken(String delim)|Imposta una nuova serie di caratteri delimitatori, quindi restituisce il token successivo.
 
 
 # Classe StringBuffer
 
 ### Un oggetto String
+
 * NON è modificabile
 * Una volta creato non possiamo aggiungere, eliminare, modificare caratteri (i metodi visti creano nuove stringhe)
 * Tale restrizione è dovuta a ragioni di efficienza
@@ -253,20 +246,20 @@ I più importanti metodi di cui sono dotati gli oggetti di tipo StringBuffer.
 --------------------------------------------------------------------------------------
 Tipo restituito|Metodi e parametri|Descrizione
 ---|---|---
-StringBuffer|append(boolean b)|	Aggiunge il valore b in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
-StringBuffer|append(char c)|		Aggiunge il carattere c in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
-StringBuffer|append(char[] c)|	Aggiunge i caratteri contenuti nell'array in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
-StringBuffer|append(double d)|	Aggiunge il valore di d in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
-StringBuffer|append(float f)|		Aggiunge il valore di f in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
-StringBuffer|append(int i)|		Aggiunge il valore di i in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
-StringBuffer|append(long l)|		Aggiunge il valore di l in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
-StringBuffer|append(Object obj)|	Aggiunge il valore di obj.String() in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un	riferimento allo stesso StringBuffer.
-StringBuffer|append(String s)|	Aggiunge s in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
-StringBuffer|append(StringBuffer s)|	Aggiunge s in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
-char|chatAt(int i)|		Restituisce il carattere alla posizione i.
+StringBuffer|append(boolean b)|Aggiunge il valore b in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
+StringBuffer|append(char c)|Aggiunge il carattere c in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
+StringBuffer|append(char[] c)|Aggiunge i caratteri contenuti nell'array in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
+StringBuffer|append(double d)|Aggiunge il valore di d in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
+StringBuffer|append(float f)|Aggiunge il valore di f in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
+StringBuffer|append(int i)|Aggiunge il valore di i in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
+StringBuffer|append(long l)|Aggiunge il valore di l in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
+StringBuffer|append(Object obj)|Aggiunge il valore di obj.String() in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un	riferimento allo stesso StringBuffer.
+StringBuffer|append(String s)|Aggiunge s in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
+StringBuffer|append(StringBuffer s)|Aggiunge s in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
+char|chatAt(int i)|Restituisce il carattere alla posizione i.
 StringBuffer|delete(int start, int end)|Rimuove tutti i caratteri dall'indice start (incluso) all'indice end (escluso). Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
-StringBuffer|deleteCharAt(int i)|	Rimuove il carattere alla posizione i. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.	
-int|indexOf(String s)|	Restituisce la prima posizione della sottostringa s, oppure -1 nel caso tale sottostringa non compaia nell'oggetto di invocazione.
+StringBuffer|deleteCharAt(int i)|Rimuove il carattere alla posizione i. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.	
+int|indexOf(String s)|Restituisce la prima posizione della sottostringa s, oppure -1 nel caso tale sottostringa non compaia nell'oggetto di invocazione.
 int|indexOfString(String s, int i)|Come il precedente, con la differenza che la ricerca della sottostringa s prende prende piede dalla posizione i.
 StringBuffer|insert(int offset, boolean b)|Aggiunge il valore di b alla stringa, inserendolo alla posizione offset. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
 StringBuffer|insert(int offset, char c)|Aggiunge il carattere c alla stringa, inserendolo alla posizione offset. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
@@ -277,8 +270,7 @@ StringBuffer|insert(int offset, int i)|Aggiunge il valore di i alla stringa, ins
 StringBuffer|insert(int offset, long l)|Aggiunge il valore di l alla stringa, inserendolo alla posizione offset. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
 StringBuffer|insert(int offset, Object obj)|Aggiunge il valore di obj.toString() in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
 StringBuffer|insert(int offset, String s)|Aggiunge s in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
-StringBuffer|insert(int offset,	StringBuffer s)|	Aggiunge s in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
-
-int|length()|		Restituisce la dimensione della stringa.
+StringBuffer|insert(int offset,	StringBuffer s)|Aggiunge s in coda alla stringa. Modifica l'oggetto di invocazione, ed in più restituisce un riferimento allo stesso StringBuffer.
+int|length()|Restituisce la dimensione della stringa.
 StringBuffer|setCharAt(int i, char c)|Cambia in c il carattere alla posizione i.
-void String		toString()|		Restituisce un oggetto String con il medesimo contenuto dello StringBuffer di invocazione.
+void String		toString()|Restituisce un oggetto String con il medesimo contenuto dello StringBuffer di invocazione.

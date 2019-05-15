@@ -1,5 +1,8 @@
 # Eccezioni
 
+
+---
+
 ## Situazioni anomale a run-time
 
 * Java prevede un sofisticato utilizzo dei tipi (primitivi e classi) che consente di individuare molti errori al momento della compilazione del programma (prima dell'esecuzione vera e propria)
@@ -10,6 +13,9 @@
   * Errori di formato: (errore di input dell'utente)
 
 
+
+
+---
 
 ### Le eccezioni si dividono in
 **Checked** (o controllate) per le quali il compilatore richiede che ci sia un gestore
@@ -31,6 +37,9 @@
   * Viene "passata" automaticamente da metodo chiamato a metodo chiamante
 
 
+
+---
+
 ### Esempi tipici di eccezioni checked:
 
 * le eccezioni che descrivono errori di input/output 
@@ -38,6 +47,9 @@
   * comunicazione via rete, ecc...
 * le eccezioni definite dal programmatore
 
+
+
+---
 
 ## La gerarchia delle eccezioni
 
@@ -66,6 +78,9 @@ StringIndexOutOfBoundsException|Indice non valido per i caratteri di una stringa
 UnsupportedOperationException|Operazione non supportata.
 
 
+
+---
+
 ## Gestione delle eccezioni
 
 * In Java, le situazioni anomale che si possono verificare a run-time possono essere controllate tramite meccanismi di gestione delle eccezioni
@@ -78,6 +93,9 @@ UnsupportedOperationException|Operazione non supportata.
     programmatore)
   4. se il programmatore non ha previsto nessun gestore, interrompe il
     programma e stampa il messaggio di errore
+
+
+---
 
 ## Il costrutto try-catch
 
@@ -101,6 +119,9 @@ try {
 // ... altri blocchi di codice NON monitorati ....
 ```
 
+
+---
+
 ## Gestire le eccezioni
 
 * Un costrutto try-catch può gestire più tipi di eccezione contemporaneamente
@@ -120,6 +141,9 @@ catch (Exception e) {
   //codice
 }
 ```                                     
+
+---
+
 ## quando definire un gestore di eccezioni
 
 * Per capire quando preoccuparsi di definire un gestore di eccezioni:
@@ -130,6 +154,9 @@ catch (Exception e) {
     * verifica la correttezza dei cicli nel caso di scorrimento di una collezione
 
     
+
+---
+
 ## Il comando throw
 
 * Il meccanismo delle eccezioni può anche essere usato per segnalare situazioni di errore
@@ -154,6 +181,9 @@ catch (Exception e) {
 * Questo consente di evitare valori di ritorno dei metodi che servono solo a dire se l'operazione è andata a buon fine
 * in caso di problemi si lancia l'eccezione, non si restituisce un valore particolare
     
+
+---
+
 ## parola chiave __throws__
 
 * Un metodo che contiene dei comandi throw deve elencare le eccezioni che possono essere sollevate
@@ -168,11 +198,17 @@ throws IOException , IllegalParameterException { ... }
 
 
 
+
+---
+
 ### Terminologia
 
 * **Errore**: problema con la logica applicativa, errore del programmatore (non gestibile)
 * **Eccezione**: evento anomalo recuperabile
 
+
+
+---
 
 ### Una istruzione non terminata
 
@@ -180,10 +216,16 @@ throws IOException , IllegalParameterException { ... }
 * Tale oggetto appartiene a una classe derivata da Throwable
 * Tali oggetti sono le eccezioni
 
+
+---
+
 ### Si dice che l'eccezione
 
 * Viene "gettata" (thrown) e
 * In seguito deve essere "gestita" ovvero "catturata" (catch)
+
+
+---
 
 ### Costrutti per la gestione delle eccezioni
 
@@ -195,6 +237,9 @@ throws IOException , IllegalParameterException { ... }
 * throw  
   * "Getta" l'eccezione a livello di codice / istruzioni
 
+
+
+---
 
 ## try ... catch
 
@@ -210,6 +255,9 @@ catch (IOException e) {
 ...
 }
 ```
+
+
+---
 
 ### Per catturare eccezioni di classi diverse si possono usare blocchi catch multipli
 
@@ -228,8 +276,14 @@ catch(IOException e) {
 }
 ```
 
+
+---
+
 ### Costrutti try-catch possono essere annidati 
 (catch che include try-catch) 
+
+
+---
 
 ### Il blocco "finally" esegue istruzioni al termine del blocco try-catch
 
@@ -254,6 +308,9 @@ finally {
 ```
 
 
+
+---
+
 ### Permette a un metodo di gettare
 eccezioni
 <tipoMetodo> <nomeMetodo> (<argomenti>)
@@ -263,6 +320,9 @@ throws <classeEccezione 1 >
 [, <classeEccezione n > ]...] {
 ...
 }
+
+
+---
 
 ### Le eccezioni gettate sono catturate
 (responsabilità) dal chiamante
@@ -295,9 +355,15 @@ return (val);
 }
 ```
 
+
+---
+
 ### throw
 
 Permette di "gettare" in modo "esplicito" una eccezione a livello di codice ```throw <oggettoEccezione>```
+
+
+---
 
 ### Provoca
 * L'interruzione dell'esecuzione del metodo
@@ -313,6 +379,9 @@ throw new ArithmeticException (
 z = x/y;
 ```
 
+
+---
+
 ## Classi di Eccezioni
 
 * È una classe, subclass di Throwable o discendenti, definita in java.lang
@@ -325,6 +394,9 @@ z = x/y;
 * Exception
 
 
+
+---
+
 ## Definizione di una eccezione
 
 * È possibile dichiarare eccezioni proprie, se quelle fornite dal sistema (java.lang) non sono sufficienti
@@ -336,10 +408,16 @@ z = x/y;
   * definire dei metodi get/set
   * etc.
 
+
+---
+
 ## Esempi
 
 
      
+
+---
+
 ### EccezioneArray
 
 ```java
@@ -353,6 +431,9 @@ public class EccezioneArray {
   }
 }
 ```
+
+
+---
 
 ### EccezioneAritmetico
 
@@ -370,6 +451,9 @@ public class EccezioneAritmetico {
 }
 ```
                                                                    
+
+---
+
 ### EccezioneFormato
 
 ```java
@@ -385,6 +469,9 @@ public class EccezioneFormato {
   }
 }
 ```                                                               
+
+
+---
 
 ### Esempio gestione eccezione: EccezioneAritmetico
 
@@ -412,6 +499,9 @@ public class EccezioneAritmetico {
   System.out.println("Fine Programma"); }
 }
 ```
+
+---
+
 ### Esempio gestione eccezione: EccezioneFormato
 
 
@@ -440,6 +530,9 @@ public class EccezioneFormato {
 }
 ```                                                              
 
+
+---
+
 ### Esempio: controllo correttezza parametri - Rettangolo
 
 ```java
@@ -454,6 +547,9 @@ public class Rettangolo {
   } 
 }
 ```          
+
+---
+
 ### EccezioneBaseNegativa
 
 ```java
@@ -467,6 +563,9 @@ public class EccezioneBaseNegativa extends Exception {
     } 
 }
 ```          
+
+
+---
 
 ### System.in.read 
 * può provocare una eccezione controllata di tipo IOException 
