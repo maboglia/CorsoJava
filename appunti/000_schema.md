@@ -5,8 +5,8 @@
 | Fondamenti            | Java OOP                     | Java Web & GUI         | Advanced & JavaEE |
 | --------------------- | ---------------------------- | ---------------------- | ----------------- |
 | Paradigmi e linguaggi | Progettazione classi         | JOptionPane            | Persistenza       |
-| Operatori e tipi      | UML Class diagram            |  GUI                      | JDBC & DAO        |
-| Strutture controllo   | JCF e Iteratori              |  Gestione Eventi    | Hibernate/MyBatis |
+| Operatori e tipi      | UML Class diagram            |  GUI                   | JDBC & DAO        |
+| Strutture controllo   | JCF e Iteratori              |  Gestione Eventi       | Hibernate/MyBatis |
 | Classi                | Ereditarietà e polimorfismo  | JavaFX                 | Spring Boot       |
 | Oggetti               | Eccezioni - Debug - Testing  | Swing e Window Builder | Servlets          |
 | Attributi e Metodi    | Classi astratte e interfacce | JSP Base               | REST              |
