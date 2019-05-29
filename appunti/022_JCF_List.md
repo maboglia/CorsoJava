@@ -55,6 +55,7 @@ restituisce la collection sottoforma di array
 I membri della classe ArrayList.
 --------------------------------------------------------------
 Costruttori pubblici:
+
 ---|---
 ArrayList()|Costruisce una lista di tipo ArrayList inizialmente vuota.
 Metodi pubblici:
