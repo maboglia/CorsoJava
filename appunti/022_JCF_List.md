@@ -52,7 +52,7 @@ restituisce la collection sottoforma di array
 
 
 
-Metodi pubblici:
+### ArrayList e Vector: Metodi pubblici
 
 
 * `void add(int i, Object o)`
