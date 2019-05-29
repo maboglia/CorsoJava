@@ -55,11 +55,9 @@ restituisce la collection sottoforma di array
 I membri della classe ArrayList.
 --------------------------------------------------------------
 Costruttori pubblici:
-..|..
 ---|---
 ArrayList()|Costruisce una lista di tipo ArrayList inizialmente vuota.
 Metodi pubblici:
-..|..
 ---|---
 void add(int i, Object o)|Aggiunge l'oggetto o alla lista, disponendolo alla posizione i. Se la posizione è già occupata, l'elemento corrispondente e tutti i suoi successivi verranno avanzati di un posto.
 boolean add(Object o)|	Aggiunge l'oggetto o in coda alla lista.
@@ -79,12 +77,10 @@ Object[] toArray()|	Converte la lista in un array.
 I membri della classe Vector.
 --------------------------------------------------------------
 Costruttori pubblici:
-..|..
 ---|---
 Vector()|Costruisce una lista di tipo Vector inizialmente vuota.
 
 Metodi pubblici:
-..|..
 ---|---
 void add(int i, Object o)|Aggiunge l'oggetto o alla lista, disponendolo alla posizione i. Se la posizione è gia occupata, l'elemento corrispondente e tutti i suoi successivi verranno avanzati di un posto.
 boolean add(Object o)|	Aggiunge l'oggetto o in coda alla lista.
