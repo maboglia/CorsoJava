@@ -1,8 +1,6 @@
 # Eccezioni
 
 
----
-
 ## Situazioni anomale a run-time
 
 * Java prevede un sofisticato utilizzo dei tipi (primitivi e classi) che consente di individuare molti errori al momento della compilazione del programma (prima dell'esecuzione vera e propria)
@@ -11,7 +9,6 @@
   * Tentativi di accedere a posizioni di un array che sono fuori dai limiti
   * Errori aritmetici (divisione per zero, ...)
   * Errori di formato: (errore di input dell'utente)
-
 
 
 
@@ -37,7 +34,6 @@
   * Viene "passata" automaticamente da metodo chiamato a metodo chiamante
 
 
-
 ---
 
 ### Esempi tipici di eccezioni checked:
@@ -46,7 +42,6 @@
   * lettura o scrittura su file, 
   * comunicazione via rete, ecc...
 * le eccezioni definite dal programmatore
-
 
 
 ---
@@ -78,7 +73,6 @@ StringIndexOutOfBoundsException|Indice non valido per i caratteri di una stringa
 UnsupportedOperationException|Operazione non supportata.
 
 
-
 ---
 
 ## Gestione delle eccezioni
@@ -93,11 +87,10 @@ UnsupportedOperationException|Operazione non supportata.
     programmatore)
   4. se il programmatore non ha previsto nessun gestore, interrompe il
     programma e stampa il messaggio di errore
-
-
----
-
-## Il costrutto try-catch
+    
+    ---
+    
+    ## Il costrutto try-catch
 
 * Il costrutto try-catch consente di 
   * __monitorare__ una porzione di programma (all'interno di un metodo)
@@ -118,7 +111,6 @@ try {
 
 // ... altri blocchi di codice NON monitorati ....
 ```
-
 
 ---
 
@@ -198,14 +190,12 @@ throws IOException , IllegalParameterException { ... }
 
 
 
-
 ---
 
 ### Terminologia
 
 * **Errore**: problema con la logica applicativa, errore del programmatore (non gestibile)
 * **Eccezione**: evento anomalo recuperabile
-
 
 
 ---
@@ -216,14 +206,12 @@ throws IOException , IllegalParameterException { ... }
 * Tale oggetto appartiene a una classe derivata da Throwable
 * Tali oggetti sono le eccezioni
 
-
 ---
 
 ### Si dice che l'eccezione
 
 * Viene "gettata" (thrown) e
 * In seguito deve essere "gestita" ovvero "catturata" (catch)
-
 
 ---
 
@@ -236,7 +224,6 @@ throws IOException , IllegalParameterException { ... }
   * "Getta" l'eccezione a livello di metodi 
 * throw  
   * "Getta" l'eccezione a livello di codice / istruzioni
-
 
 
 ---
@@ -255,7 +242,6 @@ catch (IOException e) {
 ...
 }
 ```
-
 
 ---
 
@@ -276,12 +262,10 @@ catch(IOException e) {
 }
 ```
 
-
 ---
 
 ### Costrutti try-catch possono essere annidati 
 (catch che include try-catch) 
-
 
 ---
 
@@ -308,7 +292,6 @@ finally {
 ```
 
 
-
 ---
 
 ### Permette a un metodo di gettare
@@ -320,7 +303,6 @@ throws <classeEccezione 1 >
 [, <classeEccezione n > ]...] {
 ...
 }
-
 
 ---
 
@@ -355,13 +337,11 @@ return (val);
 }
 ```
 
-
 ---
 
 ### throw
 
 Permette di "gettare" in modo "esplicito" una eccezione a livello di codice ```throw <oggettoEccezione>```
-
 
 ---
 
@@ -379,7 +359,6 @@ throw new ArithmeticException (
 z = x/y;
 ```
 
-
 ---
 
 ## Classi di Eccezioni
@@ -394,7 +373,6 @@ z = x/y;
 * Exception
 
 
-
 ---
 
 ## Definizione di una eccezione
@@ -407,11 +385,10 @@ z = x/y;
   * ridefinire il metodo costruttore
   * definire dei metodi get/set
   * etc.
-
-
----
-
-## Esempi
+  
+  ---
+  
+  ## Esempi
 
 
      
@@ -431,7 +408,6 @@ public class EccezioneArray {
   }
 }
 ```
-
 
 ---
 
@@ -469,7 +445,6 @@ public class EccezioneFormato {
   }
 }
 ```                                                               
-
 
 ---
 
@@ -530,7 +505,6 @@ public class EccezioneFormato {
 }
 ```                                                              
 
-
 ---
 
 ### Esempio: controllo correttezza parametri - Rettangolo
@@ -563,7 +537,6 @@ public class EccezioneBaseNegativa extends Exception {
     } 
 }
 ```          
-
 
 ---
 
