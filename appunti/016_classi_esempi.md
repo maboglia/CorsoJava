@@ -15,6 +15,8 @@ Le classi estendono il concetto di "struttura" di altri linguaggi
 * Definizione della classe
 * Instanziazione di Oggetti della classe
 
+---
+
 ## Definizione di una Classe
 
 ### Definizione
@@ -75,6 +77,8 @@ class Automobile {
 
 La definizione di classe non rappresenta alcun oggetto.
 
+---
+
 ## Polimorfismo (overloading)
 
 Una classe può avere più metodi con lo stesso nome
@@ -109,6 +113,8 @@ colore = nuovoCol;
 }
 ```
 
+---
+
 ## Instanziare una Classe
 
 ### Crea degli oggetti appartenenti a una classe
@@ -127,6 +133,8 @@ colore = nuovoCol;
 * Allocazione e inizializzazione
 * Riservano lo spazio necessario creando effettivamente l'oggetto appartenente a quella classe
 
+---
+
 ## Creare un Oggetto
 
 ### Il costrutto new
@@ -142,12 +150,16 @@ String s = new String ("ABC");
 
 * Chiama il costruttore del nuovo oggetto (vedere in seguito)
 
+---
+
 ## Utilizzo della Classe
 
 ### Per "gestire" una classe occorre
 * Accedere ai metodi della classe
 * Accedere agli attributi della classe
 
+
+---
 
 ## Messaggi
 
@@ -189,6 +201,8 @@ leggiPagina (i);
 
 ```
 
+---
+
 ## Attributi
 
 ### Stessa notazione "puntata" dei messaggi oggetto.attributo
@@ -227,7 +241,9 @@ Automobile a1, a2;
 a1 = new Automobile ();
 a1.vernicia ("verde");
 a2 = new Automobile ();
-```
+``
+---
+`
 ## Costruttore
 
 Specifica le operazioni di inizializzazione (attributi, etc.) che vogliamo vengano eseguite su ogni oggetto della classe appena viene creato
@@ -266,6 +282,8 @@ Window (String t, String c) {
 title = t; color = c;}
 }
 ```
+
+---
 
 ## Operatore this (Puntatore Auto-referenziante)
 
@@ -309,6 +327,8 @@ a2.vernicia("rosso");
 // this == a2
 ```
 
+---
+
 ## Notazioni Puntate
 
 ### Le notazioni puntate possono essere combinate
@@ -317,6 +337,8 @@ a2.vernicia("rosso");
 * System è una classe del package java.lang
 * out è una variabile di classe contenente il riferimento ad un oggetto della classe PrintStream che punta allo standard output
 * println è un metodo della classe PrintStream che stampa una linea di testo
+
+---
 
 ## Operazioni su reference
 
@@ -331,6 +353,8 @@ a2.vernicia("rosso");
 
 NON è prevista l'aritmetica dei puntatori
 
+---
+
 ## Visibilità ed encapsulation
 
 Motivazione
@@ -340,6 +364,8 @@ Motivazione
 Supporto sintattico
 * private attributo/metodo visibile solo da istanze della stessa classe
 * public attributo/metodo visibile ovunque
+
+---
 
 ## Getters e setters
 
@@ -373,7 +399,11 @@ a.vernicia("verde"); // ok
 ```
 
 
+---
+
 ## Variabili e metodi di classe
+
+---
 
 ## Variabili di classe
 
@@ -391,6 +421,8 @@ static int numeroRuote = 4;
 }
 Automobile.numeroRuote;
 ```
+
+---
 
 ## Metodi di classe
 
