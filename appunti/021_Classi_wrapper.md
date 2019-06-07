@@ -7,6 +7,8 @@
 * Gli oggetti che rappresentano i tipi primitivi sono detti classi wrapper (in italiano "involucro") che sono classi che fanno da contenitore a un tipo di dato primitivo, astraendo proprio il concetto di tipo. 
 __N.B. Tutte le classi wrapper sono classi final per cui non possono essere estese.__
 
+---
+
 ## Classi "Wrapper" per tipi Primitivi
 
 * Se si vogliono trattare anche i dati primitivi come oggetti si possono utilizzare le classi "wrapper"
@@ -27,6 +29,9 @@ __N.B. Tutte le classi wrapper sono classi final per cui non possono essere este
 | double         | Double        |
 | void           | Void          |
 
+---
+
+
 * In Java, ogni tipo primitivo possiede una corrispondente classe wrapper: Byte, Short, Integer, Long, Float, Double, Boolean, Character. 
 * Ciascuna di queste classi permette di manipolare i valori di tipo primitivo come se fossero valori di oggetti. 
 * Spesso abbiamo a che fare con tipi primitivi (int, double, boolean, …) che sono tipi semplici e, quindi, non possiedono metodi. 
@@ -40,6 +45,10 @@ Boolean z = Boolean.parseBoolean("true");
 ````
 
 Occorreva prima creare un nuovo oggetto di una classe wrapper.
+
+---
+
+
 Le stesse operazioni precedenti possono essere ora eseguite mediante il seguente codice.
 
 ```java
@@ -50,6 +59,9 @@ Boolean z = true;
 ```
 L’autoboxing permette al developer di non preoccuparsi delle operazioni di conversione.
 Da notare che è grazie all’autoboxing che possiamo inserire i tipi primitivi all’interno delle Collection in maniera totalmente trasparente e senza preoccuparci di convertire i dati.
+
+
+---
 
 Classi wrapper|tipo primitivo
 ---|---
@@ -63,6 +75,9 @@ Long | è la classe wrapper per il tipo long.
 Short | è la classe wrapper per il tipo short.
 -------------------------------------------------
 
+
+---
+
 ## Metodi statici della famiglia parse:
 
 * `Byte.parseByte(String s)`
@@ -71,6 +86,9 @@ Short | è la classe wrapper per il tipo short.
 * `Integer.parseInt(String s)`
 * `Long.parseLong(String s)`
 * `Short.parseShort(String s`)
+
+---
+
 
 ## Classe Character
 
@@ -85,6 +103,9 @@ char c = s.charAt (0);
 ... Character.isDigit(c) ...
 // false
 ...
+
+---
+
 
 ### Predicati vari
 
