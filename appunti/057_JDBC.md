@@ -4,8 +4,11 @@ JDBC
 L'impiego di JDBC è semplice, e solitamente si articola attraverso quattro passi:
 
 1. Per prima cosa, è necessario caricare il driver idoneo per l'utilizzo del particolare database che si intende sfruttare. Può essere caricato un apposito driver JDBC installato in precedenza nel sistema, oppure può essere sfruttato il ponte JDBCODBC. Non è importante il nome o il funzionamento interno del particolare driver selezionato: l'interfaccia di programmazione sarà sempre la medesima.
+
 2. Si apre una connessione verso il particolare database necessario all'applicazione, sfruttando il driver caricato al passo precedente.
+
 3. Si impiegano l'interfaccia di JDBC ed il linguaggio SQL per interagire con la base di dati. Generalmente, viene sottoposta al DBMS una query volta all'ottenimento di alcuni risultati.
+
 4. I risultati ottenuti possono essere manipolati sfruttando le classi JDBC e del codice Java studiato per il compito.
 ---
 

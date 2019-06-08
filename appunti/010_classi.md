@@ -263,11 +263,11 @@ istanze diversificate)
 “qualcosa” di concettualmente unico, che non
 esiste e non può esistere in versioni separate
 ciascuna con una propria identità:
-– esiste una sola matematica (la classe Math non è
+* esiste una sola matematica (la classe Math non è
 istanziabile )
-– esiste un solo sistema su cui un programma è
+* esiste un solo sistema su cui un programma è
 eseguito (la classe System non è istanziabile )
-– esiste un solo punto di inizio di un programma (le
+* esiste un solo punto di inizio di un programma (le
 classi contenenti il main non sono istanziabili )
 
 ## Riconoscere una classe non istanziabile
@@ -296,11 +296,11 @@ Una classe istanziabile rappresenta “qualcosa”
 che esiste in molteplici versioni individuali che
 hanno una struttura comune ma ciascuna con
 una propria identità:
-– esistono molte sequenze di caratteri (la classe
+* esistono molte sequenze di caratteri (la classe
 String è istanziabile )
-– esistono molte valute (la classe Valuta è
+* esistono molte valute (la classe Valuta è
 istanziabile )
-– esistono molte persone (un’ipotetica classe
+* esistono molte persone (un’ipotetica classe
 Persona è istanziabile )
 
 ---
