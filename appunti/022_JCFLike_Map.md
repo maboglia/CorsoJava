@@ -17,6 +17,8 @@ HashMap risulta più performante di HashTable, in quanto quest’ultima è sincr
 
 HashMap risulta più performante di TreeMap, in quanto quest’ultima gestisce l’ordinamento
 
+---
+
 ## I metodi delle Map sono i seguenti:
 
 * public void clear()
@@ -45,7 +47,7 @@ restituisce il numero di elementi presenti nella map
 restituisce la map sottoforma di Collection
 
 
-
+---
 
 ## Esempio di HashTable e HashMap.
 HashTable | HashMap
@@ -61,6 +63,8 @@ for (int i=1; 1<=size; i++) {		|	for (int i=1; 1<=size; i++) {
 
 E’ possibile aggiungere elementi mediante il metodo put(Object key, Object value) e si recuperano mediante il metodo get(Object key). 
 In particolare, il metodo get() permette un recupero molto performante dell’elemento della collezione, mediante la specifica della chiave.
+
+---
 
 ## Iterator: l’iterazione sulle mappe.
 
@@ -78,11 +82,13 @@ while (it.hasNext()) {
 	System.out.println("Valore: " + entry.getValue());
 }
 ```
+
 ## Map.Entry ed entrySet()
 Per iterare sulle mappe occorre utilizzare, oltre al solito iterator, anche:
 * la classe innestata __Map.Entry__, la quale astrae una coppia di tipo chiave-valore che rappresenta un elemento di una mappa
 * il metodo entrySet() restituisce un insieme ordinato (in base alle chiavi) degli elementi della mappa
 
+---
 
 Funzionalità di una Map
   * Elimina ogni elemento della map
@@ -101,7 +107,9 @@ boolean containsValue (Object value)
 int size()
   * Controlla esistano elementi nella map
 boolean isEmpty()
-13
+
+---
+
 ### Funzionalità di un SortedMap (TreeMap)
   * Produce meccanismo di confronto
 Comparator comparator ()

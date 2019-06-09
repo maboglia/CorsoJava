@@ -9,6 +9,8 @@ Non è adatta per operazioni di ricerca poiché occorrerebbe scorrere tutta la l
 
 La classe astratta **AbstractList**, che estende **AbstractCollection**, definisce un modello di comportamento generico per la costruzione di liste. 
 
+---
+
 Sostanzialmente, le liste sono come degli array dinamici, che possono variare "al volo" le loro dimensioni, per fare spazio a più o meno elementi. 
 
 Esistono diversi tipi di liste, secondo la loro implementazione. 
@@ -18,10 +20,9 @@ Dentro **java.util** trovano posto due classi derivate da **AbstractList**, chia
 Entrambe forniscono un'implementazione completa e funzionante del concetto di lista.
 
 
-## Le implementazioni di List sono ArrayList e Vector.
-
 ArrayList ha prestazioni nettamente superiori rispetto a Vector in quanto quest’ultima è sincronizzata di default mentre ArrayList non lo è (i metodi di accesso agli oggetti non sono Synchronized).
 
+---
 
 ## I metodi delle Collection sono i seguenti:
 
@@ -50,7 +51,7 @@ restituisce la collection sottoforma di array
 * `public Object[] toArray(Object[] a)`
 restituisce la collection sottoforma di array
 
-
+---
 
 ### ArrayList e Vector: Metodi pubblici
 
@@ -82,7 +83,7 @@ Sostituisce con o l'elemento alla posizione i. Restituisce l'elemento rimpiazzat
 * `Object[] toArray()`
 	Converte la lista in un array.
 
-
+---
 
 ## Esempio di ArrayList e Vector.
 
@@ -97,7 +98,7 @@ while (it.hasNext()) {			|while (it.hasNext()) {
    out.print(it.next());		   	  | out.print(it.next());
 }							|}
 
-
+---
 
 ## La classe ArrayList 
 
@@ -111,6 +112,8 @@ La classe ArrayList permette di gestire array di oggetti dinamici. E indica il t
 `ArrayList()` 
 
 Costruisce una array dinamico di oggetti con una capacità iniziale di 10 elementi. 
+
+---
 
 Alcuni Metodi 
 ### add 
@@ -150,6 +153,7 @@ sostituito
 * `int size() `
 * restituisce il numero di elementi dell'array 
 
+---
 
 ### LinkedList
 
@@ -185,6 +189,7 @@ ll.addFirst(new Integer(20));
 11
 ```
 
+---
 
 ### Prestazioni & Algoritmi
 

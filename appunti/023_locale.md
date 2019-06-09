@@ -1,9 +1,11 @@
 # Internazionalizzazione e localizzazione
-L'internazionalizzazione consente a un'applicazione di adattarsi in modo automatico alle convenzioni in uso in una particolare lingua o regione senza che si debba ricorrere alla riscrittura o, peggio, alla riprogettazione dell'applicazione stessa (ad esempio le varie modalità di rappresentazione dei numeri o delle date).
-La localizzazione permette l'adattamento del software a una particolare regione aggiungendo all'applicazione tutte quelle parti che dipendono dalla regione stessa, come ad esempio le scritte dei menu, dei bottoni e degli altri elementi testuali di un'interfaccia grafica.
-Occorre tener presente che, nella maggior parte dei casi, con internazionalization si intendono entrambi gli aspetti.
+L'internazionalizzazione consente a un'applicazione di adattarsi in modo automatico alle convenzioni in uso in una particolare lingua o regione.
 
+La localizzazione permette l'adattamento del software a una particolare regione aggiungendo all'applicazione tutte quelle parti che dipendono dalla regione stessa.
 
+Occorre tener presente che, nella maggior parte dei casi, con internazionalizzazione si intendono entrambi gli aspetti.
+
+--- 
 
 # CLASSE LOCALE
 
@@ -11,20 +13,30 @@ Occorre tener presente che, nella maggior parte dei casi, con internazionalizati
 nomeLocale = new Locale("language", "country", ["variant"]);
 ```
 La classe Locale  astrae il concetto di "zona" sia dal punto di vista linguistico che geografico. 
+
 Molte rappresentazioni di numerose altre classi dipendono da Locale. 
 Il package java.text fornisce gli strumenti per la formattazione del testo. 
+
 Alcune sue classi possiedono metodi che usano Locale.
 Un esempio è la classe NumberFormat che possiede metodi che usano Locale per individuare l'uso della virgola o del punto per i numeri decimali.
+
 Un altro esempio sono le classi (come Currency) che usano Locale per rappresentare date, orari e valute.
 
 La classe Locale è basata essenzialmente su tre variabili: language, country e variant.
+
 I valori dei parametri passati si riferiscono a precisi simboli definiti dallo standard ISO.
+
 La prima variabile si riferisce al linguaggio, ovvero alla lingua. 
 Viene specificata mediante due lettere minuscole rappresentative della zona (esempi: Italia = it, Stati Uniti = us).
+
 La seconda variabile si riferisce permette di indicare la regione geografica. 
+
 Ciò torna utile quando in una stessa nazione non necessariamente si parla un'unica lingua. 
+
 Viene specificata mediante due lettere maiuscole (es: Svizzera italiana = it_CH, Svizzera tedesca = de_CH).
+
 La terza variabile (opzionale) permette la specifica di strutture personalizzate implementate, ad esempio, da particolari tipi di browser.
+
 ```java
 // creazione di un Locale con due parametri
 Italia = new Locale("it", "IT");
