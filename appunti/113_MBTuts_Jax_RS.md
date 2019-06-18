@@ -2,9 +2,9 @@
 ## 1.1. esercizio convertitore euro-lire
 
 ## 1.2. Crea un progetto dynamic web con eclipse
-## 1.3. Verifica la presenza di web.xml, atrimenti crealo
+## 1.3. Verifica la presenza di web.xml, altrimenti crealo
 ## 1.4. right-click->configure->converti a maven project
-## 1.5. aggiugni al pom le dipendenze
+## 1.5. aggiungi al pom le dipendenze
    * asm
    * jearsey-bundle
    * jearsey-core
