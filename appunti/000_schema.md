@@ -68,13 +68,14 @@
 
 * Create an executable Java program with     a main class
 * Compile and run a Java program from     the command line
-* Create and import packagesWorking 
+* Create and import packages
 
 
 
 ---
 
-## With Java Primitive Data Types and String APIsUsing 
+ 
+## Working With Java Primitive Data Types and String APIs
 
 * Declare and initialize variables (including casting  and promoting primitive data types)
 * Identify the scope of variable
@@ -85,7 +86,7 @@
 
 ---
 
-## Operators and Decision Constructs
+## Using Operators and Decision Constructs
 * Use Java operators including the use of parenthesis to override operator precedence
 * Use Java control statements including if, else, and switch
 * Create and use do/while, while, for and for each loops, including nested loops, use break and continue statements
@@ -158,7 +159,7 @@
 * Declare modules and enable access between modules
 * Describe how a modular project is compiled and run
 
-
+---
 
 # Exam Topics (Java SE 11 Programmer II – 1Z0-816)
 
