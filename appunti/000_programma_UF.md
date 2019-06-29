@@ -1,42 +1,7 @@
 # Corso Tecnico Sviluppo Software
 
-* [programma completo](000_programma_Java.md)
-* [schema argomenti](000_schema.md)
-
-## Unità formative
-
-
-| n.  | titolo                                                             |
-| --- | ------------------------------------------------------------------ |
-| 1   | Java Course Introduction                                           |
-| 2   | Basic Java keywords                                                |
-| 4   | Packages, Import Statements, Instance Members, Default Constructor |
-| 5   | Access and Non Access Modifiers                                    |
-| 6   | Tools – Eclipse, Netbeans, IntelliJIdea, Junit, Maven              |
-| 7   | if/else statements and booleans                                    |
-| 8   | loops: for, while and do while loop                                |
-| 9   | for each loop and arrays                                           |
-| 10  | arrays and enums                                                   |
-| 11  | enums and switch statement                                         |
-| 12  | switch statement                                                   |
-| 13  | Java Logging with sl4j and logback                                 |
-| 14  | deep dive into public static void main                             |
-| 15  | Checked and Unchecked Exceptions in Java                           |
-| 16  | Interfaces in Java                                                 |
-| 17  | Inheritance in Java                                                |
-| 18  | Object finalizer method                                            |
-| 19  | Object clone method                                                |
-| 20  | Object toString method                                             |
-| 21  | Java autoboxing, Static Imports, Number Types and more             |
-| 22  | HashCode and Equals                                                |
-| 23  | Java Collections Framework Introduction                            |
-| 24  | ArrayList                                                          |
-| 25  | Linked List Data Structure                                         |
-| 26  | LinkedList vs ArrayList                                            |
-| 27  | Identity vs Equality in Java                                       |
-| 28  | Comparable interface in Java                                       |
-| 29  | Shallow vs. Deep Copy in Java                                      |
----
+* [programma completo](https://github.com/maboglia/CorsoJava/blob/master/appunti/000_programma_Java.md)
+* [schema argomenti](https://github.com/maboglia/CorsoJava/blob/master/appunti/000_schema.md)
 
 
 ## Lab 1 
@@ -49,13 +14,6 @@
 * **variabile**: definizione
 * Primo approccio al codice
 * metodo main e metodi ausiliari
-
-### codice Lab 1
-
-* Compilazione ed esecuzione del programma Helloworld via **CLI**
-* file: HelloWorld.java, HelloWorld.class 
-* esempi algoritmi
-* esempio classe Studente (nome, cognome, eta)
 
 
 ---
@@ -91,12 +49,6 @@ __OPERATORI DI BASE__
 * Costrutti di programmazione semplici 
 
 
-### codice Lab2
-
-* Introduzione a git e github, materiale condiviso
-* Esercizi sui tipi e sui metodi ausiliari
-* primo esempio classe Studente
-
 ---
 
 ## Lab 3 
@@ -117,11 +69,6 @@ __OPERATORI DI BASE__
 	* Il costrutto do 
 	* Cicli for migliorato 
 	* Il costrutto switch
-
-### codice Lab3
-
-* esercizi sulle stringhe
-* **Esercizi sul Flusso di lavoro del programma** 
 
 ---
 
@@ -146,13 +93,6 @@ __OPERATORI DI BASE__
 * Array Multidimensionali 
 * Limiti degli array in JAVA: dimensione prefissata
 
-### codice Lab4
-
-* esercizi java sugli array
-* Approfondiamo la classe Studente
-  * array elenco allievi 
-  * scorro elenco allievi utilizzando un ciclo for
-  * gestione base di possibili errori/eccezioni: if
 
 ---
 
@@ -191,13 +131,6 @@ __OPERATORI DI BASE__
   * attraverso l'oggetto, con l'opertore dot (.) accedo ai suoi metodi e variabili 
 * relazioni tra classi: uso, aggregazione, teoria delle classi 
 
-### codice Lab5
-
-* contocorrente
-* progetto agenda
-* progetto aula.v3
-* esercitazione luoghi e figure geometriche
-* gioco - rock, scissors, paper
 
 ---
 
@@ -207,11 +140,6 @@ __OPERATORI DI BASE__
 * Teoria:
   * Class design: diversi ruoli degli oggetti/attori del progetto
   * diverse classi con differenti relazioni tra esse
-
-### codice Lab6
-* Esercizi
-  * dato il main di una classe NegozioTester, sviluppare le classi Negozio e Prodotto
-  * dato il main di una classe AutomobileTester, sviluppare le classi Automobile e Guidatore
 
 
 ---
@@ -223,19 +151,6 @@ __OPERATORI DI BASE__
 * OOP design, ereditarietà
 * Ereditarietà in Java
 
-
-### codice Lab7
-
-* esempio Studente/Professore - Teatro
-* Esercitazione guidata:
-  * zaino
-  * arraylist
-  * relazione d'uso
-* Esercitazione guidata:
-  * dipendenti, 
-  * arraylist, 
-  * ereditarietà, 
-  * late binding
 
 ---
 
@@ -256,10 +171,6 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * [eccezioni](017_eccezioni.md)
 
 
-### codice Lab8
-
-* progetto negozio alimentari, come da specifiche
-
 
 ---
 
@@ -271,30 +182,14 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * [interfacce](015_interfacce.md)
 	
 
-### codice Lab9
-* esempio classificazione animali, mammiferi
-
 ---
 
 
 ## Lab 10 
 
 * [focus date, valute](022_API_Java_date_time.md)
-* JCF
-* JCF: HashSet e TreeSet
-* Vector, HashSet e TreeSet, 
 
-esercizio: lettura file canto 1 inferno
 	
-
-### codice Lab10
-
-* info sistema > scrivi su file
-* Parsing della divina commedia
-* esercitazione negozio alimentari 
-  * con eccezioni, 
-  * interfacce e 
-  * hashmap
 
 
 ---
@@ -304,11 +199,10 @@ esercizio: lettura file canto 1 inferno
  
 * la classe Collections
 * gestire le collezioni 
+* JCF
+* JCF: HashSet e TreeSet
+* Vector, HashSet e TreeSet, 
 
-
-### codice Lab11
-
-* esempio aula, con collezioni e scrittura su file
 
 
 ---
@@ -333,10 +227,7 @@ esercizio: lettura file canto 1 inferno
 * [JSP: le direttive]
 * [JSP: le espressioni]
 * [JSP: le dichiarazioni]
-* Progetti JSP: 
-  * MyShop
-  * Progetto JSP: MyShop, il pattern MVC Model View Controller
-  * Progetto JSP: MyShop, JSP View, ricevere dati dal form html
+
 
 ### Elementi Sintassi JAVA
 
@@ -356,15 +247,6 @@ esercizio: lettura file canto 1 inferno
   * member classes, 
   * anonymous inner classes
   * Creare Jar eseguibili, creare e includere Jar nel progetto 
-
-* [Progetto JSP: MyShop](https://github.com/maboglia/MyShop)
-* MVC, controller, ordini con nested class
-* Hello Swing GUI
-
-
-* [Progetto JSP: MyShop](https://github.com/maboglia/MyShop)
-* programmazione front-end con tecnologie client-side
-* mostra nascondi sezioni
 		
 
 ---
@@ -374,39 +256,31 @@ esercizio: lettura file canto 1 inferno
 
 	
 * Reflection, Class, Constructor classes
-* MVC: client-side JS su progetto Negozio JSP
-* MVC: client-side JQuery su progetto Negozio JSP
-	
 
 ---
 
 
 ## Lab 16
 
-* Java: Progetti Archivio CD
 * JSP 
+* java: Jsp standard action
 * MVC: JSP Servlet controller: doGet
-	
-
+* jsp
+  * servlet dispatcher
 
 ---
 
 
 ## Lab 17
 
-* java: Jsp standard action
-* progetto MVC MyShop
-	
-
+* Java RESTful services
+* JAX-RS
+* JAXB
 
 ---
 
 
 ## Lab 18
-
-* jsp
-  * servlet dispatcher
-  * mvc myshop
 
 ### Elementi Sintassi JAVA
 
@@ -424,22 +298,15 @@ esercizio: lettura file canto 1 inferno
 
 ### Elementi Sintassi JAVA
 
-* jdbc
-  * mysql connector j
+* JDBC
+  * connector-j
   * Connection
-  * PreparedStatement
+  * DriverManager
+  * Statement
   * ResulSet
+  * PreparedStatement
   * executeQuery
   * executeUpdate
-
-* JQuery Ajax
-* MyShop, frontend-backend REST-API
-* Hello angularJS
-* Progetto MyShop clientside+serverside
-* [Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/tree/master/CorsoJava2017/progetti)
-
-
-
 
 ---
 
@@ -451,29 +318,16 @@ esercizio: lettura file canto 1 inferno
   * singleton	
   * [decorator](034_decorator_pattern.md)
 
-* Progetto MyShop clientside+serverside
-* [Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/tree/master/CorsoJava2017/progetti)
-
-
-
 ---
-
 
 ## Lab 21
 
 ### Elementi Sintassi JAVA
 * Java NIO
-
-* MVC
-* JSP + Database
+* MVC + Database
 	
-
-
 ---
 
+## Lab 22 Spring
 
-## Lab 22
 
-* JSP + Database progetto listaSpesa	
-
-	

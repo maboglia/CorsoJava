@@ -258,6 +258,9 @@
 
 ## Bibliografia e risorse
 
+* [Java SE Documentation – Oracle/Sun (en)](https://docs.oracle.com/en/java/)
+* [Java tutorials – Oracle/Sun (en)](https://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html)
+* OCA Java Study Guide – Oracle (en)
 * [Programma OCA](100_programma_OCA.md)
 * [Programma OCP](100_programma_OCP.md)
 * [Programma GUI](100_programma_GUI.md)
@@ -266,6 +269,123 @@
 * **Manuale di Java** – Claudio de Sio – Hoepli Informatica (it)
 * **Concetti di informatica e fondamenti di Java** - Cay Horstmann (it)
 * [Guida Java html.it](https://www.html.it/guide/guida-java/) (it)
-* [Java SE Documentation – Oracle/Sun (en)](https://docs.oracle.com/en/java/)
-* [Java tutorials – Oracle/Sun (en)](https://docs.oracle.com/javase/tutorial/tutorialLearningPaths.html)
-* OCA Java Study Guide – Oracle (en)
+
+
+---
+
+## Laboratori
+
+
+### codice Lab 1
+
+* Compilazione ed esecuzione del programma Helloworld via **CLI**
+* file: HelloWorld.java, HelloWorld.class 
+* esempi algoritmi
+* esempio classe Studente (nome, cognome, eta)
+
+
+### codice Lab2
+
+* Introduzione a git e github, materiale condiviso
+* Esercizi sui tipi e sui metodi ausiliari
+* primo esempio classe Studente
+* 
+### codice Lab3
+
+* esercizi sulle stringhe
+* **Esercizi sul Flusso di lavoro del programma** 
+
+### codice Lab4
+
+* esercizi java sugli array
+* Approfondiamo la classe Studente
+  * array elenco allievi 
+  * scorro elenco allievi utilizzando un ciclo for
+  * gestione base di possibili errori/eccezioni: if
+
+### codice Lab5
+
+* contocorrente
+* progetto agenda
+* progetto aula.v3
+* esercitazione luoghi e figure geometriche
+* gioco - rock, scissors, paper
+
+### codice Lab6
+* Esercizi
+  * dato il main di una classe NegozioTester, sviluppare le classi Negozio e Prodotto
+  * dato il main di una classe AutomobileTester, sviluppare le classi Automobile e Guidatore
+
+
+
+### codice Lab7
+
+* esempio Studente/Professore - Teatro
+* Esercitazione guidata:
+  * zaino
+  * arraylist
+  * relazione d'uso
+* Esercitazione guidata:
+  * dipendenti, 
+  * arraylist, 
+  * ereditarietà, 
+  * late binding
+
+
+### codice Lab8
+
+* progetto negozio alimentari, come da specifiche
+
+### codice Lab9
+* esempio classificazione animali, mammiferi
+
+
+### codice Lab10
+
+* info sistema > scrivi su file
+* Parsing della divina commedia
+  * esercizio: lettura file canto 1 inferno
+* esercitazione negozio alimentari 
+  * con eccezioni, 
+  * interfacce e 
+  * hashmap
+
+
+### codice Lab11
+
+* esempio aula, con collezioni e scrittura su file
+
+
+## progetti - esercitazioni
+
+* Progetti JSP: 
+  * MyShop
+  * Progetto JSP: MyShop, il pattern MVC Model View Controller
+  * Progetto JSP: MyShop, JSP View, ricevere dati dal form html
+* MVC: client-side JS su progetto Negozio JSP
+* MVC: client-side JQuery su progetto Negozio JSP
+
+* [Progetto JSP: MyShop](https://github.com/maboglia/MyShop)
+* MVC, controller, ordini con nested class
+* Hello Swing GUI
+* Java: Progetti Archivio CD
+
+* JQuery Ajax
+
+* progetto MVC MyShop
+* MyShop, frontend-backend REST-API
+* Progetto MyShop clientside+serverside
+* [Progetto JSP: MyShop](https://github.com/maboglia/MyShop)
+* [Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/tree/master/CorsoJava2017/progetti)
+
+
+* programmazione front-end con tecnologie client-side
+* mostra nascondi sezioni
+
+
+---
+
+
+## Lab 22
+
+* JSP + Database progetto listaSpesa	
