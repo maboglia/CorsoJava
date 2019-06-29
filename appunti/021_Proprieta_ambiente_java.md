@@ -1,7 +1,6 @@
 Le proprietà automaticamente disponibili nell'ambiente Java.
 -----------------------------------------------------------------
-Chiave				Valore
-..|..
+Chiave|Valore
 ---|---
 java.version|La versione di Java in uso.
 java.vendor|Il produttore della versione di Java in uso.
