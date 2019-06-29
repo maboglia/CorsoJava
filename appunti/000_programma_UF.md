@@ -58,8 +58,6 @@
 * esempio classe Studente (nome, cognome, eta)
 
 
---------------------
-
 ---
 
 ## Lab 2 
