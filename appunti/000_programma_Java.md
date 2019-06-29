@@ -292,7 +292,7 @@
 
 * Introduzione a git e github, materiale condiviso
 * Esercizi sui tipi e sui metodi ausiliari
-* primo esempio classe Studente
+* esempio classe Studente
 
 ---
 * 
