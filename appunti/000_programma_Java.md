@@ -276,6 +276,8 @@
 ## Laboratori
 
 
+---
+
 ### codice Lab 1
 
 * Compilazione ed esecuzione del programma Helloworld via **CLI**
@@ -284,16 +286,22 @@
 * esempio classe Studente (nome, cognome, eta)
 
 
+---
+
 ### codice Lab2
 
 * Introduzione a git e github, materiale condiviso
 * Esercizi sui tipi e sui metodi ausiliari
 * primo esempio classe Studente
+
+---
 * 
 ### codice Lab3
 
 * esercizi sulle stringhe
 * **Esercizi sul Flusso di lavoro del programma** 
+
+---
 
 ### codice Lab4
 
@@ -303,6 +311,8 @@
   * scorro elenco allievi utilizzando un ciclo for
   * gestione base di possibili errori/eccezioni: if
 
+---
+
 ### codice Lab5
 
 * contocorrente
@@ -311,12 +321,16 @@
 * esercitazione luoghi e figure geometriche
 * gioco - rock, scissors, paper
 
+---
+
 ### codice Lab6
 * Esercizi
   * dato il main di una classe NegozioTester, sviluppare le classi Negozio e Prodotto
   * dato il main di una classe AutomobileTester, sviluppare le classi Automobile e Guidatore
 
 
+
+---
 
 ### codice Lab7
 
@@ -332,13 +346,19 @@
   * late binding
 
 
+---
+
 ### codice Lab8
 
 * progetto negozio alimentari, come da specifiche
 
+---
+
 ### codice Lab9
 * esempio classificazione animali, mammiferi
 
+
+---
 
 ### codice Lab10
 
@@ -351,41 +371,43 @@
   * hashmap
 
 
+---
+
 ### codice Lab11
 
 * esempio aula, con collezioni e scrittura su file
 
+---
 
 ## progetti - esercitazioni
 
-* Progetti JSP: 
-  * MyShop
-  * Progetto JSP: MyShop, il pattern MVC Model View Controller
-  * Progetto JSP: MyShop, JSP View, ricevere dati dal form html
-* MVC: client-side JS su progetto Negozio JSP
-* MVC: client-side JQuery su progetto Negozio JSP
-
-* [Progetto JSP: MyShop](https://github.com/maboglia/MyShop)
-* MVC, controller, ordini con nested class
-* Hello Swing GUI
-* Java: Progetti Archivio CD
-
-* JQuery Ajax
-
-* progetto MVC MyShop
-* MyShop, frontend-backend REST-API
-* Progetto MyShop clientside+serverside
-* [Progetto JSP: MyShop](https://github.com/maboglia/MyShop)
-* [Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/tree/master/CorsoJava2017/progetti)
-
-
-* programmazione front-end con tecnologie client-side
-* mostra nascondi sezioni
-
+* Progetti WEB: 
+  * progetto MVC MyShop
+    * Progetto JSP: MyShop, il pattern MVC Model View Controller
+    * Progetto JSP: MyShop, JSP View, ricevere dati dal form html
+    * MVC: client-side JS su progetto Negozio JSP
+    * MVC: client-side JQuery su progetto Negozio JSP
+    * [Progetto JSP: MyShop](https://github.com/maboglia/MyShop)
+    * MVC, controller, ordini con nested class
+  * MyShop, frontend-backend REST-API
+  * Progetto MyShop clientside+serverside
+  * [Progetto JSP: MyShop](https://github.com/maboglia/MyShop)
+  * [Progetto JSP: MyShop](https://github.com/maboglia/TSS2017/tree/master/CorsoJava2017/progetti)
 
 ---
 
+* Java: Progetti Archivio CD
 
-## Lab 22
+* Hello GUI: JavaFX deep dive
+
+* programmazione front-end con tecnologie client-side
+  * Vanilla JS
+    * XMLHTTPRequest 
+  * JQuery
+    * DOM manipulating
+    * Ajax
+  * Angular
+
+---
 
 * JSP + Database progetto listaSpesa	
