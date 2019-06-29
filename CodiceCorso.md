@@ -29,7 +29,6 @@
 * [MetodiAusiliari](esempi/06Metodi/_02MetodiAusiliari.java)
 * [AccessorMutatorDemo](esempi/06Metodi/AccessorMutatorDemo.java)
 * [ConstructorDemo](esempi/06Metodi/ConstructorDemo.java)
-* [Esercizi](esempi/06Metodi/Esercizi sui metodi) ausiliari.txt
 * [Funzioni](esempi/06Metodi/Funzioni.java)
 * [InputDati](esempi/06Metodi/InputDati.java)
 * [MethodDemo](esempi/06Metodi/MethodDemo.java)
