@@ -44,10 +44,6 @@ __OPERATORI DI BASE__
 * Operatori (unari) di pre e post-incremento (e decremento) 
 * Operatori relazionali o di confronto 
 * Concatenare le stringhe
-* Flusso di lavoro del programma 
-* Gestione del flusso di esecuzione 
-* Costrutti di programmazione semplici 
-
 
 ---
 
@@ -60,6 +56,7 @@ __OPERATORI DI BASE__
 * La documentazione della libreria standard di Java
 
 **OPERATORI E GESTIONE DEL FLUSSO DI ESECUZIONE** 
+
 * GESTIONE DEL FLUSSO DI ESECUZIONE 
 * COSTRUTTI DI PROGRAMMAZIONE SEMPLICI 
 	* Il costrutto if 
@@ -114,9 +111,10 @@ __OPERATORI DI BASE__
 
 
 **I METODI COSTRUTTORI** 
+
 * Caratteristiche di un costruttore
 * Costruttore di default
-* Package
+* Package e visibilità
 
 ---
 
@@ -126,6 +124,7 @@ __OPERATORI DI BASE__
 * accedere a proprietà e metodi senza istanziare nuovi oggetti 
 
 ## Classi istanziabili
+
 * tipo di utilizzo classe
   * creo oggetto, 
   * attraverso l'oggetto, con l'opertore dot (.) accedo ai suoi metodi e variabili 
@@ -157,13 +156,12 @@ __OPERATORI DI BASE__
 
 ## Lab 8 
 
-* proviamo un altro IDE: IntelliJIdea
+* proviamo un altro IDE: IntelliJIdea, NetBeans, Eclipse
 
 ### Eccezioni
 
 __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
-* provare a risolvere il problema con if()
 * usare la gestione eccezioni di JAVA
 * gestione delle eccezioni
 * blocco try-catch-finally
@@ -220,6 +218,43 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ## Lab 13
 
+### Elementi Sintassi JAVA
+
+* Java Advanced: enumerazioni
+* Java Advanced: inizializzatore statico
+* Creare Jar eseguibili, creare e includere Jar nel progetto 
+
+* Verifica OCA Java - 2: statements e costrutti del linguaggio
+
+### Elementi Sintassi JAVA
+
+* Java advanced: 
+  * nested classes, 
+  * member classes, 
+  * anonymous inner classes
+* Reflection, Class, Constructor classes
+		
+
+---
+
+
+## Lab 14
+
+### Elementi Sintassi JAVA
+
+
+* design patterns
+  * singleton
+	* decorator
+	* mvc
+	* dao
+
+
+---
+
+## Lab 15
+
+
 ### JAVA WEB
 
 * [approfondimento JSP](059_JSP_2.md)
@@ -229,44 +264,15 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * [JSP: le dichiarazioni]
 
 
-### Elementi Sintassi JAVA
-
-* Java Advanced: enumerazioni
-* Java Advanced: inizializzatore statico
-
-* Verifica OCA Java - 2: statements e costrutti del linguaggio
-
----
-
-
-## Lab 14
-
-### Elementi Sintassi JAVA
-* Java advanced: 
-  * nested classes, 
-  * member classes, 
-  * anonymous inner classes
-  * Creare Jar eseguibili, creare e includere Jar nel progetto 
-		
-
----
-
-
-## Lab 15
-
-	
-* Reflection, Class, Constructor classes
-
 ---
 
 
 ## Lab 16
 
-* JSP 
-* java: Jsp standard action
-* MVC: JSP Servlet controller: doGet
-* jsp
-  * servlet dispatcher
+* JSP e Servlet
+* JSTL: Jsp standard action
+* Servlet REST controller: doGet, doPost
+* RequestDispatcher
 
 ---
 
@@ -282,21 +288,10 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ## Lab 18
 
-### Elementi Sintassi JAVA
-
-* java
-  * pattern
-	* factory
-	* mvc
-	* dao
-
-
 ---
 
 
 ## Lab 19
-
-### Elementi Sintassi JAVA
 
 * JDBC
   * connector-j
