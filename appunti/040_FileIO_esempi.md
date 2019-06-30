@@ -33,7 +33,6 @@ Poiché non è possibile usare direttamente l'oggetto FileReader f per leggere d
 `BufferedReader b = new BufferedReader(f);`
 
 
-Nota importante: la parte introduttiva della documentazione standard della classe BufferedReader fornisce un esempio di creazione di un canale di lettura associato a un file (passi 1 e 2).
 
 ---
 ## Passo 3: lettura di stringhe dal canale di lettura
@@ -122,7 +121,7 @@ Una variante dell'esercizio precedente assume che il metodo non prenda come para
 Scrivere una classe pubblica LetturaFile con metodo pubblico void stampaCanaleInput(BufferedReader b) che, dato un canale di lettura b, ne stampa a video tutte le righe, oppure lancia un'eccezione non verificata se si incontrano errori nella lettura.
 
 LetturaFile.java
-```
+```java
 import java.io.*;
 
 public class LetturaFile {
@@ -145,7 +144,7 @@ public class LetturaFile {
 
 Programma di prova:
 
-```
+```java
     public static void main(String[] args){
         BufferedReader b;
 
@@ -169,7 +168,7 @@ Scrittura sequenziale di file di testo (e canali di output)
 
 Per creare un file di testo con nome miofile.txt, creare un oggetto java.io.PrintStream come segue (dopo aver importato java.io.*):
 
-```
+```java
 PrintStream f;
 
 try {

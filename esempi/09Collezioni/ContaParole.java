@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
-public class SimpleWordCounter {
+public class ContaParole {
     
     public static void main(String[] args) {
         try {
@@ -28,7 +28,7 @@ public class SimpleWordCounter {
             System.out.println(wordCount.size());
         }
         catch(IOException e) {
-            System.out.println("Unable to read from file.");
+            System.out.println("Non riesco a leggere il file.");
         }
     }
 }
