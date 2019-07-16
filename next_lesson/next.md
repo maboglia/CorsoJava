@@ -15,14 +15,13 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
 
-        InputStream stream = null;
-        BufferedInputStream buf = null;
+        URL url = new URL(SITO_WEB);
 
-        try {
-            URL url = new URL(SITO_WEB);
-            stream = url.openStream();
-            buf = new BufferedInputStream(stream);
+        try (
+        InputStream stream = url.openStream();
+        BufferedInputStream buf = new BufferedInputStream(stream);
 
+        ){
             StringBuilder sb = new StringBuilder();
 
             while (true) {
@@ -36,15 +35,8 @@ public class Main {
             }
 
             System.out.println(sb);
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            stream.close();;
-            buf.close();
         }
-
     }
-
 }
 
 ```
