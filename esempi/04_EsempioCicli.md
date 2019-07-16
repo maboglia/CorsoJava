@@ -1,12 +1,5 @@
 
-##Cicli e istruzioni di controllo
-
-* 01 - IfAnnidati.java
-* 02 - Asterischi.java
-* 03 - Asterischi2.java
-* 04 - Asterischi3.java
-* 05 - CodiceInaccessibile.java
-* 06 - CodiceInaccessibile2.java
+#Cicli e istruzioni di controllo
 
 ## Esempio di if annidati
 
