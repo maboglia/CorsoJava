@@ -5,7 +5,7 @@
 * [appunti](https://github.com/maboglia/CorsoJava/tree/master/appunti)
 
 ## Slide Java
-* [slide](https://github.com/maboglia/CorsoJava/blob/master/appunti/00_link_slide.md)
+* [appunti in formato slide](https://github.com/maboglia/CorsoJava/blob/master/appunti/00_link_slide.md)
 
 ## esempi codice base
 * [esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi)
