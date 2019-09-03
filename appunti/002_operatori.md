@@ -39,7 +39,7 @@ aritmetici, relazionali, di assegnazione
 
 
 **Arithmetic Operators**
-* Aritmetici: + - * / %
+* Operatori Aritmetici: + - * / %
 
 | Operatore | Significato    |
 | --------- | -------------- |

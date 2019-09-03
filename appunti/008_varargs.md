@@ -1,6 +1,6 @@
 # Varargs
 
-I varargs (variable arguments) sono utiliper ogni metodo che abbia a che fare con un numero di argomenti indeterminato, nelle API di Java si trova per esempio nel caso del metodo String.format che accetta un numero variabile di argomenti. 
+I varargs (variable arguments) sono utili per ogni metodo che abbia a che fare con un numero di argomenti indeterminato, nelle API di Java si trova per esempio nel caso del metodo String.format che accetta un numero variabile di argomenti. 
 
 
 ```java

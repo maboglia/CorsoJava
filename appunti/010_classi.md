@@ -95,23 +95,18 @@ System.out.println("Hello World");
 
 * protected: solo dalla classe attuale, le discendenti e le classi del nostro pacchetto
 
-* Se non indichiamo la v.: sono accessibili solo dalle classi del nostro pacchetto
+* Se non indichiamo la visibilità: sono accessibili solo dalle classi del nostro pacchetto
 
 ---
 
 
 ### Accesso agli attributi della classe
 
-* Gli attributi di una classe sono strettamente relazionati con la sua implementazione. Conviene contrassegnarli come private e impedirne l’accesso dall’esterno
-
+* Gli attributi di una classe sono strettamente relazionati con la sua implementazione. 
+* Conviene contrassegnarli come private e impedirne l’accesso dall’esterno
 * In futuro potremo cambiare la rappresentazione interna dell’oggetto senza alterare l’interfaccia
 
-* In pratica:
-
-`class NomeClasse{
-   private double nome1, nome2;`
-
-* Non permettiamo di accedere agli attributi perciò risulta impossibile consultarli e modificarli
+* Se non permettiamo di accedere agli attributi, risulta impossibile consultarli e modificarli
 
 * Soluzione: creare i metodi getter e setter
 
@@ -154,6 +149,9 @@ ai tipi semplici
 l’utente e il trattamento di sequenze di
 caratteri
 
+---
+
+
 ## Classi già pronte
 * Come la maggior parte dei linguaggi di
 programmazione, Java è dotato di una libreria
@@ -162,6 +160,8 @@ molte esigenze comuni (e anche meno comuni)
 * Usare classi già definite da altri è la norma
 per non sprecare tempo a risolvere problemi
 già risolti o a reinventare la ruota
+
+---
 
 ## Uso di una classe pronta
 * Quando si deve cercare e poi usare una
@@ -186,7 +186,7 @@ prima di programmare
 * leggere la documentazione è una delle
 attività più tipiche durante la programmazione
 
-
+---
 
 ## La doppia natura delle classi
 * Le classi disponibili nella libreria standard si
@@ -195,6 +195,8 @@ possono distinguere in due tipologie principali:
 	* Classi non istanziabili
 * La stessa distinzione è applicabile alle “nostre”
 classi
+
+---
 
 ## Classi istanziabili
 * Una classe istanziabile fornisce il prototipo di
@@ -216,6 +218,8 @@ proprietà di oggetti individuali specifici
 * Non ha senso la nozione di istanza della
 classe poiché non ci sono caratteristiche
 differenziabili tra oggetti distinti
+
+---
 
 ## Altre considerazioni
 * La distinzione tra classi istanziabili e non istanziabili
@@ -241,6 +245,9 @@ istanziabili è necessaria
 è normalmente non istanziabile
 * Poiché i numeri non sono oggetti, i metodi
 numerici appartengono a classi non istanziabili
+
+---
+
 
 ## Classi istanziabili
 * Nel caso di una classe istanziabile attributi e metodi
@@ -269,6 +276,9 @@ istanziabile )
 eseguito (la classe System non è istanziabile )
 * esiste un solo punto di inizio di un programma (le
 classi contenenti il main non sono istanziabili )
+
+---
+
 
 ## Riconoscere una classe non istanziabile
 * Non ha costruttori
@@ -339,6 +349,9 @@ metodi sono definiti a livello di classe
 * Una stessa variabile può riferire oggetti diversi in momenti diversi a seguito di operazioni di assegnazione sul suo valore
 * Se la variabile contiene il valore null non riferisce nessun oggetto in quel momento
 
+---
+
+
 ## Oggetti e riferimenti
 * Le variabili hanno un nome, gli oggetti no
 * Per utilizzare un oggetto bisogna passare attraverso una variabile che ne contiene il riferimento
@@ -355,12 +368,18 @@ metodi sono definiti a livello di classe
 	* confronto
 	* invocazione di metodi
 
+---
+
+
 ## Confronti tra variabili di tipo strutturato
 * E’ possibile applicare gli operatori di confronto == e != a variabili di tipo strutturato
 * Se uno dei due termini del confronto è il valore null si verifica se una certa variabile riferisce un oggetto oppure no,
 p.e. saluto3 != null
 * Se entrambi i termini del confronto sono variabili, si verifica se hanno lo stesso valore (cioè riferiscono esattamente lo stesso oggetto)
-# Confronto tra riferimenti vs. confronto tra oggetti
+
+---
+
+## Confronto tra riferimenti vs. confronto tra oggetti
 
 * Usare == fa il confronto tra i riferimenti non fra i valori contenuti negli oggetti (p.e. le sequenze di caratteri contenute nelle istanze di String ) 
 * Di solito si vogliono confrontare i contenuti non i riferimenti: per questo si usa il metodo __equals__ 
@@ -379,6 +398,7 @@ istanze di una classe sono:
 	* confronto
 	* invocazione di metodi
 
+---
 
 ## Metodi
 * I metodi non static rappresentano operazioni
@@ -392,8 +412,6 @@ ricevere in ingresso da chi lo invoca
 	* un tipo
 
 ---
-
-
 
 ## Invocazione di metodi
 * L’invocazione di un metodo non static su un
@@ -430,5 +448,3 @@ indirizzare la ricerca
 * individuare il package
 * individuare la classe
 * individuare il metodo
-
-

@@ -123,10 +123,8 @@ int [] pari = {0, 2, 4, 6, 8, 10,};
 // (elenchi lunghi)
 ```
 
-**Dichiarazione e creazione possono avvenire contestualmente**
-
-**L'attributo length indica la lunghezza dell'array, cioè il numero di elementi**
-
+* Dichiarazione e creazione possono avvenire contestualmente
+* L'attributo length indica la lunghezza dell'array, cioè il numero di elementi
 * Gli elementi vanno da 0 a length-1
 
 ```java
@@ -184,30 +182,16 @@ int[][] triangle = new int[3][]
 
 ```java
 // Scambio di due righe
-double[][] balance = new double[5][6];
+double[][] saldo = new double[5][6];
 ...
-double[] temp = balance[i];
-balance[i] = balance[j];
-balance[j] = temp;
+double[] temp = saldo[i];
+saldo[i] = saldo[j];
+saldo[j] = temp;
 ```
-L'array è una struttura dati efficiente ogni volta che il numero di elementi è noto
 
-### Gli Array possono contenere
-
-* Dati primitivi
-* Oggetti
-
-### Sugli array si effettua
-
-* Type-checking
-* Bound-checking
-
----
-
-
-### Ri-dimensionamento poco efficiente
-
-* Utilizzo di altre strutture qualora il numero di dati sia ignoto
+* L'array è una struttura dati efficiente ogni volta che il numero di elementi è noto
+* Il ridimensionamento di unarray in Java risulta poco efficiente
+* Utilizzare altre strutture dati se il numerodi elementi contenuto non è noto
 
 ### Il pacchetto java.util contiene metodi statici di utilità
 

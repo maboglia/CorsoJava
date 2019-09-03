@@ -19,7 +19,7 @@
 ### esempio
 
 ```java
-public class AreaTriangolo {
+public class Triangolo {
     public static void main ( String [] args ) {
         
         int base , altezza ;
@@ -78,14 +78,14 @@ area = base * altezza /2;
 Prima di poter essere usata in un'espressione una variabile deve:
 * essere stata dichiarata
 * essere stata assegnata almeno una volta (inizializzata)
-* si possono combinare dichiarazione e assegnamento. 
+* NB: si possono combinare dichiarazione e assegnamento. 
 
 Ad esempio:
 
 ```java
-int base =5;
-int altezza =10;
-int area = base * altezza /2;
+int base = 5;
+int altezza = 10;
+int area = base * altezza / 2;
 ```
 
 
@@ -96,15 +96,14 @@ int area = base * altezza /2;
 Nella dichiarazione delle variabili che **NON DEVONO** mai cambiare valore si può utilizzare il modificatore **final**
 
 ```java
-final double tasso =0.05;
+final double IVA = 0.22;
 ```
 
 * Il modificatore **final** trasforma la variabile in una costante
 * Il compilatore si occuperà di controllare che il valore delle costanti non venga mai modificato (ri-assegnato) dopo essere stato inizializzato.
 * Aggiungere il modificatore **final** non cambia funzionamento programma, ma serve a prevenire errori di programmazione
 * Si chiede al compilatore di controllare che una variabile non venga ri-assegnata per sbaglio
-* Sapendo che una variabile non cambierà mai valore, il compilatore
- può anche eseguire delle ottimizzazioni sull'uso di tale variabile.
+* Sapendo che una variabile non cambierà mai valore, il compilatore può anche eseguire delle ottimizzazioni sull'uso di tale variabile.
 
 
 
@@ -113,12 +112,4 @@ final double tasso =0.05;
 ### Input dall'utente
 
 * Per ricevere valori in input dall'utente si può usare la classe Scanner, contenuta nel package **java.util**
-
-* 
-
----
-
-### Input dall'utente
-
 * La classe Scanner deve essere richiamata usando la direttiva import prima dell'inizio del corpo della classe
-

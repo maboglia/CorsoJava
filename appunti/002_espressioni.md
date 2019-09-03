@@ -2,10 +2,10 @@
 
 
 ```java
-public class AreaTriangolo {
-public static void main ( String [] args ) {
-System.out.println (5*10/2);
-}
+public class Triangolo {
+    public static void main ( String [] args ) {
+        System.out.println (5*10/2);
+    }
 }
 ```
 
