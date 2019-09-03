@@ -54,10 +54,10 @@
 ---
 
 ### Metodi
-    * Il metodo main() ed i sottoprogrammi
-    * Metodi di classe: La parola chiave Static
-    * Passaggio dei parametri per riferimento e per valore
-    * Modificatori
+* Il metodo main() ed i sottoprogrammi
+* Metodi di classe: La parola chiave Static
+* Passaggio dei parametri per riferimento e per valore
+* Modificatori
 * Gestione e importazione dei package
 * La programmazione modulare.
 * Casting e Promotion
@@ -122,24 +122,24 @@
 ---
 
 ### Ereditarietà
-    * Riutilizzo del codice.
-    * Strutture ereditarie
-    * La parola riservata super
-    * Modificatori d'accesso: package, private e protected
-    * Impedire l'ereditarietà: la parola riservata final
+* Riutilizzo del codice.
+* Strutture ereditarie
+* La parola riservata super
+* Modificatori d'accesso: package, private e protected
+* Impedire l'ereditarietà: la parola riservata final
 
 ---
 
 ### Polimorfismo
-    * Overloading e Overriding
-    * Sovraccarico (Overloading) e Sovrascrittura (Overriding) di metodi.
-    * Polimorfismo con ereditarietà
+* Overloading e Overriding
+* Sovraccarico (Overloading) e Sovrascrittura (Overriding) di metodi.
+* Polimorfismo con ereditarietà
 
 ---
 
 ### Interfacce
-    * Interfacce e polimorfismo.
-    * Interfacce, classi astratte e classi innestate
+* Interfacce e polimorfismo.
+* Interfacce, classi astratte e classi innestate
 
 ---
 
@@ -228,8 +228,9 @@
 ---
 
 
-## Introduzione al framework Spring - Panoramica sulle componenti di base e sui moduli aggiuntivi
+## Introduzione al framework Spring
 
+* Panoramica sulle componenti di base e sui moduli aggiuntivi
 * Dependency Injection e IoC (Inversion Of Control)
 * The IoC Container: Core ed application Context
 * Bean e Bean Definition
@@ -241,7 +242,7 @@
 
 ---
 
-## I vantaggi derivanti dall'utilizzo di Spring nella gestione delle eccezioni e nell'accesso ai dati
+## Spring nella gestione delle eccezioni e nell'accesso ai dati
 
 * Supporto DAO
   * Consistenza nella gestione delle eccezioni
