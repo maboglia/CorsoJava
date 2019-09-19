@@ -1,9 +1,9 @@
 I membri della classe System.
 ----------------------------------------------------------------------------
 Costanti pubbliche statiche:
-java.io.PrintStream **err**
-java.io.InputStream **in**
-java.io.PrintStream **out**
+* java.io.PrintStream **err**
+* java.io.InputStream **in**
+* java.io.PrintStream **out**
 
 Metodi pubblici statici:
 * void **arraycopy**(Object src, int srcPos, Object dest, int destPos, int length)
