@@ -2,24 +2,6 @@
 
 aritmetici, relazionali, di assegnazione 
 
-## Tabelle riassuntive: tipi di dato e operatori 
-
-**Primitive Data Types**
-
- | type    | bits       |
- | ------- | ---------- |
- | byte    | 8 bits     |
- | short   | 16 bits    |
- | int     | 32 bits    |
- | long    | 64 bits    |
- | float   | 32 bits    |
- | double  | 64 bits    |
- | char    | 16 bits    |
- | boolean | true/false |
-
-**I caratteri sono considerati interi**
-
----
 
 
 **Assignment Operators**
