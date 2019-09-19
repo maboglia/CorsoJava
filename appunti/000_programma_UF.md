@@ -47,6 +47,21 @@ __OPERATORI DI BASE__
 
 ---
 
+## La classe Math
+
+* uso di una classe con metodi statici
+* accedere a proprietà e metodi senza istanziare nuovi oggetti 
+
+## Classi istanziabili
+
+* tipo di utilizzo classe
+  * creo oggetto, 
+  * attraverso l'oggetto, con l'opertore dot (.) accedo ai suoi metodi e variabili 
+* relazioni tra classi: uso, aggregazione, teoria delle classi 
+
+
+---
+
 ## Lab 3 
 
 **INTRODUZIONE ALLA LIBRERIA STANDARD** 
@@ -107,7 +122,6 @@ __OPERATORI DI BASE__
   * metodi getter e setter
   * incapsulamento
   * overload dei costruttori 
-  * @override toString() (solo in caso di extends)
 
 
 **I METODI COSTRUTTORI** 
@@ -116,35 +130,24 @@ __OPERATORI DI BASE__
 * Costruttore di default
 * Package e visibilità
 
----
 
-## La classe Math
-
-* uso di una classe con metodi statici
-* accedere a proprietà e metodi senza istanziare nuovi oggetti 
-
-## Classi istanziabili
-
-* tipo di utilizzo classe
-  * creo oggetto, 
-  * attraverso l'oggetto, con l'opertore dot (.) accedo ai suoi metodi e variabili 
-* relazioni tra classi: uso, aggregazione, teoria delle classi 
-
-
----
 
 ## Lab 6 
 
 **Ereditarietà in Java**
+
 * Teoria:
   * Class design: diversi ruoli degli oggetti/attori del progetto
   * diverse classi con differenti relazioni tra esse
+  * @override toString() (solo in caso di extends)
 
 
 ---
 
 
 ## Lab 7 
+
+## aggregazione
 ![Esempio Aggregazione](../images/image010.jpg)
 
 * OOP design, ereditarietà
@@ -156,7 +159,7 @@ __OPERATORI DI BASE__
 
 ## Lab 8 
 
-* proviamo un altro IDE: IntelliJIdea, NetBeans, Eclipse
+* proviamo un altro IDE tra IntelliJIdea, NetBeans, Eclipse
 
 ### Eccezioni
 
@@ -195,11 +198,10 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ## Lab 11
  
+* gestire le collezioni: List, Set e Map 
 * la classe Collections
-* gestire le collezioni 
-* JCF
-* JCF: HashSet e TreeSet
-* Vector, HashSet e TreeSet, 
+* Vector, ArrayList 
+* HashSet, TreeSet
 
 
 
@@ -210,7 +212,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 * [introduzione JSP](058_JSP_1.md)
 *	Hello World JSP 
-*	NetBeans e Eclipse, GlassFish e TomCat
+*	GlassFish e TomCat
 
 
 ---
@@ -281,12 +283,13 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 * Java RESTful services
 * JAX-RS
-* JAXB
 
 ---
 
 
 ## Lab 18
+
+* JAXB
 
 ---
 
@@ -297,9 +300,8 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
   * connector-j
   * Connection
   * DriverManager
-  * Statement
+  * Statement, PreparedStatement
   * ResulSet
-  * PreparedStatement
   * executeQuery
   * executeUpdate
 
