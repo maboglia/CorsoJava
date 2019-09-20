@@ -6,7 +6,7 @@
 
 ## Step 1
 
-Create an interface.
+Crea un'interfaccia
 
 **Shape.java**
 ```java
@@ -19,7 +19,7 @@ public interface Shape {
 
 ## Step 2
 
-Create concrete classes implementing the same interface.
+Crea una classe concreta che implementi l'interfaccia
 
 **Rectangle.java**
 
@@ -61,7 +61,7 @@ public class Circle implements Shape {
 
 ## Step 3
 
-Create a Factory to generate object of concrete class based on given information.
+Crea una Factory per generare oggetti di classi concretebasandoti su un'informazione testuale (Stringa).
 
 **ShapeFactory.java**
 
@@ -92,7 +92,8 @@ public class ShapeFactory {
 
 ## Step 4
 
-Use the Factory to get object of concrete class by passing an information such as type.
+Usa la Factory per ottenere oggetti concreti passando informazioni come tipo
+
 
 **FactoryPatternDemo.java**
 
@@ -127,7 +128,7 @@ public class FactoryPatternDemo {
 
 ## Step 5
 
-Verify the output.
+output:
 
 Inside Circle::draw() method.
 Inside Rectangle::draw() method.

@@ -8,7 +8,7 @@ static double E	; //E di Eulero
 static double PI; //Pi greca
 ```
 
-### Consta di 31 metodi che rappresentano: le funzioni matematiche di 
+### metodi disponibili per le principali funzioni matematiche: 
 
 * valore assoluto, 
 * tangente, 

@@ -84,8 +84,6 @@ Queste due classi hanno la caratteristica di obbligare le sottoclassi a leggere 
 I programmi dovrebbero utilizzare i byte stream per le informazioni di tipo non testuale, come, ad esempio, immagini o suoni.
 
 ---
-
----
 ## Le classi astratte di Reader e InputStream
 
 Reader e InputStream definiscono gli stessi metodi, ma per differenti tipi di dati.
@@ -228,7 +226,7 @@ public class PathDemo {
 
 
 
-## Object_*_Stream: Serializzazione di oggetti
+## Object Stream: Serializzazione di oggetti
 
 Tutte le classi che implementano l'interfaccia Serializable possono essere salvate su persistenza attraverso un ObjectOutputStream e caricate con un ObjectInputStream. Queste ultime sono classi che implementano le interfacce ObjectOutput e ObjectInput e consentono agli oggetti di essere letti o scritti in uno stream (possibilmente un file).
 
@@ -357,15 +355,15 @@ dalla classe BufferedReader
 ---
 ### I metodi di tale classe
 
-* Sono analoghi a quelli della classe Writer
-(metodo write)
+* Sono analoghi a quelli della classe Writer (metodo write)
 * L'I/O bufferizzato è più efficiente
-  * Lettura di una riga (conclusa dai caratteri \n
-= linefeed, \r = carriage return) intera
-public String readLine ()
-throws IOException
-Ritorna null al raggiungimento di EOF
-5import java.io.*;
+  * Lettura di una riga intera
+  * (conclusa dai caratteri `\n = linefeed`, `\r = carriage return`) 
+
+```java
+public String readLine () throws IOException
+//Ritorna null al raggiungimento di EOF
+import java.io.*;
 ...
 public ...throws IOException {
 FileReader <inR> = new FileReader ("<nameIn>");
@@ -380,7 +378,7 @@ while ((str = <inB>.readLine ()) != null)
 <inB>.close ();
 <outB>.close ();
 }
-
+```
 ---
 
 ### I costrutti
