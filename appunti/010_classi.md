@@ -69,7 +69,7 @@ Le classi estendono il concetto di "struttura" di altri linguaggi
 ```java
 public class HelloWorld {
     public static void main(String[] args) {
-System.out.println("Hello World");
+		System.out.println("Hello World");
     }
 
 }
@@ -120,8 +120,8 @@ In Java
 * Gli attributi di una classe sono strettamente relazionati con la sua implementazione. 
 * Conviene contrassegnarli come private e impedirne l'accesso dall'esterno
 * In futuro potremo cambiare la rappresentazione interna dell'oggetto senza alterare l'interfaccia
-* Se non permettiamo di accedere agli attributi, risulta impossibile consultarli e modificarli
-* Soluzione: creare i metodi getter e setter
+* Se non permettiamo di accedere agli attributi, per consultarli e modificarli
+* aggiungiamo i metodi getter e setter (accessori e mutatori)
 
 ---
 
@@ -143,34 +143,9 @@ In Java
 
 
 
-## Classi già pronte
+## Classi e documentazione
 
 * Come la maggior parte dei linguaggi di programmazione, Java è dotato di una libreria di classi "pronte all'uso" che coprono molte esigenze
 * Usare classi già definite da altri è la norma per non sprecare tempo a risolvere problemi già risolti o a reinventare la ruota (DRY)
-
----
-
-## Uso di una classe pronta
-* Quando si deve cercare e poi usare una classe pronta all'uso i passi da seguire sono:
-  * Come identificarla ? Dove cercarla ?
-  * La classe è istanziabile o non istanziabile ?
-  * Se è istanziabile , come creo le istanze ?
-  * Quali metodi mi servono e come li uso ?
-
----
-
-
-## Classi e documentazione
-* La libreria Java standard è accompagnata da
-documentazione che illustra lo scopo e l'utilizzo di
-ciascuna classe presente
-* La documentazione è molto ampia, non ha scopo
-didattico, ma piuttosto di __Reference manual__
-* non è pensabile e non è molto utile studiare
-estensivamente o memorizzare la documentazione
-prima di programmare
-* leggere la documentazione è una delle
-attività più tipiche durante la programmazione
-
----
+* La libreria Java standard è accompagnata da documentazione che illustra lo scopo e l'utilizzo di ciascuna classe presente, da Java 9 è stata divisa in moduli
 

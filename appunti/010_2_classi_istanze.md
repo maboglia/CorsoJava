@@ -1,8 +1,91 @@
-# Operazioni su istanze
-* Le principali operazioni che si possono effettuare sulle variabili che riferiscono istanze di una classe sono:
-	* assegnamento
-	* confronto
-	* invocazione di metodi
+# Instanziare una Classe: gli oggetti
+
+ Gli oggetti sono caratterizzati da
+
+* Classe di appartenenza - tipo (ne descrive attributi e metodi)
+* Stato (valore attuale degli attributi)
+* Identificatore univoco (reference - handle - puntatore)
+
+### Per creare un oggetto occorre
+
+* Dichiarare una istanza
+* Tecnica analoga a quella utilizzata per i tipi primitivi
+* La dichiarazione non alloca spazio ma solo una riferimento (puntatore) che per default vale null
+* Allocazione e inizializzazione
+* Riservano lo spazio necessario creando effettivamente l'oggetto appartenente a quella classe
+
+---
+
+
+## Notazioni Puntate
+
+### Le notazioni puntate possono essere combinate
+
+* System.out.println("Hello world!");
+* System è una classe del package java.lang
+* out è una variabile di classe contenente il riferimento ad un oggetto della classe PrintStream che punta allo standard output
+* println è un metodo della classe PrintStream che stampa una linea di testo
+
+---
+
+## Operazioni su reference
+
+### Definiti gli operatori relazionali == e !=
+
+* Attenzione: il test di uguaglianza viene fatto sul puntatore (reference) e NON sull'oggetto
+* Stabiliscono se i reference si riferiscono allo stesso oggetto
+
+È definita l'assegnazione
+
+È definito l'operatore punto (notazione puntata)
+
+NON è prevista l'aritmetica dei puntatori
+
+---
+
+
+## Variabili e metodi di classe
+
+---
+
+## Variabili di classe
+
+* Rappresentano proprietà comuni a tutte le istanze
+
+* Esistono anche in assenza di istanze (oggetti)
+
+* Dichiarazione: static
+
+* Accesso: nome-classe . attributo
+
+```java
+class Automobile {
+static int numeroRuote = 4;
+}
+Automobile.numeroRuote;
+```
+
+---
+
+## Metodi di classe
+
+### Funzioni non associate ad alcuna istanza
+* Dichiarazione: static
+* Accesso: nome-classe . metodo()
+
+```java
+class HelloWorld {
+public static void main (String args[]) {
+System.out.println("Hello World!");
+
+//p.es  cos(x): metodo static della classe Math, ritorna un double
+double y = Math.cos(x);
+}
+}
+```
+
+## Operazioni su istanze
+
 * Le principali operazioni che si possono effettuare sulle variabili che riferiscono istanze di una classe sono: 
 	* assegnamento
 	* confronto
@@ -16,6 +99,7 @@
 
 
 ## Oggetti e riferimenti
+
 * Le variabili hanno un nome, gli oggetti no
 * Per utilizzare un oggetto bisogna passare attraverso una variabile che ne contiene il riferimento
 * Uno stesso oggetto può essere riferito da più variabili e quindi essere raggiunto tramite nomi diversi (di variabili)
@@ -24,14 +108,6 @@
 
 ---
 
-
-## Operazioni su istanze
-* Le principali operazioni che si possono effettuare sulle variabili che riferiscono istanze di una classe sono:
-	* assegnamento
-	* confronto
-	* invocazione di metodi
-
----
 
 
 ## Confronti tra variabili di tipo strutturato
@@ -49,13 +125,3 @@
 * Il metodo booleano equalsIgnoreCase fa lo stesso senza distinguere maiuscole/minuscole
 
 
----
-
-
-## Operazioni su istanze
-* Le principali operazioni che si possono effettuare sulle variabili che riferiscono istanze di una classe sono:
-  * assegnamento
-  * confronto
-  * invocazione di [metodi](009_metodi.md)
-
----

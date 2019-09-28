@@ -35,25 +35,33 @@ Aggiungere metodi per leggere scrivere un attributo privato
 Può infrangere (indirettamente) l'encapsulation
 
 ```java
-String getColor() {
-return color;
+String getColore() {
+       return colore;
 }
-void setColor(String newColor) {
-color = newColor;
+void setColore(String nuovoColore) {
+       this.colore = nuovoColore;
 }
+```
 
+```java
 class Automobile {
-public String colore;
+       public String colore;
 }
+//creazione oggetto
 Automobile a = new Automobile();
 a.colore = "bianco"; // ok
+```
+
+```java
+
 class Automobile {
-private String colore;
-public void vernicia(String colore)
-{this.colore = colore;}
-// ok
+       private String colore;
+       public void vernicia(String colore) {
+              this.colore = colore;
+       }
 }
 
+//creazione oggetto
 Automobile a = new Automobile();
 a.colore = "bianco"; // error
 a.vernicia("verde"); // ok

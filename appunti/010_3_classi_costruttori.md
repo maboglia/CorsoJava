@@ -105,24 +105,24 @@ a1.vernicia ("verde");
 a2 = new Automobile ();
 ``
 ---
-`
+```
 ## Costruttore
 
 Specifica le operazioni di inizializzazione (attributi, etc.) che vogliamo vengano eseguite su ogni oggetto della classe appena viene creato
 
 Tale metodo ha
-* Lo stesso nome della classe
-* Tipo non specificato
+* Lo **stesso nome** della classe
+* Tipo **non** specificato
 
 Non possono esistere attributi non inizializzati
-* Gli attributi vengono inizializzati comunque con valori di default
+* Gli attributi vengono inizializzati comunque con valori di **default**
 
 Se non viene dichiarato un costruttore,
 ne viene creato uno di default vuoto e senza parametri
 
-Spesso si usa l'overloading definendo diversi costruttori
+Spesso si usa l'**overloading** definendo diversi costruttori
 
-Si osservi che la distruzione di oggetti (garbage-collection) non è a carico del programmatore
+La distruzione di oggetti (garbage-collection) non è a carico del programmatore
 
 Esempio (costruttori con overloading)
 

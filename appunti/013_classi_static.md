@@ -1,52 +1,21 @@
-# Static modifier
+# Il modificatore static
 
-
-
-## Il modificatore static
-* La parola riservata static viene usata per
-indicare il livello di definizione di un attributo
-o metodo
-* Se la parola static è presente l’attributo o
-metodo è definito a livello di classe
-* Se la parola static non è presente l’attributo o
-metodo è definito a livello di istanza
+* La parola riservata static viene usata per indicare il livello di definizione di un attributo o metodo
+* Se la parola static è presente l’attributo o metodo è definito a livello di classe
+* Se la parola static non è presente l’attributo o metodo è definito a livello di istanza
 
 ## Static vs. non static
-* Ogni attributo o metodo non static esiste
-concretamente in ogni istanza creata
-* Esiste in “molteplici versioni” se vengono create
-più istanze
-* Non esiste concretamente se il programma non
-crea almeno un’istanza (tramite operatore new)
 
-* Ogni attributo o metodo static esiste
-concretamente a livello di classe
+* Ogni attributo o metodo non static esiste concretamente in ogni istanza creata
+* Esiste in “molteplici versioni” se vengono create più istanze
+* Non esiste concretamente se il programma non crea almeno un’istanza (tramite operatore new)
+
+* Ogni attributo o metodo static esiste concretamente a livello di classe
 * Esiste in un’unica versione
 * La sua esistenza non dipende da cosa fa il programma
 
 ---
 
-
-
-### Una classe non istanziabile 
-* non contiene nessun costruttore esplicito
-* dovrebbe contenere solo attributi e metodi static
-### Una classe istanziabile 
-* ha almeno un costruttore (di solito esplicito)
-* dovrebbe avere almeno un attributo o metodo non static
-
-## Classi istanziabili “ibride”
-* Alcune classi istanziabili (p.e. String ) della
-libreria standard contengono attributi o
-metodi static ed hanno quindi natura ibrida
-* E’ come se la classe avesse due sottoparti
-(una static e una no) ognuna delle quali
-segue le proprie regole
-* Salvo rari casi, è sconsigliabile realizzare
-classi istanziabili ibride (sono accettabili
-attributi costanti definiti come static )
-
----
 
 
 ## Accesso a metodi e attributi static
@@ -109,6 +78,3 @@ qualunque attributo e metodo della stessa classe (se
 esiste l’istanza ovviamente esiste la classe)
 * Eventuali mescolanze improprie di static e
 non static causano errori di compilazione
-* __EVITARE__ di “accontentare” il compilatore facendo
-grossi errori concettuali (p.e. aggiungendo
-static dove non deve stare)
