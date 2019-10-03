@@ -1,7 +1,4 @@
 
-
-5000/5000
-Limite di caratteri: 5000
 # 1. OOP Java Schema
 
 ## 1.1. Unità formativa
