@@ -1,6 +1,6 @@
 package main;
 
-public class HelloWorld {
+public class EsempioTipi01 {
 
 	/**
 	 * @param args

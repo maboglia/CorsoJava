@@ -1,12 +1,11 @@
-public class Caveat1
+public class Attenzione2
 {
    public static void main(String[] args)
    {
-      double a;
-      float  b, c;
+      short a, b, c;
 
-      a = 2.5f;
-      b = 3.4f;
+      a = 2;
+      b = 3;
 
       c = a + b;       // Error...
    }

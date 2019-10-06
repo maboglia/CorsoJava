@@ -1,8 +1,9 @@
-public class Caveat2
+public class Attenzione3
 {
    public static void main(String[] args)
    {
-      short a, b, c;
+      long a;
+      int b, c;
 
       a = 2;
       b = 3;

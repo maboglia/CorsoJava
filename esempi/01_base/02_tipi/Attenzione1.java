@@ -1,12 +1,12 @@
-public class Caveat3
+public class Attenzione1
 {
    public static void main(String[] args)
    {
-      long a;
-      int b, c;
+      double a;
+      float  b, c;
 
-      a = 2;
-      b = 3;
+      a = 2.5f;
+      b = 3.4f;
 
       c = a + b;       // Error...
    }
