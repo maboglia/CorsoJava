@@ -1,28 +1,27 @@
-package p001;
+
 
 public class Caratteri {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		char  a    =    65;
-		char  b    =    66;
-		
-//		System.out.println("Il valore di a + b : ");
-//		System.out.println(a);
-//		System.out.println(b);
-//		System.out.println(a+b);
-		
-		for (int i = 0; i < 1000; i++) {
-			char ascii = (char)  i;
-			System.out.print(ascii + "\t");
-			
-			if (i % 10 == 0)
-				System.out.println();
-		
-			if (i == 255)
-				System.out.println("-------------sono finiti gli ascii--------------");
-		
-		}
-	}
+        char c1 = '1';
+        char c2 = '2';
+        char c3 = '3';
+        System.out.println("Carattere 1: " + c1);
+        System.out.println("Carattere 2: " + c2);
+        System.out.println("Carattere 3: " + c3);
+
+        char dollaro = '\u0024';
+        System.out.println("Valuta: " + dollaro);
+
+        char a1 = 'a';
+        char a2 = 'b';
+        char a3 = 'c';
+        //uso la classe wrapper e i suoi metodi
+        System.out.print(Character.toUpperCase(a1));
+        System.out.print(Character.toUpperCase(a2));
+        System.out.println(Character.toUpperCase(a3));
+
+    }
 
 }

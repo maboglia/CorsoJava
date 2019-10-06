@@ -1,6 +1,6 @@
 package settimana01;
 
-public class Carattere {
+public class CaratteriCasting {
 	
 	public static void main(String[] args) {
 		char c4;

@@ -14,7 +14,15 @@ public class Primitivi {
 		System.out.println(b);
 		System.out.println(a);
 		
-		
+		int x = 0;
+		double doppio = 3.4;
+		char valoreSingolo = 'a';
+		boolean scelta = false;
+
+		System.out.println("il valore intero è: " + x);
+		System.out.println("il valore di doppio è: " + doppio);
+		System.out.println("il valore singolo è: " + valoreSingolo);
+		System.out.println("la mia scelta è: " + scelta);		
 		
 
 	}
