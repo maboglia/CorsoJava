@@ -1,6 +1,5 @@
-package dichiarazioni;
 
-public class Main {
+public class RiepilogoCondizioniCicli {
 
 	/**
 	 * @param args
