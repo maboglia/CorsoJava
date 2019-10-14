@@ -10,7 +10,6 @@
     * Raggiungibili con l'operatore di indicizzazione: le **parentesi quadre** []
     * Raggruppati sotto lo stesso nome
 
-Non possono contenere oggetti (solo dati primitivi o reference a oggetti)
 
 ### In Java gli array sono Oggetti
 * Sono allocati nell'area di memoria riservata agli oggetti creati dinamicamente (heap)
@@ -26,10 +25,12 @@ Non possono contenere oggetti (solo dati primitivi o reference a oggetti)
 ## Dichiarazione di Array
 
 ### Dichiarazione di un riferimento a un array
+
 * `int[] voti;`
 * `int voti[];`
 
 ### La dichiarazione di un array non assegna alcuno spazio
+
 `voti == null`
 
 ---
@@ -79,6 +80,9 @@ int [] pari = {0, 2, 4, 6, 8, 10,};
 // (elenchi lunghi)
 ```
 
+---
+
+
 * Dichiarazione e creazione possono avvenire contestualmente
 * L'attributo length indica la lunghezza dell'array, cioè il numero di elementi
 * Gli elementi vanno da 0 a length-1
@@ -106,6 +110,9 @@ voti[i] = i;
 
 Per gli array di oggetti (e.g., Integer) `Integer [] voti = new Integer [5];` ogni elemento e' un riferimento
 
+---
+
+
 ### L'inizializzazione va completata con quella dei singoli elementi
 
 ```java
@@ -131,6 +138,7 @@ Sintatticamente sono estensioni degli array a una dimensione
 ```java
 int[][] triangle = new int[3][]
 ```
+---
 
 
 ### Le righe non sono memorizzate in posizioni adiacenti
@@ -163,6 +171,7 @@ saldo[j] = temp;
 * Ricerca binaria (o dicotomica)
     * `Arrays.binarySearch (<array>);`
 
+---
 
 
 ## Snippets Tipi di Array
@@ -178,7 +187,6 @@ int[] list = {1, 2, 3, 4};
 
 ```
 
----
 
 
 **Array Multidimensionali**
