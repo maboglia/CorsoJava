@@ -168,7 +168,8 @@ saldo[j] = temp;
 ## Snippets Tipi di Array
 
 **Array Monodimensionali**
-```
+
+```java
 int[] list = new int[10];
 
 list.length;
@@ -181,7 +182,8 @@ int[] list = {1, 2, 3, 4};
 
 
 **Array Multidimensionali**
-```
+
+```java
 int[][] list = new int[10][10];
 
 list.length;
@@ -196,14 +198,14 @@ int[][] list = {{1, 2}, {3, 4}};
 
 
 **Array irregolari**
-```
-int[][] m = {{1, 2, 3, 4},
 
-{1, 2, 3},
-
-{1, 2},
-
-{1}};
+```java
+int[][] m = {
+    {1, 2, 3, 4},
+    {1, 2, 3},
+    {1, 2},
+    {1}
+};
 
 ```
 
