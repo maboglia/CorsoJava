@@ -2,7 +2,7 @@
 
 ## Bubble-sort
 
-[bubble sort](./img/bubble-sort2.png)
+![bubble sort](./img/bubble-sort2.png)
 
 ```java
     public void bubbleSort(int [] array) {
@@ -33,7 +33,7 @@
 
 ## Selection-sort
 
-[selection sort](./img/algo_selection_sort.jpg)
+![selection sort](./img/algo_selection_sort.jpg)
 
 ```java
     public void selectionSort(int [] array) {
