@@ -5,7 +5,7 @@
 ![bubble sort](./img/bubble-sort2.png)
 
 ```java
-    public void bubbleSort(int [] array) {
+    public void bubbleSort(int[] array) {
 
         for(int i = 0; i < array.length; i++) {
             boolean flag = false;
@@ -36,7 +36,7 @@
 ![selection sort](./img/algo_selection_sort.jpg)
 
 ```java
-    public void selectionSort(int [] array) {
+    public void selectionSort(int[] array) {
 
         for(int i = 0; i < array.length-1; i++) {
             int minimo = i; //Partiamo dall' i-esimo elemento
