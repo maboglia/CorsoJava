@@ -36,7 +36,7 @@ Caratteristiche principali
 * Il nome della stringa è il riferimento alla stringa stessa
 * Confrontare due stringhe NON significa confrontare i riferimenti
 
-**NB: I metodi che gestiscono il tipo String NON modificano la stringa ma ne creano una nuova**
+**NB: I metodi che gestiscono il tipo String NON modificano la stringa, ma ne creano una nuova**
 
 ### Concatenazione di stringhe
 
