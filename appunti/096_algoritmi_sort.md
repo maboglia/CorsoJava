@@ -3,6 +3,7 @@
 ## Bubble-sort
 
 ![bubble sort](./img/bubble-sort2.png)
+![bubble sort](./img/Algo_mb_bubble-sort.png)
 
 ```java
     public void bubbleSort(int[] array) {
