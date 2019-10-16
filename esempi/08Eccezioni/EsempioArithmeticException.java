@@ -3,7 +3,7 @@ package eccezioni;
 /**
  * Created by mauro on 06/12/16.
  */
-public class Esempio1 {
+public class EsempioArithmeticException {
     public static void main(String[] args) {
 
         try {

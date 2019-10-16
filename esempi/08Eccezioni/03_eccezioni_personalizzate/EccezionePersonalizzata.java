@@ -3,7 +3,7 @@ package eccezioni;
 /**
  * Created by mauro on 06/12/16.
  */
-public class Esempio5EccezionePersonalizzata {
+public class EccezionePersonalizzata {
 
 
     public static void main(String[] args) {
@@ -18,10 +18,10 @@ public class Esempio5EccezionePersonalizzata {
             System.out.println(gm);
             System.out.println(dettagli);
         } catch (Exception e){
-            System.out.println("bbbbbbbbbb");
+            System.out.println("si è verificata un'eccezione");
         } finally{
 
-            System.out.println("l'esempio funge da esempio");
+            System.out.println("questo codice viene eseguito in ogni caso");
         }
     }
 
