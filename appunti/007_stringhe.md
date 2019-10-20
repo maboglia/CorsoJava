@@ -16,9 +16,6 @@ Caratteristiche principali
 
 ---
 
-
-## Classe String
-
 ### Definizione
 
 `String myString;`
@@ -37,6 +34,7 @@ Caratteristiche principali
 * Confrontare due stringhe NON significa confrontare i riferimenti
 
 **NB: I metodi che gestiscono il tipo String NON modificano la stringa, ma ne creano una nuova**
+---
 
 ### Concatenazione di stringhe
 
@@ -70,6 +68,7 @@ Caratteristiche principali
 
 * char charAt (int)
 * myString.charAt(i)
+---
 
 ### Confronta stringa con s
 
@@ -103,7 +102,9 @@ Caratteristiche principali
 * String substring (int startIndex, int endIndex)
 * String substring (int startIndex)
 
-### Esempi
+---
+
+### Esempio
 
 ```java
 String s1, s2;

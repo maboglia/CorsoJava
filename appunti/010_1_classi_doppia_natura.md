@@ -28,7 +28,7 @@
 ---
 
 
-## Riconoscere una classe istanziabile
+## una classe istanziabile
 
 * Normalmente ha costruttori
 * Attributi e metodi sono tutti (o quasi) **non static**
@@ -50,7 +50,7 @@
 ---
 
 
-## Riconoscere una classe non istanziabile
+## una classe non istanziabile
 * Non ha costruttori
 * Attributi e metodi sono tutti static
 * Quando penso all'esecuzione dei suoi metodi non ho bisogno di immaginare un'istanza individuale: sono applicabili direttamente alla classe con almeno un argomento
