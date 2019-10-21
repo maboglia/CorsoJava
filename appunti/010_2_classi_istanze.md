@@ -9,7 +9,6 @@
 ### Per creare un oggetto occorre
 
 * Dichiarare una istanza
-* Tecnica analoga a quella utilizzata per i tipi primitivi
 * La dichiarazione non alloca spazio ma solo una riferimento (puntatore) che per default vale null
 * Allocazione e inizializzazione
 * Riservano lo spazio necessario creando effettivamente l'oggetto appartenente a quella classe
@@ -43,10 +42,6 @@ NON è prevista l'aritmetica dei puntatori
 
 ---
 
-
-## Variabili e metodi di classe
-
----
 
 ## Variabili di classe
 
@@ -83,6 +78,7 @@ double y = Math.cos(x);
 }
 }
 ```
+---
 
 ## Operazioni su istanze
 
@@ -108,8 +104,6 @@ double y = Math.cos(x);
 
 ---
 
-
-
 ## Confronti tra variabili di tipo strutturato
 * E' possibile applicare gli operatori di confronto == e != a variabili di tipo strutturato
 * Se uno dei due termini del confronto è il valore null si verifica se una certa variabile riferisce un oggetto oppure no, p.e. saluto3 != null
@@ -123,5 +117,3 @@ double y = Math.cos(x);
 * Di solito si vogliono confrontare i contenuti non i riferimenti: per questo si usa il metodo __equals__ 
 * Il metodo booleano equals della classe String accetta come argomento il riferimento ad un altro oggetto e ritorna true se le stringhe contenute sono uguali (in modo case sensitive), false altrimenti 
 * Il metodo booleano equalsIgnoreCase fa lo stesso senza distinguere maiuscole/minuscole
-
-

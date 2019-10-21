@@ -202,7 +202,8 @@ public class CallingMethodsInSameClass
 		printOne();
 		printOne();
 	}
-```}
+}
+```
 
 ```java
 package giochi;

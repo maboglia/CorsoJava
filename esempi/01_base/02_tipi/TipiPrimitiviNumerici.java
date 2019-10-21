@@ -1,6 +1,4 @@
-package com.example.java;
-
-public class Main {
+public class TipiPrimitiviNumerici {
 
     public static void main(String[] args) {
 

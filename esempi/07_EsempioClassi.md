@@ -271,7 +271,3 @@ public class MiaClasse {
 }
 
 ```
-## esempio
-```java
-
-```

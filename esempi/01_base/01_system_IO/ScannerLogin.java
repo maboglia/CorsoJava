@@ -2,7 +2,7 @@ package main;
 
 import java.util.Scanner;
 
-public class Console {
+public class ScannerLogin {
 
 	/**
 	 * @param args
