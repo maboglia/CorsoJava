@@ -1,4 +1,4 @@
-Scrivere un programma Esercizio02.java che chiede all’utente di inserire una sequenza di numeri interi. 
+Scrivere un programma che chiede all’utente di inserire una sequenza di numeri interi. 
 
 Il programma continua a chiedere all’utente di inserire valori fino a che i valori inseriti soddisfano almeno una delle seguenti condizioni:
 • è un intero negativo ed è divisibile per 2
