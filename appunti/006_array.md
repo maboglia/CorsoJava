@@ -154,10 +154,10 @@ saldo[j] = temp;
 ```
 
 * L'array è una struttura dati efficiente ogni volta che il numero di elementi è noto
-* Il ridimensionamento di unarray in Java risulta poco efficiente
+* Il ridimensionamento di un array in Java risulta poco efficiente
 * Utilizzare altre strutture dati se il numerodi elementi contenuto non è noto
 
-### Il pacchetto java.util contiene metodi statici di utilità
+### Il pacchetto java.util contiene metodi statici di utilità per gli array
 
 * Copia di un valore in tutti gli (o alcuni) elementi di un array
     * `Arrays.fill (<array>, <value>);`

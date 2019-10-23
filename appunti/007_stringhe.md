@@ -29,7 +29,7 @@ Caratteristiche principali
 
 `String myString = "stringa esempio";`
 
-* Il carattere " può essere incluso come \"
+* Il carattere " (doppi apici) può essere incluso come \"
 * Il nome della stringa è il riferimento alla stringa stessa
 * Confrontare due stringhe NON significa confrontare i riferimenti
 

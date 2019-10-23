@@ -56,3 +56,5 @@ class BufferStringhe{
 	}
 }
 ```
+
+[vedi altri esempi di codice](./02_API_lang_String)
