@@ -8,7 +8,7 @@ class sommaNumeri_Do
 		{
 		int contatore, somma, n;
 
-		IO.out.println("            SOMMA DEI PRIMI N NUMERI NATURALI");
+		IO.out.println("SOMMA DEI PRIMI N NUMERI NATURALI");
 
 		IO.out.print("Introduci un numero naturale: ");
 		n = IO.in.readInt();
