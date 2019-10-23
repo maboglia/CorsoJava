@@ -1,4 +1,3 @@
-		import system.IO;
 
 class sommaNumeri_While
 {
@@ -7,10 +6,10 @@ class sommaNumeri_While
 		{
 		int contatore, somma, n;
 
-		IO.out.println("            SOMMA DEI PRIMI N NUMERI NATURALI");
+		System.out.println("            SOMMA DEI PRIMI N NUMERI NATURALI");
 
-		IO.out.print("Introduci un numero naturale: ");
-		n=IO.in.readInt();
+		System.out.print("Introduci un numero naturale: ");
+		n=10;
 
 		somma = 0;
 		contatore = 1;
@@ -21,6 +20,6 @@ class sommaNumeri_While
 			contatore++;
 			}
 
-		IO.out.println("La somma dei primi "+n+" numeri naturali e' "+somma);
+		System.out.println("La somma dei primi "+n+" numeri naturali e' "+somma);
 	}
 }
