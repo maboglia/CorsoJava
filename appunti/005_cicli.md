@@ -1,21 +1,21 @@
-
 Strutture del linguaggio
 ========================
 
+## Selezione 
 
-**if Statements**
+**if //Statements**
 
 ```java
 if (condition) {
     
-    statements;
+    //statements;
 
 }
 
 [optional]
 else if (condition2) {
     
-    statements;
+    //statements;
 
 }
 
@@ -24,7 +24,7 @@ else if (condition2) {
 [optional]
 else {
     
-statements;
+//statements;
 
 }
 
@@ -38,23 +38,23 @@ statements;
 ```java
 switch (Expression) {
 
-case value1:
+    case value1:
 
-statements;
+    //statements;
 
-break;
+    break;
 
-...
+    ...
 
-case valuen:
+    case valuen:
 
-statements;
+    //statements;
 
-break;
+    break;
 
-default:
+    default:
 
-statements;
+    //statements;
 
 }
 ```
@@ -67,20 +67,20 @@ statements;
 
 while (condition) {
 
-statements;
+//statements;
 
 }
 
 do {
 
-statements;
+//statements;
 
 } while (condition);
 
 
 for (init; condition; adjustment) {
 
-statements;
+//statements;
 
 }
 ```
