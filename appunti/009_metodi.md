@@ -69,7 +69,7 @@ public class ProvaMetodi
 * La documentazione di ogni classe ( istanziabile o no) contiene l’elenco dei metodi disponibili
 * La classe **Math** non è istanziabile
 * La classe **String** è "istanziabile ibrida"
-* La classe **StringBuffer** è "istanziabile pura"
+* La classe **StringBuilder** è "istanziabile pura"
 
 ---
 
