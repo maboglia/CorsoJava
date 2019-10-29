@@ -1,9 +1,6 @@
 # Le Variabili
 
 
----
-
-## Variabili
 
 * Una variabile è un'area di memoria identificata da un nome
 * Il suo scopo è di contenere un valore di un certo tipo
