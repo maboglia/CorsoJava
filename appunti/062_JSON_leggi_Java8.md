@@ -61,6 +61,29 @@ public class ProvaConnessione {
 
 ```
 
+## processa il JSON
+
+[Scarica org.json jar](https://github.com/stleary/JSON-java)
+
+```java
+
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+	
+	public static String parse(String response) {
+		JSONArray utenti = new JSONArray(response);
+		for (int i = 0; i < utenti.length(); i++) {
+			JSONObject utente = utenti.getJSONObject(i);
+			int id =  utente.getInt("id");
+			String username = utente.getString("username");
+			System.out.println(username);
+			
+		}
+		return null;
+	}
+```
+
 ## con Java 11 puoi usare un altro metodo per fare richieste
 
 ```java
