@@ -1,4 +1,4 @@
-## File di configurazione nella cartella WEB-INF
+# File di configurazione nella cartella WEB-INF
 
 ```java
 InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream("/my.properties");
@@ -11,7 +11,7 @@ Lettura sequenziale di file di testo (e canali di input)
 
 Per leggere un file di testo avente come nome la stringa s, creare innanzitutto un oggetto java.io.FileReader come segue (dopo aver importato java.io.*):
 
-```
+```java
 FileReader f;
 
 try {
@@ -23,7 +23,8 @@ catch(FileNotFoundException e){
 
 
 ```
-Si noti che il costruttore FileReader(s) lancia una eccezione verificata FileNotFoundException se non è possibile aprire il file s.
+
+il costruttore FileReader(s) lancia una eccezione verificata FileNotFoundException se non è possibile aprire il file s.
 
 ---
 ## Passo 2: creazione canale di lettura associato al file da leggere
@@ -41,7 +42,7 @@ A questo punto, invocando ripetutamente il metodo readLine() sull'oggetto Buffer
 
 Ad esempio, il seguente frammendo di codice stampa a video tutte le righe del file:
 
-```
+```java
 try {
     for (;;) {
         String r = b.readLine(); // legge la prossima riga del file
@@ -104,16 +105,19 @@ public class LetturaFile {
     }
 }
 ```
-Notare che FileNotFoundException è una sottoclasse di IOException e quindi togliendo il catch(FileNotFoundException e) il programma sarebbe comunque corretto, solo che darebbe lo stesso errore sia in caso di errore di apertura file (new FileReader(...)) che di lettura file (b.readLine()).
+
+Notare che `FileNotFoundException` è una sottoclasse di `IOException` e quindi togliendo il catch(`FileNotFoundException` e) il programma sarebbe comunque corretto, solo che darebbe lo stesso errore sia in caso di errore di apertura file (new `FileReader`(...)) che di lettura file (b.readLine()).
 
 Programma di prova:
+```java
 
-    `public static void main(String[] args){
-        stampaFile("LetturaFile.java");
-    }`
-
+public static void main(String[] args){
+    stampaFile("LetturaFile.java");
+}
+```
 
 ---
+
 ## Esempio 2
 
 Una variante dell'esercizio precedente assume che il metodo non prenda come parametro un nome di file, ma un canale di lettura BufferedReader assumendo che sia stato già creato al momento dell'invocazione.
@@ -181,42 +185,47 @@ catch(FileNotFoundException e){
 
 ```
 
-Si noti che il costruttore PrintStream(s) (si legga la documentazione):
+## il costruttore PrintStream(s)
 
-    crea un nuovo file con il nome s se il file non esiste ancora;
-    apre il file in scrittura se il file esiste, cancellandone il contenuto precedente;
-    lancia una eccezione verificata FileNotFoundException se non è possibile aprire il file per la scrittura (la documentazione recita: "If the given file object does not denote an existing, writable regular file and a new regular file of that name cannot be created, or if some other error occurs while opening or creating the file").
-
+* crea un nuovo file con il nome s se il file non esiste ancora;
+* apre il file in scrittura se il file esiste, cancellandone il contenuto precedente;
+* lancia una eccezione verificata FileNotFoundException se non è possibile aprire il file per la scrittura.
 
 ---
+
 ## Passo 2: scrittura sul canale di output associato al file
 
-Da questo punto in poi, l'oggetto p può essere usato per scrivere con i metodi print e println della classe PrintStream (si noti che System.out è un oggetto PrintStream). Ad esempio:
+Da questo punto in poi, l'oggetto p può essere usato per scrivere con i metodi print e println della classe PrintStream (System.out è un oggetto PrintStream). Ad esempio:
 
-p.println("prova scrittura su file");
-
+`p.println("prova scrittura su file");`
 
 ---
+
 ## Passo 3: chiusura canale di output associato al file
 
 Quando la scrittura del file è stata ultimata, è buona norma chiudere il canale di output associato al file invocando il metodo close():
 
-p.close();
+`p.close();`
 
 
-Nota: fare attenzione a non chiamare close() su un canale PrintStream non associato a un file, ma ad esempio al canale standard System.out:
+Nota: fare attenzione a non chiamare close() su un canale PrintStream non associato a un file, ma ad esempio al canale 
+standard System.out:
 
-PrintStream p = System.out; // System.out è un riferimento di tipo PrintStream al terminale standard
+```java
+PrintStream p = System.out; 
+// System.out è un riferimento di tipo PrintStream al terminale standard
 p.close(); // chiude il terminale di output
 System.out.println("questa stringa non verrà mai stampata");
-
+```
 
 ---
+
 ## Esempio 1
 
 Scrivere una classe pubblica ScritturaFile con un metodo pubblico void scriviSuFile(Object[] v, String s) che, dato un array v di oggetti e una stringa s, crea un file di nome s contenente le stringhe associate agli oggetti dell'array, oppure lancia un'eccezione non verificata se si incontrano errori nella scrittura del file.
 
 ScritturaFile.java
+```java
 import java.io.*;
 
 public class ScritturaFile {
@@ -240,14 +249,15 @@ public class ScritturaFile {
         scriviSuFile(new String[]{"uno", "due", "tre"}, "miofile.txt");
     }
 }
+``` 
 
+### Programma di prova:
 
-Programma di prova:
-
-    public static void main(String[] args){
-        scriviSuFile(new String[]{"uno", "due", "tre"}, "miofile.txt");
-    }
-
+```java
+public static void main(String[] args){
+    scriviSuFile(new String[]{"uno", "due", "tre"}, "miofile.txt");
+}
+```
 
 ---
 ## Esempio 2
@@ -257,21 +267,22 @@ Una variante dell'esercizio precedente assume che il metodo non prenda come para
 Scrivere una classe pubblica ScritturaFile con un metodo pubblico void scriviSuCanaleOutput(Object[] v, PrintStream p) che, dato un array v di oggetti e un canale di output p, scrive su quel canale le stringhe associate agli oggetti dell'array, oppure lancia un'eccezione non verificata se si incontrano errori nella scrittura del file.
 
 ScritturaFile.java
+```java
 import java.io.*;
 
 public class ScritturaFile {
     public static void scriviSuCanaleOutput(Object[] v, PrintStream p){
         for (int i=0; i<v.length; i++) p.println(v[i]);
-    }   
+    }
 }
-
+```
 
 Nota importante: sarebbe errato fare p.close() perché il canale di output p potrebbe dover rimanere ancora in uso (esempio ovvio: se p==System.out).
 
-Programma di prova:
+### Programma di prova:
 
-    public static void main(String[] args){
-        scriviSuCanaleOutput(new String[]{"uno", "due", "tre"}, System.out);
-    }
-
-
+```java
+public static void main(String[] args){
+    scriviSuCanaleOutput(new String[]{"uno", "due", "tre"}, System.out);
+}
+```

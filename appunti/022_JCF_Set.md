@@ -1,4 +1,23 @@
-# Implementazione di Set e SortedSet
+# Set
+
+* Un Set è un tipo di collezione che, astraendo il concetto di insieme matematico, non ammette elementi duplicati.
+
+* Questa interfaccia, quindi, permette di gestire collezioni di oggetti non duplicati identificabili univocamente mediante il metodo equals().
+
+* No elementi duplicati (elementi non inseriti se presenti)
+* No ordine (esiste un ordinamento ma è interno)
+* HashSet
+  * Set implementati come una Hash (accesso veloce)
+* TreeSet
+  *  Set implementati come un albero
+* LinkedHashSet
+  * Sottoclasse di HashSet
+  * Mantiene l'ordine di inserimento dei dati grazie a una lista (in aggiunta alla hash)
+  * Gli iterator forniscono l'ordine di inserzione
+
+---
+
+## Implementazione di Set e SortedSet
 
 L’interfaccia Set rappresenta un insieme di elementi senza duplicati, ciò impone la presenza di una tecnica che consenta di distinguere gli oggetti. 
 

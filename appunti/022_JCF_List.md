@@ -1,5 +1,27 @@
 
-# Implementazione di List
+# List
+
+* Una List è una collezione ordinata. In una lista viene sempre associato un indice a ogni elemento, che equivale alla posizione dell’elemento stesso all’interno della lista.
+* Una lista ammette elementi duplicati (distinguibili dalla posizione).
+
+* Contiene elementi con ordine specifico 
+* Elementi duplicati
+* `ArrayList`
+  * Implementazione di una lista mediante array
+  * Ricerca veloce
+  * Inserzione/cancellazione lenta
+* `LinkedList`
+  * Implementa di una lista mediante lista linkata
+  * Ottimo accesso sequenziale
+  * Ottima inserzione e cancellazione
+  * Accesso diretto lento
+* `Vector`
+  * Mantenuto per compatibilità
+  * Più lento di ArrayList
+
+---
+
+## Implementazione di List
 
 L’interfaccia List rappresenta un insieme di elementi. Sono permessi elementi duplicati.
 

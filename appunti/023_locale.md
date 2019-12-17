@@ -1,4 +1,5 @@
 # Internazionalizzazione e localizzazione
+
 L'internazionalizzazione consente a un'applicazione di adattarsi in modo automatico alle convenzioni in uso in una particolare lingua o regione.
 
 La localizzazione permette l'adattamento del software a una particolare regione aggiungendo all'applicazione tutte quelle parti che dipendono dalla regione stessa.
@@ -12,6 +13,7 @@ Occorre tener presente che, nella maggior parte dei casi, con internazionalizzaz
 ```java
 nomeLocale = new Locale("language", "country", ["variant"]);
 ```
+
 La classe Locale  astrae il concetto di "zona" sia dal punto di vista linguistico che geografico. 
 
 Molte rappresentazioni di numerose altre classi dipendono da Locale. 
@@ -41,7 +43,7 @@ La terza variabile (opzionale) permette la specifica di strutture personalizzate
 // creazione di un Locale con due parametri
 Italia = new Locale("it", "IT");
 America = new Locale("en", "US");
-Inghilterra = new Locale("en", "BG");
+Inghilterra = new Locale("en", "UK");
 
 // creazione di un Locale col parametro opzionale
 nordAmerica = new Locale("en", "US", "NORTH");
@@ -49,6 +51,7 @@ unixLocale = new Locale("it", "IT", "UNIX");
 windowsLocale = new Locale("it", "IT", "WINDOWS");
 ```
 Molti Locale sono sicuramente più usati di altri, per questi ultimi sono disponibili delle costanti facilmente accessibili.
+
 ```java
 America = Locale.US;
 CanadaFrancesce = Locale.CANAD_FRENCH;
@@ -59,13 +62,14 @@ La classe Locale possiede, inoltre, alcuni metodi che restituiscono informazioni
 
 ## CLASSE RESOURCEBUNDLE
 
-nomeResBundle = ResourceBundle.getBundle("nomeBundle", nomeLocale)
+`nomeResBundle = ResourceBundle.getBundle("nomeBundle", nomeLocale)`
 
 Un ruolo molto importante nel processo di internazionalizzazione sono le risorse, cioè file di proprietà che fanno riferimento ad un ResourceBundle. 
 
 Sono semplici file di testo che contengono i messaggi, label, bottoni, parole che cambiano da una lingua all'altra e possono essere tradotti anche da persone che non conoscono la programmazione in quanto non si lavora sul codice ma all'esterno dell'applicazione.
 
 Queste risorse hanno un formato molto semplice, in quanto contengono praticamente coppie (Chiave : valore) dove:
+
 * la chiave è una stringa
 * il valore è la traduzione, cioè una stringa tradotta nella lingua del particolare Locale
 
@@ -116,13 +120,11 @@ public class Example {
 
 ## file properties.
 ```java
+
 /* MyBundle.properties */
 header = Welcome to my webpage
 block1 = Please follow the directions to learn how to play the game
 
-/* MyBundle_es_US.properties */
-header = Welcome to my webpage
-block1 = Please follow the directions to learn how to play the game
 
 /* MyBundle_es_ES.properties */
 header = Bienvenidos a mi webpage

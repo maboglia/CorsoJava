@@ -1,4 +1,13 @@
-# Implementazione di Queue
+# Queue
+
+* Questa interfaccia, quindi, permette di gestire collezioni di oggetti ordinati identificabili univocamente mediante un indice che rappresenta la sua posizione all’interno della lista.
+
+* Una Queue permette di gestire collezioni di oggetti gestiti con la filosofia FIFO (First In First Out) in modo che il primo oggetto inserito sia il primo candidato ad essere letto.
+
+
+---
+
+## Implementazione di Queue
 
 * L’interfaccia Queue rappresenta un insieme di elementi gestiti mediante FIFO. 
 * Questa interfaccia estende Collection definendo nuovi metodi per l’inserimento, la rimozione e l’utilizzo dei dati. 

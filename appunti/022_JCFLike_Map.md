@@ -1,4 +1,33 @@
-# Implementazione di Map e SortedMap
+# Map
+
+
+* Map è una collezione che associa chiavi ai suoi elementi. Le mappe non possono contenere chiavi duplicate e ogni chiave può essere associata a un solo valore.
+
+* Map non è propriamente una Collection poiché non implementa l’interfaccia Collection.
+
+
+* Associazione chiave-valore (key-value)
+  * ex: codice fiscale - persona
+  * matricola - studente
+* Permette ricerche data la chiave
+* No chiavi duplicate
+* HashMap
+  * Implementazione basata su tabella di hash
+  * Possibile impostare capacità e fattore di carico per ottimizzare le prestazioni
+* TreeMap
+  * Implementazione basata su struttura ad albero
+  * Si ottengono i dati ordinati
+  * Disponibilità del metodo subMap() che fornisce un sotto-albero
+* LinkedHashMap
+  * Sottoclasse dell'HashMap
+  * Mantiene l'ordine di inserimento dei dati grazie a una lista (in aggiunta alla hash)
+  * Gli iterator forniscono l'ordine di inserzione
+
+
+---
+
+
+## Implementazione di Map e SortedMap
 
 L’interfaccia Map rappresenta un insieme di elementi, ad ognuno dei quali viene associata una chiave univoca. 
 
