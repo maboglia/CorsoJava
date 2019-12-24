@@ -1,22 +1,27 @@
 # Linguaggio Java
 
-
-### La prima applicazione Java
+## La prima applicazione Java
 
 File HelloWorld.java
 ```java
 public class HelloWorld {
-public static void main (String args[]) {
-System.out.println ("Hello world!");
+    public static void main (String args[]) {
+    System.out.println ("Hello world!");
+    }
 }
-}
+```
+
+### Compilazione
+(produce il bytecode HelloWord.class)
+```java
 > javac HelloWorld.java
+```
+
+### Esecuzione
+```java
 > java HelloWorld
 HelloWorld!
 >
-Compilazione
-(produce HelloWord.class)
-Esecuzione
 ```
 
 ### Classi ...
@@ -213,34 +218,6 @@ val = val ### 10 + s[i] – ‘0';
 ...
 ```
 
-## Input/Output in modalità grafiche
-
-### Java è stato progettato per lavorare in modalità grafiche
-
-### Una possibilità è utilizzare la classe JOptionPane definita nel package javax.swing
-
-```java
-
-(package swing)
-// Importa Classe JOPtionPane
-import javax.swing.JOptionPane;
-...
-String inputS;
-String outputS;
-int nValue;
-...
-// Input
-inputS = JOptionPane.showInputDialog
-("Messaggio");
-nValue = Integer.parseInt (inputS);
-...
-// Output
-// (previa creazione della stringa output)
-JOptionPane.showMessageDialog (
-null, output, "Messaggio",
-JOptionPane.INFORMATION_MESSAGE );
-```
-
 * [array](03_array.md)
 * [Stringhe e Caratteri](03_stringhe.md)
 * [Metodi & Classi: Concetti base](03_classi.md)
@@ -255,7 +232,7 @@ JOptionPane.INFORMATION_MESSAGE );
 
 ### La classe che eredita da un'altra
 
-* Eredita attributi e operazioni
+* Eredita attributi e operazioni (ciò che non è dichiarato come **private**)
 * Può modificare attributi/operazioni ereditati (override)
 * Può aggiungere attributi/operazioni
 
@@ -442,34 +419,3 @@ ae.ricarica();
 
 
 
-| n.  | titolo                                                             |
-| --- | ------------------------------------------------------------------ |
-| 1   | Java Course Introduction                                           |
-| 2   | Basic Java keywords                                                |
-| 4   | Packages, Import Statements, Instance Members, Default Constructor |
-| 5   | Access and Non Access Modifiers                                    |
-| 6   | Tools – Eclipse, Netbeans, IntelliJIdea, Junit, Maven              |
-| 7   | if/else statements and booleans                                    |
-| 8   | loops: for, while and do while loop                                |
-| 9   | for each loop and arrays                                           |
-| 10  | arrays and enums                                                   |
-| 11  | enums and switch statement                                         |
-| 12  | switch statement                                                   |
-| 13  | Java Logging with sl4j and logback                                 |
-| 14  | deep dive into public static void main                             |
-| 15  | Checked and Unchecked Exceptions in Java                           |
-| 16  | Interfaces in Java                                                 |
-| 17  | Inheritance in Java                                                |
-| 18  | Object finalizer method                                            |
-| 19  | Object clone method                                                |
-| 20  | Object toString method                                             |
-| 21  | Java autoboxing, Static Imports, Number Types and more             |
-| 22  | HashCode and Equals                                                |
-| 23  | Java Collections Framework Introduction                            |
-| 24  | ArrayList                                                          |
-| 25  | Linked List Data Structure                                         |
-| 26  | LinkedList vs ArrayList                                            |
-| 27  | Identity vs Equality in Java                                       |
-| 28  | Comparable interface in Java                                       |
-| 29  | Shallow vs. Deep Copy in Java                                      |
----
