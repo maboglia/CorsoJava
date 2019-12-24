@@ -15,7 +15,6 @@ completamente astratta, cioè del tutto priva della parte di implementazione
 
 ---
 
-
 Si può pensare a un'interfaccia come a una classe astratta
 che ha tutti e soli metodi astratti (ci sono però differenze).
 
@@ -23,9 +22,10 @@ che ha tutti e soli metodi astratti (ci sono però differenze).
 Un'interfaccia può essere considerata un modo per
 cosa dovrebbero fare le classi senza specificare come farlo.
 
-Quindi un'interfaccia non è una classe ma un insieme di
-requisiti per le classi che si vogliono conformare ad essa.
+Quindi un'interfaccia non è una classe ma un insieme di requisiti per le classi che si vogliono conformare ad essa.
+
 ---
+
 ## Sintassi:
 ```java
 public interface NomeInterfaccia
@@ -36,12 +36,17 @@ public interface NomeInterfaccia
 
 ---
 
+## interface
 
 Si utilizza la parola chiave interface anzichè class
 
 I metodi sono implicitamente pubblici e astratti, non bisogna indicarlo
 
 Se una classe decide di soddisfare i requisiti di un'interfaccia si dice che la classe implementa l'interfaccia.
+
+---
+
+## esempio d'uso
 
 Per indicare che una classe implementa un'interfaccia si utilizza la seguente sintassi:
 
@@ -52,11 +57,10 @@ public class NomeClasse implements NomeInterfaccia
 }
 ```
 
----
-
-
 Tale classe deve implementare tutti i metodi elencati nell'interfaccia.
+
 ---
+
 ### proprietà
 Le interfacce non sono classi; non si può utilizzare new per crearne oggetti.
 
@@ -66,19 +70,25 @@ Gli attributi di un'interfaccia sono sempre public static final
 (non è necessario scriverlo).
 
 Un'interfaccia con il nome NomeInterfaccia va salvata nel file NomeInterfaccia.java (come accade per le classi).
+
 ---
+
 ### ereditarietà multipla
 Una sottoclasse può estendere solo 1 superclasse (non permettendo l'ereditarietà multipla)
 
 Con le interfacce invece la situazione è diversa: una classe può implementare quante interfacce vuole.
+
 ---
+
 ### variabili
+
 Posso dichiarare variabili del tipo dell'interfaccia e,
 sfruttando il polimorfismo, assegnargli oggetti di classi che
 implementano tali interfacce.
 
 ---
 
+## esempio d'uso
 
 ```java
 public interface NomeInterfaccia {
@@ -91,12 +101,10 @@ int metodo1( ) {
 }
 NomeInterfaccia a = new NomeClasse ( );
 ```
----
 
 ---
 
-
-## TIpi di interfacce
+## Tipi di interfacce
 
 * Normali
 * Single Abstract method - @FunctionalInterface
@@ -106,8 +114,10 @@ Con java 1.8 le interfacce sono state modificate: è possibile implementare due 
 
   * default
   * static
+
 ---
+
 ## Lambda expressions
 Con le interfacce contenenti un singolo metodo astratto, è possibile utilizzare le espressioni lambda
 
-Integer raddoppiato = (o) -> o * 2 ;
+`Integer raddoppiato = (o) -> o * 2 ;`
