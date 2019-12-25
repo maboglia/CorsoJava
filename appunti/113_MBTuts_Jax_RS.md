@@ -6,9 +6,9 @@
 ## 1.4. right-click->configure->converti a maven project
 ## 1.5. aggiungi al pom le dipendenze
    * asm
-   * jearsey-bundle
-   * jearsey-core
-   * jearsey-server
+   * jersey-bundle
+   * jersey-core
+   * jersey-server
    * json
 
 ![esempio](./img/jax-rs-1.jpg)
