@@ -2,8 +2,8 @@
 
 ## Bubble-sort
 
-![bubble sort](./img/bubble-sort2.png)
-![bubble sort](./img/Algo_mb_bubble-sort.png)
+![bubble sort](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/bubble-sort2.png)
+![bubble sort](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Algo_mb_bubble-sort.png)
 
 ```java
     public void bubbleSort(int[] array) {
@@ -34,7 +34,7 @@
 
 ## Selection-sort
 
-![selection sort](./img/algo_selection_sort.jpg)
+![selection sort](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/algo_selection_sort.jpg)
 
 ```java
     public void selectionSort(int[] array) {

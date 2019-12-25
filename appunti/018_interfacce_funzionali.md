@@ -79,7 +79,7 @@ Comparator<Utente> comparator = (u1, u2) -> u1.getId.compareTo(u2.getId());
 
 ---
 
-![FunctionaInterface_01.png](./img/FunctionaInterface_01.png)
+![FunctionaInterface_01.png](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/FunctionaInterface_01.png)
 
 ---
 
@@ -100,7 +100,7 @@ Comparator<Utente> comparator = (u1, u2) -> u1.getId.compareTo(u2.getId());
 
 ---
 
-![FunctionaInterface_02.png](./img/FunctionaInterface_02.png)
+![FunctionaInterface_02.png](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/FunctionaInterface_02.png)
 
 ---
 
@@ -131,16 +131,16 @@ Comparator<Utente> comparator = (u1, u2) -> u1.getId.compareTo(u2.getId());
 
 ---
 
-![FunctionaInterface_03.png](./img/FunctionaInterface_03.png)
+![FunctionaInterface_03.png](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/FunctionaInterface_03.png)
 
 ---
 ### Esempio uso Supplier<T>
 
-![FunctionaInterface_04.png](./img/FunctionaInterface_04.png)
+![FunctionaInterface_04.png](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/FunctionaInterface_04.png)
 
 ---
 
 ### Esempio uso Function<T, R>
 
-![FunctionaInterface_05.png](./img/FunctionaInterface_05.png)
+![FunctionaInterface_05.png](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/FunctionaInterface_05.png)
 

@@ -11,8 +11,8 @@
    * jersey-server
    * json
 
-![esempio](./img/jax-rs-1.jpg)
-![esempio](./img/jax-rs-2.jpg)
+![esempio](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/jax-rs-1.jpg)
+![esempio](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/jax-rs-2.jpg)
 
 ```xml
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -84,7 +84,7 @@
   </servlet-mapping>
 ```
 ## 1.7. crea una classe java
-![esempio](./img/jax-rs-3.jpg)
+![esempio](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/jax-rs-3.jpg)
 
 
 ```java
@@ -126,6 +126,6 @@ public class LiraToEuro {
 ## 1.9. carica su tomcat e lancia il server
 ## 1.10. punta su http://localhost:8080/test-jax-rs/tss/liraeuro/500
 ## 1.11. risponde un json col valore in lire
-![esempio](./img/jax-rs-4.jpg)
+![esempio](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/jax-rs-4.jpg)
 
 
