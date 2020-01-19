@@ -1,6 +1,6 @@
 # dao pattern
 
-![dao](img/dao_pattern_uml_diagram.jpeg)
+![dao](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/dao_pattern_uml_diagram.jpeg)
 
 [tutorialspoint](https://www.tutorialspoint.com/design_pattern/data_access_object_pattern.htm)
 ---

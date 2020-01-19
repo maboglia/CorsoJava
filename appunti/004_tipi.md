@@ -1,6 +1,6 @@
 # Tipi di dato primitivi
 
-![tipi primitivi](img/tipi.png)
+![tipi primitivi](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/tipi.png)
 
 [Esempi gist](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3)
 

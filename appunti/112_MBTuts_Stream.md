@@ -45,57 +45,57 @@ Gli stream portano  in Java la programmazione funzionale
 ---
 
 ## Intstream
-![Java 8 Stream](img/Java8_Streams_05.jpg)
+![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_05.jpg)
 ---
 
 ## skip
-![Java 8 Stream](img/Java8_Streams_06.jpg)
+![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_06.jpg)
 ---
 
 ## findfirst
-![Java 8 Stream](img/Java8_Streams_07.jpg)
+![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_07.jpg)
 ---
 
 ## sorted
-![Java 8 Stream](img/Java8_Streams_08.jpg)
+![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_08.jpg)
 ---
 
 ## array
-![Java 8 Stream](img/Java8_Streams_09.jpg)
+![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_09.jpg)
 ---
 
 ## average
-![Java 8 Stream](img/Java8_Streams_10.jpg)
+![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_10.jpg)
 ---
 
 ## List
-![Java 8 Stream](img/Java8_Streams_11.jpg)
+![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_11.jpg)
 ---
 
 ## text file
-![Java 8 Stream](img/Java8_Streams_12.jpg)
+![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_12.jpg)
 
 ---
 
 ## collect
-![Java 8 Stream](img/Java8_Streams_14.jpg)
+![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_14.jpg)
 ---
 
 ## file e count
-![Java 8 Stream](img/Java8_Streams_15.jpg)
+![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_15.jpg)
 ---
 
 ## split e foreach
-![Java 8 Stream](img/Java8_Streams_16.jpg)
+![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_16.jpg)
 ---
 
 ## rimappa su hashmap
-![Java 8 Stream](img/Java8_Streams_17.jpg)
+![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_17.jpg)
 ---
 
 ## reduce
-![Java 8 Stream](img/Java8_Streams_18.jpg)
+![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_18.jpg)
 ---
 
 ## summaryStatistics
-![Java 8 Stream](img/Java8_Streams_19.jpg)
+![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_19.jpg)

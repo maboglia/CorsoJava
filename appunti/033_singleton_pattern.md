@@ -1,6 +1,6 @@
 # singleton pattern
 
-![singleton](img/singleton_pattern_uml_diagram.jpg)
+![singleton](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/singleton_pattern_uml_diagram.jpg)
 
 ---
 

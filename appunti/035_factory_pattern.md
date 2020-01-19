@@ -1,6 +1,6 @@
 # factory pattern
 
-![factory](img/dao_pattern_uml_diagram.jpeg)
+![factory](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/dao_pattern_uml_diagram.jpeg)
 
 ---
 
