@@ -1,3 +1,7 @@
+name: inverse
+layout: true
+class: center, middle, inverse
+---
 # Corso OOP JAVA
 
 
@@ -9,6 +13,8 @@
 * I diagrammi di flusso
 * Paradigmi di programmazione.
 
+---
+layout: false
 ---
 
 ## Installazione ambiente di sviluppo 
