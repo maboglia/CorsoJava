@@ -1,6 +1,7 @@
 name: inverse
 layout: true
 class: center, middle, inverse
+---
 # Corso OOP JAVA
 
 
@@ -12,7 +13,6 @@ class: center, middle, inverse
 * I diagrammi di flusso
 * Paradigmi di programmazione.
 
----
 layout: false
 ---
 
