@@ -1,7 +1,3 @@
-name: inverse
-layout: true
-class: center, middle, inverse
----
 # Corso OOP JAVA
 
 
@@ -13,7 +9,6 @@ class: center, middle, inverse
 * I diagrammi di flusso
 * Paradigmi di programmazione.
 
-layout: false
 ---
 
 ## Installazione ambiente di sviluppo 
@@ -24,7 +19,6 @@ layout: false
 * Introduzione a Java e al processo di compilazione
 * Compilazione ed esecuzione
 * Primi programmi Java.
-
   
 ---
 
@@ -81,8 +75,6 @@ layout: false
 * switch
 * operatore ternario
 
----
-
 ## Strutture ITERATIVE
 
 * Cicli finiti, infiniti, annidati
@@ -132,14 +124,12 @@ layout: false
 * Modificatori d'accesso: package, private e protected
 * Impedire l'ereditarietà: la parola riservata final
 
----
 
 ### Polimorfismo
 * Overloading e Overriding
 * Sovraccarico (Overloading) e Sovrascrittura (Overriding) di metodi.
 * Polimorfismo con ereditarietà
 
----
 
 ### Interfacce
 * Interfacce e polimorfismo.

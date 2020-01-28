@@ -1,4 +1,5 @@
-# 1. OOP Java Schema
+# Java SE 11 Programmer I
+[Java SE 11 Programmer I](https://education.oracle.com/java/java-se/product_267)
 
 ## 1.1. Unità formativa
 
@@ -12,9 +13,6 @@
   * JSP e Servlet
 
 ---
-
-
-# 2. [Java SE 11 Programmer I] (https://education.oracle.com/java/java-se/product_267)
 
 ## 2.1. obiettivi
 
