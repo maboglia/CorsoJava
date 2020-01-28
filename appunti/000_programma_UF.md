@@ -15,10 +15,39 @@
 * Primo approccio al codice
 * metodo main e metodi ausiliari
 
+# 3. Argomenti dell'esame (Programmatore Java SE 11 I - 1Z0-815)
+
+
+---
+
+## 3.1. Comprensione della tecnologia e dell'ambiente Java
+
+* Descrivere la tecnologia Java e l'ambiente di sviluppo Java
+* Identificare le funzionalità chiave del linguaggio Java
+
+
+
+## 3.2. Creazione di un programma Java semplice
+
+* Crea un programma Java eseguibile con una classe main
+* Compilare ed eseguire un programma Java dalla riga di comando
+* Creare e importare pacchetti
 
 ---
 
 ## Lab 2 
+
+
+ 
+## 3.3. Lavorare con tipi di dati primitivi Java e API String
+
+* Dichiarare e inizializzare le variabili (incluso il casting e la promozione di tipi di dati primitivi)
+* Identificare l'ambito della variabile
+* Usa l'inferenza del tipo di variabile locale
+* Crea e manipola stringhe
+* Manipola i dati usando la classe StringBuilder e i suoi metodi
+
+
 
 __LE VARIABILI IN JAVA__ 
 * Dichiarazione di una variabile: 
@@ -34,6 +63,7 @@ __TIPI DI DATI PRIMITIVI__
 * Tipi di dati a virgola mobile, casting e promotion 
 * Tipo di dato logico - booleano 
 * Tipo di dato primitivo letterale
+
 
 ---
 
@@ -64,6 +94,14 @@ __OPERATORI DI BASE__
 
 ## Lab 3 
 
+
+## 3.4. Utilizzo di operatori e costrutti decisionali
+* Utilizzare gli operatori Java incluso l'uso della parentesi per sovrascrivere la precedenza dell'operatore
+* Utilizzare le istruzioni di controllo Java incluso if, else e switch
+* Crea e usa do / while, while, per e per ogni loop, inclusi i loop nidificati, usa le istruzioni break e continue
+
+
+
 **INTRODUZIONE ALLA LIBRERIA STANDARD** 
 
 * Il comando import
@@ -93,6 +131,12 @@ __OPERATORI DI BASE__
 
 ---
 
+
+## 3.5. Lavorare con Java Arrays
+* Dichiarare, istanziare, inizializzare e utilizzare un array monodimensionale
+* Dichiarare, creare un'istanza, inizializzare e utilizzare un array bidimensionale
+  
+
 **ARRAY** 
 
 * Gli array in Java 
@@ -108,6 +152,26 @@ __OPERATORI DI BASE__
 
 
 ## Lab 5 
+
+
+## 3.6. Descrivere e usare oggetti e classi
+* Dichiarare e creare istanze di oggetti Java e spiegare i cicli di vita degli oggetti (inclusa la creazione, la dereferenziazione mediante riassegnazione e la garbage collection)
+* Definire la struttura di una classe Java
+* Leggi o scrivi nei campi oggetto
+
+
+## 3.7. Creazione e utilizzo di metodi
+
+* Creare metodi e costruttori con argomenti e valori di ritorno
+* Creare e invocare metodi sovraccarichi
+* Applica la parola chiave statica a metodi e campi
+
+
+## 3.8. Applicazione dell'incapsulamento
+* Applica modificatori di accesso
+* Applicare i principi di incapsulamento a una classe
+
+
 
 **tipi complessi** 
 
@@ -145,6 +209,17 @@ __OPERATORI DI BASE__
 
 ## Lab 7 
 
+
+## 3.9. Riutilizzo delle implementazioni tramite ereditarietà
+
+* Creare e utilizzare sottoclassi e superclassi
+* Creare ed estendere le classi astratte
+* Abilita il polimorfismo con metodi prioritari
+* Utilizza il polimorfismo per lanciare e chiamare metodi, differenziando il tipo di oggetto rispetto al tipo di riferimento
+* Distingua il sovraccarico, l'override e il nascondimento
+
+
+
 ## aggregazione
 ![Esempio Aggregazione](../images/image010.jpg)
 
@@ -160,6 +235,14 @@ __OPERATORI DI BASE__
 * proviamo un altro IDE tra IntelliJIdea, NetBeans, Eclipse
 
 ### Eccezioni
+
+
+# 3.11. Gestione dell'eccezione
+
+* Descrivere i vantaggi della gestione delle eccezioni e differenziare tra eccezioni verificate, non selezionate ed errori
+* Creare blocchi try-catch e determinare in che modo le eccezioni alterano il flusso del programma
+* Crea e invoca un metodo che genera un'eccezione
+
 
 __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
@@ -178,6 +261,15 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 **Advanced OOP design**
 
+
+## 3.10. Programmazione astratta attraverso le interfacce
+
+* Creare e implementare interfacce
+* Distingua l'ereditarietà delle classi dall'ereditarietà dell'interfaccia comprese le classi astratte
+* Dichiarare e utilizzare le istanze List e ArrayList
+* Comprensione dell'espressione lambda
+
+
 * [interfacce](015_interfacce.md)
 	
 
@@ -186,22 +278,27 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ## Lab 10 
 
-* [focus date, valute](022_API_Java_date_time.md)
 
-	
+* gestire le collezioni: List, Set e Map 
+* la classe Collections
+* Vector, ArrayList 
+* HashSet, TreeSet
+
+* [focus date, valute](022_API_Java_date_time.md)
 
 
 ---
 
 
 ## Lab 11
+
+
+## 3.12. Comprensione dei moduli
+
+* Descrivi il JDK modulare
+* Dichiarare i moduli e abilitare l'accesso tra i moduli
+* Descrivi come viene compilato ed eseguito un progetto modulare
  
-* gestire le collezioni: List, Set e Map 
-* la classe Collections
-* Vector, ArrayList 
-* HashSet, TreeSet
-
-
 
 ---
 
@@ -329,6 +426,4 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * Spring Boot, MVC
 * IOC - Inversion Of Control
 * DI - Dependency Injection
-
-
 
