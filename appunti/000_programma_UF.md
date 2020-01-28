@@ -271,7 +271,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 ---
 
 
-## Lab0oratorio
+## Laboratorio
 
 
 #### 3.10. Programmazione astratta attraverso le interfacce
