@@ -75,15 +75,15 @@ public class HelloWorld {
 }
 ```
 
+---
+
 --- 
 ## Incapsulamento e visibilità in Java
 
 ### Interfaccia e implementazione
 
 * Quando disegniamo un software ci sono due aspetti che risultano fondamentali:
-
 * Interfaccia: come il sw può essere utilizzato
-
 * Implementazione: il codice che abbiamo utilizzato
 
 In Java
