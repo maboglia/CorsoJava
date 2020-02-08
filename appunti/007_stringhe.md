@@ -34,9 +34,10 @@ Caratteristiche principali
 * Confrontare due stringhe NON significa confrontare i riferimenti
 
 **NB: I metodi che gestiscono il tipo String NON modificano la stringa, ma ne creano una nuova**
+
 ---
 
-### Concatenazione di stringhe
+### Concatenare stringhe
 
 * Operatore concat
   * `myString1.concat(myString2)`
@@ -68,6 +69,7 @@ Caratteristiche principali
 
 * char charAt (int)
 * myString.charAt(i)
+* 
 ---
 
 ### Confronta stringa con s

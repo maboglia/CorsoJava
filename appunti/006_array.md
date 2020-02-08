@@ -35,7 +35,6 @@
 
 ---
 
-
 ## Creazione di un Array
 
 ### L'operatore new crea un array:
@@ -80,7 +79,6 @@ int [] pari = {0, 2, 4, 6, 8, 10,};
 // (elenchi lunghi)
 ```
 
----
 
 
 * Dichiarazione e creazione possono avvenire contestualmente
@@ -110,7 +108,7 @@ voti[i] = i;
 
 Per gli array di oggetti (e.g., Integer) `Integer [] voti = new Integer [5];` ogni elemento e' un riferimento
 
----
+
 
 
 ### L'inizializzazione va completata con quella dei singoli elementi
@@ -186,6 +184,9 @@ list.length;
 int[] list = {1, 2, 3, 4};
 
 ```
+
+---
+
 
 
 

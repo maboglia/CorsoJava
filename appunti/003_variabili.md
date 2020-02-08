@@ -1,7 +1,5 @@
 # Le Variabili
 
-
-
 * Una variabile è un'area di memoria identificata da un nome
 * Il suo scopo è di contenere un valore di un certo tipo
 * Serve per memorizzare dati durante l'esecuzione di un programma
@@ -11,7 +9,6 @@
 * è meglio scegliere un identificatore che sia significativo per il programma
 
 
----
 
 ### esempio
 
@@ -32,6 +29,7 @@ public class Triangolo {
 ```
 
 Usando le variabili il programma risulta essere più chiaro:
+
 * Si capisce meglio quali siano la base e l'altezza del triangolo
 * Si capisce meglio che cosa calcola il programma
 
@@ -49,6 +47,12 @@ Usando le variabili il programma risulta essere più chiaro:
 __ATTENZIONE!__ Ogni variabile deve essere dichiarata UNA SOLA VOLTA
 (la prima volta che compare nel programma)
 
+```java
+base =5;
+altezza =10;
+area = base * altezza /2;
+```
+
 
 ---
 
@@ -56,6 +60,7 @@ __ATTENZIONE!__ Ogni variabile deve essere dichiarata UNA SOLA VOLTA
 
 * Si può memorizzare un valore in una variabile tramite l'operazione di assegnamento
 * Il valore da assegnare a una variabile può essere un letterale o il risultato della valutazione di un'espressione
+
 * Esempi:
 
 ```java
@@ -101,7 +106,6 @@ final double IVA = 0.22;
 * Aggiungere il modificatore **final** non cambia funzionamento programma, ma serve a prevenire errori di programmazione
 * Si chiede al compilatore di controllare che una variabile non venga ri-assegnata per sbaglio
 * Sapendo che una variabile non cambierà mai valore, il compilatore può anche eseguire delle ottimizzazioni sull'uso di tale variabile.
-
 
 
 ---

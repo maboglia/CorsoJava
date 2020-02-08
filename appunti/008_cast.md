@@ -12,6 +12,8 @@
   * `int i = ( int ) 3.0 * ( int ) 4.5;` i assume il valore 12
   * `int j = ( int ) (3.0 * 4.5);` j assume il valore 13
 
+---
+
 ## casting dei tipi reference (oggetti)
 
 * è permesso solo in caso di ereditarietà
@@ -31,6 +33,9 @@ System.out.println(a); // a
 System.out.println(b); // 97
 
 ```
+
+---
+
 
 ## esempi type casting
 

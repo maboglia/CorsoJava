@@ -16,7 +16,10 @@
 4. In Java i **sottoprogrammi** si realizzano tramite metodi ausiliari
 
 5. Sinonimi usati in altri linguaggi di programmazione: funzioni, procedure e (sub)routines
+
 ---
+
+
 
 ## Metodi ausiliari (static)
 
@@ -49,6 +52,9 @@ public class ProvaMetodi
 
 ```
 
+---
+
+
 ## Metodi non static
 
 * I metodi non static rappresentano operazioni effettuabili su singoli oggetti
@@ -70,10 +76,6 @@ public class ProvaMetodi
 * La classe **Math** non è istanziabile
 * La classe **String** è "istanziabile ibrida"
 * La classe **StringBuilder** è "istanziabile pura"
-
----
-
-
 
 
 [Esempi sui metodi](https://gist.github.com/maboglia/c9cb7b9c7a895e046cb9ecf2b7d23870)

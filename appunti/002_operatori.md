@@ -1,10 +1,6 @@
-# Operatori
-
-aritmetici, relazionali, di assegnazione 
+# Operatori aritmetici, relazionali, di assegnazione 
 
 
-
-**Assignment Operators**
 * Di assegnazione: = += -= *= /= &= |= ^=
 * Di assegnazione/incremento: ++ -- %=
 
@@ -19,9 +15,7 @@ aritmetici, relazionali, di assegnazione
 
 ---
 
-
-**Arithmetic Operators**
-* Operatori Aritmetici: + - * / %
+* Operatori Aritmetici:` + - * / %`
 
 | Operatore | Significato    |
 | --------- | -------------- |
@@ -35,10 +29,10 @@ aritmetici, relazionali, di assegnazione
 | var++     | postincrement  |
 | var--     | postdecrement  |
 
+
 ---
 
 
-**Relational Operators**
 * Relazionali: == != > < >= <=
 
 | Operatore | Significato              |
@@ -51,11 +45,12 @@ aritmetici, relazionali, di assegnazione
 | !=        | not equal                |
 
 
+---
+
 
 ### Operatori per Booleani
 
 
-**Logical Operators**
 * Bitwise (interi): & | ^ << >> ~
 
 | Operatore | Significato       |
@@ -71,6 +66,9 @@ aritmetici, relazionali, di assegnazione
   * Un intero NON viene considerato un booleano
   * Gli operatori relazionali forniscono valori booleani
 
+---
+
+
 ## Operatori su reference
 
 ### Per i puntatori/reference, sono definiti:
@@ -80,6 +78,9 @@ aritmetici, relazionali, di assegnazione
 * Le assegnazioni
 * L'operatore "punto"
 * NON è prevista l'aritmetica dei puntatori 
+
+---
+
 
 ## Operatori matematici
 
@@ -95,6 +96,8 @@ aritmetici, relazionali, di assegnazione
 Esempio
 
 * `z = Math.sin (x) – Math.PI / Math.sqrt(y)`
+
+---
 
 ## Caratteri speciali
 

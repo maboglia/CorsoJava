@@ -1,21 +1,9 @@
 # Tipi di dato primitivi
 
-![tipi primitivi](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/tipi.png)
-
-[Esempi gist](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3)
-
-
----
-
-## Tipo primitivo
-
-
 
 * In un linguaggio ad oggetti puro, vi sono solo classi e istanze di classi:
 * i dati dovrebbero essere definiti sotto forma di oggetti
 
-
----
 
 ## Java definisce alcuni tipi primitivi
 
@@ -36,13 +24,13 @@
 
  | type    | bits       |
  | ------- | ---------- |
- | byte    | 8 bits     |
- | short   | 16 bits    |
- | int     | 32 bits    |
- | long    | 64 bits    |
- | float   | 32 bits    |
- | double  | 64 bits    |
- | char    | 16 bits    |
+ | byte    | 8 bit     |
+ | short   | 16 bit    |
+ | int     | 32 bit    |
+ | long    | 64 bit    |
+ | float   | 32 bit    |
+ | double  | 64 bit    |
+ | char    | 16 bit    |
  | boolean | true/false |
 
 **I caratteri sono considerati interi**
@@ -61,13 +49,10 @@
 * `'\123'` (\ introduce codice ASCII)
 
 
-
----
-
 ### Tipo boolean
-* Esempi
-true
-false
+
+* `true`
+* `false`
 
 
 
@@ -91,29 +76,42 @@ char ch2 = ';';
 
 ```java
 
-public class Application {
+public class Applicazione {
 
-	public static void main(String[] args) {//here we learn about primitive types of variables!
-		int myNumber;//initialize variable that is an integer
-		myNumber = 100;//assign variable
-		System.out.println(myNumber);//print variable's value
-		short myShort = 851;//for shorter numbers
-		System.out.println(myShort);
-		long myLong = 34093;//for longer numbers
-		System.out.println(myLong);
-		double myDouble = 3.14159732;//for extra precision
-		System.out.println(myDouble);
-		float myFloat = 324.4f;//point variables
-		System.out.println(myFloat);
-		char myChar = 'y';//single characters with single quotes unlike strings!
-		System.out.println(myChar);
-		boolean myBoolean = true;//booleans
-		System.out.println(myBoolean);
-		byte myByte = 127;//only 8 bits of data
-		System.out.println(myByte);
+	public static void main(String[] args) {
+
+		int mioNumero;
+		mioNumero = 100;
+		System.out.println(mioNumero);
+		
+		short mioShort = 851;
+		System.out.println(mioShort);
+		
+		long mioLong = 34093;
+		System.out.println(mioLong);
+		
+		double mioDouble = 3.14159732;
+		System.out.println(mioDouble);
+		
+		float mioFloat = 324.4f;
+		System.out.println(mioFloat);
+		
+		char mioChar = 'y';
+		System.out.println(mioChar);
+		
+		boolean mioBoolean = true;
+		System.out.println(mioBoolean);
+		
+		byte mioByte = 127;
+		System.out.println(mioByte);
 	}
 
 }
 ```
+
+![tipi primitivi](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/tipi.png)
+
+[Esempi gist](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3)
+
 
 [Everything you'll ever need to work with Java primitive types!](https://github.com/deletescape/Primitives)
