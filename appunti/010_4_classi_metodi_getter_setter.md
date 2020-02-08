@@ -43,6 +43,7 @@ void setColore(String nuovoColore) {
        this.colore = nuovoColore;
 }
 ```
+## Proprietà visibili
 
 ```java
 class Automobile {
@@ -52,6 +53,10 @@ class Automobile {
 Automobile a = new Automobile();
 a.colore = "bianco"; // ok
 ```
+
+---
+
+## Classe incapsulata
 
 ```java
 

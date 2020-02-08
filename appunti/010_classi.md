@@ -26,7 +26,20 @@ Le classi estendono il concetto di "struttura" di altri linguaggi
 
 * mostrare come, una volta creata una classe possiamo creare oggetti di questa classe e utilizzarli
 
----
+
+### Struttura di una classe
+
+
+```java
+public class HelloWorld {
+    public static void main(String[] args) {
+		System.out.println("Hello World");
+    }
+
+}
+```
+
+--- 
 
 
 ### Java è un linguaggio orientato agli oggetti
@@ -62,22 +75,6 @@ Le classi estendono il concetto di "struttura" di altri linguaggi
 
 ---
 
-
-### Struttura di una classe
-
-
-```java
-public class HelloWorld {
-    public static void main(String[] args) {
-		System.out.println("Hello World");
-    }
-
-}
-```
-
----
-
---- 
 ## Incapsulamento e visibilità in Java
 
 ### Interfaccia e implementazione

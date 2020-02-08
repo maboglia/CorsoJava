@@ -1,5 +1,5 @@
 # Interfacce
----
+
 ### Un'interfaccia è una classe
 completamente astratta, cioè del tutto priva della parte di implementazione
 
