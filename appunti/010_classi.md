@@ -75,6 +75,7 @@ public class HelloWorld {
 }
 ```
 
+--- 
 ## Incapsulamento e visibilità in Java
 
 ### Interfaccia e implementazione
