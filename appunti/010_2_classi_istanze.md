@@ -51,7 +51,7 @@ NON è prevista l'aritmetica dei puntatori
 
 * Dichiarazione: static
 
-* Accesso: nome-classe . attributo
+* Accesso: NomeClasse.attributo
 
 ```java
 class Automobile {
