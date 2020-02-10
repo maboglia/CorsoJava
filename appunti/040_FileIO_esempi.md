@@ -40,7 +40,7 @@ Poiché non è possibile usare direttamente l'oggetto FileReader f per leggere d
 
 A questo punto, invocando ripetutamente il metodo readLine() sull'oggetto BufferedReader b si leggono una alla volta le righe del file. Quando readLine() restituisce null vuole dire che le righe del file sono state tutte lette e l'oggetto BufferedReader ha esaurito il suo scopo.
 
-Ad esempio, il seguente frammendo di codice stampa a video tutte le righe del file:
+Ad esempio, il seguente frammento di codice stampa a video tutte le righe del file:
 
 ```java
 try {
@@ -222,7 +222,7 @@ System.out.println("questa stringa non verrà mai stampata");
 
 ## Esempio 1
 
-Scrivere una classe pubblica ScritturaFile con un metodo pubblico void scriviSuFile(Object[] v, String s) che, dato un array v di oggetti e una stringa s, crea un file di nome s contenente le stringhe associate agli oggetti dell'array, oppure lancia un'eccezione non verificata se si incontrano errori nella scrittura del file.
+Scrivere una classe pubblica ScritturaFile con un metodo `public void scriviSuFile(Object[] v, String s)` che, dato un array v di oggetti e una stringa s, crea un file di nome s contenente le stringhe associate agli oggetti dell'array, oppure lancia un'eccezione non verificata se si incontrano errori nella scrittura del file.
 
 ScritturaFile.java
 ```java

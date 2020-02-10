@@ -21,7 +21,7 @@ La differenza sostanziale tra le API classiche (package java.io) e le nuove API 
 
 ## Interfaccia Path
 
-Per ottenere un'istanza di Path, occorre utilizzare l'oggetto FileSystem o più semplicemente l'oggetto Paths. 
+Per ottenere un'istanza di Path, occorre utilizzare l'oggetto `FileSystem` o più semplicemente l'oggetto `Paths`. 
 
 ```java
 Path path1 = Filesystems.getDefault().getPath("/root/aFile.txt");
