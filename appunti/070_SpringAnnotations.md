@@ -117,7 +117,7 @@ Dai un'occhiata a questo post per uno sguardo approfondito all'annotazione di Sc
 
 ## @Bean
 
-Questa annotazione è usata a livello di metodo. @Bean `annotation funziona con` @Configuration` per creare Spring bean. Come accennato in precedenza, "@Configuration" avrà metodi per istanziare e configurare le dipendenze. Tali metodi verranno annotati con @Bean. Il metodo annotato con questa annotazione funziona come ID bean e crea e restituisce il bean effettivo.
+Questa annotazione è usata a livello di metodo.` @Bean `annotation funziona con` @Configuration` per creare Spring bean. Come accennato in precedenza, "@Configuration" avrà metodi per istanziare e configurare le dipendenze. Tali metodi verranno annotati con @Bean. Il metodo annotato con questa annotazione funziona come ID bean e crea e restituisce il bean effettivo.
 
 Per esempio:
 
