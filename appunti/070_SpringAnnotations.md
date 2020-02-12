@@ -164,7 +164,8 @@ Questa annotazione viene utilizzata su una classe. `@Service` segna una classe J
 Questa annotazione viene utilizzata su classi Java che accedono direttamente al database. L'annotazione `@Repository` funziona come marker per qualsiasi classe che svolge il ruolo di repository o Data Access Object.
 
 Questa annotazione ha una funzione di traduzione automatica. Ad esempio, quando si verifica un'eccezione in `@Repository` c'è un gestore per quell'eccezione e non è necessario aggiungere un blocco try try.
-Annotazioni di avvio a molla
+
+## Annotazioni di Spring Boot
 
 ## @EnableAutoConfiguration
 
@@ -257,7 +258,8 @@ Un esempio per usare `@CrossOrigin` sia a livello di controller che di gestore �
 ```
 
 In questo esempio, entrambi i metodi getExample () e getNote () avranno un massimo di 3600 secondi. Inoltre, getExample () consentirà solo le richieste di origine incrociata da http://example.com, mentre getNote () consentirà le richieste di origine incrociata da tutti gli host.
-Composto` @RequestMapping `Varianti
+
+## ` @RequestMapping `Varianti
 
 Spring Framework 4.3 ha introdotto le seguenti varianti a livello di metodo dell'annotazione` @RequestMapping `per esprimere meglio la semantica dei metodi annotati. L'uso di queste annotazioni è diventato il modo standard di definire gli endpoint. Fanno da wrapper a @RequestMapping.
 
@@ -365,7 +367,8 @@ Considera questo esempio.
 ```
 
 Il nome `@ModelAttribute` è assegnato a `@SessionAttributes` come valore. `@SessionAttributes` ha due elementi. L'elemento value è il nome della sessione nel modello e l'elemento types è il tipo di attributi della sessione nel modello.
-Annotazioni di Spring Cloud
+
+# Annotazioni di Spring Cloud
 
 ## @EnableConfigServer
 
@@ -414,7 +417,8 @@ Considera il seguente esempio:
 Qui` @HystrixCommand `viene applicato al metodo originale bookList (). L'annotazione `@HystrixCommand` ha newList come metodo di fallback. Quindi, per qualche motivo, se Hystrix apre il circuito su bookList (), avrai un elenco di libri segnaposto pronto per gli utenti.
 Spring Framework 5
 Scopri Spring Framework 5 con il mio corso Spring Framework 5: dal principiante al guru!
-Annotazioni DataAccess di Spring Framework
+
+# Annotazioni DataAccess di Spring Framework
 
 ## @Transactional
 
@@ -427,7 +431,7 @@ Il tipo di propagazione della transazione
     Un flag di sola lettura - un suggerimento per il provider di persistenza che la transazione deve essere di sola lettura
     Le regole di rollback per la transazione
 
-Annotazioni basate sulla cache
+# Annotazioni basate sulla cache
 
 ## @Cacheable
 
@@ -502,7 +506,8 @@ L'attività viene eseguita inizialmente con un ritardo, quindi continua con la v
 Questa annotazione viene utilizzata sui metodi per eseguire ciascun metodo in un thread separato. L'annotazione` @Async` viene fornita su un metodo in modo che l'invocazione di quel metodo avvenga in modo asincrono. A differenza dei metodi annotati con @Scheduled, i metodi annotati con `@Async` possono accettare argomenti. Saranno invocati in modo normale dai chiamanti in fase di esecuzione anziché da un'attività pianificata.
 
 `@Async` può essere utilizzato sia con i metodi del tipo restituito vuoto sia con i metodi che restituiscono un valore. Tuttavia, i metodi con valore di ritorno devono avere valori di ritorno tipizzati Future.
-Annotazioni di test di Spring Framework
+
+# Annotazioni di test di Spring Framework
 
 ## @BootstrapWith
 
