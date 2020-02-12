@@ -144,7 +144,8 @@ Questa annotazione viene utilizzata sulle classi dei componenti. Per impostazion
 ## @Value
 
 Questa annotazione viene utilizzata a livello di campo, parametro del costruttore e parametro del metodo. L'annotazione` @Value` indica un'espressione di valore predefinita per il campo o il parametro con cui inizializzare la proprietà. Dato che l'annotazione `@Autowired` dice a Spring di iniettare l'oggetto in un altro quando carica il contesto dell'applicazione, puoi anche usare l'annotazione` @Value `per iniettare valori da un file di proprietà nell'attributo di un bean. Supporta segnaposto # {...} e $ {...}.
-Annotazioni stereotipate di Spring Framework
+
+# Annotazioni stereotipate di Spring Framework
 
 ## @Component
 
