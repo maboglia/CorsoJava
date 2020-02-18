@@ -1,7 +1,5 @@
 # Array
 
-
-
 * Sequenze ordinate di
   * Tipi primitivi (int, float, etc.)
   * Riferimenti ad oggetti ( vedere classi! )
@@ -10,27 +8,23 @@
     * Raggiungibili con l'operatore di indicizzazione: le **parentesi quadre** []
     * Raggruppati sotto lo stesso nome
 
-
 ### In Java gli array sono Oggetti
 * Sono allocati nell'area di memoria riservata agli oggetti creati dinamicamente (heap)
 
 ---
 
-
-### Dimensione
+Dimensione
 * Può essere stabilita a run-time (quando l'oggetto viene creato)
 * È fissa (non può essere modificata)
 * E' nota e ricavabile per ogni array Array Mono-dimensionali (vettori)
-
 ## Dichiarazione di Array
 
-### Dichiarazione di un riferimento a un array
+ Dichiarazione di un riferimento a un array
 
 * `int[] voti;`
 * `int voti[];`
 
-### La dichiarazione di un array non assegna alcuno spazio
-
+ La dichiarazione di un array non assegna alcuno spazio
 `voti == null`
 
 ---
@@ -79,8 +73,6 @@ int [] pari = {0, 2, 4, 6, 8, 10,};
 // (elenchi lunghi)
 ```
 
-
-
 * Dichiarazione e creazione possono avvenire contestualmente
 * L'attributo length indica la lunghezza dell'array, cioè il numero di elementi
 * Gli elementi vanno da 0 a length-1
@@ -91,7 +83,6 @@ voti[i] = i;
 ```
 
 ---
-
 
 ### In Java viene fatto il bounds checking
 
@@ -107,9 +98,6 @@ voti[i] = i;
 ## Array di oggetti
 
 Per gli array di oggetti (e.g., Integer) `Integer [] voti = new Integer [5];` ogni elemento e' un riferimento
-
-
-
 
 ### L'inizializzazione va completata con quella dei singoli elementi
 
@@ -190,24 +178,17 @@ int[] list = {1, 2, 3, 4};
 
 ---
 
-
-
-
 **Array Multidimensionali**
 
 ```java
 int[][] list = new int[10][10];
-
 list.length;
-
 list[0].length;
-
 int[][] list = {{1, 2}, {3, 4}};
 
 ```
 
 ---
-
 
 **Array irregolari**
 
