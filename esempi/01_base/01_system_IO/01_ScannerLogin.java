@@ -4,11 +4,32 @@ import java.util.Scanner;
 
 public class ScannerLogin {
 
+
 	/**
-	 * @param args
+	 * Metodo main(), avvia il programma
+	 * @param args - accetta un array di Stringhe in argomento
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+		//con l'oggetto scanner si semplifica la gestione dell'input dati
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Scrivi un numero: ");
+		
+		int i = sc.nextInt();
+		System.out.println("Hai scritto: " + i);
+	
+	
+		//chiamo ilmetodo ausiliario
+		login();
+		//ScannerLogin.login(); //metodo di classe
+	}
+
+	/**
+	 * metodo ausiliario statico
+	 * @param args
+	 */
+	private static void login(String[] args) {
 		
 		Scanner scanner = new Scanner(System.in);
 		

@@ -11,7 +11,6 @@ public class LeggiInputStream {
 	 * @throws IOException 
 	 */
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
 		
 		InputStreamReader in = new InputStreamReader(System.in);
 		BufferedReader reader = new BufferedReader(in);
