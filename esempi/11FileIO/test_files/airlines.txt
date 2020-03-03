@@ -1,0 +1,19 @@
+Delta,Air Canada,Aero Mexico,Ocean Air
+United,Aria,Lufthansa,Ocean Air,Quantas,British Airways
+Northwest,Air Alaska,BMI,Avolar,EVA Air
+Canjet,Girjet
+Air Canada,Areo Mexico,Delta,Air Alaska
+Aero Mexico,Delta,Air Canda,British Airways
+Ocean Air,Delta,United,Quantas,Avolar
+Aria,United,Lufthansa
+Lufthansa,United,Aria,EVA Air
+Quantas,United,Ocean Air,AlohaAir
+BMI,Northwest
+Maxair,Southwest,Girjet
+Girjet,Southwest,Canjet,Maxair
+British Airways,United,Aero Mexico
+Air Alaska,Northwest,Air Canada
+Avolar,Northwest,Ocean Air
+EVA Air,Northwest,Luftansa
+Southwest,Girjet,Maxair
+AlohaAir,Quantas
