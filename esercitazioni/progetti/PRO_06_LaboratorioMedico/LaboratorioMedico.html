@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>02CBI - Programmazione ad Oggetti</title>
+</head>
+<body>
+<h1 style="text-align: center;">Sanita<br>
+</h1>
+Sviluppare un programma per la gestione dei medici e dei pazienti.<br>
+<br>
+<hr style="width: 100%; height: 2px;">
+<h2>R1: Pazienti</h2>
+Il programma funziona attraverso la classe principale <span
+ style="font-weight: bold;">Sanita</span>. Il programma permette di
+inserire medici e pazienti all'interno del sistema della sanit&agrave;.
+I pazienti sono caratterizzati da nome, cognome e codice fiscale.<br>
+Le persone possono essere registrate come pazienti presso il sistema
+tramite il metodo <span style="font-weight: bold;">aggiugniPersona()</span>
+cher riceve come parametri nome, cognome e codice fiscale.<br>
+Per recuperare le informazioni sui pazienti inseriti si pu&ograve;
+utilizzare il metodo <span style="font-weight: bold;">getPersona()</span>
+che riceve come parametro il codice fiscale e restituisce un oggetto
+che implementa l'interfaccia <span style="font-weight: bold;">Persona</span>.<br>
+Se non esiste nessuna persona con il codice fiscale specificato, viene
+generata un'eccezione di <span style="font-weight: bold;">ErrPersonaInesistente</span>.<br>
+Il nome ed il cognome della persona possono essere letti tramite i
+metodi <span style="font-weight: bold;">getNome()</span> e <span
+ style="font-weight: bold;">getCognome()</span> dell'interfaccia
+Persona.<br>
+Esempio di persone:<br>
+<br>
+<table border="1" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="font-weight: bold;">Nome </td>
+      <td style="font-weight: bold;">Cognome </td>
+      <td style="font-weight: bold;">Codice Fiscale </td>
+    </tr>
+    <tr>
+      <td>Giovanni </td>
+      <td>Rossi </td>
+      <td>RSSGNN33B30F316I</td>
+    </tr>
+    <tr>
+      <td>Giuseppe </td>
+      <td>Verdi </td>
+      <td>VRDGPP76F09B666I</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<h2>R2: Medici</h2>
+I medici hanno le stesse caratteristiche dei pazienti ed inoltre sono
+caratterizzati da una matricola.<br>
+E' possibile registrare un medico presso il sistema tramite il metodo <span
+ style="font-weight: bold;">aggiungiMedico()</span> che riceve come
+parametri matricola, nome, cognome e codiceFiscale.<br>
+Per recuperare le informazioni sui medici si pu&ograve; utilizzare il
+metodo <span style="font-weight: bold;">getMedico()</span> che riceve
+come parametro la matricola e restituisce
+un oggetto che implementa l'interfaccia <span
+ style="font-weight: bold;">Medico</span>.Se non c'&egrave; un medico
+con la matricola specificata presente nel sistema genera un'eccezione
+di <span style="font-weight: bold;">ErrMedicoInesistente</span>.<br>
+E' possibile conoscere la matricola di un medico tramite il metodo <span
+ style="font-weight: bold;">getMatricola()</span> dell'interfaccia
+Medico.<br>
+<h2>R3: Assegnazione Medici</h2>
+E' possibile assegnare un medico ad un paziente tramite il metodo <span
+ style="font-weight: bold;">assegnaMedico() </span>della classe Sanita
+che riceve come parametri la matricola del medico ed il codice fiscale
+del paziente. Tale metodo genera le opportune eccezioni
+(ErrPersonaInesistente, ErrMedicoInesistente) se la matricola o il CF
+non corrispondono a medici/pazienti inseriti nel sistema.<br>
+Deve essere possibile sapere, data una persona, qual'&egrave; il medico
+assegnato tramite il metodo <span style="font-weight: bold;">getMedico()
+</span>dell'interfaccia Persona.<br>
+N.B. I medici possono essere a loro volta pazienti di un altro medico.<br>
+<h2>R4: Elenco Pazienti<br>
+</h2>
+Dato un medico, deve essere possibile ottenere la lista dei pazienti
+tramite il metodo <span style="font-weight: bold;">getPazienti() </span>dell'interfaccia
+Medico.<br>
+La lista dei pazienti di un medico deve essere in ordine alfabetico
+crescente in base a cognome e nome.<br>
+<h2>R5: Caricamento da file</h2>
+Tramite il metodo <span style="font-weight: bold;">caricaDati()</span>,
+che riceve come parametro il path di un file, deve essere possibile
+leggere da file i pazienti ed i medici.<br>
+Il file &egrave; organizzato a righe, ogni riga pu&ograve; contenere un
+medico o una persona.<br>
+Le righe che contengono una persona iniziano con la lettera "P" seguita
+da nome, cognome e codice fiscale. Le righe che contengono un medico
+iniziano con la lettera "M" seguita da matricola, nome, cognome e
+codice fiscale. Gli elementi di ciascuna riga sono separati gli uni
+dagli altri tramite il carattere ";".<br>
+In caso di errore dei dati presenti su una linea, il metodo deve essere
+in grado di ignorarla e passare a quella successiva.<br>
+In caso di errori di IO il metodo lancia una IOException.<br>
+&nbsp;<br>
+<hr style="width: 100%; height: 2px;"><br>
+</body>
+</html>

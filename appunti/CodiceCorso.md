@@ -22,7 +22,9 @@
     * collezioni
 
 ### [Esercizi Base](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e)
+
 ### [EsempiJava_02](https://gist.github.com/maboglia/fb505ccbfd10186ea092b3d5349045d5)
+
 ### [Array](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72)
 
 * [GestioneDate](esempi/06Date/GestioneDate.java)
