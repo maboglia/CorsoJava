@@ -13,7 +13,10 @@ class NomeClasse{  private double nome1, nome2;
        }
 ```
 
-* Vantaggi: possiamo cambiare la rappresentazione interna, verificare che i valori siano corretti, modificare altri aspetti dell'oggetto
+* Vantaggi: 
+* possiamo cambiare la rappresentazione interna, 
+* verificare che i valori siano corretti, 
+* modificare altri aspetti dell'oggetto
 
 ---
 

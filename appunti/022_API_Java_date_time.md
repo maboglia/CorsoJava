@@ -173,11 +173,10 @@ System.out.println(giorno + "/" + mese + "/" + anno);
 System.out.println(ore + ":" + minuti + ":" + secondi);
 ```
 
-
 ---
 ## Formattare la data: SimpleDateFormat
 
-	la classe SimpleDateFormat che permette di trattare le date nel formato più adatto alla nostra esigenza.
+la classe SimpleDateFormat che permette di trattare le date nel formato più adatto alla nostra esigenza.
 
 ---
 ### Secondo esempio 

@@ -62,7 +62,8 @@ a.vernicia("Blu");
 ---
 
 ### All'interno della classe
-* I metodi che devono inviare messaggi allo stesso oggetto cui appartengono non devono utilizzare la notazione puntata, in quanto è sottinteso il riferimento
+* I metodi che devono inviare messaggi allo stesso oggetto cui appartengono 
+* non devono obbligatoriamente utilizzare la notazione puntata: è sottinteso il riferimento
 
 ```java
 public class Libro {
@@ -80,7 +81,7 @@ public class Libro {
 
 ## Attributi
 
-* Stessa notazione "puntata" dei messaggi oggetto.attributo
+* Stessa notazione "puntata" dei messaggi `oggetto.attributo`
 * Il riferimento viene usato come una qualunque variabile
 
 ```java
@@ -151,14 +152,16 @@ Class Finestra {
 
 ---
 
-## Operatore this (Puntatore Auto-referenziante)
+## Operatore `this` (Puntatore Auto-referenziante)
 
-La parola riservata this e' utilizzata quale puntatore auto-referenziante
-*  this riferisce l'oggetto (e.g., classe) corrente
+La parola riservata `this` e' utilizzata quale puntatore auto-referenziante
+
+*  `this` riferisce l'oggetto (e.g., classe) corrente
 
 Utilizzato per:
 
 * Referenziare la classe appena istanziata
+* Evitare il conflitto tra nomi
 
 ```java
 class Automobile{
@@ -178,7 +181,6 @@ a2.vernicia("rosso");
 
 ---
 
-* Evitare il conflitto tra nomi
 
 ```java
 class Automobile{

@@ -19,16 +19,6 @@ Le classi estendono il concetto di "struttura" di altri linguaggi
 
 ---
 
-
-### Creazione di classi in Java
-
-* Definire i termini oggetto e classe
-
-* Descrivere la forma nella quale possiamo creare nuove classi in Java
-
-* mostrare come, una volta creata una classe possiamo creare oggetti di questa classe e utilizzarli
-
-
 ### Struttura di una classe
 
 
@@ -83,8 +73,8 @@ public class HelloWorld {
 ## Incapsulamento e visibilità in Java
 
 * Quando disegniamo un software ci sono **due aspetti** che risultano fondamentali:
-* Interfaccia: definita come gli **elementi che sono visibili dall'esterno**, come il sw può essere utilizzato
-* Implementazione: definita definendo alcuni attributi e scrivendo il codice dei differenti metodi per leggere e/o scrivere gli attributi
+  * Interfaccia: definita come gli **elementi che sono visibili dall'esterno**, come il sw può essere utilizzato
+  * Implementazione: definita definendo alcuni attributi e scrivendo il codice dei differenti metodi per leggere e/o scrivere gli attributi
 
 ---
 

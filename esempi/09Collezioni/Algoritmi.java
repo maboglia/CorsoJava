@@ -8,7 +8,7 @@ public class Algoritmi {
 		
 
 		Character[] lettere = {'A', 'B', 'C'};
-		//Arrays classe che permette di effettuare diverse operazioni sugli array, contiene metodi statici
+		//Arrays: classe che permette di effettuare diverse operazioni sugli array, contiene metodi statici
 		List<Character> lista = Arrays.asList(lettere);
 		
 		System.out.println(lista);
