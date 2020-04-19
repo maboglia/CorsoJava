@@ -77,5 +77,11 @@ public class ProvaMetodi
 * La classe **String** è "istanziabile ibrida"
 * La classe **StringBuilder** è "istanziabile pura"
 
+---
+
+## Metodi predicativi
+
+Un metodo che restituisce un tipo primitivo `boolean` si definisce **predicativo** e può essere utilizzato direttamente in una condizione.
+In inglese sono spesso introdotti da `is` oppure `has`: isMale(), hasChildren(). 
 
 [Esempi sui metodi](https://gist.github.com/maboglia/c9cb7b9c7a895e046cb9ecf2b7d23870)
