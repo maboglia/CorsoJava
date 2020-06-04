@@ -53,11 +53,11 @@ Static Constants/Methods di uso frequente
 Text File
 =========
 
-**Text File Output**
-
-Scanner input = new Scanner(new File(filename));
 
 **Text File Input**
+Scanner input = new Scanner(new File(filename));
+
+**Text File Output**
 ```
 PrintWriter output = new PrintWriter(filename);
 output.print(...);
