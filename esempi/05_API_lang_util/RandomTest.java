@@ -4,7 +4,7 @@ public class RandomTest {
 	public static void main(String[] args){
 		// r1 usa un seme ogni volta diverso
 		Random r1 = new Random();
-		// r1 usa un seme fisso
+		// r2 usa un seme fisso
 		Random r2 = new Random(12176);
 		// Dimostrazione della sequenza di r1
 		System.out.print("r1: ");
