@@ -201,7 +201,7 @@ J2SE 1.4|February 2002|October 2008|February 2013
 J2SE 5.0|September 2004|November 2009|April 2015
 Java SE 6|December 2006|April 2013|December 2018
 Java SE 7|July 2011|April 2015|July 2022
-Java SE 8 (LTS)|March 2014|January 2019 for Oracle (commercial) Indefinitely for Oracle (personal use) At least May 2026 for AdoptOpenJDK At least May 2026 for Amazon Corretto|December 2030
+Java SE 8 (LTS)|March 2014 \nJanuary 2019 for Oracle (commercial) \nIndefinitely for Oracle (personal use) At least May 2026 for AdoptOpenJDK At least May 2026 for Amazon Corretto|December 2030
 Java SE 9|September 2017|March 2018 for OpenJDK|N/A
 Java SE 10|March 2018|September 2018 for OpenJDK|N/A
 Java SE 11 (LTS)|September 2018|At least October 2024 for AdoptOpenJDK
