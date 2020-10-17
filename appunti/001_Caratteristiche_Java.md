@@ -17,7 +17,7 @@ Le caratteristiche del linguaggio di programmazione Java sono:
 
 * Semplice e familiare
 
-* Orientato a oggetti
+* Orientato agli oggetti
 
 * Indipendente dalla piattaforma
 
@@ -51,9 +51,9 @@ Le caratteristiche del linguaggio di programmazione Java sono:
 ---
 
 
-## Orientato a oggetti
+## Orientato agli oggetti
 
-* Orientato a oggetti dalla base
+* Orientato agli oggetti dalla base
 
 * In Java tutto è un oggetto
 
