@@ -10,6 +10,7 @@ public class ArrayListToArray {
 		lista.add(new Persona ("Marco", "Tozzi", 21));
 		lista.add(new Persona ("Claudio", "Pluto", 23));
 		
+		
 		Persona[] array = new Persona[lista.size()];
 		
 		for (int i = 0; i < lista.size(); i++) {
