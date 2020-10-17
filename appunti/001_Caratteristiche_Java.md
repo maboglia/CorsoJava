@@ -207,6 +207,8 @@ Java SE 8 (LTS)|March 2014 January 2019 for Oracle (commercial) Indefinitely for
 
 ## Versioni Java (nuovo approccio Oracle)
 
+Version|Release date|End of Free Public Updates|Extended Support Until
+---|---|---|---
 Java SE 9|September 2017|March 2018 for OpenJDK|N/A
 Java SE 10|March 2018|September 2018 for OpenJDK|N/A
 Java SE 11 (LTS)|September 2018|At least October 2024 for AdoptOpenJDK At least September 2027 for Amazon Corretto|September 2026
