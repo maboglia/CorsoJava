@@ -171,9 +171,6 @@ Le caratteristiche del linguaggio di programmazione Java sono:
 * Disegnato per adattarsi ad ambienti in evoluzione
 
 
-
-
-
 ---
 
 
@@ -189,3 +186,32 @@ Le caratteristiche del linguaggio di programmazione Java sono:
 
 * Simultaneamente si possono svolgere vari compiti
 
+---
+
+## Versioni Java
+
+Version|Release date|End of Free Public Updates|Extended Support Until
+---|---|---|---
+JDK Beta|1995|?|?
+JDK 1.0|January 1996|?|?
+JDK 1.1|February 1997|?|?
+J2SE 1.2|December 1998|?|?
+J2SE 1.3|May 2000|?|?
+J2SE 1.4|February 2002|October 2008|February 2013
+J2SE 5.0|September 2004|November 2009|April 2015
+Java SE 6|December 2006|April 2013|December 2018
+Java SE 7|July 2011|April 2015|July 2022
+Java SE 8 (LTS)|March 2014|January 2019 for Oracle (commercial)
+Indefinitely for Oracle (personal use)
+At least May 2026 for AdoptOpenJDK
+At least May 2026 for Amazon Corretto|December 2030
+Java SE 9|September 2017|March 2018 for OpenJDK|N/A
+Java SE 10|March 2018|September 2018 for OpenJDK|N/A
+Java SE 11 (LTS)|September 2018|At least October 2024 for AdoptOpenJDK
+At least September 2027 for Amazon Corretto|September 2026
+Java SE 12|March 2019|September 2019 for OpenJDK|N/A
+Java SE 13|September 2019|March 2020 for OpenJDK|N/A
+Java SE 14|March 2020|September 2020 for OpenJDK|N/A
+Java SE 15|September 2020|March 2021 for OpenJDK|N/A
+Java SE 16|March 2021|September 2021 for OpenJDK|N/A
+Java SE 17 (LTS)|September 2021|TBA|TBA 
