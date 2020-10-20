@@ -8,15 +8,18 @@
     * Raggiungibili con l'operatore di indicizzazione: le **parentesi quadre** []
     * Raggruppati sotto lo stesso nome
 
+---
+
 ### In Java gli array sono Oggetti
 * Sono allocati nell'area di memoria riservata agli oggetti creati dinamicamente (heap)
-
----
 
 Dimensione
 * Può essere stabilita a run-time (quando l'oggetto viene creato)
 * È fissa (non può essere modificata)
 * E' nota e ricavabile per ogni array Array Mono-dimensionali (vettori)
+
+---
+
 ## Dichiarazione di Array
 
  Dichiarazione di un riferimento a un array
@@ -58,12 +61,15 @@ int[] voti;
 voti = new int[x];
 ```
 
+---
+
+### Utilizzando un inizializzatore 
+(che permette anche di riempire l'array)
+
 * L'operatore new inizializza le variabili
   * 0 - per variabili di tipo numerico (inclusi i char)
   * false - per le variabili di tipo boolean
 
-### Utilizzando un inizializzatore 
-(che permette anche di riempire l'array)
 
 ```java
 int[] primi = {2,3,5,7,11,13};
@@ -72,6 +78,8 @@ int [] pari = {0, 2, 4, 6, 8, 10,};
 // La virgola finale e' facoltativa
 // (elenchi lunghi)
 ```
+
+---
 
 * Dichiarazione e creazione possono avvenire contestualmente
 * L'attributo length indica la lunghezza dell'array, cioè il numero di elementi
@@ -94,6 +102,8 @@ voti[i] = i;
 * Non è un puntatore al primo elemento
 * È un puntatore all'oggetto array
 * Incrementandolo non si ottiene il secondo elemento
+
+---
 
 ## Array di oggetti
 
@@ -124,10 +134,11 @@ Sintatticamente sono estensioni degli array a una dimensione
 ```java
 int[][] triangle = new int[3][]
 ```
+
 ---
 
-
 ### Le righe non sono memorizzate in posizioni adiacenti
+
 * Possono essere spostate facilmente
 
 ```java
@@ -161,7 +172,6 @@ saldo[j] = temp;
     * `Arrays.binarySearch (<array>);`
 
 ---
-
 
 ## Snippets Tipi di Array
 

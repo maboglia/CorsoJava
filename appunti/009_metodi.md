@@ -7,6 +7,10 @@
 * Uno strumento per ri-utilizzare il lavoro già svolto
 * Uno  strumento per rendere il programma più  chiaro e leggibile
 
+---
+
+## quando e perché usare i metodi
+
 1. Quando il programma da realizzare è articolato diventa conveniente identificare **sottoproblemi** che possono essere risolti individualmente
 
 2. scrivere **sottoprogrammi** che risolvono i sottoproblemi richiamare i **sottoprogrammi** dal programma principale (main)
@@ -26,8 +30,6 @@
 * metodi statici: dichiarati `static`
 * richiamabili attraverso nome della classe
 * p.es: `Math.sqrt()`
-
-
 
 ```java
 

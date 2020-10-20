@@ -1,9 +1,11 @@
-Strutture del linguaggio
-========================
+# Il controllo del flusso
 
-## Selezione 
+Java mette a disposizione del programmatore diverse strutture sintattiche per consentire il **controllo del flusso**
 
-**if //Statements**
+
+## Selezione, scelta condizionale 
+
+**if statements**
 
 ```java
 if (condition) {
@@ -62,21 +64,14 @@ switch (Expression) {
 ---
 
 
-**loop Statements**
+
+## Cicli definiti
+
+Se il numero di iterazioni è prevedibile dal contenuto delle variabili all'inizio del ciclo.
+
+
+
 ```java
-
-while (condition) {
-
-//statements;
-
-}
-
-do {
-
-//statements;
-
-} while (condition);
-
 
 for (init; condition; adjustment) {
 
@@ -85,14 +80,8 @@ for (init; condition; adjustment) {
 }
 ```
 
----
-
-
-## Cicli definiti
-
-Se il numero di iterazioni è prevedibile dal contenuto delle variabili all'inizio del ciclo.
-
 Esempio: prima di entrare nel ciclo so già che verrà ripetuto 10 volte
+
 ```java
 int n=10;
 for (int i=0; i<n; ++i) {
@@ -107,6 +96,24 @@ for (int i=0; i<n; ++i) {
 ## Cicli indefiniti
 
 Se il numero di iterazioni non è noto all'inizio del ciclo.
+
+```java
+
+while (condition) {
+
+//statements;
+
+}
+
+do {
+
+//statements;
+
+} while (condition);
+
+```
+
+---
 
 Esempio: il numero di iterazioni dipende dai valori immessi dall'utente.
 ```java

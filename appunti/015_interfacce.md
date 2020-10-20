@@ -1,7 +1,6 @@
 # Interfacce
 
-### Un'interfaccia è una classe
-completamente astratta, cioè del tutto priva della parte di implementazione
+Un'interfaccia è una specie di classe completamente astratta, cioè del tutto priva della parte di implementazione (quasi... vedi sotto)
 
 * Tutti i metodi sono astratti
 * Non vi sono attributi

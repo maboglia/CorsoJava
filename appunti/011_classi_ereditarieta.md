@@ -36,7 +36,4 @@ b) Creiamo una nuova classe che erediti da Automobile:
 
 * Gestionale aziendale: p.es Cliente, Venditore, Distributore
 
-* Esiste una parte del codice comune a tutte quante, p.es Piva, indirizzo, SpedireLettera()
-
-* Crei una classe addizionale che raccolga il codice comune, es ParteCommerciale da cui ereditino le parti comuni
 

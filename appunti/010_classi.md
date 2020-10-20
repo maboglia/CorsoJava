@@ -12,12 +12,13 @@ Le classi estendono il concetto di "struttura" di altri linguaggi
 * Dal programmatore (ex. Automobile)
 * Dall'ambiente Java (ex. String, System, etc.)
 
+---
+
 ### La "gestione" di una classe avviene mediante
 
 * Definizione della classe
 * Instanziazione di Oggetti della classe
 
----
 
 ### Struttura di una classe
 
@@ -113,14 +114,12 @@ public class HelloWorld {
 
 ---
 
-
 ### Modifica di rappresentazione interna di una classe
 
 * Uno dei maggiori vantaggi di occultare gli attributi è che in futuro potremo cambiarli senza la necessità di cambiare l'interfaccia
 * Un linguaggio di programmazione __ORIENTATO AGLI OGGETTI__  fornisce meccanismi per definire nuovi tipi di dato basati sul concetto di classe
 * Una classe definisce un insieme di oggetti (conti bancari, dipendenti, automobili, rettangoli, ecc...).
 * Un oggetto è una struttura dotata di proprie **variabili** (che rappresentano il suo stato) propri **metodi** (che realizzano le sue funzionalità)
-
 
 ---
 

@@ -16,10 +16,10 @@
 
 ## casting dei tipi reference (oggetti)
 
-* è permesso solo in caso di ereditarietà
-* la conversione da sotto-classe a super-classe è automatica
-* la conversione da super-classe a sotto-classe richiede cast esplicito
-* la conversione tra riferimenti non in relazione tra loro non è permessa
+* è permesso solo in caso di **ereditarietà**
+* la conversione da sotto-classe a super-classe è **automatica**
+* la conversione da super-classe a sotto-classe richiede **cast esplicito**
+* la conversione tra riferimenti non in relazione tra loro **non è permessa**
 
 ## esempio promotion
 
@@ -55,6 +55,9 @@ int a = (int) 1936.27;
 System.out.println(a); // 1936
 
 ```
+
+---
+
 
 ## con il tipo boolean non si può fare il typecasting
 

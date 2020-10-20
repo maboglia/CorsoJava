@@ -3,12 +3,14 @@
 
 ### Definizione
 ```java
-class <nomeClasse) {
+class NomeClasse {
 <campi>
 <metodi>
 }
 ```
+
 ### Esempi
+
 * Classe contenente dati ma non azioni
 
 ```java
@@ -19,6 +21,7 @@ int i;
 float f;
 }
 ```
+
 * Classe contenente dati e azioni
 ```java
 
@@ -58,11 +61,4 @@ class Automobile {
 * Nessuna specifica (amichevole): ...
 
 La definizione di classe non rappresenta alcun oggetto.
-
-
----
-
-#
-
-
 

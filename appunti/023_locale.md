@@ -8,7 +8,7 @@ Occorre tener presente che, nella maggior parte dei casi, con internazionalizzaz
 
 --- 
 
-# CLASSE LOCALE
+# CLASSE Locale
 
 ```java
 nomeLocale = new Locale("language", "country", ["variant"]);
@@ -21,6 +21,8 @@ Il package java.text fornisce gli strumenti per la formattazione del testo.
 
 Alcune sue classi possiedono metodi che usano Locale.
 Un esempio è la classe NumberFormat che possiede metodi che usano Locale per individuare l'uso della virgola o del punto per i numeri decimali.
+
+---
 
 Un altro esempio sono le classi (come Currency) che usano Locale per rappresentare date, orari e valute.
 
@@ -38,6 +40,9 @@ Ciò torna utile quando in una stessa nazione non necessariamente si parla un'un
 Viene specificata mediante due lettere maiuscole (es: Svizzera italiana = it_CH, Svizzera tedesca = de_CH).
 
 La terza variabile (opzionale) permette la specifica di strutture personalizzate implementate, ad esempio, da particolari tipi di browser.
+
+---
+
 
 ```java
 // creazione di un Locale con due parametri
@@ -58,9 +63,9 @@ CanadaFrancesce = Locale.CANAD_FRENCH;
 ```
 La classe Locale possiede, inoltre, alcuni metodi che restituiscono informazioni sulla zona.
 
+---
 
-
-## CLASSE RESOURCEBUNDLE
+## CLASSE ResourceBundle
 
 `nomeResBundle = ResourceBundle.getBundle("nomeBundle", nomeLocale)`
 
@@ -72,6 +77,9 @@ Queste risorse hanno un formato molto semplice, in quanto contengono praticament
 
 * la chiave è una stringa
 * il valore è la traduzione, cioè una stringa tradotta nella lingua del particolare Locale
+
+---
+
 
 Per creare l'oggetto ResourceBundle bisogna invocare il metodo getBundle() passandogli come parametri il nome del bundle (cioè la risorsa) e il nome del locale.
 
@@ -85,12 +93,16 @@ String testo = mioMessaggio.getString("header");
 System.out.println("testo");
 ```
 
+---
+
+
 La stringa che ritorna dall'esempio è quella che corrisponde alla chiave che abbiamo specificato e sarà nella lingua identificata dal Locale.
 
 Poiché nei file properties non variano le chiavi ma le corrispondenti traduzioni, si possono aggiungere altre risorse senza cambiare nulla nel codice.
 
+---
 
-## ESEMPIO LOCALE E RESOURCEBUNDLE
+## ESEMPIO Locale E ResourceBundle
 
 ### file example.java: 
 contiene il codice per la dichiarazione e la gestione del Locale e del ResourceBundle.
@@ -118,7 +130,7 @@ public class Example {
 }
 ```
 
-## file properties.
+## I file `.properties`
 ```java
 
 /* MyBundle.properties */

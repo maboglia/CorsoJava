@@ -69,6 +69,7 @@ Quando la lettura del file è stata ultimata, è buona norma chiudere il canale 
 Nota: fare attenzione a non chiamare close() su un canale BufferedReader non associato a un file, ma ad esempio al canale standard System.in.
 
 ---
+
 ## Esempio 1
 
 Scrivere una classe pubblica LetturaFile con un metodo pubblico void stampaFile(String s) che, dato il nome di un file s, ne stampa a video tutte le righe, oppure lancia un'eccezione non verificata se si incontrano errori nella lettura.
@@ -216,73 +217,4 @@ PrintStream p = System.out;
 // System.out è un riferimento di tipo PrintStream al terminale standard
 p.close(); // chiude il terminale di output
 System.out.println("questa stringa non verrà mai stampata");
-```
-
----
-
-## Esempio 1
-
-Scrivere una classe pubblica ScritturaFile con un metodo `public void scriviSuFile(Object[] v, String s)` che, dato un array v di oggetti e una stringa s, crea un file di nome s contenente le stringhe associate agli oggetti dell'array, oppure lancia un'eccezione non verificata se si incontrano errori nella scrittura del file.
-
-ScritturaFile.java
-```java
-import java.io.*;
-
-public class ScritturaFile {
-    public static void scriviSuFile(Object[] v, String s){
-
-        PrintStream p;
-
-        try {
-             p = new PrintStream(s);
-        }
-        catch(FileNotFoundException e){
-            throw new RuntimeException("errore accesso file");
-        }
-
-        for (int i=0; i<v.length; i++) p.println(v[i]);
-
-        p.close();
-    }
-
-    public static void main(String[] args){
-        scriviSuFile(new String[]{"uno", "due", "tre"}, "miofile.txt");
-    }
-}
-``` 
-
-### Programma di prova:
-
-```java
-public static void main(String[] args){
-    scriviSuFile(new String[]{"uno", "due", "tre"}, "miofile.txt");
-}
-```
-
----
-## Esempio 2
-
-Una variante dell'esercizio precedente assume che il metodo non prenda come parametro un nome di file, ma un canale di scrittura PrintStream assumendo che sia stato già creato al momento dell'invocazione (ad esempio associandolo a un file o al terminale di output System.out).
-
-Scrivere una classe pubblica ScritturaFile con un metodo pubblico void scriviSuCanaleOutput(Object[] v, PrintStream p) che, dato un array v di oggetti e un canale di output p, scrive su quel canale le stringhe associate agli oggetti dell'array, oppure lancia un'eccezione non verificata se si incontrano errori nella scrittura del file.
-
-ScritturaFile.java
-```java
-import java.io.*;
-
-public class ScritturaFile {
-    public static void scriviSuCanaleOutput(Object[] v, PrintStream p){
-        for (int i=0; i<v.length; i++) p.println(v[i]);
-    }
-}
-```
-
-Nota importante: sarebbe errato fare p.close() perché il canale di output p potrebbe dover rimanere ancora in uso (esempio ovvio: se p==System.out).
-
-### Programma di prova:
-
-```java
-public static void main(String[] args){
-    scriviSuCanaleOutput(new String[]{"uno", "due", "tre"}, System.out);
-}
 ```

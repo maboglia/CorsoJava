@@ -9,7 +9,7 @@ Caratteristiche principali
   * **Non modificabile** (dichiarata final)
 * StringBuilder
   * Modificabile
-* StringBuffer
+* StringBuffer (non si usa più)
   * Modificabile
 * Character
 * CharacterSet
@@ -74,19 +74,19 @@ Caratteristiche principali
 
 ### Confronta stringa con s
 
-* boolean equals (String s)
-* myString.equals ("stringa") ritorna true o false
-* boolean equalsIgnoreCase (String s)
-* myString.equalsIgnoreCase ("StRiNgA")
+* `boolean equals(String s)`
+*` myString.equals("stringa")` ritorna true o false
+* `boolean equalsIgnoreCase(String s)`
+* `myString.equalsIgnoreCase("StRiNgA")`
 
 ### Confronta con s facendone la differenza
 
-* int compareTo (String str)
-* myString.compareTo ("stringa") ritorna un valore >=< 0
+* `int compareTo(String str)`
+* `myString.compareTo("stringa")` ritorna un valore >=< 0
 
 ### Trasforma int in String
 
-* String valueOf (int)
+* `String valueOf(int)`
 * Disponibile per tutti tipi primitivi
 
 ---
@@ -94,15 +94,15 @@ Caratteristiche principali
 
 ### Restituisce indice prima occorrenza di c
 
-* int indexOf (char c)
-* int indexOf (char c, int fromCtrN)
+* `int indexOf(char c)`
+* `int indexOf(char c, int fromCtrN)`
 
 ### Altri metodi
 
-* String toUpperCase (String str)
-* String toLowerCase (String str)
-* String substring (int startIndex, int endIndex)
-* String substring (int startIndex)
+* `String toUpperCase(String str)`
+* `String toLowerCase(String str)`
+* `String substring(int startIndex, int endIndex)`
+* `String substring(int startIndex)`
 
 ---
 

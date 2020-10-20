@@ -1,12 +1,12 @@
-# Le Variabili
+# Le variabili e le costanti
 
 * Una variabile è un'area di memoria identificata da un nome
 * Il suo scopo è di contenere un valore di un certo tipo
 * Serve per memorizzare dati durante l'esecuzione di un programma
-* Il nome di una variabile è un identificatore
+* Il nome di una variabile è un **identificatore**
 * può essere costituito da lettere, numeri e underscore 
 * non deve coincidere con una parola chiave del linguaggio
-* è meglio scegliere un identificatore che sia significativo per il programma
+* è meglio scegliere un **identificatore** che sia **significativo** per il programma
 
 
 
@@ -28,7 +28,7 @@ public class Triangolo {
 }
 ```
 
-Usando le variabili il programma risulta essere più chiaro:
+Usando le variabili il programma risulta essere **più chiaro**:
 
 * Si capisce meglio quali siano la base e l'altezza del triangolo
 * Si capisce meglio che cosa calcola il programma
@@ -38,13 +38,13 @@ Usando le variabili il programma risulta essere più chiaro:
 
 ### Dichiarazione
 
-* In Java ogni variabile deve essere dichiarata prima del suo uso
-* Nella dichiarazione di una variabile se ne specifica il nome e il tipo 
+* In Java ogni variabile deve essere **dichiarata prima del suo uso**
+* Nella dichiarazione di una variabile se ne specifica il **nome** e il **tipo** 
 * Nell'esempio, abbiamo dichiarato tre variabili con nomi base, altezza e area, tutte di tipo int (numeri interi)
   * int base , altezza ;
   * int area ;
 
-__ATTENZIONE!__ Ogni variabile deve essere dichiarata UNA SOLA VOLTA
+__ATTENZIONE!__ Ogni variabile deve essere dichiarata **UNA SOLA VOLTA**
 (la prima volta che compare nel programma)
 
 ```java
@@ -80,7 +80,7 @@ area = base * altezza /2;
 Prima di poter essere usata in un'espressione una variabile deve:
 * essere stata dichiarata
 * essere stata assegnata almeno una volta (inizializzata)
-* NB: si possono combinare dichiarazione e assegnamento. 
+* NB: **si possono combinare dichiarazione e assegnamento**. 
 
 Ad esempio:
 
@@ -102,10 +102,10 @@ final double IVA = 0.22;
 ```
 
 * Il modificatore **final** trasforma la variabile in una costante
-* Il compilatore si occuperà di controllare che il valore delle costanti non venga mai modificato (ri-assegnato) dopo essere stato inizializzato.
+* Il compilatore si occuperà di controllare che il valore delle costanti non venga **mai modificato** (ri-assegnato) dopo essere stato inizializzato.
 * Aggiungere il modificatore **final** non cambia funzionamento programma, ma serve a prevenire errori di programmazione
 * Si chiede al compilatore di controllare che una variabile non venga ri-assegnata per sbaglio
-* Sapendo che una variabile non cambierà mai valore, il compilatore può anche eseguire delle ottimizzazioni sull'uso di tale variabile.
+* Sapendo che una variabile non cambierà mai valore, il compilatore può anche eseguire delle **ottimizzazioni** sull'uso di tale variabile.
 
 
 ---
