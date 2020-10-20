@@ -4,31 +4,30 @@
 * Di assegnazione: = += -= *= /= &= |= ^=
 * Di assegnazione/incremento: ++ -- %=
 
-| Operatore | Significato               |
-| --------- | ------------------------- |
-| \=        | assignment                |
-| +=        | addition assignment       |
-| \-=       | subtraction assignment    |
-| \*=       | multiplication assignment |
-| /=        | division assignment       |
-| %=        | remainder assignment      |
-
----
-
 * Operatori Aritmetici:` + - * / %`
 
 | Operatore | Significato    |
 | --------- | -------------- |
-| +         | addition       |
-| \-        | subtraction    |
-| \*        | multiplication |
-| /         | division       |
-| %         | remainder      |
-| ++var     | preincrement   |
-| \--var    | predecrement   |
-| var++     | postincrement  |
-| var--     | postdecrement  |
+| +         | addizione      |
+| \-        | sottrazione    |
+| \*        | motiplicazione |
+| /         | divisione      |
+| %         | resto          |
+| ++var     | preincremento   |
+| \--var    | predecremento   |
+| var++     | postincremento  |
+| var--     | postdecremento  |
 
+---
+
+| Operatore | Significato               |
+| --------- | ------------------------- |
+| \=        | addizione                |
+| +=        | addizione assegnazione       |
+| \-=       | sottrazione assegnazione    |
+| \*=       | motiplicazione assegnazione |
+| /=        | divisione assegnazione       |
+| %=        | resto assegnazione      |
 
 ---
 
@@ -37,12 +36,12 @@
 
 | Operatore | Significato              |
 | --------- | ------------------------ |
-| <         | less than                |
-| <=        | less than or equal to    |
-| \>        | greater than             |
-| \>=       | greater than or equal to |
-| \==       | equal to                 |
-| !=        | not equal                |
+| <         | minore di                |
+| <=        | minore di o uguale a    |
+| \>        | maggiore di             |
+| \>=       | maggiore di o uguale a |
+| \==       | uguale a                 |
+| !=        | non uguale / diverso     |
 
 
 ---
@@ -84,7 +83,7 @@
 
 ## Operatori matematici
 
-### Operazioni matematiche complesse sono permesse dalla classe Math (package java.lang)
+ Operazioni matematiche complesse sono permesse dalla **classe Math** (package java.lang)
 
 * `Math.sin (x) calcola sin(x)`
 * `Math.sqrt (x) calcola x^(1/2)`
