@@ -10,13 +10,16 @@
 
 
 ## 1.2. [Fondamenti di programmazione](https://github.com/maboglia/Fondamenti) 
-  * **Algoritmi** e strutture dati 
-  * Java: le basi del linguaggio 
-  * struttura del **JDK**
-  * **OOP** teoria, definizione
-  * **variabile**: definizione
-  * Primo approccio al codice
-  * metodo main e metodi ausiliari
+* **Algoritmi** e strutture dati 
+* La nozione di algoritmo
+* Linguaggi per la descrizione di algoritmi
+* I diagrammi di flusso
+* Dal problema al programma
+* Il ciclo di vita del software e le qualità dei programmi
+* Paradigmi di programmazione
+* Introduzione alla programmazione orientata agli oggetti
+* **OOP** teoria, definizione
+* **variabile**: definizione
 
 ---
 
@@ -25,7 +28,11 @@
 
 * Descrivere la tecnologia Java e l'ambiente di sviluppo Java
 * Identificare le funzionalità chiave del linguaggio Java
-
+* struttura del **JDK**
+* Java: le basi del linguaggio 
+* Introduzione linguaggio Java
+* Introduzione a Java e al processo di compilazione
+* Compilazione ed esecuzione
 
 
 ### 1.2.2. Creazione di un programma Java semplice
@@ -33,6 +40,15 @@
 * Crea un programma Java eseguibile con una classe main
 * Compilare ed eseguire un programma Java dalla riga di comando
 * Creare e importare pacchetti
+* Primo approccio al codice
+* metodo main e metodi ausiliari
+* Primi programmi Java.
+
+## Input/Output  
+
+* Input/Output utente
+* Input da console, java.util.Scanner
+* Output con oggetto System.out
 
 ---
  
@@ -43,18 +59,28 @@
 * Usa l'inferenza del tipo di variabile locale
 * Crea e manipola stringhe
 * Manipola i dati usando la classe StringBuilder e i suoi metodi
+* Caso particolare: la classe String e i principali metodi.
+* Classe Object
+  * Metodi equals, toString e clone.
+* Classi wrapper per i tipi di dati primitivi
+* La classe Math e i principali metodi.
+* La classe Random: generazione di numeri pseudo-random.
+* La classe Timer: schedulare un'azione, che verrà eseguita ogni tot millisecondi.
 
-
+---
  
 ### 1.2.4. _LE VARIABILI IN JAVA__ 
 
 * Dichiarazione di una variabile: 
 * Variabili d'istanza
 * Variabili locali
+* Scope delle variabili
 * Parametri formali 
-* argomenti passati al metodo main 
+* Argomenti passati al metodo main 
 * Package introduzione
 * Consultazione Oracle API docs
+
+---
 
 __TIPI DI DATI PRIMITIVI__ 
 * Tipi di dati interi, casting e promotion 
@@ -70,7 +96,9 @@ __OPERATORI DI BASE__
 * Operatore d'assegnazione 
 * Operatori aritmetici 
 * Operatori (unari) di pre e post-incremento (e decremento) 
-* Operatori relazionali o di confronto 
+* Operatori relazionali o di confronto
+* Operatori logici
+* Regole di precedenza.
 * Concatenare le stringhe
 
 
@@ -81,15 +109,22 @@ __OPERATORI DI BASE__
 ### 1.2.5. Utilizzo di operatori e costrutti decisionali
 * Utilizzare gli operatori Java incluso l'uso della parentesi per sovrascrivere la precedenza dell'operatore
 * Utilizzare le istruzioni di controllo Java incluso if, else e switch
-* Crea e usa do / while, while, per e per ogni loop, inclusi i loop nidificati, usa le istruzioni break e continue
+* Crea e usa 
+  * do...while, 
+  * while, 
+  * for 
+  * foreach, 
+  * loop nidificati, 
+  * istruzioni break e continue
 
-
+---
 
 **INTRODUZIONE ALLA LIBRERIA STANDARD** 
 
 * Il comando import
 * La classe String
 * La documentazione della libreria standard di Java
+* Cicli finiti, infiniti, annidati
 
 **OPERATORI E GESTIONE DEL FLUSSO DI ESECUZIONE** 
 
@@ -103,6 +138,22 @@ __OPERATORI DI BASE__
 
 ---
 
+## Strutture condizionali
+
+* Strutture di controllo.
+* if - else
+* switch
+* operatore ternario
+
+## Strutture ITERATIVE
+
+* while
+* do...while
+* for: per scorrere per esempio un array in entrambe le direzioni
+* for(each): scorre solo in una direzione
+* Labels: break e continue
+
+---
 
 **IDENTIFICATORI E TIPI DI DATO** 
 
@@ -128,6 +179,8 @@ __OPERATORI DI BASE__
 * Array (vettori semplici, monodimensionali) 
 * Array Multidimensionali 
 * Limiti degli array in JAVA: dimensione prefissata
+* Copia di array
+* Array e ArrayList.
 
 
 ---
@@ -179,6 +232,7 @@ __OPERATORI DI BASE__
   * metodi getter e setter
   * incapsulamento
 
+---
 
 **I METODI COSTRUTTORI** 
 
@@ -186,8 +240,6 @@ __OPERATORI DI BASE__
 * Costruttore di default
   * overload dei costruttori 
 * Package e visibilità
-
-
 
 
 **Ereditarietà in Java**
@@ -199,14 +251,39 @@ __OPERATORI DI BASE__
 
 ---
 
+## Programmazione ad oggetti
+
+* La programmazione orientata agli oggetti.
+* Progettazione di nuove classi e metodi.
+    * Progettare una Classe
+    * Oggetti, variabili, riferimenti.
+    * Classi, metodi e variabili di istanza.
+    * Istanziare un Oggetto: il costruttore
+    * Variabili d'istanza e incapsulamento
+    * Visibilità dei membri di una classe
+    * La parola riservata null
+    * Determinazione delle classi.
+    * Coesione, dipendenza, programmazione per contratti, parametro implicito, effetti collaterali e pacchetto.
+    * Membri statici e membri dinamici
+    * Modificatori d'accesso e visibilità: public, private, friendly, static
+    * Classi e metodi con parametri
+
+---
+
 ### 1.4.1. Riutilizzo delle implementazioni tramite ereditarietà
 
 * Creare e utilizzare sottoclassi e superclassi
 * Creare ed estendere le classi astratte
-* Abilita il polimorfismo con metodi prioritari
-* Utilizza il polimorfismo per lanciare e chiamare metodi, differenziando il tipo di oggetto rispetto al tipo di riferimento
-* Distingua il sovraccarico, l'override e il nascondimento
+* Abilitare il polimorfismo con metodi prioritari
+* Utilizzare il polimorfismo per lanciare e chiamare metodi, differenziando il tipo di oggetto rispetto al tipo di riferimento
+* Distinguere il sovraccarico, l'override e il nascondimento
 
+## Ereditarietà
+* Riutilizzo del codice.
+* Strutture ereditarie
+* La parola riservata super
+* Modificatori d'accesso: package, private e protected
+* Impedire l'ereditarietà: la parola riservata final
 ---
 
 ## 1.5. aggregazione
@@ -226,7 +303,6 @@ __OPERATORI DI BASE__
 * Creare blocchi try-catch e determinare in che modo le eccezioni alterano il flusso del programma
 * Crea e invoca un metodo che genera un'eccezione
 
-
 __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 * usare la gestione eccezioni di JAVA
@@ -235,11 +311,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * le parole chiave throws e throw
 * [eccezioni](017_eccezioni.md)
 
-
-
 ---
-
-			
 
 **Advanced OOP design**
 
@@ -251,13 +323,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 * [focus date, valute](022_API_Java_date_time.md)
 
-
 ---
-
----
-
-
-
 
 ### 2.0.2. Programmazione astratta attraverso le interfacce
 
@@ -283,7 +349,20 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
   * member classes, 
   * anonymous inner classes
 * Reflection, Class, Constructor classes
-		
+
+## Advanced Class design
+
+* Binding dinamico
+* Casting con oggetti
+* Cast e instanceof
+* Classi astratte
+* Classi innestate o interne
+* Classi anonime
+* Schede CRC e diagrammi UML.
+* Classi anonime
+* Classi astratte
+* Lambda espressioni.
+---		
 
 ### 2.0.4. Comprensione dei moduli
 
@@ -374,6 +453,20 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * Creare e utilizzare classi di eccezione personalizzate
 * Metti alla prova gli invarianti usando le asserzioni
 
+## Eccezioni
+
+* Meccanismo di gestione delle eccezioni
+* Eccezioni controllate e non
+* Errori ed eccezioni
+* Il costrutto TRY-CATCH-FINALLY
+* Tipi di eccezione ed il costrutto Throws
+* Lanciare un'eccezione: il costrutto Throw
+* Eccezioni personalizzate
+* Cenni sull'uso di un debugger
+* Il debugger di Eclipse
+* Correzione di un programma Java.
+* Test unitari
+
 ---
 
 ### 2.3.4. Interfacce Java
@@ -389,6 +482,15 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * Descrivi il Framework di raccolta e usa le interfacce di raccolta chiavi
 * Usa Comparator e interfacce comparabili
 * Creare e utilizzare metodi di praticità per le raccolte
+
+## Framework Collections
+
+* Foreach ed Iterator
+* Implementazioni di Set e SortedSet
+* Implementazioni di List
+* Implementazioni di Queue
+* Implementazioni di Map e SortedMap
+* Tipi Generics
 
 ---
 
@@ -464,6 +566,19 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * Utilizzare la classe Files per controllare, eliminare, copiare o spostare un file o una directory
 * Usa l'API Stream con i file
 
+## Input/Output
+
+* Introduzione all'I/O: input da tastiera
+* Java.io: Leggere un file
+* Java.io: Scrivere su un file
+* Java.io:Operazioni su file
+* Networking: Socket
+* Flussi di byte e di caratteri
+* Flussi di oggetti
+* Accesso sequenziale e random.
+* Files
+* Serializzazione e deserializzazione.
+
 ---
 
 ### 2.3.15. Codifica sicura nell'applicazione Java SE
@@ -481,6 +596,17 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * Utilizzare PreparedStatement per eseguire operazioni CRUD
 * Utilizzare le API PreparedStatement e CallableStatement per eseguire operazioni sul database
 
+## Introduzione a JDBC
+
+* Convenzioni JDBC URL Naming
+* Gestione dei driver: il DriverManager
+* Gestione degli errori
+* Le SQLException
+* Supporto per i tipi di dati
+* Estensioni standard di JDBC
+* Connection Pooling
+* Gestione dei dati: JDBC
+* Crud su DB
 ---
 
 ### 2.3.17. Localizzazione
@@ -496,3 +622,46 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * Applica annotazioni a classi e metodi
 * Descrivi le annotazioni di uso comune nel JDK
 * Dichiara annotazioni personalizzate
+
+---
+
+## JSP e Servlet
+
+* Primo approccio a JSP
+* Installazione ed esecuzione della prima pagina JSP
+* Elementi fondamentali di JSP 
+* Utilizzo degli elementi fondamentali
+* Utilizzo di JavaBeans
+* Lavorare con i database
+* Elementi Avanzati di una pagina JSP
+* Uso di Etichette personalizzate
+
+---
+
+
+## Introduzione al framework Spring
+
+* Panoramica sulle componenti di base e sui moduli aggiuntivi
+* Dependency Injection e IoC (Inversion Of Control)
+* The IoC Container: Core ed application Context
+* Bean e Bean Definition
+* Descrizione dei vari tipi di Contesti
+* Autowiring
+* Definizione dello Scope dei bean
+* Creazione ed uso dei Bean Spring: esempi concreti
+* Gestione centralizzata degli Errori e delle eccezioni
+
+---
+
+## Spring nella gestione delle eccezioni e nell'accesso ai dati
+
+* Supporto DAO
+  * Consistenza nella gestione delle eccezioni
+  * Data Access Exception
+  * Iniezione delle dipendenze nei DAO
+
+* Integrazione con JDBC
+  * JDBC Template
+  * Configurazione di un DAO JDBC
+  * SimpleJdbcInsert
+  * SqlQuery e MappingSqlQuery

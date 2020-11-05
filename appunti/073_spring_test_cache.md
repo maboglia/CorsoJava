@@ -1,5 +1,3 @@
-
-
 # Annotazioni DataAccess di Spring Framework
 
 ## @Transactional

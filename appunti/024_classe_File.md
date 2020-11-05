@@ -1,7 +1,8 @@
 I membri della classe File.
 --------------------------------------------------------------
+
 Costruttori pubblici:
-File(File parent, String child)	
+`File(File parent, String child)	`
 
 Costruisce un oggetto File a
 				partire da un File che
@@ -9,12 +10,12 @@ Costruisce un oggetto File a
 				ed un secondo File che
 				specifica il nome
 				dell'elemento.
-File(String pathname)		
+`File(String pathname)`		
 
 Costruisce un oggetto File che
 				corrisponde al percorso
-				espresso.
-File(String parent,	String child)	
+`				espresso.
+File(String parent,	String child)`	
 
 Costruisce un oggetto File a
 			partire da una stringa che

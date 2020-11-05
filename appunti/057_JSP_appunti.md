@@ -1,28 +1,6 @@
 # Corso JSP
 
-<!-- TOC -->
-
-- [Corso JSP](#corso-jsp)
-  - [Corso JSP - Le direttive](#corso-jsp---le-direttive)
-  - [Corso JSP - Le variabili](#corso-jsp---le-variabili)
-  - [oggetti impliciti](#oggetti-impliciti)
-  - [Ciclo di vita di una pagina JSP](#ciclo-di-vita-di-una-pagina-jsp)
-  - [Elementi di una pagina JSP](#elementi-di-una-pagina-jsp)
-  - [JDBC e interazione con database](#jdbc-e-interazione-con-database)
-  - [Uso avanzato](#uso-avanzato)
-  - [Corso JSP - argomenti](#corso-jsp---argomenti)
-    - [corso-jsp-argomenti](#corso-jsp-argomenti)
-  - [Lavorare con i database](#lavorare-con-i-database)
-  - [* Esercitazione guidata Java Server Faces](#esercitazione-guidata-java-server-faces)
-  - [Corso JSP - jsp:forward](#corso-jsp---jspforward)
-  - [Corso JSP - Le dichiarazioni](#corso-jsp---le-dichiarazioni)
-  - [Corso JSP - Ciclo DO WHILE](#corso-jsp---ciclo-do-while)
-  - [Corso JSP - Funzione contatore accessi + esempio uso dichiarazioni e espressioni](#corso-jsp---funzione-contatore-accessi--esempio-uso-dichiarazioni-e-espressioni)
-  - [Corso JSP - Esempio JSTL Core](#corso-jsp---esempio-jstl-core)
-  - [Corso JSP - Esempio JSTL Functions](#corso-jsp---esempio-jstl-functions)
-  - [Corso JSP - Esempio Java Server Faces](#corso-jsp---esempio-java-server-faces)
-
-<!-- /TOC -->
+<!-- TOC -->autoauto- [Corso JSP](#corso-jsp)auto    - [Corso JSP - Le direttive](#corso-jsp---le-direttive)auto    - [Corso JSP - Le variabili](#corso-jsp---le-variabili)auto    - [oggetti impliciti](#oggetti-impliciti)auto    - [Ciclo di vita di una pagina JSP](#ciclo-di-vita-di-una-pagina-jsp)auto    - [Elementi di una pagina JSP](#elementi-di-una-pagina-jsp)auto    - [JDBC e interazione con database](#jdbc-e-interazione-con-database)auto    - [Uso avanzato](#uso-avanzato)auto    - [Corso JSP - argomenti](#corso-jsp---argomenti)auto        - [corso-jsp-argomenti](#corso-jsp-argomenti)auto    - [Lavorare con i database](#lavorare-con-i-database)auto    - [Corso JSP - jsp:forward](#corso-jsp---jspforward)auto    - [Corso JSP - Ciclo DO WHILE](#corso-jsp---ciclo-do-while)auto    - [Corso JSP - Funzione contatore accessi + esempio uso dichiarazioni e espressioni](#corso-jsp---funzione-contatore-accessi--esempio-uso-dichiarazioni-e-espressioni)auto    - [Corso JSP - Esempio JSTL Core](#corso-jsp---esempio-jstl-core)auto    - [Corso JSP - Esempio JSTL Functions](#corso-jsp---esempio-jstl-functions)auto    - [Corso JSP - Esempio Java Server Faces](#corso-jsp---esempio-java-server-faces)autoauto<!-- /TOC -->
 
 
 ## Corso JSP - Le direttive
@@ -78,7 +56,9 @@ Il tipo di file da includere può essere un
 file html (statico)
 file jsp  (dinamico)
 Sintassi:    ```<%@ include file="nome del file" %>```
-esempio
+
+
+###  esempio
 ```html
 <html>
 
@@ -100,7 +80,9 @@ esempio
 
 </html>
 ```
-direttiva taglib
+
+
+## direttiva taglib
 Permette estendere i marcatori di JSP con etichette o marcatori generati dall'utente (etichette personalizzate).
 
 Sintassi
@@ -132,8 +114,8 @@ poi ci sono
 Per l'elenco completo delle variabili e dei tipi primitivi fare riferimento alla documentazione di Java.
 
 Esempi di uso delle variabili nelle Java Server Pages:
-Copia codice
-```html
+
+```java
 <%--
 Document : variabili
 Created on : 3-giu-2013, 11.19.17
@@ -186,7 +168,7 @@ out.print("La condizione è falsa");//stamperà la condizione è falsa
 * Il contenuto dinamico si ottiene grazie alla possibilità di incorporare nella pagina codice Java di differenti forme
 * L’obiettivo finale è separare l’interfaccia (presentazione visuale) dalla implementazione (logica di esecuzione)
 
-pagina JSP -> Servlet
+## pagina JSP -> Servlet
 
 
 * La pagina JSP si converte in un servlet (il servlet o la servlet? leggi qui la discussione funny )
@@ -247,71 +229,49 @@ Rispetto ad altre tecnologie server side come PHP o ASP, questa è una differenz
 
 * direttive al server
 
-* ```<%@ direttive %>```
+  * ```<%@ direttive %>```
 
 
 * elementi di scripting
 
-* ```<%! dichiarazioni %>```
-* ```<%= espressioni %>```
-* ```<% scriptlet %>```
-* ```<%-- commenti --%>```
+    * ```<%! dichiarazioni %>```
+    * ```<%= espressioni %>```
+    * ```<% scriptlet %>```
+    * ```<%-- commenti --%>```
 
 
 * azioni standard
 
-* ```<jsp:include>```
-* ```<jsp:forward>```
-* ```<jsp:param>```
-* ```<jsp:useBean>```
-* ```<jsp:setProperty>```
-* ```<jsp:getProperty>```
-* ```<jsp:plugin>```
+    * ```<jsp:include>```
+    * ```<jsp:forward>```
+    * ```<jsp:param>```
+    * ```<jsp:useBean>```
+    * ```<jsp:setProperty>```
+    * ```<jsp:getProperty>```
+    * ```<jsp:plugin>```
 
 
-* azioni personalizzate - custom tags (vedi sotto tag libraries)
+* azioni personalizzate - 
+    * **Tag Libraries**
 
+    * JSTL
+      * core
+      * xml
+      * frm
+      * sql
+      * functions
 
-## JDBC e interazione con database
-
-* Leggi scrivi su file di testo
-* Leggi e scrivi su database
-* Applicazione CRUD con JSP
-
-Le Tag Libraries
-
-* JSTL
-
-* core
-* xml
-* frm
-* sql
-* functions
-
+## Tag Libraries
 
 * Librerie di Tag personalizzate
 * EL - expressions language - espressioni dinamiche
-
-## Uso avanzato
-
-* Hello World con JSF - Java Server Faces
-* Hibernate, JSTL e MySql
-* Esempio di filtri
-
-Post su JSP
-[su_post post_id="4311"]
-
-Edizione del corso
-
-* Anno formativo 2015-2016 - "Tecnico di sviluppo software", Torino
-* Anno formativo 2013 - "Programmazione web server-side con JSP" - corso IFTS - ITIS Pininfarina (TO)
+  * custom tags (vedi sotto tag libraries)
 
 
-## Corso JSP - argomenti
+
+
+
 ### corso-jsp-argomenti
-Corso JSP - argomenti delle lezioni
-Primo approccio a JSP
-
 
 * Cos’è e a cosa serve JSP
 * Hello World con JSP
@@ -319,7 +279,7 @@ Primo approccio a JSP
 * Uso degli oggetti impliciti ed esempi
 
 
-->Esercizio: installazione ed esecuzione della prima pagina JSP
+### Esercizio: installazione ed esecuzione della prima pagina JSP
 
 * Installazione dell' SDK di Java e di Tomcat configurazione dell’IDE e prima pagina Hello world con JSP
 * Esplorazione dell’ambiente di sviluppo, creazione, modifica pagine JSP, passaggio dei dati tra pagine
@@ -330,14 +290,15 @@ Primo approccio a JSP
 
  
 
-Elementi fondamentali di JSP - Sintassi e caratteristiche degli oggetti principali: scriptlet, azioni standard, servlet
+## Elementi fondamentali di JSP - 
+Sintassi e caratteristiche degli oggetti principali: scriptlet, azioni standard, servlet
 
 * Direttive <%@   (page | include | taglib)
 * Codice Java <%  (dichiarazioni | java | espressioni)
 * jsp:action (include | forward | usebean | getproperty | setproperty)
 
 
--> Esercizio esempi di utilizzo degli elementi fondamentali
+### Esercizio esempi di utilizzo degli elementi fondamentali
 
 * Ciclo di vita di una pagina Jsp, Scriptlet: usare i costrutti del linguaggio JAVA nelle JSP
 * Cookie e gestione delle sessioni – Impostare una procedura di login da riutilizzare
@@ -346,18 +307,21 @@ Elementi fondamentali di JSP - Sintassi e caratteristiche degli oggetti principa
 * Standard action: come usare le altre azioni standard
 * Lavorare con le date in JSP.
 
--> Esercizio utilizzo di JavaBeans
+### Esercizio utilizzo di JavaBeans
 
 ## Lavorare con i database
 
-* Correzione in aula dell'esercitazione e individuazione best practices.
-* Approfondimento ed esercizi con i JavaBeans. Introduzione database con JSP.
-* Uso di JDBC nelle JSP. Creazione database, accesso alla base dati.
+* Leggi scrivi su file di testo
+* Leggi e scrivi su database
+* Applicazione CRUD con JSP
+* Introduzione database con JSP.
+* Uso di JDBC nelle JSP. 
+* Creazione database, accesso alla base dati.
 * Esercizi sulla base dati, applicazione CRUD in JSP.
 * Progetto ed implementazione di un'applicazione web complessa con JSP: creare un sito web per acquisti on line, sviluppo di un carrello della spesa.
 * Lettura e scrittura di file, utilizzo database nell'applicazione web. Hibernate, JSTL, servlet e MySql. MVC pattern. Persistenza in JSP.
 
-Elementi Avanzati di una pagina JSP
+## Elementi Avanzati di una pagina JSP
 
 
 * Azioni personalizzate (etichette)
@@ -367,7 +331,7 @@ Elementi Avanzati di una pagina JSP
 * Dichiarazioni nella pagina con <%@taglib e uso avanzato
 
 
--> Esercizio uso di Etichette personalizzate
+### Esercizio uso di Etichette personalizzate
 
 * Esercitazione guidata Hibernate e JSTL. Le TagLibraries.
 * Esercitazione guidata JSTL: core, xml, fmt, sql, functions.
@@ -526,7 +490,7 @@ Questa pagina è stata caricata <%= conta %> volte.
 </html>
 ```
 
-## Corso JSP - Esempio JSTL Core
+### Esempio JSTL Core
 
 
 Corso JSP - JSTL e EL
@@ -590,7 +554,7 @@ JSP Standard Tag Library e Expression Language
 </html>
 ```
 
-## Corso JSP - Esempio JSTL Functions
+### Esempio JSTL Functions
 
 ```html
 <%-- 
@@ -630,7 +594,7 @@ JSP Standard Tag Library e Expression Language
 </html>
 ```
 
-## Corso JSP - Esempio Java Server Faces
+### Esempio Java Server Faces
 
 Corso JSP - Java Server Faces - Hello world JSF con Netbeans 7.3
 
@@ -682,7 +646,7 @@ Il file index.xhtml contiene il form per l'invio del nome utente, incolla il cod
 Login: <h:inputText id="login" size="30" required="true" requiredMessage="inserisci nome utente" value="#{accesso.login}" />
 
 <h:/form>
-Iinfine crea il file login.xhtml che visualizza il testo inviato. Attenzione! Anche questo codice dovrà compreso all'interno dei tag h:form, così come il campo input per l'invio del testo.
+Infine crea il file login.xhtml che visualizza il testo inviato. Attenzione! Anche questo codice dovrà compreso all'interno dei tag h:form, così come il campo input per l'invio del testo.
     
 <h:form>
 

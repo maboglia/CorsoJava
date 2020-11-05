@@ -16,8 +16,6 @@
 
 ---
 
-
-
 ## Accesso a metodi e attributi static
 * Essendo definiti a livello di classe, attributi e metodi static sono acceduti/invocati tramite il nome della classe:
 * `Math.sqrt (2);`
@@ -29,7 +27,6 @@
 * Eventuali mescolanze improprie di `static` e non `static` causano errori di compilazione
 
 ---
-
 
 ## Accesso a metodi e attributi non static
 * La sintassi è simile al caso precedente, ma ovviamente l’accesso/invocazione è possibile solo tramite un’istanza specifica (ed ogni accesso è diversificato): 
