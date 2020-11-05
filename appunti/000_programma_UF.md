@@ -1,15 +1,71 @@
 # 1. Corso Tecnico Sviluppo Software 
 (Programmatore Java SE 11 I - 1Z0-815)
 
-## 1.1. Schema Unità Formative
 
-![schema UF](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/2020_UF_Java.jpg)
+- [1. Corso Tecnico Sviluppo Software](#1-corso-tecnico-sviluppo-software)auto    
+- [1.1
+. [Fondamenti di programmazione](https://github.com/maboglia/Fondamenti)](#11-fondamenti-di-programmazionehttpsgithubcommabogliafondamenti)auto        
+- [1.1.1. Comprensione della tecnologia e dell'ambiente Java](#111-comprensione-della-tecnologia-e-dellambiente-java)auto        
+- [1.1.2. Creazione di un programma Java semplice](#112-creazione-di-un-programma-java-semplice)auto    
+- [1.2. Input/Output](#12-inputoutput)auto        
+- [1.2.1. Lavorare con tipi di dati primitivi Java e API String](#121-lavorare-con-tipi-di-dati-primitivi-java-e-api-string)auto        
+- [1.2.2. _LE VARIABILI IN JAVA__](#122-_le-variabili-in-java__)auto        
+- [1.2.3. Utilizzo di operatori e costrutti decisionali](#123-utilizzo-di-operatori-e-costrutti-decisionali)auto    
+- [1.3. Strutture condizionali](#13-strutture-condizionali)auto    
+- [1.4. Strutture ITERATIVE](#14-strutture-iterative)auto        
+- [1.4.1. Lavorare con Java Arrays](#141-lavorare-con-java-arrays)auto        
+- [1.4.2. Descrivere e usare oggetti e classi](#142-descrivere-e-usare-oggetti-e-classi)auto        
+- [1.4.3. Creazione e utilizzo di metodi](#143-creazione-e-utilizzo-di-metodi)auto        
+- [1.4.4. Applicazione dell'incapsulamento](#144-applicazione-dellincapsulamento)auto    
+- [1.5. La classe Math](#15-la-classe-math)auto    
+- [1.6. Classi istanziabili](#16-classi-istanziabili)auto    
+- [1.7. Programmazione ad oggetti](#17-programmazione-ad-oggetti)auto        
+- [1.7.1. Riutilizzo delle implementazioni tramite ereditarietà](#171-riutilizzo-delle-implementazioni-tramite-ereditarietà)auto    
+- [1.8. Ereditarietà](#18-ereditarietà)auto    
+- [1.9. aggregazione](#19-aggregazione)auto        
+- [1.9.1. Eccezioni](#191-eccezioni)auto
+- [2. Gestione dell'eccezione](#2-gestione-delleccezione)auto        
+- [2.0.2. Programmazione astratta attraverso le interfacce](#202-programmazione-astratta-attraverso-le-interfacce)auto        
+- [2.0.3. Elementi Sintassi JAVA](#203-elementi-sintassi-java)auto    
+- [2.1. Advanced Class design](#21-advanced-class-design)auto        
+- [2.1.1. Comprensione dei moduli](#211-comprensione-dei-moduli)auto        
+- [2.1.2. Elementi Sintassi JAVA](#212-elementi-sintassi-java)auto        
+- [2.1.3. JAVA WEB](#213-java-web)auto    
+- [2.2. JDBC](#22-jdbc)auto    
+- [2.3. Input/output](#23-inputoutput)auto        
+- [2.3.1. Elementi Sintassi JAVA](#231-elementi-sintassi-java)auto    
+- [2.4.](#24)auto        
+- [2.4.1. Java SE 11 Programmer II - 1Z0-816](#241-java-se-11-programmer-ii---1z0-816)auto        
+- [2.4.2. Fondamenti di Java](#242-fondamenti-di-java)auto        
+- [2.4.3. Gestione delle eccezioni e asserzioni](#243-gestione-delle-eccezioni-e-asserzioni)auto    
+- [2.5. Eccezioni](#25-eccezioni)auto        
+- [2.5.1. Interfacce Java](#251-interfacce-java)auto        
+- [2.5.2. Generici e Collezioni](#252-generici-e-collezioni)auto    
+- [2.6. Framework Collections](#26-framework-collections)auto        
+- [2.6.1. Interfaccia funzionale ed espressioni lambda](#261-interfaccia-funzionale-ed-espressioni-lambda)auto        
+- [2.6.2. API Java Stream](#262-api-java-stream)auto        
+- [2.6.3. Interfacce funzionali integrate](#263-interfacce-funzionali-integrate)auto        
+- [2.6.4. Operazioni Lambda in streaming](#264-operazioni-lambda-in-streaming)auto        
+- [2.6.5. Migrazione ad un'applicazione modulare](#265-migrazione-ad-unapplicazione-modulare)auto        
+- [2.6.6. Servizi in un'applicazione modulare](#266-servizi-in-unapplicazione-modulare)auto        
+- [2.6.7. Concorrenza](#267-concorrenza)auto        
+- [2.6.8. Flusso parallelo](#268-flusso-parallelo)auto        
+- [2.6.9. I / O (Fundamentals e NIO2)](#269-i--o-fundamentals-e-nio2)auto    
+- [2.7. Input/Output](#27-inputoutput)auto        
+- [2.7.1. Codifica sicura nell'applicazione Java SE](#271-codifica-sicura-nellapplicazione-java-se)auto        
+- [2.7.2. Applicazioni di database con JDBC](#272-applicazioni-di-database-con-jdbc)auto    
+- [2.8. Introduzione a JDBC](#28-introduzione-a-jdbc)auto        
+- [2.8.1. Localizzazione](#281-localizzazione)auto        
+- [2.8.2. annotazioni](#282-annotazioni)auto    
+- [2.9. JSP e Servlet](#29-jsp-e-servlet)auto    
+- [2.10. Introduzione al framework Spring](#210-introduzione-al-framework-spring)auto    
+- [2.11. Spring nella gestione delle eccezioni e nell'accesso ai dati](#211-spring-nella-gestione-delle-eccezioni-e-nellaccesso-ai-dati)
 
 ---
 
 
 
-## 1.2. [Fondamenti di programmazione](https://github.com/maboglia/Fondamenti) 
+## 1.1. [Fondamenti di programmazione](https://github.com/maboglia/Fondamenti) 
 * **Algoritmi** e strutture dati 
 * La nozione di algoritmo
 * Linguaggi per la descrizione di algoritmi
@@ -24,7 +80,7 @@
 ---
 
 
-### 1.2.1. Comprensione della tecnologia e dell'ambiente Java
+### 1.1.1. Comprensione della tecnologia e dell'ambiente Java
 
 * Descrivere la tecnologia Java e l'ambiente di sviluppo Java
 * Identificare le funzionalità chiave del linguaggio Java
@@ -35,7 +91,7 @@
 * Compilazione ed esecuzione
 
 
-### 1.2.2. Creazione di un programma Java semplice
+### 1.1.2. Creazione di un programma Java semplice
 
 * Crea un programma Java eseguibile con una classe main
 * Compilare ed eseguire un programma Java dalla riga di comando
@@ -44,7 +100,7 @@
 * metodo main e metodi ausiliari
 * Primi programmi Java.
 
-## Input/Output  
+## 1.2. Input/Output  
 
 * Input/Output utente
 * Input da console, java.util.Scanner
@@ -52,7 +108,7 @@
 
 ---
  
-### 1.2.3. Lavorare con tipi di dati primitivi Java e API String
+### 1.2.1. Lavorare con tipi di dati primitivi Java e API String
 
 * Dichiarare e inizializzare le variabili (incluso il casting e la promozione di tipi di dati primitivi)
 * Identificare l'ambito della variabile
@@ -69,7 +125,7 @@
 
 ---
  
-### 1.2.4. _LE VARIABILI IN JAVA__ 
+### 1.2.2. _LE VARIABILI IN JAVA__ 
 
 * Dichiarazione di una variabile: 
 * Variabili d'istanza
@@ -106,7 +162,7 @@ __OPERATORI DI BASE__
 
 
 
-### 1.2.5. Utilizzo di operatori e costrutti decisionali
+### 1.2.3. Utilizzo di operatori e costrutti decisionali
 * Utilizzare gli operatori Java incluso l'uso della parentesi per sovrascrivere la precedenza dell'operatore
 * Utilizzare le istruzioni di controllo Java incluso if, else e switch
 * Crea e usa 
@@ -138,14 +194,14 @@ __OPERATORI DI BASE__
 
 ---
 
-## Strutture condizionali
+## 1.3. Strutture condizionali
 
 * Strutture di controllo.
 * if - else
 * switch
 * operatore ternario
 
-## Strutture ITERATIVE
+## 1.4. Strutture ITERATIVE
 
 * while
 * do...while
@@ -165,7 +221,7 @@ __OPERATORI DI BASE__
 ---
 
 
-### 1.2.6. Lavorare con Java Arrays
+### 1.4.1. Lavorare con Java Arrays
 * Dichiarare, istanziare, inizializzare e utilizzare un array monodimensionale
 * Dichiarare, creare un'istanza, inizializzare e utilizzare un array bidimensionale
   
@@ -188,31 +244,31 @@ __OPERATORI DI BASE__
 
 
 
-### 1.2.7. Descrivere e usare oggetti e classi
+### 1.4.2. Descrivere e usare oggetti e classi
 * Dichiarare e creare istanze di oggetti Java e spiegare i cicli di vita degli oggetti (inclusa la creazione, la dereferenziazione mediante riassegnazione e la garbage collection)
 * Definire la struttura di una classe Java
 * Leggi o scrivi nei campi oggetto
 
 
-### 1.2.8. Creazione e utilizzo di metodi
+### 1.4.3. Creazione e utilizzo di metodi
 
 * Creare metodi e costruttori con argomenti e valori di ritorno
 * Creare e invocare metodi sovraccarichi
 * Applica la parola chiave statica a metodi e campi
 
 
-### 1.2.9. Applicazione dell'incapsulamento
+### 1.4.4. Applicazione dell'incapsulamento
 * Applica modificatori di accesso
 * Applicare i principi di incapsulamento a una classe
 
 ---
 
-## 1.3. La classe Math
+## 1.5. La classe Math
 
 * uso di una classe con metodi statici
 * accedere a proprietà e metodi senza istanziare nuovi oggetti 
 
-## 1.4. Classi istanziabili
+## 1.6. Classi istanziabili
 
 * tipo di utilizzo classe
   * creo oggetto, 
@@ -251,7 +307,7 @@ __OPERATORI DI BASE__
 
 ---
 
-## Programmazione ad oggetti
+## 1.7. Programmazione ad oggetti
 
 * La programmazione orientata agli oggetti.
 * Progettazione di nuove classi e metodi.
@@ -270,7 +326,7 @@ __OPERATORI DI BASE__
 
 ---
 
-### 1.4.1. Riutilizzo delle implementazioni tramite ereditarietà
+### 1.7.1. Riutilizzo delle implementazioni tramite ereditarietà
 
 * Creare e utilizzare sottoclassi e superclassi
 * Creare ed estendere le classi astratte
@@ -278,7 +334,7 @@ __OPERATORI DI BASE__
 * Utilizzare il polimorfismo per lanciare e chiamare metodi, differenziando il tipo di oggetto rispetto al tipo di riferimento
 * Distinguere il sovraccarico, l'override e il nascondimento
 
-## Ereditarietà
+## 1.8. Ereditarietà
 * Riutilizzo del codice.
 * Strutture ereditarie
 * La parola riservata super
@@ -286,7 +342,7 @@ __OPERATORI DI BASE__
 * Impedire l'ereditarietà: la parola riservata final
 ---
 
-## 1.5. aggregazione
+## 1.9. aggregazione
 ![Esempio Aggregazione](../images/image010.jpg)
 
 * OOP design, ereditarietà
@@ -295,7 +351,7 @@ __OPERATORI DI BASE__
 
 ---
 
-### 1.5.1. Eccezioni
+### 1.9.1. Eccezioni
 
 # 2. Gestione dell'eccezione
 
@@ -350,7 +406,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
   * anonymous inner classes
 * Reflection, Class, Constructor classes
 
-## Advanced Class design
+## 2.1. Advanced Class design
 
 * Binding dinamico
 * Casting con oggetti
@@ -364,7 +420,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * Lambda espressioni.
 ---		
 
-### 2.0.4. Comprensione dei moduli
+### 2.1.1. Comprensione dei moduli
 
 * Descrivi il JDK modulare
 * Dichiarare i moduli e abilitare l'accesso tra i moduli
@@ -376,7 +432,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 
 
-### 2.0.5. Elementi Sintassi JAVA
+### 2.1.2. Elementi Sintassi JAVA
 
 
 * design patterns
@@ -386,7 +442,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 	* dao
 	* factory
 
-### 2.0.6. JAVA WEB
+### 2.1.3. JAVA WEB
 
 * [introduzione JSP](058_JSP_1.md)
 * [approfondimento JSP](059_JSP_2.md)
@@ -404,7 +460,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 ---
 
 
-## 2.1. JDBC
+## 2.2. JDBC
 
 * JDBC
   * connector-J
@@ -418,9 +474,9 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 ---
 
 
-## 2.2. Input/output
+## 2.3. Input/output
 
-### 2.2.1. Elementi Sintassi JAVA
+### 2.3.1. Elementi Sintassi JAVA
 * Java NIO
 * MVC + Database
 * Java RESTful services
@@ -430,7 +486,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 ---
 
 
-## 2.3.  
+## 2.4.  
 
 * Introduzione al framework
 * Spring Boot, MVC
@@ -439,21 +495,21 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ---
 
-### 2.3.1. Java SE 11 Programmer II - 1Z0-816
+### 2.4.1. Java SE 11 Programmer II - 1Z0-816
 
-### 2.3.2. Fondamenti di Java
+### 2.4.2. Fondamenti di Java
 * Creare e utilizzare le classi final
 * Creare e utilizzare classi interne, nidificate e anonime
 * Creare e utilizzare le enumerazioni
 
 ---
 
-### 2.3.3. Gestione delle eccezioni e asserzioni
+### 2.4.3. Gestione delle eccezioni e asserzioni
 * Usa il costrutto try-with-resources
 * Creare e utilizzare classi di eccezione personalizzate
 * Metti alla prova gli invarianti usando le asserzioni
 
-## Eccezioni
+## 2.5. Eccezioni
 
 * Meccanismo di gestione delle eccezioni
 * Eccezioni controllate e non
@@ -469,13 +525,13 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ---
 
-### 2.3.4. Interfacce Java
+### 2.5.1. Interfacce Java
 * Creare e utilizzare interfacce con metodi predefiniti (default)
 * Creare e utilizzare interfacce con metodi privati
 
 ---
 
-### 2.3.5. Generici e Collezioni
+### 2.5.2. Generici e Collezioni
 
 * Utilizzare le classi wrapper, il boxing automatico e l'unboxing automatico
 * Creare e utilizzare classi generiche, metodi con notazione a diamante e caratteri jolly
@@ -483,7 +539,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * Usa Comparator e interfacce comparabili
 * Creare e utilizzare metodi di praticità per le raccolte
 
-## Framework Collections
+## 2.6. Framework Collections
 
 * Foreach ed Iterator
 * Implementazioni di Set e SortedSet
@@ -494,21 +550,21 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ---
 
-### 2.3.6. Interfaccia funzionale ed espressioni lambda
+### 2.6.1. Interfaccia funzionale ed espressioni lambda
 
 * Definire e scrivere interfacce funzionali
 * Crea e usa espressioni lambda tra cui istruzione lambdas, variabile locale per i parametri lambda
 
 ---
 
-### 2.3.7. API Java Stream
+### 2.6.2. API Java Stream
 
 * Descrivere l'interfaccia Stream e le pipeline
 * Usa espressioni lambda e riferimenti a metodi
 
 ---
 
-### 2.3.8. Interfacce funzionali integrate
+### 2.6.3. Interfacce funzionali integrate
 
 * Utilizzare le interfacce dal pacchetto java.util.function
 * Utilizzare le interfacce funzionali di base tra cui Predicato, Consumatore, Funzione e Fornitore
@@ -516,7 +572,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ---
 
-### 2.3.9. Operazioni Lambda in streaming
+### 2.6.4. Operazioni Lambda in streaming
 
 * Estrai i dati del flusso usando i metodi map, peek e flatMap
 * Cerca i dati dello stream utilizzando i metodi di ricerca findFirst, findAny, anyMatch, allMatch e noneMatch
@@ -527,7 +583,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ---
 
-### 2.3.10. Migrazione ad un'applicazione modulare
+### 2.6.5. Migrazione ad un'applicazione modulare
 
 * Migrare l'applicazione sviluppata utilizzando una versione Java precedente a SE 9 a SE 11 inclusa la migrazione top-down e bottom-up, suddividendo un'applicazione Java SE 8 in moduli per la migrazione
 * Esegui un'applicazione modulaized su classpath e su modulepath
@@ -535,7 +591,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ---
 
-### 2.3.11. Servizi in un'applicazione modulare
+### 2.6.6. Servizi in un'applicazione modulare
 * Descrivere i componenti dei servizi, comprese le direttive
 * Progetta un tipo di servizio,
 * carica i servizi utilizzando ServiceLoader,
@@ -543,7 +599,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ---
 
-### 2.3.12. Concorrenza
+### 2.6.7. Concorrenza
 * Creare thread di lavoro utilizzando Runnable, Callable e utilizzare un ExecutorService per eseguire contemporaneamente attività
 * Usa java util raccolte e classi simultanee tra cui CyclicBarrier e CopyOnWriteArrayList
 * Scrivi codici thread-safe
@@ -551,14 +607,14 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ---
 
-### 2.3.13. Flusso parallelo
+### 2.6.8. Flusso parallelo
 * Sviluppa il codice che utilizza il flusso parallelo
 * Implementa decomposizione e riduzione con stream
 
 
 ---
 
-### 2.3.14. I / O (Fundamentals e NIO2)
+### 2.6.9. I / O (Fundamentals e NIO2)
 * Leggi i dati e scrivi i dati della console e dei file utilizzando il flusso I / O
 * Utilizzare I / O Stream per leggere e scrivere file
 * Leggere e scrivere oggetti utilizzando la serializzazione
@@ -566,7 +622,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * Utilizzare la classe Files per controllare, eliminare, copiare o spostare un file o una directory
 * Usa l'API Stream con i file
 
-## Input/Output
+## 2.7. Input/Output
 
 * Introduzione all'I/O: input da tastiera
 * Java.io: Leggere un file
@@ -581,7 +637,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ---
 
-### 2.3.15. Codifica sicura nell'applicazione Java SE
+### 2.7.1. Codifica sicura nell'applicazione Java SE
 * Prevenzione della negazione del servizio nelle applicazioni Java
 * Protezione delle informazioni riservate nell'applicazione Java
 * Implementazione delle linee guida per l'integrità dei dati - iniezioni e convalida dell'inclusione e dell'input
@@ -591,12 +647,12 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ---
 
-### 2.3.16. Applicazioni di database con JDBC
+### 2.7.2. Applicazioni di database con JDBC
 * Collegati ai database utilizzando gli URL JDBC e DriverManager
 * Utilizzare PreparedStatement per eseguire operazioni CRUD
 * Utilizzare le API PreparedStatement e CallableStatement per eseguire operazioni sul database
 
-## Introduzione a JDBC
+## 2.8. Introduzione a JDBC
 
 * Convenzioni JDBC URL Naming
 * Gestione dei driver: il DriverManager
@@ -609,7 +665,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * Crud su DB
 ---
 
-### 2.3.17. Localizzazione
+### 2.8.1. Localizzazione
 * Usa la classe Locale
 * Usa pacchetti di risorse
 * Formatta messaggi, date e numeri con Java
@@ -617,7 +673,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ---
 
-### 2.3.18. annotazioni
+### 2.8.2. annotazioni
 * Descrivere lo scopo delle annotazioni e dei tipici schemi di utilizzo
 * Applica annotazioni a classi e metodi
 * Descrivi le annotazioni di uso comune nel JDK
@@ -625,7 +681,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ---
 
-## JSP e Servlet
+## 2.9. JSP e Servlet
 
 * Primo approccio a JSP
 * Installazione ed esecuzione della prima pagina JSP
@@ -639,7 +695,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 ---
 
 
-## Introduzione al framework Spring
+## 2.10. Introduzione al framework Spring
 
 * Panoramica sulle componenti di base e sui moduli aggiuntivi
 * Dependency Injection e IoC (Inversion Of Control)
@@ -653,7 +709,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ---
 
-## Spring nella gestione delle eccezioni e nell'accesso ai dati
+## 2.11. Spring nella gestione delle eccezioni e nell'accesso ai dati
 
 * Supporto DAO
   * Consistenza nella gestione delle eccezioni
