@@ -332,9 +332,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 * [interfacce](015_interfacce.md)
 	
-
-
-
+---
 
 ### 2.0.3. Elementi Sintassi JAVA
 
@@ -346,6 +344,8 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
   * member classes, 
   * anonymous inner classes
 * Reflection, Class, Constructor classes
+
+---
 
 ## 2.1. Advanced Class design
 
@@ -359,6 +359,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * Classi anonime
 * Classi astratte
 * Lambda espressioni.
+
 ---		
 
 ### 2.1.1. Comprensione dei moduli
@@ -366,12 +367,10 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * Descrivi il JDK modulare
 * Dichiarare i moduli e abilitare l'accesso tra i moduli
 * Descrivi come viene compilato ed eseguito un progetto modulare
- 
+
+[Guida su baeldung.com](https://www.baeldung.com/java-9-modularity)
 
 ---
-
-
-
 
 ### 2.1.2. Elementi Sintassi JAVA
 
