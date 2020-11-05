@@ -14,6 +14,11 @@ if (condition) {
 
 }
 
+```
+
+---
+
+```java
 [optional]
 else if (condition2) {
     
@@ -21,6 +26,11 @@ else if (condition2) {
 
 }
 
+```
+
+---
+
+```java
 
 
 [optional]
@@ -104,6 +114,11 @@ while (condition) {
 //statements;
 
 }
+```
+
+---
+
+```java
 
 do {
 
@@ -190,7 +205,9 @@ for (int i=1; i<100; ++i) { // passa in rassegna tutti i numeri fra 1 e 100
 }
 
 ```
+
 Esempio: data una stringa s, ottieni la stringa rovesciata
+
 ```java
 String rovesciata = ""; // variabile accumulatore di tipo String
 for (int i=0; i<s.length(); ++i) { // passa in rassegna tutti gli indici dei caratteri di s
@@ -211,4 +228,4 @@ int somma = 0;
 for (int i=0; i<v.length; ++i) // passa in rassegna tutti gli indici dell'array v
     if (v[i]>0) // filtra le celle che contengono valori positivi
         somma = somma + v[i]; // accumula valore nella variabile accumulatore
-        ```
+```

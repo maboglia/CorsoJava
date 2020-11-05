@@ -20,7 +20,7 @@
 * Identificare i principi di programmazione modulari
 * Accedi e crea campi e metodi statici
 * Incapsula una classe usando modificatori di accesso e costruttori sovraccarichi
-* Manipola i dati numerici, di testo e di stringa utilizzando gli operatori Java appropriati
+* Manipola i dati numerici, di testo e di stringa utilizzare gli operatori Java appropriati
 * Impostare le variabili di ambiente per consentire al compilatore Java e agli eseguibili di runtime di funzionare correttamente
 * Creare semplici classi Java e utilizzare riferimenti a oggetti per accedere a campi e metodi in una classe
 * Dimostrare polimorfismo implementando un'interfaccia Java
@@ -49,7 +49,7 @@
 
 ---
 
-### 2.2.3. Dati nel carrello
+### 2.2.3. Lavorare con i dati
 
 * Presentazione delle variabili
 * Lavorare con le stringhe
@@ -58,12 +58,12 @@
 
 ---
 
-### 2.2.4. Gestione di più articoli
+### 2.2.4. Gestione di più elementi
 
 * Lavorare con le condizioni
 * Utilizzo delle istruzioni IF
 * Lavorare con un elenco di elementi
-* Elaborazione di un elenco di articoli
+* Elaborazione di un elenco di elementi
 
 ---
 
@@ -79,7 +79,7 @@
 
 ### 2.2.6. Manipolazione e formattazione dei dati nel programma
 
-* Utilizzando la classe String
+* Utilizzare la classe String
 * Utilizzo dei documenti dell'API Java
 * Uso della classe StringBuilder
 * Ulteriori informazioni sui tipi di dati primitivi
@@ -90,19 +90,19 @@
 
 ### 2.2.7. Creazione e utilizzo di metodi
 
-* Utilizzando metodi
+* Utilizzare metodi
 * Argomenti del metodo e valori restituiti
 * Metodi e variabili statici
 * Come vengono passati gli argomenti a un metodo
-* Sovraccarico di un metodo
+* Overload di un metodo
 
 ---
 
-### 2.2.8. Utilizzando l'incapsulamento
+### 2.2.8. Utilizzare l'incapsulamento
 
 * Controllo di accesso
 * Incapsulamento
-* Costruttori di sovraccarico
+* Costruttori di Overload
 
 ---
 
@@ -141,7 +141,7 @@
 * Polimorfismo nelle classi di fondazione JDK
 * Utilizzo delle interfacce
 * Inferenza di tipo variabile locale
-* Utilizzando l'interfaccia Elenco
+* Utilizzare l'interfaccia Elenco
 * Presentazione delle espressioni Lambda
 
 ---

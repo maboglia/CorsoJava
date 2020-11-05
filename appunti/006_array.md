@@ -10,7 +10,7 @@
 
 ---
 
-### In Java gli array sono Oggetti
+**In Java gli array sono Oggetti**
 * Sono allocati nell'area di memoria riservata agli oggetti creati dinamicamente (heap)
 
 Dimensione
@@ -34,7 +34,7 @@ Dimensione
 
 ## Creazione di un Array
 
-### L'operatore new crea un array:
+**L'operatore new crea un array:**
 * Con costante numerica
 
 ```java
@@ -63,7 +63,7 @@ voti = new int[x];
 
 ---
 
-### Utilizzando un inizializzatore 
+**Utilizzando un inizializzatore-*
 (che permette anche di riempire l'array)
 
 * L'operatore new inizializza le variabili
@@ -92,12 +92,12 @@ voti[i] = i;
 
 ---
 
-### In Java viene fatto il bounds checking
+**In Java viene fatto il bounds checking**
 
 * Maggior sicurezza
 * Maggior lentezza di accesso
 
-### Il riferimento ad array
+**Il riferimento ad array**
 
 * Non è un puntatore al primo elemento
 * È un puntatore all'oggetto array
@@ -109,7 +109,7 @@ voti[i] = i;
 
 Per gli array di oggetti (e.g., Integer) `Integer [] voti = new Integer [5];` ogni elemento e' un riferimento
 
-### L'inizializzazione va completata con quella dei singoli elementi
+**L'inizializzazione va completata con quella dei singoli elementi**
 
 ```java
 voti[0] = new Integer (1);
@@ -123,11 +123,11 @@ voti[4] = new Integer (5);
 
 ## Array Multi-dimensionali (Matrici)
 
-### Array contenenti riferimenti ad altri array
+**Array contenenti riferimenti ad altri array**
 
 Sintatticamente sono estensioni degli array a una dimensione
 
-### Sono possibili righe di lunghezza diverse 
+**Sono possibili righe di lunghezza diverse**
 (matrice = array di array)
 
 
@@ -137,7 +137,7 @@ int[][] triangle = new int[3][]
 
 ---
 
-### Le righe non sono memorizzate in posizioni adiacenti
+**Le righe non sono memorizzate in posizioni adiacenti**
 
 * Possono essere spostate facilmente
 
@@ -157,7 +157,7 @@ saldo[j] = temp;
 
 ---
 
-### Il pacchetto java.util contiene metodi statici di utilità per gli array
+**Il pacchetto java.util contiene metodi statici di utilità per gli array**
 
 * Copia di un valore in tutti gli (o alcuni) elementi di un array
     * `Arrays.fill (<array>, <value>);`
