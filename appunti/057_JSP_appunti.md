@@ -1,349 +1,9 @@
-# Corso JSP
+# Esempi JSP
 
-<!-- TOC -->autoauto- [Corso JSP](#corso-jsp)auto    - [Corso JSP - Le direttive](#corso-jsp---le-direttive)auto    - [Corso JSP - Le variabili](#corso-jsp---le-variabili)auto    - [oggetti impliciti](#oggetti-impliciti)auto    - [Ciclo di vita di una pagina JSP](#ciclo-di-vita-di-una-pagina-jsp)auto    - [Elementi di una pagina JSP](#elementi-di-una-pagina-jsp)auto    - [JDBC e interazione con database](#jdbc-e-interazione-con-database)auto    - [Uso avanzato](#uso-avanzato)auto    - [Corso JSP - argomenti](#corso-jsp---argomenti)auto        - [corso-jsp-argomenti](#corso-jsp-argomenti)auto    - [Lavorare con i database](#lavorare-con-i-database)auto    - [Corso JSP - jsp:forward](#corso-jsp---jspforward)auto    - [Corso JSP - Ciclo DO WHILE](#corso-jsp---ciclo-do-while)auto    - [Corso JSP - Funzione contatore accessi + esempio uso dichiarazioni e espressioni](#corso-jsp---funzione-contatore-accessi--esempio-uso-dichiarazioni-e-espressioni)auto    - [Corso JSP - Esempio JSTL Core](#corso-jsp---esempio-jstl-core)auto    - [Corso JSP - Esempio JSTL Functions](#corso-jsp---esempio-jstl-functions)auto    - [Corso JSP - Esempio Java Server Faces](#corso-jsp---esempio-java-server-faces)autoauto<!-- /TOC -->
+## jsp:forward
 
 
-## Corso JSP - Le direttive
-Corso JSP - Le direttive
-Le direttive permettono di definire la struttura di tutto il documento JSP. Indicano gli aspetti principali del servlet in cui sarà convertito il file JSP.
-
-Sono processati al momento della conversione in servlet: a compile-time, cioè a tempo di compilazione.
-
-Le direttive esistenti sono: page, include e taglib.
-
-* ```<%@ page ... %>```
-* ```<%@ include file="path - percorso relativo al file" %>```
-* ```<%@ taglib ...%>```
-
-Introdotte dal simbolo @ possono contenere diversi attributi, in alcuni casi concatenabili come per la direttiva import.
-
-direttiva page
-```<%@ page attributi %> ```
-
-dove attributi sono coppie:  nome="valore"
-Esempio:
-```<%@   page language=”Java” import="java.sql.*,java.util.*" session="true" buffer="10kb" %>```
-Esiste una lista di attributi che possono essere usati, ne elenco alcuni:
-
-```import ="package.class"```
-
-Lista di package o classes, separati da virgola, che saranno importati per essere utilizzati nel codice java.
-
-```session ="true | false"```
-specifica se la pagina fa parte di una sessione HTTP. Se si inizializza a true, è disponibile l'oggetto implicito sessione.
-
-```buffer ="dimensionekb"```
-specifica la dimensione di un buffer di uscita di tipo stream, per il client.
-
-
-
-```errorPage="url"```
-specifica una pagina JSP che sarà processata nel caso si verifichi un errore.
-
-```isErrorPage="true|false"```
-Indica che la pagina è una pagina di errore JSP e può mostrare a video l'output dell'errore verificatosi. Per default è settata false.
-
-
-```contentType = "MIME-Type"```
-oppure
-```contentType = "MIME-Type; charset = Character-Set"```
-Il valore MIME di default è text/html
-direttiva include
-Indica al motore JSP di includere  il contenuto del file corrispondente, inserendolo al posto della direttiva nella pagina JSP.
-Il contenuto del file incluso è analizzato al momento della traduzione del file JSP e si include una copia del file stesso nel servlet generato.
-Una volta incluso, se si modifica il file non sarà ricompilato nel servlet.
-Il tipo di file da includere può essere un
-file html (statico)
-file jsp  (dinamico)
-Sintassi:    ```<%@ include file="nome del file" %>```
-
-
-###  esempio
-```html
-<html>
-
-<head>
-
-<title> pagina di prova Direttive  </title>
-
-</head>
-
-<body>
-
-<h1> pagina di prova Direttive inclusione  </h1>
-
-      <%@ include file="/hello_world.html" %>
-
-      <%@ include file=”/login.jsp” %>
-
-</body>
-
-</html>
-```
-
-
-## direttiva taglib
-Permette estendere i marcatori di JSP con etichette o marcatori generati dall'utente (etichette personalizzate).
-
-Sintassi
-
-```<%@ taglib uri="taglibraryURI" prefix="tagPrefix" %>```
-
-Esempi librerie standard
-
-* JSTL core
-* JSTL sql
-* JSTL function
-
-## Corso JSP - Le variabili
-Le variabili  in Java devono essere definite e tipizzate, i tipi principali sono (utilizzati negli esempi)
-
-* String,
-* int,
-* boolean,
-* float,
-
-poi ci sono
-
-* long,
-* short,
-* double,
-* char,
-* byte.
-
-Per l'elenco completo delle variabili e dei tipi primitivi fare riferimento alla documentazione di Java.
-
-Esempi di uso delle variabili nelle Java Server Pages:
-
-```java
-<%--
-Document : variabili
-Created on : 3-giu-2013, 11.19.17
-Author : mauro
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>JSP Page</title>
-</head>
-<body>
-<h1>variabile stringa</h1>
-<%
- String stVar = "Questa è una stringa!";
- %>
-variabile stringa: <%=stVar%>
-<h1>variabile intera</h1>
-<%
- int iVar=25;
- %>
-variabile intera: <%=iVar%>
-<h1>variabile float</h1>
-<%
-float fVar=123.456f;
-%>
-variabile float: <%=fVar%>
-
-<h1>variabile booleana</h1>
-<%
-boolean checkBoolean=false;
-if(checkBoolean==true)
-{
-out.print("La condizione è vera");
-}
-else
-{
-out.print("La condizione è falsa");//stamperà la condizione è falsa
-}
-%>
-</body>
-</html>
-```
-
-* JSP è una specifica di Sun Microsystems, poi acquistata da Oracle leggi qui la storia
-* Serve per creare e gestire pagine web dinamiche
-* Permette di mescolare in una pagina codice HTML per generare la parte statica, con contenuto dinamico generato a partire da marcatori speciali <% ....  %>
-* Il contenuto dinamico si ottiene grazie alla possibilità di incorporare nella pagina codice Java di differenti forme
-* L’obiettivo finale è separare l’interfaccia (presentazione visuale) dalla implementazione (logica di esecuzione)
-
-## pagina JSP -> Servlet
-
-
-* La pagina JSP si converte in un servlet (il servlet o la servlet? leggi qui la discussione funny )
-* La conversione la realizza il motore o contenitore JSP (tomcat, glassfish, ...), la prima volta che si sollecita la pagina JSP
-* Questo servlet generato processa qualsiasi richiesta per questa pagina JSP
-* Se si modifica il codice della pagina JSP, allora si rigenera e ricompila automaticamente il servlet e si ricarica la volta successiva
-
-## oggetti impliciti
-JSP utilizza gli oggetti impliciti (built-in)
-
-* Gli oggetti impliciti sono oggetti istanziati automaticamente dall’ambiente JSP, non dobbiamo preoccuparci di importarli e istanziarli.
-* Per utilizzarli è sufficiente usare la sintassi nomeOggetto.nomeMetodo
-
-questi oggetti sono disponibili per l’uso in pagine JSP e sono:
-
-* out: per scrivere codice HTML nella risposta (System.out di Java)
-* session: dati specifici della sessione utente corrente
-* request: richiesta HTTP ricevuta e i suoi attributi, header, cookie, parametri, etc.
-* page: la pagina e le sue proprietà.
-* config: dati di configurazione
-* response: risposta HTTP e le sue proprietà.
-* application: dati condivisi da tutte le pagine della web application
-* exception: eventuali eccezioni lanciate dal server; utile per pagine di errore
-* pageContext: dati di contesto per l’esecuzione della pagina
-
-Gli oggetti impliciti possono essere 
-
-* oggetti legati alla servlet relativa alla pagina JSP
-* oggetti legati all’input e all’output della pagina JSP
-* oggetti che forniscono informazioni sul contesto in cui la JSP viene eseguita
-* oggetti risultanti da eventuali errori
-
-Ambito
-Definisce dove e per quanto tempo saranno accessibili gli oggetti: oggetti impliciti, JavaBeans, ...
-
-* di pagina: l'oggetto è accessibile dal servlet che rappresenta la pagina
-* di richiesta:  l'oggetto viene creato e poi distrutto  dopo l'uso
-* di sessione: l'oggetto è accessibile durante tutta la sessione
-* di applicazione: l'oggetto è accessibile dal servlet che rappresenta la pagina
-
-## Ciclo di vita di una pagina JSP
-La pagina viene salvata in una cartella pubblica del server web
-alla prima richiesta ricevuta dal Web server la pagina JSP è automaticamente:
-
-* tradotta in un sorgente Java chiamato Servlet
-* compilata come programma Java
-* caricata in memoria ed eseguita
-
-successivamente la pagina JSP (la servlet) viene solo eseguita.
-In fase di debug il web server verifica se la pagina JSP è più recente del servlet corrispondente.
-
-Rispetto ad altre tecnologie server side come PHP o ASP, questa è una differenza vantaggiosa in termini di velocità di risposta: dopo la prima esecuzione, il codice risulterà già compilato e disponibile immediatamente. Con PHP e ASP il webserver interpreterà il codice ad ogni richiesta prima di servire la pagina di risposta.
-
-## Elementi di una pagina JSP
-
-* codice HTML
-* marcatori JSP
-
-* direttive al server
-
-  * ```<%@ direttive %>```
-
-
-* elementi di scripting
-
-    * ```<%! dichiarazioni %>```
-    * ```<%= espressioni %>```
-    * ```<% scriptlet %>```
-    * ```<%-- commenti --%>```
-
-
-* azioni standard
-
-    * ```<jsp:include>```
-    * ```<jsp:forward>```
-    * ```<jsp:param>```
-    * ```<jsp:useBean>```
-    * ```<jsp:setProperty>```
-    * ```<jsp:getProperty>```
-    * ```<jsp:plugin>```
-
-
-* azioni personalizzate - 
-    * **Tag Libraries**
-
-    * JSTL
-      * core
-      * xml
-      * frm
-      * sql
-      * functions
-
-## Tag Libraries
-
-* Librerie di Tag personalizzate
-* EL - expressions language - espressioni dinamiche
-  * custom tags (vedi sotto tag libraries)
-
-
-
-
-
-### corso-jsp-argomenti
-
-* Cos’è e a cosa serve JSP
-* Hello World con JSP
-* Primo esempio stampare la data corrente a video
-* Uso degli oggetti impliciti ed esempi
-
-
-### Esercizio: installazione ed esecuzione della prima pagina JSP
-
-* Installazione dell' SDK di Java e di Tomcat configurazione dell’IDE e prima pagina Hello world con JSP
-* Esplorazione dell’ambiente di sviluppo, creazione, modifica pagine JSP, passaggio dei dati tra pagine
-* Oggetti impliciti, oggetti principali, uso di Request, Out, etc.
-* Inclusione di file, primo utilizzo delle direttive.
-* Tipi di tag JSP: dichiarazioni, espressioni, scriptlet, direttive.
-* Compile-time e Request-time
-
- 
-
-## Elementi fondamentali di JSP - 
-Sintassi e caratteristiche degli oggetti principali: scriptlet, azioni standard, servlet
-
-* Direttive <%@   (page | include | taglib)
-* Codice Java <%  (dichiarazioni | java | espressioni)
-* jsp:action (include | forward | usebean | getproperty | setproperty)
-
-
-### Esercizio esempi di utilizzo degli elementi fondamentali
-
-* Ciclo di vita di una pagina Jsp, Scriptlet: usare i costrutti del linguaggio JAVA nelle JSP
-* Cookie e gestione delle sessioni – Impostare una procedura di login da riutilizzare
-* Teoria ed esercizi sulle standard actions - jsp:forward
-* Standard action JavaBeans: estendere le funzionalità della web application, separare la logica dell'app;
-* Standard action: come usare le altre azioni standard
-* Lavorare con le date in JSP.
-
-### Esercizio utilizzo di JavaBeans
-
-## Lavorare con i database
-
-* Leggi scrivi su file di testo
-* Leggi e scrivi su database
-* Applicazione CRUD con JSP
-* Introduzione database con JSP.
-* Uso di JDBC nelle JSP. 
-* Creazione database, accesso alla base dati.
-* Esercizi sulla base dati, applicazione CRUD in JSP.
-* Progetto ed implementazione di un'applicazione web complessa con JSP: creare un sito web per acquisti on line, sviluppo di un carrello della spesa.
-* Lettura e scrittura di file, utilizzo database nell'applicazione web. Hibernate, JSTL, servlet e MySql. MVC pattern. Persistenza in JSP.
-
-## Elementi Avanzati di una pagina JSP
-
-
-* Azioni personalizzate (etichette)
-* Definizione della struttura (libreria.tld e in web.xml)
-* Nome, classe controller, attributi, corpo, etc.
-* Definizione della funzionalità (JavaBean che deriva da taglib)
-* Dichiarazioni nella pagina con <%@taglib e uso avanzato
-
-
-### Esercizio uso di Etichette personalizzate
-
-* Esercitazione guidata Hibernate e JSTL. Le TagLibraries.
-* Esercitazione guidata JSTL: core, xml, fmt, sql, functions.
-* JSP2 - JSF - EL expression language. Panoramica framework principali JSP.
-* Esercitazione guidata Java Server Faces
----
-
-
-## Corso JSP - jsp:forward
-
-
-L'azione forward, come intuibile, serve per trasferire l'utente da una pagina jsp ad un'altra. Come l'azione jsp:include è possibile utlizzare forward con o senza parametri. In quest'ultimo caso occorre terminare l'istruzione inserendo / prima della parentesi angolare di chiusura tag :
+L'azione forward serve per trasferire l'utente da una pagina jsp ad un'altra. Come l'azione jsp:include è possibile utlizzare forward con o senza parametri. In quest'ultimo caso occorre terminare l'istruzione inserendo / prima della parentesi angolare di chiusura tag :
 
 ```<jsp:forward page="URL" />```
 Nel caso si vogliano utilizare dei parametri, invece, utilizzeremo il tag di chiusura del blocco di codice </jsp:forward> :
@@ -378,7 +38,7 @@ per trovarne altri, dopo l'indirizzo del server (es. localhost:8080) scrivi /exa
 ```
 
 
-## Corso JSP - Le dichiarazioni
+## Le dichiarazioni
 
 * JSP: usare le dichiarazioni ```<%! ... %>```
 * le espressioni ```<%= ... %>```
@@ -388,8 +48,8 @@ Racchiuse tra i tag ```<%! ... %>```, contengono codice Java e sono utilizzate p
 Sintassi
 ```<%! Dichiarazione %>```
 
-esempio
-Copia e completa il codice
+### esempio
+
 ```html
 <%@page contentType="text/html" pageEncoding="utf-8"%>
 <!DOCTYPE html>
@@ -399,7 +59,7 @@ Copia e completa il codice
 <title>JSP Page</title>
 </head>
 <body>
-<h1>Corso JSP - Le dichiarazioni: crea una funzione per stampare 5 numeri random</h1>
+<h1>Le dichiarazioni: crea una funzione per stampare 5 numeri random</h1>
 <h2>NB: non ci sono i controlli per ordinare i numeri e verificare l'assenza di duplicati, prova a completare il codice usando gli array</h2>
 <%!
  private String lottoGame() {
@@ -415,7 +75,7 @@ Copia e completa il codice
 </html>
 ```
 
-## Corso JSP - Ciclo DO WHILE 
+## Ciclo DO WHILE 
 
 * Ciclo DO WHILE con JSP
  (il ciclo viene eseguito almeno una volta)
@@ -435,7 +95,7 @@ Author : mauro
 <title>Corso JSP</title>
 </head>
 <body>
-<h1>Corso JSP - Uso del ciclo DO WHILE</h1>
+<h1>Uso del ciclo DO WHILE</h1>
 
 <h2>Uso dell'oggetto implicito OUT per stampare il valore a video</h2>
 <table >
@@ -457,9 +117,9 @@ Author : mauro
 </html>
 ```
 
-## Corso JSP - Funzione contatore accessi + esempio uso dichiarazioni e espressioni
+## Funzione contatore accessi + esempio uso dichiarazioni e espressioni
 
-* Corso JSP - Funzione contatore accessi + esempio uso dichiarazioni e espressioni
+* Funzione contatore accessi + esempio uso dichiarazioni e espressioni
 
 ```html
 
@@ -493,7 +153,7 @@ Questa pagina è stata caricata <%= conta %> volte.
 ### Esempio JSTL Core
 
 
-Corso JSP - JSTL e EL
+JSTL e EL
 JSP Standard Tag Library e Expression Language
 
 ```html
@@ -596,7 +256,7 @@ JSP Standard Tag Library e Expression Language
 
 ### Esempio Java Server Faces
 
-Corso JSP - Java Server Faces - Hello world JSF con Netbeans 7.3
+Java Server Faces - Hello world JSF con Netbeans 7.3
 
 * Crea un nuovo progetto Java Web - > Web Application
 * Assegna un nome al progetto e salvalo sul disco
