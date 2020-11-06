@@ -102,7 +102,7 @@ Poiché nei file properties non variano le chiavi ma le corrispondenti traduzion
 
 ---
 
-## ESEMPIO Locale E ResourceBundle
+## ESEMPIO Locale e ResourceBundle
 
 ### file example.java: 
 contiene il codice per la dichiarazione e la gestione del Locale e del ResourceBundle.
