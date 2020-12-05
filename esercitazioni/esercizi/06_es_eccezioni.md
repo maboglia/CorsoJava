@@ -25,6 +25,7 @@ Provare ad eseguire il programma su carta e,
 successivamente, verificare la risposta
 eseguendo il programma su calcolatore:
 
+```java
 public class Test{
 	
 	public static void test(){
@@ -49,6 +50,7 @@ public class Test{
 		test();
 	}
 }
+```
 
 ## Esercizio (6)
 Scrivere un programma che gestisca una
