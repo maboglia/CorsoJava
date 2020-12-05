@@ -1,24 +1,24 @@
-# Esercizi su istruzioni condizionali e cicli
+# 1. Esercizi su istruzioni condizionali e cicli
 
 
 ---
 
-## Esercizio
+## 1.1. Esercizio
 Scrivere un programma che stampi a video i primi dieci numeri interi
 
 ---
 
-## Esercizio
+## 1.2. Esercizio
 Scrivere un programma che stampi a video i primi dieci interi pari compresi fra 20 e 0, partendo da 20.
 
 ---
 
-## Esercizio
+## 1.3. Esercizio
 Scrivere un programma che stampi le tabellina del numero dato come argomento
 
 ---
 
-## Esercizio
+## 1.4. Esercizio
 Stampare a video la seguente figura:
 ```java
 ******
@@ -31,7 +31,7 @@ Stampare a video la seguente figura:
 
 ---
 
-## Esercizio
+## 1.5. Esercizio
 Stampare a video la seguente figura:
 ```java
 #
@@ -44,7 +44,7 @@ Stampare a video la seguente figura:
 
 ---
 
-## Esercizio
+## 1.6. Esercizio
 Stampare a video la seguente figura:
 ```java
 1      654321
@@ -57,19 +57,19 @@ Stampare a video la seguente figura:
 
 ---
 
-## Esercizio
+## 1.7. Esercizio
 Scrivere un programma che stampi i primi 100 elementi della successione di Fibonacci.
 
 
 ---
 
-## Esercizio
+## 1.8. Esercizio
 
 Scrivere un programma **TuttiPositiviPari** che chiede all’utente di inserire una sequenza di interi (chiedendo prima quanti numeri voglia inserire) e poi, al termine dell’inserimento dell’intera sequenza, stampa "Tutti positivi e pari" se i numeri inseriti sono tutti positivi e pari, altrimenti stampa "NO". 
 
 ---
 
-## Esercizio
+## 1.9. Esercizio
 
 Scrivere un programma **ContinuaFino** che chiede all’utente di inserire una sequenza di
 interi. Il programma continua a chiedere all’utente di inserire valori fintanto che i valori inseriti soddisfano
@@ -81,7 +81,7 @@ Al termine il programma stampa la somma di tutti i valori inseriti escluso quell
 
 ---
 
-## Esercizio
+## 1.10. Esercizio
 
 Scrivere un programma **PositivoNegativo** che chiede all’utente di inserire una sequenza
 di interi terminata quando l’utente immette il valore 0 e poi stampa "OK" se la sequenza contiene un
@@ -90,7 +90,7 @@ del messaggio "OK" può interrompere o meno l’inserimento dei valori.
 
 ---
 
-## Esercizio
+## 1.11. Esercizio
 
 Scrivere un programma **MediaMultipliDiTre** che chiede all’utente di inserire una sequenza di interi (chiedendo prima quanti numeri voglia inserire) e poi stampa la media di tutti i numeri inseriti che siano divisibili per tre. 
 
@@ -98,7 +98,7 @@ Per esempio, se si immettono i valori 5, 8, 9, 12, 7, 6 ,1 il risultato stampato
 
 ---
 
-## Esercizio
+## 1.12. Esercizio
 
 Scrivere un programma **Ripetizioni** che chiede all’utente di inserire una sequenza di caratteri (chiedendo prima quanti caratteri voglia inserire) e li ristampa man mano che vengono inseriti.
 
@@ -106,7 +106,7 @@ L’intero procedimento (chiedere quanti caratteri voglia inserire, leggere i ca
 
 ---
 
-## Esercizio 
+## 1.13. Esercizio 
 Una classe di 10 studenti ha sostenuto un esame.
 I voti sono espressi con lettere: 'O' = ottimo
 (corrispondente al 10), 'B' = buono (8),
@@ -116,7 +116,7 @@ della media aritmetica dei voti di tale esame.
 
 ---
 
-## Esercizio  
+## 1.14. Esercizio  
 Scrivere un programma per stampare 44 caratteri
 (inseriti da tastiera) in fila per 6 con resto
 di 2.
@@ -125,13 +125,13 @@ e' if (i % (44 / 6) == 0)
 
 ---
 
-## Esercizio  
+## 1.15. Esercizio  
 Scrivere un programma che stampi 10 caratteri
 (letti da tastiera) ed i relativi codici ASCII.
 
 ---
 
-## Esercizio  
+## 1.16. Esercizio  
 Scrivere un programma che inverta un array
 precaricato.
 
@@ -139,7 +139,7 @@ precaricato.
 
 ---
 
-## Esercizio
+## 1.17. Esercizio
 Scrivere un programma che calcoli il risultato dell’esame di uno studente.
     Il programma prenderà in ingresso:
         Il voto ottenuto nella prova scritta (variabile tra -8 e +8)
@@ -157,7 +157,7 @@ Memorizzati questi dati procederà al calcolo del risultato finale in trentesimi
 
 ---
 
-## Esercizio
+## 1.18. Esercizio
 Scrivere un programma che chieda agli utenti due stringhe in ingresso, le stringhe possono valere solo: “carta”, “forbice” o “sasso”. 
 
 Il programma dovrà quindi effettuare i dovuti controlli e dichiarare il vincitore secondo le regole: 
@@ -167,7 +167,7 @@ Il programma dovrà quindi effettuare i dovuti controlli e dichiarare il vincito
 
 ---
 
-## Esercizio
+## 1.19. Esercizio
 Scrivere una funzione per calcolare l’importo di una tassa secondo la seguente tabella:
 * Fino a 10.000 €, l’importo della tassa è del 10%
 * Fino a 20.000 €, l’importo della tassa è del 10% per i primi 10.000 €, del 7 % sul restante.
@@ -182,13 +182,13 @@ Scrivere una funzione per calcolare l’importo di una tassa secondo la seguente
 
 ---
 
-## Esercizio
+## 1.20. Esercizio
 Scrivere un programma IndovinaZero che chiede all’utente di inserire numeri interi uno
 dopo l’altro fino a quando non inserisce il numero 0.
 
 ---
 
-## Esercizio
+## 1.21. Esercizio
 Scrivere un programma ScrivoScrivoScrivo che chiede all’utente di inserire un numero
 maggiore o uguale a zero e stampa il messaggio sto ciclando un numero di volte pari al numero inserito
 dall’utente. Se il valore inserito dall’utente è negativo il programma stampa un messaggio di errore.
@@ -196,7 +196,7 @@ dall’utente. Se il valore inserito dall’utente è negativo il programma stam
 
 ---
 
-## Esercizio
+## 1.22. Esercizio
 Scrivere un programma Conteggio che chiede all’utente di inserire un numero maggiore o
 uguale a zero e stampa uno dopo l’altro tutti i numeri da 0 al numero inserito compreso. Se il valore
 inserito dall’utente è negativo il programma stampa un messaggio di errore.
@@ -204,23 +204,23 @@ inserito dall’utente è negativo il programma stampa un messaggio di errore.
 
 ---
 
-## Esercizio
+## 1.23. Esercizio
 Scrivere un programma ContaNumeriCrescenti che chiede all’utente di inserire una sequenza di numeri interi crescenti (man mano sempre più grandi) e ne stampa la lunghezza (il numero di valori inseriti dall’utente). Il programma termina non appena l’utente inserisce un valore minore o uguale al precedente).
 
 
 ---
 
-## Esercizio
+## 1.24. Esercizio
 Scrivere un programma MediaNumeri che chiede all’utente di inserire una sequenza di numeri interi positivi. Non appena l’utente inserisce un numero negativo il programma si arresta e visualizza la media aritmetica dei valori positivi inseriti (senza approssimazione!).
 
 
 ---
 
-## Esercizio
+## 1.25. Esercizio
 Scrivere un programma Asterischi che chiede all’utente di inserire un numero intero e stampa un triangolo fatto di asterischi con un numero di righe pari al valore inserito dall’utente. 
 Se l’utente inserisce un valore negativo il programma deve visualizzare un messaggio di errore.
 
 ---
 
-## Esercizio
+## 1.26. Esercizio
 Scrivere un programma TavolaPitagorica in modo che i valori stampati siano ben incolonnati
