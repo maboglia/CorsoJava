@@ -4,8 +4,9 @@ Un'interfaccia è una specie di classe completamente astratta, cioè del tutto p
 
 * Tutti i metodi sono astratti
 * Non vi sono attributi
-  * È possibile definire solo "attributi" final (in pratica costanti)
-  * Definendo un attributo in un'interfaccia questo viene automaticamente considerato final
+* È possibile definire solo "attributi" final (in pratica costanti)
+* Definendo un attributo in un'interfaccia questo viene automaticamente considerato final
+
 ---
 ### Un'interfaccia
 * Ha tutti i vantaggi e le indicazioni d'uso delle classi astratte

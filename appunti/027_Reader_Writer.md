@@ -1,17 +1,18 @@
-Gli stream di tipo piè basilare non tengono conto del tipo dei
+#  Reader e Writer
+Gli stream di tipo più basilare non tengono conto del tipo dei
 dati scambiati. Semplicemente, trasportano i dati attraverso
 il flusso, senza curarsi del loro effettivo contenuto. Per
 questo, classi come InputStream e OutputStream sono idonee
 alla gestione di sequenze binarie (immagini, audio,
 eseguibili, e cosè via). Per la gestione dei flussi di testo,
-è meglio servirsi di classi piè specializzate. In questo modo,
+è meglio servirsi di classi più specializzate. In questo modo,
 anzichè ragionare per byte, si potrè ragionare per caratteri e
 per stringhe. Le classi astratte Reader e Writer sono il
 parallelo di InputStream e OutputStream, nell'ambito dei
 flussi di testo.
---------------------------------------------------------------
-I membri di Reader.
---------------------------------------------------------------
+
+## I membri di Reader.
+
 Metodi pubblici:
 void close()			Chiude lo stream.
 void mark(int readlimit)	Memorizza l'attuale posizione
@@ -46,9 +47,9 @@ long skip(long n)		Avanza di n caratteri nello
 				Restituisce il numero dei
 				caratteri effettivamente
 				saltati.
---------------------------------------------------------------
-I membri di Writer.
---------------------------------------------------------------
+
+## I membri di Writer.
+
 Metodi pubblici:
 void close()			Chiude lo stream.
 void flush()			Scrive il buffer nello stream.

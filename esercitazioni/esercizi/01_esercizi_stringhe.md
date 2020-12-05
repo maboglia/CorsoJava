@@ -44,8 +44,7 @@ quanti sono gli spazi.
 ## Esercizio 2. 
 
 Scrivere un programma Inciso che chiede all’utente di inserire una frase e ne stampa la
-porzione contenuta tra le prime due virgole. Ad esempio, se l’utente inserisce "Oggi, che è martedi, ho
-comprato una torta, che è il mio dolce preferito" il programma deve stampare " che è martedi".
+porzione contenuta tra le prime due virgole. Ad esempio, se l’utente inserisce "Oggi, che è martedi, ho comprato una torta, che è il mio dolce preferito" il programma deve stampare " che è martedi".
 Se è presente una sola virgola, il programma stamperà la porzione di stringa dalla virgola fino alla fine.
 Infine, se non ci sono virgole, il programma non stamperà nulla.
 ## Esercizio 3. 

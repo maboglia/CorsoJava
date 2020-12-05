@@ -56,9 +56,9 @@ area = base * altezza /2;
 
 ---
 
-### Assegnamento
+### Assegnazione
 
-* Si può memorizzare un valore in una variabile tramite l'operazione di assegnamento
+* Si può memorizzare un valore in una variabile tramite l'operazione di assegnazione
 * Il valore da assegnare a una variabile può essere un letterale o il risultato della valutazione di un'espressione
 
 * Esempi:
@@ -75,12 +75,12 @@ area = base * altezza /2;
 
 ---
 
-### Dichiarazione + Assegnamento
+### Dichiarazione + Assegnazione
 
 Prima di poter essere usata in un'espressione una variabile deve:
 * essere stata dichiarata
 * essere stata assegnata almeno una volta (inizializzata)
-* NB: **si possono combinare dichiarazione e assegnamento**. 
+* NB: **si possono combinare dichiarazione e assegnazione**. 
 
 Ad esempio:
 
