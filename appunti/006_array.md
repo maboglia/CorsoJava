@@ -16,18 +16,20 @@
 Dimensione
 * Può essere stabilita a run-time (quando l'oggetto viene creato)
 * È fissa (non può essere modificata)
-* E' nota e ricavabile per ogni array Array Mono-dimensionali (vettori)
+* E' nota e ricavabile per ogni array 
 
 ---
 
-## Dichiarazione di Array
+## Array Mono-dimensionali (vettori)
 
- Dichiarazione di un riferimento a un array
+
+Dichiarazione di un riferimento a un array
 
 * `int[] voti;`
 * `int voti[];`
 
- La dichiarazione di un array non assegna alcuno spazio
+La dichiarazione di un array non assegna alcuno spazio
+
 `voti == null`
 
 ---
@@ -173,7 +175,7 @@ saldo[j] = temp;
 
 ---
 
-## Snippets Tipi di Array
+## Esempi di Array
 
 **Array Monodimensionali**
 

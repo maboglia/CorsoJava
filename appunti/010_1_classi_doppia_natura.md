@@ -53,7 +53,7 @@
 ## una classe non istanziabile
 * Non ha costruttori
 * Attributi e metodi sono tutti static
-* Quando penso all'esecuzione dei suoi metodi non ho bisogno di immaginare un'istanza individuale: sono applicabili direttamente alla classe con almeno un argomento
+* I suoi metodi sono applicabili direttamente alla classe con almeno un argomento, non è necessaria un'istanza individuale
 
 ```java
 Math . sqrt (2)
@@ -67,9 +67,7 @@ MATH.PI //3.1415
 
 ---
 
-
 ## Classi istanziabili “ibride”
 * Alcune classi istanziabili (p.e. String ) della libreria standard contengono attributi o metodi static ed hanno quindi natura ibrida
 * E’ come se la classe avesse due sottoparti (una static e una no) ognuna delle quali segue le proprie regole
 * Salvo rari casi, è sconsigliabile realizzare classi istanziabili ibride (sono accettabili attributi costanti definiti come static )
-

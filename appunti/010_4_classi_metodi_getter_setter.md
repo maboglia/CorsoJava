@@ -46,6 +46,9 @@ void setColore(String nuovoColore) {
        this.colore = nuovoColore;
 }
 ```
+
+---
+
 ## Proprietà visibili
 
 ```java
