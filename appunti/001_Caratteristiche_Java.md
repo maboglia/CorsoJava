@@ -68,10 +68,8 @@ Le caratteristiche del linguaggio di programmazione Java sono:
 * Collegamento dinamico
 
 * Non sono disponibili
-
-* Ereditarietà multipla
-
-* Overload degli operatori
+  * Ereditarietà multipla
+  * Overload degli operatori
 
 
 

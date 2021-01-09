@@ -15,9 +15,8 @@ Un metodo astratto è un metodo di cui non viene specificata l'implementazione
 
 ---
 
-
-
 ### Una classe astratta
+
 * È una classe non completamente definita
 * Non può essere istanziata
 

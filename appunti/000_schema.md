@@ -75,7 +75,7 @@
 
 ---
 
-### 1.2.7. Creare e utilizzo di metodi
+### 1.2.7. Creare e utilizzare i metodi
 
 * Utilizzare metodi
 * Argomenti del metodo e valori restituiti
