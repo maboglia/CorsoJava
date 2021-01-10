@@ -5,7 +5,7 @@ import java.text.NumberFormat;
 /**
  * Created by mauro on 15/06/16.
  */
-public class Stringhe2 {
+public class ConvertiFormattaStringhe {
 
     public static void main(String[] args) {
 
