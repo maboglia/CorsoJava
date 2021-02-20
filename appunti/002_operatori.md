@@ -1,4 +1,7 @@
-# Operatori aritmetici, relazionali, di assegnazione 
+# Operatori 
+
+
+## Operatori aritmetici
 
 
 * Di assegnazione: = += -= *= /= &= |= ^=
@@ -20,6 +23,8 @@
 
 ---
 
+## Operatori di assegnazione 
+
 | Operatore | Significato               |
 | --------- | ------------------------- |
 | \=        | addizione                |
@@ -32,7 +37,8 @@
 ---
 
 
-* Relazionali: == != > < >= <=
+## Operatori relazionali
+`== != > < >= <=`
 
 | Operatore | Significato              |
 | --------- | ------------------------ |
@@ -61,7 +67,7 @@
 
 #### Attenzione:
 
-* Gli operatori logici agiscono solo su booleani
+* Gli operatori logici agiscono **solo su booleani**
   * Un intero NON viene considerato un booleano
   * Gli operatori relazionali forniscono valori booleani
 
@@ -70,13 +76,13 @@
 
 ## Operatori su reference
 
-### Per i puntatori/reference, sono definiti:
+### Per i riferimenti/reference, sono definiti:
 
 * Gli operatori relazionali == e !=
-  * N.B. test sul puntatore NON sull'oggetto
+  * test sul riferimento all'oggetto, **NON sull'oggetto**
 * Le assegnazioni
 * L'operatore "punto"
-* NON è prevista l'aritmetica dei puntatori 
+* NON è prevista l'aritmetica dei puntatori, vengono gestiti dalla JVM 
 
 ---
 

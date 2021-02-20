@@ -7,7 +7,7 @@
 
 ## Java definisce alcuni tipi primitivi
 
-* Per efficienza Java definisce dati primitivi
+* Per efficienza Java definisce tipi primitivi
 * La dichiarazione di una istanza alloca spazio in memoria
 * Un valore è associato direttamente alla variabile 
 * (e.g, i == 0) 

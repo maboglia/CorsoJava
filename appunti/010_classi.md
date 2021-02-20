@@ -55,27 +55,25 @@ public class HelloWorld {
 
 ### Le classi in Java
 
-* Le classi, in quanto tipi di dato strutturati, prevedono usi e regole più complessi rispetto ai tipi semplici
-
 * Il primo passo per definire una classe in Java è creare un file che deve chiamarsi esattamente come la classe e con estensione .java
 
 * Java permette di definire solo una classe per ogni file
 
 * Una classe in Java è formata da:
 
-* Attributi: (o campi/proprietà) che immagazzinano alcune informazioni sull'oggetto. Definiscono lo stato dell'oggetto
+* **Attributi**: (o campi/proprietà) che immagazzinano alcune informazioni sull'oggetto. Definiscono lo stato dell'oggetto
 
-* Costruttore: metodo che si utilizza per inizializzare un oggetto
+* **Costruttore**: metodo che si utilizza per inizializzare un oggetto
 
-* Metodi: sono utilizzati per modificare o consultare lo stato di un oggetto. Sono equivalenti alle funzioni o procedure di altri linguaggi di programmazione
+* **Metodi**: sono utilizzati per modificare o consultare lo stato di un oggetto. Sono equivalenti alle funzioni o procedure di altri linguaggi di programmazione
 
 ---
 
 ## Incapsulamento e visibilità in Java
 
 * Quando disegniamo un software ci sono **due aspetti** che risultano fondamentali:
-  * Interfaccia: definita come gli **elementi che sono visibili dall'esterno**, come il sw può essere utilizzato
-  * Implementazione: definita definendo alcuni attributi e scrivendo il codice dei differenti metodi per leggere e/o scrivere gli attributi
+  * **Interfaccia**: definita come gli **elementi che sono visibili dall'esterno**, come il sw può essere utilizzato
+  * **Implementazione**: definita definendo alcuni attributi e scrivendo il codice dei differenti metodi per leggere e/o scrivere gli attributi
 
 ---
 
@@ -99,7 +97,7 @@ public class HelloWorld {
 
 * `protected`: solo dalla classe attuale, le discendenti e le classi del nostro package
 
-* Se **non indichiamo la visibilità**: sono accessibili **solo dalle classi del nostro package**
+* `package`: se **non indichiamo la visibilità**: sono accessibili **solo dalle classi del nostro package**
 
 ---
 

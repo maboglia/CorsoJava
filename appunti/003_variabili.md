@@ -4,9 +4,9 @@
 * Il suo scopo è di contenere un valore di un certo tipo
 * Serve per memorizzare dati durante l'esecuzione di un programma
 * Il nome di una variabile è un **identificatore**
-* può essere costituito da lettere, numeri e underscore 
-* non deve coincidere con una parola chiave del linguaggio
-* è meglio scegliere un **identificatore** che sia **significativo** per il programma
+  * può essere costituito da lettere, numeri e underscore 
+  * non deve coincidere con una parola chiave del linguaggio
+  * è meglio scegliere un **identificatore** che sia **significativo** per il programma
 
 
 

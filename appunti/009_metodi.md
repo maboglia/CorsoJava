@@ -1,11 +1,11 @@
 # metodo
 
 * Termine caratteristico dei linguaggi OOP
-* Un  insieme  di   istruzioni   con un nome 
-* Uno  strumento  per  risolvere gradualmente i problemi  scomponendoli  in sottoproblemi
-* Uno strumento per strutturare  il codice
-* Uno strumento per ri-utilizzare il lavoro già svolto
-* Uno  strumento per rendere il programma più  chiaro e leggibile
+* Un  **insieme  di   istruzioni   con un nome** 
+* Uno  strumento  per  risolvere gradualmente i problemi  scomponendoli  in **sottoproblemi**
+* Uno strumento per **strutturare**  il codice
+* Uno strumento per **ri-utilizzare** il lavoro già svolto
+* Uno  strumento per rendere il **programma più chiaro** e leggibile
 
 ---
 
@@ -17,9 +17,9 @@
 
 3. Questo approccio prende il nome di **programmazione procedurale** (o astrazione funzionale)
 
-4. In Java i **sottoprogrammi** si realizzano tramite metodi ausiliari
+4. In Java i **sottoprogrammi** si realizzano tramite **metodi ausiliari**
 
-5. Sinonimi usati in altri linguaggi di programmazione: funzioni, procedure e (sub)routines
+5. Sinonimi usati in altri linguaggi di programmazione: **funzioni**, **procedure** e (sub)**routines**
 
 ---
 
@@ -27,7 +27,7 @@
 
 ## Metodi ausiliari (static)
 
-* metodi statici: dichiarati `static`
+* **metodi statici**: dichiarati `static`
 * richiamabili attraverso nome della classe
 * p.es: `Math.sqrt()`
 
@@ -59,7 +59,7 @@ public class ProvaMetodi
 
 ## Metodi non static
 
-* I metodi non static rappresentano operazioni effettuabili su singoli oggetti
+* I metodi **non static** rappresentano operazioni effettuabili su singoli oggetti
 * La documentazione indica per ogni metodo il tipo ritornato e la lista degli argomenti formali che rappresentano i dati che il metodo deve ricevere in ingresso da chi lo invoca
 * Per ogni argomento formale sono specificati:
 	* un tipo (primitivo o reference)

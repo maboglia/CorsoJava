@@ -17,6 +17,7 @@ if (condition) {
 ```
 
 ---
+## else if
 
 ```java
 [optional]
@@ -29,6 +30,8 @@ else if (condition2) {
 ```
 
 ---
+
+## else
 
 ```java
 
@@ -48,9 +51,9 @@ else {
 **switch Statements**
 
 ```java
-switch (Expression) {
+switch (espressione) {
 
-    case value1:
+    case valore1:
 
     //statements;
 
@@ -58,7 +61,7 @@ switch (Expression) {
 
     ...
 
-    case valuen:
+    case valoren:
 
     //statements;
 

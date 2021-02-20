@@ -59,11 +59,11 @@ Le caratteristiche del linguaggio di programmazione Java sono:
 
 * Incorpora le caratteristiche
 
-* Incapsulamento
+  * Incapsulamento
 
-* Polimorfismo
+  * Polimorfismo
 
-* Ereditarietà
+  * Ereditarietà
 
 * Collegamento dinamico
 

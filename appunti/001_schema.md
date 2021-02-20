@@ -11,11 +11,11 @@
 * Cerca e filtra le raccolte utilizzando Lambda Expressions
 * Implementare tecniche di gestione degli errori utilizzando la gestione delle eccezioni
 * Implementare la funzionalità di input / output (I / O) per leggere e scrivere su file di dati e di testo
-* Manipola file, directory e file system usando la specifica JDK NIO.2
+* Manipolare file, directory e file system usando la specifica JDK NIO.2
 * Eseguire più operazioni su tabelle di database, tra cui la creazione, la lettura, l'aggiornamento e l'eliminazione utilizzando sia la tecnologia JDBC che JPA
 * Utilizzare le funzionalità di concorrenza di Lambda Expression
 * Applicare pratiche e servizi di programmazione modulari alle applicazioni
-* Crea applicazioni multi-thread ad alte prestazioni
+* Creare applicazioni multi-thread ad alte prestazioni
 
 ---
 
