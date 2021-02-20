@@ -92,18 +92,19 @@ Short | è la classe wrapper per il tipo short.
 
 ## Classe Character
 
-### La classe involucro Character si trova in java.lang
+La classe wrapper Character si trova in java.lang
 
-### Include metodi statici per verificare le proprietà di un carattere
+Include metodi statici per verificare le proprietà di un carattere
 
 ### Esempio
+```
 String s = "Stringa Generica."
 char c = s.charAt (0);
 ... Character.isUpperCase(c) ... // true
 ... Character.isDigit(c) ...
 // false
 ...
-
+```
 ---
 
 

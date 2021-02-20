@@ -151,7 +151,9 @@ L'interfaccia java.sql.Statement comprende i metodi necessari per fornire al DBM
 
 ## metodo executeUpdate()
 
-* `executeUpdate()`, non ha risultati da restituire. Nonostante questo, è possibile ottenere indietro un intero che riporta il numero delle righe coinvolte dall'esecuzione di istruzioni di tipo DELETE, INSERT e UPDATE. Negli altri casi, dove realmente non c'è nulla da restituire, tale valore di ritorno sarà sempre 0 (zero).
+* `executeUpdate()`, non ha risultati da restituire.
+* ritorna un intero che riporta il numero delle righe coinvolte dall'esecuzione di istruzioni di tipo DELETE, INSERT e UPDATE. 
+* dove non c'è nulla da restituire, il valore di ritorno sarà 0 (zero).
 
 ---
 
@@ -160,6 +162,9 @@ L'interfaccia ResultSet
 
 * L'interfaccia **java.sql.ResultSet** comprende i metodi indispensabili per scorrere l'insieme dei risultati restituiti da una query SQL. 
 * Il metodo **next()** scorre in avanti tale insieme. 
+
+### in pratica
+
 * Si supponga di aver eseguito una query che restituisce due record. 
 * Inizialmente, il cursore del corrente oggetto ResultSet sarà posizionato antecedentemente al primo dei due record restituiti. 
 * In questa condizione, non è possibile svolgere operazioni di analisi dei risultati, giacché nessun record è puntato dal cursore corrente. 
@@ -175,13 +180,23 @@ L'interfaccia ResultSet
 * Il metodo next() fornisce un'ulteriore funzionalità: restituisce un valore booleano che è true quando un record è puntato, false in caso contrario. 
 * In termini pratici, un intero ResultSet può essere passato in rassegna con un codice del tipo:
 
-`while (resultSet.next()) { // Esamina il record corrente. }`
+```java
+while (resultSet.next()) { 
+	// Esamina il record corrente. 
+}
+```
 
 ---
 
-Un ciclo di questo tipo termina non appena tutti i record restituiti dalla query eseguita sono stati passati in rassegna. Quando un record è correttamente puntato dal cursore, è possibile esaminare i suoi campi attraverso dei metodi che hanno tutti la forma: getTipo(int indiceColonna)
+Un ciclo di questo tipo termina non appena tutti i record restituiti dalla query eseguita sono stati passati in rassegna. 
 
-Ad esempio, si supponga di voler ottenere il contenuto del primo campo del record corrente, sotto forma di **stringa**: String stringa = resultSet.getString(1); Se si conoscono i nomi associati ai singoli campi del record, è possibile usare la variante: getTipo(String nomeColonna)
+Quando un record è correttamente puntato dal cursore, è possibile esaminare i suoi campi attraverso dei metodi che hanno tutti la forma: getTipo(int indiceColonna)
+
+Ad esempio, si supponga di voler ottenere il contenuto del primo campo del record corrente, sotto forma di **stringa**: 
+
+`String stringa = resultSet.getString(1);` 
+
+Se si conoscono i nomi associati ai singoli campi del record, è possibile usare la variante: getTipo(String nomeColonna)
 
 ---
 

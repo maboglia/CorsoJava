@@ -3,21 +3,22 @@
 
 ## Situazioni anomale a run-time
 
-* Java prevede un sofisticato utilizzo dei tipi (primitivi e classi) che consente di individuare molti errori al momento della compilazione del programma (prima dell'esecuzione vera e propria)
+* Java prevede un sofisticato utilizzo dei tipi (primitivi e classi) che consente di individuare molti errori al momento della compilazione del programma 
 * Ciò nonostante si possono verificare varie situazioni impreviste o anomale durante l'esecuzione del programma che possono causare l'interruzione del programma stesso
-* Ad esempio:
+
+---
+
+## Ad esempio:
   * Tentativi di accedere a posizioni di un array che sono fuori dai limiti
   * Errori aritmetici (divisione per zero, ...)
   * Errori di formato: (errore di input dell'utente)
 
-
-
 ---
 
 ### Le eccezioni si dividono in
+
 **Checked** (o controllate) per le quali il compilatore richiede che ci sia un gestore
 
-* **Controllate**
   * Istanze di RuntimeException o delle sue sottoclassi
   * Il compilatore si assicura esplicitamente che quando un metodo solleva una'eccezione la tratti esplicitamente
   * Questo può essere fatto mediante i costrutti try-catch o throws
@@ -25,6 +26,7 @@
   * Le eccezioni controllate vincolano il programmatore ad occuparsi della loro gestione
   * Le eccezioni controllate possono rendere troppo pesante la scrittura del codice
 
+---
 
 **Unchecked** (o non controllate) per le quali il gestore non è obbligatorio
   * Per essere unchecked un'eccezione *deve essere una sottoclasse di **RuntimeException***, altrimenti è checked
@@ -162,13 +164,18 @@ catch (Exception e) {
                 throw new AritmeticException ();
                 throw new EccezionePersonalizzata ();
 ```
+
+---
+
 * Il comando throw si può usare direttamente dentro un try-catch,
 * l'uso più comune di throw è all'interno dei metodi
 * L'utilizzo di throw dentro a un metodo consente di interrompere il metodo in caso di situazioni anomale:
   * parametri ricevuti errati
   * operazione prevista dal metodo non realizzabile 
   * (esempio: prelievo dal conto corrente di una somma superiore al saldo)
- 
+
+---
+
 * Chi invoca il metodo dovrà preoccuparsi di implementare un gestore delle eccezioni possibilmente sollevate
 * Questo consente di evitare valori di ritorno dei metodi che servono solo a dire se l'operazione è andata a buon fine
 * in caso di problemi si lancia l'eccezione, non si restituisce un valore particolare
@@ -308,34 +315,13 @@ throws <classeEccezione 1 >
 
 ### Le eccezioni gettate sono catturate
 (responsabilità) dal chiamante
-si chiama il metodo leggi deve sapere se la
-lettura è andata a buon fine oppure no
+si chiama il metodo leggi deve sapere se la lettura è andata a buon fine oppure no
 
-```java
 * Con try-catch gestiamo l'eccezione a livello
 del chiamato (metodo leggi)
-...
-byte b[] = new byte[10];
-try {
-System.in.read (b);
-} catch (Exception e) {
-...
-}
-...
-```6* Sapere se la lettura è andata a buon fine, non
-"interessa" tanto al chiamato (metodo leggi)
-quanto al chiamante
-static String leggi (String val) throws
-IOException {
-byte b[] = new byte[10];
-System.in.read (b); // Senza try ... Catch
-val = "";
-for (int i=0; i<b.length; i++) {
-val = val + (char) b[i];
-}
-return (val);
-}
-```
+
+* Sapere se la lettura è andata a buon fine, non "interessa" tanto al chiamato (metodo leggi)
+quanto al chiamante 
 
 ---
 
@@ -375,7 +361,7 @@ z = x/y;
 
 ---
 
-## Definizione di una eccezione
+## Definire un'eccezione
 
 * È possibile dichiarare eccezioni proprie, se quelle fornite dal sistema (java.lang) non sono sufficienti
 
@@ -386,171 +372,4 @@ z = x/y;
   * definire dei metodi get/set
   * etc.
   
-  ---
-  
-  ## Esempi
-
-
-     
-
----
-
-### EccezioneArray
-
-```java
-public class EccezioneArray {
-  public static void main(String[] args) {
-  int[] a = {5,3,6,5,4};
-  // attenzione al <=...
-  for (int i=0; i<=a.length; i++) 
-  System.out.println(a[i]);
-  System.out.println("Ciao"); 
-  }
-}
-```
-
----
-
-### EccezioneAritmetico
-
-```java
-import java.util.Scanner; 
-public class EccezioneAritmetico {
-  public static void main(String[] args) { 
-  Scanner input = new Scanner(System.in);
-  System.out.println("Inserisci due interi"); 
-  int x = input.nextInt();
-  int y = input.nextInt();
-  System.out.println(x/y);
-  // che succede se y == 0??
-  } 
-}
-```
-                                                                   
-
----
-
-### EccezioneFormato
-
-```java
-import java.util.Scanner; 
-public class EccezioneFormato {
-  public static void main(String[] args) { 
-  Scanner input = new Scanner(System.in); 
-  System.out.println("Inserisci un intero"); 
-  int x = input.nextInt();
-
-  // che succede se l'utente inserisce un carattere?
-  System.out.println(x); 
-  }
-}
-```                                                               
-
----
-
-### Esempio gestione eccezione: EccezioneAritmetico
-
-
-```java
-import java.util.Scanner;
-public class EccezioneAritmetico {
-  public static void main(String[] args) { 
-  Scanner input = new Scanner(System.in);
-
-  System.out.println("Inserisci due interi");
-  int x = input.nextInt();
-
-  int y = input.nextInt();
-
-  try { System.out.println(x/y);
-  System.out.println("CIAO");
-
-  }
-  catch (ArithmeticException e) {
-  // se si verifica un eccezione di tipo ArithmeticException
-  // nella divisione x/y il programma salta qui (non stampa CIAO)
-  System.out.println("Non faccio la divisione..."); // gestita l'anomalia, l'esecuzione riprende...
-  }
-  System.out.println("Fine Programma"); }
-}
-```
-
----
-
-### Esempio gestione eccezione: EccezioneFormato
-
-
-```java
-import java.util.Scanner;
-import java.util.InputMismatchException; 
-
-public class EccezioneFormato {
-  public static void main(String[] args) {
-    Scanner input = new Scanner(System.in); 
-    System.out.println("Inserisci un intero"); 
-    int x; 
-    boolean ok;
-    do {
-      ok = true; 
-      try {
-        x = input.nextInt();
-        System.out.println(x); 
-      }
-      catch (InputMismatchException e) { 
-        input.nextLine(); // annulla l'input ricevuto System.out.println("Ritenta...");
-        ok = false;
-      }
-    } while (!ok);
-  } 
-}
-```                                                              
-
----
-
-### Esempio: controllo correttezza parametri - Rettangolo
-
-```java
-public class Rettangolo { 
-  private base;
-  private altezza;
-  // ... altri metodi e costruttori
-
-  public void setBase(int x) throws EccezioneBaseNegativa { 
-    if (x<0) throw new EccezioneBaseNegativa()
-    else base=x;
-  } 
-}
-```          
-
----
-
-### EccezioneBaseNegativa
-
-```java
-public class EccezioneBaseNegativa extends Exception {
-  EccezioneBaseNegativa() { 
-    super ();
-  }
-
-  EccezioneBaseNegativa(String msg) { 
-    super(msg);
-    } 
-}
-```          
-
----
-
-### System.in.read 
-* può provocare una eccezione controllata di tipo IOException 
-* Occorre quindi inserirla in un blocco
-
-```java
-try...catch...
-byte b[] = new byte[10];
-try {
-System.in.read (b);
-} catch (Exception e) {
-...
-}
-
-```
+[esempi](../esempi/08Eccezioni/snippets_eccezioni.md)

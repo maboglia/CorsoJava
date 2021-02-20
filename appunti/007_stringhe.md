@@ -69,7 +69,7 @@ Caratteristiche principali
 
 * char charAt (int)
 * myString.charAt(i)
-* 
+
 ---
 
 ### Confronta stringa con s

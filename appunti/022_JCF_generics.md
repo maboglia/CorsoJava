@@ -1,48 +1,41 @@
-# Generics e Varargs
-	Generics
-	Sintassi
-	Generics e List
-	Interfaccia Iterator
-	Interfaccia Map
-	Creare i propri tipi Generics
-	Java 7 e la deduzione automatica del tipo
-	
+# Collections e Generics
 
-### Collections e Generics
 
-Se si provano a runnare alcuni dei precedenti esempi con un JDK 1.5 o superiore, si avranno alcuni messaggi di warning dopo aver compilato. 
+I Generics offrono la loro più classica utilità nell’uso delle Collection. 
 
-Questi warning sono dovuti all’introduzione, in Java 5, dei Generics. 
+Essi, infatti, permettono di fare in modo che una particolare Collection sia parametrizzata con un certo tipo. 
 
-Negli esempi sono state utilizzate Collection "raw type", che sono delle Collection non parametrizzate mediante Generics.
----
-I Generics offrono la loro più classica utilità nell’uso delle Collection. Essi, infatti, permettono di fare in modo che una particolare Collection sia parametrizzata con un certo tipo. La sintassi fa uso di parentesi angolari "<" e ">".
-Ad esempio, col seguente codice, indicheremo che la nostra Collection potrà contenere solo e solamente stringhe.
+La sintassi fa uso di parentesi angolari "<" e ">".
+
+Ad esempio
+
 ```java
 Vector<String> vector = new Vector<String>();
 ```
 
 Se si provasse ad aggiungere a vector un eventuale oggetto che non sia di tipo String otterremmo un warning in compilazione.
 
-Java diventa così un linguaggio ancora più robusto, sicuro e fortemente tipizzato.
-
-Un altro vantaggio nell’uso delle Generics sta nel fatto che sapendo da quali tipi è costituita la Collection, ogni casting è superfluo.
+Conoscendo il tipo della Collection il casting è superfluo.
 
 
 ---
+
 ## Generics
-Una delle caratteristiche introdotte con Java 5 sono i Generics (o Generici). 
-Questi forniscono la possibilità di creare un modello generale di tipo. 
+
+Forniscono la possibilità di creare un modello generale di tipo. 
+
 In particolare:
+
 * i metodi generici permettono di specificare mediante una singola dichiarazione di metodo un insieme di metodi correlati
-* le classi generiche permettono di specificare mediante una singola dichiarazione di classe un insieme di tipi correlati
 
 Con l’uso dei Generics è possibile scrivere un metodo generico sort in grado di ordinare gli elementi di un array di Integer, di String e, in generale, quelli di un array di un qualsiasi tipo che supporta una funzione di ordinamento.
 
 È anche possibile scrivere una classe generica Stack (pila) che possa essere utilizzata per memorizzare interi, numeri a virgola mobile, stringhe, e qualsiasi altro tipo di dati.
 
 Inoltre, essi assicurano la sicurezza dei tipi a tempo di compilazione che permette di individuare a tempo di compilazione errori di compatibilità sui tipi.
+
 ---
+
 ## Sintassi
 
 I generici ci permettono di dichiarare una struttura specificando che essa accetterà solo un certo tipo. Inoltre, bisognerà anche assegnare al nome della struttura un’istanza che accetti lo stesso tipo di elementi.
@@ -60,13 +53,17 @@ N.B. I generici non si possono applicare ai tipi di dati primitivi.
 La seguente istruzione produrrebbe messaggi di errore.
 
 ```List<int> ints = new ArrayList<int>();```
+
 ---
+
 ## Generics e List
+
 I generics permettono di dichiarare una lista specificando che essa accetterà solo stringhe. Inoltre, bisogna anche assegnare a strings un’istanza che accetti lo stesso tipo di elementi (stringhe).
 
 ```List<String> strings = new ArrayList<String>();```
 
 A questo punto abbiamo una lista che accetta solo stringhe, e nessun altro tipo di oggetto.
+
 ```java
 // non produce errore
 strings.add("si può usare String");
@@ -75,6 +72,7 @@ strings.add(new StringBuffer("non si può usare " + "StringBuffer"));
 ```
 
 I generics sono utilizzati anche come parametri sia di input che di output dei metodi. Segue un esempio di dichiarazione di un metodo che prende un tipo generico in input e ne restituisce un altro in output.
+
 ```java
 public List<String> getListOfMapValues (Map<Integer, String> map) {
 	List<String> list = new ArrayList<String>();
@@ -85,6 +83,7 @@ public List<String> getListOfMapValues (Map<Integer, String> map) {
 }
 ```
 ---
+
 ## Interfaccia Iterator
 Oltre a List, tutte le classi e tutte le interfacce Collections supportano ora i generics. 
 Più o meno quanto visto per List vale per tutte le altre Collections (con l’eccezione di Map, come vedremo tra poco) e anche per Iterator ed Enumeration.
@@ -115,7 +114,9 @@ while (it.hasNext()) {
 
 N.B. Attenzione a non utilizzare Iterator come generico su una Collection non generica. 
 Si rischia un’inevitabile eccezione al runtime se la Collection non è stata riempita come ci si aspetta.
+
 ---
+
 ## Interfaccia Map
 L’interfaccia Map, nella sua dichiarazione, dichiara due parametri: K (key) e V (value). 
 
@@ -138,8 +139,11 @@ for (int i=0; i<3; i++) {
 	System.out.println(map.get(i));
 }
 ```
+
 ---
+
 ## Creare i propri tipi Generics
+
 Una qualsiasi classe è parametrizzabile, dunque è possibile definire i propri tipi Generics.
 
 ```java
@@ -181,7 +185,8 @@ public String toString() {
 ```
 ---
 ## Java e la deduzione automatica del tipo
-Java 7 ha introdotto un piccolo cambiamento di sintassi per la creazione dei tipi generici, che prende il nome di deduzione automatica del tipo per la creazione di una istanza generica.
+
+Da Java 7 non devo dichiarare il tipo nel costruttore dell'oggetto.
 
 ### esempio.
 

@@ -3,7 +3,7 @@
 Le date sono degli oggetti molto complesse da gestire: assumono forme diverse a seconda del luogo geografico in cui ci troviamo.
 La  manipolazione delle date e delle ore è una delle attività ricorrenti di un programmatore. 
 
-Se lavoriamo con Java 7, a classe principale per gestire date e orari è Calendar (che ha sostituito la classe Date, dichiarata **deprecata__). 
+Fino a Java 7, la classe principale per gestire date e orari è Calendar (che ha sostituito la classe Date, dichiarata **deprecata**). 
 
 Altre classi utili sono __GregorianCalendar__, **SimpleTimeZone** e **SimpleTimeZone**. 
 Inoltre sono disponibili le più moderne LocalDate e LocalDateTime.
@@ -11,7 +11,7 @@ Oltre a queste classi, è molto probabile che serva utilizzarne altre quali: **D
 che permettono la trasformazione da stringa a data e viceversa.
 
 ---
-## Novità in Java 8: LocalDate, LocalTime, LocalDateTime
+## In Java 8: LocalDate, LocalTime, LocalDateTime
 
 ```java
       LocalDate oggi = LocalDate.now(); // Data di oggi
@@ -80,7 +80,7 @@ LocalDate localD = date.toLocalDate();
 r è il record e .getDate() il metodo per farsi ritornare la data. 
 Se avessi un campo dataNascita ilmetodo dovrebbe chiamarsi getDateNascita().
 
-Usa le classi del package java.time invece di java.util.Date e java.sql.Date con JDBC 4.2 o superiore.
+Usa le classi del package java.time invece di java.util.Date e java.sql.Date con** JDBC 4.2 o superiore.**
 
 ---
 ## Esempio con PreparedStatement

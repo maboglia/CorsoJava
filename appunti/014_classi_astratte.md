@@ -24,7 +24,9 @@ Per ottenere una classe concreta (istanziabile) da una astratta occorre definire
 
 * Ereditare la classe facendo l'overriding di tutti i metodi astratti
 
-### Permette di trattare omogeneamente oggetti con caratteristiche diverse (tramite upcasting)
+---
+
+### Permette di trattare omogeneamente oggetti con caratteristiche diverse
 
 Man mano che si sale nella gerarchia dell'ereditarietà, le
 classi diventano sempre più generiche e probabilmente
@@ -51,21 +53,24 @@ implementare tale metodo nella classe A.
 * un metodo astratto deve essere obbligatoriamente pubblico,  altrimenti non avrebbe senso
 * lascio il metodo indefinito. infatti non apro il relativo blocco con le parentesi graffe ed il codice del metodo.
 
+---
+
 Le Classi Astratte, oltre ad avere Metodi Astratti, possono avere
  metodi ed attributi *normali*.
 
 Se una classe è astratta, non posso istanziarla.
 
----
-
-
 **NON POSSO CREARE OGGETTI DI UNA CLASSE ASTRATTA**
+
+---
 
 Che senso ha definire dei metodi astratti e di conseguenza rendere una classe astratta?
 
 Definisco un metodo astratto quando voglio forzare tutte le sottoclassi ad avere un determinato metodo.
 
 I metodi astratti funzionano come segnaposto dei metodi implementati poi nella sottoclasse.
+
+---
 
 **le sottoclassi**
 
