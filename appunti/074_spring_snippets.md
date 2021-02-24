@@ -74,3 +74,48 @@ private Film film;
 ```
 
 
+## Model, ModelMap, ModelAndView
+
+
+
+Differences between Model, ModelMap, and ModelAndView
+
+Model: It is an Interface. It defines a holder for model attributes and primarily designed for adding attributes to the model.
+
+### Esempio:
+
+```java
+@RequestMapping(method = RequestMethod.GET)
+    public String printHello(Model model) {
+          model.addAttribute("message", "Hello World!!");
+          return "hello";
+       }
+```
+
+ModelMap: Implementation of Map for use when building model data for use with UI tools.Supports chained calls and generation of model attribute names.
+
+### Esempio:
+
+```java
+@RequestMapping("/helloworld")
+public String hello(ModelMap map) {
+    String helloWorldMessage = "Hello world!";
+    String welcomeMessage = "Welcome!";
+    map.addAttribute("helloMessage", helloWorldMessage);
+    map.addAttribute("welcomeMessage", welcomeMessage);
+    return "hello";
+}
+```
+
+ModelAndView: This class merely holds both to make it possible for a controller to return both model and view in a single return value.
+
+### Esempio:
+
+```java
+@RequestMapping("/welcome")
+public ModelAndView helloWorld() {
+        String message = "Hello World!";
+        return new ModelAndView("welcome", "message", message);
+    }
+```
+
