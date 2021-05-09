@@ -129,13 +129,6 @@ e' if (i % (44 / 6) == 0)
 Scrivere un programma che stampi 10 caratteri
 (letti da tastiera) ed i relativi codici ASCII.
 
----
-
-## 1.16. Esercizio  
-Scrivere un programma che inverta un array
-precaricato.
-
-
 
 ---
 
@@ -183,13 +176,13 @@ Scrivere una funzione per calcolare l’importo di una tassa secondo la seguente
 ---
 
 ## 1.20. Esercizio
-Scrivere un programma IndovinaZero che chiede all’utente di inserire numeri interi uno
+Scrivere un programma **IndovinaZero** che chiede all’utente di inserire numeri interi uno
 dopo l’altro fino a quando non inserisce il numero 0.
 
 ---
 
 ## 1.21. Esercizio
-Scrivere un programma ScrivoScrivoScrivo che chiede all’utente di inserire un numero
+Scrivere un programma **ScrivoScrivoScrivo** che chiede all’utente di inserire un numero
 maggiore o uguale a zero e stampa il messaggio sto ciclando un numero di volte pari al numero inserito
 dall’utente. Se il valore inserito dall’utente è negativo il programma stampa un messaggio di errore.
 
@@ -197,7 +190,7 @@ dall’utente. Se il valore inserito dall’utente è negativo il programma stam
 ---
 
 ## 1.22. Esercizio
-Scrivere un programma Conteggio che chiede all’utente di inserire un numero maggiore o
+Scrivere un programma **Conteggio** che chiede all’utente di inserire un numero maggiore o
 uguale a zero e stampa uno dopo l’altro tutti i numeri da 0 al numero inserito compreso. Se il valore
 inserito dall’utente è negativo il programma stampa un messaggio di errore.
 
@@ -205,22 +198,22 @@ inserito dall’utente è negativo il programma stampa un messaggio di errore.
 ---
 
 ## 1.23. Esercizio
-Scrivere un programma ContaNumeriCrescenti che chiede all’utente di inserire una sequenza di numeri interi crescenti (man mano sempre più grandi) e ne stampa la lunghezza (il numero di valori inseriti dall’utente). Il programma termina non appena l’utente inserisce un valore minore o uguale al precedente).
+Scrivere un programma **ContaNumeriCrescenti** che chiede all’utente di inserire una sequenza di numeri interi crescenti (man mano sempre più grandi) e ne stampa la lunghezza (il numero di valori inseriti dall’utente). Il programma termina non appena l’utente inserisce un valore minore o uguale al precedente).
 
 
 ---
 
 ## 1.24. Esercizio
-Scrivere un programma MediaNumeri che chiede all’utente di inserire una sequenza di numeri interi positivi. Non appena l’utente inserisce un numero negativo il programma si arresta e visualizza la media aritmetica dei valori positivi inseriti (senza approssimazione!).
+Scrivere un programma **MediaNumeri** che chiede all’utente di inserire una sequenza di numeri interi positivi. Non appena l’utente inserisce un numero negativo il programma si arresta e visualizza la media aritmetica dei valori positivi inseriti (senza approssimazione!).
 
 
 ---
 
 ## 1.25. Esercizio
-Scrivere un programma Asterischi che chiede all’utente di inserire un numero intero e stampa un triangolo fatto di asterischi con un numero di righe pari al valore inserito dall’utente. 
+Scrivere un programma **Asterischi** che chiede all’utente di inserire un numero intero e stampa un triangolo fatto di asterischi con un numero di righe pari al valore inserito dall’utente. 
 Se l’utente inserisce un valore negativo il programma deve visualizzare un messaggio di errore.
 
 ---
 
 ## 1.26. Esercizio
-Scrivere un programma TavolaPitagorica in modo che i valori stampati siano ben incolonnati
+Scrivere un programma **TavolaPitagorica** in modo che i valori stampati siano ben incolonnati
