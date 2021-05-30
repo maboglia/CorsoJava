@@ -1,10 +1,7 @@
 # Esercizi Java - Metodi avanzati
 
-
----
-
 ## Esercizio 11
-Scope
+
 Provare ad eseguire il programma su carta e,
 successivamente, verificare la risposta eseguendo
 il programma su calcolatore:
@@ -34,7 +31,6 @@ class Nascoste {
 ---
 
 ## Esercizio 12
-Lifetime
 Provare ad eseguire il programma su carta e,
 successivamente, verificare la risposta eseguendo
 il programma su calcolatore:

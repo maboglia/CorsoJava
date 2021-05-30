@@ -1,5 +1,4 @@
-
-#Cicli e istruzioni di controllo
+# Cicli e istruzioni di controllo
 
 ## Esempio di if annidati
 
@@ -18,9 +17,10 @@ class IfAnnidati{
 }
 ```
 
-## Generazione di un motivo decorativo
+## Asterischi
+
 ```java
-class Asterischi{
+class StampaAsterischi {
 	public static void main(String args[]){
 		int num = 20;
 		do{
@@ -31,9 +31,10 @@ class Asterischi{
 }
 ```
 
-## Realizzazione di un secondo motivo decorativo
+## Asterischi 2
+
 ```java
-class Asterischi2{
+class StampaAsterischi {
 	public static void main(String args[]){
 		int num = 20;
 		do{
@@ -47,12 +48,18 @@ class Asterischi2{
 ```
 
 ## Sostituzione di un ciclo do-while con un ciclo for
+
 ```java
-class Asterischi3{
+class StampaAsterischi {
 	public static void main(String args[]){
 		for(int num = 20; num >= 0; num--){
-			if((num%3 == 0) ||(num%3 == 1)) continue;
-                        for(int j = 0;j <= num; j++)System.out.print(".*");
+			
+			if((num%3 == 0) ||(num%3 == 1)) 
+				continue;
+			
+			for(int j = 0;j <= num; j++)	
+				System.out.print(".*");
+			
 			System.out.println("");
 		}
 	}
@@ -60,9 +67,11 @@ class Asterischi3{
 
 ```
 
-## Codice non compilabile
+
+## L'istruzione return termina l'esecuzione del codice
+
 ```java
-class CodiceInaccessibile{
+class ProvaReturn {
 	public static void main(String args[]){
 		System.out.println("Codice accessibile");
 		return;
@@ -71,12 +80,12 @@ class CodiceInaccessibile{
 }
 ```
 
-## Inganno al compilatore
 ```java
-class CodiceInaccessibile2{
+class ProvaReturn {
 	public static void main(String args[]){
 		System.out.println("Codice accessibile");
-		if(true)return;
+		if(true)
+			return;
 		System.out.println("Codice inaccessibile");
 	}
 }
