@@ -10,9 +10,9 @@ public class RiepilogoCondizioniCicli {
 		int x = 5;
 		
 		if(x > 4){
-			System.out.println("Sono dentro all'if");
+			System.out.println("Sono nel caso true dell'if");
 		}else{
-			System.out.println("Sono fuori all'if");
+			System.out.println("Sono nel caso false dell'if (else)");
 		}
 		
 		switch(x){
