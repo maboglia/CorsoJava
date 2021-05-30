@@ -23,7 +23,7 @@ Inoltre, se p prenota anche posti per disabili, interessa conoscere il tipo di d
 
 Si noti che data una prenotazione è di interesse conoscere i posti per disabili eventualmente prenotati (con annesse disabilità indicate per i vari posti prenotati).
 
-L’addetto alla biglietteria del teatro è interessato ad effettuare alcuni con- trolli. 
+L’addetto alla biglietteria del teatro è interessato ad effettuare alcuni controlli. 
 
 In particolare:
 * dato uno spettacolo s ed una tipologia di posto t, 
