@@ -20,65 +20,28 @@
 
 ### Le notazioni puntate possono essere combinate
 
-* System.out.println("Hello world!");
-* System è una classe del package java.lang
-* out è una variabile di classe contenente il riferimento ad un oggetto della classe PrintStream che punta allo standard output
-* println è un metodo della classe PrintStream che stampa una linea di testo
+* `System.out.println("Hello world!");`
+* **System** è una classe del `package java.lang`
+* **out** è una variabile di classe contenente il riferimento ad un oggetto della classe **PrintStream** che punta allo standard output
+* **println()** è un **metodo** della classe PrintStream che stampa una linea di testo
 
 ---
 
 ## Operazioni su reference
 
-### Definiti gli operatori relazionali == e !=
+### Uso degli operatori relazionali == e !=
 
-* Attenzione: il test di uguaglianza viene fatto sul puntatore (reference) e NON sull'oggetto
-* Stabiliscono se i reference si riferiscono allo stesso oggetto
+* Attenzione: il test di uguaglianza viene fatto sul puntatore (**reference**) e NON sull'oggetto
+* Stabiliscono se i **reference** si riferiscono allo stesso oggetto
 
-È definita l'assegnazione
+* È definita l'**assegnazione**
 
-È definito l'operatore punto (notazione puntata)
+* È definito l'**operatore punto** (notazione puntata)
 
-NON è prevista l'aritmetica dei puntatori
-
----
-
-
-## Variabili di classe
-
-* Rappresentano proprietà comuni a tutte le istanze
-
-* Esistono anche in assenza di istanze (oggetti)
-
-* Dichiarazione: static
-
-* Accesso: NomeClasse.attributo
-
-```java
-class Automobile {
-static int numeroRuote = 4;
-}
-Automobile.numeroRuote;
-```
+* **NON** è prevista l'aritmetica dei puntatori
 
 ---
 
-## Metodi di classe
-
-### Funzioni non associate ad alcuna istanza
-* Dichiarazione: static
-* Accesso: nome-classe . metodo()
-
-```java
-class HelloWorld {
-public static void main (String args[]) {
-System.out.println("Hello World!");
-
-//p.es  cos(x): metodo static della classe Math, ritorna un double
-double y = Math.cos(x);
-}
-}
-```
----
 
 ## Operazioni su istanze
 
@@ -90,6 +53,14 @@ double y = Math.cos(x);
 * Il valore di una variabile di tipo strutturato è il riferimento ad un oggetto (istanza di una classe)
 * Una stessa variabile può riferire oggetti diversi in momenti diversi a seguito di operazioni di assegnazione sul suo valore
 * Se la variabile contiene il valore null non riferisce nessun oggetto in quel momento
+
+---
+
+## Accesso a metodi e attributi non static
+* La sintassi è simile al caso precedente, ma ovviamente l’accesso/invocazione è possibile solo tramite un’istanza specifica (ed ogni accesso è diversificato): 
+* Nel corpo di un metodo non `static` si può accedere a qualunque attributo e metodo della stessa classe
+* All'interno del corpo di un metodo si possono riferire in modo abbreviato attributi e metodi definiti nella stessa classe
+* Se nel corpo di un metodo non `static` appare il nome di un metodo o attributo non `static` della sua classe è sottinteso che sia riferito all’istanza su cui è stato invocato il metodo
 
 ---
 

@@ -22,6 +22,44 @@
 
 ---
 
+## Variabili di classe
+
+* Rappresentano proprietà comuni a tutte le istanze
+
+* Esistono anche in assenza di istanze (oggetti)
+
+* Dichiarazione: static
+
+* Accesso: NomeClasse.attributo
+
+```java
+class Automobile {
+	static int numeroRuote = 4;
+}
+
+Automobile.numeroRuote;
+```
+
+---
+
+## Metodi di classe
+
+### Funzioni non associate ad alcuna istanza
+* Dichiarazione: static
+* Accesso: nome-classe . metodo()
+
+```java
+class HelloWorld {
+public static void main (String args[]) {
+System.out.println("Hello World!");
+
+//p.es  cos(x): metodo static della classe Math, ritorna un double
+double y = Math.cos(x);
+}
+}
+```
+---
+
 ## Accesso a metodi e attributi static
 * Essendo definiti a livello di classe, attributi e metodi static sono acceduti/invocati tramite il nome della classe:
 * `Math.sqrt (2);`
@@ -35,10 +73,3 @@
 * Se nel corpo di un metodo appare il nome di un metodo o attributo `static` della sua classe è sottinteso che sia preceduto dal nome della classe stessa
 * Eventuali mescolanze improprie di `static` e non `static` causano errori di compilazione
 
----
-
-## Accesso a metodi e attributi non static
-* La sintassi è simile al caso precedente, ma ovviamente l’accesso/invocazione è possibile solo tramite un’istanza specifica (ed ogni accesso è diversificato): 
-* Nel corpo di un metodo non `static` si può accedere a qualunque attributo e metodo della stessa classe
-* All'interno del corpo di un metodo si possono riferire in modo abbreviato attributi e metodi definiti nella stessa classe
-* Se nel corpo di un metodo non `static` appare il nome di un metodo o attributo non `static` della sua classe è sottinteso che sia riferito all’istanza su cui è stato invocato il metodo

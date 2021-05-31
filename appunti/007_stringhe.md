@@ -72,14 +72,14 @@ Caratteristiche principali
 
 ---
 
-### Confronta stringa con s
+### Confronta stringa con altra stringa
 
 * `boolean equals(String s)`
 *` myString.equals("stringa")` ritorna true o false
 * `boolean equalsIgnoreCase(String s)`
 * `myString.equalsIgnoreCase("StRiNgA")`
 
-### Confronta con s facendone la differenza
+### Confronta con altra stringa facendone la differenza
 
 * `int compareTo(String str)`
 * `myString.compareTo("stringa")` ritorna un valore >=< 0
