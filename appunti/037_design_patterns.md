@@ -5,7 +5,7 @@
 
 * Factory Method Pattern
 * Abstract Factory Pattern
-* Singleton Pattern
+* [Singleton Pattern](./o33)
 * Prototype Pattern
 * Builder Pattern
 * Object Pool Pattern
