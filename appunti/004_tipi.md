@@ -81,14 +81,18 @@ public class Applicazione {
 
 	public static void main(String[] args) {
 
+		//1) dichiarazione
 		int mioNumero;
+		//2) inizializzazione
 		mioNumero = 100;
+		//3) uso della variabile locale
 		System.out.println(mioNumero);
 		
+		//dichiarazione e inizializzazione contemporanea
 		short mioShort = 851;
 		System.out.println(mioShort);
 		
-		long mioLong = 34093;
+		long mioLong = 34093L;
 		System.out.println(mioLong);
 		
 		double mioDouble = 3.14159732;
