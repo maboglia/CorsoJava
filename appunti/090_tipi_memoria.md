@@ -168,6 +168,7 @@ supponiamo di creare due oggetti di tipo Rettangolo
           Rettangolo primo = new Rettangolo(10,30); 
           Rettangolo secondo = new Rettangolo(20,50);
 ```             
+
 ## Garbage collection (2)
 ora assegniamo secondo a primo
 come è possibile accedere al vecchio valore di primo (il rettangolo di dimensioni 10 e 30) ???
@@ -175,6 +176,7 @@ Il vecchio oggetto è rimasto orfano... (nessun riferimento ad esso)
 ```java
             Rettangolo primo = secondo;
 ```         
+
 ## Garbage collection (3)
 Il vecchio oggetto non è più utilizzabile!!! (è garbage, spazzatura)
 Il linguaggio Java (come molti linguaggi moderni) prevede un meccanismo di rimozione degli oggetti privi di riferimenti detto Garbage Collector

@@ -4,6 +4,8 @@ Un modulo è un gruppo di pacchetti e risorse strettamente correlati insieme a u
 
 In altre parole, è un'astrazione "pacchetto di pacchetti Java" che ci permette di rendere il nostro codice ancora più riutilizzabile.
 
+---
+
 ## pacchetti
 
 I pacchetti all'interno di un modulo sono identici ai pacchetti Java che abbiamo utilizzato sin dall'inizio di Java.
@@ -12,6 +14,8 @@ Quando creiamo un modulo, organizziamo il codice internamente in pacchetti propr
 
 Oltre a organizzare il nostro codice, i pacchetti vengono utilizzati per determinare quale codice è pubblicamente accessibile al di fuori del modulo.
 
+---
+
 ## Risorse
 
 Ogni modulo è responsabile delle proprie risorse, come i file multimediali o di configurazione.
@@ -19,6 +23,8 @@ Ogni modulo è responsabile delle proprie risorse, come i file multimediali o di
 In precedenza, mettevamo tutte le risorse nel livello principale del nostro progetto e gestivamo manualmente quali risorse appartenevano a parti diverse dell'applicazione.
 
 Con i moduli, possiamo spedire immagini e file XML richiesti con il modulo che ne ha bisogno, rendendo i nostri progetti molto più facili da gestire.
+
+---
 
 ## Descrittore del modulo
 
@@ -39,6 +45,8 @@ Lo stesso vale per la _reflection_. Per impostazione predefinita, non possiamo u
 
 Più avanti nell'articolo, vedremo esempi di come utilizzare il file descrittore del modulo.
 
+---
+
 ## Tipi di modulo
 
 Esistono **quattro** tipi di moduli nel nuovo sistema di moduli:
@@ -47,6 +55,8 @@ Esistono **quattro** tipi di moduli nel nuovo sistema di moduli:
 * **Moduli dell'applicazione**: questi moduli sono ciò che di solito vogliamo creare quando decidiamo di utilizzare i moduli. Sono denominati e definiti nel file module-info.class compilato incluso nel JAR assemblato.
 * **Moduli automatici**: possiamo includere moduli non ufficiali aggiungendo file JAR esistenti al percorso del modulo. Il nome del modulo sarà derivato dal nome del JAR. I moduli automatici avranno pieno accesso in lettura a ogni altro modulo caricato dal percorso.
 * **Modulo senza nome**: quando una classe o un JAR viene caricata nel percorso di classe, ma non nel percorso del modulo, viene automaticamente aggiunto al modulo senza nome. È un modulo generico per mantenere la compatibilità con le versioni precedenti del codice Java scritto in precedenza.
+
+---
 
 ## Distribuzione
 
@@ -57,6 +67,8 @@ Possiamo creare progetti multi-modulo composti da una “applicazione principale
 Dobbiamo stare attenti però perché possiamo avere solo un modulo per file JAR.
 
 Quando impostiamo il nostro file di build, dobbiamo assicurarci di raggruppare ogni modulo nel nostro progetto come un jar separato.
+
+---
 
 ### Moduli predefiniti
 
@@ -78,6 +90,8 @@ Tutto ciò che serve al JDK stesso è conservato nei moduli jdk.
 
 Infine, tutto ciò che è specifico di Oracle è nei moduli Oracle.
 
+---
+
 ## Dichiarazioni del modulo
 
 Per impostare un modulo, abbiamo bisogno di mettere un file speciale alla radice dei nostri pacchetti chiamato `module-info.java`
@@ -98,6 +112,8 @@ Il modulo funzionerà con questa dichiarazione, ma normalmente avremo bisogno di
 
 [leggi tutto](https://www.baeldung.com/java-9-modularity)
 
+---
+
 ### require
 
 La nostra prima direttiva è necessaria. Questa direttiva del modulo ci consente di dichiarare le dipendenze del modulo:
@@ -112,6 +128,8 @@ Ora, mio.modulo ha sia una dipendenza runtime che una dipendenza in fase di comp
 
 E tutti i tipi pubblici esportati da una dipendenza sono accessibili dal nostro modulo quando usiamo questa direttiva.
 
+---
+
 ### require statico
 
 A volte scriviamo codice che fa riferimento a un altro modulo, ma che gli utenti della nostra libreria non vorranno mai usare.
@@ -123,6 +141,8 @@ In questi casi, vogliamo utilizzare una dipendenza opzionale. Utilizzando la dir
 module mio.modulo {
 require statico modulo.nome;
 }
+
+---
 
 ### require Transitive
 
@@ -138,6 +158,8 @@ require transitivo modulo.nome;
 
 Ora, quando uno sviluppatore richiede mio.modulo, non dovrà anche dire richiede modulo.nome affinché il nostro modulo funzioni ancora.
 
+---
+
 ### Esportazioni
 
 Per impostazione predefinita, un modulo non espone nessuna delle sue API ad altri moduli. Questo forte incapsulamento è stato uno dei motivi principali per la creazione del sistema di moduli in primo luogo.
@@ -152,6 +174,8 @@ esporta com.my.package.name;
 
 Ora, quando qualcuno richiede mio.modulo, avrà accesso ai tipi pubblici nel nostro pacchetto com.my.package.name, ma non a qualsiasi altro pacchetto.
 
+---
+
 ### Esportazioni ... in
 
 Possiamo usare le esportazioni ... per aprire le nostre classi pubbliche al mondo.
@@ -165,6 +189,8 @@ Analogamente alla direttiva sulle esportazioni, dichiariamo un pacchetto come es
 module mio.modulo {
 esporta com.my.package.name in com.specific.package;
 }
+
+---
 
 ### uses
 

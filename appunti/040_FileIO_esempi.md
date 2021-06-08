@@ -1,12 +1,3 @@
-# File di configurazione nella cartella WEB-INF
-
-```java
-InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream("/my.properties");
-```
-
-Lettura sequenziale di file di testo (e canali di input)
-
----
 ## Passo 1: apertura file in lettura
 
 Per leggere un file di testo avente come nome la stringa s, creare innanzitutto un oggetto java.io.FileReader come segue (dopo aver importato java.io.*):
@@ -75,6 +66,7 @@ Nota: fare attenzione a non chiamare close() su un canale BufferedReader non ass
 Scrivere una classe pubblica LetturaFile con un metodo pubblico void stampaFile(String s) che, dato il nome di un file s, ne stampa a video tutte le righe, oppure lancia un'eccezione non verificata se si incontrano errori nella lettura.
 
 LetturaFile.java
+
 ```java
 import java.io.*;
 
@@ -147,7 +139,7 @@ public class LetturaFile {
 
 ```
 
-Programma di prova:
+### Programma di prova:
 
 ```java
     public static void main(String[] args){
@@ -218,3 +210,14 @@ PrintStream p = System.out;
 p.close(); // chiude il terminale di output
 System.out.println("questa stringa non verrà mai stampata");
 ```
+---
+
+# File di configurazione nella cartella WEB-INF
+
+```java
+InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream("/my.properties");
+```
+
+Lettura sequenziale di file di testo (e canali di input)
+
+---

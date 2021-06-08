@@ -3,9 +3,9 @@
 
 ### 1) Creational Pattern
 
-* Factory Method Pattern
+* [Factory Method Pattern](./035_factory_pattern.md)
 * Abstract Factory Pattern
-* [Singleton Pattern](./o33)
+* [Singleton Pattern](./033_singleton_pattern.md)
 * Prototype Pattern
 * Builder Pattern
 * Object Pool Pattern
@@ -15,7 +15,7 @@
 * Adapter Pattern
 * Bridge Pattern
 * Composite Pattern
-* Decorator Pattern
+* [Decorator Pattern](./034_decorator_pattern.md)
 * Facade Pattern
 * Flyweight Pattern
 * proxy Pattern
@@ -26,3 +26,9 @@
 * Command Pattern
 * Interpreter Pattern
 * Iterator Pattern
+
+
+### Altri design patterns
+
+* MVC - Model View Controller
+* [DAO - Data Access Object](./036_dao_pattern.md)

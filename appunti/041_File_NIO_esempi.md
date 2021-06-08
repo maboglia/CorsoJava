@@ -9,6 +9,7 @@ La differenza sostanziale tra le API classiche (package java.io) e le nuove API 
   *  I **selector** sono dei selettori che, insieme ai channel, permettono di definire operazioni multiplex e non bloccanti.
 
 ---
+
 ## Novità principali
 
 * introduzione della classe *Files*, 
