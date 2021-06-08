@@ -1,6 +1,7 @@
 # Esercizio lancia dadi
 
 ## problema
+
 * costruire un gioco statistico in java
 * interfaccia web, GUI, TUI
 

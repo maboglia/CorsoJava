@@ -258,43 +258,6 @@ p1.setEta(23);
 ```
 
 
-### esercizio:
-* costruire un programma che chieda in input l'altezza degli studenti di una classe (altezza espressa in cm )
-* il programma accetta un numero indeterminato di valori in input e restituisce la media aritmetica incrementale ogni volta
-* inserire una condizione per uscire dal ciclo e informare l'utente della stringa da inserire
-
-### soluzione esercizio MB
-
-```java
-boolean esci = false;
-int studentiTot=0;
-int altezzaTot = 0;
-double media = 0.0D;
-while(esci == false){
-    String s =getInput("Inserisci un numero");
-    int valoreInserito = Integer.parseInt(s);
-    //è la condizione che mi fa uscire
-    if (valoreInserito == 0) esci = true;
-    studentiTot++;
-    altezzaTot += valoreInserito;
-    media = altezzaTot/studentiTot;
-    System.out.println("il numero degli studenti è " + studentiTot);
-    System.out.println("l'altezza totale degli studenti è " + altezzaTot);
-    System.out.println("quindi la media aritmetica dell'altezza dell'aula " + media);
-}
-```
-
-## esercizio 2
-* la direttrice del centro di formazione di via xx settembre vi chiede un programma per formare le classi per il nuovo anno scolastico.
-* Stampare o visualizzare il numero di classi che si possono ottenere con un gruppo di studenti di cui si conosce l'anno di nascita. 
-* Le classi devono essere omogenee per età e possono contenere max 16 studenti.
-
-### Esercizio 3
-* utilizzando la classe LanciaDadi creata a lezione, implementare un gioco di dadi
-* problema
-* costruire un gioco statistico
-* lanciadadi
-
 ### requirements
 
 * deve permettere al player di scegliere il numero di facce del dado (default 6)
