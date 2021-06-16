@@ -5,15 +5,15 @@ Le direttive permettono di definire la struttura di tutto il documento JSP. Indi
 
 Sono processati al momento della conversione in servlet: a compile-time, cioè a tempo di compilazione.
 
-Le direttive esistenti sono: page, include e taglib.
+### Le direttive esistenti sono: page, include e taglib.
 
 * ```<%@ page ... %>```
 * ```<%@ include file="path - percorso relativo al file" %>```
 * ```<%@ taglib ...%>```
 
-Introdotte dal simbolo @ possono contenere diversi attributi, in alcuni casi concatenabili come per la direttiva import.
+Introdotte dal simbolo `@` possono contenere diversi attributi, in alcuni casi concatenabili come per la direttiva import.
 
-direttiva page
+## direttiva page
 ```<%@ page attributi %> ```
 
 dove attributi sono coppie:  nome="valore"
@@ -44,7 +44,11 @@ Indica che la pagina è una pagina di errore JSP e può mostrare a video l'outpu
 oppure
 ```contentType = "MIME-Type; charset = Character-Set"```
 Il valore MIME di default è text/html
-direttiva include
+
+---
+
+## direttiva include
+
 Indica al motore JSP di includere  il contenuto del file corrispondente, inserendolo al posto della direttiva nella pagina JSP.
 Il contenuto del file incluso è analizzato al momento della traduzione del file JSP e si include una copia del file stesso nel servlet generato.
 Una volta incluso, se si modifica il file non sarà ricompilato nel servlet.
@@ -53,6 +57,7 @@ file html (statico)
 file jsp  (dinamico)
 Sintassi:    ```<%@ include file="nome del file" %>```
 
+---
 
 ###  esempio
 ```html
@@ -77,6 +82,7 @@ Sintassi:    ```<%@ include file="nome del file" %>```
 </html>
 ```
 
+---
 
 ## direttiva taglib
 Permette estendere i marcatori di JSP con etichette o marcatori generati dall'utente (etichette personalizzate).
