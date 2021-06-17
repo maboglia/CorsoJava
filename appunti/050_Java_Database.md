@@ -1,6 +1,39 @@
-
 JDBC
 ------
+
+JDBC (Java Database Connectivity) è un’interfaccia completamente Java utilizzata per
+eseguire istruzioni SQL sui database.
+
+L'API JDBC si trova nel pacchetto java.sql; contiene poche classi concrete, è composta
+principalmente da interfacce indipendenti dal database.
+
+---
+
+Le API JDBC consentono di accedere a qualsiasi tipo
+di dati tabulari, in particolare a i dati memorizzati
+in database relazionali
+* JDBC consente di scrivere applicazioni Java che gestiscono queste tre attività di programmazione:
+  * Connettere un'origine dati (e.g., database)
+  * Inviare query e istruzioni di aggiornamento per il
+database
+  * Recuperare ed elaborare i risultati ricevu
+
+---
+
+JDBC include:
+* API JDBC - Un insieme di interfacce che fanno parte
+della piattaforma Java e costituiscono le API per il
+programmatore
+* JDBC Driver Manager - Gestore di driver che
+permette a driver di terze parti di connettersi ad un
+DB specifico
+
+Un driver JDBC permette di
+* Connettersi ad un DB
+* Inviare un comando SQL
+* Processare il risultato
+
+---
 
 L'impiego di JDBC solitamente si articola attraverso quattro passi:
 
@@ -96,6 +129,38 @@ Comunque, la sintassi per effettuare l'operazione è la seguente:
 Class.forName(stringa_driver);
 
 ```
+
+### Tipi di driver
+
+#### Tipo 1 (JDBC-ODBC bridge)‫‏‬
+
+* Traduce JDBC in ODBC (Open DataBase Connectivity)
+* Viene utilizzato un driver ODBC
+* JDK contiene un ponte JDBC-ODBC
+* E’ necessario configurare ODBC
+* Generalmente utilizzato in ambito di test
+#### Tipo 2 (Native-API Driver)‫‏‬
+
+* Scritto parzialmente in java e parzialmente in codice nativo
+* Chiamate JDBC vengono convertite in chiamate alle API dei client
+* Oracle, IBM DB2
+* E’ necessario installare le librerie native
+
+#### Tipo 3 (Network-Protocol Driver / MiddleWare Driver)
+
+* Fa uso di un middle tier tra le il programma chiamante e il database
+* Il middle-tier (application server) converte le chiamate JDBC in un
+* protocollo DBMS-independent
+* Vengono poi traslate da un server nel relativo protocollo del DBMS
+#### Tipo 4 (Native-Protocol Driver / Pure Java Driver)
+
+* Chiamate JDBC vengono convertite direttamente nelle chiamate al protocollo del DBMS specifico
+* Scritto completamente in Java
+
+---
+
+* [source](http://www.oracle.com/technetwork/database/features/jdbc/)  
+
 ---
 
 java.sql.Connection
