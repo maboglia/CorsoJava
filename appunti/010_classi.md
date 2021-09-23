@@ -49,10 +49,7 @@ public class HelloWorld {
 }
 ```
 
---- 
-
-
-
+---
 
 
 ### Le classi in Java
@@ -70,7 +67,6 @@ public class HelloWorld {
 * **Metodi**: sono utilizzati per modificare o consultare lo stato di un oggetto. Sono equivalenti alle funzioni o procedure di altri linguaggi di programmazione
 
 ---
-
 
 
 ## Classi e documentazione

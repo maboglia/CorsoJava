@@ -18,9 +18,9 @@
     * Instance Initializer Blocks
     * Order of Initialization
 * Distinguishing Between Object References and Primitives
-        * Primitive Types
-        * Reference Types
-        * Key Differences
+    * Primitive Types
+    * Reference Types
+    * Key Differences
 * Declaring and Initializing Variables
     * Declaring Multiple Variables
 * Identifiers
