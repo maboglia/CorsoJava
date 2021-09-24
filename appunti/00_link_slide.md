@@ -71,7 +71,7 @@
 * [100_programma_OCP.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=100_programma_OCP.md)
 * [100_Programma_Oracle.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=100_Programma_Oracle.md)
 * [100_useful_snippets_java.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=100_useful_snippets_java.md)
-* [110_MBTutsObservable.javafx.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=* [110_MBTutsObservable.javafx.md)
+* [110_MBTutsObservable.javafx.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=110_MBTutsObservable.javafx.md)
 * [111_MBTuts_JavaFX_Switching_Scenes.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=111_MBTuts_JavaFX_Switching_Scenes.md)
 * [112_MBTuts_Stream.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=112_MBTuts_Stream.md)
 * [113_MBTuts_Jax_RS.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=113_MBTuts_Jax_RS.md)
