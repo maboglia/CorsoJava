@@ -500,9 +500,6 @@
   * In questo caso dichiarano di ritornare il tipo predefinito void	
   * void setRaggio(double r) { … }	
 
----
-
-### Valori di ritorno	
 
 ---
 
