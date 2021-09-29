@@ -1,4 +1,4 @@
-# Sommario argomenti Corso Java SE
+# Dettaglio argomenti Corso Java SE
 
 
 ---
