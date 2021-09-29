@@ -1046,11 +1046,11 @@
 * Offre metodi per scrivere i singoli byte	
   * Tutti i metodi possono lanciare IOException	
 ### Metodi principali	
-* void write(int b)	
+* `void write(int b)`	
   * Scrive il valore b (troncato ad 8 bit) sul flusso	
-* void flush()	
+* `void flush()`	
   * Forza l’invio effettivo di byte temporaneamente accodati all’interno dell’oggetto	
-* void close()	
+* `void close()`	
   * Chiude il flusso e rilascia le risorse di sistema associate	
   * Una volta chiuso, il flusso non può essere riaperto né può ricevere ulteriori dati	
   * Occorre ricordarsi di chiamarlo	
