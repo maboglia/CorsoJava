@@ -1,6 +1,6 @@
 # Corso Java
 
-## website
+## website on github
 [appunti navigabili](https://maboglia.github.io/)
 
 ## Appunti, dispense, tutorial
@@ -9,6 +9,8 @@
 
 ## Slide
 * [gli stessi appunti in formato slide](https://github.com/maboglia/CorsoJava/blob/master/appunti/00_link_slide.md)
+* [Java SE](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=001_microprogettazione-java.md)
+
 
 ## esempi snippet codice
 * [esempi base](https://github.com/maboglia/CorsoJava/tree/master/esempi)
