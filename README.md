@@ -8,8 +8,9 @@
 * [dispense](https://github.com/maboglia/CorsoJava/tree/master/appunti/Dispense)
 
 ## Slide
-* [gli stessi appunti in formato slide](https://github.com/maboglia/CorsoJava/blob/master/appunti/00_link_slide.md)
-* [Java SE](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=001_microprogettazione-java.md)
+* [Java SE - Programma del corso](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=000_programma_UF.md)
+* [Java SE - Dettaglio](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=001_microprogettazione-java.md)
+* [link argomenti](https://github.com/maboglia/CorsoJava/blob/master/appunti/00_link_slide.md)
 
 
 ## esempi snippet codice
