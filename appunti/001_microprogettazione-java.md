@@ -26,7 +26,7 @@
 
 ### Codice Sorgente	
 * I programmi Java sono suddivisi in “classi”	
-  * Le classi sono descritte all’interno di file di testo con estensione “.java”	
+  * Le classi sono descritte all'interno di file di testo con estensione “.java”	
   * Ogni file contiene una sola classe	
   * Il nome file deve coincidere con il nome della classe	
 
@@ -64,7 +64,7 @@
 * Il codice sorgente Java è  composto da testo	
   * Un editor qualsiasi è sufficiente	
 * Si possono usare ambienti integrati per lo sviluppo (IDE)	
-  * Offrono strumenti per la redazione,  la compilazione, l’esecuzione e  la ricerca degli errori	
+  * Offrono strumenti per la redazione,  la compilazione, l'esecuzione e  la ricerca degli errori	
 
 ---
 
@@ -89,7 +89,7 @@
 
 ### Il debugger	
 * Strumento ausiliario al programmatore	
-  * Monitorare l’esecuzione di una applicazione	
+  * Monitorare l'esecuzione di una applicazione	
   * Analisi dei valori assunti dalle variabili, i metodi della classe, …	
 * Comando jdb.exe	
 
@@ -136,18 +136,18 @@
 
 ### Installare Java	
 * Java Software  Development KIT  (J2SE SDK)	
-  * Versione utilizzata nel corso 1.4.x	
+  * Versione utilizzata nel corso 17	
   * Disponibile gratuitamente:	
   * compilatore, librerie standard, macchina  virtuale, …	
 
 ---
 
 ### Installare Java	
-* Necessario modificare la variabile d’ambiente	
+* Se necessario, modificare la variabile d'ambiente	
   * PATH= ... ;<JAVA_HOME>/bin	
   * per invocare i comandi java (compilatore, macchina virtuale, debugger, ...)	
 * In Windows	
-  * Pannello di controllo   Sistema  Avanzate  Variabili d’ambiente	
+  * Pannello di controllo   Sistema > Avanzate > Variabili d'ambiente	
 
 ---
 
@@ -157,7 +157,7 @@
 * `<File>.class`	
   * Contengono il risultato della compilazione	
   * Espressi in bytecode (formato binario)	
-  * All’interno sono presenti le istruzioni, la tabella dei simboli, le informazioni ausiliarie necessarie all’esecuzione	
+  * All'interno sono presenti le istruzioni, la tabella dei simboli, le informazioni ausiliarie necessarie all'esecuzione	
 
 ---
 
@@ -167,19 +167,19 @@
   * Contengono una o più classi Java, risorse e ulteriori informazioni ausiliarie (documentazione, parametri di configurazione, …)	
 * `<File>.properties`	
   * Coppie chiave – valore	
-  * proprietà del sistema o dell’applicazione	
+  * proprietà del sistema o dell'applicazione	
   * Si usano per configurare il sistema	
 
 ---
 
 ### Programmi Java	
 * Java è un linguaggio ad oggetti	
-  * L’unità minima di programmazione è la classe	
+  * L'unità minima di programmazione è la classe	
   * Un programma Java utilizza una o più classi	
 * Per ora, consideriamo programmi formati da una sola classe	
   * Un solo file sorgente	
   * Il nome del file coincide con il nome della classe	
-  * L’estensione del file è “.java”	
+  * L'estensione del file è “.java”	
 
 ---
 
@@ -216,7 +216,7 @@
 ---
 
 ### Tipi: una forma per i dati	
-* Variabili, parametri,  valori ritornati hanno  un tipo che ne precisa /limita l’uso	
+* Variabili, parametri,  valori ritornati hanno  un tipo che ne precisa /limita l'uso	
   * Possono contenere solo valori conformi al proprio tipo	
 * Esistono tipi	
   * Semplici (primitivi)	
@@ -279,18 +279,18 @@
 
 ### Tipi non numerici: char	
 * Rappresentazione su due byte	
-  * Le costanti sono indicate tra apici semplici (‘a’)	
-  * I valori non stampabili sono rappresentati nel formato unicode (‘\u27AF’)	
+  * Le costanti sono indicate tra apici semplici (‘a')	
+  * I valori non stampabili sono rappresentati nel formato unicode (‘\u27AF')	
 * Operazioni	
   * confronto  (==, !=, >,>=, <, <=)	
 
 ---
 
 ### Dichiarazioni	
-* Introducono l’utilizzo di una variabile	
+* Introducono l'utilizzo di una variabile	
 * Formato generale	
-  * <Tipo> <Nome> ‘;’	
-  * <Tipo> <Nome> ‘=’ <ValoreIniziale> ‘;’	
+  * <Tipo> <Nome> ‘;'	
+  * <Tipo> <Nome> ‘=' <ValoreIniziale> ‘;'	
 * Esempi	
   * char c;	
   * int i = 10;	
@@ -317,7 +317,7 @@
   * `int i = 1, j = 5;`
   * `i = (5*j) % 10;`
   * `long l = 10L;`
-  * `char c1 = ‘a’, c2 = ‘\u0062’;`
+  * `char c1 = ‘a', c2 = ‘\u0062';`
   * `boolean b = false;`
 
 
@@ -336,10 +336,10 @@
 
 ### Convenzioni sui nomi	
 * Le classi hanno nomi che iniziano con la lettera maiuscola	
-* Metodi, attributi e variabili hanno l’iniziale minuscola	
-  * Se un nome è composto da più parole giustapposte, l’iniziale di ogni parola successiva alla prima è maiuscola	
-  * int contatoreNumeroOccorrenze = 0;	
-  * class CentraleTelefonica { }	
+* Metodi, attributi e variabili hanno l'iniziale minuscola	
+  * Se un nome è composto da più parole giustapposte, l'iniziale di ogni parola successiva alla prima è maiuscola	
+  * `int contatoreNumeroOccorrenze = 0;`	
+  * `class CentraleTelefonica { }`	
 
 ---
 
@@ -356,8 +356,8 @@
 ### Oggetti	
 * Data una classe, è possibile costruire uno o più oggetti	
   * Gli oggetti vengono detti “istanze” della classe	
-  * In Java si utilizza la notazione   new NomeClasse ( );	
-* Ogni oggetto “vive” all’interno della memoria del calcolatore	
+  * In Java si utilizza la notazione   `new NomeClasse ( );`	
+* Ogni oggetto “vive” all'interno della memoria del calcolatore	
   * Qui viene memorizzato il suo stato	
   * Oggetti differenti occupano posizioni differenti	
 
@@ -365,7 +365,7 @@
 
 ### Oggetti	
 * Stato	
-  * L’insieme dei parametri caratteristici che contraddistinguono un oggetto in un dato istante	
+  * L'insieme dei parametri caratteristici che contraddistinguono un oggetto in un dato istante	
   * Modellato come insieme di attributi	
 * Comportamento	
   * Descrive come si modifica lo stato a fronte degli stimoli provenienti dal mondo esterno	
@@ -375,9 +375,9 @@
 
 ### Stato di un oggetto	
 * Ogni oggetto ha un proprio stato:	
-  * Insieme dei valori assunti dagli attributi dell’oggetto	
+  * Insieme dei valori assunti dagli attributi dell'oggetto	
   * Operando sui metodi, si può modificare lo stato	
-* All’atto della costruzione di un oggetto, occorre assegnare un valore ai diversi attributi	
+* All'atto della costruzione di un oggetto, occorre assegnare un valore ai diversi attributi	
   * È il compito di un metodo particolare, detto costruttore	
 
 ---
@@ -407,16 +407,16 @@
 
 ### Riferimenti	
 * Si opera su un oggetto attraverso un riferimento	
-  * Indica la posizione in memoria occupata dall’oggetto	
-* All’atto della costruzione, l’operatore new:	
-  * Alloca un blocco di memoria sufficiente a contenere l’oggetto	
+  * Indica la posizione in memoria occupata dall'oggetto	
+* All'atto della costruzione, l'operatore new:	
+  * Alloca un blocco di memoria sufficiente a contenere l'oggetto	
   * Invoca il costruttore, determinandone la corretta inizializzazione	
   * Restituisce il riferimento (indirizzo) del blocco inizializzato	
 
 ---
 
 ### Variabili	
-* I riferimenti possono essere memorizzati all’interno di variabili locali	
+* I riferimenti possono essere memorizzati all'interno di variabili locali	
   * Devono avere un tipo compatibile con il tipo di riferimento che si intende memorizzare al loro interno	
   * Devono essere dichiarate prima di essere usate	
 
@@ -424,17 +424,17 @@
 
 ### Ciclo di vita  delle variabili locali	
 * Le variabili locali “esistono” finché il metodo (blocco di codice) che le definisce è in esecuzione	
-  * Quando si incontra la loro definizione, il sistema riserva un’area di memoria per ospitarne il contenuto	
-  * Quando il metodo (blocco) termina, l’area viene rilasciata ed il contenuto della variabile perso	
+  * Quando si incontra la loro definizione, il sistema riserva un'area di memoria per ospitarne il contenuto	
+  * Quando il metodo (blocco) termina, l'area viene rilasciata ed il contenuto della variabile perso	
   * La memoria viene prelevata da una zona apposita detta “stack” (quella in cui si trovano gli oggetti, invece, si chiama “heap”)	
 
 ---
 
 ### Riferimenti multipli	
 * Uno stesso oggetto può essere denotato da più variabili	
-  * Succede quando si assegna ad un variabile il valore contenuto in un’altra variabile	
+  * Succede quando si assegna ad un variabile il valore contenuto in un'altra variabile	
   * Le variabili condividono il riferimento allo stesso oggetto	
-* Se si opera sull’oggetto attraverso la prima variabile, le modifiche sono visibili da tutte le altre variabili coinvolte	
+* Se si opera sull'oggetto attraverso la prima variabile, le modifiche sono visibili da tutte le altre variabili coinvolte	
 
 ---
 
@@ -446,7 +446,7 @@
 ---
 
 ### Copia di variabili elementari	
-* Se si assegna ad una variabile elementare il valore di un’altra variabile viene eseguita una copia del valore	
+* Se si assegna ad una variabile elementare il valore di un'altra variabile viene eseguita una copia del valore	
   * I due valori diventano disgiunti e potranno evolvere indipendentemente	
 
 ---
@@ -477,11 +477,11 @@
   * Elementare	
   * Complesso	
 * Nel caso di parametri di tipo elementare	
-  * All’interno del parametro viene memorizzata una copia del valore indicato dal chiamante	
+  * All'interno del parametro viene memorizzata una copia del valore indicato dal chiamante	
   * Eventuali modifiche compiute dal metodo sul valore non si ripercuotono sul chiamante	
 * Se il tipo è complesso	
-  * Il parametro contiene una copia del riferimento all’oggetto passato come parametro	
-  * Le eventuali modifiche sullo stato dell’oggetto sono visibili al chiamante	
+  * Il parametro contiene una copia del riferimento all'oggetto passato come parametro	
+  * Le eventuali modifiche sullo stato dell'oggetto sono visibili al chiamante	
 
 ---
 
@@ -504,7 +504,7 @@
 ---
 
 ### Tipologie di metodi	
-* Un metodo, in generale, può operare liberamente sull’oggetto su cui viene invocato…	
+* Un metodo, in generale, può operare liberamente sull'oggetto su cui viene invocato…	
   * Modificandone lo stato	
   * Invocando metodi su altri oggetti conosciuti	
   * Effettuando calcoli	
@@ -515,7 +515,7 @@
 
 ### Tipologie di metodi	
 * Modificatori (mutator)	
-  * Servono ad alterare, in modo controllato, lo stato dell’oggetto (o una sua parte specifica)	
+  * Servono ad alterare, in modo controllato, lo stato dell'oggetto (o una sua parte specifica)	
   * Di solito hanno parametri e non ritornano nulla	
   * Per convenzione, in Java, hanno un nome simile a void setXyz(…);	
 * Lettori (accessor)	
@@ -537,7 +537,7 @@
 ---
 
 ### Attributi e costruttore	
-* All’atto dell’invocazione del costruttore, tutti gli attributi hanno un valore di default	
+* All'atto dell'invocazione del costruttore, tutti gli attributi hanno un valore di default	
   * Gli attributi semplici valgono 0 (false, nel caso dei valori booleani)	
   * Quelli complessi, valgono null	
 * È compito del costruttore assegnare valori opportuni se quelli di default non sono adatti	
@@ -546,17 +546,17 @@
 ---
 
 ### Ciclo di vita di un oggetto	
-* L’operatore new, su richiesta del programmatore, alloca la memoria necessaria a contenere un oggetto	
+* L'operatore new, su richiesta del programmatore, alloca la memoria necessaria a contenere un oggetto	
   * D1: quando viene rilasciata?	
-  * R1: quando l’oggetto non serve più!	
+  * R1: quando l'oggetto non serve più!	
   * D2: chi decide che non serve più?	
-  * R2: l’ambiente di esecuzione (!?!)	
+  * R2: l'ambiente di esecuzione (!?!)	
 
 ---
 
 ### Accessibilità	
 * Un oggetto è accessibile fino a che ne esiste un riferimento	
-* Nel momento in cui non esistano più riferimenti, l’oggetto può essere eliminato	
+* Nel momento in cui non esistano più riferimenti, l'oggetto può essere eliminato	
   * Rilasciando la memoria che occupa	
 * I riferimenti sono memorizzati in variabili e attributi	
   * Si cancellano quando la variabile cessa di esistere (fine del blocco)	
@@ -565,9 +565,9 @@
 ---
 
 ### Conteggio dei riferimenti	
-* All’interno di ogni oggetto, Java mantiene un contatore nascosto	
+* All'interno di ogni oggetto, Java mantiene un contatore nascosto	
   * Indica il numero di riferimenti esistenti a quello specifico oggetto	
-  * Quando il suo valore scende a 0, indica che l’oggetto può essere eliminato, rilasciando la memoria che occupa	
+  * Quando il suo valore scende a 0, indica che l'oggetto può essere eliminato, rilasciando la memoria che occupa	
 * Un particolare sottosistema, il garbage collector, si occupa, periodicamente, di riciclare la memoria degli oggetti eliminati	
   * Viene eseguito automaticamente dalla macchina virtuale Java	
 
@@ -587,8 +587,8 @@
 
 ### Istruzioni di scelta	
 * Verifica della condizione	
-  * Vera si esegue l’istruzione o il blocco di istruzioni successivo	
-  * Falsa si salta all’istruzione successiva oppure viene eseguito il blocco “else”	
+  * Vera si esegue l'istruzione o il blocco di istruzioni successivo	
+  * Falsa si salta all'istruzione successiva oppure viene eseguito il blocco “else”	
 
 ---
 
@@ -614,28 +614,28 @@
 
 ### Salto strutturato	
 * Istruzioni che permettono di alterare il flusso di esecuzione:	
-  * break : provoca l’uscita immediata dal blocco	
-  * continue: salto delle rimanenti istruzioni del blocco, procede con l’interazione successiva del ciclo	
-  * Usati nei costrutti while, do/while, for, switch (quest’ultimo, solo break)	
+  * break : provoca l'uscita immediata dal blocco	
+  * continue: salto delle rimanenti istruzioni del blocco, procede con l'interazione successiva del ciclo	
+  * Usati nei costrutti while, do/while, for, switch (quest'ultimo, solo break)	
 
 ---
 
 ### Oggetti e utilizzatori	
-* Non tutte le caratteristiche di un oggetto devono essere visibili dall’esterno	
+* Non tutte le caratteristiche di un oggetto devono essere visibili dall'esterno	
   * Rischio di manomissioni indebite	
-  * Occorre separare l’interfaccia dall’implementazione	
-* Si realizza l’incapsulamento utilizzando un modificatore di visibilità	
+  * Occorre separare l'interfaccia dall'implementazione	
+* Si realizza l'incapsulamento utilizzando un modificatore di visibilità	
   * Metodi e attributi possono preceduti da una parola chiave che indica il livello di privilegio loro associato	
 
 ---
 
 ### Modificatori di visibilità	
 * Private	
-  * Indica che si può accedere all’elemento solo da altri metodi appartenenti alla stessa classe	
+  * Indica che si può accedere all'elemento solo da altri metodi appartenenti alla stessa classe	
 * Public	
-  * Indica che l’elemento può essere utilizzato da metodi di qualsiasi classe	
+  * Indica che l'elemento può essere utilizzato da metodi di qualsiasi classe	
 * [Nulla]	
-  * In assenza di indicazioni, l’elemento è accessibile alle altre classi dello stesso “gruppo” (package)	
+  * In assenza di indicazioni, l'elemento è accessibile alle altre classi dello stesso “gruppo” (package)	
 
 ---
 
@@ -643,12 +643,12 @@
 * Anche le classi possono essere precedute da un modificatore di visibilità	
   * In questo caso, “private” non ha senso	
 * Se una classe è dichiarata pubblica, può essere utilizzata da classi appartenenti a qualsiasi gruppo (package)	
-  * Altrimenti, può essere usata solo nell’ambito del gruppo in cui è stata definita	
+  * Altrimenti, può essere usata solo nell'ambito del gruppo in cui è stata definita	
 
 ---
 
 ### Incapsulamento	
-* Per massimizzare il riuso, solo l’informazione minima necessaria al funzionamento deve essere accessibile	
+* Per massimizzare il riuso, solo l'informazione minima necessaria al funzionamento deve essere accessibile	
 * Di solito:	
   * Attributi privati	
   * Metodi pubblici	
@@ -659,13 +659,13 @@
 ### Metodi e attributi statici	
 * Oggetti appartenenti ad una stessa classe hanno lo stesso insieme di attributi	
   * Ogni oggetto ha però i propri valori, indipendenti dagli altri	
-  * Un metodo opera sui valori dell’oggetto su cui è invocato	
-  * L’evoluzione dello stato di un oggetto è indipendente da quella di altri oggetti della stessa classe	
+  * Un metodo opera sui valori dell'oggetto su cui è invocato	
+  * L'evoluzione dello stato di un oggetto è indipendente da quella di altri oggetti della stessa classe	
 
 ---
 
 ### Attributi statici	
-* Talora, si vuole memorizzare un’informazione comune a tutti gli oggetti di una data classe	
+* Talora, si vuole memorizzare un'informazione comune a tutti gli oggetti di una data classe	
   * Si utilizzano gli attributi “statici”	
   * Il loro valore viene conservato in un blocco di memoria separato, relativo alla classe	
   * Sono analoghi a variabili globali in altri linguaggi (C, C++)	
@@ -677,7 +677,7 @@
   * `double d= Cerchio.pi/2;`	
 * Gli attributi statici devono essere inizializzati	
   * Non si può fare nel costruttore!	
-  * Occorre farlo all’atto della dichiarazione	
+  * Occorre farlo all'atto della dichiarazione	
   * `static double pi = 3.14;`	
 
 ---
@@ -726,11 +726,11 @@
 
 ### Confronto e ricerca	
 * `public boolean equals(String s)`
-  * Restituisce true se il parametro contiene gli stessi caratteri dell’oggetto corrente	
+  * Restituisce true se il parametro contiene gli stessi caratteri dell'oggetto corrente	
 * `public boolean equalsIgnoreCase(String s)`
   * Idem, trascurando la differenza tra maiuscole e minuscole	
 * `public int indexOf(String s)`
-  * Restituisce la posizione, all’interno della sequenza di caratteri, in cui inizia la stringa indicata come parametro (-1 se non esiste)	
+  * Restituisce la posizione, all'interno della sequenza di caratteri, in cui inizia la stringa indicata come parametro (-1 se non esiste)	
 
 ---
 
@@ -774,13 +774,13 @@
 
 ### Package: appartenenza	
 * Le classi che appartengono ad uno stesso package formano un gruppo	
-* Come nel caso di una famiglia, c’è un rapporto privilegiato:	
+* Come nel caso di una famiglia, c'è un rapporto privilegiato:	
   * Accessibilità a tutti i componenti non privati (public, protected, <vuoto>)	
 
 ---
 
 ### Il nome dei package	
-* Sequenza di parole separate da ‘.’	
+* Sequenza di parole separate da ‘.'	
   * Dovrebbe suggerire lo scopo comune del gruppo di classi	
   * Per evitare collisioni, spesso inizia con il nome DNS in ordine inverso	
   * it.java.didattica.esempi	
@@ -790,7 +790,7 @@
 ### Sintassi	
 * La parola chiave “package” denota il gruppo di appartenenza	
   * È seguita dal nome del package	
-  * Deve essere posta all’inizio del file sorgente	
+  * Deve essere posta all'inizio del file sorgente	
 * Le classi dello stesso package si “conoscono”	
   * Basta usare il nome proprio della classe	
 * Tra package diversi occorre usare il nome completo	
@@ -799,7 +799,7 @@
 ---
 
 ### Importare riferimenti	
-* L’uso di nomi completi è scomodo	
+* L'uso di nomi completi è scomodo	
   * Gli amici si chiamano per nome	
 * Il costrutto “import” permette di definire le classi note	
   * Queste vengono indicate solo per nome	
@@ -829,9 +829,9 @@
 ---
 
 ### Compilare ed eseguire	
-* Per poter utilizzare una classe all’interno di un’altra non basta “risolverne” il nome	
+* Per poter utilizzare una classe all'interno di un'altra non basta “risolverne” il nome	
   * Occorre localizzare il codice ad essa associato	
-  * Altrimenti viene lanciato l’errore “NoClassDefFoundError”	
+  * Altrimenti viene lanciato l'errore “NoClassDefFoundError”	
 
 ---
 
@@ -843,7 +843,7 @@
 ---
 
 ### La variabile CLASSPATH	
-* Variabile d’ambiente del sistema operativo	
+* Variabile d'ambiente del sistema operativo	
   * Specifica un insieme di cartelle radice in cui cercare i file “.class” o le sottocartelle dei package	
   * Può contenere direttori compressi (file “.jar”)	
 
@@ -898,7 +898,7 @@
 
 ---
 
-### java.lang: l’ABC delle applicazioni Java	
+### java.lang: l'ABC delle applicazioni Java	
 * Fornisce le classi fondamentali  per la programmazione Java	
   * Importato automaticamente dal compilatore in tutti i programmi	
 * Contiene – tra le altre – le classi  Object, Throwable, String	
@@ -917,7 +917,7 @@
 ### Classi “wrapper”	
 * Utilizzate per trasformare in oggetti dati elementari	
   * Il dato contenuto è immutabile	
-* Pattern generale dell’ingegneria del software	
+* Pattern generale dell'ingegneria del software	
 
 ---
 
@@ -992,10 +992,10 @@
 ---
 
 ### Array	
-* All’interno di un programma può essere necessario gestire collezioni di dati:	
+* All'interno di un programma può essere necessario gestire collezioni di dati:	
   * Il modo più semplice per organizzarli, se sono di tipo omogeneo, è attraverso il concetto di array o vettore	
 * Array in Java: oggetti che incapsulano sequenze ordinate di dati	
-  * Hanno dimensione fissa, definita all’atto della creazione	
+  * Hanno dimensione fissa, definita all'atto della creazione	
   * Sintassi semplificata per accedere ai singoli elementi	
 
 ---
@@ -1005,17 +1005,17 @@
   * Quelli che modellano sequenze di tipi elementari (interi, reali, caratteri, booleani)	
   * Quelli che modellano sequenze di oggetti	
 * Qualunque sia il gruppo di appartenenza, gli array sono sempre oggetti complessi	
-  * Vengono creati tramite l’operatore new	
+  * Vengono creati tramite l'operatore new	
   * Si accede ad essi attraverso un riferimento in memoria	
 
 ---
 
 ### Inizializzare un array	
-* Nel caso di array di tipi elementari, all’atto della creazione vengono assegnati valori di default	
+* Nel caso di array di tipi elementari, all'atto della creazione vengono assegnati valori di default	
   * 0 per i numeri (interi e reali)	
   * false per i valori logici	
-  * ‘\000’ per i caratteri	
-* A volte si conosce a priori l’intero contenuto dell’array	
+  * ‘\000' per i caratteri	
+* A volte si conosce a priori l'intero contenuto dell'array	
   * Java offre una sintassi semplificata per la sua inizializzazione	
 
 ---
@@ -1023,10 +1023,10 @@
 ### Uso degli array	
 * Per accedere ad un singolo elemento, si utilizza la sintassi	
   * nome_array [ indice ]	
-  * L’indice deve essere compreso tra 0 e il numero di elementi presenti nell’array	
+  * L'indice deve essere compreso tra 0 e il numero di elementi presenti nell'array	
 * Un array può contenere anche tipi complessi (oggetti)	
   * In questo caso, nelle singole posizioni sono memorizzati i riferimenti agli oggetti specifici	
-  * All’atto della creazione del vettore, tutti i riferimenti contenuti valgono null	
+  * All'atto della creazione del vettore, tutti i riferimenti contenuti valgono null	
 
 ---
 
@@ -1035,7 +1035,7 @@
   * int [ ] [ ] matrice=   new int [3] [3];	
 * Si tratta di “array di array”	
   * Il primo indice si riferisce alla riga, il secondo alla colonna	
-* Non c’è limite al numero di dimensioni dell’array	
+* Non c'è limite al numero di dimensioni dell'array	
   * Se non la memoria disponibile…	
 
 ---
@@ -1053,7 +1053,7 @@
   * In quanto sottendono concetti semanticamente “vicini”	
   * Una mountain bike assomiglia ad una bicicletta tradizionale	
 * È possibile creare classi disgiunte replicando le porzione di stato/comportamento condivise	
-  * L’approccio “Taglia&Incolla”, però, non è una strategia vincente	
+  * L'approccio “Taglia&Incolla”, però, non è una strategia vincente	
   * Difficoltà di manutenzione correttiva e perfettiva	
 * Meglio “specializzare” codice funzionante	
   * Sostituendo il minimo necessario	
@@ -1061,7 +1061,7 @@
 ---
 
 ### Ereditarietà	
-* Meccanismo per definire una nuova classe (classe derivata) come specializzazione di un’altra (classe base)	
+* Meccanismo per definire una nuova classe (classe derivata) come specializzazione di un'altra (classe base)	
   * La classe base modella un concetto generico	
   * La classe derivata modella un concetto più specifico	
 * La classe derivata:	
@@ -1074,7 +1074,7 @@
 ### Astrazione	
 * Il processo di analisi e progettazione del software di solito procede per raffinamenti successivi	
   * Spesso capita che le similitudini tra classi non siano colte inizialmente	
-  * In una fase successiva, si coglie l’esigenza/opportunità di introdurre un concetto più generico da cui derivare classi specifiche	
+  * In una fase successiva, si coglie l'esigenza/opportunità di introdurre un concetto più generico da cui derivare classi specifiche	
 * Processo di astrazione	
   * Si introduce la superclasse che “astrae” il concetto comune condiviso  dalle diverse sottoclassi	
   * Le sottoclassi vengono “spogliate” delle funzionalità comuni che migrano nella superclasse	
@@ -1086,16 +1086,16 @@
   * Un oggetto, istanza di una sotto-classe, è formalmente compatibile con il tipo della classe base	
   * Il contrario non è vero!	
 * Esempio	
-  * Un’automobile è un veicolo	
-  * Un veicolo non è (necessariamente) un’automobile	
+  * Un'automobile è un veicolo	
+  * Un veicolo non è (necessariamente) un'automobile	
 * La compatibilità diviene effettiva se	
   * I metodi ridefiniti nella sotto-classe rispettano la semantica della superclasse	
-* L’ereditarietà gode delle proprietà transitiva	
+* L'ereditarietà gode delle proprietà transitiva	
   * Un tandem è un veicolo (poiché è una bicicletta, che a sua volta è un veicolo)	
 
 ---
 
-### Vantaggi dell’ereditarietà	
+### Vantaggi dell'ereditarietà	
 * Evitare la duplicazione  di codice	
 * Permettere il riuso  di funzionalità	
 * Semplificare la costruzione  di nuove classi	
@@ -1120,7 +1120,7 @@
 ---
 
 ### Costruzione	
-* Per realizzare un’istanza di una classe derivata, occorre – innanzi tutto – costruire l’oggetto base	
+* Per realizzare un'istanza di una classe derivata, occorre – innanzi tutto – costruire l'oggetto base	
   * Di solito, provvede automaticamente il compilatore, invocando – come prima operazione di ogni costruttore della classe derivata – il costruttore anonimo della superclasse	
   * Si può effettuare in modo esplicito, attraverso il costrutto super(…)	
   * Eventuali ulteriori inizializzazioni possono essere effettuate solo successivamente	
@@ -1128,7 +1128,7 @@
 ---
 
 ### Accedere alla superclasse	
-* L’oggetto derivato contiene tutti i componenti (attributi e metodi) dell’oggetto da cui deriva	
+* L'oggetto derivato contiene tutti i componenti (attributi e metodi) dell'oggetto da cui deriva	
   * Ma i suoi metodi non possono operare direttamente su quelli definiti privati	
 * La restrizione può essere allentata:	
   * La super-classe può definire attributi e metodi con visibilità “protected”	
@@ -1143,20 +1143,20 @@
   * Gli stessi parametri (tipo, numero, ordine)	
   * Lo stesso tipo di ritorno	
   * (La stessa semantica!)	
-* Per le istanze della sottoclasse, il nuovo metodo nasconde l’originale	
+* Per le istanze della sottoclasse, il nuovo metodo nasconde l'originale	
 
 ---
 
 ### Ridefinire i metodi	
 * A volte, una sottoclasse vuole “perfezionare” un metodo ereditato, non sostituirlo in toto	
-  * Per invocare l’implementazione presente nella super-classe, si usa il costrutto  super.<nomeMetodo> ( … )	
+  * Per invocare l'implementazione presente nella super-classe, si usa il costrutto  super.<nomeMetodo> ( … )	
 
 ---
 
 ### Compatibilità formale	
-* Un’istanza di una classe derivata è formalmente compatibile con il tipo della super-classe	
+* Un'istanza di una classe derivata è formalmente compatibile con il tipo della super-classe	
   * Base b = new Derivata( );	
-* Il tipo della variabile “b” (Base) limita le operazioni che possono essere eseguite  sull’oggetto contenuto	
+* Il tipo della variabile “b” (Base) limita le operazioni che possono essere eseguite  sull'oggetto contenuto	
   * Anche se questo ha una classe più specifica (Derivata), in grado di offrire un maggior numero di operazioni	
   * Altrimenti viene generato un errore di compilazione	
 
@@ -1168,7 +1168,7 @@
   * …anche se la variabile che lo contiene appartiene ad una classe più generica!	
 * Una variabile generica può avere “molte forme”	
   * Contenere oggetti di sottoclassi differenti	
-  * In caso di ridefinizione, il metodo chiamato dipende dal tipo effettivo dell’oggetto	
+  * In caso di ridefinizione, il metodo chiamato dipende dal tipo effettivo dell'oggetto	
 
 ---
 
@@ -1196,42 +1196,42 @@
   * La loro implementazione base è spesso minimale	
   * La tecnica del polimorfismo permette di ridefinirli	
 * public boolean equals(Object o)	
-  * Restituisce “vero” se l’oggetto confrontato è identico (ha lo stesso riferimento) a quello su cui viene invocato il metodo	
+  * Restituisce “vero” se l'oggetto confrontato è identico (ha lo stesso riferimento) a quello su cui viene invocato il metodo	
   * Per funzionare correttamente, ogni sottoclasse deve fornire la propria implementazione polimorfica	
 
 ---
 
 ### Metodi di Object	
 * public String toString()	
-  * Restituisce una rappresentazione stampabile dell’oggetto	
-  * L’implementazione base fornita indica il nome della classe seguita dal riferimento relativo all’oggetto (java.lang.Object@10878cd)	
+  * Restituisce una rappresentazione stampabile dell'oggetto	
+  * L'implementazione base fornita indica il nome della classe seguita dal riferimento relativo all'oggetto (java.lang.Object@10878cd)	
 * public int hashCode()	
-  * Restituisce un valore intero legato al contenuto dell’oggetto	
-  * Se i dati nell’oggetto cambiano, deve restituire un valore differente	
+  * Restituisce un valore intero legato al contenuto dell'oggetto	
+  * Se i dati nell'oggetto cambiano, deve restituire un valore differente	
   * Oggetti “uguali” devono restituire lo stesso valore, oggetti diversi possono restituire valori diversi	
   * Utilizzato per realizzare tabelle hash	
 
 ---
 
-### Controllare l’ereditarietà	
-* In alcuni casi, si vuole impedire esplicitamente l’utilizzo della tecnica del polimorfismo	
+### Controllare l'ereditarietà	
+* In alcuni casi, si vuole impedire esplicitamente l'utilizzo della tecnica del polimorfismo	
   * Ad esempio, per motivi di sicurezza o per garantire il mantenimento di una data proprietà del sistema	
   * Si utilizza la parola chiave “final”	
 * Un metodo “final” non può essere ridefinito da una sottoclasse	
 * Una classe “final” non può avere sottoclassi	
 * Un attributo “final” non può essere modificato	
-  * Non c’entra nulla con l’ereditarietà!	
+  * Non c'entra nulla con l'ereditarietà!	
 
 ---
 
-### Controllare l’ereditarietà	
-* In altri casi si vuole obbligare l’utilizzo del polimorfismo	
+### Controllare l'ereditarietà	
+* In altri casi si vuole obbligare l'utilizzo del polimorfismo	
   * Si introducono metodi privi di implementazione	
   * Facendoli precedere dalla parola chiave “abstract”	
 * Una classe che contiene metodi astratti	
   * Deve essere, a sua volta, dichiarata abstract	
   * Non può essere istanziata direttamente	
-  * Occorre definire una sottoclasse che fornisca l’implementazione dei metodi mancanti	
+  * Occorre definire una sottoclasse che fornisca l'implementazione dei metodi mancanti	
 
 ---
 
@@ -1242,17 +1242,17 @@
 * Si utilizzano le interfacce:	
   * Insiemi di metodi astratti e costanti (attributi static final)	
   * Pubblici per definizione	
-* Una classe può implementare un’interfaccia	
-  * Fornendo il codice relativo a tutti i metodi dichiarati nell’interfaccia	
+* Una classe può implementare un'interfaccia	
+  * Fornendo il codice relativo a tutti i metodi dichiarati nell'interfaccia	
 
 ---
 
 ### Interfacce e tipi	
 * Analogamente alle classi, ogni interfaccia definisce un tipo	
-  * Un oggetto che implementa una data interfaccia ha come tipo anche il tipo dell’interfaccia	
+  * Un oggetto che implementa una data interfaccia ha come tipo anche il tipo dell'interfaccia	
   * Un oggetto può implementare molte interfacce	
   * Di conseguenza può avere molti tipi	
-* Si può verificare se un oggetto ha un dato tipo con l’operatore “instanceof”	
+* Si può verificare se un oggetto ha un dato tipo con l'operatore “instanceof”	
   * if (myObject instanceof Comparable) …	
 
 ---
@@ -1295,21 +1295,21 @@
 ### Le ragioni del fallimento	
 * Alcune dipendono dal programmatore	
   * Altre, dal contesto di esecuzione	
-* In ogni caso, quando si rileva un’anomalia	
-  * Non è possibile concludere l’operazione in corso	
+* In ogni caso, quando si rileva un'anomalia	
+  * Non è possibile concludere l'operazione in corso	
   * Il programma, nel suo complesso, viene a trovarsi in uno stato incoerente	
-* Per garantire l’affidabilità del sistema, occorre mettere in atto una strategia di rilevazione e gestione delle eccezioni	
+* Per garantire l'affidabilità del sistema, occorre mettere in atto una strategia di rilevazione e gestione delle eccezioni	
 
 ---
 
 ### Strategie	
 * Tutte le operazioni che possono fallire, devono indicare:	
   * Se sono terminate con successo o meno	
-  * L’eventuale anomalia riscontrata	
+  * L'eventuale anomalia riscontrata	
 * Alcuni linguaggi si basano su valori di ritorno	
   * Occorre verificarli	
   * Il diagramma di flusso si complica notevolmente	
-  * Se si omette un test, si compromette la capacità di valutare l’integrità del sistema	
+  * Se si omette un test, si compromette la capacità di valutare l'integrità del sistema	
 * Semplice procedura:	
   * Tre operazioni  in successione	
   * Ciascuna può fallire	
@@ -1318,38 +1318,38 @@
 
 ### Complessità	
 * Rapidamente, il codice associato ad una procedura semplice diventa ingestibile	
-  * La reazione comune consiste nell’omettere i test	
+  * La reazione comune consiste nell'omettere i test	
 * Cosa fare quando si rileva un malfunzionamento?	
 
 ---
 
 ### Contesto	
-* Spesso, ci si accorge dei fallimenti all’interno di procedure generiche	
+* Spesso, ci si accorge dei fallimenti all'interno di procedure generiche	
   * Non si sa quali contromisure prendere	
 * Occorrerebbe segnalare il malfunzionamento al chiamante	
   * Fornendo la descrizione più accurata possibile di quanto successo	
-  * Il chiamante può gestire l’eccezione o rimandarne la gestione al proprio chiamante, ricorsivamente…	
+  * Il chiamante può gestire l'eccezione o rimandarne la gestione al proprio chiamante, ricorsivamente…	
 
 ---
 
 ### La risposta di Java	
-* Un’insieme di classi per modellare l’anomalia riscontrata	
+* Un'insieme di classi per modellare l'anomalia riscontrata	
   * Fa capo alla classe Throwable	
 * Meccanismi per	
   * Segnalare...	
   * Gestire...	
   * Propagare...	
-...un’anomalia, attraverso la catena di invocazione dei metodi	
+...un'anomalia, attraverso la catena di invocazione dei metodi	
 
 ---
 
 ### Sintassi	
 * Un metodo che può fallire deve segnalarlo nella propria dichiarazione	
   * Attraverso la parola chiave “throws”	
-  * Seguita dal tipo (o dai tipi) di eccezione che si può verificare durante l’esecuzione	
+  * Seguita dal tipo (o dai tipi) di eccezione che si può verificare durante l'esecuzione	
 * Chi invoca tale metodo deve:	
   * Cercare di gestire la possibile anomalia attraverso il costrutto “try” / “catch”	
-  * Oppure, segnalare che a propria volta può generare la stessa anomalia: l’eccezione si propaga al chiamante del chiamante	
+  * Oppure, segnalare che a propria volta può generare la stessa anomalia: l'eccezione si propaga al chiamante del chiamante	
 
 ---
 
@@ -1368,14 +1368,14 @@
 ### La clausola “finally”	
 * finally indica le istruzioni che devono essere eseguite comunque	
   * Tanto nel caso in cui il codice controllato sia stato eseguito correttamente	
-  * Quanto nel caso in cui si sia verificata un’eccezione	
+  * Quanto nel caso in cui si sia verificata un'eccezione	
 
 ---
 
 ### Problemi	
 * Il codice del blocco catch selezionato dovrebbe ripristinare la coerenza nel sistema	
   * Non è detto sia possibile!	
-* È possibile che si verifichi un’eccezione durante l’esecuzione del blocco catch	
+* È possibile che si verifichi un'eccezione durante l'esecuzione del blocco catch	
   * Può dare origine ad una struttura di programmazione alquanto complessa	
   * Può essere indice di cattiva progettazione	
 
@@ -1389,7 +1389,7 @@
 
 ### Gestire le eccezioni	
 * Generare una nuova eccezione	
-  * Permette di aggiungere informazioni sul contesto in cui si è verificata l’anomalia originale	
+  * Permette di aggiungere informazioni sul contesto in cui si è verificata l'anomalia originale	
 
 ---
 
@@ -1400,8 +1400,8 @@
 ---
 
 ### Gestire le eccezioni	
-* Correggere l’anomalia…	
-  * ...e riprovare l’azione	
+* Correggere l'anomalia…	
+  * ...e riprovare l'azione	
   * Facendo attenzione ai cicli infiniti	
 
 ---
@@ -1413,7 +1413,7 @@
 ---
 
 ### Gestire le eccezioni	
-* Interrompere l’esecuzione	
+* Interrompere l'esecuzione	
   * Disastro irreparabile!	
 
 ---
@@ -1426,19 +1426,19 @@
 ---
 
 ### Modellare le eccezioni	
-* Java prevede che un’anomalia sia descritta da un oggetto di tipo Throwable	
+* Java prevede che un'anomalia sia descritta da un oggetto di tipo Throwable	
   * Classe radice della gerarchia delle eccezioni	
-  * Offre vari metodi per la gestione dell’anomalia	
+  * Offre vari metodi per la gestione dell'anomalia	
   * Le sue sottoclassi modellano diversi tipi di malfunzionamenti	
 
 ---
 
 ### La classe Throwable	
 * String getMessage()	
-  * Restituisce la stringa che descrive l’anomalia	
+  * Restituisce la stringa che descrive l'anomalia	
   * Inizializzata nel costruttore a partire da un parametro	
 * void printStackTrace()	
-  * Stampa la posizione in cui si è verificata l’eccezione e la sequenza dei metodi chiamanti ad essa relativi	
+  * Stampa la posizione in cui si è verificata l'eccezione e la sequenza dei metodi chiamanti ad essa relativi	
   * Riporta anche, se disponibili, i riferimenti alle righe, nei file sorgente, in cui si sono verificate le successive invocazioni	
 
 ---
@@ -1450,7 +1450,7 @@
   * Memoria esaurita, stack overflow, …	
 * Errori di programma	
   * Fanno capo alla classe Exception	
-  * Per lo più, devono essere gestiti in modo esplicito, dichiarandone l’eventualità nei metodi che li possono generare e utilizzando costrutti di tipo “try”	
+  * Per lo più, devono essere gestiti in modo esplicito, dichiarandone l'eventualità nei metodi che li possono generare e utilizzando costrutti di tipo “try”	
   * Alcuni possono capitare pressoché sempre (RuntimeException): non occorre dichiarare esplicitamente la possibilità che si verifichino	
 
 ---
@@ -1458,7 +1458,7 @@
 ### Definire nuove eccezioni	
 * È possibile creare classi di eccezioni personalizzate	
   * Spesso non contengono nessun metodo né attributo	
-  * Di solito, hanno un costruttore anonimo, che associa all’oggetto una descrizione generica ed un costruttore che accetta una stringa, che permette di dettagliare l’anomalia verificatasi	
+  * Di solito, hanno un costruttore anonimo, che associa all'oggetto una descrizione generica ed un costruttore che accetta una stringa, che permette di dettagliare l'anomalia verificatasi	
 
 ---
 
@@ -1471,17 +1471,17 @@
 ---
 
 ### Flussi di dati	
-* Sequenze continue e monodirezionali di informazioni che transitano da un’entità ad un’altra	
+* Sequenze continue e monodirezionali di informazioni che transitano da un'entità ad un'altra	
 * Attraverso un flusso possono scorrere dati di qualsiasi tipo:	
   * Omogenei / eterogenei	
   * Semplici / composti	
 * Un programma costituisce la sorgente o la destinazione di un flusso	
-  * L’altra estremità può essere un altro programma, il disco, lo schermo o la tastiera, …	
+  * L'altra estremità può essere un altro programma, il disco, lo schermo o la tastiera, …	
 
 ---
 
 ### Classi Java per I/O	
-* Modellano l’interazione di un programma con flussi dati	
+* Modellano l'interazione di un programma con flussi dati	
   * Ingresso o uscita	
   * Binari o testuali	
 * Organizzate in una struttura di ereditarietà	
@@ -1532,7 +1532,7 @@
   * Parametro del costruttore	
   * Deve esistere ed essere leggibile	
 * Lettura sequenziale	
-  * Dall’inizio alla fine	
+  * Dall'inizio alla fine	
 
 ---
 
@@ -1571,7 +1571,7 @@
 * `void write(int b)`	
   * Scrive il valore b (troncato ad 8 bit) sul flusso	
 * `void flush()`	
-  * Forza l’invio effettivo di byte temporaneamente accodati all’interno dell’oggetto	
+  * Forza l'invio effettivo di byte temporaneamente accodati all'interno dell'oggetto	
 * `void close()`	
   * Chiude il flusso e rilascia le risorse di sistema associate	
   * Una volta chiuso, il flusso non può essere riaperto né può ricevere ulteriori dati	
@@ -1594,7 +1594,7 @@
   * Può non esistere	
   * Occorre poterlo creare / modificare (diritto di scrittura)	
 * Scrittura sequenziale	
-  * Dall’inizio alla fine	
+  * Dall'inizio alla fine	
   * Il contenuto precedente viene cancellato	
 
 ---
@@ -1618,7 +1618,7 @@
 ### Codifica dei caratteri	
 * Un carattere UNICODE è rappresentato su 16 bit	
   * Esistono vari modi per trasformarlo in una sequenza di byte	
-* InputStreamReader e OutputStreamWriter hanno, all’interno, il codice necessario alla conversione in byte	
+* InputStreamReader e OutputStreamWriter hanno, all'interno, il codice necessario alla conversione in byte	
   * Nel costruttore si può indicare la codifica da adottare	
 
 ---
@@ -1654,14 +1654,14 @@
 * `static File[] listRoots();`	
   * Elenca le possibili radici del filesystem corrente (“a:”, “c:”, …)	
 * `static String separator;`	
-  * Indica il carattere che separa il nome di cartelle e file (‘\’ o ‘/’)	
+  * Indica il carattere che separa il nome di cartelle e file (‘\' o ‘/')	
 
 ---
 
 ### File ad accesso casuale	
 * In alcune situazioni occorre operare su un file, procedendo in modo non sequenziale	
   * Lettura e scrittura possono avvenire in qualsiasi posizione del file	
-  * indipendentemente dall’operazione precedente	
+  * indipendentemente dall'operazione precedente	
 * La classe RandomAccessFile modella il file come fosse un array di byte	
   * Memorizzato su disco, invece che in memoria	
   * Mantiene un puntatore di posizione interno che tiene traccia del prossimo byte a cui accedere	
@@ -1671,14 +1671,14 @@
 
 ### Operare in lettura	
 * `void seek(long pos)`	
-  * Posiziona il puntatore interno a pos byte dall’inizio del file	
+  * Posiziona il puntatore interno a pos byte dall'inizio del file	
 * `long getFilePointer( )`	
-  * Restituisce la posizione corrente del puntatore interno rispetto all’inizio del file	
+  * Restituisce la posizione corrente del puntatore interno rispetto all'inizio del file	
 * `String readLine( )`	
   * Legge una sequenza di caratteri ASCII terminata da newline e la converte in formato Unicode	
 * `String readUTF( )`	
   * Legge una sequenza di caratteri Unicode codificati nel formato UTF-8 (che contiene la lunghezza della stringa)	
-* Altri metodi dell’interfaccia DataInput	
+* Altri metodi dell'interfaccia DataInput	
   * Permettono di leggere tipi elementari (numeri interi, numeri in virgola mobile, caratteri e booleani)	
 
 ---
@@ -1690,5 +1690,5 @@
   * Scrive la sequenza di caratteri (due byte ciascuno) contenuti in “s”	
 * `void writeUTF(String s)`	
   * Scrive la rappresentazione della stringa “s” nel formato UTF-8	
-* Altri metodi dell’interfaccia DataOutput	
+* Altri metodi dell'interfaccia DataOutput	
   * Permettono la scrittura di dati elementari	
