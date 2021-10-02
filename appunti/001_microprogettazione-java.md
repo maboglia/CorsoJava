@@ -79,7 +79,7 @@
 ### Documentazione	
 * Strumento necessario  alla sopravvivenza del programmatore Java!!	
 * Raccolta di informazioni relative alle classi appartenenti alle librerie standard di Java	
-  * http://java.sun.com/docs/	
+  * https://docs.oracle.com/en/java/javase/	
 * Per ogni classe:	
   * Descrizione funzionale	
   * Elenco di attributi:  funzionalità, caratteristiche	
