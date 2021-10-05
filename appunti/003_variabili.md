@@ -8,7 +8,7 @@
   * non deve coincidere con una parola chiave del linguaggio
   * è meglio scegliere un **identificatore** che sia **significativo** per il programma
 
-
+---
 
 ### esempio
 
