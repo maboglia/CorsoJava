@@ -56,7 +56,6 @@ Caratteristiche principali
 
 ---
 
-
 ### Lunghezza stringa
 
 * int length()
@@ -124,4 +123,6 @@ if (s1 == s2) ...
 String s3 = s3.substring (2, 6);
 // s3 == "ima s"
 ```
+
+
 [altri esempi sulle stringhe](../esempi/02_EsempioStringhe.md)

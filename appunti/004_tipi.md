@@ -55,7 +55,7 @@
 * `true`
 * `false`
 
-
+---
 
 ## Esempi
 
