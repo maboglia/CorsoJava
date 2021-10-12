@@ -1,3 +1,4 @@
+# Java SE 11 Programmer I
 (Programma del corso Java SE - Java SE 11 Programmer I)
 
 * [Java SE 11 Programmer I](https://education.oracle.com/java/java-se/product_267)
@@ -248,7 +249,19 @@
 * Esistono tipi
   * Semplici (primitivi)
   * Composti (classi) – descritti nelle lezioni successive
- 
+
+---
+
+### __OPERATORI DI BASE__ 
+
+* Operatore d'assegnazione 
+* Operatori aritmetici 
+* Operatori unari (aggiungono o sottraggono 1)
+* Operatori relazionali o di confronto
+* Operatori logici
+* Regole di precedenza degli operatori
+* Operatori per concatenare le stringhe
+
 * [operatori](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=002_operatori.md#1)
 * [espressioni](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=002_espressioni.md#1)
 
@@ -347,7 +360,7 @@
   * `int i = 1, j = 5;`
   * `i = (5*j) % 10;`
   * `long l = 10L;`
-  * `char c1 = ‘a', c2 = ‘\u0062';`
+  * `char c1 = ‘a', c2 = ‘\u0062';//dichiaro e inizializzo più var`
   * `boolean b = false;`
 
 * [003_variabili.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=003_variabili.md)
@@ -622,7 +635,9 @@
 * Verifica della condizione
   * Vera si esegue l'istruzione o il blocco di istruzioni successivo
   * Falsa si salta all'istruzione successiva oppure viene eseguito il blocco "else"
-
+* if - else
+* switch
+* operatore ternario
 ---
 
 ### Istruzioni di scelta multipla
@@ -633,23 +648,25 @@
 ---
 
 ### Istruzioni di ripetizione	- for
+* for: per scorrere per esempio un array in entrambe le direzioni
   * espr1: inizializzazione variabile/i di controllo
   * espr2: condizione di continuazione
   * espr3: modifica della/e variabili di controllo
-
+* for(each): scorre solo in una direzione
 ---
 
 ### Istruzioni di ripetizione	- while
-* Esecuzione di un blocco di istruzioni finché la condizione rimane vera
+* while
+  * Esecuzione di un blocco di istruzioni finché la condizione rimane vera
 * do/while garantisce almeno una iterazione
 
 ---
 
 ### Salto strutturato
 * Istruzioni che permettono di alterare il flusso di esecuzione:
-  * break : provoca l'uscita immediata dal blocco
-  * continue: salto delle rimanenti istruzioni del blocco, procede con l'interazione successiva del ciclo
-  * Usati nei costrutti while, do/while, for, switch (quest'ultimo, solo break)
+  * **break** : provoca l'uscita immediata dal blocco
+  * **continue**: salto delle rimanenti istruzioni del blocco, procede con l'interazione successiva del ciclo
+  * Usati nei costrutti **while**, **do/while**, **for**, **switch** (quest'ultimo, solo break)
 
 ---
 
@@ -2052,7 +2069,7 @@
 ### Migrazione ad un'applicazione modulare
 
 * Migrare l'applicazione sviluppata utilizzando una versione Java precedente a SE 9 a SE 11 inclusa la migrazione top-down e bottom-up, suddividendo un'applicazione Java SE 8 in moduli per la migrazione
-* Esegui un'applicazione modulaized su classpath e su modulepath
+* Esegui un'applicazione modularized su classpath e su modulepath
 * Utilizzare jdeps per determinare le dipendenze e identificare il modo per affrontare le dipendenze cicliche
 
 ---

@@ -100,17 +100,6 @@ __TIPI DI DATO PRIMITIVI__
 * Tipo di dato logico - booleano 
 * Tipo di dato primitivo letterale
 
----
-
-__OPERATORI DI BASE__ 
-
-* Operatore d'assegnazione 
-* Operatori aritmetici 
-* Operatori unari (aggiungono o sottraggono 1)
-* Operatori relazionali o di confronto
-* Operatori logici
-* Regole di precedenza degli operatori
-* Operatori per concatenare le stringhe
 
 ---
 
@@ -142,32 +131,6 @@ __OPERATORI DI BASE__
 * La classe String
 * La documentazione della libreria standard di Java
 * Cicli finiti, infiniti, annidati
-
-**OPERATORI E GESTIONE DEL FLUSSO DI ESECUZIONE** 
-
-* GESTIONE DEL FLUSSO DI ESECUZIONE 
-
-	* Il costrutto for 
-	* Il costrutto while 
-	* Il costrutto do...while
-	* Il ciclo for migliorato (foreach) 
-
----
-
-### Strutture condizionali
-
-* Strutture di controllo.
-* if - else
-* switch
-* operatore ternario
-
-### Strutture ITERATIVE
-
-* while
-* do...while
-* for: per scorrere per esempio un array in entrambe le direzioni
-* for(each): scorre solo in una direzione
-* Labels: break e continue
 
 ---
 
