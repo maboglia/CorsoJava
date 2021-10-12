@@ -22,6 +22,8 @@
   * Codice sorgente	
   * Simile, nella sintassi e nelle istruzioni al linguaggio C	
 
+* [001_Caratteristiche_Java.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=001_Caratteristiche_Java.md)
+
 ---
 
 ### Codice Sorgente	
@@ -1355,10 +1357,10 @@
 
 ### Sintassi	
 * Un metodo che può fallire deve segnalarlo nella propria dichiarazione	
-  * Attraverso la parola chiave "throws"	
-  * Seguita dal tipo (o dai tipi) di eccezione che si può verificare durante l'esecuzione	
+  * Attraverso la parola chiave "**throws**"	
+  * Seguita dal tipo (o dai tipi) di **eccezione** che si può verificare durante l'esecuzione	
 * Chi invoca tale metodo deve:	
-  * Cercare di gestire la possibile anomalia attraverso il costrutto "try" / "catch"	
+  * Cercare di gestire la possibile anomalia attraverso il costrutto "**try**" / "**catch**"	
   * Oppure, segnalare che a propria volta può generare la stessa anomalia: l'eccezione si propaga al chiamante del chiamante	
 
 ---
@@ -1401,38 +1403,7 @@
 * Generare una nuova eccezione	
   * Permette di aggiungere informazioni sul contesto in cui si è verificata l'anomalia originale	
 
----
-
-### Gestire le eccezioni	
-* Rilanciare la stessa eccezione	
-  * Avendo compiuto qualche azione a margine	
-
----
-
-### Gestire le eccezioni	
-* Correggere l'anomalia…	
-  * ...e riprovare l'azione	
-  * Facendo attenzione ai cicli infiniti	
-
----
-
-### Gestire le eccezioni	
-* Ripristinare uno stato precedente…	
-  * …disfacendo eventuali azioni non terminate (rollback)	
-
----
-
-### Gestire le eccezioni	
-* Interrompere l'esecuzione	
-  * Disastro irreparabile!	
-
----
-
-### Gestire le eccezioni	
-* Non fare nulla	
-  * La peggior scelta possibile!	
-  * Da non fare mai	
-
+* [017_eccezioni.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=017_eccezioni.md)
 ---
 
 ### Modellare le eccezioni	
@@ -1454,14 +1425,14 @@
 ---
 
 ### Tipologie di anomalie	
-* Errori della macchina virtuale	
-  * Fanno capo alla classe Error	
+* Errori della **macchina virtuale**	
+  * Fanno capo alla classe **Error**	
   * Non possono essere recuperati	
   * Memoria esaurita, stack overflow, …	
-* Errori di programma	
-  * Fanno capo alla classe Exception	
+* Errori di **programma**	
+  * Fanno capo alla classe **Exception**	
   * Per lo più, devono essere gestiti in modo esplicito, dichiarandone l'eventualità nei metodi che li possono generare e utilizzando costrutti di tipo "try"	
-  * Alcuni possono capitare pressoché sempre (RuntimeException): non occorre dichiarare esplicitamente la possibilità che si verifichino	
+  * Alcuni possono capitare pressoché sempre (**RuntimeException**): non occorre dichiarare esplicitamente la possibilità che si verifichino	
 
 ---
 
@@ -1472,7 +1443,7 @@
 
 ---
 
-## Argomenti della lezione	
+## Input e Output Stream	
 * Flussi di dati	
 * Lettura e scrittura	
 * Interagire con  il file system	
@@ -1702,3 +1673,5 @@
   * Scrive la rappresentazione della stringa "s" nel formato UTF-8	
 * Altri metodi dell'interfaccia DataOutput	
   * Permettono la scrittura di dati elementari	
+
+

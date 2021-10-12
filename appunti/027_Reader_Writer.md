@@ -1,4 +1,5 @@
 #  Reader e Writer
+
 Gli stream di tipo più basilare non tengono conto del tipo dei
 dati scambiati. Semplicemente, trasportano i dati attraverso
 il flusso, senza curarsi del loro effettivo contenuto. Per
