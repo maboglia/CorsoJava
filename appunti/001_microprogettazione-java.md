@@ -221,6 +221,9 @@
 * Esistono tipi	
   * Semplici (primitivi)	
   * Composti (classi) – descritti nelle lezioni successive	
+  
+* [operatori](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=002_operatori.md#1)
+* [espressioni](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=002_espressioni.md#1)
 
 ---
 
@@ -283,7 +286,7 @@
   * I valori non stampabili sono rappresentati nel formato unicode (‘\u27AF')	
 * Operazioni	
   * confronto  (==, !=, >,>=, <, <=)	
-
+* [004_tipi.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=004_tipi.md)
 ---
 
 ### Dichiarazioni	
@@ -320,7 +323,7 @@
   * `char c1 = ‘a', c2 = ‘\u0062';`
   * `boolean b = false;`
 
-
+* [003_variabili.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=003_variabili.md)
 
 ---
 
@@ -351,6 +354,7 @@
 * Ogni classe ha un nome	
   * Deve essere univoco	
 
+* [010_classi.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_classi.md)
 ---
 
 ### Costruire Oggetti	
@@ -361,13 +365,14 @@
   * Qui viene memorizzato il suo stato	
   * Oggetti differenti occupano posizioni differenti	
 
+* [010_3_classi_costruttori.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_3_classi_costruttori.md)
 ---
 
 ### Cosa c'è negli Oggetti	
-* Stato	
+* **Stato**	
   * L'insieme dei parametri caratteristici che contraddistinguono un oggetto in un dato istante	
   * Modellato come insieme di attributi	
-* Comportamento	
+* **Comportamento**	
   * Descrive come si modifica lo stato a fronte degli stimoli provenienti dal mondo esterno	
   * Modellato come insieme di metodi	
 
@@ -393,6 +398,7 @@
   * Ha lo stesso nome della classe	
   * Non indica nessun tipo ritornato	
 
+* [010_3_classi_costruttori.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_3_classi_costruttori.md)
 ---
 
 ### Costruttore e parametri	
@@ -443,6 +449,7 @@
   * Le informazioni più semplici possono essere memorizzate direttamente nella variabile	
   * È il caso delle variabili il cui tipo è elementare (c.d. primitivo)	
 
+* [004_tipi.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=004_tipi.md)
 ---
 
 ### Copia di variabili elementari	
@@ -460,10 +467,10 @@
 
 ### Accedere agli oggetti	
 * Noto il riferimento ad un oggetto, è possibile invocarne i metodi	
-  * Si usa la notazione   variabile.metodo(...);	
+  * Si usa la notazione   `variabile.metodo(...);`	
   * Nelle parentesi si indicano gli eventuali parametri	
 * Se la variabile contiene un riferimento nullo si genera un errore di esecuzione	
-* Il metodo è costituito da un insieme di istruzioni	
+* Il **metodo** è costituito da un insieme di istruzioni	
   * Il comportamento è simile ad una chiamata a procedura	
   * Il chiamante attende il completamento del metodo, poi prosegue la propria elaborazione	
 
@@ -487,18 +494,18 @@
 
 ## Invocare metodi	
 
-
+* [009_metodi.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=009_metodi.md)
 ---
 
 ### Valori di ritorno	
 * Alcuni metodi restituiscono un valore	
   * Il tipo del valore ritornato viene dichiarato prima del nome del metodo	
-  * double calcolaPerimetro() { … }	
+  * `double calcolaPerimetro() { … }`	
 * Il valore ritornato può essere assegnato ad una variabile	
   * Occorre che la variabile sia compatibile con il tipo del valore ritornato	
 * Altri metodi non ritornano nulla	
   * In questo caso dichiarano di ritornare il tipo predefinito void	
-  * void setRaggio(double r) { … }	
+  * `void setRaggio(double r) { … }`	
 
 
 ---
@@ -527,12 +534,12 @@
 
 ### Attributi	
 * Come le variabili, anche gli attributi possono avere tipi	
-  * Elementari	
-  * Complessi (riferimenti ad oggetti)	
-* Un attributo di tipo elementare	
-  * Contiene direttamente il valore	
-* Un attributo di tipo complesso	
-  * Contiene il riferimento ad un oggetto (oppure null)	
+  * **Elementari**	
+  * **Complessi** (riferimenti ad oggetti)	
+* Un attributo di tipo **elementare**	
+  * Contiene direttamente il **valore**	
+* Un attributo di tipo **complesso**	
+  * Contiene il **riferimento** ad un oggetto (oppure null)	
 
 ---
 
@@ -543,14 +550,13 @@
 * È compito del costruttore assegnare valori opportuni se quelli di default non sono adatti	
   * Questo può comportare anche la creazione di oggetti	
 
+* [010_3_classi_costruttori.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_3_classi_costruttori.md)
 ---
 
 ### Ciclo di vita di un oggetto	
 * L'operatore new, su richiesta del programmatore, alloca la memoria necessaria a contenere un oggetto	
-  * D1: quando viene rilasciata?	
-  * R1: quando l'oggetto non serve più!	
-  * D2: chi decide che non serve più?	
-  * R2: l'ambiente di esecuzione (!?!)	
+  * la memoria viene rilasciata quando l'oggetto non serve più!	
+  * cioè quando tutti i riferimenti all'oggetto sono **null**	
 
 ---
 
@@ -560,15 +566,15 @@
   * Rilasciando la memoria che occupa	
 * I riferimenti sono memorizzati in variabili e attributi	
   * Si cancellano quando la variabile cessa di esistere (fine del blocco)	
-  * Oppure assegnando esplicitamente il valore null	
+  * Oppure assegnando esplicitamente il valore **null**	
 
 ---
 
 ### Conteggio dei riferimenti	
-* All'interno di ogni oggetto, Java mantiene un contatore nascosto	
-  * Indica il numero di riferimenti esistenti a quello specifico oggetto	
+* All'interno di ogni oggetto, Java mantiene un **contatore** nascosto	
+  * Indica il **numero di riferimenti** esistenti a quello specifico oggetto	
   * Quando il suo valore scende a 0, indica che l'oggetto può essere eliminato, rilasciando la memoria che occupa	
-* Un particolare sottosistema, il garbage collector, si occupa, periodicamente, di riciclare la memoria degli oggetti eliminati	
+* Un particolare sottosistema, il **garbage collector**, si occupa, periodicamente, di riciclare la memoria degli oggetti eliminati	
   * Viene eseguito automaticamente dalla macchina virtuale Java	
 
 ---
@@ -630,20 +636,20 @@
 ---
 
 ### Modificatori di visibilità	
-* Private	
+* **Private**	
   * Indica che si può accedere all'elemento solo da altri metodi appartenenti alla stessa classe	
-* Public	
+* **Public**	
   * Indica che l'elemento può essere utilizzato da metodi di qualsiasi classe	
-* [Nulla]	
-  * In assenza di indicazioni, l'elemento è accessibile alle altre classi dello stesso "gruppo" (package)	
+* **[Nulla]**	
+  * In assenza di indicazioni, l'elemento è accessibile alle altre classi dello stesso "gruppo" (**package**)	
 
 ---
 
 ### Visibilità delle classi	
 * Anche le classi possono essere precedute da un modificatore di visibilità	
-  * In questo caso, "private" non ha senso	
-* Se una classe è dichiarata pubblica, può essere utilizzata da classi appartenenti a qualsiasi gruppo (package)	
-  * Altrimenti, può essere usata solo nell'ambito del gruppo in cui è stata definita	
+  * In questo caso, **"private" non ha senso**	
+* Se una classe è dichiarata **pubblica**, può essere utilizzata da classi appartenenti a qualsiasi gruppo (package)	
+* **Altrimenti**, può essere usata solo nell'ambito del gruppo in cui è stata definita	
 
 ---
 
@@ -674,35 +680,37 @@
 
 ### Uso degli attributi statici	
 * Si può fare accesso ad un attributo statico anche in mancanza di un oggetto specifico	
-  * `double d= Cerchio.pi/2;`	
+  * `double d= Cerchio.PI/2;`	
 * Gli attributi statici devono essere inizializzati	
   * Non si può fare nel costruttore!	
   * Occorre farlo all'atto della dichiarazione	
-  * `static double pi = 3.14;`	
+  * `static double PI = 3.14;`	
 
 ---
 
 ### Metodi statici	
-* Non fanno riferimento a nessun attributo specifico di un oggetto	
+* Non fanno riferimento a nessun attributo specifico di un oggetto
   * Preceduti dal modificatore "static"	
   * Equivalenti a procedure e funzioni di altri linguaggi	
   * Possono essere invocati a partire dal nome della classe	
 
 ---
 
-### Math	
+### Math
 * La classe "Math" contiene metodi statici per le principali operazioni matematiche	
   * double d1,d2;	
   * d1 = Math.sqrt( 2.0 );	
   * d2 = Math.sin( Math.PI / 2.0 );	
 
+* [021_java_lang_Math.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_java_lang_Math.md)
 ---
 
 ### System
 * La classe "System" contiene, sotto forma di attributi statici, oggetti che modellano le interazioni con la console di sistema	
-  * System.out  //output su schermo	
-  * System.in //input da tastiera	
+  * `System.out`  //output su schermo	
+  * `System.in` //input da tastiera	
 
+* [021_java_lang_System.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_java_lang_System.md)
 ---
 
 ### Il metodo main()	
@@ -722,6 +730,7 @@
 * Offre molti metodi	
   * Confronto, ricerca, derivazione di nuove stringhe, informazioni generali, …	
 
+* [021_API_Java_Stringhe.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_API_Java_Stringhe.md)
 ---
 
 ### Confronto e ricerca	
@@ -752,6 +761,7 @@
 * Struttura dei package delle API Java	
 * Il package java.lang	
 
+* [020_JavaPackages.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=020_JavaPackages.md)
 ---
 
 ### Nomi delle classi	
@@ -845,7 +855,7 @@
 ### La variabile CLASSPATH	
 * Variabile d'ambiente del sistema operativo	
   * Specifica un insieme di cartelle radice in cui cercare i file ".class" o le sottocartelle dei package	
-  * Può contenere direttori compressi (file ".jar")	
+  * Può contenere cartelle e file java compresse (file ".jar")	
 
 ---
 
@@ -868,9 +878,9 @@
 ---
 
 ### Package principali	
-* java.lang	
+* [java.lang](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_java_lang.md)	
   * Contiene le classi fondamentali del linguaggio	
-* java.math	
+* [java.math](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_java_lang_Math.md)	
   * Estensioni matematiche	
   * Classi per modellare numeri interi e reali con precisione illimitata	
 * java.net	
@@ -901,16 +911,16 @@
 ### java.lang: l'ABC delle applicazioni Java	
 * Fornisce le classi fondamentali  per la programmazione Java	
   * Importato automaticamente dal compilatore in tutti i programmi	
-* Contiene – tra le altre – le classi  Object, Throwable, String	
+* Contiene – tra le altre – le classi  **Object**, **Throwable**, **String**	
 
 ---
 
 ### java.lang.StringBuilder	
-* Analoga alla classe String	
+* Analoga alla classe **String**	
   * Ma permette di modificare i caratteri contenuti	
 * Principali operazioni	
-  * append(…)	
-  * toString()	
+  * **append**(…)	
+  * **toString**()	
 
 ---
 
@@ -918,7 +928,7 @@
 * Utilizzate per trasformare in oggetti dati elementari	
   * Il dato contenuto è immutabile	
 * Pattern generale dell'ingegneria del software	
-
+* [021_Classi_wrapper.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_Classi_wrapper.md)
 ---
 
 ### Wrapper numerici	
@@ -997,7 +1007,7 @@
 * Array in Java: oggetti che incapsulano sequenze ordinate di dati	
   * Hanno dimensione fissa, definita all'atto della creazione	
   * Sintassi semplificata per accedere ai singoli elementi	
-
+* [006_array.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=006_array.md)
 ---
 
 ### Tipologie di array	
@@ -1040,7 +1050,7 @@
 
 ---
 
-## Argomenti della lezione	
+## OOP Design	
 * I concetti principali	
 * Ereditarietà in Java	
 * La classe Object	
