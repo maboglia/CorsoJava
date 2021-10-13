@@ -635,7 +635,7 @@
   * Vera si esegue l'istruzione o il blocco di istruzioni successivo
   * Falsa si salta all'istruzione successiva oppure viene eseguito il blocco "else"
 * if - else
-* switch [esempi](https://github.com/maboglia/CorsoJava/esempi/04_control-flow/02Switch)
+* switch [esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_control-flow/02Switch)
 * operatore ternario
 ---
 
