@@ -18,7 +18,7 @@ public class AreaTriangolo {
 		if (args.length > 0)  base =Integer.parseInt(args[0]);
 		altezza = a;
 		area = base * altezza /2;
-		System.out.println("l'area del trinagolo è: "); 
+		System.out.println("l'area del triangolo è: "); 
 		System . out . println ( area );
 		//System.out.println(args[0]);
 	}
