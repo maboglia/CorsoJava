@@ -5,7 +5,7 @@
 
 ## obiettivi
 
-* Accedere e creare campi e metodi statici
+* Accedere e creare campi e metodi [static](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=013_classi_static.md)
 * Scrivere codice Java che utilizza variabili, array, costrutti condizionali e loop per raggiungere gli obiettivi del programma
 * Incapsulare una classe usando modificatori di accesso e overload dei costruttori
 * Manipolare i dati numerici, di testo e di stringa utilizzare gli operatori Java appropriati
@@ -25,33 +25,33 @@
   * [Un esempio elementare](https://github.com/maboglia/CorsoJava/blob/master/esempi/01_base/02_tipi/01_Interi/Interi.java)
   * Gli strumenti di Java
 * Struttura di un semplice programma Java
-  * Metodi statici
-  * Variabili
-  * Tipi elementari
+  * Metodi [static](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=013_classi_static.md)
+  * [Variabili](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=003_variabili.md)
+  * [Tipi elementari](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=004_tipi.md)
   * Istruzioni principali
 
 ---
 
 ### Che cos'è un programma Java
 
-* Caratteristiche principali del linguaggio Java
+* [Caratteristiche principali del linguaggio Java]([github/CorsoJava/appunti/](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=)001_Caratteristiche_Java.md)
 * Tecnologia Java e ambiente di sviluppo
 * Esecuzione e test di un programma Java
 
 ---
 
 ### Il linguaggio Java
+
 * Formalismo ad alto livello
   * Permette di descrivere programmi basandosi su concetti primitivi "sofisticati" (file, finestre, tabelle, liste, ecc.)
 * basato su una notazione testuale familiare
   * Codice sorgente
   * Simile, nella sintassi e nelle istruzioni al linguaggio C
 
-* [001_Caratteristiche_Java.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=001_Caratteristiche_Java.md)
-
 ---
 
 ### Codice Sorgente
+
 * I programmi Java sono suddivisi in "classi"
   * Le classi sono descritte all'interno di file di testo con estensione ".java"
   * Ogni file contiene una sola classe
@@ -60,6 +60,7 @@
 ---
 
 ### Gli strumenti di Java
+
 * La macchina virtuale
 * Il compilatore
 * Gli ambienti di sviluppo
@@ -96,17 +97,15 @@
 ---
 
 ### Esempi
-* Eclipse
-  * http://www.eclipse.org
-* Netbeans
-* IntelliJ IDEA
+* [Eclipse](http://www.eclipse.org)
+* [Netbeans]()
+* [IntelliJ IDEA]()
 
 ---
 
 ### Documentazione
-* Strumento necessario  alla sopravvivenza del programmatore Java!!
-* Raccolta di informazioni relative alle classi appartenenti alle librerie standard di Java
-  * https://docs.oracle.com/en/java/javase/
+* Strumento necessario!
+* [Documentazione relativa alle classi standard Java API](https://docs.oracle.com/en/java/javase/)
 * Per ogni classe:
   * Descrizione funzionale
   * Elenco di attributi:  funzionalità, caratteristiche
@@ -115,15 +114,11 @@
 ---
 
 ### Il debugger
-* Strumento ausiliario al programmatore
+
+* Strumento ausiliario
   * Monitorare l'esecuzione di una applicazione
   * Analisi dei valori assunti dalle variabili, i metodi della classe, …
 * Comando jdb.exe
-
-
----
-
-## Dove si usa Java?
 
 
 ---
@@ -211,13 +206,15 @@
 ---
 
 ### main(…): la porta  sul mondo Java
+
 * `public static void main(String[] args){  /* istruzioni ... */ }`
 * Punto di ingresso di ogni applicazione
   * Invocato automaticamente dalla VM Java
 
 ---
 
-### Metodi statici
+### [Metodi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=009_metodi.md) [static](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=013_classi_static.md)
+
 * Sequenze di istruzioni che svolgono un determinato compito
   * Hanno un nome
   * Possono avere dei parametri
@@ -227,6 +224,7 @@
 ---
 
 ### Commenti
+
 * Servono a documentare un programma  (o una sua parte)
   * Racchiusi da "/*" e "*/"
   * "//" inizia un commento che termina a fine riga
@@ -235,6 +233,7 @@
 ---
 
 ### Variabili locali
+
 * I metodi possono utilizzare variabili:
   * Servono a memorizzare  risultati intermedi
   * Dichiarate nel corpo del metodo
@@ -243,6 +242,7 @@
 ---
 
 ### Tipi: una forma per i dati
+
 * Variabili, parametri,  valori ritornati hanno  un tipo che ne precisa /limita l'uso
   * Possono contenere solo valori conformi al proprio tipo
 * Esistono tipi
@@ -266,7 +266,7 @@
 
 ---
 
-### Tipi primitivi
+### [Tipi primitivi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=004_tipi.md)
 * Numerici interi
   * byte, short, int, long
 * Numerici reali
@@ -634,9 +634,11 @@
 * Verifica della condizione
   * Vera si esegue l'istruzione o il blocco di istruzioni successivo
   * Falsa si salta all'istruzione successiva oppure viene eseguito il blocco "else"
-* if - else
+* if - else [esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_control-flow/01If)
 * switch [esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_control-flow/02Switch)
-* operatore ternario
+* operatore ternario, è un if su una riga:
+* `condizione ? true : false ;` 
+
 ---
 
 ### Istruzioni di scelta multipla
@@ -737,6 +739,8 @@
   * Equivalenti a procedure e funzioni di altri linguaggi
   * Possono essere invocati a partire dal nome della classe
 
+
+[static](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=013_classi_static.md)
 ---
 
 ### Math
@@ -774,6 +778,7 @@
   * Confronto, ricerca, derivazione di nuove stringhe, informazioni generali, …
 
 * [021_API_Java_Stringhe.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_API_Java_Stringhe.md)
+* 
 ---
 
 ### Confronto e ricerca
@@ -796,7 +801,6 @@
 * `public int length()`
   * Restituisce la lunghezza in caratteri della stringa corrente
 
-
 ---
 
 ## packages
@@ -805,6 +809,7 @@
 * Il package java.lang
 
 * [020_JavaPackages.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=020_JavaPackages.md)
+
 ---
 
 ### Nomi delle classi
@@ -972,6 +977,7 @@
   * Il dato contenuto è immutabile
 * Pattern generale dell'ingegneria del software
 * [021_Classi_wrapper.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_Classi_wrapper.md)
+
 ---
 
 ### Wrapper numerici
@@ -1941,8 +1947,6 @@
 
 ---
 
-
-
 ### I/O (Fundamentals e NIO2)
 
 * Leggi i dati e scrivi i dati della console e dei file utilizzando il flusso I / O
@@ -2005,7 +2009,6 @@
 * Usa la classe Locale
 * Usa pacchetti di risorse
 * Formatta messaggi, date e numeri con Java
-
 
 ---
 
