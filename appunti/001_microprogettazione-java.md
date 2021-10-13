@@ -22,7 +22,7 @@
 
 ## Introduzione
 * Programmare in Java
-  * Un esempio elementare
+  * [Un esempio elementare](https://github.com/maboglia/CorsoJava/blob/master/esempi/01_base/02_tipi/01_Interi/Interi.java)
   * Gli strumenti di Java
 * Struttura di un semplice programma Java
   * Metodi statici
@@ -31,7 +31,6 @@
   * Istruzioni principali
 
 ---
-
 
 ### Che cos'è un programma Java
 
