@@ -377,6 +377,7 @@
 ---
 
 ### Convenzioni sui nomi
+
 * Le classi hanno nomi che iniziano con la lettera maiuscola
 * Metodi, attributi e variabili hanno l'iniziale minuscola
   * Se un nome è composto da più parole giustapposte, l'iniziale di ogni parola successiva alla prima è maiuscola
@@ -386,6 +387,7 @@
 ---
 
 ### Classi
+
 * La classe costituisce il "progetto" di un oggetto
   * Specifica gli attributi
   * Descrive i metodi
@@ -422,7 +424,7 @@
   * Insieme dei valori assunti dagli attributi dell'oggetto
   * Operando sui metodi, si può modificare lo stato
 * All'atto della costruzione di un oggetto, occorre assegnare un valore ai diversi attributi
-  * È il compito di un metodo particolare, detto costruttore
+  * È il compito di un metodo particolare, detto [costruttore](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_3_classi_costruttori.md)
 
 ---
 
