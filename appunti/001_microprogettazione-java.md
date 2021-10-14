@@ -10,6 +10,9 @@
 * Incapsulare una classe usando modificatori di accesso e overload dei costruttori
 * Manipolare i dati numerici, di testo e di stringa utilizzare gli operatori Java appropriati
 * Impostare le variabili di ambiente per consentire al compilatore Java e agli eseguibili di runtime di funzionare correttamente
+
+---
+
 * Creare semplici classi Java e utilizzare riferimenti a oggetti per accedere a campi e metodi in una classe
 * Dimostrare polimorfismo implementando un'interfaccia Java
 * Gestire un'eccezione controllata in un'applicazione Java
@@ -211,6 +214,8 @@
 * Punto di ingresso di ogni applicazione
   * Invocato automaticamente dalla VM Java
 
+
+![esempio](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/02_classe_base/hello.png)
 ---
 
 ### [Metodi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=009_metodi.md) [static](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=013_classi_static.md)
