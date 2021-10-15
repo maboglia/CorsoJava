@@ -184,6 +184,8 @@
   * Espressi in bytecode (formato binario)
   * All'interno sono presenti le istruzioni, la tabella dei simboli, le informazioni ausiliarie necessarie all'esecuzione
 
+![compilazione](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/03_system/developing.png)
+
 ---
 
 ### Struttura dei file
@@ -435,6 +437,7 @@
 
 ## Come costruire oggetti
 
+![costruttore](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/02_classe_base/constructor.png)
 
 ---
 
@@ -471,7 +474,7 @@
 * I riferimenti possono essere memorizzati all'interno di variabili locali
   * Devono avere un tipo compatibile con il tipo di riferimento che si intende memorizzare al loro interno
   * Devono essere dichiarate prima di essere usate
-
+![variabili](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/02_classe_base/instance-variables.png)
 ---
 
 ### Ciclo di vita  delle variabili locali
@@ -1828,32 +1831,31 @@
 
 ### Elementi Sintassi JAVA
 
-* design patterns
-  * singleton
-	* decorator
+* [design patterns](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=037_design_patterns.md)
+  * [singleton](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=033_singleton_pattern.md)
+	* [decorator](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=034_decorator_pattern.md)
 	* mvc
-	* dao
-	* factory
+	* [dao](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=036_dao_pattern.md)
+	* [factory](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=035_factory_pattern.md)
 
 ### JAVA WEB
 
 * [introduzione JSP](058_JSP_1.md)
 * [approfondimento JSP](059_JSP_2.md)
-* JSP e Servlet
-* [JSP: le direttive]
-* [JSP: le direttive]
-* [JSP: le espressioni]
-* [JSP: le dichiarazioni]
+  * [JSP: le direttive]
+  * [JSP: le direttive]
+  * [JSP: le espressioni]
+  * [JSP: le dichiarazioni]
+* [RequestDispatcher](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=060_RequestDispacher.md)
 *	GlassFish e TomCat
 * JSTL: Jsp standard action
 * Servlet REST controller: doGet, doPost
-* RequestDispatcher
 
 ---
 
 ### JDBC
 
-* JDBC
+* [JDBC](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=057_JDBC.md)
   * connector-J
   * Connection
   * DriverManager
@@ -1864,7 +1866,7 @@
 
 ---
 
-### Fondamenti di Java
+### Advanced class design
 
 * Creare e utilizzare le classi final
 * Creare e utilizzare classi interne, nidificate e anonime
@@ -1913,10 +1915,10 @@
 ### Framework Collections
 
 * Foreach ed Iterator
-* Implementazioni di Set e SortedSet
-* Implementazioni di List
-* Implementazioni di Queue
-* Implementazioni di Map e SortedMap
+* Implementazioni di [List](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=022_JCF_List.md)
+* Implementazioni di [Set](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=022_JCF_Set.md) e SortedSet
+* Implementazioni di [Queue](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=022_JCF_Queue.md)
+* Implementazioni di [Map](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=022_JCFLike_Map.md) e SortedMap
 * Tipi Generics
 
 ---
