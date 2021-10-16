@@ -64,17 +64,12 @@
 
 ---
 
-### Gli strumenti di Java
-
-* La macchina virtuale
-* Il compilatore
-* Gli ambienti di sviluppo
-* La documentazione
-* Il debugger
+## Gli strumenti di Java
 
 ---
 
 ### Macchina virtuale
+* La [macchina virtuale](https://it.wikipedia.org/wiki/Macchina_virtuale_Java)
 * Astrazione di un elaboratore "generico"
   * Ambiente di esecuzione delle applicazioni Java
 * Esempio:
@@ -87,6 +82,7 @@
 ---
 
 ### Il compilatore
+* Il compilatore: ```javac```
 * Traduzione dei sorgenti testuali in bytecode
   * Linguaggio della macchina virtuale Java
 * Esempio:  javac Hello.java
@@ -102,9 +98,7 @@
 * Si possono usare ambienti integrati per lo sviluppo (IDE)
   * Offrono strumenti per la redazione,  la compilazione, l'esecuzione e  la ricerca degli errori
 
----
-
-### Esempi
+#### Esempi
 * [Eclipse](http://www.eclipse.org)
 * [Netbeans]()
 * [IntelliJ IDEA]()
@@ -139,7 +133,6 @@
 * Svantaggi
   * Prestazioni limitate rispetto ad applicazioni native
   * Ambienti di esecuzione in forte evoluzione
-* Oggetto di questo corso
 
 ---
 
@@ -169,14 +162,13 @@
   * Disponibile gratuitamente:
   * compilatore, librerie standard, macchina  virtuale, …
 
----
 
-### Installare Java
+### Variabili d'ambiente
 * Se necessario, modificare la variabile d'ambiente
   * PATH= ... ;<JAVA_HOME>/bin
   * per invocare i comandi java (compilatore, macchina virtuale, debugger, ...)
 * In Windows
-  * Pannello di controllo   Sistema > Avanzate > Variabili d'ambiente
+  * Pannello di controllo > Sistema > Avanzate > Variabili d'ambiente
 
 ---
 
@@ -187,12 +179,6 @@
   * Contengono il risultato della compilazione
   * Espressi in bytecode (formato binario)
   * All'interno sono presenti le istruzioni, la tabella dei simboli, le informazioni ausiliarie necessarie all'esecuzione
-
-![compilazione](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/03_system/developing.png)
-
----
-
-### Struttura dei file
 * `<File>.jar`
   * Archivi compressi che  consentono di aggregare più file
   * Contengono una o più classi Java, risorse e ulteriori informazioni ausiliarie (documentazione, parametri di configurazione, …)
@@ -212,6 +198,8 @@
   * Il nome del file coincide con il nome della classe
   * L'estensione del file è ".java"
 
+
+![compilazione](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/03_system/developing.png)
 ---
 
 ### main(…): la porta  sul mondo Java
@@ -220,17 +208,22 @@
 * Punto di ingresso di ogni applicazione
   * Invocato automaticamente dalla VM Java
 
+### Il metodo main()
+* Quando un programma inizia, non può esistere ancora nessun oggetto
+  * Il punto di ingresso deve essere un metodo statico e pubblico
+  * `public static void main(String[ ] args){ /* istruzioni */ }`
+
 
 ![esempio](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/02_classe_base/hello.png)
 ---
 
 ### [Metodi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=009_metodi.md) [static](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=013_classi_static.md)
 
-* Sequenze di istruzioni che svolgono un determinato compito
+* Sono sequenze di istruzioni che svolgono un determinato compito
   * Hanno un nome
   * Possono avere dei parametri
   * Possono ritornare un valore
-  * Dovrebbero avere un commento!
+  * Dovrebbero avere un commento
 
 ---
 
@@ -327,16 +320,12 @@
 * Rappresentazione  dei caratteri secondo  lo standard Unicode
   * Lettere di vari alfabeti arabo, armeno, bengalese, cirillico, greco, latino, ...
   * Simboli diacritici, punteggiatura,  matematici, tecnici, ...
-
----
-
-### Tipi non numerici: char
 * Rappresentazione su due byte
   * Le costanti sono indicate tra apici semplici (‘a')
   * I valori non stampabili sono rappresentati nel formato unicode (‘\u27AF')
 * Operazioni
   * confronto  (==, !=, >,>=, <, <=)
-* [004_tipi.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=004_tipi.md)
+* [slide tipi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=004_tipi.md)
 ---
 
 ### Dichiarazioni
@@ -373,7 +362,7 @@
   * `char c1 = ‘a', c2 = ‘\u0062';//dichiaro e inizializzo più var`
   * `boolean b = false;`
 
-* [003_variabili.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=003_variabili.md)
+* [slide variabili](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=003_variabili.md)
 
 ---
 
@@ -406,7 +395,7 @@
 * Ogni classe ha un nome
   * Deve essere univoco
 
-* [010_classi.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_classi.md)
+* [slide classi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_classi.md)
 ---
 
 ### Costruire Oggetti
@@ -417,7 +406,7 @@
   * Qui viene memorizzato il suo stato
   * Oggetti differenti occupano posizioni differenti
 
-* [010_3_classi_costruttori.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_3_classi_costruttori.md)
+* [slide costruttori](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_3_classi_costruttori.md)
 ---
 
 ### Cosa c'è negli Oggetti
@@ -547,8 +536,7 @@
 
 ## Invocare metodi
 
-* [009_metodi.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=009_metodi.md)
----
+* [slide metodi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=009_metodi.md)
 
 ### Valori di ritorno
 * Alcuni metodi restituiscono un valore
@@ -571,14 +559,11 @@
   * Restituendo risultati
 * Spesso, però, si progettano metodi specializzati in una delle funzioni citate
 
----
-
-### Tipologie di metodi
-* Modificatori (mutator)
+* Modificare (mutators, setters)
   * Servono ad alterare, in modo controllato, lo stato dell'oggetto (o una sua parte specifica)
   * Di solito hanno parametri e non ritornano nulla
   * Per convenzione, in Java, hanno un nome simile a void setXyz(…);
-* Lettori (accessor)
+* Leggere, accedere (accessors, getters)
   * Permettono di conoscere lo stato (o una sua parte specifca) di un oggetto
   * Di solito, non hanno parametri, e ritornano il valore letto
   * Per convenzione, in Java, hanno un nome simile a  <tipoRitornato> getXyz();
@@ -652,8 +637,6 @@
 * switch [esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_control-flow/02Switch)
 * operatore ternario, è un if su una riga:
 * `condizione ? true : false ;` 
-
----
 
 ### Istruzioni di scelta multipla
 * Struttura di selezione multipla
@@ -754,7 +737,7 @@
   * Possono essere invocati a partire dal nome della classe
 
 
-[static](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=013_classi_static.md)
+[slide static](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=013_classi_static.md)
 ---
 
 ### Math
@@ -763,7 +746,7 @@
   * d1 = Math.sqrt( 2.0 );
   * d2 = Math.sin( Math.PI / 2.0 );
 
-* [021_java_lang_Math.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_java_lang_Math.md)
+* [slide Math](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_java_lang_Math.md)
 ---
 
 ### System
@@ -771,17 +754,9 @@
   * `System.out`  //output su schermo
   * `System.in` //input da tastiera
 
-* [021_java_lang_System.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_java_lang_System.md)
+* [slide System](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_java_lang_System.md)
 ---
 
-### Il metodo main()
-* Quando un programma inizia, non può esistere ancora nessun oggetto
-  * Il punto di ingresso deve essere un metodo statico e pubblico
-  * Perché?
-* Convenzione Java:
-  * `public static void main(String[ ] args){ /* istruzioni */ }`
-
----
 
 ### La classe String
 * Classe che modella sequenze immutabili di caratteri
@@ -791,7 +766,7 @@
 * Offre molti metodi
   * Confronto, ricerca, derivazione di nuove stringhe, informazioni generali, …
 
-* [021_API_Java_Stringhe.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_API_Java_Stringhe.md)
+* [slide String](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_API_Java_Stringhe.md)
 * 
 ---
 
@@ -818,26 +793,27 @@
 ---
 
 ## packages
-* Raggruppare le classi  in package
+* Raccolte di classi
+* Raggruppare le classi in package, modularizzare il codice
 * Struttura dei package delle API Java
 * Il package java.lang
 
-* [020_JavaPackages.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=020_JavaPackages.md)
+* [slide Packages](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=020_JavaPackages.md)
 
 ---
 
 ### Nomi delle classi
-* La metodologia ad oggetti favorisce il riuso delle classi
-  * Il nome della classe dovrebbe suggerirne la semantica
+* La metodologia ad oggetti favorisce il **riuso** delle classi
+  * Il nome della classe dovrebbe suggerirne la **semantica**
   * A volte bisogna utilizzare nello stesso progetto classi già esistenti, di provenienza diversa ed aventi lo stesso nome
   * Occorre poter differenziare ulteriormente tali classi
 
 ---
 
-### Package:  un cognome per le classi
-* Le classi possono essere raggruppate in "package"
-  * Ogni package ha un nome
-  * Viene scelto in modo da essere univoco
+### Package: un cognome per le classi
+* Le classi possono essere raggruppate in "**package**"
+  * Ogni package ha un **nome**
+  * Viene scelto in modo da essere **univoco**
 * Una classe è denotata:
   * Dal nome proprio
   * Dal package di appartenenza
@@ -845,8 +821,8 @@
 ---
 
 ### Package: appartenenza
-* Le classi che appartengono ad uno stesso package formano un gruppo
-* Come nel caso di una famiglia, c'è un rapporto privilegiato:
+* Le classi che appartengono ad uno stesso package formano un **gruppo**
+* Come nel caso di una famiglia, c'è un **rapporto privilegiato**:
   * Accessibilità a tutti i componenti non privati (public, protected, <vuoto>)
 
 ---
