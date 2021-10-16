@@ -37,9 +37,11 @@
 
 ### Che cos'è un programma Java
 
-* [Caratteristiche principali del linguaggio Java]http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=001_Caratteristiche_Java.md)
+* [Caratteristiche principali del linguaggio Java](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=001_Caratteristiche_Java.md)
 * Tecnologia Java e ambiente di sviluppo
 * Esecuzione e test di un programma Java
+
+
 
 ---
 
