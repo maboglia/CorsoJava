@@ -668,6 +668,55 @@
 
 ---
 
+### Array
+* All'interno di un programma può essere necessario gestire collezioni di dati:
+  * Il modo più semplice per organizzarli, se sono di tipo omogeneo, è attraverso il concetto di array o vettore
+* Array in Java: oggetti che incapsulano sequenze ordinate di dati
+  * Hanno dimensione fissa, definita all'atto della creazione
+  * Sintassi semplificata per accedere ai singoli elementi
+* [006_array.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=006_array.md)
+---
+
+### Tipologie di array
+* Esistono due gruppi di array
+  * Quelli che modellano sequenze di tipi elementari (interi, reali, caratteri, booleani)
+  * Quelli che modellano sequenze di oggetti
+* Qualunque sia il gruppo di appartenenza, gli array sono sempre oggetti complessi
+  * Vengono creati tramite l'operatore new
+  * Si accede ad essi attraverso un riferimento in memoria
+
+---
+
+### Inizializzare un array
+* Nel caso di array di tipi elementari, all'atto della creazione vengono assegnati valori di default
+  * 0 per i numeri (interi e reali)
+  * false per i valori logici
+  * ‘\000' per i caratteri
+* A volte si conosce a priori l'intero contenuto dell'array
+  * Java offre una sintassi semplificata per la sua inizializzazione
+
+---
+
+### Uso degli array
+* Per accedere ad un singolo elemento, si utilizza la sintassi
+  * nome_array [ indice ]
+  * L'indice deve essere compreso tra 0 e il numero di elementi presenti nell'array
+* Un array può contenere anche tipi complessi (oggetti)
+  * In questo caso, nelle singole posizioni sono memorizzati i riferimenti agli oggetti specifici
+  * All'atto della creazione del vettore, tutti i riferimenti contenuti valgono null
+
+---
+
+### Array a più dimensioni
+* È anche possibile creare matrici
+  * int [ ] [ ] matrice=   new int [3] [3];
+* Si tratta di "array di array"
+  * Il primo indice si riferisce alla riga, il secondo alla colonna
+* Non c'è limite al numero di dimensioni dell'array
+  * Se non la memoria disponibile…
+
+---
+
 ### Oggetti e utilizzatori
 * Non tutte le caratteristiche di un oggetto devono essere visibili dall'esterno
   * Rischio di manomissioni indebite
@@ -935,10 +984,6 @@
   * Classi che implementano il modello di sicurezza di Java
 * java.sql
   * Accesso a basi dati relazionali
-
----
-
-### Package principali
 * java.text
   * Trattamento multiculturale di numeri, date, testo
 * java.util
@@ -1040,54 +1085,7 @@
 
 ---
 
-### Array
-* All'interno di un programma può essere necessario gestire collezioni di dati:
-  * Il modo più semplice per organizzarli, se sono di tipo omogeneo, è attraverso il concetto di array o vettore
-* Array in Java: oggetti che incapsulano sequenze ordinate di dati
-  * Hanno dimensione fissa, definita all'atto della creazione
-  * Sintassi semplificata per accedere ai singoli elementi
-* [006_array.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=006_array.md)
----
 
-### Tipologie di array
-* Esistono due gruppi di array
-  * Quelli che modellano sequenze di tipi elementari (interi, reali, caratteri, booleani)
-  * Quelli che modellano sequenze di oggetti
-* Qualunque sia il gruppo di appartenenza, gli array sono sempre oggetti complessi
-  * Vengono creati tramite l'operatore new
-  * Si accede ad essi attraverso un riferimento in memoria
-
----
-
-### Inizializzare un array
-* Nel caso di array di tipi elementari, all'atto della creazione vengono assegnati valori di default
-  * 0 per i numeri (interi e reali)
-  * false per i valori logici
-  * ‘\000' per i caratteri
-* A volte si conosce a priori l'intero contenuto dell'array
-  * Java offre una sintassi semplificata per la sua inizializzazione
-
----
-
-### Uso degli array
-* Per accedere ad un singolo elemento, si utilizza la sintassi
-  * nome_array [ indice ]
-  * L'indice deve essere compreso tra 0 e il numero di elementi presenti nell'array
-* Un array può contenere anche tipi complessi (oggetti)
-  * In questo caso, nelle singole posizioni sono memorizzati i riferimenti agli oggetti specifici
-  * All'atto della creazione del vettore, tutti i riferimenti contenuti valgono null
-
----
-
-### Array a più dimensioni
-* È anche possibile creare matrici
-  * int [ ] [ ] matrice=   new int [3] [3];
-* Si tratta di "array di array"
-  * Il primo indice si riferisce alla riga, il secondo alla colonna
-* Non c'è limite al numero di dimensioni dell'array
-  * Se non la memoria disponibile…
-
----
 
 ## OOP Design
 * I concetti principali
