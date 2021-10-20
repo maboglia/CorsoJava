@@ -89,7 +89,6 @@
 
 ![compilazione](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/03_system/developing.png)
 
-
 ---
 
 ### Ambienti di sviluppo
@@ -97,6 +96,7 @@
   * Un editor qualsiasi è sufficiente
 * Si possono usare ambienti integrati per lo sviluppo (IDE)
   * Offrono strumenti per la redazione,  la compilazione, l'esecuzione e  la ricerca degli errori
+
 
 #### Esempi
 * [Eclipse](http://www.eclipse.org)
