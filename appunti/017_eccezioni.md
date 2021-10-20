@@ -224,7 +224,7 @@ throws IOException , IllegalParameterException { ... }
 
 ### Costrutti per la gestione delle eccezioni
 
-* try { } ... catch {}
+* `try { } ... catch {}`
   * "Getta" l'eccezione a livello di un blocco di istruzioni
   * "Cattura" l'eccezione effettuandone la gestione 
 * throws 
