@@ -9,8 +9,8 @@ Il sistema deve gestire:
  *	CassaNegozio contiene tutte le funzionalità.
  
  E' possibile definire l'inventario (elencando tutti i
- tipi di __prodotto__) ed aggiungere nuovi prodotti
- attraverso il __metodo__ __aggiungiProdotto()__. Un *prodotto* è
+ tipi di __Articolo__) ed aggiungere nuovi Articoli
+ attraverso il __metodo__ __aggiungiArticolo()__. Un *Articolo* è
  caratterizzato da un codice univoco, da una descrizione
  e dal prezzo lordo di vendita. Per esempio:
  
@@ -25,23 +25,23 @@ C00006|Vino Rosso|2.0
 
 ### Gli sconti
  E' possibile stabilire un prezzo promozionale (sconto)
- per un particolare __prodotto__. 
- Per semplicità si assuma  che è possibile avere un solo __prodotto__ in promozione
+ per un particolare __Articolo__. 
+ Per semplicità si assuma  che è possibile avere un solo __Articolo__ in promozione
  per volta. 
  
  Per attivare la promozione si utilizza il
  __metodo__ __promozione()__ che riceve come parametri il codice
- del __prodotto__ da promuovere e un intero che indica la
+ del __Articolo__ da promuovere e un intero che indica la
  percentuale di sconto da applicare (e.g., il numero
  intero 20 indica uno sconto del 20%). Per disabilitare
- la promozione si passa al __metodo__ il codice di un __prodotto__
+ la promozione si passa al __metodo__ il codice di un __Articolo__
  inesistente.
 
-### I prodotti venduti
+### I Articoli venduti
  
- Ogni volta che viene letto il codice di un __prodotto__, la
- cassa accede ad un listino di prodotti e recupera il
- prezzo e la descrizione del __prodotto__. Il __metodo__ __leggi(),__
+ Ogni volta che viene letto il codice di un __Articolo__, la
+ cassa accede ad un listino di Articoli e recupera il
+ prezzo e la descrizione del __Articolo__. Il __metodo__ __leggi(),__
  restituisce informazioni sul pezzo acquistato.
  
  E' possibile, in qualsiasi momento, ottenere l'importo
@@ -51,4 +51,4 @@ C00006|Vino Rosso|2.0
  e __tasse().__ Il __metodo__ __stampa()__ permette di stampare a
  video l'elenco degli articoli venduti; la lista è
  ordinata lessicograficamente. Il __metodo__ __chiude()__ conclude
- la registrazione dei prodotti venduti.
+ la registrazione dei Articoli venduti.

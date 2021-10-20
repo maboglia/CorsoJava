@@ -13,6 +13,8 @@
 
 ---
 
+## obiettivi
+
 * Creare semplici classi Java e utilizzare riferimenti a oggetti per accedere a campi e metodi in una classe
 * Dimostrare polimorfismo implementando un'interfaccia Java
 * Gestire un'eccezione controllata in un'applicazione Java
@@ -40,8 +42,6 @@
 * [Caratteristiche principali del linguaggio Java](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=001_Caratteristiche_Java.md)
 * Tecnologia Java e ambiente di sviluppo
 * Esecuzione e test di un programma Java
-
-
 
 ---
 
@@ -87,8 +87,8 @@
   * Linguaggio della macchina virtuale Java
 * Esempio:  javac Hello.java
 
-
 ![compilazione](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/03_system/developing.png)
+
 
 ---
 
