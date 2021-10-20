@@ -82,10 +82,10 @@
 ---
 
 ### Il compilatore
-* Il compilatore: ```javac```
+* Il compilatore: `javac`
 * Traduzione dei sorgenti testuali in bytecode
   * Linguaggio della macchina virtuale Java
-* Esempio:  javac Hello.java
+* Esempio:  `javac Hello.java`
 
 ![compilazione](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/03_system/developing.png)
 
