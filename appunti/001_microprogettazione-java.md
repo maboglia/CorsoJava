@@ -116,7 +116,7 @@
 
 ---
 
-### Il debugge
+### Il debugger
 * Strumento ausiliario
   * Monitorare l'esecuzione di una applicazione
   * Analisi dei valori assunti dalle variabili, i metodi della classe, …
@@ -165,7 +165,7 @@
 
 ### Variabili d'ambiente
 * Se necessario, modificare la variabile d'ambiente
-  * PATH= ... ;<JAVA_HOME>/bin
+  * `PATH= ... ;<JAVA_HOME>/bin`
   * per invocare i comandi java (compilatore, macchina virtuale, debugger, ...)
 * In Windows
   * Pannello di controllo > Sistema > Avanzate > Variabili d'ambiente
@@ -265,8 +265,8 @@
 * Regole di precedenza degli operatori
 * Operatori per concatenare le stringhe
 
-* [operatori](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=002_operatori.md#1)
-* [espressioni](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=002_espressioni.md#1)
+[operatori](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=002_operatori.md#1)
+[espressioni](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=002_espressioni.md#1)
 
 ---
 
@@ -325,18 +325,18 @@
   * I valori non stampabili sono rappresentati nel formato unicode (‘\u27AF')
 * Operazioni
   * confronto  (==, !=, >,>=, <, <=)
-* [slide tipi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=004_tipi.md)
+### [slide tipi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=004_tipi.md)
 ---
 
 ### Dichiarazioni
 * Introducono l'utilizzo di una variabile
 * Formato generale
-  * <Tipo> <Nome> ‘;'
-  * <Tipo> <Nome> ‘=' <ValoreIniziale> ‘;'
+  * `<Tipo> <Nome>;`
+  * `<Tipo> <Nome> = <ValoreIniziale>;`
 * Esempi
-  * char c;
-  * int i = 10;
-  * long l1, l2;
+  * `char c;`
+  * `int i = 10;`
+  * `long l1, l2;`
 * La mancata dichiarazione è un errore sintattico
 
 ---
@@ -362,7 +362,7 @@
   * `char c1 = ‘a', c2 = ‘\u0062';//dichiaro e inizializzo più var`
   * `boolean b = false;`
 
-* [slide variabili](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=003_variabili.md)
+### [slide variabili](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=003_variabili.md)
 
 ---
 
@@ -378,9 +378,9 @@
 
 ### Convenzioni sui nomi
 
-* Le classi hanno nomi che iniziano con la lettera maiuscola
-* Metodi, attributi e variabili hanno l'iniziale minuscola
-  * Se un nome è composto da più parole giustapposte, l'iniziale di ogni parola successiva alla prima è maiuscola
+* Le **classi** hanno nomi che iniziano con la lettera **maiuscola**
+* Metodi, attributi e variabili hanno l'iniziale **minuscola**
+  * Se un nome è composto da più parole giustapposte, l'iniziale di _ogni parola successiva alla prima è maiuscola_
   * `int contatoreNumeroOccorrenze = 0;`
   * `class CentraleTelefonica { }`
 
@@ -388,14 +388,14 @@
 
 ### Classi
 
-* La classe costituisce il "progetto" di un oggetto
+* La classe costituisce il "**progetto**" di un oggetto
   * Specifica gli attributi
   * Descrive i metodi
   * Indica lo stato iniziale
 * Ogni classe ha un nome
   * Deve essere univoco
 
-* [slide classi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_classi.md)
+### [slide classi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_classi.md)
 ---
 
 ### Costruire Oggetti
@@ -406,7 +406,7 @@
   * Qui viene memorizzato il suo stato
   * Oggetti differenti occupano posizioni differenti
 
-* [slide costruttori](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_3_classi_costruttori.md)
+### [slide costruttori](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_3_classi_costruttori.md)
 ---
 
 ### Cosa c'è negli Oggetti
@@ -536,7 +536,7 @@
 
 ## Invocare metodi
 
-* [slide metodi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=009_metodi.md)
+### [slide metodi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=009_metodi.md)
 
 ### Valori di ritorno
 * Alcuni metodi restituiscono un valore
@@ -786,7 +786,8 @@
   * Possono essere invocati a partire dal nome della classe
 
 
-[slide static](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=013_classi_static.md)
+### [slide static](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=013_classi_static.md)
+
 ---
 
 ### Math
@@ -795,7 +796,8 @@
   * d1 = Math.sqrt( 2.0 );
   * d2 = Math.sin( Math.PI / 2.0 );
 
-* [slide Math](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_java_lang_Math.md)
+### [slide Math](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_java_lang_Math.md)
+
 ---
 
 ### System
@@ -803,7 +805,7 @@
   * `System.out`  //output su schermo
   * `System.in` //input da tastiera
 
-* [slide System](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_java_lang_System.md)
+### [slide System](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_java_lang_System.md)
 ---
 
 
@@ -815,7 +817,7 @@
 * Offre molti metodi
   * Confronto, ricerca, derivazione di nuove stringhe, informazioni generali, …
 
-* [slide String](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_API_Java_Stringhe.md)
+### [slide String](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_API_Java_Stringhe.md)
 * 
 ---
 
@@ -847,7 +849,7 @@
 * Struttura dei package delle API Java
 * Il package java.lang
 
-* [slide Packages](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=020_JavaPackages.md)
+### [slide Packages](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=020_JavaPackages.md)
 
 ---
 
@@ -977,16 +979,16 @@
 ---
 
 ### Package principali
-* java.nio
+* `java.nio`
   * New Input/Output
   * Meccanismi di basso livello per interfacciarsi con il mondo esterno
-* java.security
+* `java.security`
   * Classi che implementano il modello di sicurezza di Java
-* java.sql
+* `java.sql`
   * Accesso a basi dati relazionali
-* java.text
+* `java.text`
   * Trattamento multiculturale di numeri, date, testo
-* java.util
+* `java.util`
   * Insieme variegato di classi ad uso generale
 
 ---
@@ -1025,12 +1027,12 @@
 ---
 
 ### Character, Boolean
-* Character
+* `Character`
   * Maiuscolo / minuscolo
   * Valore Unicode
   * Confronto
   * …
-* Boolean
+* `Boolean`
   * Conversione da/verso stringa
   * Confronto
   * …
@@ -1049,7 +1051,7 @@
 ---
 
 ### System: i metodi
-* exit(…)
+* `exit(…)`
   * terminazione della JVM
 * currentTimeMillis()
   * Numero di millisecondi trascorsi dal 1 gennaio 1970
@@ -1059,7 +1061,7 @@
 ---
 
 ### System: i metodi
-* gc()
+* `gc()`
   * invocazione del garbage collector
 * load(…) / loadLibrary(…)
   * carica dinamicamente un file o una libreria
@@ -1085,8 +1087,6 @@
 
 ---
 
-
-
 ## OOP Design
 * I concetti principali
 * Ereditarietà in Java
@@ -1095,7 +1095,7 @@
 
 ---
 
-### Riusare il software
+### Riuso del software
 * A volte si incontrano classi con funzionalità simili
   * In quanto sottendono concetti semanticamente "vicini"
   * Una mountain bike assomiglia ad una bicicletta tradizionale
@@ -1202,7 +1202,7 @@
 
 ### Compatibilità formale
 * Un'istanza di una classe derivata è formalmente compatibile con il tipo della super-classe
-  * Base b = new Derivata( );
+  * `Base b = new Derivata( );`
 * Il tipo della variabile "b" (Base) limita le operazioni che possono essere eseguite  sull'oggetto contenuto
   * Anche se questo ha una classe più specifica (Derivata), in grado di offrire un maggior numero di operazioni
   * Altrimenti viene generato un errore di compilazione
@@ -1211,9 +1211,8 @@
 
 ### Polimorfismo
 * Java mantiene traccia della classe effettiva di un dato oggetto
-  * Seleziona sempre il metodo più specifico…
-  * …anche se la variabile che lo contiene appartiene ad una classe più generica!
-* Una variabile generica può avere "molte forme"
+  * Seleziona sempre il metodo più specifico anche se la variabile che lo contiene appartiene ad una classe più generica
+* Una variabile generica può avere "**molte forme**"
   * Contenere oggetti di sottoclassi differenti
   * In caso di ridefinizione, il metodo chiamato dipende dal tipo effettivo dell'oggetto
 
@@ -1221,8 +1220,8 @@
 
 ### Polimorfismo
 * Per sfruttare questa tecnica:
-  * Si definiscono, nella super-classe, metodi con implementazione generica…
-  * …sostituiti, nelle sottoclassi, da implementazioni specifiche
+  * Si definiscono, nella super-classe, metodi con implementazione **generica**
+  * sostituiti, nelle sottoclassi, da implementazioni **specifiche**
   * Si utilizzano variabili aventi come tipo quello della super-classe
 * Meccanismo estremamente potente e versatile, alla base di molti "pattern" di programmazione
 
@@ -1249,10 +1248,10 @@
 ---
 
 ### Metodi di Object
-* public String toString()
+* **public String toString()**
   * Restituisce una rappresentazione stampabile dell'oggetto
-  * L'implementazione base fornita indica il nome della classe seguita dal riferimento relativo all'oggetto (java.lang.Object@10878cd)
-* public int hashCode()
+  * L'implementazione base fornita indica il nome della classe seguita dal riferimento relativo all'oggetto (`java.lang.Object@123456ab`)
+* `public int hashCode()`
   * Restituisce un valore intero legato al contenuto dell'oggetto
   * Se i dati nell'oggetto cambiano, deve restituire un valore differente
   * Oggetti "uguali" devono restituire lo stesso valore, oggetti diversi possono restituire valori diversi
@@ -1516,7 +1515,7 @@
 ---
 
 ### Metodi principali
-* int read()
+* `int read()`
   * Attende il prossimo byte, dopodiché ne restituisce il valore (0-255)
   * Ritorna -1 se il flusso è terminato
 * int available()
@@ -1525,21 +1524,21 @@
 ---
 
 ### Metodi principali
-* long skip(long n)
+* `long skip(long n)`
   * Scarta i prossimi "n" byte dal flusso, se esistono
   * Ritorna il numero di caratteri scartati
-* void close()
+* `void close()`
   * Chiude il flusso e rilascia le risorse di sistema associate
   * Occorre ricordarsi di chiamarlo!
 
 ---
 
 ### Sorgenti
-* InputStream offre funzionalità minimali:
+* `InputStream` offre funzionalità minimali:
   * Non indica da dove provengano i dati letti
 * Sottoclassi "sorgente"
   * Modellano la lettura di byte da supporti specifici
-  * File, array di byte, StringBuffer, …
+  * `File, array di byte, StringBuffer`, …
 
 ---
 

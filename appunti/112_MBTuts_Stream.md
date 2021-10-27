@@ -13,7 +13,7 @@ Gli stream portano  in Java la programmazione funzionale
 ---
 
 ## sorgente Stream
-* Gli steam possono essere creati a partire da Collections, Lists, Set, int, long, double, array, righe di un file
+* Gli stream possono essere creati a partire da Collections, Lists, Set, int, long, double, array, righe di un file
 * le operazioni sugli stream possono essere intermedie o terminali
   * *intermedie* come filter, map o sort, ritornano  uno stream: possiamo così concatenarle per raffinare i risultati
   * *terminali* come forEach, collect, o reduce: *queste non ritornano uno stream*!
@@ -22,7 +22,7 @@ Gli stream portano  in Java la programmazione funzionale
 
 ## Operazioni intermedie
 * Sono permesse zero o più operazioni intermedie
-* L'rodine delle operazioni è importante, specialmente per dataset di grandi dimensioni: prima applica i filtri, quindi ordina o rimappa
+* L'ordine delle operazioni è importante, specialmente per dataset di grandi dimensioni: prima applica i filtri, quindi ordina o rimappa
 * se i dataseto sono di grandissime dimensioni, puoi usare  `ParallelStreams`
 * le operazioni intermedie:
   * anyMatch
