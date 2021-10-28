@@ -45,19 +45,51 @@ Gli stream portano  in Java la programmazione funzionale
 ---
 
 ## Intstream
-![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_05.jpg)
+
+```java
+//IntStream
+		IntStream.range(1, 91).filter(e -> e%2==0).forEach(n -> System.out.println(n));
+		long somma = IntStream.range(1, 91).filter(e -> e%2==0).count();
+		System.out.println(somma);
+```
+
 ---
 
 ## skip
-![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_06.jpg)
+
+```java
+//stream di interi
+		IntStream.range(1, 11).skip(3).forEach(System.out::println);
+```
+
 ---
 
 ## findfirst
-![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_07.jpg)
+
+```java
+//		Stream.of("do","re","mi", "fa","sol", "la","si")
+//			.sorted()
+//			.findFirst().ifPresent(System.out::println);
+//		
+
+//		String[] note = { "do","re","mi", "fa","sol", "la","si"};
+//		Arrays.stream(note).filter(nota -> nota.startsWith("r")).forEach(System.out::print);
+//		
+		Arrays.stream(new int[] {1,3,5,7,9}).map(x -> x * 3).forEach(System.out::print);
+```
+
+```java
+Stream.of("pino", "gino", "lino", "nino").findFirst().ifPresent(System.out::println);
+```
+
 ---
 
 ## sorted
-![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_08.jpg)
+
+```java
+		Stream.of("pino", "gino", "lino", "nino").sorted().forEach(System.out::println);
+```
+
 ---
 
 ## array
@@ -65,11 +97,28 @@ Gli stream portano  in Java la programmazione funzionale
 ---
 
 ## average
-![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_10.jpg)
+
+```java
+		Arrays.stream(new int[] {1,3,5,7,9}).map(x -> x * 3).average().ifPresent(m->System.out.println( "media: " +m ));
+```
 ---
 
 ## List
-![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_11.jpg)
+
+```java
+List<String> moto = Arrays.asList("Yamaha", "BMW", "Honda", "Ducati");
+		moto.stream().map(String::toUpperCase).filter(m->m.endsWith("A")).forEach(System.out::println);
+		//un plus per biagio, che ci è arrivato subito, dimostrando incredibili doti ddi osservazione e perspicacia, oltre ad una inngegabile conoscenza del linguaggio java, anche nella sua evoluzione funzionale. ma chi è quest'uomo!?
+		Stream<String> versi = Files.lines(Paths.get("divina.txt"), Charset.forName("Cp1252"));
+		//versi.filter(s -> s.contains("disgusto")).sorted().forEach(System.out::println);
+		
+		List<String> versiBiagio = versi.filter(v -> v.contains("selva")).collect(Collectors.toList());
+		versiBiagio.forEach(System.out::println);
+		
+		Stream<String> ore = Files.lines(Paths.get("aula.txt"), Charset.forName("Cp1252"));
+		ore.map(s->s.split(",")).forEach(as -> System.out.println(as[0] + as[1]));
+```
+
 ---
 
 ## text file
@@ -78,7 +127,16 @@ Gli stream portano  in Java la programmazione funzionale
 ---
 
 ## collect
-![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_14.jpg)
+
+```java
+Stream<String> studenti = Files.lines(Paths.get("aula.txt"), Charset.forName("Cp1252"));
+		Map<Object, Object[]> mappa = new HashMap<>();
+		
+		mappa = studenti
+				.map(x -> x.split(","))				
+				.collect(Collectors.toMap(x -> x[0], x -> Arrays.copyOfRange(x, 1, 22)));
+```
+
 ---
 
 ## file e count
@@ -90,7 +148,31 @@ Gli stream portano  in Java la programmazione funzionale
 ---
 
 ## rimappa su hashmap
-![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_17.jpg)
+
+```java
+Stream<String> studenti = Files.lines(Paths.get("aula.txt"), Charset.forName("Cp1252"));
+		Map<Object, Object[]> mappa = new HashMap<>();
+		
+		mappa = studenti
+				.map(x -> x.split(","))				
+				.collect(Collectors.toMap(x -> x[0], x -> Arrays.copyOfRange(x, 1, 22)));
+
+		Set<Object> keySet = mappa.keySet();
+		for (Object object : keySet) {
+			String chiave = (String) object;
+			System.out.println(chiave);
+			Object[] valori = mappa.get(chiave);
+			Stream<Object> valori2 = Stream.of(mappa.get(chiave));
+			Stream.of(valori).forEach(voto -> {
+				double v = Double.parseDouble((String) voto);
+				System.out.print(v);
+				});
+			
+				
+			System.out.println("----------------");
+		}
+```
+
 ---
 
 ## reduce
@@ -98,4 +180,8 @@ Gli stream portano  in Java la programmazione funzionale
 ---
 
 ## summaryStatistics
-![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_19.jpg)
+
+```java
+		 IntSummaryStatistics stats = IntStream.of(1,2,5,78,9,45).summaryStatistics();
+		 System.out.println(stats);
+```
