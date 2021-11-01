@@ -2,6 +2,7 @@
 
 ### Una classe astratta è una classe avente **almeno un metodo astratto**
 
+NB: Posso comunque dichiarare una classe **astratta anche se non contiene** alcun metodo astratto!
 
 ```java
 abstract class Forma {
