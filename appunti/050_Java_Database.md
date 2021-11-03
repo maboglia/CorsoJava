@@ -10,13 +10,13 @@ principalmente da interfacce indipendenti dal database.
 ---
 
 Le API JDBC consentono di accedere a qualsiasi tipo
-di dati tabulari, in particolare a i dati memorizzati
+di dati tabulari, in particolare ai dati memorizzati
 in database relazionali
 * JDBC consente di scrivere applicazioni Java che gestiscono queste tre attività di programmazione:
   * Connettere un'origine dati (e.g., database)
   * Inviare query e istruzioni di aggiornamento per il
 database
-  * Recuperare ed elaborare i risultati ricevu
+  * Recuperare ed elaborare i risultati ricevuti
 
 ---
 
@@ -44,8 +44,8 @@ L'impiego di JDBC solitamente si articola attraverso quattro passi:
 3. Si impiegano l'**interfaccia di JDBC** ed il linguaggio **SQL** per interagire con la base di dati. Generalmente, viene sottoposta al DBMS una query volta all'ottenimento di alcuni risultati.
 
 4. I risultati ottenuti possono essere manipolati sfruttando le classi JDBC e del codice Java studiato per il compito.
----
 
+---
 
 Si realizzi la tabella che sarà impiegata per il test, sfruttando il seguente codice SQL:
 
@@ -91,7 +91,7 @@ ResultSet resultset = statement.executeQuery(
 ---
 
 ```java
-// Scorro e mostro i risultati.
+// Scorro il resultset usando il metodo next() e mostro i risultati.
 while (resultset.next()) {
 	String nome = resultset.getString(1);
 	String cognome = resultset.getString(2);
@@ -101,19 +101,7 @@ while (resultset.next()) {
 	System.out.println("Cognome: " + cognome);
 	System.out.println("Indirizzo: " + indirizzo);
 	System.out.println();
-	}
-	} catch (SQLException e) {
-	// In caso di errore...
-	} finally {
-	if (connection != null) {
-	try {
-	connection.close();
-	} catch (Exception e) {
-	}
-	}
-	}
-	}
-}
+	} 
 
 ```
 ---
@@ -139,6 +127,7 @@ Class.forName(stringa_driver);
 * JDK contiene un ponte JDBC-ODBC
 * E’ necessario configurare ODBC
 * Generalmente utilizzato in ambito di test
+
 #### Tipo 2 (Native-API Driver)‫‏‬
 
 * Scritto parzialmente in java e parzialmente in codice nativo
@@ -152,6 +141,7 @@ Class.forName(stringa_driver);
 * Il middle-tier (application server) converte le chiamate JDBC in un
 * protocollo DBMS-independent
 * Vengono poi traslate da un server nel relativo protocollo del DBMS
+
 #### Tipo 4 (Native-Protocol Driver / Pure Java Driver)
 
 * Chiamate JDBC vengono convertite direttamente nelle chiamate al protocollo del DBMS specifico
@@ -184,8 +174,8 @@ Il modello generalmente osservato è il seguente:
 Una volta ottenuta una connessione attiva, diventa possibile sfruttare i metodi descritti da `Connection`. I più frequentemente utilizzati sono:  
 
  
-*   createStatement(). Crea e restituisce un oggetto java.sql.Statement, utile per interagire con il database mediante dei comandi SQL.
-*   close(). Chiude la connessione.
+*   `createStatement()` Crea e restituisce un oggetto java.sql.Statement, utile per interagire con il database mediante dei comandi SQL.
+*   `close()` Chiude la connessione.
 
 ---
 
@@ -255,17 +245,18 @@ while (resultSet.next()) {
 
 Un ciclo di questo tipo termina non appena tutti i record restituiti dalla query eseguita sono stati passati in rassegna. 
 
-Quando un record è correttamente puntato dal cursore, è possibile esaminare i suoi campi attraverso dei metodi che hanno tutti la forma: getTipo(int indiceColonna)
+Quando un record è correttamente puntato dal cursore, è possibile esaminare i suoi campi attraverso dei metodi che hanno tutti la forma: 
+`getTipo(int indiceColonna)`
 
 Ad esempio, si supponga di voler ottenere il contenuto del primo campo del record corrente, sotto forma di **stringa**: 
 
 `String stringa = resultSet.getString(1);` 
 
-Se si conoscono i nomi associati ai singoli campi del record, è possibile usare la variante: getTipo(String nomeColonna)
+Se si conoscono i **nomi** associati ai singoli campi del record, è possibile usare la variante: `getTipo(String nomeColonna)`
 
 ---
 
-Ad esempio: `String stringa = resultSet.getString("Nome");` 
+Ad esempio: `String nome = resultSet.getString("Nome");` 
 
 Il seguente elenco riporta i metodi di questa famiglia più frequentemente utilizzati:
 

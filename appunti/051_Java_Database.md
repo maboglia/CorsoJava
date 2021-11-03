@@ -7,13 +7,13 @@ L'interfaccia **java.sql.PreparedStatement**, che estende **Statement**, permett
 
 [esempio input errato/malizioso]()
 
-L'interfaccia PreparedStatement permette di scrivere **codice SQL parametrico**, sostituendo i dati in input concatenati via stringa con dei caratteri di punto interrogativo. 
+L'interfaccia **PreparedStatement** permette di scrivere **codice SQL parametrico**, sostituendo i dati in input concatenati via stringa con dei caratteri di punto interrogativo. 
 
-Fatto ciò, è possibile impostare uno ad uno i parametri espressi attraverso i metodi setter esposti da PreparedStatement. 
+Fatto ciò, è possibile impostare uno ad uno i parametri espressi attraverso i metodi setter esposti da **PreparedStatement**. 
 
 Questi metodi permettono di inserire i parametri senza preoccuparsi della conflittualità dei loro contenuti: sarà JDBC, in collaborazione con il driver dello specifico DBMS, a risolvere ogni problema. 
 
-I setter di PreparedStatement, un po' come i getter di ResultSet, esistono per i principali tipi di Java.
+I setter di **PreparedStatement**, un po' come i getter di **ResultSet**, esistono per i principali tipi di Java.
 
 ---
 
