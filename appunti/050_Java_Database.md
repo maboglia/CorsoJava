@@ -4,14 +4,15 @@ JDBC
 JDBC (Java Database Connectivity) è un’interfaccia completamente Java utilizzata per
 eseguire istruzioni SQL sui database.
 
-L'API JDBC si trova nel pacchetto java.sql; contiene poche classi concrete, è composta
+L'**API JDBC** si trova nel pacchetto java.sql; contiene poche classi concrete, è composta
 principalmente da interfacce indipendenti dal database.
 
 ---
 
-Le API JDBC consentono di accedere a qualsiasi tipo
+Le **API JDBC** consentono di accedere a qualsiasi tipo
 di dati tabulari, in particolare ai dati memorizzati
 in database relazionali
+
 * JDBC consente di scrivere applicazioni Java che gestiscono queste tre attività di programmazione:
   * Connettere un'origine dati (e.g., database)
   * Inviare query e istruzioni di aggiornamento per il
@@ -20,15 +21,17 @@ database
 
 ---
 
-JDBC include:
-* API JDBC - Un insieme di interfacce che fanno parte
+### JDBC include:
+
+* **API JDBC** - Un insieme di interfacce che fanno parte
 della piattaforma Java e costituiscono le API per il
 programmatore
-* JDBC Driver Manager - Gestore di driver che
+* **JDBC Driver Manager** - Gestore di driver che
 permette a driver di terze parti di connettersi ad un
 DB specifico
 
-Un driver JDBC permette di
+### Un driver JDBC permette di
+
 * Connettersi ad un DB
 * Inviare un comando SQL
 * Processare il risultato
@@ -47,61 +50,73 @@ L'impiego di JDBC solitamente si articola attraverso quattro passi:
 
 ---
 
-Si realizzi la tabella che sarà impiegata per il test, sfruttando il seguente codice SQL:
 
 ```java
-CREATE TABLE Persone (
-Nome VARCHAR (50) NOT NULL,
-Cognome VARCHAR (50) NOT NULL,
-Indirizzo VARCHAR (50) NOT NULL
-);
+
+private Connection con =null ;
+
+private final String URL = "jdbc:mysql://localhost:3306/nomeDB";
+private final String USER = "username";
+private final String PASS = "password";
+
+public Connection connetti() {
+	try {
+		if(this.con==null) {
+		this.con= DriverManager.getConnection(URL, USER, PASS);
+		System.out.println("Siamo connessi!");	
+		}
+	
+	} catch (SQLException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+		
+	}
+	return this.con;
+};
 
 ```
 ---
 
 ```java
+	private Connection con = null;
+	private Statement statement = null;
+	private PreparedStatement ps=null;
+	private ResultSet rs = null;
 
-import java.sql.*;
-public class JDBCTest1 {
-public static void main(String[] args) {
-// Nome del driver.
-String DRIVER = "com.mysql.jdbc.Driver";
-// Indirizzo del database.
-String DB_URL = "jdbc:mysql://localhost:3306/javatest";
-	/*try {
-	// Carico il driver. Da JDBC 4 non è più necessario...
-	Class.forName(DRIVER);
-	} catch (ClassNotFoundException e1) {
-	// Il driver non può essere caricato.
-	System.out.println("Driver non trovato...");
-	System.exit(1);
-	}*/
-// Preparo il riferimento alla connessione.
-Connection connection = null;
-try {
-// Apro la connessione verso il database.
-connection = DriverManager.getConnection(DB_URL);
-// Ottengo lo Statement per interagire con il database.
-Statement statement = connection.createStatement();
-// Interrogo il DBMS mediante una query SQL.
-ResultSet resultset = statement.executeQuery(
-"SELECT Nome, Cognome, Indirizzo FROM Persone"
-);
-```
----
+	private Connessione c = new Connessione();
 
-```java
-// Scorro il resultset usando il metodo next() e mostro i risultati.
-while (resultset.next()) {
-	String nome = resultset.getString(1);
-	String cognome = resultset.getString(2);
-	String indirizzo = resultset.getString(3);
-	System.out.println("Lette informazioni...");
-	System.out.println("Nome: " + nome);
-	System.out.println("Cognome: " + cognome);
-	System.out.println("Indirizzo: " + indirizzo);
-	System.out.println();
-	} 
+// Scorro il ResultSet usando il metodo next() e mostro i risultati.
+//in questo caso riempio un ArrayList di libri e lo ritorno
+
+		List<Libro> libri = new ArrayList<>();
+		this.con = c.connetti();
+		try {
+			this.statement = this.con.createStatement();
+		} catch (SQLException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		try {
+			this.rs = this.statement.executeQuery(FIND_ALL);
+			while(this.rs.next()) {
+				Libro l = new Libro();
+				l.setId(rs.getInt("id"));
+				l.setPagine(rs.getInt("pagine"));
+				l.setEditore_id(rs.getInt("editore_id"));
+				l.setPrezzo(rs.getDouble("prezzo"));
+//				l.setP_iva(rs.getDouble("p_iva"));
+				l.setTitolo(rs.getString("titolo"));
+				libri.add(l);
+				
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return libri;
+
 
 ```
 ---
@@ -109,8 +124,9 @@ while (resultset.next()) {
 connettersi ad un database
 ----------------------------
 
-Da JDBC 4 non è più necessario caricare in memoria il driver corrispondente,  questo è già disponibile. 
-Comunque, la sintassi per effettuare l'operazione è la seguente:
+Da JDBC 4 non è più necessario caricare in memoria il driver corrispondente,  questo è già disponibile.
+
+Se necessario, la sintassi per effettuare l'operazione è la seguente:
 
 ```java
 
@@ -118,34 +134,6 @@ Class.forName(stringa_driver);
 
 ```
 
-### Tipi di driver
-
-#### Tipo 1 (JDBC-ODBC bridge)‫‏‬
-
-* Traduce JDBC in ODBC (Open DataBase Connectivity)
-* Viene utilizzato un driver ODBC
-* JDK contiene un ponte JDBC-ODBC
-* E’ necessario configurare ODBC
-* Generalmente utilizzato in ambito di test
-
-#### Tipo 2 (Native-API Driver)‫‏‬
-
-* Scritto parzialmente in java e parzialmente in codice nativo
-* Chiamate JDBC vengono convertite in chiamate alle API dei client
-* Oracle, IBM DB2
-* E’ necessario installare le librerie native
-
-#### Tipo 3 (Network-Protocol Driver / MiddleWare Driver)
-
-* Fa uso di un middle tier tra le il programma chiamante e il database
-* Il middle-tier (application server) converte le chiamate JDBC in un
-* protocollo DBMS-independent
-* Vengono poi traslate da un server nel relativo protocollo del DBMS
-
-#### Tipo 4 (Native-Protocol Driver / Pure Java Driver)
-
-* Chiamate JDBC vengono convertite direttamente nelle chiamate al protocollo del DBMS specifico
-* Scritto completamente in Java
 
 ---
 
@@ -192,10 +180,10 @@ In particolare, mediante SQL è possibile compiere tre principali operazioni:
 
 ---
 
-L'interfaccia java.sql.Statement comprende i metodi necessari per fornire al DBMS le istruzioni SQL appena descritte:
+L'interfaccia `java.sql.Statement` comprende i metodi necessari per fornire al DBMS le istruzioni SQL appena descritte:
 
-*   executeQuery() commissiona le istruzioni di tipo SELECT.
-*   executeUpdate() commissiona le istruzioni di aggiornamento delle tabelle (DELETE, INSERT e UPDATE) e della base di dati (CREATE TABLE, INDEX e così via).
+*   `executeQuery()` commissiona le istruzioni di tipo SELECT.
+*   `executeUpdate()` commissiona le istruzioni di aggiornamento delle tabelle (DELETE, INSERT e UPDATE) e della base di dati (CREATE TABLE, INDEX e così via).
 
 ---
 
@@ -207,7 +195,7 @@ L'interfaccia java.sql.Statement comprende i metodi necessari per fornire al DBM
 ## metodo executeUpdate()
 
 * `executeUpdate()`, non ha risultati da restituire.
-* ritorna un intero che riporta il numero delle righe coinvolte dall'esecuzione di istruzioni di tipo DELETE, INSERT e UPDATE. 
+* ritorna un **intero** che riporta il numero delle righe coinvolte dall'esecuzione di istruzioni di tipo DELETE, INSERT e UPDATE. 
 * dove non c'è nulla da restituire, il valore di ritorno sarà 0 (zero).
 
 ---
@@ -220,20 +208,12 @@ L'interfaccia ResultSet
 
 ### in pratica
 
-* Si supponga di aver eseguito una query che restituisce due record. 
-* Inizialmente, il cursore del corrente oggetto ResultSet sarà posizionato antecedentemente al primo dei due record restituiti. 
-* In questa condizione, non è possibile svolgere operazioni di analisi dei risultati, giacché nessun record è puntato dal cursore corrente. 
+* Inizialmente, il cursore del corrente oggetto ResultSet sarà posizionato prima del primo dei record restituiti. 
+* In questa condizione, non è possibile svolgere operazioni di analisi dei risultati: nessun record è puntato dal cursore corrente. 
 * Una prima chiamata a next() farà in modo che il cursore venga spostato sul primo record restituito dalla query. 
-* Ogni volta che un record è puntato dal cursore, diventa possibile estrapolarne i contenuti. 
-  
----
-
-* Una seconda chiamata a next() sposterà il cursore in avanti di una posizione. 
-* A questo punto, il secondo (ed ultimo) record ottenuto potrà essere esaminato ed utilizzato. 
-* Una terza chiamata a next() porterà il cursore oltre l'ultimo record disponibile. 
-* Si ritorna, così, ad una condizione simile a quella iniziale, quando nessun record era puntato. 
-* Il metodo next() fornisce un'ulteriore funzionalità: restituisce un valore booleano che è true quando un record è puntato, false in caso contrario. 
-* In termini pratici, un intero ResultSet può essere passato in rassegna con un codice del tipo:
+* Ogni volta che un record è puntato dal cursore, diventa possibile estrarne i contenuti. 
+* Quando non ci sono più record nel ResultSet, il metodo next() ritorna **false**
+* Non conoscendo il numero di righe restituite dal db, un ResultSet solitamente viene passato in rassegna con un codice del tipo:
 
 ```java
 while (resultSet.next()) { 
@@ -241,9 +221,12 @@ while (resultSet.next()) {
 }
 ```
 
----
 
 Un ciclo di questo tipo termina non appena tutti i record restituiti dalla query eseguita sono stati passati in rassegna. 
+
+---
+
+### Leggere i valori del record corrente
 
 Quando un record è correttamente puntato dal cursore, è possibile esaminare i suoi campi attraverso dei metodi che hanno tutti la forma: 
 `getTipo(int indiceColonna)`
@@ -254,9 +237,12 @@ Ad esempio, si supponga di voler ottenere il contenuto del primo campo del recor
 
 Se si conoscono i **nomi** associati ai singoli campi del record, è possibile usare la variante: `getTipo(String nomeColonna)`
 
----
 
 Ad esempio: `String nome = resultSet.getString("Nome");` 
+
+---
+
+### I metodi per leggere
 
 Il seguente elenco riporta i metodi di questa famiglia più frequentemente utilizzati:
 
@@ -271,95 +257,3 @@ Il seguente elenco riporta i metodi di questa famiglia più frequentemente utili
 *   `getString()`  Restituisce il campo specificato sotto forma di **oggetto java.lang.String**.
 
 ---
-
-Il seguente codice aggiorna la tabella Persone del database in uso, creando automaticamente un nuovo record.
-
-```java
-
-import java.io.*;
-import java.sql.*;
-public class JDBCTest4 {
-// Nome del driver.
-private static final String DRIVER = "com.mysql.jdbc.Driver";
-// Indirizzo del database.
-private static final String DB_URL = "jdbc:mysql://localhost:3306/javatest";
-// Questo metodo aggiunge un nuovo record alla tabella nel DB.
-private static boolean aggiungiRecord(String nome, String cognome,
-String indirizzo) {
-// Preparo il riferimento alla connessione.
-Connection connection = null;
-try {
-// Apro la connesione verso il database.
-connection = DriverManager.getConnection(DB_URL);
-```
----
-
-```java
-// Ottengo lo Statement per interagire con il database.
-Statement statement = connection.createStatement();
-// Aggiungo il nuovo record.
-statement.executeUpdate(
-"INSERT INTO Persone ( " +
-" Nome, Cognome, Indirizzo " +
-") VALUES ( " +
-" '" + nome + "', " +
-" '" + cognome + "', " +
-" '" + indirizzo + "' " +
-")"
-);
-return true;
-} catch (SQLException e) {
-// In caso di errore...
-return false;
-} finally {
-if (connection != null) {
-try {
-connection.close();
-} catch (Exception e) {
-}
-}
-}
-}
-```
----
-
-```java
-
-public static void main(String[] args) throws IOException {
-
-// Interagisco con l'utente.
-BufferedReader reader = new BufferedReader(
-new InputStreamReader(System.in)
-);
-while (true) {
-System.out.print("Nome: ");
-String nome = reader.readLine();
-System.out.print("Cognome: ");
-String cognome = reader.readLine();
-System.out.print("Indirizzo: ");
-String indirizzo = reader.readLine();
-System.out.println();
-```
----
-
-```java
-if (aggiungiRecord(nome, cognome, indirizzo)) {
-System.out.println("Record aggiunto!");
-} else {
-System.out.println("Errore!");
-}
-System.out.println();
-String ris;
-do {
-System.out.print("Vuoi aggiungerne un altro (si/no)? ");
-ris = reader.readLine();
-} while (!ris.equals("si") && !ris.equals("no"));
-if (ris.equals("no")) {
-break;
-}
-System.out.println();
-}
-}
-}
-
-```
