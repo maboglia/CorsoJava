@@ -3,7 +3,8 @@
  
 * [Java SE 11 Programmer I](https://education.oracle.com/java/java-se/product_267)
 
-## obiettivi
+<details><summary>obiettivi</summary>
+
 
 * Accedere e creare campi e metodi statici
 * Scrivere codice Java che utilizza variabili, array, costrutti condizionali e loop per raggiungere gli obiettivi del programma
@@ -17,6 +18,7 @@
 * Definire e implementare una semplice gerarchia di classi che supporti i requisiti dell'applicazione
 * Identificare i principi di programmazione modulari
 
+</details>
 ---
 
 
