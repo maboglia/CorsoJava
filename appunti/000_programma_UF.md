@@ -3,7 +3,11 @@
  
 * [Java SE 11 Programmer I](https://education.oracle.com/java/java-se/product_267)
 
-<details><summary>obiettivi</summary>
+
+<details>
+<summary>
+ obiettivi
+</summary>
 
 
 * Accedere e creare campi e metodi statici
