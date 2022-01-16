@@ -2,14 +2,14 @@
 
 L’applicazione da progettare riguarda la gestione della vendita di biglietti in un teatro. 
  
-Ogni spettacolo che si svolge nel teatro è caratterizzato dal 
+Ogni spettacolo che si svolge nel teatro è caratterizzato da: 
 * titolo (una stringa), 
-* dal nome del regista (una stringa) e 
-* dal nome degli attori che vi recitano (un insieme non vuoto di stringhe). 
+* nome del regista (una stringa) e 
+* nome degli attori che vi recitano (un insieme non vuoto di stringhe).
 
-Per uno spettacolo si prevedono un certo numero di repliche (almeno una), di cui interessa la data e l’ora in cui si svolgono. 
-
-Dei posti del teatro interessa conoscere la fila, il numero ed il tipo (platea, palco, galleria, ecc.). 
+Per uno spettacolo si prevedono un certo numero di repliche (almeno una), di cui interessa la data e l’ora in cui si svolgono.
+s
+Dei posti del teatro interessa conoscere la fila, il numero ed il tipo (platea, palco, galleria, ecc.).
 
 __Alcuni posti sono adatti ad accogliere disabili.__
 
@@ -17,6 +17,7 @@ Il costo del biglietto riferito ad un posto (un reale positivo) è stabilito in 
 (ad esempio, per lo spettacolo __“Cats”__, il costo dei posti di platea è di 50 euro). 
 
 ## I posti possono essere prenotati. 
+
 Di una prenotazione p interessa il nome del cliente (una stringa) che l’ha effettuata, la data in cui è stata effettuata, la replica dello spettacolo a cui p si riferisce, ed i posti (almeno uno) che sono prenotati tramite p. 
 
 Inoltre, se p prenota anche posti per disabili, interessa conoscere il tipo di disabilità (una stringa) di colui per cui è prenotato il posto. 
