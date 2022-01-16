@@ -82,12 +82,9 @@ Le caratteristiche del linguaggio di programmazione Java sono:
 
 * Più efficiente di altri linguaggi interpretati
 
-* Soluzione: la macchina virtuale
+* Soluzione: la macchina virtuale: JVM
 
-* JVM (non è proprio la JVM)
-
-* Linguaggio macchina bytecodes
-
+* Linguaggio macchina bytecode
 
 
 ---

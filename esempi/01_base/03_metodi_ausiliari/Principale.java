@@ -24,7 +24,7 @@ public class Principale {
         System.out.println(domanda);
         Scanner stringa = new Scanner(System.in);
         String miaStringa = stringa.next();
-
+        
         return miaStringa;
 
     }
