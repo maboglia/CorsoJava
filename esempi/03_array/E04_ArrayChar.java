@@ -1,5 +1,5 @@
 
-public class ArrayChar1
+public class E04_ArrayChar
 {
    public static void main( String[] args )
    {
@@ -9,7 +9,7 @@ public class ArrayChar1
 
 
       /* =========================================
-         Convert String s into an array of char
+         converte una stringa in un array di caratteri
          ========================================= */
       A = s.toCharArray();
 
@@ -19,7 +19,7 @@ public class ArrayChar1
       System.out.println( "\n" );
 
       /* =========================================
-         Convert an array of char A into string
+         converti un array di caratteri in una stringa
          ========================================= */
       A = new char[4];
 

@@ -1,7 +1,7 @@
 /* Programma che stampa i caratteri letti da tastiera ed i
    relativi codici ASCII */
 import java.io.*;
-class Prova {
+class StampaCaratteriCodAscii {
   public static void main (String[] args) throws IOException {
     int[] a = new int[10];
     for (int i = 0; i <= a.length - 1; i++)

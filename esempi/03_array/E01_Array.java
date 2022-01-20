@@ -2,7 +2,7 @@ package settimana03;
 
 import java.util.Random;
 
-public class Array1 {
+public class E01_Array {
 
 	public static void main(String[] args) {
 	

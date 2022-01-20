@@ -1,6 +1,6 @@
 package main;
 
-public class ArrayBidimensionale {
+public class E03_ArrayBidimensionale {
 
 	/**
 	 * @param args

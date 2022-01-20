@@ -2,7 +2,7 @@ package settimana04;
 
 import java.util.Random;
 
-public class Array2 {
+public class E02_Array2 {
 
 	
 	
