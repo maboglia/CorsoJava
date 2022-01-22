@@ -32,14 +32,14 @@ class CostruttoriStringa{
 }
 
 ```
-## Utilizzo della classe StringBuffer
+## Utilizzo della classe StringBuilder
 
 ```java
 class BufferStringhe{
 	public static void main(String args[]){
 		String s;
 		int i;
-		StringBuffer sb = new StringBuffer("Ciao ");
+		StringBuilder sb = new StringBuilder("Ciao ");
 		// Aggiunge caratteri a sb
 		sb.append("mondo!");
 		System.out.print("sb vale ");
