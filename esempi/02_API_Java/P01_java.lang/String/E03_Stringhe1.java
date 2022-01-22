@@ -1,6 +1,6 @@
 package settimana03;
 
-public class Stringhe1 {
+public class E03_Stringhe1 {
 
 	public static void main(String[] args) {
 		

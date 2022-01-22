@@ -2,7 +2,7 @@ package principale;
 
 import java.util.Scanner;
 
-public class Calcolatrice {
+public class E02_Calcolatrice {
 
 	
 

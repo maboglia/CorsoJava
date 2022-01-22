@@ -3,7 +3,7 @@ package w02.stringhe;
 /**
  * Created by mauro on 15/06/16.
  */
-public class Stringhe1 {
+public class E02_Stringhe1 {
 
     public static void main(String[] args) {
 

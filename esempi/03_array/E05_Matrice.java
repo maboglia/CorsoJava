@@ -1,9 +1,9 @@
 package main;
 
-public class Matrice {
+public class E05_Matrice {
 
 	/**
-	 * questo è il mio metodo main
+	 * questo ï¿½ il mio metodo main
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

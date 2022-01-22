@@ -1,6 +1,6 @@
 package esempio;
 
-public class ArrayTest {
+public class E09_ScorrereArray {
 
 	public static void main(String[] args) {
 		// creiamo un array di interi di 10 elementi

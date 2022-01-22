@@ -1,6 +1,6 @@
 package main;
 
-public class ArrayMain {
+public class E08_ArrayIrregolare {
 
 	/**
 	 * @param args

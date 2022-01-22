@@ -1,6 +1,6 @@
 package p001;
 
-public class Stringhe {
+public class E01_Stringhe {
 
 	public static void main(String[] args) {
 

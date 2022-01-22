@@ -1,6 +1,6 @@
 package esempio;
 
-public class MatrixTest {
+public class E06_Matrice {
 
 	public static void main(String[] args) {
 		// creo una griglia 3 x 3

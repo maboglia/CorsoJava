@@ -2,7 +2,7 @@ package it.maboglia.tipi;
 
 import java.util.Scanner;
 
-public class Principale {
+public class E04_GetInput {
 
     public static void main(String[] args){
 

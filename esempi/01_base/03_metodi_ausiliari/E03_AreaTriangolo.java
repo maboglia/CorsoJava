@@ -1,7 +1,7 @@
 package p001;
 import java.util.Scanner;
 
-public class AreaTriangolo {
+public class E03_AreaTriangolo {
 
 	public static void main(String[] args) {
 		

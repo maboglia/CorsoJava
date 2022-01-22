@@ -1,6 +1,6 @@
 package com.maboglia.banca;
 
-public class Conto {
+public class E01_Conto {
 
 	/**
 	 * @param args

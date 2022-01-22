@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class CopiaArray {
+public class E07_CopiaArray {
 
     public static void main(String[] args) {
 
