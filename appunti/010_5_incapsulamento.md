@@ -1,8 +1,8 @@
 # Incapsulamento e visibilità in Java
 
-* Quando disegniamo un software ci sono **due aspetti** che risultano fondamentali:
-  * **Interfaccia**: definita come gli **elementi che sono visibili dall'esterno**, come il sw può essere utilizzato
-  * **Implementazione**: definita definendo alcuni attributi e scrivendo il codice dei differenti metodi per leggere e/o scrivere gli attributi
+* **due aspetti** che risultano fondamentali in un software:
+  * **Interfaccia**: definita come gli **elementi che sono visibili dall'esterno**, cioè come il sw può essere utilizzato
+  * **Implementazione**: la realizzazione pratica interna dei metodi e la loro interazione con le proprietà degli oggetti
 
 ---
 
@@ -36,14 +36,13 @@
 * Gli attributi di una classe sono strettamente relazionati con la sua implementazione. 
 * Conviene contrassegnarli come `private` e impedirne l'accesso dall'esterno
 * In futuro potremo cambiare la rappresentazione interna dell'oggetto senza alterare l'interfaccia
-* Quindi non permettiamo di accedere agli attributi!
 * per consultarli e modificarli aggiungiamo i metodi accessori e mutatori:  `getters` e `setters`
 
 ---
 
 ### Modifica di rappresentazione interna di una classe
 
-* Uno dei maggiori vantaggi di occultare gli attributi è che in futuro potremo cambiarli senza la necessità di cambiare l'interfaccia
+* Uno dei maggiori vantaggi di occultare gli attributi è che in **futuro potremo cambiarli** senza la necessità di cambiare l'interfaccia
 * Un linguaggio di programmazione __ORIENTATO AGLI OGGETTI__  fornisce meccanismi per definire nuovi tipi di dato basati sul concetto di classe
 * Una classe definisce un insieme di oggetti (conti bancari, dipendenti, automobili, rettangoli, ecc...).
 * Un oggetto è una struttura dotata di proprie **variabili** (che rappresentano il suo stato) propri **metodi** (che realizzano le sue funzionalità)
