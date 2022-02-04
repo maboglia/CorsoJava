@@ -3,13 +3,15 @@
 * Danno accesso agli attributi:
 
 ```java
-class NomeClasse{  private double nome1, nome2;
+class NomeClasse{  
+       
+       private double nome1, nome2;
 
        public double getNome1(){
-       return nome1;<
+              return nome1;
        } 
        public void setNome1(double nome1){ 
-       this.nome1 = nome1; 
+              this.nome1 = nome1; 
        }
 ```
 
@@ -22,11 +24,8 @@ class NomeClasse{  private double nome1, nome2;
 
 ## Visibilità ed encapsulation
 
-Motivazione
 * Modularità = diminuire le interazioni
 * Information Hiding = delegare responsabilità
-
-Supporto sintattico
 * private attributo/metodo visibile solo da istanze della stessa classe
 * public attributo/metodo visibile ovunque
 
@@ -34,9 +33,7 @@ Supporto sintattico
 
 ## Getters e setters
 
-Aggiungere metodi per leggere scrivere un attributo privato
-
-Può infrangere (indirettamente) l'encapsulation
+Metodi accessori e mutatori per leggere scrivere un attributo privato
 
 ```java
 String getColore() {

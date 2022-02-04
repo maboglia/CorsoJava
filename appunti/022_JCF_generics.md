@@ -1,16 +1,14 @@
 # Collections e Generics
 
 
-I Generics offrono la loro più classica utilità nell’uso delle Collection. 
-
-Essi, infatti, permettono di fare in modo che una particolare Collection sia parametrizzata con un certo tipo. 
+I Generics permettono di fare in modo che una particolare Collection sia parametrizzata con un certo tipo.
 
 La sintassi fa uso di parentesi angolari "<" e ">".
 
 Ad esempio
 
 ```java
-Vector<String> vector = new Vector<String>();
+Vector<String> vector = new Vector<>();
 ```
 
 Se si provasse ad aggiungere a vector un eventuale oggetto che non sia di tipo String otterremmo un warning in compilazione.

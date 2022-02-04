@@ -179,21 +179,4 @@ a2.vernicia("rosso");
 // this == a2
 ```
 
----
 
-
-```java
-class Automobile{
-String colore;
-...
-...
-void vernicia (String colore) {
-this.colore = colore;
-}
-}
-. . .
-Automobile a2, a1 = new Automobile;
-a1.vernicia("bianco"); // a1 == this
-a2.vernicia("rosso");
-// this == a2
-```
