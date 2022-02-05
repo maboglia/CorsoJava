@@ -404,11 +404,11 @@ ae.ricarica();
 
 ## Package
 
-### La classe è un elemento di modularizzazione più potente della procedura
+### La classe è un elemento di modularizzazione 
 
 * Progresso rispetto al modello procedurale
 * È ancora piccolo
-* Occorre un livello di modularità più ampio
+* Occorre un livello di modularità più ampio: il package
   * Insieme di classi
 
 * [package](20_JavaPackages.md) 
