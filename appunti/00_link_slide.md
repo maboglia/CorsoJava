@@ -1,6 +1,5 @@
 * [000_programma_Java.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=000_programma_Java.md)
 * [000_programma_UF.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=000_programma_UF.md)
-* [000_Programma in dettaglio](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=001_microprogettazione-java.md)
 * [001_Caratteristiche_Java.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=001_Caratteristiche_Java.md)
 * [001_schema.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=001_schema.md)
 * [002_espressioni.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=002_espressioni.md)

@@ -77,16 +77,16 @@
 
 ---
 
-**IDENTIFICATORI E TIPI DI DATO** 
+### **Identificatori e tipi di dato** 
 
 * Schema Libero
-* Case sensitive 
+* Case sensitive
 * Commenti
 * Regole per gli identificatori 
 
 ---
 
-### LE VARIABILI IN JAVA
+### Le variabili in java
 
 * Dichiarazione di una variabile: 
 * Variabili d'istanza
@@ -99,7 +99,7 @@
 
 ---
 
-__TIPI DI DATO PRIMITIVI__ 
+### __Tipi di dato primitivi__ 
 
 * Tipi di dati interi, casting e promotion 
 * Tipi di dati a virgola mobile, casting e promotion 
@@ -131,7 +131,7 @@ __TIPI DI DATO PRIMITIVI__
 
 ---
 
-**INTRODUZIONE ALLA LIBRERIA STANDARD** 
+### **Introduzione alla libreria standard** 
 
 * Il comando import
 * La classe String
@@ -147,13 +147,13 @@ __TIPI DI DATO PRIMITIVI__
 * Dichiarazione, istanziazione e inizializzazione di oggetti
 * Lavorare con i riferimenti agli oggetti
 * Lavorare con le matrici
-
----
-
 * Dichiarare e creare istanze di oggetti Java e spiegare i cicli di vita degli oggetti (inclusa la creazione, la dereferenziazione mediante riassegnazione e la garbage collection)
 * Definire la struttura di una classe Java
 
-**tipi complessi** 
+---
+
+
+### **Tipi complessi** 
 
 * struttura delle classi, 
 * progettazione delle classi in UML, 
@@ -162,7 +162,7 @@ __TIPI DI DATO PRIMITIVI__
 
 ---
 
-**I METODI COSTRUTTORI** 
+### **I metodi costruttori** 
 
 * Caratteristiche di un costruttore
 * Costruttore di default
@@ -209,7 +209,7 @@ __TIPI DI DATO PRIMITIVI__
 
 ---
 
-### Lavorare con Java Arrays
+### Lavorare con gli Array in Java
 
 * Gli array in Java 
   * Dichiarazione 
@@ -223,7 +223,7 @@ __TIPI DI DATO PRIMITIVI__
 
 ---
 
-### Recap Programmazione ad oggetti
+### La Programmazione ad oggetti
 
 * Progettazione di **nuove** classi e metodi.
   * Progettare una Classe
