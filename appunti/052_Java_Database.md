@@ -6,12 +6,6 @@ CallableStatement
 
 Richiamare le procedure memorizzate con `CallableStatement` 
 
-Con `PreparedStatement`, come si è appurato, è possibile sfruttare delle istruzioni SQL precompilate, che garantiscono migliori prestazioni e maggiore chiarezza. 
-
-Le query desiderate sono date in pasto al DBMS al momento della creazione di un oggetto `PreparedStatement`, e possono poi essere ripetutamente sfruttate quante volte si desidera. 
-
-Tuttavia, JDBC ed il DBMS devono ricompilare la medesima istruzione SQL ogni volta che l'oggetto viene ricreato. Si può fare di meglio, se il DBMS lo permette, ottenendo incrementi ancora più significativi sia nelle prestazioni sia nella semplicità del codice..
-
 L'interfaccia `CallableStatement` estende `PreparedStatement`, e permette di richiamare delle procedure memorizzate all'interno del database.
 
 Una query, con `CallableStatement`, non deve essere specificata in linea all'interno del codice Java, ma può essere memorizzata perennemente all'interno della base di dati, pronta ad essere sfruttata più e più volte, in tutte le parti di tutte le applicazioni realizzate.

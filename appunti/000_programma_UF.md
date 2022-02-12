@@ -293,7 +293,7 @@
 
 ---
 
-### Usare l'ereditarietà
+### **Ereditarietà in Java**
 
 * Panoramica
 * Lavorare con sottoclassi e superclassi
@@ -302,7 +302,7 @@
 
 ![ereditarietà](./img/gerarchia1.png)
 
-**Ereditarietà in Java**
+
 
 * Teoria:
   * Class design: diversi ruoli degli oggetti/attori del progetto
@@ -443,8 +443,9 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 * Classi di tipo wrapper
 * Cosa sono i generici?
 * gestire le collezioni: List, Set e Map 
-* la classe Collections
-* Vector, ArrayList 
+* I metodi di utilità di Collections
+* Vector, ArrayList
+* LinkedList 
 * HashSet, TreeSet
 
 ---
@@ -477,14 +478,13 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 
 ---
 
-### Elementi Sintassi JAVA
+### design patterns
 
-* design patterns
-  * singleton
-	* decorator
-	* mvc
-	* dao
-	* factory
+* singleton
+* decorator
+* mvc
+* dao
+* factory
 
 ### JAVA WEB
 
@@ -546,6 +546,7 @@ __Java è robusto e sicuro, al limite si 'pianta' il programma__
 ---
 
 ### Interfacce Java
+
 * Creare e utilizzare interfacce con metodi predefiniti (default)
 * Creare e utilizzare interfacce con metodi privati
 
