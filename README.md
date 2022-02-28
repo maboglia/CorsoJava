@@ -5,7 +5,7 @@
 
 ## Appunti, dispense, tutorial
 * [appunti](https://github.com/maboglia/CorsoJava/tree/master/appunti)
-* [dispense](https://github.com/maboglia/CorsoJava/tree/master/appunti/Dispense)
+* [dispense](https://github.com/maboglia/CorsoJavaRisorse)
 
 ## Slide
 * [Java SE - Programma del corso](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=000_programma_UF.md)
