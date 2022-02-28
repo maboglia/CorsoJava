@@ -1,6 +1,6 @@
 # Esercizi Java - Metodi avanzati
 
-## Esercizio 11
+## Esercizio 1
 
 Provare ad eseguire il programma su carta e,
 successivamente, verificare la risposta eseguendo
@@ -30,7 +30,7 @@ class Nascoste {
 
 ---
 
-## Esercizio 12
+## Esercizio 2
 Provare ad eseguire il programma su carta e,
 successivamente, verificare la risposta eseguendo
 il programma su calcolatore:
@@ -53,7 +53,7 @@ class Automatiche {
 
 ---
 
-## Esercizio 13
+## Esercizio 3
 Che cosa visualizza il programma seguente?
 Provare ad eseguire il programma su carta e,
 successivamente, verificare la risposta
@@ -89,7 +89,7 @@ class EsercizioScope1 {
 
 ---
 
-## Esercizio 14
+## Esercizio 4
 Che cosa visualizza il programma seguente?
 Provare ad eseguire il programma su carta e,
 successivamente, verificare la risposta
@@ -124,7 +124,7 @@ class EsercizioScope2 {
 
 ---
 
-## Esercizio 15
+## Esercizio 5
 Overloading
 Che cosa visualizza il programma seguente?
 Provare ad eseguire il programma su carta e,

@@ -1,18 +1,16 @@
-# Raccolta esercizi eccezioni
+# Esercizi Java eccezioni
 
-## Esercizio (3)
-Scrivere un programma che gestisca un'eccezione
-di tipo ArithmeticException.
+## Esercizio 1
+Scrivere un programma che gestisca un'eccezione di tipo ArithmeticException.
 
-## Esercizio (4)
-Scrivere un programma che lanci manualmente
-un'eccezione.
+## Esercizio 2
+Scrivere un programma che lanci manualmente un'eccezione.
 
-## Esercizio (5)
+## Esercizio 3
+
 Che cosa visualizza il programma seguente?
-Provare ad eseguire il programma su carta e,
-successivamente, verificare la risposta
-eseguendo il programma su calcolatore:
+
+Provare ad eseguire il programma su carta e, successivamente, verificare la risposta eseguendo il programma su calcolatore:
 
 ```java
 public class Test{
@@ -41,6 +39,6 @@ public class Test{
 }
 ```
 
-## Esercizio (6)
-Scrivere un programma che gestisca una
-eccezione personalizzata.
+## Esercizio 4
+
+Scrivere un programma che gestisca una eccezione personalizzata.
