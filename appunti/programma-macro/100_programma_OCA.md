@@ -129,6 +129,7 @@
     * Lambda Example
     * Lambda Syntax
     * Predicates
+
 ## Class Design
 * Introducing Class Inheritance
     * Extending a Class
