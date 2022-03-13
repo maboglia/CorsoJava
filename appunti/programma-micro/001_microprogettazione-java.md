@@ -69,6 +69,7 @@
 ---
 
 ### Macchina virtuale
+
 * La [macchina virtuale](https://it.wikipedia.org/wiki/Macchina_virtuale_Java)
 * Astrazione di un elaboratore "generico"
   * Ambiente di esecuzione delle applicazioni Java
