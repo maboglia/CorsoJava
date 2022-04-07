@@ -1,5 +1,3 @@
-package w02.stringhe;
-
 /* 
    Questo programma analizza l'utilizzo di alcune funzioni 
    definite per le stringhe.
