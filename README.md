@@ -1,7 +1,7 @@
 # Corso Java
 
-## website on github
-[appunti navigabili](https://maboglia.github.io/)
+## website
+[appunti navigabili](http://www.bogliaccino.it/)
 
 ## Appunti, dispense, tutorial
 * [appunti](https://github.com/maboglia/CorsoJava/tree/master/appunti)
