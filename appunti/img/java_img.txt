@@ -71,15 +71,15 @@ Language/01_lang_base/02_classe_base/instance-method.png
 Language/01_lang_base/02_classe_base/instance-variables.png
 Language/01_lang_base/02_classe_base/object.png
 Language/01_lang_base/02_classe_base/parse-api.png
-Language/01_lang_base03_system/developing.png
-Language/01_lang_base03_system/piping.png
-Language/01_lang_base03_system/printf-formatting.png
-Language/01_lang_base03_system/printf.png
-Language/01_lang_base03_system/redirect-stdin.png
-Language/01_lang_base03_system/redirect-stdout.png
-Language/01_lang_base03_system/stdin-api.png
-Language/01_lang_base03_system/stdout-api.png
-Language/01_lang_base03_system/system.png
+Language/01_lang_base/03_system/developing.png
+Language/01_lang_base/03_system/piping.png
+Language/01_lang_base/03_system/printf-formatting.png
+Language/01_lang_base/03_system/printf.png
+Language/01_lang_base/03_system/redirect-stdin.png
+Language/01_lang_base/03_system/redirect-stdout.png
+Language/01_lang_base/03_system/stdin-api.png
+Language/01_lang_base/03_system/stdout-api.png
+Language/01_lang_base/03_system/system.png
 Language/02_costrutti
 Language/02_costrutti/break.png
 Language/02_costrutti/condition.png
@@ -133,6 +133,7 @@ Pattern/MVC.png
 Pattern/SchemaMVC.png
 Plateform-Java.png
 Polimorfismo1.png
+singleton_pattern_uml_diagram.jpg
 PrimitiveVsReference.png
 prj_JSP_schema_inclusioni.png
 procedural[1].JPG
@@ -143,7 +144,6 @@ RESTful-Introduction.png
 scheda_schedario.jpg
 scheda_schedario_rotante2.jpg
 scheda_schedario_rotante.jpg
-singleton_pattern_uml_diagram.jpg
 tipi.png
 UML_ClassDiagram/01_esempi/1177698865790_bank-account-dep.PNG
 UML_ClassDiagram/01_esempi/4218693_L.png
@@ -174,4 +174,3 @@ UML_ClassDiagram/Class-Diagram-Sample.png
 UML_ClassDiagram/uml-22-diagrams.png
 UML_ClassDiagram/UML Class Diagram.jpg
 UML_ClassDiagram/UML_diagrams_overview.svg.png
-
