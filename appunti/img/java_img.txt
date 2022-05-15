@@ -7,8 +7,6 @@ algo_selection_sort.jpg
 1java-se-lifecycle-5-year-timeline-1024x683-1517328730133.jpg
 2020_UF_Java.jpg
 5steploop2.jpg
-Anatomy-of-bike.jpg
-bicicletta_model.jpeg
 Class-Diagram-Sample.png
 Competitive-Programming-1.jpg
 diagrammi_flusso1.jpg
@@ -17,11 +15,11 @@ diagrammi_flusso3.jpg
 dialogue.jpg
 directory.JPG
 factory_pattern_uml_diagram.jpeg
-FunctionaInterface_01.png
-FunctionaInterface_02.png
-FunctionaInterface_03.png
-FunctionaInterface_04.png
-FunctionaInterface_05.png
+Anatomy-of-bike.jpg
+bicicletta_model.jpeg
+scheda_schedario.jpg
+scheda_schedario_rotante2.jpg
+scheda_schedario_rotante.jpg
 gerarchia1.png
 gerarchia2.png
 gerarchia3.png
@@ -30,26 +28,9 @@ gerarchia5.png
 History-of-Java.png
 image010.jpg
 Ip5eR.jpg
-JavaFX_Switching_Scenes.png
-java_img.txt
 java_jcf.gif
 java-write-once-run-anywhere.png
-jax-rs-1.jpg
-jax-rs-2.jpg
-jax-rs-3.jpg
-jax-rs-4.jpg
-JDBC/JDBC.png
-JEE/02_01-JavaEE7_tecnologie.jpg
-JEE/02_01-JavaEE7_versioni.jpg
-JEE/02_01-Java EE.jpg
-JEE_Technologies.jpg
-JSP/forward.JPG
-JSP/httpsession.JPG
-JSP/include.JPG
-JSP/JSP_forward.jpeg
-JSP/JSP_include.jpeg
-JSP/model2.jpg
-JSP/requestdispatcher.JPG
+tipi.png
 Language/01_lang_base/01_operatori_tipi_expr/01_tipi_casting.png
 Language/01_lang_base/01_operatori_tipi_expr/assignment.png
 Language/01_lang_base/01_operatori_tipi_expr/boolean-ops.png
@@ -80,7 +61,6 @@ Language/01_lang_base/03_system/redirect-stdout.png
 Language/01_lang_base/03_system/stdin-api.png
 Language/01_lang_base/03_system/stdout-api.png
 Language/01_lang_base/03_system/system.png
-Language/02_costrutti
 Language/02_costrutti/break.png
 Language/02_costrutti/condition.png
 Language/02_costrutti/Construct_IfElse.png
@@ -96,7 +76,6 @@ Language/02_costrutti/switch.png
 Language/02_costrutti/The logical flow of an if - else statement.png
 Language/02_costrutti/The logical flow of a while loop.png
 Language/02_costrutti/while.png
-Language/03_Java_API
 Language/03_Java_API/07_010-17_009.png
 Language/03_Java_API/color-api.png
 Language/03_Java_API/full-api-1.png
@@ -111,7 +90,6 @@ Language/03_Java_API/stdrandom-api.png
 Language/03_Java_API/stdstats-api.png
 Language/03_Java_API/string-api.png
 Language/03_Java_API/string-ops.png
-Language/04_array
 Language/04_array/array2d-init.png
 Language/04_array/array2d.png
 Language/04_array/array-examples.png
@@ -141,10 +119,6 @@ programming-languages.jpg
 Programming.png
 Progr_strutt_composizione.gif
 RESTful-Introduction.png
-scheda_schedario.jpg
-scheda_schedario_rotante2.jpg
-scheda_schedario_rotante.jpg
-tipi.png
 UML_ClassDiagram/01_esempi/1177698865790_bank-account-dep.PNG
 UML_ClassDiagram/01_esempi/4218693_L.png
 UML_ClassDiagram/01_esempi/97b0bda1.png
@@ -174,3 +148,25 @@ UML_ClassDiagram/Class-Diagram-Sample.png
 UML_ClassDiagram/uml-22-diagrams.png
 UML_ClassDiagram/UML Class Diagram.jpg
 UML_ClassDiagram/UML_diagrams_overview.svg.png
+FunctionaInterface_01.png
+FunctionaInterface_02.png
+FunctionaInterface_03.png
+FunctionaInterface_04.png
+FunctionaInterface_05.png
+jax-rs-1.jpg
+jax-rs-2.jpg
+jax-rs-3.jpg
+jax-rs-4.jpg
+JDBC/JDBC.png
+JEE/02_01-JavaEE7_tecnologie.jpg
+JEE/02_01-JavaEE7_versioni.jpg
+JEE/02_01-Java EE.jpg
+JEE_Technologies.jpg
+JSP/forward.JPG
+JSP/httpsession.JPG
+JSP/include.JPG
+JSP/JSP_forward.jpeg
+JSP/JSP_include.jpeg
+JSP/model2.jpg
+JSP/requestdispatcher.JPG
+JavaFX_Switching_Scenes.png
