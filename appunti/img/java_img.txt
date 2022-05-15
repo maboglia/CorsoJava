@@ -145,7 +145,6 @@ scheda_schedario_rotante2.jpg
 scheda_schedario_rotante.jpg
 singleton_pattern_uml_diagram.jpg
 tipi.png
-UML_ClassDiagram/01_esempi
 UML_ClassDiagram/01_esempi/1177698865790_bank-account-dep.PNG
 UML_ClassDiagram/01_esempi/4218693_L.png
 UML_ClassDiagram/01_esempi/97b0bda1.png
