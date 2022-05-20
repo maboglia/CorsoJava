@@ -1,19 +1,21 @@
 # 1. Esercizi su istruzioni condizionali e cicli
 
 
----
 
 ## 1.1. Esercizio
+
 Scrivere un programma che stampi a video i primi dieci numeri interi
 
 ---
 
 ## 1.2. Esercizio
+
 Scrivere un programma che stampi a video i primi dieci interi pari compresi fra 20 e 0, partendo da 20.
 
 ---
 
 ## 1.3. Esercizio
+
 Scrivere un programma che stampi le tabellina del numero dato come argomento
 
 ---
@@ -45,6 +47,7 @@ Stampare a video la seguente figura:
 ---
 
 ## 1.6. Esercizio
+
 Stampare a video la seguente figura:
 ```java
 1      654321
@@ -58,6 +61,7 @@ Stampare a video la seguente figura:
 ---
 
 ## 1.7. Esercizio
+
 Scrivere un programma che stampi i primi 100 elementi della successione di Fibonacci.
 
 
@@ -74,6 +78,7 @@ Scrivere un programma **TuttiPositiviPari** che chiede all’utente di inserire 
 Scrivere un programma **ContinuaFino** che chiede all’utente di inserire una sequenza di
 interi. Il programma continua a chiedere all’utente di inserire valori fintanto che i valori inseriti soddisfano
 almeno una delle seguenti condizioni:
+
 * è negativo e divisibile per 2
 * è positivo e divisibile per 3
 
@@ -107,6 +112,7 @@ L’intero procedimento (chiedere quanti caratteri voglia inserire, leggere i ca
 ---
 
 ## 1.13. Esercizio 
+
 Una classe di 10 studenti ha sostenuto un esame.
 I voti sono espressi con lettere: 'O' = ottimo
 (corrispondente al 10), 'B' = buono (8),
@@ -117,6 +123,7 @@ della media aritmetica dei voti di tale esame.
 ---
 
 ## 1.14. Esercizio  
+
 Scrivere un programma per stampare 44 caratteri
 (inseriti da tastiera) in fila per 6 con resto
 di 2.
@@ -126,6 +133,7 @@ e' if (i % (44 / 6) == 0)
 ---
 
 ## 1.15. Esercizio  
+
 Scrivere un programma che stampi 10 caratteri
 (letti da tastiera) ed i relativi codici ASCII.
 
@@ -133,12 +141,13 @@ Scrivere un programma che stampi 10 caratteri
 ---
 
 ## 1.17. Esercizio
+
 Scrivere un programma che calcoli il risultato dell’esame di uno studente.
     Il programma prenderà in ingresso:
         Il voto ottenuto nella prova scritta (variabile tra -8 e +8)
         Il voto ottenuto nella prova pratica (variabile tra 0 e 24)
 
-Memorizzati questi dati procederà al calcolo del risultato finale in trentesimi procedendo come segue:
+Memorizzati questi dati procederà al calcolo del risultato finale in trentesimi come segue:
 
 * Il risultato finale è la somma dei risultati.
 * se il voto di teoria è minore (o uguale) di zero e la somma dei voti di teoria e pratica è maggiore di 18 lo studente è bocciato.
@@ -151,9 +160,11 @@ Memorizzati questi dati procederà al calcolo del risultato finale in trentesimi
 ---
 
 ## 1.18. Esercizio
+
 Scrivere un programma che chieda agli utenti due stringhe in ingresso, le stringhe possono valere solo: “carta”, “forbice” o “sasso”. 
 
 Il programma dovrà quindi effettuare i dovuti controlli e dichiarare il vincitore secondo le regole: 
+
 * forbice vince su carta, 
 * carta vince su sasso, 
 * sasso vince su forbice.
@@ -161,7 +172,9 @@ Il programma dovrà quindi effettuare i dovuti controlli e dichiarare il vincito
 ---
 
 ## 1.19. Esercizio
+
 Scrivere una funzione per calcolare l’importo di una tassa secondo la seguente tabella:
+
 * Fino a 10.000 €, l’importo della tassa è del 10%
 * Fino a 20.000 €, l’importo della tassa è del 10% per i primi 10.000 €, del 7 % sul restante.
 * Fino a 30.000 €, l’importo è ancora del 10% per i primi 10.000 €, poi del 7% fino a 20.000 ed infine il 5% sul restante.
@@ -176,12 +189,14 @@ Scrivere una funzione per calcolare l’importo di una tassa secondo la seguente
 ---
 
 ## 1.20. Esercizio
+
 Scrivere un programma **IndovinaZero** che chiede all’utente di inserire numeri interi uno
 dopo l’altro fino a quando non inserisce il numero 0.
 
 ---
 
 ## 1.21. Esercizio
+
 Scrivere un programma **ScrivoScrivoScrivo** che chiede all’utente di inserire un numero
 maggiore o uguale a zero e stampa il messaggio sto ciclando un numero di volte pari al numero inserito
 dall’utente. Se il valore inserito dall’utente è negativo il programma stampa un messaggio di errore.
@@ -190,6 +205,7 @@ dall’utente. Se il valore inserito dall’utente è negativo il programma stam
 ---
 
 ## 1.22. Esercizio
+
 Scrivere un programma **Conteggio** che chiede all’utente di inserire un numero maggiore o
 uguale a zero e stampa uno dopo l’altro tutti i numeri da 0 al numero inserito compreso. Se il valore
 inserito dall’utente è negativo il programma stampa un messaggio di errore.
@@ -198,22 +214,27 @@ inserito dall’utente è negativo il programma stampa un messaggio di errore.
 ---
 
 ## 1.23. Esercizio
+
 Scrivere un programma **ContaNumeriCrescenti** che chiede all’utente di inserire una sequenza di numeri interi crescenti (man mano sempre più grandi) e ne stampa la lunghezza (il numero di valori inseriti dall’utente). Il programma termina non appena l’utente inserisce un valore minore o uguale al precedente).
 
 
 ---
 
 ## 1.24. Esercizio
+
 Scrivere un programma **MediaNumeri** che chiede all’utente di inserire una sequenza di numeri interi positivi. Non appena l’utente inserisce un numero negativo il programma si arresta e visualizza la media aritmetica dei valori positivi inseriti (senza approssimazione!).
 
 
 ---
 
 ## 1.25. Esercizio
-Scrivere un programma **Asterischi** che chiede all’utente di inserire un numero intero e stampa un triangolo fatto di asterischi con un numero di righe pari al valore inserito dall’utente. 
+
+Scrivere un programma **Asterischi** che chiede all’utente di inserire un numero intero e stampa un triangolo fatto di asterischi con un numero di righe pari al valore inserito dall’utente.
+
 Se l’utente inserisce un valore negativo il programma deve visualizzare un messaggio di errore.
 
 ---
 
 ## 1.26. Esercizio
+
 Scrivere un programma **TavolaPitagorica** in modo che i valori stampati siano ben incolonnati

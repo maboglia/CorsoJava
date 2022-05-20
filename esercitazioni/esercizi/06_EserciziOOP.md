@@ -1,6 +1,6 @@
 # Esercizi OOP
 
-## Esercizio
+## Esercizio media aritmetica incrementale
 
 * costruire un programma che chieda in input l'altezza degli studenti di una classe (altezza espressa in cm )
 * il programma accetta un numero indeterminato di valori in input e restituisce la media aritmetica incrementale ogni volta
@@ -8,7 +8,7 @@
 
 ---
 
-## Esercizio
+## Esercizio centro di formazione
 
 La direttrice di un centro di formazione ha bisogno di un programma per formare le classi per il nuovo anno scolastico:
 
@@ -17,7 +17,8 @@ La direttrice di un centro di formazione ha bisogno di un programma per formare 
 
 ---
 
-## Esercizio
+## Esercizio interfacce
+
 A partire dall'**interfaccia Animale**, che definisce
 i metodi **faiVerso()** e **dimmiCiboPreferito()**,
 implementare le classi **Gatto**, **Cane** e **Topo**
@@ -25,7 +26,8 @@ attraverso l'uso delle interfacce.
 
 ---
 
-## Esercizio
+## Esercizio classi astratte
+
 A partire dalla **classe Animale**, che definisce i
 metodi **faiVerso()**, implementare le classi **Gatto**,
 **Cane** e **Topo** attraverso l'uso dell'astrazione.
