@@ -238,3 +238,66 @@ Se l’utente inserisce un valore negativo il programma deve visualizzare un mes
 ## 1.26. Esercizio
 
 Scrivere un programma **TavolaPitagorica** in modo che i valori stampati siano ben incolonnati
+
+## Esercizio 1
+
+Scrivere un programma che disegni l'istogramma di
+un array di interi precaricato.
+
+Es. Se vettore = {4, 7, 2}, l'output sarà:
+0: ****
+1: *******
+2: **
+
+## Esercizio 2
+
+Scrivere un programma che implementi l'algoritmo di
+ordinamento per selezione su un vettore di 10
+caratteri inseriti da tastiera.
+
+Si ricorda l'algoritmo:
+for (int i = 0; i < N - 1; i++)
+    for (int j = i; j < N; j++)
+         if (a[i] > a[j]) {
+              temp = a[i];
+              a[i] = a[j];
+              a[j] = temp;
+  }
+
+## Esercizio 4
+
+Scrivere un programma che converta una sequenza
+di caratteri letti in input nei corrispondenti
+caratteri maiuscoli.
+Suggerimento: per convertire c in maiuscolo
+usare (c + 'A' - 'a').
+
+## Esercizio 5
+
+Scrivere un programma contenente un metodo che
+incrementi il valore di una variabile.
+
+## Esercizio 6
+
+Scrivere un programma che legge da tastiera un
+intero, lo incrementa e lo restituisce in output.
+Suggerimento: per gestire un numero su più cifre
+occorre gestire l'input nel seguente modo
+res = res * 10 + b[i] - '0'
+
+## Esercizio  1
+
+Scrivere un programma che legga i valori di due
+matrici in input, ne effettui il prodotto e stampi
+il risultato.
+
+## Esercizio  2
+
+Scrivere un programma che contenga un metodo
+ricorsivo per il calcolo del fattoriale.
+
+### Esercizio
+
+Scrivere un metodo che, dato un array di interi a, restituisce il valore massimo in a.
+
+---

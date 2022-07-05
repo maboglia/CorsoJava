@@ -2,7 +2,7 @@
 
 ---
 
-## Esercizio
+## Esercizio Contrario
 
 Scrivere un programma Contrario che chiede all’utente di inserire una stringa e la stampa al contrario. 
 
@@ -10,7 +10,7 @@ Per esempio, se si immette la stringa "Viva Java", il programma stampa "avaJ avi
 
 ---
 
-## Esercizio
+## Esercizio SoloVocali
 
 Scrivere un programma SoloVocali che chiede all’utente di inserire una stringa e ne stampa le sole vocali. 
 
@@ -18,7 +18,7 @@ Per esempio, se si immette la stringa "Viva Java", il programma stampa "iaaa".
 
 ---
 
-## Esercizio
+## Esercizio Lunghezze
 
 Scrivere un programma Lunghezze che chiede all’utente di inserire una sequenza di stringhe e conclusa dalla stringa vuota, e poi stampa la somma delle lunghezze delle stringhe che iniziano con una lettera maiuscola. 
 
@@ -27,7 +27,7 @@ Per esempio, se si immettono le stringhe "Albero", "foglia", "Radici",
 
 ---
 
-## Esercizio
+## Esercizio Punteggiatura
 
 Scrivere un programma Punteggiatura che chiede all’utente di inserire una sequenza di stringhe conclusa dalla stringa vuota e poi stampa il numero di caratteri di punteggiatura (.,;:!?) in esse contenuti. 
 
@@ -35,7 +35,7 @@ Per esempio, se si immettono le stringhe "Albero.", "foglia, radice, fiore", "tr
 
 ---
 
-## Esercizio
+## Esercizio SpaziVocali
 
 Scrivere un programma SpaziVocali che chiede all’utente di inserire una stringa e stampa il numero complessivo di spazi che sono immediatamente seguiti da una vocale. 
 
@@ -43,7 +43,7 @@ Per esempio, se si immette "A ogni uomo, ogni giorno, I suoi diritti", il progra
 
 ---
 
-## Esercizio
+## Esercizio Suddividi
 
 Scrivere un programma Suddividi che chiede all’utente di inserire una frase e la ristampa
 una parola per volta. Provare a risolvere questo esercizio impostando un ciclo che fa tante iterazioni
@@ -51,7 +51,7 @@ quanti sono gli spazi.
 
 ---
 
-## Esercizio
+## Esercizio Inciso
 
 Scrivere un programma Inciso che chiede all’utente di inserire una frase e ne stampa la
 porzione contenuta tra le prime due virgole. Ad esempio, se l’utente inserisce "Oggi, che è martedi, ho comprato una torta, che è il mio dolce preferito" il programma deve stampare " che è martedi".
@@ -60,7 +60,7 @@ Infine, se non ci sono virgole, il programma non stamperà nulla.
 
 ---
 
-## Esercizio
+## Esercizio SostituisciNumeri
 
 Scrivere un programma SostituisciNumeri che chiede all’utente di inserire una stringa e la ristampa sostituendo le cifre contenute nella stringa con la loro rappresentazione testuale. 
 Ad esempio, se l’utente inserisce "Ho comprato 2 biscotti e 3 caramelle" il programma deve stampare "Ho comprato due biscotti e tre caramelle". Oppure se inserisce "44 gatti" il programma deve stampare "quattroquattro gatti".
