@@ -31,3 +31,7 @@ attraverso l'uso delle interfacce.
 A partire dalla **classe Animale**, che definisce i
 metodi **faiVerso()**, implementare le classi **Gatto**,
 **Cane** e **Topo** attraverso l'uso dell'astrazione.
+
+---
+
+[esercizi Java SE](../JavaSE/)
