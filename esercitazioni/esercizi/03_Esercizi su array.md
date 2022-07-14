@@ -1,11 +1,38 @@
 # Esercizi con gli array
 
+### Esercizio
+
+Scrivere un metodo che, dato un array di interi a, restituisce il valore massimo in a.
+
+---
+
+
+## Esercizio  Matrici
+
+Scrivere un programma che legga i valori di due
+matrici in input, ne effettui il prodotto e stampi
+il risultato.
+
+---
 
 ## Esercizio StampaZigZag
 
 Scrivere un programma **StampaZigZag** che prevede un array di 10 numeri interi contenente valori a piacere e ne stampa gli elementi secondo il seguente ordine: il primo, l’ultimo, il secondo, il penultimo, il terzo, il terz’ultimo, ecc... 
 
 Il nome dell’array può essere scelto a piacere.
+
+---
+
+
+## Esercizio 1
+
+Scrivere un programma che disegni l'istogramma di
+un array di interi precaricato.
+
+Es. Se vettore = {4, 7, 2}, l'output sarà:
+0: ****
+1: *******
+2: **
 
 ---
 

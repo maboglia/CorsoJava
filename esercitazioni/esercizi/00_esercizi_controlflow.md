@@ -1,7 +1,6 @@
 # 1. Esercizi su istruzioni condizionali e cicli
 
 
-
 ## 1.1. Esercizio
 
 Scrivere un programma che stampi a video i primi dieci numeri interi
@@ -64,7 +63,6 @@ Stampare a video la seguente figura:
 
 Scrivere un programma che stampi i primi 100 elementi della successione di Fibonacci.
 
-
 ---
 
 ## 1.8. Esercizio
@@ -88,9 +86,7 @@ Al termine il programma stampa la somma di tutti i valori inseriti escluso quell
 
 ## 1.10. Esercizio
 
-Scrivere un programma **PositivoNegativo** che chiede all’utente di inserire una sequenza
-di interi terminata quando l’utente immette il valore 0 e poi stampa "OK" se la sequenza contiene un
-valore positivo seguito da uno negativo, altrimenti stampa il messaggio "NO". A vostra scelta, la stampa
+Scrivere un programma **PositivoNegativo** che chiede all’utente di inserire una sequenza di interi terminata quando l’utente immette il valore 0 e poi stampa "OK" se la sequenza contiene un valore positivo seguito da uno negativo, altrimenti stampa il messaggio "NO". A vostra scelta, la stampa
 del messaggio "OK" può interrompere o meno l’inserimento dei valori. 
 
 ---
@@ -127,8 +123,7 @@ della media aritmetica dei voti di tale esame.
 Scrivere un programma per stampare 44 caratteri
 (inseriti da tastiera) in fila per 6 con resto
 di 2.
-Suggerimento: la condizione per troncare in file
-e' if (i % (44 / 6) == 0)
+
 
 ---
 
@@ -239,17 +234,8 @@ Se l’utente inserisce un valore negativo il programma deve visualizzare un mes
 
 Scrivere un programma **TavolaPitagorica** in modo che i valori stampati siano ben incolonnati
 
-## Esercizio 1
 
-Scrivere un programma che disegni l'istogramma di
-un array di interi precaricato.
-
-Es. Se vettore = {4, 7, 2}, l'output sarà:
-0: ****
-1: *******
-2: **
-
-## Esercizio 2
+## 1.27.  Esercizio
 
 Scrivere un programma che implementi l'algoritmo di
 ordinamento per selezione su un vettore di 10
@@ -264,40 +250,14 @@ for (int i = 0; i < N - 1; i++)
               a[j] = temp;
   }
 
-## Esercizio 4
+## 1.28.  Esercizio
 
 Scrivere un programma che converta una sequenza
 di caratteri letti in input nei corrispondenti
 caratteri maiuscoli.
-Suggerimento: per convertire c in maiuscolo
-usare (c + 'A' - 'a').
 
-## Esercizio 5
 
-Scrivere un programma contenente un metodo che
-incrementi il valore di una variabile.
-
-## Esercizio 6
+## 1.29.  Esercizio
 
 Scrivere un programma che legge da tastiera un
 intero, lo incrementa e lo restituisce in output.
-Suggerimento: per gestire un numero su più cifre
-occorre gestire l'input nel seguente modo
-res = res * 10 + b[i] - '0'
-
-## Esercizio  1
-
-Scrivere un programma che legga i valori di due
-matrici in input, ne effettui il prodotto e stampi
-il risultato.
-
-## Esercizio  2
-
-Scrivere un programma che contenga un metodo
-ricorsivo per il calcolo del fattoriale.
-
-### Esercizio
-
-Scrivere un metodo che, dato un array di interi a, restituisce il valore massimo in a.
-
----

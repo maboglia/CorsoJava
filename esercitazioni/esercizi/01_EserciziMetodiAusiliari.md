@@ -4,7 +4,7 @@
 
 Scrivere un programma **Ripeti** che chiede all’utente di inserire una stringa e un numero intero positivo. 
 
-Entrambe le cose dovranno essere passate a un metodo ausiliario che stamperà tante copie della stringa quante indicate nel numero inserito dall’utente. 
+Entrambe gli elementi dovranno essere passati a un metodo ausiliario che stamperà tante copie della stringa quante indicate nel numero inserito dall’utente. 
 
 Se il numero inserito dall'utente è negativo il metodo ausiliario stamperà "ERRORE: numero negativo". 
 
@@ -35,3 +35,9 @@ Per esempio, se l'utente inserisce "gatto", "cane" e "topo" il programma stamper
 
 Per concatenare le tre parole si utilizzi un metodo ausiliario che prende due stringhe e restituisce la stringa ottenuta concatenando la prima parola ricevuta, un asterisco e la seconda parola ricevuta.
 
+---
+
+## Esercizio 5
+
+Scrivere un programma **Incrementa** contenente un metodo ausiliario che
+incrementi il valore di una variabile.
