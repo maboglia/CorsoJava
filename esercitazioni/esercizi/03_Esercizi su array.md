@@ -118,11 +118,87 @@ Scrivere il programma **DueListe** che chiede all’utente di inserire 5 numeri 
 
 ## Esercizio DueListe2
 
-Scrivere il programma **DueListe2** che chiede all’utente di inserire 5 numeri seguiti da altri 5 numeri e stampa quanti numeri sono presenti in entrambi 
----i gruppi e la loro somma.
+Scrivere il programma **DueListe2** che chiede all’utente di inserire 5 numeri seguiti da altri 5 numeri e stampa quanti numeri sono presenti in entrambi i gruppi e la loro somma.
+
+---
 
 ## Esercizio RubricaTelefonica
 
 Scrivere un programma **RubricaTelefonica** che chiede all’utente di inserire 5 nomi e numeri di telefono e li ristampa in ordine alfabetico sul nome. 
 
 Note: usare due array distinti per memorizzare i nomi e i numeri di telefono; attenzione al problema (commentato a lezione) dei caratteri che mandano a capo il testo nell’uso di Scanner.
+
+---
+
+## Esercizio Lettura e stampa di un array...
+
+* Scrivere un programma che legge da input 5 elementi interi, li memorizza in un array e stampa il contenuto dell’array
+
+---
+
+## Massimo elemento in un array
+
+* Scrivere un metodo int massimoArray(int[ ] a) che calcola e restituisce il valore del massimo elemento di un array di interi non vuoto a
+* **massimoArray**( new int[ ] { 3, 1, 2 } ) deve restituire 3
+* **massimoArray**( new int[ ] { 3, 7, 5 } ) deve restituire 7
+* Scrivere un metodo int posizioneMassimo(int[ ] a)
+che calcola la posizione dell’elemento di valore
+massimo di a
+* **posizioneMassimo**( new int[ ] { 3, 1, 2 } ) deve restituire 0
+* **posizioneMassimo**( new int[ ] { 3, 1, 3 } ) può restituire 0 o 2
+
+---
+
+## Verifica Sequenza crescente
+* Scrivere un metodo boolean **crescente**(int[ ] a)
+che verifica se a è ordinato in modo crescente
+* un array è ordinato in modo crescente se per ogni indice k, l’elemento di indice k è maggiore di tutti gli elementi di indice minore di k
+* è sufficiente verificare se ogni elemento è minore dell’elemento che lo segue immediatamente
+* intuitivamente, bisogna confrontare ciascun elemento di indice i dell’array con l’elemento che lo segue immediatamente, quello di indice i+1
+* attenzione – l’ultimo elemento di un array non ha un elemento che lo segue immediatamente
+
+---
+
+## Verifica esistenza coppia elementi uguali
+
+* Scrivere un metodo boolean coppiaUguali(int[ ] a) che verifica se a contiene almeno una coppia di elementi uguali
+* bisogna confrontare ciascun elemento X dell’array con ogni altro elemento Y dell’array
+* dove X e Y sono elementi diversi, nel senso che hanno indici diversi
+* bisogna confrontare ciascun elemento di indice i dell’array con ogni altro elemento di indice j dell’array - dove i e j hanno valore diverso
+* quindi è necessario utilizzare due variabili indice per accedere agli elementi di uno stesso array
+
+---
+
+## Inverso di una sequenza
+
+* Scrivere un metodo int[ ] inverso(int[ ] a) che crea e restituisce un array che contiene gli stessi elementi di a, ma disposti in ordine inverso
+* Osservazioni:
+* Il metodo non deve modificare a, ma creare un nuovo array: v
+* Input: a
+* Output: v
+* Algoritmo: il primo elemento di a va memorizzato come ultimo in v, il secondo come penultimo, ... l’ultimo come primo
+
+Inoltre
+
+* Modificare il programma precedente in modo che l’array inverso risultato, invece di essere un nuovo array creato, sia lo stesso array iniziale ma con i suoi elementi modificati.
+---
+
+## Elemento più frequente
+* Scrivere un metodo che, dato un array a, calcola e restituisce l’elemento più frequente di a
+* calcolare prima l’array occorrenze delle frequenze degli elementi di a
+* l’elemento da restituire è quello che in a occupa la posizione del massimo di occorrenze
+
+---
+
+## Elemento più frequente: nuovo algoritmo
+
+* bisogna calcolare la frequenza delle occorrenze
+di un elemento se è già stato esaminato?
+* a
+* occ
+2 -3 0 7 11 2 11 7 11 11
+0 1 2 3 4 5 6 7 8 9
+2 1 1 2 4 2 4 2 4 4
+0 1 2 3 4 5 6 7 8 9
+* Si devono ricordare gli elementi di cui si sono già calcolate le occorrenze, come?
+* Con un array di booleani in cui ogni elemento è true se l’occorrenza è ancora da calcolare, false altrimenti
