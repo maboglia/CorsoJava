@@ -64,3 +64,10 @@ Infine, se non ci sono virgole, il programma non stamperà nulla.
 
 Scrivere un programma SostituisciNumeri che chiede all’utente di inserire una stringa e la ristampa sostituendo le cifre contenute nella stringa con la loro rappresentazione testuale. 
 Ad esempio, se l’utente inserisce "Ho comprato 2 biscotti e 3 caramelle" il programma deve stampare "Ho comprato due biscotti e tre caramelle". Oppure se inserisce "44 gatti" il programma deve stampare "quattroquattro gatti".
+
+---
+
+## PasswordGenerator
+
+Scrivere un programma che dato un numero `n` di caratteri, ritorna una parola di `n` caratteri casuali con lettere, numeri e caratteri speciali.
+

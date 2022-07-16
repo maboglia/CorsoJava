@@ -41,3 +41,15 @@ Per concatenare le tre parole si utilizzi un metodo ausiliario che prende due st
 
 Scrivere un programma **Incrementa** contenente un metodo ausiliario che
 incrementi il valore di una variabile.
+
+---
+
+## Esercizio Swap
+
+* Scambia il contenuto di due variabili, usando un metodo ausiliario swap(a,b)
+
+---
+
+## max di interi
+
+Trova il valore max tra 2 numeri interi usando un metodo ausiliario max(x, y)

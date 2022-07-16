@@ -100,7 +100,7 @@
 
 ### Laboratorio 11
 
-* esempio aula, con collezioni e scrittura su file
+* Esercitazione Aula, con uso di collezioni e gestione file
 
 ---
 
