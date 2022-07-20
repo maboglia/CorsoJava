@@ -4,13 +4,10 @@
 [appunti navigabili](http://www.bogliaccino.it/)
 
 ## Appunti, dispense, tutorial
-* [appunti](https://github.com/maboglia/CorsoJava/tree/master/appunti)
-* [dispense](https://github.com/maboglia/CorsoJavaRisorse)
 
-## Slide
-* [Java SE - Programma del corso](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=000_programma_UF.md)
-* [Java SE - Dettaglio](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=001_microprogettazione-java.md)
-* [link argomenti](https://github.com/maboglia/CorsoJava/blob/master/appunti/00_link_slide.md)
+* [appunti](https://github.com/maboglia/CorsoJava/tree/master/appunti)
+* [slide](https://github.com/maboglia/CorsoJava/blob/master/appunti/00_link_slide.md)
+* [dispense](https://github.com/maboglia/CorsoJavaRisorse)
 
 
 ## esempi snippet codice
@@ -32,9 +29,15 @@
 
 
 ## esercizi
-* [gist esercizi 01](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e)
-* [esercitazioni, progetti](https://github.com/maboglia/CorsoJava/tree/master/esercitazioni)
 
-## codice corso
-* [codice FT2019](https://github.com/maboglia/CorsoJava_FT2019)
-* [java fx 2019](https://github.com/maboglia/JavaFX)
+* [esercitazioni, progetti](https://github.com/maboglia/CorsoJava/tree/master/esercitazioni)
+* [Esercizi Controlflow](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/00_esercizi_controlflow.md)
+* [Esercizi MetodiAusiliari](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/01_EserciziMetodiAusiliari.md)
+* [Esercizi stringhe](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/02_esercizi_stringhe.md)
+* [Esercizi array](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/03_Esercizi_array.md)
+* [Esercizi file](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/04_esercizi_file.md)
+* [Esercizi avanzati](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/05_Esercizi_avanzati.md)
+* [Esercizi OOP](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/06_EserciziOOP.md)
+* [Esercizi eccezioni](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/07_es_eccezioni.md)
+
+
