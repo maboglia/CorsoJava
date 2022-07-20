@@ -1,6 +1,6 @@
 # Corso Java
 
-## website
+## sito web
 [appunti navigabili](http://www.bogliaccino.it/)
 
 ## Appunti, dispense, tutorial
@@ -14,9 +14,22 @@
 
 
 ## esempi snippet codice
-* [esempi base](https://github.com/maboglia/CorsoJava/tree/master/esempi)
-* [gist 01](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3)
-* [gist 02](https://gist.github.com/maboglia/fb505ccbfd10186ea092b3d5349045d5)
+
+* [esempi 01_base](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base)
+* [esempi 02_API_Java](https://github.com/maboglia/CorsoJava/tree/master/esempi/02_API_Java)
+* [esempi 03_array](https://github.com/maboglia/CorsoJava/tree/master/esempi/03_array)
+* [esempi 04_control](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_control-flow)
+* [esempi 05_OOP](https://github.com/maboglia/CorsoJava/tree/master/esempi/05_OOP)
+* [esempi 06Eccezioni](https://github.com/maboglia/CorsoJava/tree/master/esempi/06Eccezioni)
+* [esempi 07Asserzioni](https://github.com/maboglia/CorsoJava/tree/master/esempi/07Asserzioni)
+* [esempi 08Networking](https://github.com/maboglia/CorsoJava/tree/master/esempi/08Networking)
+* [esempi 09_DesignPatterns](https://github.com/maboglia/CorsoJava/tree/master/esempi/09_DesignPatterns)
+* [esempi 10Gui](https://github.com/maboglia/CorsoJava/tree/master/esempi/10Gui)
+* [esempi 11JDBC](https://github.com/maboglia/CorsoJava/tree/master/esempi/11JDBC)
+* [esempi 12NewFeatures](https://github.com/maboglia/CorsoJava/tree/master/esempi/12NewFeatures)
+* [esempi 13_concurrency](https://github.com/maboglia/CorsoJava/tree/master/esempi/13_concurrency)
+* [esempi 14_Collections](https://github.com/maboglia/CorsoJava/tree/master/esempi/14_Collections)
+
 
 ## esercizi
 * [gist esercizi 01](https://gist.github.com/maboglia/7b7c704a316b56405f4b5d89935d115e)
