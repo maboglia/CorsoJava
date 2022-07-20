@@ -2,7 +2,7 @@
 
 ## Schema Argomenti
 
-![schema UF](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/2020_UF_Java.jpg)
+![schema UF](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/JavaRecap.drawio.png)
 
 ---
 
