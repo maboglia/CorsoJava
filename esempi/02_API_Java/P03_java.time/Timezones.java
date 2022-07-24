@@ -8,7 +8,7 @@ import java.time.format.FormatStyle;
 import java.util.Set;
 import java.util.function.Predicate;
 
-public class Main {
+public class Timezones {
 
 	public static void main(String[] args) {
 

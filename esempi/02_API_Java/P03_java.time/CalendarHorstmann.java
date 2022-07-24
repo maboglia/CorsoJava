@@ -5,7 +5,7 @@ import java.time.*;
  * @author Cay Horstmann
  */
 
-public class CalendarTest
+public class CalendarHorstmann
 {
    public static void main(String[] args)
    {

@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-public class Main {
+public class DateTimeExamples {
 
 	public static void main(String[] args) {
 

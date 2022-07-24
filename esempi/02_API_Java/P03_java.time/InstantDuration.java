@@ -3,7 +3,7 @@ package org.example.java8;
 import java.time.Duration;
 import java.time.Instant;
 
-public class Main {
+public class InstantDuration {
 
 	public static void main(String[] args) throws InterruptedException {
 

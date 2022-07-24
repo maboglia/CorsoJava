@@ -9,7 +9,7 @@ import java.time.format.FormatStyle;
 import java.time.temporal.ChronoField;
 import java.util.Locale;
 
-public class Main {
+public class FormatDateTime {
 
 	public static void main(String[] args) {
 
