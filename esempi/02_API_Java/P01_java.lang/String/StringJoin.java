@@ -1,6 +1,6 @@
 package com.example.java8;
 
-public class JoinerMethod {
+public class StringJoin {
 
 	public static void main(String[] args) {
 
