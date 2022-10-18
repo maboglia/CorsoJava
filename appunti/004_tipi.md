@@ -4,7 +4,7 @@
 * In un linguaggio ad oggetti puro, vi sono solo classi e istanze di classi:
 * i dati dovrebbero essere definiti sotto forma di oggetti
 
-![primitive vs reference](./img/PrimitiveVsReference.png)
+![primitive vs reference](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/PrimitiveVsReference.png)
 
 ## Java definisce alcuni tipi primitivi
 
@@ -115,8 +115,5 @@ public class Applicazione {
 ```
 
 ![tipi primitivi](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/tipi.png)
-
-[Esempi gist](https://gist.github.com/maboglia/c9a5959d663b1e3cdf5f89a152cfe6e3)
-
 
 [Everything you'll ever need to work with Java primitive types!](https://github.com/deletescape/Primitives)

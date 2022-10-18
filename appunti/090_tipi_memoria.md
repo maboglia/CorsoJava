@@ -1,6 +1,7 @@
 # Tipi di memoria
 
 ### Si differenziano per la durata di esistenza degli elementi che vi sono memorizzati
+
 * Memoria statica
   * Contiene gli elementi che esistono per tutta la durata del programma
 * Heap o memoria dinamica
@@ -56,10 +57,12 @@
 ## Static area
 
 ## Distruzione di Oggetti
+
 * Non viene fatta in modo esplicito
 * Il programmatore non deve preoccuparsi di distruggere gli oggetti
 
 ### Viene eseguita automaticamente
+
 *  Garbage collector
   * Componente del Run Time che ha il compito di recuperare lo spazio nella memoria heap
   * Quando necessario (per esempio quando si esaurisce lo spazio disponibile in memoria principale) esegue un'analisi dei riferimenti e distrugge gli oggetti per i quali non esistono più riferimenti
@@ -70,6 +73,7 @@
 
       
 ## Gestione memoria nella JVM (1)
+
 Per capire meglio come funzionano classi e oggetti diamo uno sguardo “sotto il cofano” della Java Virtual Machine (JVM)
 La memoria usata dalla JVM è concettualmente divisa in tre parti
 * Ambiente delle classi: area di memoria in cui vengono caricate (allocate) tutte le classi che costituiscono il programma
@@ -91,6 +95,7 @@ La memoria usata dalla JVM è concettualmente divisa in tre parti
 (indirizzo di memoria di un oggetto) 
 
 ## Nell’heap
+
 * per ogni oggetto creato vengono memorizzate le variabili d’istanza (ossia, le variabili non statiche)
 * ogni oggetto nell’heap contiene anche il nome della classe di appartenenza
 
@@ -98,6 +103,7 @@ La memoria usata dalla JVM è concettualmente divisa in tre parti
 
    
 ## Riferimenti (1)
+
 I riferimenti meritano un approfondimento.
 Abbiamo visto che una variabile di un tipo primitivo contiene direttamente il valore del dato
 La dichirazione della variabile x alloca la memoria necessaria per contenere un int
@@ -110,6 +116,7 @@ La modifica di y non modifica x
         x = 33;
         int y = x;
 ```           
+
 ## Riferimenti (2)
 
 Una variabile di un tipo classe contiene invece un riferimento a un oggetto La dichirazione della variabile primo di tipo Rettangolo alloca la
@@ -120,6 +127,7 @@ La creazione dell’oggetto primo alloca un nuovo oggetto e assegna un riferimen
                    primo = new Rettangolo(10,30)
 ```        
 ## Riferimenti (3)
+
 L’assegnamento di primo a secondo copia il contenuto della variabile (il riferimento)
 La modifica di secondo modifica l’oggetto riferito anche da primo
 ```java        
@@ -127,6 +135,7 @@ La modifica di secondo modifica l’oggetto riferito anche da primo
                    secondo.base = 15;
 ```        
 ## Riferimenti (4)
+
 Lo stesso discorso vale anche quando si passa un oggetto a un metodo come parametro
 Viene passato il riferimento
 Ogni modifica fatta all’oggetto all’interno del metodo non viene persa alla quando il metodo termina (il chiamante vedrà l’oggetto modificato)
@@ -136,6 +145,7 @@ Lo stesso discorso vale per gli array (gli array sono in realtà oggetti!)
 
  
 ## Riferimenti (5)
+
 Una conseguenza del fatto che le variabili di tipo classe contengono riferimenti, è che l’opearatore di confronto == non si comporta (con gli oggetti) come uno si potrebbe aspettare...
 Infatti oggetto1 == oggetto2 vale true solo se oggetto1 e oggetto2 sono (riferimenti al) lo stesso oggetto.
 Esempio:
@@ -148,6 +158,7 @@ Abbiamo che:
         System.out.println(r1==r3); // stampa false
 ```             
 ## Riferimenti (6)
+
 Una soluzione a questo problema pùo essere il metodo equals.
 Tutti gli oggetti (capiremo perchè) dispongono di alcuni metodi di base
 Uno di questi è equals, e permette di confrontare due oggetti Lo abbiamo visto nelle stringhe
@@ -161,6 +172,7 @@ Anche nelle proprie classi si pùo implementare tale metodo (vedremo...)
 
 
 ## Garbage collection (1)
+
 Un’altra conseguenza del fatto che le operazioni (lettura, assegnamento, copia, ...) su variabili di tipo classe lavorino su riferimenti è che si possono ottenere oggetti orfani (privi di riferimenti).
 Ad esempio:
 supponiamo di creare due oggetti di tipo Rettangolo
@@ -170,6 +182,7 @@ supponiamo di creare due oggetti di tipo Rettangolo
 ```             
 
 ## Garbage collection (2)
+
 ora assegniamo secondo a primo
 come è possibile accedere al vecchio valore di primo (il rettangolo di dimensioni 10 e 30) ???
 Il vecchio oggetto è rimasto orfano... (nessun riferimento ad esso)
@@ -178,6 +191,7 @@ Il vecchio oggetto è rimasto orfano... (nessun riferimento ad esso)
 ```         
 
 ## Garbage collection (3)
+
 Il vecchio oggetto non è più utilizzabile!!! (è garbage, spazzatura)
 Il linguaggio Java (come molti linguaggi moderni) prevede un meccanismo di rimozione degli oggetti privi di riferimenti detto Garbage Collector
 Il garbage collector viene eseguito periodicamente dalla Java Virtual Machine. Interrompe per un attimo l’esecuzione del programma e pulisce la memoria dagli oggetti privi di riferimenti

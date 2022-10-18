@@ -32,6 +32,12 @@ Stampare a video la seguente figura:
 
 ---
 
+## Esercizio
+
+* con i cicli innestati stampare a video la figura di un triangolo isoscele composto di lettere A maiuscola
+
+---
+
 ## 1.5. Esercizio
 Stampare a video la seguente figura:
 ```java
@@ -234,6 +240,7 @@ Se l’utente inserisce un valore negativo il programma deve visualizzare un mes
 
 Scrivere un programma **TavolaPitagorica** in modo che i valori stampati siano ben incolonnati
 
+---
 
 ## 1.27.  Esercizio
 
@@ -250,12 +257,15 @@ for (int i = 0; i < N - 1; i++)
               a[j] = temp;
   }
 
+---
+
 ## 1.28.  Esercizio
 
 Scrivere un programma che converta una sequenza
 di caratteri letti in input nei corrispondenti
 caratteri maiuscoli.
 
+---
 
 ## 1.29.  Esercizio
 

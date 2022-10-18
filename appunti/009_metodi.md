@@ -86,4 +86,6 @@ public class ProvaMetodi
 Un metodo che restituisce un tipo primitivo `boolean` si definisce **predicativo** e può essere utilizzato direttamente in una condizione.
 In inglese sono spesso introdotti da `is` oppure `has`: isMale(), hasNext(). 
 
-[Esempi sui metodi](https://gist.github.com/maboglia/c9cb7b9c7a895e046cb9ecf2b7d23870)
+---
+
+[Esempi sui metodi ausiliari](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/03_metodi_ausiliari)

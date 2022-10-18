@@ -125,4 +125,4 @@ String s3 = s3.substring (2, 6);
 ```
 
 
-[altri esempi sulle stringhe](../esempi/02_EsempioStringhe.md)
+[altri esempi sulle stringhe](https://github.com/maboglia/CorsoJava/tree/master/esempi/02_API_Java/P01_java.lang/String)

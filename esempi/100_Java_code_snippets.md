@@ -19,6 +19,8 @@ Arrays.binarySearch(type[] list, type key)
 
 ```
 
+## metodi delle stringhe
+
 ```java
 
 String s = "Welcome";
@@ -42,6 +44,8 @@ String[] tokens = s.split(regex);
 
 ```
 
+## Operazioni su ArrayList
+
 ```java
 ArrayList<E> list = new ArrayList<E>();
 list.add(object);
@@ -58,26 +62,30 @@ int i = list.lastIndexOf(object);
 
 ```
 
+## Array Monodimensionali
+
 ```java
 
-Array Monodimensionali
 int[] list = new int[10];
 list.length;
 int[] list = {1, 2, 3, 4};
 ```
 
+## Array Multidimensionali 
+
+
 ```java
 
-Array Multidimensionali 
 int[][] list = new int[10][10];
 list.length;
 list[0].length;
 int[][] list = {{1, 2}, {3, 4}};
 ```
 
+## Array irregolari
+
 ```java
 
-Array irregolari
 int[][] m = {{1, 2, 3, 4},
 {1, 2, 3},
 {1, 2},
@@ -384,8 +392,6 @@ for (int i = 1; i < righe; i++) {
 }
 ```
 
-## Esercizio:
-* con i cicli innestati stampare a video la figura di un triangolo isoscele composto di lettere A maiuscola
 
 ## ArrayList
 

@@ -1,5 +1,7 @@
 ## Esercizi sui metodi ausiliari
 
+---
+
 ### Es. 1: 
 
 Scrivere un programma **Ripeti** che chiede all’utente di inserire una stringa e un numero intero positivo. 
@@ -10,12 +12,16 @@ Se il numero inserito dall'utente è negativo il metodo ausiliario stamperà "ER
 
 Il nome del metodo ausiliario può essere scelto a piacere.
 
+---
+
 ### Es. 2: 
 
 Scrivere un programma "**TuttiUguali**" che chiede all'utente di inserire tre numeri e stampa "Tutti uguali!" se i tre numeri sono tutti uguali,altrimenti stampa "Almeno uno e' diverso".
 
 Il controllo che i tre numeri siano uguali dovrà essere fatto da un metodo ausiliario, mentre il messaggio dovrà essere stampato dal metodo main.
 
+
+---
 
 ### Es. 3: 
 
@@ -26,6 +32,8 @@ Se il risultato di Math.random() e minore di 0.5 il metodo lo restituisce cosı 
 Se invece il risultato di Math.random() e maggiore o uguale a 0.5 il metodo lo restituisce diminuito di 0.5. 
 
 Il nome del metodo ausiliario può essere scelto a piacere.
+
+---
 
 ### Es. 4: 
 
