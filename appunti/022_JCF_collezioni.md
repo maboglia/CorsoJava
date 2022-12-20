@@ -4,6 +4,8 @@ Tutte le classi che permettono di gestire gruppi di oggetti, costituiscono il Ja
 
 Una Collection è un contenitore in cui più oggetti vengono raggruppati in una singola entità, o meglio è una struttura dati che ha metodi usati per inserire, togliere, recuperare e gestire la struttura stessa.
 
+![ICF]('https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/java_jcf.gif')
+
 ---
 
 ## Collections & Map
