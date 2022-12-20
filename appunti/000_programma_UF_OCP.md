@@ -1,9 +1,21 @@
-# Java SE 11 Programmer II
-(Programma del corso Java SE - Java SE 11 Programmer I)
+---
+marp: false
+title: Fondamenti
+paginate: true
+author: mauro
+---
+![bg](./background.jpg)
+
+Mauro Bogliaccino
+
+# Corso Java
+
+## Programma del corso Java SE - Java SE 11 Programmer II
 
 [Java SE 11 Programmer II](https://education.oracle.com/java/java-se/product_267)
 
 ---
+![bg](./background.jpg)
 
 ## obiettivi
 
@@ -13,6 +25,12 @@
 * Cercare e filtrare le raccolte utilizzando Lambda Expressions
 * Implementare tecniche di gestione degli errori utilizzando la gestione delle eccezioni
 * Implementare la funzionalità di input/output (I/O) per leggere e scrivere su file di dati e di testo
+
+---
+![bg](./background.jpg)
+
+## obiettivi II
+
 * Manipolare file, directory e file system usando la specifica JDK NIO.2
 * Eseguire più operazioni su tabelle di database, tra cui la creazione, la lettura, l'aggiornamento e l'eliminazione utilizzando sia la tecnologia JDBC che JPA
 * Utilizzare le funzionalità di concorrenza di Lambda Expression
@@ -20,6 +38,7 @@
 * Creare applicazioni multi-thread ad alte prestazioni
 
 ---
+![bg](./background.jpg)
 
 ### Programmazione Funzionale
 
@@ -28,6 +47,7 @@
 * Interfacce funzionali integrate
 
 ---
+![bg](./background.jpg)
 
 ### Stream e stream paralleli
 
@@ -37,6 +57,7 @@
 * Creazione di stream personalizzati
 
 ---
+![bg](./background.jpg)
 
 ### Programmazione API Java e concetti di codifica sicura
 
@@ -46,6 +67,7 @@
 * Localizzazione
 
 ---
+![bg](./background.jpg)
 
 ### Collezioni e generici
 
@@ -60,6 +82,7 @@
 * HashSet, TreeSet
 
 ---
+![bg](./background.jpg)
 
 ### Elementi Sintassi JAVA
 
@@ -73,6 +96,7 @@
 * Reflection, Class, Constructor classes
 
 ---
+![bg](./background.jpg)
 
 ### Advanced Class design
 
@@ -88,6 +112,7 @@
 * Lambda espressioni.
 
 ---
+![bg](./background.jpg)
 
 ### design patterns
 
@@ -96,6 +121,9 @@
 * mvc
 * dao
 * factory
+
+---
+![bg](./background.jpg)
 
 ### JAVA WEB
 
@@ -112,6 +140,7 @@
 * RequestDispatcher
 
 ---
+![bg](./background.jpg)
 
 ### JDBC
 
@@ -125,6 +154,7 @@
   * executeUpdate()
 
 ---
+![bg](./background.jpg)
 
 ### Fondamenti di Java
 
@@ -133,12 +163,16 @@
 * Creare e utilizzare le enumerazioni
 
 ---
+![bg](./background.jpg)
 
 ### Gestione delle eccezioni e asserzioni
 
 * Usa il costrutto try-with-resources
 * Creare e utilizzare classi di eccezione personalizzate
 * Metti alla prova gli invarianti usando le asserzioni
+
+---
+![bg](./background.jpg)
 
 ### Eccezioni
 
@@ -155,6 +189,7 @@
 * Test unitari
 
 ---
+![bg](./background.jpg)
 
 ### Interfacce Java
 
@@ -162,6 +197,7 @@
 * Creare e utilizzare interfacce con metodi privati
 
 ---
+![bg](./background.jpg)
 
 ### Generici e Collezioni
 
@@ -172,6 +208,7 @@
 * Creare e utilizzare metodi di praticità per le raccolte
 
 ---
+![bg](./background.jpg)
 
 ### Framework Collections
 
@@ -183,6 +220,7 @@
 * Tipi Generics
 
 ---
+![bg](./background.jpg)
 
 ### Interfaccia funzionale ed espressioni lambda
 
@@ -190,6 +228,7 @@
 * Crea e usa espressioni lambda tra cui istruzione lambdas, variabile locale per i parametri lambda
 
 ---
+![bg](./background.jpg)
 
 ### API Java Stream
 
@@ -197,6 +236,7 @@
 * Usa espressioni lambda e riferimenti a metodi
 
 ---
+![bg](./background.jpg)
 
 ### Interfacce funzionali integrate
 
@@ -205,6 +245,7 @@
 * Usa le variazioni primitive e binarie delle interfacce di base del pacchetto java.util.function
 
 ---
+![bg](./background.jpg)
 
 ### Operazioni Lambda in streaming
 
@@ -216,6 +257,7 @@
 * Utilizzare i raccoglitori con stream, incluse le operazioni groupingBy e partitioningBy
 
 ---
+![bg](./background.jpg)
 
 ### I/O (Fundamentals e NIO2)
 
@@ -227,6 +269,7 @@
 * Usa l'API Stream con i file
 
 ---
+![bg](./background.jpg)
 
 ### Input/Output
 
@@ -242,6 +285,7 @@
 * Serializzazione e deserializzazione.
 
 ---
+![bg](./background.jpg)
 
 ### Codifica sicura nell'applicazione Java SE
 
@@ -253,12 +297,16 @@
 * Protezione della serializzazione e della deserializzazione
 
 ---
+![bg](./background.jpg)
 
 ### Applicazioni di database con JDBC
 
 * Collegati ai database utilizzando gli URL JDBC e DriverManager
 * Utilizzare PreparedStatement per eseguire operazioni CRUD
 * Utilizzare le API PreparedStatement e CallableStatement per eseguire operazioni sul database
+
+---
+![bg](./background.jpg)
 
 ### Introduzione a JDBC
 
@@ -273,6 +321,7 @@
 * Crud su DB
 
 ---
+![bg](./background.jpg)
 
 ### Localizzazione
 
@@ -281,6 +330,7 @@
 * Formatta messaggi, date e numeri con Java
 
 ---
+![bg](./background.jpg)
 
 ### annotazioni
 
@@ -290,6 +340,7 @@
 * Dichiara annotazioni personalizzate
 
 ---
+![bg](./background.jpg)
 
 ### JSP e Servlet
 
@@ -303,6 +354,7 @@
 * Uso di Etichette personalizzate
 
 ---
+![bg](./background.jpg)
 
 ### Distribuire e mantenere un'applicazione
 
@@ -310,6 +362,7 @@
 * Modifica e requisiti dell'applicazione
 
 ---
+![bg](./background.jpg)
 
 ### Compredere l'uso dei moduli
 
@@ -319,6 +372,7 @@
 * JDK modulare
 
 ---
+![bg](./background.jpg)
 
 ## Programmazione modulare
 
@@ -327,6 +381,7 @@
 * Migrazione ad un'applicazione modulare
 
 ---
+![bg](./background.jpg)
 
 ### Comprensione dei moduli
 
@@ -337,6 +392,7 @@
 [Guida su baeldung.com](https://www.baeldung.com/java-9-modularity)
 
 ---
+![bg](./background.jpg)
 
 ### Migrazione ad un'applicazione modulare
 
@@ -345,6 +401,7 @@
 * Utilizzare jdeps per determinare le dipendenze e identificare il modo per affrontare le dipendenze cicliche
 
 ---
+![bg](./background.jpg)
 
 ### Servizi in un'applicazione modulare
 
@@ -354,6 +411,7 @@
 * verificare le dipendenze dei servizi inclusi i moduli consumer e provider
 
 ---
+![bg](./background.jpg)
 
 ## Concorrenza
 
@@ -363,10 +421,9 @@
 * Identificare i problemi di threading come deadlock e livelock
 
 ---
+![bg](./background.jpg)
 
 ### Flusso parallelo
 
 * Sviluppa il codice che utilizza il flusso parallelo
 * Implementa decomposizione e riduzione con stream
-
----

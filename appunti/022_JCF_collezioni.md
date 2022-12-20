@@ -117,10 +117,10 @@ Astrae il problema di iterare su tutti gli elementi di una collection
 ---
 
 ## Framework Collections	
-* [Implementazione di List](./15_Implementazione_List.md)	
-* [Implementazione di Set](./15_Implementazione_Set.md)	
-* [Implementazione di Map](./15_Implementazione_Map.md)	
-* [Implementazione di Queue](./15_Implementazione_Queue.md)	
+* [Implementazione di List](./022_JCF_List.md)	
+* [Implementazione di Set](./022_JCF_Set.md)	
+* [Implementazione di Map](./022_JCFLike_Map.md)	
+* [Implementazione di Queue](./022_JCF_Queue.md)	
 * Metodi delle Collection e delle Map	
 * Algoritmi del Java Collections Framework	
 * Collections e Generics	
