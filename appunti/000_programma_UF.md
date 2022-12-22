@@ -1,13 +1,3 @@
----
-marp: false
-title: Fondamenti
-paginate: true
-author: mauro
----
-![bg](./background.jpg)
-
-Mauro Bogliaccino
-
 # Corso Java
 
 ## Programma del corso Java SE - Java SE 11 Programmer I
@@ -15,7 +5,6 @@ Mauro Bogliaccino
 * [Java SE 11 Programmer I](https://education.oracle.com/java/java-se/product_267)
 
 ---
-![bg](./background.jpg)
 
 ## obiettivi
 
@@ -27,7 +16,6 @@ Mauro Bogliaccino
 * Creare semplici classi Java e utilizzare riferimenti a oggetti per accedere a campi e metodi in una classe
 
 ---
-![bg](./background.jpg)
 
 ## obiettivi II
 
@@ -38,7 +26,6 @@ Mauro Bogliaccino
 * Identificare i principi di programmazione modulari
 
 ---
-![bg](./background.jpg)
 
 ## Che cos'è un programma Java
 
@@ -47,7 +34,6 @@ Mauro Bogliaccino
 * Esecuzione e test di un programma Java
 
 ---
-![bg](./background.jpg)
 
 ##  Comprensione della tecnologia e dell'ambiente Java
 
@@ -60,7 +46,6 @@ Mauro Bogliaccino
 * Compilazione ed esecuzione
 
 ---
-![bg](./background.jpg)
 
 ## Creare una classe main Java
 
@@ -75,7 +60,6 @@ Mauro Bogliaccino
 * Primi programmi Java.
 
 ---
-![bg](./background.jpg)
 
 ## Input/Output  
 
@@ -84,7 +68,6 @@ Mauro Bogliaccino
 * Output con oggetto System.out
 
 ---
-![bg](./background.jpg)
 
 ## Lavorare con i dati
 
@@ -94,7 +77,6 @@ Mauro Bogliaccino
 * Manipolazione dei dati numerici
 
 ---
-![bg](./background.jpg)
 
 ## **Identificatori e tipi di dato**
 
@@ -104,7 +86,6 @@ Mauro Bogliaccino
 * Regole per gli identificatori
 
 ---
-![bg](./background.jpg)
 
 ## Le variabili in java
 
@@ -118,7 +99,6 @@ Mauro Bogliaccino
 * Consultazione Oracle API docs
 
 ---
-![bg](./background.jpg)
 
 ## **Tipi di dato primitivi**
 
@@ -128,7 +108,6 @@ Mauro Bogliaccino
 * Tipo di dato primitivo letterale
 
 ---
-![bg](./background.jpg)
 
 ## Gestire più elementi
 
@@ -138,7 +117,6 @@ Mauro Bogliaccino
 * Elaborazione di un elenco di elementi
 
 ---
-![bg](./background.jpg)
 
 ## Introduzione alla libreria standard
 
@@ -148,7 +126,6 @@ Mauro Bogliaccino
 * Cicli finiti, infiniti, annidati
 
 ---
-![bg](./background.jpg)
 
 ## Descrivere oggetti e classi
 
@@ -161,7 +138,6 @@ Mauro Bogliaccino
 * Definire la struttura di una classe Java
 
 ---
-![bg](./background.jpg)
 
 ## Tipi complessi
 
@@ -171,7 +147,6 @@ Mauro Bogliaccino
 * metodi costruttori, overloading
 
 ---
-![bg](./background.jpg)
 
 ## I metodi costruttori
 
@@ -180,7 +155,6 @@ Mauro Bogliaccino
 * Package e visibilità
   
 ---
-![bg](./background.jpg)
 
 ## Creare e utilizzare i metodi
 
@@ -191,7 +165,6 @@ Mauro Bogliaccino
 * Overload di un metodo
 
 ---
-![bg](./background.jpg)
 
 ## Utilizzare l'incapsulamento
 
@@ -201,7 +174,6 @@ Mauro Bogliaccino
 * Overload di Costruttori
 
 ---
-![bg](./background.jpg)
 
 ## Strutture condizionali
 
@@ -211,7 +183,6 @@ Mauro Bogliaccino
 * Utilizzo del debugger
 
 ---
-![bg](./background.jpg)
 
 ## Utilizzo di operatori e costrutti decisionali
 
@@ -226,7 +197,6 @@ Mauro Bogliaccino
   * istruzioni break e continue
 
 ---
-![bg](./background.jpg)
 
 ## Array e loop
 
@@ -238,7 +208,6 @@ Mauro Bogliaccino
 * La classe ArrayList
 
 ---
-![bg](./background.jpg)
 
 ## Lavorare con gli Array in Java
 
@@ -253,7 +222,6 @@ Mauro Bogliaccino
 * Array e ArrayList.
 
 ---
-![bg](./background.jpg)
 
 ## La Programmazione ad oggetti
 
@@ -265,7 +233,6 @@ Mauro Bogliaccino
 * Visibilità dei membri di una classe
 
 ---
-![bg](./background.jpg)
 
 ## La Programmazione ad oggetti II
 
@@ -277,7 +244,6 @@ Mauro Bogliaccino
 * Classi e metodi con parametri
 
 ---
-![bg](./background.jpg)
 
 ## Lavorare con tipi di dati primitivi Java e API String
 
@@ -288,7 +254,6 @@ Mauro Bogliaccino
 * Manipola i dati usando la classe StringBuilder e i suoi metodi
 
 ---
-![bg](./background.jpg)
 
 ## Lavorare con tipi di dati primitivi Java e API String II
 
@@ -300,7 +265,6 @@ Mauro Bogliaccino
 * La classe Timer: schedulare un'azione, che verrà eseguita ogni tot millisecondi.
 
 ---
-![bg](./background.jpg)
 
 ## Manipolare e formattare i dati nel programma
 
@@ -312,7 +276,6 @@ Mauro Bogliaccino
 * promotion e casting delle variabili
 
 ---
-![bg](./background.jpg)
 
 ## La classe Math
 
@@ -321,7 +284,6 @@ Mauro Bogliaccino
 * accedere a proprietà e metodi senza istanziare nuovi oggetti
 
 ---
-![bg](./background.jpg)
 
 ## Classi istanziabili
 
@@ -331,14 +293,12 @@ Mauro Bogliaccino
 * relazioni tra classi: uso, aggregazione, teoria delle classi
 
 ---
-![bg](./background.jpg)
 
 ## aggregazione
 
 ![Esempio Aggregazione](./img/image010.jpg)
 
 ---
-![bg](./background.jpg)
 
 ## **Ereditarietà in Java**
 
@@ -355,7 +315,6 @@ Mauro Bogliaccino
   * @override toString() (solo in caso di extends)
 
 ---
-![bg](./background.jpg)
 
 ## Ereditarietà
 
@@ -366,7 +325,6 @@ Mauro Bogliaccino
 * Impedire l'ereditarietà: la parola riservata final
 
 ---
-![bg](./background.jpg)
 
 ## Riutilizzo delle implementazioni tramite ereditarietà
 
@@ -377,7 +335,6 @@ Mauro Bogliaccino
 * Distinguere tra overload, override e information hiding
 
 ---
-![bg](./background.jpg)
 
 ## Utilizzare le interfacce
 
@@ -391,7 +348,6 @@ Mauro Bogliaccino
 ![ereditarietà](./img/gerarchia5.png)
 
 ---
-![bg](./background.jpg)
 
 ## Programmazione astratta attraverso le interfacce
 
@@ -402,7 +358,6 @@ Mauro Bogliaccino
 * [interfacce](015_interfacce.md)
 
 ---
-![bg](./background.jpg)
 
 ## Gestione delle eccezioni e asserzioni
 
@@ -416,7 +371,6 @@ Mauro Bogliaccino
 * Descrivere i vantaggi della gestione delle eccezioni e differenziare tra eccezioni verificate, non selezionate ed errori
 
 ---
-![bg](./background.jpg)
 
 ## Gestire le eccezioni II
 
@@ -430,7 +384,6 @@ Mauro Bogliaccino
 * [eccezioni](017_eccezioni.md)
 
 ---
-![bg](./background.jpg)
 
 ## JShell
 
