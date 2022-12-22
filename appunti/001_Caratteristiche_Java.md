@@ -1,6 +1,6 @@
 # Caratteristiche principali di Java
 
-* Java è un linguaggio di alto livello e orientato agli oggetti, creato dalla Sun Microsystem nel 1995.
+* Java è un linguaggio di alto livello e orientato agli oggetti, creato da un team guidato da James Gosling a partire dal 1991 e rilasciato dalla Sun Microsystems nel 1995.
 
 Le motivazioni, che guidarono lo sviluppo di Java, erano quelle di creare un linguaggio semplice e familiare. 
 
@@ -16,24 +16,23 @@ Le caratteristiche del linguaggio di programmazione Java sono:
 
 ## Caratteristiche di Java
 
-* Semplice e familiare
-* Orientato agli oggetti
-* Indipendente dalla piattaforma
-* interpretato
-* Sicuro
-* Robusto
-* Distribuito e dinamico
-* Multi-thread
+I 5 obiettivi primari nella creazione del linguaggio
+
+1. Orientato agli oggetti, semplice e _familiare_
+2. Robusto e sicuro
+3. Indipendente dalla piattaforma
+4. Ad alte prestazioni
+5. Interpretato, multi-thread, distribuito e dinamico
 
 ---
 
 ## Semplice e familiare
 
-* Basato su C
+* Basato su C (il principale linguaggio disponibile ad inizio anni '90)
 * Sviluppato da zero
 * Estremamente semplice: senza puntatori, macro, registri
-* Apprendimento rapido
-* Semplificazione della programmazione
+* Apprendimento rapido ;)
+* Creato con lo scopo di semplificare la programmazione
 * Riduzione del numero di errori
 
 ---
@@ -43,16 +42,27 @@ Le caratteristiche del linguaggio di programmazione Java sono:
 * Orientato agli oggetti dalla base
 * In Java tutto è un oggetto
 * Incorpora le caratteristiche
-
   * Incapsulamento
-
   * Polimorfismo
-
   * Ereditarietà
 * Collegamento dinamico
 * Non sono disponibili
   * Ereditarietà multipla
   * Overload degli operatori
+
+---
+
+## Robusto e sicuro
+
+* Supporta la sicurezza di tipo sandboxing
+* Verifica del bytecode
+* Altre misure di sicurezza
+* Caricatore di classi
+* Restrizioni nell’accesso alla rete
+* L’esecuzione nella JVM impedisce di bloccare il sistema
+* L’assegnazione dei tipi è molto restrittiva
+* La gestione della memoria è sempre a carico del sistema
+* Il controllo del codice avviene sia a tempo di compilazione sia a tempo di esecuzione (runtime)
 
 ---
 
@@ -77,22 +87,12 @@ Le caratteristiche del linguaggio di programmazione Java sono:
 
 ---
 
-## sicuro
+## Multi-thread
 
-* Supporta la sicurezza di tipo sandboxing
-* Verifica del bytecode
-* Altre misure di sicurezza
-* Caricatore di classi
-* Restrizioni nell’accesso alla rete
-
----
-
-## Robusto
-
-* L’esecuzione nella JVM impedisce di bloccare il sistema
-* L’assegnazione dei tipi è molto restrittiva
-* La gestione della memoria è sempre a carico del sistema
-* Il controllo del codice avviene sia a tempo di compilazione sia a tempo di esecuzione (runtime)
+* Soluzione semplice ed elegante per la multiprogrammazione
+* Un programma può lanciare differenti processi
+* Non si tratta di nuovi processi, condividono il codice e le variabili col processo principale
+* Simultaneamente si possono svolgere vari compiti
 
 ---
 
@@ -104,15 +104,6 @@ Le caratteristiche del linguaggio di programmazione Java sono:
 * Può essere caricata via rete
 * Dinamicamente estensibile
 * Disegnato per adattarsi ad ambienti in evoluzione
-
----
-
-## Multi-thread
-
-* Soluzione semplice ed elegante per la multiprogrammazione
-* Un programma può lanciare differenti processi
-* Non si tratta di nuovi processi, condividono il codice e le variabili col processo principale
-* Simultaneamente si possono svolgere vari compiti
 
 ---
 
@@ -146,3 +137,5 @@ Java SE 14|March 2020|September 2020 for OpenJDK|N/A
 Java SE 15|September 2020|March 2021 for OpenJDK|N/A
 Java SE 16|March 2021|September 2021 for OpenJDK|N/A
 Java SE 17 (LTS)|September 2021|TBA|TBA 
+Java SE 18|March 22, 2022
+Java SE 19|September 20, 2022
