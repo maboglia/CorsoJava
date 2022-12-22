@@ -1,7 +1,5 @@
 # Corso OOP JAVA
 
----
-
 ## Schema Argomenti
 
 ![schema UF](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/JavaRecap.drawio.png)
