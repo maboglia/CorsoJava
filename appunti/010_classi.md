@@ -32,7 +32,6 @@ Possono essere definite
 
 ### Struttura di una classe
 
-
 ```java
 package model;
 
@@ -58,7 +57,6 @@ public class Persona {
     return this.nome + " " + this.cognome + " " +  this.eta;
     }
 }
-
 ```
 
 ---
@@ -79,7 +77,6 @@ public class Persona {
 
 ---
 
-
 ## Classi e documentazione
 
 * Java è dotato di una libreria di classi "pronte all'uso" che coprono molte esigenze
@@ -90,4 +87,5 @@ public class Persona {
 * [Documentazione Java 8](https://docs.oracle.com/javase/8/docs/api/overview-summary.html)
 * [Documentazione Java 9](https://docs.oracle.com/javase/9/docs/api/overview-summary.html)
 * [Documentazione Java 11](https://docs.oracle.com/en/java/javase/11/)
-* [Documentazione Java 13](https://docs.oracle.com/en/java/javase/13/)
+* [Documentazione Java 14](https://docs.oracle.com/en/java/javase/14/)
+* [Documentazione Java 17](https://docs.oracle.com/en/java/javase/17/)
