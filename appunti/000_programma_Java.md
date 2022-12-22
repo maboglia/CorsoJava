@@ -1,5 +1,7 @@
 # Corso OOP JAVA
 
+Schemi e risorse relative al corso Java
+
 ---
 
 ## Schema Argomenti
