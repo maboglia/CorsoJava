@@ -1,5 +1,3 @@
----
-
 # Corso Java
 
 ## Programma del corso Java SE - Java SE 11 Programmer I
