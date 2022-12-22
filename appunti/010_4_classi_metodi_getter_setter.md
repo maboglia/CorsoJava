@@ -1,6 +1,18 @@
 # Metodi **getter e setter**
 
-* Danno accesso agli attributi:
+I cosiddetti metodi getters e setters, cioè accessori e mutatori, regolano l'accesso alle proprietà ed ai metodi delle classi
+
+
+## Principi di encapsulation e visibilità
+
+* **Modularità** = diminuire le interazioni
+* **Information Hiding** = delegare responsabilità
+* `private` attributo/metodo visibile solo da istanze della stessa classe
+* `public` attributo/metodo visibile ovunque
+
+---
+
+### Ad esempio
 
 ```java
 class NomeClasse{  
@@ -19,15 +31,6 @@ class NomeClasse{
 * possiamo cambiare la rappresentazione interna, 
 * verificare che i valori siano corretti, 
 * modificare altri aspetti dell'oggetto
-
----
-
-## Visibilità ed encapsulation
-
-* Modularità = diminuire le interazioni
-* Information Hiding = delegare responsabilità
-* private attributo/metodo visibile solo da istanze della stessa classe
-* public attributo/metodo visibile ovunque
 
 ---
 
@@ -75,6 +78,5 @@ Automobile a = new Automobile();
 a.colore = "bianco"; // error
 a.vernicia("verde"); // ok
 ```
-
 
 ---
