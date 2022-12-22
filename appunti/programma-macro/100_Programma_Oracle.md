@@ -59,13 +59,18 @@
   * [Summary of Creating and Using Classes and Objects](https://docs.oracle.com/javase/tutorial/java/javaOO/summaryclasses.html)
 * [Questions and Exercises: Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/QandE/creating-questions.html)
 * [Questions and Exercises: Objects](https://docs.oracle.com/javase/tutorial/java/javaOO/QandE/objects-questions.html)
+
+---
+
+## [Classes and Objects (advanced)](https://docs.oracle.com/javase/tutorial/java/javaOO/index.html)
+
 * [Nested Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html)
-  * [Inner Class Example](https://docs.oracle.com/javase/tutorial/java/javaOO/innerclasses.html)
-  * [Local Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
-  * [Anonymous Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html)
-  * [Lambda Expressions](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)
-      * [Method References](https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html)
-  * [When to Use Nested Classes, Local Classes, Anonymous Classes, and Lambda Expressions](https://docs.oracle.com/javase/tutorial/java/javaOO/whentouse.html)
+* [Inner Class Example](https://docs.oracle.com/javase/tutorial/java/javaOO/innerclasses.html)
+* [Local Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
+* [Anonymous Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html)
+* [Lambda Expressions](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)
+  * [Method References](https://docs.oracle.com/javase/tutorial/java/javaOO/methodreferences.html)
+* [When to Use Nested Classes, Local Classes, Anonymous Classes, and Lambda Expressions](https://docs.oracle.com/javase/tutorial/java/javaOO/whentouse.html)
 * [Questions and Exercises: Nested Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/QandE/nested-questions.html)
 * [Enum Types](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)
 * [Questions and Exercises: Enum Types](https://docs.oracle.com/javase/tutorial/java/javaOO/QandE/enum-questions.html)
