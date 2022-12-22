@@ -1,6 +1,6 @@
 # Corso OOP JAVA
 
-Schemi e risorse relative al corso Java
+* Schemi e risorse relative al corso Java
 
 ---
 
