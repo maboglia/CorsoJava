@@ -1,7 +1,5 @@
 # Trail: Learning the Java Language: Table of Contents
 
----
-
 ## [Object-Oriented Programming Concepts](https://docs.oracle.com/javase/tutorial/java/concepts/index.html)
 
 * [What Is an Object?](https://docs.oracle.com/javase/tutorial/java/concepts/object.html)
