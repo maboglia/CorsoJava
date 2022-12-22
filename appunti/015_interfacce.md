@@ -127,7 +127,7 @@ Con java 1.8 le interfacce sono state modificate: è possibile implementare due 
 
 ---
 
-## Lambda expressions
+## Interfacce funzionali e **Lambda expressions**
 
 Con le interfacce contenenti un singolo metodo astratto, è possibile utilizzare le espressioni lambda
 
