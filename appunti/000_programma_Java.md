@@ -1,5 +1,7 @@
 # Corso OOP JAVA
 
+---
+
 ## Schema Argomenti
 
 ![schema UF](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/JavaRecap.drawio.png)
@@ -20,5 +22,6 @@
 * **Concetti di informatica e fondamenti di Java** - Cay Horstmann (it)
 * [Guida Java html.it](https://www.html.it/guide/guida-java/) (it)
 
+---
 
 ![schema UF](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/2020_UF_Java.jpg)
