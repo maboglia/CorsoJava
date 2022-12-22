@@ -2,6 +2,8 @@
 
 ## Programma del corso Java SE - Java SE 11 Programmer I
 
+Programma dettagliato del Corso di programmazione Java
+
 * [Java SE 11 Programmer I](https://education.oracle.com/java/java-se/product_267)
 
 ---
