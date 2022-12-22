@@ -8,25 +8,22 @@ Un'interfaccia è una specie di classe completamente astratta, cioè del tutto p
 * Definendo un attributo in un'interfaccia questo viene automaticamente considerato final
 
 ---
-### Un'interfaccia
+
+## Un'interfaccia
+
 * Ha tutti i vantaggi e le indicazioni d'uso delle classi astratte
 * Presenta maggior flessibilità rispetto all'ereditarietà di una classe astratta
 
+Si può pensare a un'interfaccia come a una classe astratta che ha tutti e soli metodi astratti (ci sono però differenze).
 
----
-
-Si può pensare a un'interfaccia come a una classe astratta
-che ha tutti e soli metodi astratti (ci sono però differenze).
-
-
-Un'interfaccia può essere considerata un modo per
-cosa dovrebbero fare le classi senza specificare come farlo.
+Un'interfaccia può essere considerata un modo per cosa dovrebbero fare le classi senza specificare come farlo.
 
 Quindi un'interfaccia non è una classe ma un insieme di requisiti per le classi che si vogliono conformare ad essa.
 
 ---
 
-## Sintassi:
+## Esempio sintassi
+
 ```java
 public interface NomeInterfaccia
 {
@@ -38,9 +35,9 @@ public interface NomeInterfaccia
 
 ## interface
 
-Si utilizza la parola chiave interface anzichè class
+Si utilizza la parola chiave **interface** anzichè **class**
 
-I metodi sono implicitamente pubblici e astratti, non bisogna indicarlo
+I **metodi** sono implicitamente **pubblici** e **astratti**, non bisogna indicarlo
 
 Se una classe decide di soddisfare i requisiti di un'interfaccia si dice che la classe implementa l'interfaccia.
 
@@ -57,34 +54,32 @@ public class NomeClasse implements NomeInterfaccia
 }
 ```
 
-Tale classe deve implementare tutti i metodi elencati nell'interfaccia.
+Tale classe deve **implementare tutti i metodi** elencati nell'interfaccia.
 
 ---
 
 ### proprietà
-Le interfacce non sono classi; non si può utilizzare new per crearne oggetti.
 
-I metodi di un'interfaccia sono automaticamente public (quindi non è necessario scriverlo)
+Le interfacce non sono classi; **non si può utilizzare new** per crearne oggetti.
 
-Gli attributi di un'interfaccia sono sempre public static final 
-(non è necessario scriverlo).
+I metodi di un'interfaccia sono automaticamente **public** (quindi non è necessario scriverlo)
 
-Un'interfaccia con il nome NomeInterfaccia va salvata nel file NomeInterfaccia.java (come accade per le classi).
+Gli attributi di un'interfaccia sono sempre **public static final** (non è necessario scriverlo).
+
+Un'interfaccia con il nome **NomeInterfaccia** va salvata nel file NomeInterfaccia.java (come accade per le classi).
 
 ---
 
 ### ereditarietà multipla
-Una sottoclasse può estendere solo 1 superclasse (non permettendo l'ereditarietà multipla)
+
+Una sottoclasse può estendere solo una superclasse (non è permessa in Java l'ereditarietà multipla)
 
 Con le interfacce invece la situazione è diversa: una classe può implementare quante interfacce vuole.
 
----
 
 ### variabili
 
-Posso dichiarare variabili del tipo dell'interfaccia e,
-sfruttando il polimorfismo, assegnargli oggetti di classi che
-implementano tali interfacce.
+Posso dichiarare variabili del tipo dell'interfaccia e, sfruttando il polimorfismo, assegnargli oggetti di classi che implementano tali interfacce.
 
 ---
 
@@ -92,14 +87,29 @@ implementano tali interfacce.
 
 ```java
 public interface NomeInterfaccia {
-int metodo1( );
+  int metodo1( );
 }
 public class NomeClasse implements NomeInterfaccia{
-int metodo1( ) {
+  int metodo1( ) {
 //codice del metodo
 }
 }
 NomeInterfaccia a = new NomeClasse ( );
+```
+
+---
+
+## Estendere interfacce
+
+Un'interfaccia può estendere un'altra interfaccia, sempre con ereditarietà singola.
+Possono così essere implementate gerarchie di interfacce (e classi astratte, vedi per esempio [JCF](./022_JCF_collezioni.md))
+
+### Sintassi di esempio
+
+```java
+public interface NomeInterfaccia extends AltraInterfaccia {
+  int metodo1( );
+}
 ```
 
 ---
@@ -112,12 +122,14 @@ NomeInterfaccia a = new NomeClasse ( );
 
 Con java 1.8 le interfacce sono state modificate: è possibile implementare due tipi di metodi (!!!)
 
-  * default
-  * static
+* default
+* static
 
 ---
 
 ## Lambda expressions
+
 Con le interfacce contenenti un singolo metodo astratto, è possibile utilizzare le espressioni lambda
 
-`Integer raddoppiato = (o) -> o * 2 ;`
+* Ad esempio: `Integer raddoppiato = (o) -> o * 2 ;`
+* [Interfacce funzionali](./018_interfacce_funzionali.md)

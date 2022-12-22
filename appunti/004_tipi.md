@@ -60,14 +60,21 @@
 ## Esempi
 
 ```java
-int i = 15;
-long longValue = 1000000000000l;
-byte b = (byte)254;
+//tipi interi
+byte b = 254;//8 bit
+short s = 10;//16 bit
+int i = 15;//32 bit
+long l = 1000000000000l;//64 bit
 
-float f = 26.012f;
-double d = 123.567;
-boolean isDone = true;
-boolean isGood = false;
+//tipi reali
+float f = 26.012f;//32 bit
+double d = 123.567;//64 bit
+
+//booleans
+boolean fatto = true;
+boolean daFare = false;
+
+//char - rappresentabili anche come interi
 char ch = 'a';
 char ch2 = ';';
 ```

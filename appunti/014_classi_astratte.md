@@ -1,8 +1,8 @@
 # Classi Astratte
 
-### Una classe astratta è una classe avente **almeno un metodo astratto**
+## Una classe avente **almeno un metodo astratto** deve essere dichiarata come classe astratta
 
-NB: Posso comunque dichiarare una classe **astratta anche se non contiene** alcun metodo astratto!
+NB: **Posso** comunque dichiarare una classe astratta **anche se non contiene** alcun metodo astratto!
 
 ```java
 abstract class Forma {
@@ -18,8 +18,8 @@ Un metodo astratto è un metodo di cui non viene specificata l'implementazione
 
 ### Una classe astratta
 
-* È una classe non completamente definita
-* Non può essere istanziata
+* È una classe non completamente definita (nella parte astratta)
+* **Non** può essere **istanziata**
 
 Per ottenere una classe concreta (istanziabile) da una astratta occorre definire tutte le implementazioni mancanti ovvero
 
@@ -29,23 +29,16 @@ Per ottenere una classe concreta (istanziabile) da una astratta occorre definire
 
 ### Permette di trattare omogeneamente oggetti con caratteristiche diverse
 
-Man mano che si sale nella gerarchia dell'ereditarietà, le
-classi diventano sempre più generiche e probabilmente
-più astratte.
+Man mano che si sale nella gerarchia dell'ereditarietà, le classi diventano sempre più generiche e probabilmente più astratte.
 
-Ad un certo punto la classe superiore diventa a tal punto
-generica che la si può pensare come una base per le altre
-classi piuttosto che come una classe di cui creare un
-oggetto.
+Ad un certo punto la classe superiore diventa a tal punto generica che la si può pensare come una base per le altre classi piuttosto che come una classe di cui creare un oggetto.
 
 ---
 
 
 ### METODO ASTRATTO
 
-Voglio obbligare tutte le sottoclassi di una classe A ad avere
-un metodo ```nomeMetodo()``` ma allo stesso tempo non voglio
-implementare tale metodo nella classe A.
+Posso usare la classe astratta quando voglio **obbligare** tutte le sottoclassi di una classe A ad avere un metodo ```nomeMetodo()```, ma allo stesso tempo non voglio implementare tale metodo nella classe A.
 
 **SINTASSI:**
 
@@ -56,25 +49,22 @@ implementare tale metodo nella classe A.
 
 ---
 
-Le Classi Astratte, oltre ad avere Metodi Astratti, possono avere
- metodi ed attributi *normali*.
+## Le classi parzialmente astratte
 
-Se una classe è astratta, non posso istanziarla.
+Le Classi Astratte, oltre ad avere **metodi astratti**, possono avere metodi ed attributi **normali**.
 
-**NON POSSO CREARE OGGETTI DI UNA CLASSE ASTRATTA**
+Se una classe è astratta, non posso istanziarla: **NON POSSO CREARE OGGETTI DA UNA CLASSE ASTRATTA**
 
----
 
 Che senso ha definire dei metodi astratti e di conseguenza rendere una classe astratta?
 
-Definisco un metodo astratto quando voglio forzare tutte le sottoclassi ad avere un determinato metodo.
-
-I metodi astratti funzionano come segnaposto dei metodi implementati poi nella sottoclasse.
+* Definisco un metodo astratto quando voglio forzare tutte le sottoclassi ad avere un determinato metodo.
+* I metodi astratti funzionano come **segnaposto** dei metodi implementati poi nella sottoclasse.
 
 ---
 
-**le sottoclassi**
+## Regole per le **sottoclassi**
 
-La sottoclasse deve implementare tutti i metodi che la superclasse aveva astratti.
+La sottoclasse deve implementare **tutti i metodi** che la superclasse aveva astratti.
 
-Se la sottoclasse a sua volta non definisce i metodi che la superclasse aveva dichiarato astratti, anche la sottoclasse deve essere dichiarata astratta.
+Se la sottoclasse a sua volta **non definisce** i metodi che la superclasse aveva dichiarato astratti, **anche** la **sottoclasse deve essere dichiarata astratta**.

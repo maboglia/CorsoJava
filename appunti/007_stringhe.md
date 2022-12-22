@@ -24,7 +24,7 @@ Caratteristiche principali
 
 `String myString = new String ("stringa esempio");`
 
-* Solo per il tipo String vale
+* Solo per il tipo String vale l'inizializzazione
 
 `String myString = "stringa esempio";`
 
@@ -73,7 +73,7 @@ Caratteristiche principali
 ### Confronta stringa con altra stringa
 
 * `boolean equals(String s)`
-*` myString.equals("stringa")` ritorna true o false
+* `myString.equals("stringa")` ritorna true o false
 * `boolean equalsIgnoreCase(String s)`
 * `myString.equalsIgnoreCase("StRiNgA")`
 
