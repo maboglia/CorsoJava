@@ -1,8 +1,7 @@
-
 # Stringhe e Caratteri
 Caratteristiche principali
 
-### Classi disponibili
+## Classi disponibili
 
 * String
   * Modella stringhe (sequenze – array di caratteri)

@@ -21,11 +21,8 @@
 * Per indicare la visibilità di un elemento (attribuito o metodo) possiamo farlo precedere da una delle seguenti parole riservate
 
 * `public`: accessibile da qualsiasi classe
-
 * `private`: accessibile solo dalla classe attuale
-
 * `protected`: solo dalla classe attuale, le discendenti e le classi del nostro package
-
 * `package`: se **non indichiamo la visibilità**: sono accessibili **solo dalle classi del nostro package**
 
 ---

@@ -2,19 +2,26 @@
 
 Specifica le operazioni di inizializzazione (attributi, etc.) che vogliamo vengano eseguite su ogni oggetto della classe appena viene creato
 
-Tale metodo ha
-* Lo **stesso nome** della classe
-* Tipo **non** specificato
+---
+
+## Il metodo **costruttore** ha:
+
+* Lo **stesso nome** della classe: inizia quindi _con lettera Maiuscola_
+* Tipo di ritorno **non** specificato
 
 Non possono esistere attributi non inizializzati
+
 * Gli attributi vengono inizializzati comunque con valori di **default**
 
-Se non viene dichiarato un costruttore,
-ne viene creato uno di default vuoto e senza parametri
+---
 
-Spesso si usa l'**overloading** definendo diversi costruttori
+## il costruttore è sempre presente
 
-La distruzione di oggetti (garbage-collection) non è a carico del programmatore
+Se _non viene dichiarato_ un costruttore, ne viene creato uno di **default** _vuoto e senza parametri_
+
+Spesso si usa l'**overloading** dei metodi definendo diversi costruttori per gli oggetti di un certo tipo
+
+La distruzione di oggetti non è a carico del programmatore (garbage-collection)
 
 ---
 
@@ -30,6 +37,8 @@ Motorcycle m = new Motorcycle ();
 String s = new String ("ABC");
 ```
 
+---
+
 ### Per "gestire" una classe occorre
 
 * Accedere ai metodi della classe
@@ -41,40 +50,44 @@ String s = new String ("ABC");
 
 * L'invio di un messaggio provoca l'esecuzione del metodo
 
-### Inviare un messaggio ad un oggetto
+Inviare un messaggio ad un oggetto
 
-* Usare la notazione "puntata" oggetto.messaggio(parametri)
-* Sintassi analoga alla chiamata di funzioni in altri linguaggi
-* I metodi definiscono l'implementazione delle operazioni
+* Usare la notazione "puntata" `oggetto.messaggio(parametri)`
+* I metodi definiscono l'**implementazione** delle operazioni
 * I messaggi che un oggetto può accettare coincidono con i nomi dei metodi
-* p.es mettiInMoto(), vernicia(), etc.
+* p.es mettiInMoto(), frena(), accelera(100), etc.
 * Spesso i messaggi includono uno o più parametri
 * .vernicia("Rosso")
+
+---
 
 ### Esempi
 
 ```java
 Automobile a = new Automobile();
 a.mettiInMoto();
-a.vernicia("Blu");
+a.accelera(10);
+a.frena(5);
+a.spegni();
 ```
 
 ---
 
 ### All'interno della classe
-* I metodi che devono inviare messaggi allo stesso oggetto cui appartengono 
-* non devono obbligatoriamente utilizzare la notazione puntata: è sottinteso il riferimento
+
+* I metodi che devono inviare messaggi allo stesso oggetto cui appartengono non devono obbligatoriamente utilizzare la notazione puntata: è sottinteso il riferimento
 
 ```java
 public class Libro {
     int nPagine;
-    public void leggiPagina (int nPagina) {...}
+    public void leggiPagina (int nPagina) {
+        //    ...
+    }
     public void leggiTutto () {
         for (int i=0; i<nPagine; i++)
             leggiPagina (i);
     }
 }
-
 ```
 
 ---
@@ -90,9 +103,9 @@ a.colore = "Blu";
 boolean x = a.accesa;
 ```
 
-I metodi che fanno riferimento ad
-attributi dello stesso oggetto possono
-tralasciare il rif-oggetto
+---
+
+I metodi che fanno riferimento ad attributi dello stesso oggetto possono tralasciare il riferimento all'oggetto
 
 ```java
 public class Automobile {
@@ -105,78 +118,40 @@ public class Automobile {
 
 ---
 
-* Esempio (messaggi e attributi)
-
-```java
-
-public class Automobile {
-    String colore;
-    public void vernicia () {
-        colore = "bianco";
-    }
-    public void vernicia (String nuovoCol) {
-        colore = nuovoCol;
-    }
-}
-
-Automobile a1, a2;
-a1 = new Automobile ();
-a1.vernicia ("verde");
-a2 = new Automobile ();
-```
-
----
-
-### Esempio (costruttori con overloading)
-
-```java
-Class Finestra {
-    String titolo;
-    String colore;
-    // Finestra senza titolo nè colore
-    Finestra () {
-    ...
-    }
-    // Finestra con titolo senza colore
-    Finestra (String t) {
-    ...
-    titolo = t;
-    }
-    // Finestra con titolo e colore
-    Finestra (String t, String c) {
-    ...
-    titolo = t; colore = c;
-    }
-}
-```
-
----
-
 ## Operatore `this` (Puntatore Auto-referenziante)
 
 La parola riservata `this` e' utilizzata quale puntatore auto-referenziante
 
-*  `this` riferisce l'oggetto (e.g., classe) corrente
+* `this` riferisce l'oggetto (e.g., classe) corrente
 
 Utilizzato per:
 
 * Referenziare la classe appena istanziata
 * Evitare il conflitto tra nomi
 
+
+---
+
+### Esempio (costruttori con `overloading` e `this`)
+
 ```java
-class Automobile{
-String colore;
-...
-...
-void vernicia (String colore) {
-this.colore = colore;
+class Automobile {
+    String marca;
+    String modello;
+    // Automobile senza marca nè modello
+    Automobile () {
+        //...
+    }
+    // Automobile con marca senza modello
+    Automobile (String marca) {
+        //...
+        this.marca = marca;
+    }
+    // Automobile con marca e modello
+    Automobile (String marca, String modello) {
+        //...
+        this.marca = marca; 
+        this.modello = modello;
+    }
 }
-}
-. . .
-Automobile a2, a1 = new Automobile;
-a1.vernicia("bianco"); // a1 == this
-a2.vernicia("rosso");
-// this == a2
 ```
-
-

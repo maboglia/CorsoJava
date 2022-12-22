@@ -6,7 +6,9 @@
 * Stato (valore attuale degli attributi)
 * Identificatore univoco (reference - handle - puntatore)
 
-### Per creare un oggetto occorre
+---
+
+## Per creare un oggetto occorre
 
 * Dichiarare una istanza
 * La dichiarazione non alloca spazio ma solo una riferimento (puntatore) che per default vale null
@@ -15,11 +17,9 @@
 
 ---
 
-
 ## Notazioni Puntate
 
-### Le notazioni puntate possono essere combinate
-
+* Le notazioni puntate possono essere combinate
 * `System.out.println("Hello world!");`
 * **System** è una classe del `package java.lang`
 * **out** è una variabile di classe contenente il riferimento ad un oggetto della classe **PrintStream** che punta allo standard output
@@ -27,43 +27,41 @@
 
 ---
 
-## Operazioni su reference
-
-### Uso degli operatori relazionali == e !=
+## Operazioni su reference == e !=
 
 * Attenzione: il test di uguaglianza viene fatto sul puntatore (**reference**) e NON sull'oggetto
-* Stabiliscono se i **reference** si riferiscono allo stesso oggetto
-
-* È definita l'**assegnazione**
-
+* gli operatori relazionali `== e !=` stabiliscono se i **reference** si riferiscono allo stesso oggetto
+* È definita l'**assegnazione** con l'operatore `=`
 * È definito l'**operatore punto** (notazione puntata)
-
-* **NON** è prevista l'aritmetica dei puntatori
+* In java **NON** è prevista l'aritmetica dei puntatori
 
 ---
 
-
 ## Operazioni su istanze
 
-* Le principali operazioni che si possono effettuare sulle variabili che riferiscono istanze di una classe sono: 
-	* assegnamento
-	* confronto
-	* invocazione di metodi
+Le principali operazioni che si possono effettuare sulle variabili che riferiscono istanze di una classe sono: 
 
-* Il valore di una variabile di tipo strutturato è il riferimento ad un oggetto (istanza di una classe)
-* Una stessa variabile può riferire oggetti diversi in momenti diversi a seguito di operazioni di assegnazione sul suo valore
-* Se la variabile contiene il valore null non riferisce nessun oggetto in quel momento
+* assegnamento
+* confronto
+* invocazione di metodi
+
+
+
+* Il valore di una variabile di tipo reference è il riferimento ad un oggetto (istanza di una classe)
+* Una stessa variabile può riferire oggetti diversi in tempi diversi a seguito di operazioni di assegnazione sul suo valore
+* Se la variabile contiene il valore `null` non riferisce nessun oggetto in quel momento
 
 ---
 
 ## Accesso a metodi e attributi non static
-* La sintassi è simile al caso precedente, ma ovviamente l’accesso/invocazione è possibile solo tramite un’istanza specifica (ed ogni accesso è diversificato): 
-* Nel corpo di un metodo non `static` si può accedere a qualunque attributo e metodo della stessa classe
+
+La sintassi è simile al caso precedente, ma ovviamente l’accesso/invocazione è possibile solo tramite un’istanza specifica: 
+
+* Nel corpo di un metodo **non** `static` si può accedere a qualunque attributo e metodo della stessa classe
 * All'interno del corpo di un metodo si possono riferire in modo abbreviato attributi e metodi definiti nella stessa classe
 * Se nel corpo di un metodo non `static` appare il nome di un metodo o attributo non `static` della sua classe è sottinteso che sia riferito all’istanza su cui è stato invocato il metodo
 
 ---
-
 
 ## Oggetti e riferimenti
 
@@ -76,6 +74,7 @@
 ---
 
 ## Confronti tra variabili di tipo strutturato
+
 * E' possibile applicare gli operatori di confronto == e != a variabili di tipo strutturato
 * Se uno dei due termini del confronto è il valore null si verifica se una certa variabile riferisce un oggetto oppure no, p.e. saluto3 != null
 * Se entrambi i termini del confronto sono variabili, si verifica se hanno lo stesso valore (cioè riferiscono esattamente lo stesso oggetto)
@@ -84,7 +83,7 @@
 
 ## Confronto tra riferimenti vs. confronto tra oggetti
 
-* Usare == fa il confronto tra i riferimenti non fra i valori contenuti negli oggetti (p.e. le sequenze di caratteri contenute nelle istanze di String ) 
-* Di solito si vogliono confrontare i contenuti non i riferimenti: per questo si usa il metodo __equals__ 
-* Il metodo booleano equals della classe String accetta come argomento il riferimento ad un altro oggetto e ritorna true se le stringhe contenute sono uguali (in modo case sensitive), false altrimenti 
-* Il metodo booleano equalsIgnoreCase fa lo stesso senza distinguere maiuscole/minuscole
+* Usare == fa il confronto tra i riferimenti non fra i valori contenuti negli oggetti
+* Di solito si vogliono confrontare i contenuti non i riferimenti: per questo si usa il **metodo** __equals__ 
+* Il metodo booleano `equals` della classe String accetta come argomento il riferimento ad un altro oggetto e ritorna true se le stringhe contenute sono uguali, false altrimenti
+* Il metodo booleano `equalsIgnoreCase` fa lo stesso senza distinguere maiuscole/minuscole

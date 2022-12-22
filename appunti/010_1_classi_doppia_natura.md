@@ -1,7 +1,8 @@
 # La doppia natura delle classi
+
 * Le classi disponibili nella libreria standard si possono distinguere in due tipologie principali:
-	* Classi istanziabili
-	* Classi non istanziabili
+  * Classi istanziabili
+  * Classi non istanziabili
 * La stessa distinzione è applicabile alle nostre classi
 * La distinzione tra classi istanziabili e non istanziabili riguarda il senso logico del loro utilizzo
 * Il termine "classe non istanziabile " sarà utilizzato per indicare una classe che non ha senso istanziare, date le sue caratteristiche
@@ -14,6 +15,7 @@
 ---
 
 ## Classi istanziabili
+
 * Una classe istanziabile fornisce il prototipo di una famiglia di oggetti (istanze della classe) che hanno struttura simile ma proprietà distinte a livello individuale (valori diversi degli attributi e quindi risultati diversi prodotti dai metodi)
 * L'uso tipico è la costruzione di istanze (tramite new) e quindi l'invocazione di metodi su di esse
 * Nel caso di una classe istanziabile attributi e metodi rappresentano proprietà possedute da tutti gli oggetti istanza della classe
@@ -49,8 +51,8 @@
 
 ---
 
-
 ## una classe non istanziabile
+
 * Non ha costruttori
 * Attributi e metodi sono tutti static
 * I suoi metodi sono applicabili direttamente alla classe con almeno un argomento, non è necessaria un'istanza individuale
@@ -68,6 +70,9 @@ MATH.PI //3.1415
 ---
 
 ## Classi istanziabili “ibride”
+
 * Alcune classi istanziabili (p.e. String ) della libreria standard contengono attributi o metodi static ed hanno quindi natura ibrida
 * E’ come se la classe avesse due sottoparti (una static e una no) ognuna delle quali segue le proprie regole
-* Salvo rari casi, è sconsigliabile realizzare classi istanziabili ibride (sono accettabili attributi costanti definiti come static )
+* Salvo rari casi, è sconsigliabile realizzare classi istanziabili ibride (sono accettabili attributi costanti definiti come static).
+
+[Istanze](010_2_classi_istanze.md)
