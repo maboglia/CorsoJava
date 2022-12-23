@@ -1,15 +1,20 @@
 # Espressioni aritmetiche
 
+Un'espressione è un costrutto costituito da variabili, operatori e invocazioni di metodi, costruiti in base alla sintassi del linguaggio, che restituisce un singolo valore.
+
+## per esempio nel programma
 
 ```java
 public class Triangolo {
     public static void main ( String [] args ) {
-        System.out.println (5*10/2);
+        
+        double area = 5*10/2;
+        System.out.println (area);
     }
 }
 ```
 
-Il programma risolve l'espressione 5*10/2 e stampa il risultato a video
+Il programma risolve l'espressione aritmetica `5*10/2`, memorizza in `area` il risultato e lo stampa a video
 
 
 ---
