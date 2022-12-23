@@ -139,3 +139,5 @@ Java SE 16|March 2021|September 2021 for OpenJDK|N/A
 Java SE 17 (LTS)|September 2021|TBA|TBA 
 Java SE 18|March 22, 2022
 Java SE 19|September 20, 2022
+
+[Java Language Changes](https://docs.oracle.com/en/java/javase/19/language/java-language-changes.html)
