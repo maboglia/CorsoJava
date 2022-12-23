@@ -1,5 +1,9 @@
 # Operatori 
 
+## Type Comparison Operator
+
+* `instanceof` - Compares an object to a specified type
+
 
 ## Operatori aritmetici
 
