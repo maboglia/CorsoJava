@@ -29,30 +29,28 @@
             q.add(i);
  
         // Display contents of the queue.
-        System.out.println("Elements of queue "
-                           + q);
+        System.out.println("Elements of queue " + q);
  
         // To remove the head of queue.
         int removedele = q.remove();
-        System.out.println("removed element-"
-                           + removedele);
+        System.out.println("removed element-" + removedele);
  
         System.out.println(q);
  
         // To view the head of queue
         int head = q.peek();
-        System.out.println("head of queue-"
-                           + head);
+        System.out.println("head of queue-" + head);
  
         // Rest all methods of collection
         // interface like size and contains
         // can be used with this
         // implementation.
         int size = q.size();
-        System.out.println("Size of queue-"
-                           + size);
+        System.out.println("Size of queue-"+ size);
 
 ```
+
+---
 
 ## Implementazione di Queue: PriorityQueue.
 
@@ -81,10 +79,13 @@ while (!coda.isEmpty()) {
 
 La PriorityQueue è una coda che estrae gli elementi secondo la priorità assegnata.
 
+---
+
 ### thread-safe
 
 Le classi thread-safe si trovano nel package `java.util.concurrent`, per esempio `PriorityBlockingQueue`
 
+---
 
 ## Deque è un'interfaccia che extende le funzionalità di Queue
 
@@ -125,6 +126,8 @@ Deque<String> deque
                            + deque);
 ```
 
+---
+
 ```java
         // Initializing a deque
         Deque<String> dq = new ArrayDeque<String>();
@@ -153,6 +156,8 @@ Deque<String> deque
         // remove element from back
         System.out.println(dq.pollLast());
 ```
+
+---
 
 ## Metodi principali
 
