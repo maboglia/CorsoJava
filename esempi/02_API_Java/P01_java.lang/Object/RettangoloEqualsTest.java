@@ -1,7 +1,7 @@
 public class RettangoloEqualsTest{
 	
 	public static void main(String[] args){
-		RettangoloEqualsEquals r1 = new RettangoloEquals(10,6);
+		RettangoloEquals r1 = new RettangoloEquals(10,6);
 		RettangoloEquals r2 = new RettangoloEquals(15,9);
 		RettangoloEquals r3 = new RettangoloEquals(10,6);
 		if(r1.equals(r2)){
