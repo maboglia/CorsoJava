@@ -15,6 +15,7 @@
 * la prima lancia un’eccezione se l’operazione fallisce
 * la seconda ritorna un valore speciale (come null o false) se l’operazione fallisce
 
+---
 
 ## Implementazione di Queue: LinkedList
 
