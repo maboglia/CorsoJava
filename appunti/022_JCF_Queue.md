@@ -52,7 +52,7 @@
 
 ---
 
-## Implementazione di Queue: PriorityQueue.
+## Implementazione di Queue: PriorityQueue
 
 Esempio di Queue.
 
@@ -81,14 +81,9 @@ La PriorityQueue è una coda che estrae gli elementi secondo la priorità assegn
 
 ---
 
-### thread-safe
+## Implementazione di Queue: Deque
 
-Le classi thread-safe si trovano nel package `java.util.concurrent`, per esempio `PriorityBlockingQueue`
-
----
-
-## Deque è un'interfaccia che extende le funzionalità di Queue
-
+Deque è un'interfaccia che estende le funzionalità di Queue
 
 ```java
 Deque<String> deque
@@ -176,3 +171,9 @@ Deque<String> deque
 * `peek(element)`
 * `peekFirst(element)`
 * `peekLast(element)`
+
+---
+
+### thread-safe
+
+Le classi thread-safe si trovano nel package `java.util.concurrent`, per esempio `PriorityBlockingQueue`
