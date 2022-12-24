@@ -16,8 +16,8 @@
 public class Triangolo {
     public static void main ( String [] args ) {
         
-        int base , altezza ;
-        int area ;
+        int base , altezza ; //dichiarazione di variabili locali
+        double area ;
         
         base = 5;
         altezza = 10;

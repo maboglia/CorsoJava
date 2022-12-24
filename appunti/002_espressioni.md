@@ -43,15 +43,14 @@ Inoltre, tutti gli operatori sono associativi a sinistra ossia 3+2+5 corrisponde
 
 ---
 
-
 ### operazione di divisione
 
 * L'operazione di divisione / si comporta diversamente a seconda che sia applicato a letterali interi o frazionari
-* 25/2 = 12 (divisione intera)
-* 25%2 = 1 (resto della divisione intera)
-* 25.0/2.0 = 12.5 (divisione reale)
-* 25.0%2.0 = 1.0 (resto della divisione intera)
+* `25/2 = 12` (divisione intera)
+* `25%2 = 1` (resto della divisione intera)
+* `25.0/2.0 = 12.5` (divisione reale)
+* `25.0%2.0 = 1.0` (resto della divisione intera)
 * Una operazione tra un letterale intero e un frazionario viene eseguita come tra due frazionari
-* 25/2.0 = 12.5
-* 1.5 + (25/2) = 13.5 (attenzione all'ordine di esecuzione delle operazioni)
-* 2 + (25.0/2.0) = 14.5
+* `25/2.0 = 12.5`
+* `1.5 + (25/2) = 13.5` (attenzione all'ordine di esecuzione delle operazioni)
+* `2 + (25.0/2.0) = 14.5` usare le parentesi ()
