@@ -76,6 +76,11 @@ La libreria non mette a disposizione alcuna implementazione diretta di **Collect
     * `boolean contains (Object o)`
   * Restituisce true se contiene tutti gli elementi specificati in c
     * `boolean containsAll (Collection c)`
+
+---
+
+## Funzionalità di una Collection II
+
   * Controlla se la struttura è vuota; restituisce true in questo caso
     * `boolean isEmpty (Object o) e.g., if (<x>.isEmpty())` ...
   * Rimuove l'oggetto o 
