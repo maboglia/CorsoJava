@@ -1,7 +1,10 @@
 # Algoritmi del Java Collections Framework
 
 Tra le carateristiche offerte dal Collection Framework esistono classi ed algoritmi come, ad esempio, quelli di ordinamento che se avessimo usato array o altre strutture avremmo dovuto definire ad-hoc.
-Infatti, Collections ha metodi che implementano complicati algoritmi come:
+
+---
+
+## Collections ha metodi che implementano complicati algoritmi come:
 
 * **sort()** (ordina)
 * **shuffle()** (mischia – il contrario di ordina)
@@ -12,6 +15,8 @@ Infatti, Collections ha metodi che implementano complicati algoritmi come:
 Altri metodi, detti "di convenienza", permettono la creazione di:
 * **collection immutabili** di un numero definito di oggetti identici (metodo ncopies())
 * **un oggetto singleton**, che si può istanziare una sola volta (metodo singleton())
+
+---
 
 ## ESEMPIO
 
@@ -49,6 +54,9 @@ private static void print(Collection<Persona> coll) {
 	}
 }
 ```
+
+---
+
 ```java
 public class Persona implements Comparable<Persona>{
 private String nome;
@@ -82,6 +90,9 @@ public int compareTo(Persona p) {
 	else 						return -1;	
 }
 ```
+
+---
+
 Sono stati usati due metodi per ordinare la lista:
 
 `Collections.sort(persone)` che riceve in input una List di oggetti che implementano l’interfaccia Comparable. 
