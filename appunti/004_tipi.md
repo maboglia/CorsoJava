@@ -4,8 +4,6 @@
 * In un linguaggio ad oggetti puro, vi sono solo classi e istanze di classi:
 * i dati dovrebbero essere definiti sotto forma di oggetti
 
-![primitive vs reference](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/PrimitiveVsReference.png)
-
 ## Java definisce alcuni tipi primitivi
 
 * Per efficienza Java definisce tipi primitivi
@@ -15,9 +13,12 @@
 * Ne vengono definiti dimensioni e codifica
 * Rappresentazione indipendente dalla piattaforma
 
+---
+## Tipi di dato in Java
+
+![primitive vs reference](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/PrimitiveVsReference.png)
 
 ---
-
 
 ## Tabelle riassuntive: tipi di dato 
 
@@ -38,17 +39,15 @@
 
 ---
 
-
 ###  I tipi numerici, i char
 
-*  Esempi
+* Esempi
 * `123` (int)
 * `256789L ` (L o l = long)
 * `0567` (ottale) `0xff34` (hex)
 * `123.75 0.12375e+3 `(float o double)
 * `'a' '%' '\n'` (char)
 * `'\123'` (\ introduce codice ASCII)
-
 
 ### Tipo boolean
 
