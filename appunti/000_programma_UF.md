@@ -69,8 +69,6 @@ Programma dettagliato del Corso di programmazione Java
 * Input da console, java.util.Scanner
 * Output con oggetto System.out
 
----
-
 ## Lavorare con i dati
 
 * Presentazione delle variabili
@@ -148,8 +146,6 @@ Programma dettagliato del Corso di programmazione Java
 * stato interno,
 * metodi costruttori, overloading
 
----
-
 ## I metodi costruttori
 
 * Caratteristiche di un costruttore
@@ -200,25 +196,14 @@ Programma dettagliato del Corso di programmazione Java
 
 ---
 
-## Array e loop
-
-* Lavorare con le date
-* Analisi dell'array args
-* Matrici bidimensionali
-* Costrutti di loop alternativi
-* nidificazione di Loop  
-* La classe ArrayList
-
----
-
 ## Lavorare con gli Array in Java
 
 * Gli array in Java
   * Dichiarazione
   * Creazione
   * Inizializzazione
-* Dichiarare, istanziare, inizializzare e utilizzare un array **monodimensionale**
-* Dichiarare, creare un'istanza, inizializzare e utilizzare un array **bidimensionale**
+* Array **monodimensionali**
+* Array **bidimensionali**
 * Limiti degli array in JAVA: **dimensione prefissata**
 * **Copia** di array
 * Array e ArrayList.
@@ -233,13 +218,7 @@ Programma dettagliato del Corso di programmazione Java
 * Istanziare un oggetto: il metodo costruttore
 * Variabili d'istanza e incapsulamento
 * Visibilità dei membri di una classe
-
----
-
-## La Programmazione ad oggetti II
-
 * La parola riservata null
-* Determinazione delle classi
 * Coesione, dipendenza, programmazione per contratto, parametro implicito, effetti collateral
 * Membri statici e membri dinamici
 * Modificatori d'accesso e visibilità: public, private, friendly, static
@@ -254,11 +233,6 @@ Programma dettagliato del Corso di programmazione Java
 * Usa l'inferenza del tipo di variabile locale
 * Crea e manipola stringhe
 * Manipola i dati usando la classe StringBuilder e i suoi metodi
-
----
-
-## Lavorare con tipi di dati primitivi Java e API String II
-
 * Caso particolare: la classe String e i principali metodi.
 * Classe Object
   * Metodi equals, toString e clone.
@@ -325,11 +299,6 @@ Programma dettagliato del Corso di programmazione Java
 * La parola riservata super
 * Modificatori d'accesso: package, private e protected
 * Impedire l'ereditarietà: la parola riservata final
-
----
-
-## Riutilizzo delle implementazioni tramite ereditarietà
-
 * Creare e utilizzare sottoclassi e superclassi
 * Creare ed estendere le classi astratte
 * Abilitare il polimorfismo con metodi prioritari
@@ -341,7 +310,6 @@ Programma dettagliato del Corso di programmazione Java
 ## Utilizzare le interfacce
 
 * Polimorfismo
-* Polimorfismo nelle classi di fondazione JDK
 * Utilizzo delle interfacce
 * Inferenza di tipo variabile locale
 * Utilizzare l'interfaccia List
