@@ -84,10 +84,6 @@ char ch2 = ';';
 
 ```java
 
-public class Applicazione {
-
-	public static void main(String[] args) {
-
 		//1) dichiarazione
 		int mioNumero;
 		//2) inizializzazione
@@ -116,10 +112,10 @@ public class Applicazione {
 		
 		byte mioByte = 127;
 		System.out.println(mioByte);
-	}
 
-}
 ```
+
+---
 
 ![tipi primitivi](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/tipi.png)
 
