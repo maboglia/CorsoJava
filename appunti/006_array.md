@@ -216,4 +216,6 @@ int[][] m = {
 
 ---
 
+[esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/03_array)
+
 [esempi ed esercizi su array](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72)

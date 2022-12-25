@@ -372,4 +372,4 @@ z = x/y;
   * definire dei metodi get/set
   * etc.
   
-[esempi](../esempi/08Eccezioni/snippets_eccezioni.md)
+[esempi]([../esempi/08Eccezioni/snippets_eccezioni.md](https://github.com/maboglia/CorsoJava/blob/master/esempi/06Eccezioni/))

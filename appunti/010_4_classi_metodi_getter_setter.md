@@ -80,3 +80,5 @@ a.vernicia("verde"); // ok
 ```
 
 ---
+
+[esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)

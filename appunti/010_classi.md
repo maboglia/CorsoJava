@@ -89,3 +89,5 @@ public class Persona {
 * [Documentazione Java 11](https://docs.oracle.com/en/java/javase/11/)
 * [Documentazione Java 14](https://docs.oracle.com/en/java/javase/14/)
 * [Documentazione Java 17](https://docs.oracle.com/en/java/javase/17/)
+
+[esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)

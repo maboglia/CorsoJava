@@ -124,3 +124,5 @@ public class Applicazione {
 ![tipi primitivi](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/tipi.png)
 
 [Everything you'll ever need to work with Java primitive types!](https://github.com/deletescape/Primitives)
+
+[esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/02_tipi)

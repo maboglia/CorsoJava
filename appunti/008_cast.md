@@ -36,6 +36,25 @@ System.out.println(b); // 97
 
 ---
 
+## esempio promotion II
+
+```java
+
+
+  int valore1 = 56;
+  int valore2 = valore1;
+  
+  System.out.println(valore2);
+  
+  //promozione
+  long valoreLong1 = valore1;
+  System.out.println(valoreLong1);
+ }
+
+```
+
+---
+
 
 ## esempi type casting
 
@@ -65,3 +84,5 @@ System.out.println(a); // 1936
 int a = (int) true; // vietato - ... cannot be converted to ... 
 boolean falso = (boolean) 0; // vietato - ... cannot be converted to ...  
 ```
+
+[esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/00_Foundations)

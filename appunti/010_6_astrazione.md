@@ -113,3 +113,5 @@ Un oggetto pertanto è contraddistinto da:
 1. attributi;
 2. metodi;
 3. identità;
+
+[esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)

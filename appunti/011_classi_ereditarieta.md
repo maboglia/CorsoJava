@@ -29,3 +29,5 @@ b) Creiamo una nuova classe che erediti da Automobile:
 * Per modificare classi già esistenti, specialmente quando abbiamo molte classi da gestire
 
 * Per non dover riprogrammare due volte lo stesso codice
+
+[esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)

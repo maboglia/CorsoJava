@@ -75,4 +75,4 @@ MATH.PI //3.1415
 * E’ come se la classe avesse due sottoparti (una static e una no) ognuna delle quali segue le proprie regole
 * Salvo rari casi, è sconsigliabile realizzare classi istanziabili ibride (sono accettabili attributi costanti definiti come static).
 
-[Istanze](010_2_classi_istanze.md)
+[esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)

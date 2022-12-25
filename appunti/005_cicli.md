@@ -232,3 +232,5 @@ for (int i=0; i<v.length; ++i) // passa in rassegna tutti gli indici dell'array 
     if (v[i]>0) // filtra le celle che contengono valori positivi
         somma = somma + v[i]; // accumula valore nella variabile accumulatore
 ```
+
+[esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_control-flow)

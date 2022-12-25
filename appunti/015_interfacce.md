@@ -133,3 +133,6 @@ Con le interfacce contenenti un singolo metodo astratto, è possibile utilizzare
 
 * Ad esempio: `Integer raddoppiato = (o) -> o * 2 ;`
 * [Interfacce funzionali](./018_interfacce_funzionali.md)
+
+
+[esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)

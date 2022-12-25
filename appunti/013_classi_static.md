@@ -73,3 +73,4 @@ double y = Math.cos(x);
 * Se nel corpo di un metodo appare il nome di un metodo o attributo `static` della sua classe è sottinteso che sia preceduto dal nome della classe stessa
 * Eventuali mescolanze improprie di `static` e non `static` causano errori di compilazione
 
+[esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)

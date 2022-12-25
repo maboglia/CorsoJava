@@ -87,3 +87,6 @@ La sintassi è simile al caso precedente, ma ovviamente l’accesso/invocazione 
 * Di solito si vogliono confrontare i contenuti non i riferimenti: per questo si usa il **metodo** __equals__ 
 * Il metodo booleano `equals` della classe String accetta come argomento il riferimento ad un altro oggetto e ritorna true se le stringhe contenute sono uguali, false altrimenti
 * Il metodo booleano `equalsIgnoreCase` fa lo stesso senza distinguere maiuscole/minuscole
+
+
+[esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)

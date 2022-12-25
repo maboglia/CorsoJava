@@ -68,3 +68,5 @@ Che senso ha definire dei metodi astratti e di conseguenza rendere una classe as
 La sottoclasse deve implementare **tutti i metodi** che la superclasse aveva astratti.
 
 Se la sottoclasse a sua volta **non definisce** i metodi che la superclasse aveva dichiarato astratti, **anche** la **sottoclasse deve essere dichiarata astratta**.
+
+[esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)

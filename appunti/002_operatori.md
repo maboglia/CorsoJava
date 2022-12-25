@@ -122,3 +122,6 @@ Literal|Represents
 `\ddd`|Octal character
 `\xdd`|Hexadecimal character
 `\udddd`|Unicode character
+
+[esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/00_Foundations)
+
