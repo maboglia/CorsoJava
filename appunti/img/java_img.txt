@@ -111,7 +111,7 @@ JEE/02_01-JavaEE7_versioni.jpg
 JEE/02_01-Java EE.jpg
 JEE_Technologies.jpg
 JSP/forward.JPG
-JSP/httpsession.jpg
-JSP/include.jpg
+JSP/httpsession.JPG
+JSP/include.JPG
 JSP/model2.jpg
 JSP/requestdispatcher.JPG
