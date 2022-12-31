@@ -4,11 +4,8 @@ bubble-sort.png
 bubble-sort2.png
 algorithm-flowchart-example2.png
 algo_selection_sort.jpg
-1java-se-lifecycle-5-year-timeline-1024x683-1517328730133.jpg
-2020_UF_Java.jpg
 5steploop2.jpg
 Class-Diagram-Sample.png
-Competitive-Programming-1.jpg
 diagrammi_flusso1.jpg
 diagrammi_flusso2.jpg
 diagrammi_flusso3.jpg
@@ -20,7 +17,6 @@ bicicletta_model.jpeg
 scheda_schedario.jpg
 scheda_schedario_rotante2.jpg
 scheda_schedario_rotante.jpg
-gerarchia1.png
 gerarchia2.png
 gerarchia3.png
 gerarchia4.png
@@ -81,11 +77,6 @@ Language/04_array/array2d.png
 Language/04_array/array-examples.png
 Language/04_array/array-init.png
 Language/04_array/array.png
-library-calls.png
-library-oop.png
-library.png
-MostRepo2-min.png
-MostUsed4-min.png
 mvc_pattern_uml_diagram.jpeg
 MVC.png
 dao_pattern_uml_diagram.jpeg
@@ -115,25 +106,13 @@ UML_ClassDiagram/Class-Diagram-Sample.png
 UML_ClassDiagram/uml-22-diagrams.png
 UML_ClassDiagram/UML Class Diagram.jpg
 UML_ClassDiagram/UML_diagrams_overview.svg.png
-FunctionaInterface_01.png
-FunctionaInterface_02.png
-FunctionaInterface_03.png
-FunctionaInterface_04.png
-FunctionaInterface_05.png
-jax-rs-1.jpg
-jax-rs-2.jpg
-jax-rs-3.jpg
-jax-rs-4.jpg
 JDBC/JDBC.png
 JEE/02_01-JavaEE7_tecnologie.jpg
 JEE/02_01-JavaEE7_versioni.jpg
 JEE/02_01-Java EE.jpg
 JEE_Technologies.jpg
 JSP/forward.JPG
-JSP/httpsession.JPG
-JSP/include.JPG
-JSP/JSP_forward.jpeg
-JSP/JSP_include.jpeg
+JSP/httpsession.jpg
+JSP/include.jpg
 JSP/model2.jpg
 JSP/requestdispatcher.JPG
-JavaFX_Switching_Scenes.png
