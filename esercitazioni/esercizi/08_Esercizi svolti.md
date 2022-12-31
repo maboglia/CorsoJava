@@ -1,7 +1,7 @@
 # Esercizi con proposta di soluzione
 
-
 ## Esercizio  1. 
+
 Si consideri il seguente frammento di codice in linguaggio Java:
 
 ```java
@@ -14,11 +14,15 @@ condizione = false;
 else i++;
 }
 ```
+
 Determinare il valore finale delle variabili condizione e i nei seguenti casi:
+
 1) lista = {4,5,6,4,5};
 2) lista = {4,3,4,4,4};
 3) lista = {4}.
+
 Soluzione
+
 1) i = 4 e condizione = true;
 2) i = 2 e condizione = false;
 3) i = 0 e condizione = true.

@@ -1,7 +1,7 @@
 # Corso Java
 
 ## sito web
-[appunti navigabili](http://www.bogliaccino.it/)
+[bogliaccino.it](http://www.bogliaccino.it/)
 
 ## Appunti, dispense, tutorial
 
@@ -10,7 +10,7 @@
 * [dispense](https://github.com/maboglia/CorsoJavaRisorse)
 
 
-## esempi snippet codice
+## esempi codice Java
 
 * [esempi 01_base](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base)
 * [esempi 02_API_Java](https://github.com/maboglia/CorsoJava/tree/master/esempi/02_API_Java)
@@ -40,4 +40,45 @@
 * [Esercizi OOP](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/06_EserciziOOP.md)
 * [Esercizi eccezioni](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/07_es_eccezioni.md)
 
+
+## giochi
+
+1. Lancia dadi
+2. Pietra-forbici-carta
+3. Tris
+4. sudoku
+5. Wordle
+6. Hang-man
+7. crucigramma
+8. master mind
+9. quiz lingue - dizionario ITA-ENG
+10. Quiz capitali
+11. Guess the number - three numbers
+
+## esercitazioni
+
+1. serie-tv - watch-list
+2. babbi natale
+3. alimenti
+4. crea quiz
+5. biblioteca
+6. biglietteria
+7. cinema multi sala
+8. flex bus
+9. canzoni - cra playlist - jukebox
+10. dizionario ita-eng
+11. agenda
+12. agenzia viaggi
+13. popolazione italiana
+
+## esempi
+
+1. gestionale dipendenti
+2. geometria piana
+3. orchestra strumenti musicali
+4. aula studenti
+5. distributore automatico
+6. banca
+7. blocco note
+8. appuntamento - persona - stanza
 
