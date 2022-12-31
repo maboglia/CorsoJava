@@ -76,20 +76,6 @@ Language/02_costrutti/switch.png
 Language/02_costrutti/The logical flow of an if - else statement.png
 Language/02_costrutti/The logical flow of a while loop.png
 Language/02_costrutti/while.png
-Language/03_Java_API/07_010-17_009.png
-Language/03_Java_API/color-api.png
-Language/03_Java_API/full-api-1.png
-Language/03_Java_API/in-api.png
-Language/03_Java_API/java-api.png
-Language/03_Java_API/math-api.png
-Language/03_Java_API/out-api.png
-Language/03_Java_API/picture-api.png
-Language/03_Java_API/stdaudio-api.png
-Language/03_Java_API/stddraw-api.png
-Language/03_Java_API/stdrandom-api.png
-Language/03_Java_API/stdstats-api.png
-Language/03_Java_API/string-api.png
-Language/03_Java_API/string-ops.png
 Language/04_array/array2d-init.png
 Language/04_array/array2d.png
 Language/04_array/array-examples.png
@@ -119,25 +105,6 @@ programming-languages.jpg
 Programming.png
 Progr_strutt_composizione.gif
 RESTful-Introduction.png
-UML_ClassDiagram/01_esempi/1177698865790_bank-account-dep.PNG
-UML_ClassDiagram/01_esempi/4218693_L.png
-UML_ClassDiagram/01_esempi/97b0bda1.png
-UML_ClassDiagram/01_esempi/ATMMachine-ClassDiagram.JPG
-UML_ClassDiagram/01_esempi/business-use-case-diagram-elements.png
-UML_ClassDiagram/01_esempi/classdiagram2.JPG
-UML_ClassDiagram/01_esempi/Class-Diagram-for-Library-Management-System-800x735.png
-UML_ClassDiagram/01_esempi/classdiagramno3d.gif
-UML_ClassDiagram/01_esempi/gfkWt.png
-UML_ClassDiagram/01_esempi/HQxT9.png
-UML_ClassDiagram/01_esempi/IC315445.jpeg.png
-UML_ClassDiagram/01_esempi/image010.jpg
-UML_ClassDiagram/01_esempi/img_124.jpg
-UML_ClassDiagram/01_esempi/k4RA2.jpg
-UML_ClassDiagram/01_esempi/large_umlClassDiagram.png
-UML_ClassDiagram/01_esempi/LibraryManagementSystem-ClassDiagram.jpeg
-UML_ClassDiagram/01_esempi/trip2.jpg
-UML_ClassDiagram/01_esempi/uml_class_diagram.gif
-UML_ClassDiagram/01_esempi/ZhGoY.png
 UML_ClassDiagram/3-ShapeTree.gif
 UML_ClassDiagram/annotated_Green_screen_shot.png
 UML_ClassDiagram/arrows.gif
