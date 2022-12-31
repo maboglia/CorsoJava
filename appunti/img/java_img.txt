@@ -21,7 +21,6 @@ gerarchia2.png
 gerarchia3.png
 gerarchia4.png
 gerarchia5.png
-History-of-Java.png
 image010.jpg
 Ip5eR.jpg
 java_jcf.gif
