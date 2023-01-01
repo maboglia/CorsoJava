@@ -1,5 +1,5 @@
 /* Programma che mette in evidenza l'aspetto
-   della visibilit‡ (scope) delle variabili */   
+   della visibilit√† (scope) delle variabili */   
 class Nascoste {
   static int x,y; //Def. var. globali
 

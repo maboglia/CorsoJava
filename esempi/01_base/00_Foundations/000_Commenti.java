@@ -1,7 +1,3 @@
-package esempi.week11;
-
-public class Commenti {
-
 	public static void main(String[] args) {
 		//commento su una linea
 		String mioNome = "mauro";
@@ -26,5 +22,3 @@ public class Commenti {
 		System.out.println(mioNome + " è arrivato alla settimana " + numeroSettimana + " in condizioni ... ");
 
 	}
-
-}

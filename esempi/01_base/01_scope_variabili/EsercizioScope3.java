@@ -1,7 +1,3 @@
-/* Che cosa visualizza il programma seguente?
-   Provare ad eseguire il programma su carta e,
-   successivamente, verificare la risposta
-   eseguendo il programma su calcolatore */
 class EsercizioScope3 {
   static int a = 10, b = 15;
   public static void m1 (int a) {

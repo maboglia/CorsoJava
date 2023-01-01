@@ -1,4 +1,3 @@
-
 public class MetodiAusiliari 
 {
 	public static void main(String args[])
@@ -16,9 +15,6 @@ public class MetodiAusiliari
 		modulo = a%b;
 		
 		System.out.println("modulo: "+modulo);
-		
-		
-		
 	}
 	
 	public static void somma(int a, int b)

@@ -1,5 +1,3 @@
-package com.maboglia.banca;
-
 public class E01_Conto {
 
 	/**

@@ -1,6 +1,3 @@
-
-public class Booleani {
-
 	public static void main(String[] args) {
 		
 		//dichiarazione ed inizializzazione
@@ -17,5 +14,3 @@ public class Booleani {
 		
 
 	}
-
-}

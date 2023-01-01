@@ -1,6 +1,3 @@
-
-public class Interi {
-
 	public static void main(String[] args) {
 		
 		int a = 125;
@@ -12,5 +9,3 @@ public class Interi {
 		
 		
 	}
-	
-}

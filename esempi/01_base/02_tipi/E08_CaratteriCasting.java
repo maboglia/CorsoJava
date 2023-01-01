@@ -1,5 +1,3 @@
-package settimana01;
-
 public class CaratteriCasting {
 	
 	public static void main(String[] args) {

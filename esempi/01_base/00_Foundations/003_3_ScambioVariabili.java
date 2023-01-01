@@ -1,9 +1,3 @@
-package esempi.week2;
-
-import java.util.Scanner;
-
-public class ScambioVariabili {
-
 	public static void main(String[] args) {
 		
 		int a, b, temp;
@@ -23,5 +17,3 @@ public class ScambioVariabili {
 		System.out.println("B = " + b);
 
 	}
-
-}

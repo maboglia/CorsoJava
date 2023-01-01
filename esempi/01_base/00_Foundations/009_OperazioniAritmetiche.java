@@ -1,7 +1,3 @@
-package esempi.week1;
-
-public class OperazioniAritmetiche {
-
 	public static void main(String[] args) {
 		
 		int i1 = 5, i2 =10, i3;
@@ -21,7 +17,6 @@ public class OperazioniAritmetiche {
 		i3 = i1 % i2;
 		System.out.println("i1 % i2 = " + i3);
 
-		
 		d3 =- d1;
 		System.out.println(" -d1 = " + d3);
 		d3 = d1 + d2;
@@ -34,9 +29,4 @@ public class OperazioniAritmetiche {
 		System.out.println("d1 / d2 = " + d3);
 		d3 = d1 % d2;
 		System.out.println("d1 % d2 = " + d3);
-		
-		
-
 	}
-
-}

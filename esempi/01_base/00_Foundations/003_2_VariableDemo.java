@@ -1,9 +1,6 @@
 /**
    Dichiarazione e assegnamento di valore a una variavile
 */
-
-public class VariableDemo
-{
    public static void main(String[] args)
    {
       int base = 10; // Dichiara base la inizializza a 10
@@ -23,4 +20,3 @@ public class VariableDemo
       System.out.print("base: ");
       System.out.println(base);      
    }
-}

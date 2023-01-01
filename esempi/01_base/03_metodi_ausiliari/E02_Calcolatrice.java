@@ -1,5 +1,3 @@
-package principale;
-
 import java.util.Scanner;
 
 public class E02_Calcolatrice {

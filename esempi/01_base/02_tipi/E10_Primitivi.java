@@ -1,5 +1,3 @@
-package week1.esempi;
-
 public class Primitivi {
 
 	public static void main(String[] args) {

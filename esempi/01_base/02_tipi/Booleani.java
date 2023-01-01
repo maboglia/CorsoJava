@@ -1,5 +1,3 @@
-package tipi.primitivi;
-
 public class Booleani {
 
 	public static void main(String[] args) {

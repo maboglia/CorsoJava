@@ -1,6 +1,3 @@
-
-public class FloatEq1
-{
    public static void main(String[] args)
    {
       double a, b;
@@ -22,4 +19,3 @@ public class FloatEq1
          System.out.println("a NON è uguale a b");
       }
    }
-}

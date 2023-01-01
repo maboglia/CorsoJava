@@ -1,5 +1,3 @@
-package esempi.week1;
-
 public class Confronti {
 
 	public static void main(String[] args) {

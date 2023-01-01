@@ -1,4 +1,3 @@
-package p001;
 import java.util.Scanner;
 
 public class E03_AreaTriangolo {

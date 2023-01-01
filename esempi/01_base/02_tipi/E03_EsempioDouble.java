@@ -1,4 +1,3 @@
-package settimana02;
 
 public class EsempioDouble {
 

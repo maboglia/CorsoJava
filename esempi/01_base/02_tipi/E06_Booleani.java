@@ -1,5 +1,3 @@
-package p001;
-
 public class Booleani {
 
 	//dichiarazione di variabile statica (di classe), non la inizializzo!

@@ -1,5 +1,3 @@
-package it.maboglia.tipi;
-
 import java.util.Scanner;
 
 public class E04_GetInput {

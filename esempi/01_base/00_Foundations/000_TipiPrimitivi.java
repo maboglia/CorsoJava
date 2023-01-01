@@ -1,5 +1,3 @@
-public class ResocontoTipi {
-
     public static void main(String[] args) {
 
         /* I tipi primitivi in Java sono 8 */
@@ -30,4 +28,3 @@ public class ResocontoTipi {
         System.out.println(c);
         System.out.println(bo);
     }
-}

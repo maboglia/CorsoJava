@@ -1,5 +1,3 @@
-package tipi.primitivi;
-
 public class Reali {
 
 	

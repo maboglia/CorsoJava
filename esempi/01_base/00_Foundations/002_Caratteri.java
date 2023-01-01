@@ -1,5 +1,3 @@
-public class Caratteri {
-
     public static void main(String[] args) {
 
         char c1 = '1';
@@ -25,4 +23,3 @@ public class Caratteri {
 
 
     }
-}

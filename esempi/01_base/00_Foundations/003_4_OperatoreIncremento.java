@@ -1,5 +1,3 @@
-package esempi.week1;
-
 class OperatoreIncremento{
 	public static void main(String args[]){
 		int a = 1, b;

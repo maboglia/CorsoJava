@@ -1,7 +1,3 @@
-/* Che cosa visualizza il programma seguente?
-   Provare ad eseguire il programma su carta e,
-   successivamente, verificare la risposta
-   eseguendo il programma su calcolatore */
 class EsercizioScope1 {
 
   static int x, y;

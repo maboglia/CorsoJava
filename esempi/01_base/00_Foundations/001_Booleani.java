@@ -1,5 +1,4 @@
 public class Booleani {
-
     //variabile esterna al metodo main, quindi statica...
     static boolean b3;
 
@@ -22,11 +21,5 @@ public class Booleani {
         String sBool = "true";
         boolean parsed = Boolean.parseBoolean(sBool);
         System.out.println(parsed);
-
-
-
     }
-
-
-
 }
