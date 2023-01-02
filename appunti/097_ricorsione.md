@@ -4,7 +4,9 @@ La ricorsione è una tecnica potente di risoluzione di problemi di calcolo.
 
 Consiste nel ridurre la risoluzione di un problema di calcolo su dati di ingresso di una certa grandezza alla risoluzione dello stesso problema su dati di grandezza più piccola.
 
-Definire un algoritmo ricorsivo richiede di:
+---
+
+## Definire un algoritmo ricorsivo richiede di:
 
 Definire una opportuna nozione di "grandezza" dei dati di ingresso.
 
@@ -12,6 +14,7 @@ Identificare una grandezza dei dati di ingresso sufficientemente piccola da rend
 
 Per dati più grandi, ridurre il problema a un problema più piccolo, la cui soluzione permetta di risolvere facilmente il problema iniziale (passo ricorsivo).
 
+---
 
 ## Esempio
 
@@ -27,8 +30,10 @@ Per dati più grandi, ridurre il problema a un problema più piccolo, la cui sol
 
 La soluzione al problema originario sarà facilmente x+n. Diremo che il problema più piccolo (somma dei primi n-1 numeri) viene risolto "ricorsivamente".
 
+---
 
 Questo algoritmo può essere facilmente tradotto in Java come segue:
+
 ```java
 public static int sommaNumeri(int n) {
     if (n==0) return 0;       // passo base

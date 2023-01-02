@@ -7,6 +7,8 @@ In **Spring/Spring-Boot**, il database **SQL** può essere inizializzato in modi
 * `spring.jpa.generate-ddl` (boolean) attiva e disattiva la funzionalità ed è indipendente dal fornitore di DB.
 * `spring.jpa.hibernate.ddl-auto` (enum) è una funzionalità di Hibernate che controlla il comportamento in modo più dettagliato. Vedi sotto per maggiori dettagli.
 
+---
+
 I valori della proprietà di Hibernate sono: `create`, `update`, `create-drop`, `validate` e `none`:
 
 * `create` – Hibernate prima elimina le tabelle esistenti, quindi crea nuove tabelle
@@ -26,6 +28,8 @@ I valori `create`, `create-drop`, `validate` e `update` influenzano sostanzialme
 Ad esempio, l'operazione di `update` interrogherà l'API del driver JDBC per ottenere i metadati del database e quindi Hibernate confronterà il modello a oggetti che crea in base alla lettura delle classi annotate o delle mappature XML HBM e tenterà di regolare lo schema al volo.
 
 L'operazione di `update`, ad esempio, tenterà di aggiungere nuove colonne, vincoli e così via, ma non rimuoverà mai una colonna o un vincolo che potrebbe esistere in precedenza ma che non fa più parte del modello a oggetti di un'esecuzione precedente.
+
+---
 
 In genere negli scenari di **test case**, probabilmente utilizzerai `create-drop` in modo da creare il tuo schema, il tuo test case aggiunge alcuni dati fittizi, esegui i tuoi test e quindi durante la pulizia del test case, gli oggetti dello schema vengono eliminati, lasciando un banca dati vuota.
 

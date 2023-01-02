@@ -1,4 +1,21 @@
-# RequestDispatcher
+# LE SERVLET
+
+Una Servlet è emplicemente, un programma scritto in Java e residente su un server, in
+grado di gestire le richieste generate da uno o più client, attraverso uno scambio di
+messaggi tra il server ed i client stessi che hanno effettuato la richiesta.
+
+Girano all'interno di un Application Server e possono essere considerate delle classi
+che estendono le funzionalità del server.
+
+---
+
+![](./img/JSP/httpsession.JPG)
+
+---
+
+
+
+## RequestDispatcher
 
 * L'approccio servlet-centric prevede di utilizzare le pagine JSP solo per la presentazione e delegare il controllo ad una o ad un gruppo di servlet
 * Le servlet quindi
@@ -15,10 +32,17 @@ l'applicazione ha un solo punto di accesso e questa
 servlet ha i controllo totale sul flusso dell'applicazione.
 
 ---
+
+![](./img/JSP/requestdispatcher.JPG)
+
+---
+
 ## Passaggio dati fra servlet-JSP:
+
 * I Java Data Bean istanziati dalla servlet devono
 essere passati alla JSP prima di trasferire ad essa
 il controllo. 
+
 * A tal fine esiste una coppia di metodi
 della classe HttpServletRequest che permettono
 di inserire/recuperare in/da request (oggetto
@@ -64,7 +88,17 @@ per trasferire MOMENTANEAMENTE il controllo alla JSP.
 
 Non è un browser redirect e nemmeno una
 terminazione del metodo doGet o doPost della servlet: è
-una semplice chiamata di metodo. 
-Perciò tutto il codice eventualmente presente dopo rd.forward(request, response) verrà
+una semplice chiamata di metodo.
+
+Perciò tutto il codice eventualmente presente dopo `rd.forward(request, response)` verrà
 eseguito dopo che la JSP ha finito la sua esecuzione
 
+---
+
+![](./img/JSP/JSP_include.jpeg)
+
+---
+
+![](./img/JSP/JSP_forward.jpeg)
+
+---

@@ -1,9 +1,5 @@
 # Spring, Hibernate, REST
 
-* MVC + Database
-* Java RESTful services
-* JAX-RS
-* JAXB
 * Introduzione al framework
 * Spring Boot, MVC
 * IOC - Inversion Of Control
