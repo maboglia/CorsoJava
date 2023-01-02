@@ -18,7 +18,6 @@ Puoi anche usare `@Autowired` su proprietà private, come mostrato di seguito. (
         private int type;
     }
 ```
- 
 
 Quando usi `@Autowired` sui metodi setter, Spring prova a eseguire l'autowiring per tipo sul metodo. Stai dicendo a Spring che dovrebbe iniziare questa proprietà usando il metodo setter in cui puoi aggiungere il tuo codice personalizzato, come inizializzare qualsiasi altra proprietà con questa proprietà.
 
@@ -86,6 +85,7 @@ Una soluzione a questo problema è l'uso dell'annotazione `@Qualifier`.
       ...
     }
 ```
+
 Con l'annotazione `@Qualifier` aggiunta, Spring ora saprà quale bean autowire dove beanB2 è il nome di BeanB2.
 
 ---
@@ -95,6 +95,7 @@ Con l'annotazione `@Qualifier` aggiunta, Spring ora saprà quale bean autowire d
 Questa annotazione viene utilizzata su classi che definiscono bean. `@Configuration `è un analogo per il file di configurazione XML - è la configurazione che utilizza la classe Java. La classe Java annotata con `@Configuration` è una configurazione a sé stante e avrà metodi per creare un'istanza e configurare le dipendenze.
 
 Ecco un esempio:
+
 ```java
     @Configuration
     public class DataConfig{ 
