@@ -1,133 +1,56 @@
-JDBC
-------
+L'interfaccia ResultSet
+-------------------------
 
-CallableStatement
--------------------
+* L'interfaccia **java.sql.ResultSet** comprende i metodi indispensabili per scorrere l'insieme dei risultati restituiti da una query SQL.
+* Il metodo **next()** scorre in avanti tale insieme.
 
-Richiamare le procedure memorizzate con `CallableStatement` 
+### in pratica
 
-L'interfaccia `CallableStatement` estende `PreparedStatement`, e permette di richiamare delle procedure memorizzate all'interno del database.
-
-Una query, con `CallableStatement`, non deve essere specificata in linea all'interno del codice Java, ma può essere memorizzata perennemente all'interno della base di dati, pronta ad essere sfruttata più e più volte, in tutte le parti di tutte le applicazioni realizzate.
-
-Si crei un database inizialmente vuoto, quindi si inserisca al suo interno una tabella, nominata Utenti. La struttura è riportata di seguito:
-
-*   ID, di tipo Contatore, da impiegare come chiave primaria.
-*   Nome, di tipo Testo.
-*   Cognome, di tipo Testo.
-*   Email, di tipo Testo.
-*   AnnoNascita, di tipo Numerico.
-
-Si popoli la tabella con qualche record arbitrario
+* Inizialmente, il cursore del corrente oggetto ResultSet sarà posizionato prima del primo dei record restituiti.
+* In questa condizione, non è possibile svolgere operazioni di analisi dei risultati: nessun record è puntato dal cursore corrente.
+* Una prima chiamata a next() farà in modo che il cursore venga spostato sul primo record restituito dalla query.
+* Ogni volta che un record è puntato dal cursore, diventa possibile estrarne i contenuti.
+* Quando non ci sono più record nel ResultSet, il metodo next() ritorna **false**
+* Non conoscendo il numero di righe restituite dal db, un ResultSet solitamente viene passato in rassegna con un codice del tipo:
 
 ```java
-
-import java.sql.*;
-public class JDBCTest6 {
-public static void main(String[] args) {
-// Nome del driver.
-String DRIVER = "sun.jdbc.odbc.JdbcOdbcDriver";
-// Indirizzo del database.
-String DB_URL = "jdbc:odbc:javatest2";
-
-// Preparo il riferimento alla connessione.
-Connection connection = null;
-try {
-// Apro la connesione verso il database.
-connection = DriverManager.getConnection(DB_URL);
-// Mi preparo a richiamare la procedura memorizzata.
-CallableStatement statement = connection.prepareCall(
-"{call NotNullMail}"
-);
-// Interrogo il DBMS.
-ResultSet resultset = statement.executeQuery();
-// Scorro e mostro i risultati.
-while (resultset.next()) {
-int id = resultset.getInt(1);
-String nome = resultset.getString(2);
-String cognome = resultset.getString(3);
-String email = resultset.getString(4);
-int annoNascita = resultset.getInt(5);
-System.out.println("Lette informazioni...");
-System.out.println("ID: " + id);
-System.out.println("Nome: " + nome);
-System.out.println("Cognome: " + cognome);
-System.out.println("Email: " + email);
-System.out.println("Anno di nascita: " + annoNascita);
-System.out.println();
+while (resultSet.next()) { 
+ // Esamina il record corrente. 
 }
-} catch (SQLException e) {
-// In caso di errore...
-} finally {
-if (connection != null) {
-try {
-connection.close();
-} catch (Exception e) {
-}
-}
-}
-}
-}
-
 ```
 
-```java
+Un ciclo di questo tipo termina non appena tutti i record restituiti dalla query eseguita sono stati passati in rassegna.
 
-import java.sql.*;
-public class JDBCTest7 {
-public static void main(String[] args) {
-// Nome del driver.
-String DRIVER = "sun.jdbc.odbc.JdbcOdbcDriver";
-// Indirizzo del database.
-String DB_URL = "jdbc:odbc:javatest2";
-try {
-// Carico il driver.
-Class.forName(DRIVER);
-} catch (ClassNotFoundException e1) {
-// Il driver non può essere caricato.
-System.out.println("Driver non trovato...");
-System.exit(1);
-}
-// Preparo il riferimento alla connessione.
-Connection connection = null;
-try {
-// Apro la connesione verso il database.
-connection = DriverManager.getConnection(DB_URL);
-// Mi preparo a richiamare la procedura memorizzata.
-CallableStatement statement = connection.prepareCall(
-"{call AnnoNascita(?,?)}"
-);
-// Imposto i parametri.
-statement.setInt(1, 1960);
-statement.setInt(2, 1980);
-// Interrogo il DBMS.
-ResultSet resultset = statement.executeQuery();
-// Scorro e mostro i risultati.
-while (resultset.next()) {
-int id = resultset.getInt(1);
-String nome = resultset.getString(2);
-String cognome = resultset.getString(3);
-String email = resultset.getString(4);
-int annoNascita = resultset.getInt(5);
-System.out.println("Lette informazioni...");
-System.out.println("ID: " + id);
-System.out.println("Nome: " + nome);
-System.out.println("Cognome: " + cognome);
-System.out.println("Email: " + email);
-System.out.println("Anno di nascita: " + annoNascita);
-System.out.println();
-}
-} catch (SQLException e) {
-// In caso di errore...
-} finally {
-if (connection != null) {
-try {
-connection.close();
-} catch (Exception e) {
-}
-}
-}
-}
-}
+---
 
-```
+### Leggere i valori del record corrente
+
+Quando un record è correttamente puntato dal cursore, è possibile esaminare i suoi campi attraverso dei metodi che hanno tutti la forma:
+`getTipo(int indiceColonna)`
+
+Ad esempio, si supponga di voler ottenere il contenuto del primo campo del record corrente, sotto forma di **stringa**:
+
+`String stringa = resultSet.getString(1);`
+
+Se si conoscono i **nomi** associati ai singoli campi del record, è possibile usare la variante: `getTipo(String nomeColonna)`
+
+Ad esempio: `String nome = resultSet.getString("Nome");`
+
+---
+
+### I metodi per leggere
+
+Il seguente elenco riporta i metodi di questa famiglia più frequentemente utilizzati:
+
+* `getBoolean()`  Restituisce il campo specificato sotto forma di **boolean**.
+* `getByte()`  Restituisce il campo specificato sotto forma di **byte**.
+* `getDate()`  Restituisce il campo specificato sotto forma di **oggetto java.util.Date**.
+* `getDouble()`  Restituisce il campo specificato sotto forma di **double**.
+* `getFloat()`  Restituisce il campo specificato sotto forma di **float**.
+* `getInt()`  Restituisce il campo specificato sotto forma di **int**.
+* `getLong()`  Restituisce il campo specificato sotto forma di **long**.
+* `getShort()`  Restituisce il campo specificato sotto forma di **short**.
+* `getString()`  Restituisce il campo specificato sotto forma di **oggetto java.lang.String**.
+
+---
+

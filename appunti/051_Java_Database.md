@@ -1,3 +1,35 @@
+L'interfaccia Statement
+-------------------------
+
+Il linguaggio SQL comprende istruzioni utili per interagire con una base di dati.
+
+In particolare, mediante SQL è possibile compiere tre principali operazioni:
+
+1. Eseguire selezioni e ricerche all'interno di una o più tabelle, con l'istruzione SELECT.
+2. Modificare il contenuto di una tabella, con istruzioni come DELETE, INSERT e UPDATE.
+3. Modificare la struttura del database, ad esempio con CREATE TABLE.
+
+---
+
+L'interfaccia `java.sql.Statement` comprende i metodi necessari per fornire al DBMS le istruzioni SQL appena descritte:
+
+* `executeQuery()` commissiona le istruzioni di tipo SELECT.
+* `executeUpdate()` commissiona le istruzioni di aggiornamento delle tabelle (DELETE, INSERT e UPDATE) e della base di dati (CREATE TABLE, INDEX e così via).
+
+---
+
+## metodo executeQuery()
+
+* `executeQuery()` restituisce sempre un oggetto che implementa l'interfaccia **java.sql.ResultSet**. Grazie ad essa è possibile prendere in esame i risultati restituiti dall'istruzione SQL di ricerca commissionata ad DBMS.
+
+## metodo executeUpdate()
+
+* `executeUpdate()`, non ha risultati da restituire.
+* ritorna un **intero** che riporta il numero delle righe coinvolte dall'esecuzione di istruzioni di tipo DELETE, INSERT e UPDATE.
+* dove non c'è nulla da restituire, il valore di ritorno sarà 0 (zero).
+
+---
+
 PreparedStatement
 -------------------
 
@@ -50,80 +82,99 @@ L'esempio del paragrafo precedente può allora essere riscritto alla seguente ma
 
 ```java
 
-
-import java.io.*;
-import java.sql.*;
-public class JDBCTest5 {
-// Nome del driver.
-private static final String DRIVER = "com.mysql.jdbc.Driver";
-// Indirizzo del database.
-private static final String DB_URL = "jdbc:mysql://localhost:3306/javatest";
 // Questo metodo aggiunge un nuovo record alla tabella nel DB.
-private static boolean aggiungiRecord(String nome, String cognome,
-String indirizzo) {
-// Preparo il riferimento alla connessione.
-Connection connection = null;
-try {
-// Apro la connesione verso il database.
-connection = DriverManager.getConnection(DB_URL);
-// Preparo lo Statement per interagire con il database.
-PreparedStatement statement = connection.prepareStatement(
-"INSERT INTO Persone ( " +
-" Nome, Cognome, Indirizzo " +
-") VALUES ( " +
-" ?, ?, ? " +
-")"
-);
-// Imposto i parametri.
-statement.setString(1, nome);
-statement.setString(2, cognome);
-statement.setString(3, indirizzo);
-// Eseguo l'aggiornamento.
-statement.executeUpdate();
-return true;
-} catch (SQLException e) {
-// In caso di errore...
-return false;
-} finally {
-if (connection != null) {
-try {
-connection.close();
-} catch (Exception e) {
-}
-}
-}
-}
-public static void main(String[] args) throws IOException {
+private static boolean aggiungiRecord(String nome, String cognome, String indirizzo) { // Preparo il riferimento alla connessione.
+    Connection connection = null;
+    try {
+    // Apro la connessione verso il database.
+    connection = DriverManager.getConnection(DB_URL);
+    // Preparo lo Statement per interagire con il database.
+    PreparedStatement statement = connection.prepareStatement(
+    "INSERT INTO Persone ( " +
+    " Nome, Cognome, Indirizzo " +
+    ") VALUES ( " +
+    " ?, ?, ? " +
+    ")"
+    );
+    // Imposto i parametri.
+    statement.setString(1, nome);
+    statement.setString(2, cognome);
+    statement.setString(3, indirizzo);
+    // Eseguo l'aggiornamento.
+    statement.executeUpdate();
+    return true;
+} //...
 
-// Interagisco con l'utente.
-BufferedReader reader = new BufferedReader(
-new InputStreamReader(System.in)
-);
-while (true) {
-System.out.print("Nome: ");
-String nome = reader.readLine();
-System.out.print("Cognome: ");
-String cognome = reader.readLine();
-System.out.print("Indirizzo: ");
-String indirizzo = reader.readLine();
-System.out.println();
-if (aggiungiRecord(nome, cognome, indirizzo)) {
-System.out.println("Record aggiunto!");
-} else {
-System.out.println("Errore!");
+```
+
+CallableStatement
+-------------------
+
+Richiamare le procedure memorizzate con `CallableStatement`
+
+L'interfaccia `CallableStatement` estende `PreparedStatement`, e permette di richiamare delle procedure memorizzate all'interno del database.
+
+Una query, con `CallableStatement`, non deve essere specificata in linea all'interno del codice Java, ma può essere memorizzata perennemente all'interno della base di dati, pronta ad essere sfruttata più e più volte, in tutte le parti di tutte le applicazioni realizzate.
+
+Si crei un database inizialmente vuoto, quindi si inserisca al suo interno una tabella, nominata Utenti. La struttura è riportata di seguito:
+
+* ID, di tipo Contatore, da impiegare come chiave primaria.
+* Nome, di tipo Testo.
+* Cognome, di tipo Testo.
+* Email, di tipo Testo.
+* AnnoNascita, di tipo Numerico.
+
+Si popoli la tabella con qualche record arbitrario
+
+```java
+
+// Mi preparo a richiamare la procedura memorizzata.
+CallableStatement statement = connection.prepareCall( "{call NotNullMail}" );
+// Interrogo il DBMS.
+ResultSet resultset = statement.executeQuery();
+// Scorro e mostro i risultati.
+while (resultset.next()) {
+    int id = resultset.getInt(1);
+    String nome = resultset.getString(2);
+    String cognome = resultset.getString(3);
+    String email = resultset.getString(4);
+    int annoNascita = resultset.getInt(5);
+    System.out.println("Lette informazioni...");
+    System.out.println("ID: " + id);
+    System.out.println("Nome: " + nome);
+    System.out.println("Cognome: " + cognome);
+    System.out.println("Email: " + email);
+    System.out.println("Anno di nascita: " + annoNascita);
+    System.out.println();
 }
-System.out.println();
-String ris;
-do {
-System.out.print("Vuoi aggiungerne un altro (si/no)? ");
-ris = reader.readLine();
-} while (!ris.equals("si") && !ris.equals("no"));
-if (ris.equals("no")) {
-break;
+
+```
+
+```java
+
+// Mi preparo a richiamare la procedura memorizzata.
+CallableStatement statement = connection.prepareCall( "{call AnnoNascita(?,?)}" );
+// Imposto i parametri.
+statement.setInt(1, 1969);
+statement.setInt(2, 1989);
+// Interrogo il DBMS.
+ResultSet resultset = statement.executeQuery();
+// Scorro e mostro i risultati.
+while (resultset.next()) {
+    int id = resultset.getInt(1);
+    String nome = resultset.getString(2);
+    String cognome = resultset.getString(3);
+    String email = resultset.getString(4);
+    int annoNascita = resultset.getInt(5);
+    System.out.println("Lette informazioni...");
+    System.out.println("ID: " + id);
+    System.out.println("Nome: " + nome);
+    System.out.println("Cognome: " + cognome);
+    System.out.println("Email: " + email);
+    System.out.println("Anno di nascita: " + annoNascita);
+    System.out.println();
 }
-System.out.println();
-}
-}
-}
+
+//...
 
 ```
