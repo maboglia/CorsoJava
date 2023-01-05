@@ -2,208 +2,144 @@
 
 Logica imperativa / procedurale in Java, applicazione del principio divide et impera: suddividere le istruzioni complesse in istruzioni elementari creando metodi privati statici di ausilio al metodo principale.
 
+---
+
+```java
+
+public class MetodiAusiliari {
+	public static void main(String args[])
+	{
+		int a= 7;
+		int b=3;
+		int differenza, modulo= 0;
+		
+		somma(a, b);
+				
+		differenza = a-b;
+		
+		System.out.println("differenza: "+differenza);
+		
+		modulo = a%b;
+		
+		System.out.println("modulo: "+modulo);
+	}
+	
+	public static void somma(int a, int b)
+	{
+		int somma=0;
+		
+		somma= a+b;
+		
+		System.out.println("somma: "+somma);
+	}
+}
+
+```
+---
+
+---
+
 ```java
 import java.util.Scanner;
-import java.util.*;
 
-public class EsempioMetodiAusiliari {
+public class GetInput {
+
+    public static void main(String[] args){
+
+        String numeroUno = getInput("Inserisci primo numero");
+        String numeroDue = getInput("Inserisci secondo numero");
+
+        double d1 = Double.parseDouble(numeroUno);
+        double d2 = Double.parseDouble(numeroDue);
+
+        usaMatematica nuovaOperazione = new usaMatematica(d1, d2);
 
 
-	  private static Scanner lettore = creaScanner();
-	  
-	  private final static String ERRORE_FORMATO = "Attenzione: il dato inserito non e' nel formato corretto";
-	  private final static String ERRORE_MINIMO= "Attenzione: e' richiesto un valore maggiore o uguale a ";
-	  private final static String ERRORE_STRINGA_VUOTA= "Attenzione: non hai inserito alcun carattere";
-	  private final static String ERRORE_MASSIMO= "Attenzione: e' richiesto un valore minore o uguale a ";
-	  private final static String MESSAGGIO_AMMISSIBILI= "Attenzione: i caratteri ammissibili sono: ";
+        System.out.println(nuovaOperazione.somma());
+
+    }
+
+    public static String getInput(String domanda){
+
+        System.out.println(domanda);
+        Scanner stringa = new Scanner(System.in);
+        String miaStringa = stringa.next();
+        
+        return miaStringa;
+
+    }
 
 
-	public static void main (String[] args){
-		//dal main richiama i metodi ausiliari: tutti private e static		
-		
-	}	
-	
-	public void saluta(){
-		
-		System.out.println("ciao");
-	}
-	
-	private static String salutaPlus(String messaggio){
-		
-		System.out.println("ciao" +  messaggio);
-		return "fino a qui tutto bene!";
-	}
-	
-	private static static void salutaStatico(){
-		System.out.println("ciao");
-		
-	}
+}
+```
+
+---
+
+## esempio
+
+```java
+import java.util.Scanner;
+
+public class SimpleCalcolatrice {
+
+ public static void main(String[] args) {
+  
+  //numeroUno vale .....
+  double numeroUno = getInput("Inserisci il primo numero");//dopo l'istruzione
+  
+  /*
+   * commenti su più linee
+   * */
+  double numeroDue = getInput("Inserisci il secondo numero");
+  
+  double somma = numeroUno + numeroDue;
+  
+  System.out.println("La somma di " + numeroUno +" e " + numeroDue + " è " + somma );
+
+ }
+ 
+ /**
+  * Mio metodo per catturare l'input dell'utente
+  * @param domanda String contenente la domanda da inoltrare all'utente
+  * @return un double che rappresenta l'input utente
+  */
+ private static double getInput(String domanda) {
+  
+  Scanner input = new Scanner(System.in);
+  
+  int i = domanda.length();
+  System.out.println();
+  System.out.println(domanda);
+
+  System.out.println();
+  
+  for (int j = 0; j < i; j++) {
+   System.out.print(j);
+  }
+  
+  System.out.println();
+
+  
+  /*
+  String  miaStringa= input.next();
+  double mioDouble = Double.parseDouble(miaStringa);
+  */
+  double mioDouble = input.nextDouble();
+  return mioDouble;
+  
+ }
+
+
  
  
-	  private static Scanner creaScanner ()
-	  {
-	   Scanner creato = new Scanner(System.in);
-	   creato.useDelimiter(System.getProperty("line.separator"));
-	   return creato;
-	  }
-	  
-	  private static String leggiStringa (String messaggio)
-	  {
-		  System.out.print(messaggio);
-		  return lettore.next();
-	  }
-	  
-	  private static String leggiStringaNonVuota(String messaggio)
-	  {
-	   boolean finito=false;
-	   String lettura = null;
-	   do
-	   {
-		 lettura = leggiStringa(messaggio);
-		 lettura = lettura.trim();
-		 if (lettura.length() > 0)
-		  finito=true;
-		 else
-		  System.out.println(ERRORE_STRINGA_VUOTA);
-	   } while (!finito);
-	   
-	   return lettura;
-	  }
-	  
-	  private static char leggiChar (String messaggio)
-	  {
-	   boolean finito = false;
-	   char valoreLetto = '\0';
-	   do
-	    {
-	     System.out.print(messaggio);
-	     String lettura = lettore.next();
-	     if (lettura.length() > 0)
-	      {
-	       valoreLetto = lettura.charAt(0);
-	       finito = true;
-	      }
-	     else
-	      {
-	       System.out.println(ERRORE_STRINGA_VUOTA);
-	      }
-	    } while (!finito);
-	   return valoreLetto;
-	  }
-	  
-	  private static char leggiUpperChar (String messaggio, String ammissibili)
-	  {
-	   boolean finito = false;
-	   char valoreLetto = ' ';
-	   do
-	   {
-	    valoreLetto = leggiChar(messaggio);
-	    valoreLetto = Character.toUpperCase(valoreLetto);
-	    if (ammissibili.indexOf(valoreLetto) != -1)
-		 finito  = true;
-	    else
-	     System.out.println(MESSAGGIO_AMMISSIBILI + ammissibili);
-	   } while (!finito);
-	   return valoreLetto;
-	  }
-	  
-	  
-	  private static int leggiIntero (String messaggio)
-	  {
-	   boolean finito = false;
-	   int valoreLetto = 0;
-	   do
-	    {
-	     System.out.print(messaggio);
-	     if (lettore.hasNextInt())
-	      {
-	       valoreLetto = lettore.nextInt();
-	       finito = true;
-	      }
-	     else
-	      {
-	       System.out.println(ERRORE_FORMATO);
-	       String daButtare = lettore.next();
-	      }
-	    } while (!finito);
-	   return valoreLetto;
-	  }
+}
+```
 
-	  private static int leggiInteroConMinimo(String messaggio, int minimo)
-	  {
-	   boolean finito = false;
-	   int valoreLetto = 0;
-	   do
-	    {
-	     valoreLetto = leggiIntero(messaggio);
-	     if (valoreLetto >= minimo)
-	      finito = true;
-	     else
-	      System.out.println(ERRORE_MINIMO + minimo);
-	    } while (!finito);
-	     
-	   return valoreLetto;
-	  }
+---
 
-	  private static int leggiIntero(String messaggio, int minimo, int massimo)
-	  {
-	   boolean finito = false;
-	   int valoreLetto = 0;
-	   do
-	    {
-	     valoreLetto = leggiIntero(messaggio);
-	     if (valoreLetto >= minimo && valoreLetto<= massimo)
-	      finito = true;
-	     else
-	      if (valoreLetto < minimo)
-	         System.out.println(ERRORE_MINIMO + minimo);
-	      else
-	    	 System.out.println(ERRORE_MASSIMO + massimo); 
-	    } while (!finito);
-	     
-	   return valoreLetto;
-	  }
+## esempio
 
-	  
-	  private static double leggiDouble (String messaggio)
-	  {
-	   boolean finito = false;
-	   double valoreLetto = 0;
-	   do
-	    {
-	     System.out.print(messaggio);
-	     if (lettore.hasNextDouble())
-	      {
-	       valoreLetto = lettore.nextDouble();
-	       finito = true;
-	      }
-	     else
-	      {
-	       System.out.println(ERRORE_FORMATO);
-	       String daButtare = lettore.next();
-	      }
-	    } while (!finito);
-	   return valoreLetto;
-	  }
-	 
-	  private static double leggiDoubleConMinimo (String messaggio, double minimo)
-	  {
-	   boolean finito = false;
-	   double valoreLetto = 0;
-	   do
-	    {
-	     valoreLetto = leggiDouble(messaggio);
-	     if (valoreLetto >= minimo)
-	      finito = true;
-	     else
-	      System.out.println(ERRORE_MINIMO + minimo);
-	    } while (!finito);
-	     
-	   return valoreLetto;
-	  }
-
-	 
-
+```java
 		/*TuttiUguali
 		* 			
 		* */
@@ -221,20 +157,13 @@ public class EsempioMetodiAusiliari {
 
 		}
 			
+```
 
-		/*Concatena
-			*  * 
-			* */
-		private static void concatena{
-			Scanner input = new Scanner ( System . in );
-			System . out . println ( " Inserisci tre parole : " );
-			String s1 = input . next ();
-			String s2 = input . next ();
-			String s3 = input . next ();
-			String ris = concatena ( concatena ( s1 , s2 ) , s3 );
-			System . out . println ( ris );
-		}
-	
+---
+
+## esempio ripetitore ripete una stringa str per num volte
+
+```java 
 		/**
 		 * ripetitore ripete una stringa str per num volte
 		 * @param str stringa da ripetere
@@ -247,7 +176,13 @@ public class EsempioMetodiAusiliari {
 			for ( int i =0; i < num ; i ++)
 				System . out . println ( str );
 		}
+```
 
+---
+
+## esempio uguali
+
+```java
 		/**
 		 * 
 		 * @param x
@@ -258,7 +193,13 @@ public class EsempioMetodiAusiliari {
 		private static boolean uguali ( int x , int y , int z ) {
 			return ( x == y && y == z );
 		}
-		
+```
+
+---
+
+## esempio genera
+
+```java
 		/**
 		 * 
 		 * @return double
@@ -268,7 +209,13 @@ public class EsempioMetodiAusiliari {
 			if (r >=0.5) r -=0.5;
 			return r ;
 			}
+```
 
+---
+
+## esempio concatena
+
+```java
 		/**
 		 * concatena
 		 * @param str1
@@ -280,5 +227,59 @@ public class EsempioMetodiAusiliari {
 			}
 
 
+```
+
+---
+
+## esempio concatena con Scanner
+
+```java
+  /*Concatena
+   *  * 
+   * */
+  private static void concatena{
+   Scanner input = new Scanner ( System . in );
+   System . out . println ( " Inserisci tre parole : " );
+   String s1 = input . next ();
+   String s2 = input . next ();
+   String s3 = input . next ();
+   String ris = concatena ( concatena ( s1 , s2 ) , s3 );
+   System . out . println ( ris );
+  }
+```
+
+---
+
+## esempio Programma che legge due numeri interi e ne stampa la somma
+
+```java
+/* Programma che legge due numeri interi e ne
+   stampa la somma */
+class Ingresso {
+
+  static int leggiIntero() {
+    byte[] b = new byte[9];
+    int res = 0;
+
+    try {
+      System.in.read(b);
+    } catch (Exception e) {}
+    for (int i = 0; i < b.length; i++)
+      if (b[i] >= '0' && b[i] <= '9')
+        res = res * 10 + b[i] - '0';
+      else
+        break;
+    return res;
+  }
+
+  public static void main (String[] args) {
+    int x,y;
+    System.out.print("Inserisci un numero intero: ");
+    y = leggiIntero();
+    System.out.print("Inserisci un numero intero: ");
+    x = leggiIntero();
+    System.out.println(x + y);
+  }
 }
+
 ```

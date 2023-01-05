@@ -1,4 +1,5 @@
-## Costruttori e proprietà della classe String
+# Costruttori e proprietà della classe String
+
 
 ```java
 class CostruttoriStringa{
@@ -32,6 +33,7 @@ class CostruttoriStringa{
 }
 
 ```
+
 ## Utilizzo della classe StringBuilder
 
 ```java

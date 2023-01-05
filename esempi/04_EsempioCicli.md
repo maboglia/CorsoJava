@@ -90,3 +90,29 @@ class ProvaReturn {
 	}
 }
 ```
+
+---
+
+## Utilizzo del ciclo for
+
+```java
+class ForEsempio{
+ public static void main(String args[]){
+  int i;
+  for(i = 0; i < 5; i++) System.out.println("i vale " + i);
+ }
+}
+```
+
+---
+
+## Utilizzo dell'operatore decremento
+
+```java
+class ForDecremento{
+ public static void main(String args[]){
+  int i;
+  for(i = 10; i > 0;i --) System.out.println("i vale ." + i);
+ }
+}
+```

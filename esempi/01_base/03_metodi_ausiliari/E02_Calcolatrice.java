@@ -2,15 +2,7 @@ import java.util.Scanner;
 
 public class E02_Calcolatrice {
 
-	
-
-
-    //stato interno
-    //ho dichiarato una variabile di tipo intero
-    //con l'operatore = ho assegnato alla var il valore 10
-
     public static void main(String[] arguments) {
-
 
         Scanner mioScanner = new Scanner(System.in);
 
@@ -19,20 +11,19 @@ public class E02_Calcolatrice {
         int valore1 = mioScanner.nextInt();
         int valore2 = mioScanner.nextInt();
 
-        int somma = somma(valore1, valore2);
+        int addizione = addizione(valore1, valore2);
         int sottrazione = sottrazione(valore1, valore2);
         int moltiplicazione = moltiplicazione(valore1, valore2);
         double divisione = divisione(valore1, valore2);
 
-
         System.out.println("---------------------------------");
-        System.out.println("valori inseriti: ");
+        System.out.println("Dati i valori inseriti: ");
         System.out.print(valore1);
-        System.out.print (" ");
+        System.out.print (" e ");
         System.out.print(valore2);
         System.out.println("---------------------------------");
-        System.out.println(somma);
-        System.out.println("L'addizione  è = " + somma);
+        System.out.println(addizione);
+        System.out.println("L'addizione  è = " + addizione);
         System.out.println("---------------------------------");
         System.out.println("la  sottrazione è: ");
         System.out.println(sottrazione);
@@ -43,7 +34,6 @@ public class E02_Calcolatrice {
         System.out.println("il quoziente è: ");
         System.out.println(divisione);
         System.out.println("---------------------------------");
-
 
     }
 
@@ -66,12 +56,10 @@ public class E02_Calcolatrice {
     }
 
     //metodo
-    private static int somma(int val1, int val2) {
+    private static int addizione(int val1, int val2) {
 
        return val1 + val2;
 
     }
-
-	
 	
 }

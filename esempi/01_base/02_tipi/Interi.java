@@ -1,7 +1,4 @@
 public class Interi {
-
-
-
 	
 	public static void main(String[] args) {
 		
