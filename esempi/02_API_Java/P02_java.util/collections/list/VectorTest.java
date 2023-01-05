@@ -11,12 +11,13 @@ public class VectorTest{
 		System.out.println("v ha " + v.size() + " elementi.");
 		System.out.println("Il primo e' " + v.firstElement());
 		System.out.println("L'ultimo e' " + v.lastElement());
-		System.out.println("Ora li sfoglio usando get():");
+		System.out.println("Ora scorro gli elementi usando get():");
 		for(int i=0; i<v.size(); i++){
 			String s = (String)v.get(i);
 			System.out.println("get(" + i + ") " + s);
 		}
-		System.out.println("Ora lo faccio con un enumeratore:");
+
+		System.out.println("Ora scorro gli elementi con un enumeratore:");
 		Enumeration e = v.elements();
 		while(e.hasMoreElements()){
 			String s = (String)e.nextElement();
