@@ -68,10 +68,7 @@ public class E02_Array2 {
 			System.out.println("non faccio niente.....");
 			
 		}
-		
-		
 		catch (Exception e){
-			
 			System.out.println("eccezione generica");
 		} finally {
 			System.out.println("questa istruzione sarà eseguita in ogni caso");
@@ -80,15 +77,5 @@ public class E02_Array2 {
 		for (int j = 0; j < frutti.length; j++) {
 			System.out.println(frutti[j]);
 		}
-		
-		
-		
-	}
-	
-	
-	
-	
-	
-	
-	
+	}	
 }

@@ -1,11 +1,7 @@
 # Costruttori e proprietà della classe String
 
-
 ```java
-class CostruttoriStringa{
-	public static void main(String args[]){
-		/* assegnazione a una variabile String
-		di un letterale */
+		/* assegnazione a una variabile String di un letterale */
 		String s;
 		s = "Ciao mondo";
 		System.out.println(s);
@@ -13,15 +9,10 @@ class CostruttoriStringa{
 		char c[] ={'h', 'e', 'l', 'l', 'o'};
 		String t = new String(c);
 		System.out.println(t);
-		/* costruzione da un sottoinsieme di un array di
-		char con il costruttore String(char chars[],int
-		inizio, int numCaratteri) */
-		String u = new String(c,2,3);
-		/* Restituisce "llo", perche il primo carattere
-		corrisponde alla posizione 0 */
+		/* costruzione da un sottoinsieme di un array di char con il costruttore String(char chars[],int inizio, int numCaratteri) */ String u = new String(c,2,3);
+		/* Restituisce "llo", perche il primo carattere corrisponde alla posizione 0 */
 		System.out.println(u);
-		/* costruzione da stringa esistente: viene creato un
-		oggetto con lo stesso testo contenuto */
+		/* costruzione da stringa esistente: viene creato un oggetto con lo stesso testo contenuto */
 		String v = new String(u);
 		// Restituisce "llo";
 		System.out.println(v);
@@ -29,9 +20,6 @@ class CostruttoriStringa{
 			System.out.println("la stringa \"" + u + "\" ha " + u.length() + " caratteri");
 		// i letterali stringa sono oggetti e hanno metodi
 		System.out.println("il letterale \"" + "llo" + "\" ha " + "llo".length()+" caratteri");
-	}
-}
-
 ```
 
 ---
@@ -39,8 +27,6 @@ class CostruttoriStringa{
 ## 
 
 ```java
-	public static void main(String[] args) {
-
 		String a = new String ("Ciao");
 		String b = a;
 		String c = " ";
@@ -73,7 +59,6 @@ class CostruttoriStringa{
 		for (int i = 0; i < stringaArray.length; i++) {
 			System.out.println(stringaArray[i]);
 		}
-
 ```
 
 ---
@@ -124,7 +109,6 @@ class CostruttoriStringa{
 		
 		System.out.println(firma.toUpperCase());
 		
-		
 		String test = "Mauro Bogliaccino";
 		
 		System.out.println(firma);
@@ -137,9 +121,6 @@ class CostruttoriStringa{
 		if (firma.equals(test)) System.out.println("nome e test sono uguali");
 		else  System.out.println("nome e test sono diversi");
 				
-		
-		
-		
 		for (int i = 0; i < lunghezzaStringa; i++) {
 			System.out.print(firma.charAt(i)  + "\t"   );
 			

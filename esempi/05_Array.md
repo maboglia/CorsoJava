@@ -1,6 +1,31 @@
 ## Array monodimensionale
 
 ```java
+		//dichiarazione inizializzazione
+		int[] mioArray = new int[4];
+		
+		//assegnazione dei valori 0-based
+		mioArray[0] = 10;
+		mioArray[1] = 20;
+		mioArray[2] = 30;
+		mioArray[3] = 40;
+		
+		
+		//inizializzazione più compatta, con assegnazione
+		int mioArray2[] = new int[]{10, 20, 30, 40, 50};
+
+		//notazione short: posso omettere `new int[]`
+		int[] mioArray3 = {10, 20, 30, 40, 50}; 
+
+		//notazione short
+		String[] frutti = { "mele", "pere", "banane" };
+
+		//NB: è sempre possibile modificare i valori, mai la lunghezza
+```
+
+---
+
+```java
 class Sveglia{
 	public static void main(String args[]){
 		// dichiarazione array
