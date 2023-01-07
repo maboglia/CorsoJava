@@ -1,7 +1,24 @@
 {
 
+
     "package": "01_base",
     "folders": [{
+            "name": "Raccolte esempi",
+            "files": [
+                "00_Laboratori.md",
+                "00_variabili_costanti.md",
+                "01_Operatori_Tipi.md",
+                "02_tipi_primitivi.md",
+                "03_Condizioni_Cicli.md ",
+                "04_Stringhe.md ",
+                "05_Array.md",
+                "06_MetodiAusiliari.md ",
+                "07_Classi.md",
+                "08_GestioneDate.md ",
+                "09_typecasting.md"
+            ]
+        },
+        {
             "name": "00_Foundations",
             "files": [
                 "000_Commenti.java",
