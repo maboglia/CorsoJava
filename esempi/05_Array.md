@@ -1,4 +1,5 @@
 ## Array monodimensionale
+
 ```java
 class Sveglia{
 	public static void main(String args[]){
@@ -21,6 +22,9 @@ class Sveglia{
 	}
 }
 ```
+
+---
+
 ## Array multidimensionale
 ```java
 class Pitagora{

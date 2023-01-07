@@ -34,6 +34,8 @@ class CostruttoriStringa{
 
 ```
 
+---
+
 ## Utilizzo della classe StringBuilder
 
 ```java
@@ -59,4 +61,6 @@ class BufferStringhe{
 }
 ```
 
-[vedi altri esempi di codice](./02_API_lang_String)
+---
+
+[vedi altri esempi di codice](https://github.com/maboglia/CorsoJava/blob/master/esempi/02_API_lang_String)
