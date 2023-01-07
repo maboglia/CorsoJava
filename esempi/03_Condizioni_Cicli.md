@@ -17,6 +17,8 @@ class IfAnnidati{
 }
 ```
 
+---
+
 ## Asterischi
 
 ```java
@@ -30,6 +32,8 @@ class StampaAsterischi {
 	}
 }
 ```
+
+---
 
 ## Asterischi 2
 
@@ -46,6 +50,8 @@ class StampaAsterischi {
 }
 
 ```
+
+---
 
 ## Sostituzione di un ciclo do-while con un ciclo for
 
@@ -67,6 +73,7 @@ class StampaAsterischi {
 
 ```
 
+---
 
 ## L'istruzione return termina l'esecuzione del codice
 
@@ -79,6 +86,8 @@ class ProvaReturn {
 	}
 }
 ```
+
+---
 
 ```java
 class ProvaReturn {
@@ -114,5 +123,5 @@ class ForDecremento{
   int i;
   for(i = 10; i > 0;i --) System.out.println("i vale ." + i);
  }
-}
+}``
 ```
