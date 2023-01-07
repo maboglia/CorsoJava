@@ -3,7 +3,7 @@
 
     "package": "01_base",
     "folders": [{
-            "name": "Raccolte esempi",
+            "name": "",
             "files": [
                 "00_Laboratori.md",
                 "00_variabili_costanti.md",
