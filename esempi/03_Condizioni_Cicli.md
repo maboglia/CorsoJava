@@ -1,5 +1,27 @@
 # Cicli e istruzioni di controllo
 
+## Esempio di if ... else if
+
+```java
+ public static void main(String[] args) {
+
+
+  if ( 1 == 0 && 1 == 1) {
+   System.out.println("sono uguali");
+  } else if ( 0 == 0){
+   System.out.println("sono uguali ma valgono 0");
+  } else {
+   System.out.println("sono diversi");
+   
+  }
+
+
+ }
+
+```
+
+---
+
 ## Esempio di if annidati
 
 ```java
@@ -19,10 +41,77 @@ class IfAnnidati{
 
 ---
 
-## Asterischi
+## Utilizzo del ciclo for
 
 ```java
-class StampaAsterischi {
+class ForEsempio{
+ public static void main(String args[]){
+  int i;
+  for(i = 0; i < 5; i++) System.out.println("i vale " + i);
+ }
+}
+```
+
+---
+
+## Utilizzo dell'operatore decremento
+
+```java
+class ForDecremento{
+ public static void main(String args[]){
+  int i;
+  for(i = 10; i > 0; i--) System.out.println("i vale ." + i);
+ }
+```
+
+---
+
+## while
+
+```java
+public class EsempiWhile {
+
+ public static void main(String[] args) {
+  
+  String[] giorni = {
+    "lunedì",
+    "martedì",
+    "mercoledì",
+    "giovedì",
+    "venerdì",
+    "sabato",
+    "domenica",
+  };
+  
+  //ciclo while 
+  int counter = 0;
+  while (counter > giorni.length) {
+   if (counter % 2 == 0)
+   System.out.println( "giorno n.  " + counter + " è  " + giorni[counter]    );
+   counter++;
+  }
+  
+  //ciclo do-while
+  do {
+   if (counter % 2 == 0)
+    System.out.println( "giorno n.  " + counter + " è  " + giorni[counter]    );
+   counter++;
+  }
+  while (counter <0);
+  
+
+ }
+
+}
+
+```
+
+---
+
+## do...while
+
+```java
+class Stampa {
 	public static void main(String args[]){
 		int num = 20;
 		do{
@@ -35,10 +124,10 @@ class StampaAsterischi {
 
 ---
 
-## Asterischi 2
+## do...while - uso di if e continue
 
 ```java
-class StampaAsterischi {
+class Stampa {
 	public static void main(String args[]){
 		int num = 20;
 		do{
@@ -56,7 +145,7 @@ class StampaAsterischi {
 ## Sostituzione di un ciclo do-while con un ciclo for
 
 ```java
-class StampaAsterischi {
+class Stampa {
 	public static void main(String args[]){
 		for(int num = 20; num >= 0; num--){
 			
@@ -100,28 +189,3 @@ class ProvaReturn {
 }
 ```
 
----
-
-## Utilizzo del ciclo for
-
-```java
-class ForEsempio{
- public static void main(String args[]){
-  int i;
-  for(i = 0; i < 5; i++) System.out.println("i vale " + i);
- }
-}
-```
-
----
-
-## Utilizzo dell'operatore decremento
-
-```java
-class ForDecremento{
- public static void main(String args[]){
-  int i;
-  for(i = 10; i > 0;i --) System.out.println("i vale ." + i);
- }
-}``
-```
