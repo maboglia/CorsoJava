@@ -99,11 +99,13 @@ Per impostare un modulo, abbiamo bisogno di mettere un file speciale alla radice
 Questo file è noto come descrittore del modulo e contiene tutti i dati necessari per creare e utilizzare il nostro nuovo modulo.
 
 Costruiamo il modulo con una dichiarazione il cui corpo è vuoto o composto da direttive del modulo:
+
 ```java
 module myModuleName {
 // tutte le direttive sono facoltative
 }
 ```
+
 Iniziamo la dichiarazione del modulo con la parola chiave module seguita dal nome del modulo.
 
 Il modulo funzionerà con questa dichiarazione, ma normalmente avremo bisogno di più informazioni.
@@ -138,9 +140,11 @@ Ad esempio, potremmo scrivere una funzione di utilità che stampi abbastanza il 
 
 In questi casi, vogliamo utilizzare una dipendenza opzionale. Utilizzando la direttiva require static, creiamo una dipendenza solo in fase di compilazione:
 
+```java
 module mio.modulo {
 require statico modulo.nome;
 }
+```
 
 ---
 
@@ -152,9 +156,11 @@ Tuttavia, dobbiamo assicurarci che qualsiasi modulo che introduce il nostro codi
 
 Fortunatamente, possiamo utilizzare la direttiva transitiva richiede per costringere qualsiasi consumatore a valle a leggere anche le nostre dipendenze richieste:
 
+```java
 module mio.modulo {
 require transitivo modulo.nome;
 }
+```
 
 Ora, quando uno sviluppatore richiede mio.modulo, non dovrà anche dire richiede modulo.nome affinché il nostro modulo funzioni ancora.
 
@@ -168,9 +174,11 @@ Il nostro codice è significativamente più sicuro, ma ora dobbiamo aprire espli
 
 Usiamo la direttiva export per esporre tutti i membri pubblici del pacchetto denominato:
 
+```java
 module mio.modulo {
 esporta com.my.package.name;
 }
+```
 
 Ora, quando qualcuno richiede mio.modulo, avrà accesso ai tipi pubblici nel nostro pacchetto com.my.package.name, ma non a qualsiasi altro pacchetto.
 
@@ -186,9 +194,11 @@ Possiamo limitare quali moduli hanno accesso alle nostre API utilizzando le espo
 
 Analogamente alla direttiva sulle esportazioni, dichiariamo un pacchetto come esportato. Ma elenchiamo anche quali moduli stiamo consentendo di importare questo pacchetto come richiesto. Vediamo come appare:
 
+```java
 module mio.modulo {
 esporta com.my.package.name in com.specific.package;
 }
+```
 
 ---
 
@@ -200,9 +210,11 @@ Designiamo i servizi che il nostro modulo consuma con la direttiva uses.
 
 Nota che il nome della classe che usiamo è l'interfaccia o la classe astratta del servizio, non la classe di implementazione:
 
+```java
 module mio.modulo {
 uses class.name;
 }
+```
 
 Dovremmo notare qui che c'è una differenza tra una direttiva require e la direttiva uses.
 

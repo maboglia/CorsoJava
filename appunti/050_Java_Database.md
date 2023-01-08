@@ -1,5 +1,4 @@
-JDBC
-------
+# JDBC
 
 JDBC (Java Database Connectivity) è un’interfaccia completamente Java utilizzata per
 eseguire istruzioni SQL sui database.

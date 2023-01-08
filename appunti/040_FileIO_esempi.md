@@ -18,6 +18,7 @@ catch(FileNotFoundException e){
 il costruttore FileReader(s) lancia una eccezione verificata FileNotFoundException se non è possibile aprire il file s.
 
 ---
+
 ## Passo 2: creazione canale di lettura associato al file da leggere
 
 Poiché non è possibile usare direttamente l'oggetto FileReader f per leggere dal file, bisogna creare un secondo oggetto di classe java.io.BufferedReader passando f al costruttore BufferedReader in modo da creare un canale di lettura associato al file.
@@ -27,6 +28,7 @@ Poiché non è possibile usare direttamente l'oggetto FileReader f per leggere d
 
 
 ---
+
 ## Passo 3: lettura di stringhe dal canale di lettura
 
 A questo punto, invocando ripetutamente il metodo readLine() sull'oggetto BufferedReader b si leggono una alla volta le righe del file. Quando readLine() restituisce null vuole dire che le righe del file sono state tutte lette e l'oggetto BufferedReader ha esaurito il suo scopo.
@@ -50,6 +52,7 @@ catch(IOException e){
 Si noti che il metodo readLine potrebbe lanciare una eccezione verificata di tipo IOException.
 
 ---
+
 ## Passo 4: chiusura canale di input associato al file
 
 Quando la lettura del file è stata ultimata, è buona norma chiudere il canale di input associato al file invocando il metodo close():
@@ -64,8 +67,6 @@ Nota: fare attenzione a non chiamare close() su un canale BufferedReader non ass
 ## Esempio 1
 
 Scrivere una classe pubblica LetturaFile con un metodo pubblico void stampaFile(String s) che, dato il nome di un file s, ne stampa a video tutte le righe, oppure lancia un'eccezione non verificata se si incontrano errori nella lettura.
-
-LetturaFile.java
 
 ```java
 import java.io.*;
@@ -98,6 +99,8 @@ public class LetturaFile {
     }
 }
 ```
+
+---
 
 Notare che `FileNotFoundException` è una sottoclasse di `IOException` e quindi togliendo il catch(`FileNotFoundException` e) il programma sarebbe comunque corretto, solo che darebbe lo stesso errore sia in caso di errore di apertura file (new `FileReader`(...)) che di lettura file (b.readLine()).
 
@@ -139,6 +142,8 @@ public class LetturaFile {
 
 ```
 
+---
+
 ### Programma di prova:
 
 ```java
@@ -156,11 +161,11 @@ public class LetturaFile {
         b.close();
     }
 
-
 ```
 Scrittura sequenziale di file di testo (e canali di output)
 
 ---
+
 ## Passo 1: creazione canale di scrittura associato al file
 
 Per creare un file di testo con nome miofile.txt, creare un oggetto java.io.PrintStream come segue (dopo aver importato java.io.*):
@@ -210,6 +215,7 @@ PrintStream p = System.out;
 p.close(); // chiude il terminale di output
 System.out.println("questa stringa non verrà mai stampata");
 ```
+
 ---
 
 # File di configurazione nella cartella WEB-INF
@@ -219,5 +225,3 @@ InputStream inputStream = this.getClass().getClassLoader().getResourceAsStream("
 ```
 
 Lettura sequenziale di file di testo (e canali di input)
-
----
