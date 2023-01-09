@@ -2,6 +2,9 @@
 
 Schemi e risorse relative al corso Java
 
+
+![schema UF](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/2020_UF_Java.jpg)
+
 ---
 
 ## Schema Argomenti
@@ -24,6 +27,3 @@ Schemi e risorse relative al corso Java
 * **Concetti di informatica e fondamenti di Java** - Cay Horstmann (it)
 * [Guida Java html.it](https://www.html.it/guide/guida-java/) (it)
 
----
-
-![schema UF](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/2020_UF_Java.jpg)
