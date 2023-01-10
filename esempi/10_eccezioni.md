@@ -1,8 +1,6 @@
 # esempi con le eccezioni
 
-  ---
-
-### EccezioneArray
+## EccezioneArray
 
 ```java
 public class EccezioneArray {
@@ -18,7 +16,7 @@ public class EccezioneArray {
 
 ---
 
-### EccezioneAritmetico
+## EccezioneAritmetico
 
 ```java
 import java.util.Scanner; 
@@ -33,11 +31,10 @@ public class EccezioneAritmetico {
   } 
 }
 ```
-                                                                   
 
 ---
 
-### EccezioneFormato
+## EccezioneFormato
 
 ```java
 import java.util.Scanner; 
@@ -51,11 +48,11 @@ public class EccezioneFormato {
   System.out.println(x); 
   }
 }
-```                                                               
+```
 
 ---
 
-### Esempio gestione eccezione: EccezioneAritmetico
+## Esempio gestione eccezione: EccezioneAritmetico
 
 
 ```java
@@ -84,8 +81,7 @@ public class EccezioneAritmetico {
 
 ---
 
-### Esempio gestione eccezione: EccezioneFormato
-
+## Esempio gestione eccezione: EccezioneFormato
 
 ```java
 import java.util.Scanner;
@@ -110,11 +106,11 @@ public class EccezioneFormato {
     } while (!ok);
   } 
 }
-```                                                              
+```
 
 ---
 
-### Esempio: controllo correttezza parametri - Rettangolo
+## Esempio: controllo correttezza parametri - Rettangolo
 
 ```java
 public class Rettangolo { 
@@ -127,11 +123,11 @@ public class Rettangolo {
     else base=x;
   } 
 }
-```          
+```
 
 ---
 
-### EccezioneBaseNegativa
+## EccezioneBaseNegativa
 
 ```java
 public class EccezioneBaseNegativa extends Exception {
@@ -143,11 +139,12 @@ public class EccezioneBaseNegativa extends Exception {
     super(msg);
     } 
 }
-```          
+```
 
 ---
 
-### System.in.read 
+## System.in.read
+
 * può provocare una eccezione controllata di tipo IOException 
 * Occorre quindi inserirla in un blocco
 
