@@ -2,8 +2,10 @@
 
 ## Type Comparison Operator
 
-* `instanceof` - Compares an object to a specified type
+* `instanceof` - Verifica se un certo oggetto è istanza di un certo Tipo di dato
+* p.es: `if (a instanceof Automobile) //fai qualcosa`
 
+---
 
 ## Operatori aritmetici
 
