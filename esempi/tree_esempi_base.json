@@ -15,6 +15,7 @@
             { "path": "07_Classi.md", "title": "Le Classi modello" },
             { "path": "08_GestioneDate.md", "title": "Gestiore le Date e il tempo" },
             { "path": "09_typecasting.md", "title": "Typecasting: cambiare tipo di dato" },
+            { "path": "10_eccezioni.md", "title": "Le eccezioni: gestire le anomalie" },
             { "path": "00_Laboratori.md", "title": "Laboratori" }
         ]
     }]
