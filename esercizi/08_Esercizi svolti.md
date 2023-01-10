@@ -29,50 +29,9 @@ Soluzione
 
 ---
 
-## Esercizio  2.
-Si consideri il seguente metodo in linguaggio Java.
 
-```java
-public static boolean metodo (int[] a) {
-    boolean condizione = true;
-for (int i = 0; i < a.length-1; i++) {
-    if (a[i] != 2*a[i+1]) {
-        condizione = false;
-}
-}
-return condizione;
-}
-```
-(a) Determinare quale caratteristica deve soddisfare l’array a perché il metodo restituisca il valore true.
-(b) Riscrivere il metodo usando il ciclo while. Spiegare quale delle due soluzioni sia la piú efficiente e il perché.
+## Esercizio dati un array di interi a ed un intero n
 
-Soluzione
-1. Affinché il metodo restituisca il valore true, gli elementi dell’array a devono essere
-ciascuno il doppio dell’elemento successivo in a.
-2. Soluzione con il while:
-```java
-public static boolean metodo (int[] a) {
-    boolean condizione = true;
-int i = 0;
-while (i < a.length-1 && condizione) {
-    if (a[i] != 2*a[i+1]) {condizione = false;
-}
-i++;
-}
-return condizione;
-}
-```
-
-La soluzione piú efficiente è quella con il while, in quanto nel caso in cui l’array non
-soddisfi la caratteristica detta al punto 1., l’iterazione termina non appena si trova
-un elemento dell’array che non è il doppio del successivo, senza scandire tutto l’array.
-Tale scansione di tutto l’array viene invece sempre eseguita dalla soluzione con il for
-indipendentemente dal valore finale di condizione.
-
-
----
-
-## Esercizio  1. 
 Scrivere un metodo che, dati un array di interi a ed un intero n, restituisce true se n compare in a, false altrimenti.
 
 ```java
@@ -104,7 +63,8 @@ return false;
 
 ---
 
-## Esercizio  2. 
+## Esercizio   numero delle occorrenze di n in a
+
 Scrivere un metodo che, dati un array di interi a ed un intero n, restituisce il numero delle occorrenze di n in a.
 
 ```java
@@ -121,7 +81,8 @@ return cont;
 
 ---
 
-## Esercizio  3. 
+## Esercizio  prima occorrenza di n in a
+
 Scrivere un metodo che, dati un array di interi a ed un intero n, restituisce la posizione della prima occorrenza di n in a, e -1 se n non compare in a.
 ```java
 public static int posizione (int[] a, int n) {
@@ -140,7 +101,7 @@ else return -1;
 
 ---
 
-## Esercizio  4.
+## Esercizio  elementi identici
 
 Scrivere un metodo in linguaggio Java che dato un array di interi restituisca true se
 tutti i suoi elementi sono identici, e false altrimenti.
@@ -160,7 +121,8 @@ return equal;
 
 ---
 
-## Esercizio  5. 
+## Esercizio   ordine non decrescente
+
 Scrivere un metodo in linguaggio Java che, dato un array di interi a, restituisca true se
 i suoi elementi sono in ordine non decrescente (a[0]≤ a[1] ≤ . . .), e false altrimenti.
 ```java
@@ -196,7 +158,7 @@ una variabile booleana locale, vengono utilizzate opportune istruzioni di return
 
 ---
 
-## Esercizio  6. 
+## Esercizio  valore minimo
 
 Scrivere un metodo che, dato un array di interi a, restituisce il valore minimo in a.
 

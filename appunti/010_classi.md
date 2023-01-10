@@ -13,6 +13,12 @@
 
 ---
 
+## La classe è lo 'stampo' per gli oggetti
+
+![Classi e oggetti](./img/cookie-cutter.png)
+
+---
+
 ## Le classi definiscono
 
 * I dati (detti campi o attributi)
