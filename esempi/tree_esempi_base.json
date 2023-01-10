@@ -5,17 +5,17 @@
     "folders": [{
         "name": "",
         "files": [
-            "00_Laboratori.md",
-            "00_variabili_costanti.md",
-            "01_Operatori_Tipi.md",
-            "02_tipi_primitivi.md",
-            "03_Condizioni_Cicli.md ",
-            "04_Stringhe.md ",
-            "05_Array.md",
-            "06_MetodiAusiliari.md ",
-            "07_Classi.md",
-            "08_GestioneDate.md ",
-            "09_typecasting.md"
+            { "path": "00_Laboratori.md", "title": "Laboratori" },
+            { "path": "00_variabili_costanti.md", "title": "Variabili_costanti" },
+            { "path": "01_Operatori_Tipi.md", "title": "Operatori ed espressioni" },
+            { "path": "02_tipi_primitivi.md", "title": "Tipi primitivi" },
+            { "path": "03_Condizioni_Cicli.md", "title": "Control-flow: condizioni e cicli" },
+            { "path": "04_Stringhe.md", "title": "Gestire le Stringhe" },
+            { "path": "05_Array.md", "title": "Usare gli Array" },
+            { "path": "06_MetodiAusiliari.md", "title": "I Metodi Ausiliari static" },
+            { "path": "07_Classi.md", "title": "Le Classi modello" },
+            { "path": "08_GestioneDate.md", "title": "Gestiore le Date e il tempo" },
+            { "path": "09_typecasting.md", "title": "Typecasting: Cambiare tipo di dato" }
         ]
     }]
 
