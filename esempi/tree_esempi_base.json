@@ -5,8 +5,7 @@
     "folders": [{
         "name": "",
         "files": [
-            { "path": "00_Laboratori.md", "title": "Laboratori" },
-            { "path": "00_variabili_costanti.md", "title": "Variabili_costanti" },
+            { "path": "00_variabili_costanti.md", "title": "Usare variabili e costanti" },
             { "path": "01_Operatori_Tipi.md", "title": "Operatori ed espressioni" },
             { "path": "02_tipi_primitivi.md", "title": "Tipi primitivi" },
             { "path": "03_Condizioni_Cicli.md", "title": "Control-flow: condizioni e cicli" },
@@ -15,7 +14,8 @@
             { "path": "06_MetodiAusiliari.md", "title": "I Metodi Ausiliari static" },
             { "path": "07_Classi.md", "title": "Le Classi modello" },
             { "path": "08_GestioneDate.md", "title": "Gestiore le Date e il tempo" },
-            { "path": "09_typecasting.md", "title": "Typecasting: Cambiare tipo di dato" }
+            { "path": "09_typecasting.md", "title": "Typecasting: cambiare tipo di dato" },
+            { "path": "00_Laboratori.md", "title": "Laboratori" }
         ]
     }]
 
