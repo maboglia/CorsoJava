@@ -15,7 +15,7 @@
 
 ## La classe è lo 'stampo' per gli oggetti
 
-![Classi e oggetti](./img/cookie-cutter.png)
+![Classi e oggetti](https://github.com/maboglia/CorsoJava/blob/master/appunti/img/cookie-cutter.png)
 
 ---
 
