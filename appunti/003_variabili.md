@@ -78,6 +78,7 @@ area = base * altezza /2;
 ### Dichiarazione + Assegnazione
 
 Prima di poter essere usata in un'espressione una variabile deve:
+
 * essere stata dichiarata
 * essere stata assegnata almeno una volta (inizializzata)
 * NB: **si possono combinare dichiarazione e assegnazione**. 

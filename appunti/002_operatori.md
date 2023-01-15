@@ -1,11 +1,6 @@
 # Operatori 
 
-## Type Comparison Operator
 
-* `instanceof` - Verifica se un certo oggetto è istanza di un certo Tipo di dato
-* p.es: `if (a instanceof Automobile) //fai qualcosa`
-
----
 
 ## Operatori aritmetici
 
@@ -107,6 +102,13 @@
 Esempio
 
 * `z = Math.sin (x) – Math.PI / Math.sqrt(y)`
+
+---
+
+## Type Comparison Operator
+
+* `instanceof` - Verifica se un certo oggetto è istanza di un certo Tipo di dato
+* p.es: `if (a instanceof Automobile) //fai qualcosa`
 
 ---
 

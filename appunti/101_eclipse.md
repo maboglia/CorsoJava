@@ -19,30 +19,30 @@
 * `Ctrl+Shift+S` Save all files
 * `Ctrl+W` Close current file
 * `Ctrl+Shift+W` Close all files
-* F5 Refresh content of selected element with local file system
+* `F5` Refresh content of selected element with local file system
 
 ---
 
 ## Editor Window
 
-* Focus/ cursor must be in Editor Window for these to work.
-* F12 Jump to Editor Window
-* `Ctrl+Page` Down/`Ctrl+Page` Up Switch to next editor / switch to previous editor
+* `Focus/cursor` must be in Editor Window for these to work.
+* `F12` Jump to Editor Window
+* `Ctrl+Page Down/Ctrl+Page Up` Switch to next editor / switch to previous editor
 * `Ctrl+M` Maximize or un-maximize current Editor Window (also works for other Windows)
 * `Ctrl+E` Show list of open Editors. Use arrow keys and enter to switch
 * `Ctrl+F6`/`Ctrl+Shift+ `F6 Show list of open Editors. Similar to `ctrl+e` but switches immediately upon release of ctrl
 * `Alt+Arrow` Left/Alt +Arrow Right Go to previous / go to next Editor Window
-* `Alt+- `Open Editor Window Option menu
+* `Alt+-` Open Editor Window Option menu
 * `Ctrl+F10` Show view menu (features available on left vertical bar: breakpoints, bookmarks, line numbers, ?)
 * `Ctrl+F10`, then n Show or hide line numbers
 * `Ctrl+Shift+Q` Show or hide the diff column on the left (indicates changes since last save)
-* `Ctrl+hift`++/-` Zoom text in/ out
+* `Ctrl+Shift+ +/-` Zoom text in/ out
 
 ---
 
 ## Navigate in Editor
 
-* Home/End Jump to beginning / jump to end of indention. Press home twice to jump to beginning of line
+* `Home/End` Jump to beginning / jump to end of indention. Press home twice to jump to beginning of line
 * `Ctrl+Home`/End Jump to beginning / jump to end of source
 * `Ctrl+Arrow` Right/A rrow Left
 Jump one word to the left / one word to the right
@@ -85,7 +85,7 @@ one-line expression or content within brackets)
 * `Ctrl+Backspace` Delete previous word
 * `Shift+Enter` Enter line below current line
 * `Shift+`Ctrl`+Enter` Enter line above current line
-* Insert Switch between insert and overwrite mode
+* `Insert` Switch between insert and overwrite mode
 * `Shift+`Ctrl`+Y` Change selection to all lower case
 * `Shift+`Ctrl`+X` Change selection to all upper case
 
@@ -103,7 +103,7 @@ one-line expression or content within brackets)
 
 ## Indentions and Comments
 
-* Tab/Shift+Tab Increase / decrease indent of selected text
+* `Tab/Shift+Tab` Increase / decrease indent of selected text
 * `Ctrl+I` Correct indention of selected text or of current line
 * `Ctrl+Shift+F` Autoformat all code in Editor using code formatter
 * `Ctrl+/` Comment / uncomment line or selection ( adds '//' )
@@ -125,9 +125,9 @@ one-line expression or content within brackets)
 ## Code Information
 
 * `Ctrl+O` Show code outline / structure
-* F2 Open class, method, or variable information (tooltip text)
-* F3 Open Declaration: Jump to Declaration of selected class, method, or parameter
-* F4 Open Type Hierarchy window for selected item
+* `F2` Open class, method, or variable information (tooltip text)
+* `F3` Open Declaration: Jump to Declaration of selected class, method, or parameter
+* `F4` Open Type Hierarchy window for selected item
 * `Ctrl+T` Show / open Quick Type Hierarchy for selected item
 * `Ctrl+Shift+T` Open Type in Hierarchy
 * `Ctrl+Alt+H` Open Call Hierarchy
@@ -150,11 +150,11 @@ one-line expression or content within brackets)
 ## Run and Debug
 
 * `Ctrl+F11` Save and launch application (run)
-* F11 Debug
-* F5 Step Into function
-* F6 Next step (line by line)
-* F7 Step out
-* F8 Skip to next Breakpoint
+* `F11` Debug
+* `F5` Step Into function
+* `F6` Next step (line by line)
+* `F7` Step out
+* `F8` Skip to next Breakpoint
 
 ---
 
@@ -163,7 +163,7 @@ one-line expression or content within brackets)
 * `Ctrl+F7`/`Ctrl+Shift+ `F7 Switch forward / backward between views (panels). Useful for switching back and forth between Package Explorer and Editor.
 * `Ctrl+F8`/`Ctrl+Shift+ `F8 Switch forward / backward between perspectives
 * `Ctrl+P` Print
-* F1 Open Eclipse Help
+* `F1` Open Eclipse Help
 * `Shift+F10` Show Context Menu right click with mouse
 
 ---

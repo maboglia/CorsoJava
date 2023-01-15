@@ -48,7 +48,7 @@ else {
 ---
 
 
-**switch Statements**
+## switch Statements
 
 ```java
 switch (espressione) {
@@ -77,12 +77,9 @@ switch (espressione) {
 ---
 
 
-
-## Cicli definiti
+## Cicli definiti - for
 
 Se il numero di iterazioni è prevedibile dal contenuto delle variabili all'inizio del ciclo.
-
-
 
 ```java
 
@@ -106,7 +103,7 @@ for (int i=0; i<n; ++i) {
 ---
 
 
-## Cicli indefiniti
+## Cicli indefiniti - while
 
 Se il numero di iterazioni non è noto all'inizio del ciclo.
 
@@ -121,6 +118,8 @@ while (condition) {
 
 ---
 
+## do-while
+
 ```java
 
 do {
@@ -134,6 +133,7 @@ do {
 ---
 
 Esempio: il numero di iterazioni dipende dai valori immessi dall'utente.
+
 ```java
 while(true) {
     x = Integer.parseInt(JOptionPane.showInputDialog("Immetti numero positivo"));
@@ -166,6 +166,7 @@ for (int i=0; i<n; i++) {
 Vengono passati in rassegna un insieme di valori e per ognuno di essi viene fatto un test per verificare se il valore ha o meno una certa proprietà in base alla quale decideremo se prenderlo in considerazione o meno.
 
 Esempio: stampa tutti i numeri pari fino a 100
+
 ```java
 for (int i=1; i<100; ++i) { // passa in rassegna tutti i numeri fra 1 e 100
     if (i % 2 == 0) // filtra quelli pari
