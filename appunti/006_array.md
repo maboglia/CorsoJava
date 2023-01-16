@@ -108,23 +108,15 @@ voti[i] = i;
 ---
 
 
-## Array Multi-dimensionali (Matrici)
+## Array Multi-dimensionali
 
-**Array contenenti riferimenti ad altri array**
-
-Sintatticamente sono estensioni degli array a una dimensione
-
-**Sono possibili righe di lunghezza diverse**
-(matrice = array di array)
-
+* **Array contenenti riferimenti ad altri array**
+* Sintatticamente sono estensioni degli array a una dimensione
+* matrice: array di array, regolare, irregolare, rettangolare...
 
 ![](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/04_array/array2d.png)
 
 ---
-
-```java
-int[][] triangle = new int[3][]
-```
 
 * **Le righe non sono memorizzate in posizioni adiacenti**
 * Possono essere spostate facilmente
@@ -140,7 +132,7 @@ saldo[j] = temp;
 
 * L'array è una struttura dati efficiente ogni volta che il numero di elementi è noto
 * Il ridimensionamento di un array in Java risulta poco efficiente
-* Utilizzare altre strutture dati se il numerodi elementi contenuto non è noto
+* Utilizzare altre strutture dati se il numero di elementi contenuto non è noto
 
 ---
 
@@ -168,9 +160,7 @@ saldo[j] = temp;
 
 ```java
 int[] list = new int[10];
-
 list.length;
-
 int[] list = {1, 2, 3, 4};
 
 ```
@@ -186,6 +176,7 @@ int[][] list = {{1, 2}, {3, 4}};
 ```
 
 **Array irregolari**
+Sono possibili righe di lunghezza diverse**
 
 ```java
 int[][] m = {
