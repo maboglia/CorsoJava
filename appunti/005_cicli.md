@@ -2,6 +2,9 @@
 
 Java mette a disposizione del programmatore diverse strutture sintattiche per consentire il **controllo del flusso**
 
+![if...else](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/02_costrutti/if-else.png)
+
+---
 
 ## Selezione, scelta condizionale 
 
