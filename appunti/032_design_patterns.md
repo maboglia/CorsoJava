@@ -66,3 +66,10 @@ Scopo dei design pattern comportamentali
 * [MVC - Model View Controller](https://it.wikipedia.org/wiki/Model-view-controller)
 * [DAO - Data Access Object](https://github.com/maboglia/CorsoJava/blob/master/appunti/036_dao_pattern.md)
 * Container pattern
+* Dependency Injection pattern
+  * Separa il comportamento di una componente dalla risoluzione delle sue   dipendenze
+  * Minimizza il livello di accoppiamento
+  * La componente dichiara unicamente le sue dipendenze
+  * Un framework DI risolve a runtime le dipendenze dichiarate
+  * Utilizzo costruttori e metodi setter dei POJO
+  * Perdita dell’incapsulamento
