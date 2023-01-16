@@ -81,7 +81,7 @@ String s3 = s3.substring (2, 6);
 * `myString.charAt(i)`
 
 ---
-
+---
 
 ### Lunghezza stringa
 
