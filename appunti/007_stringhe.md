@@ -36,6 +36,29 @@ Caratteristiche principali
 
 ---
 
+### Esempio
+
+```java
+String s1, s2;
+s1 = new String("Prima stringa");
+s2 = new String("Prima stringa");
+System.out.println(s1);
+/// Prima stringa
+System.out.println("Lunghezza di s1 = " +
+s1.length());
+// 26
+if (s1.equals(s2)) ...
+// true
+if (s1 == s2) ...
+// false
+String s3 = s3.substring (2, 6);
+// s3 == "ima s"
+```
+
+[altri esempi sulle stringhe](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_Stringhe.md)
+
+---
+
 ### Concatenare stringhe
 
 * Operatore concat
@@ -100,26 +123,3 @@ Caratteristiche principali
 * `String toLowerCase(String str)`
 * `String substring(int startIndex, int endIndex)`
 * `String substring(int startIndex)`
-
----
-
-### Esempio
-
-```java
-String s1, s2;
-s1 = new String("Prima stringa");
-s2 = new String("Prima stringa");
-System.out.println(s1);
-/// Prima stringa
-System.out.println("Lunghezza di s1 = " +
-s1.length());
-// 26
-if (s1.equals(s2)) ...
-// true
-if (s1 == s2) ...
-// false
-String s3 = s3.substring (2, 6);
-// s3 == "ima s"
-```
-
-[altri esempi sulle stringhe](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_Stringhe.md)
