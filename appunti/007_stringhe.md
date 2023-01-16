@@ -45,13 +45,11 @@ Caratteristiche principali
 
 * Utile per definire stringhe che occupano più di una riga
 
-* Operatore +
-`"questa stringa" + "e` formata da tre" + "stringhe"`
-* La concatenazione funziona anche con altri tipi, che vengono automaticamente convertiti in stringhe 
-
-`System.out.println ("pi Greco = " + 3.14);`
-
-`System.out.println ("x = " + x);`
+* Operatore `+`
+`"questa stringa" + "e` formata da tre" `+` "stringhe"`
+* La concatenazione funziona anche con altri tipi, che vengono automaticamente convertiti in stringhe
+* `System.out.println ("pi Greco = " + 3.14);`
+* `System.out.println ("x = " + x);`
 
 ---
 
