@@ -107,21 +107,6 @@ voti[i] = i;
 
 ---
 
-## Array di oggetti
-
-Per gli array di oggetti (e.g., Integer) `Integer [] voti = new Integer [5];` ogni elemento e' un riferimento
-
-**L'inizializzazione va completata con quella dei singoli elementi**
-
-```java
-voti[0] = new Integer (1);
-voti[1] = new Integer (2);
-...
-voti[4] = new Integer (5);
-```
-
----
-
 
 ## Array Multi-dimensionali (Matrici)
 
@@ -151,7 +136,6 @@ double[] temp = saldo[i];
 saldo[i] = saldo[j];
 saldo[j] = temp;
 ```
-
 
 * L'array è una struttura dati efficiente ogni volta che il numero di elementi è noto
 * Il ridimensionamento di un array in Java risulta poco efficiente
@@ -188,8 +172,6 @@ int[] list = {1, 2, 3, 4};
 
 ```
 
----
-
 **Array Multidimensionali**
 
 ```java
@@ -199,8 +181,6 @@ list[0].length;
 int[][] list = {{1, 2}, {3, 4}};
 
 ```
-
----
 
 **Array irregolari**
 
@@ -216,6 +196,23 @@ int[][] m = {
 
 ---
 
-[esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/03_array)
 
-[esempi ed esercizi su array](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72)
+## Array di oggetti
+
+Per gli array di oggetti (e.g., Integer) `Integer [] voti = new Integer [5];` ogni elemento e' un riferimento
+
+**L'inizializzazione va completata con quella dei singoli elementi**
+
+```java
+voti[0] = new Integer (1);
+voti[1] = new Integer (2);
+...
+voti[4] = new Integer (5);
+```
+
+---
+
+### altre risorse
+
+* [esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/03_array)
+* [esempi ed esercizi su array](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72)
