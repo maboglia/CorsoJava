@@ -50,22 +50,23 @@ Caratteristiche principali
 * La concatenazione funziona anche con altri tipi, che vengono automaticamente convertiti in stringhe
 * `System.out.println ("pi Greco = " + 3.14);`
 * `System.out.println ("x = " + x);`
-* meglio usare la classe StringBuilder...
+
+**NB: La classe String crea nuovi oggetti ogni volta che concateni con `+`, meglio usare la classe StringBuilder...**
 
 ---
 
 ### Lunghezza stringa
 
-* int length()
-  * myString.length()
-  * "Ciao".length() restituisce 4
-  * "".length() restituisce 0
-* Se la lunghezza è N, i caratteri sono indicizzati da 0 a N-1
+* `int length()`
+  * esempio: `myString.length()`
+  * `"Ciao".length()` restituisce 4
+  * `"".length()` restituisce 0
+* Se la lunghezza è N, i caratteri sono indicizzati **da 0 a N-1**
 
 ### Carattere i-esimo
 
-* char charAt (int)
-* myString.charAt(i)
+* `char charAt (int)`
+* `myString.charAt(i)`
 
 ---
 
@@ -122,5 +123,4 @@ String s3 = s3.substring (2, 6);
 // s3 == "ima s"
 ```
 
-
-[altri esempi sulle stringhe](https://github.com/maboglia/CorsoJava/tree/master/esempi/02_API_Java/P01_java.lang/String)
+[altri esempi sulle stringhe](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_Stringhe.md)
