@@ -53,3 +53,73 @@ Caratteristiche principali
 
 **NB: La classe String crea nuovi oggetti ogni volta che concateni con `+`, meglio usare la classe StringBuilder...**
 
+---
+
+### Carattere i-esimo
+
+* `char charAt (int)`
+* `myString.charAt(i)`
+
+### Lunghezza stringa
+
+* `int length()`
+  * esempio: `myString.length()`
+  * `"Ciao".length()` restituisce 4
+  * `"".length()` restituisce 0
+* Se la lunghezza è N, i caratteri sono indicizzati **da 0 a N-1**
+
+---
+
+### Confronta stringa con altra stringa
+
+* `boolean equals(String s)`
+* `myString.equals("stringa")` ritorna true o false
+* `boolean equalsIgnoreCase(String s)`
+* `myString.equalsIgnoreCase("StRiNgA")`
+
+### Confronta con altra stringa facendone la differenza
+
+* `int compareTo(String str)`
+* `myString.compareTo("stringa")` ritorna un valore >=< 0
+
+### Trasforma int in String
+
+* `String valueOf(int)`
+* Disponibile per tutti tipi primitivi
+
+---
+
+### Restituisce indice prima occorrenza di c
+
+* `int indexOf(char c)`
+* `int indexOf(char c, int fromCtrN)`
+
+### Altri metodi
+
+* `String toUpperCase(String str)`
+* `String toLowerCase(String str)`
+* `String substring(int startIndex, int endIndex)`
+* `String substring(int startIndex)`
+
+---
+
+### Esempio
+
+```java
+String s1, s2;
+s1 = new String("Prima stringa");
+s2 = new String("Prima stringa");
+System.out.println(s1);
+/// Prima stringa
+System.out.println("Lunghezza di s1 = " +
+s1.length());
+// 26
+if (s1.equals(s2)) ...
+// true
+if (s1 == s2) ...
+// false
+String s3 = s3.substring (2, 6);
+// s3 == "ima s"
+```
+
+[altri esempi sulle stringhe](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_Stringhe.md)
