@@ -37,6 +37,8 @@
 
 ```
 
+---
+
 ## Selection-sort
 
 ![selection sort](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/algo_selection_sort.jpg)
