@@ -69,7 +69,7 @@ String s3 = s3.substring (2, 6);
 * Utile per definire stringhe che occupano più di una riga
 
 * Operatore `+`
-`"questa stringa" + "e` formata da tre" `+` "stringhe"`
+`"questa stringa" + "e` formata da tre" `+` "stringhe"
 * La concatenazione funziona anche con altri tipi, che vengono automaticamente convertiti in stringhe
 * `System.out.println ("pi Greco = " + 3.14);`
 
@@ -80,7 +80,6 @@ String s3 = s3.substring (2, 6);
 * `char charAt (int)`
 * `myString.charAt(i)`
 
----
 ---
 
 ### Lunghezza stringa
