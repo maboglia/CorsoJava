@@ -9,6 +9,12 @@
     * Raggiungibili con l'operatore di indicizzazione
     * le **parentesi quadre** `[]`
 
+## Il riferimento ad array
+
+* Non è un puntatore al primo elemento
+* È un puntatore all'oggetto array
+* Incrementandolo non si ottiene il secondo elemento
+
 ---
 
 ## Cosa sono gli array?
@@ -24,22 +30,6 @@ Nel linguaggio di programmazione Java, gli array sono oggetti (§4.3.1), vengono
 * Può essere stabilita a run-time (quando l'oggetto viene creato)
 * È **fissa** (non può essere modificata)
 * E' **nota** e ricavabile per ogni array
-
----
-
-## Array Mono-dimensionali (vettori)
-
-
-Dichiarazione di un riferimento a un array
-
-* `int[] voti;`
-* `int voti[];`
-
-La dichiarazione di un array non assegna alcuno spazio
-
-`voti == null`
-
-![](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/04_array/array.png)
 
 ---
 
@@ -97,16 +87,24 @@ voti[i] = i;
 **In Java viene fatto il bounds checking**
 
 * Maggior sicurezza
-* Maggior lentezza di accesso
-
-**Il riferimento ad array**
-
-* Non è un puntatore al primo elemento
-* È un puntatore all'oggetto array
-* Incrementandolo non si ottiene il secondo elemento
+* Accesso più lento
 
 ---
 
+## Array Mono-dimensionali (vettori)
+
+Dichiarazione di un riferimento a un array
+
+* `int[] voti;`
+* `int voti[];`
+
+La dichiarazione di un array non assegna alcuno spazio
+
+`voti == null`
+
+![](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/04_array/array.png)
+
+---
 
 ## Array Multi-dimensionali
 
@@ -135,25 +133,6 @@ saldo[j] = temp;
 * Utilizzare altre strutture dati se il numero di elementi contenuto non è noto
 
 ---
-
-## Algoritmi per lavorare con gli array: la classe `java.util.Arrays`
-
-* **Il pacchetto java.util contiene metodi statici di utilità per gli array**
-
-* Copia di un valore in tutti gli (o alcuni) elementi di un array
-    * `Arrays.fill (<array>, <value>);`
-    * `Arrays.fill (<array>, <from>, <to>,<value>);`
-* Copia di array
-    * `System.arraycopy (<arraySrc>, <offsetSrc>,<arrayDst>, <offsetDst>, <#elements>);`
-* Confronta due array
-    * `Arrays.equals (<array1>, <array2>);`
-* Ordina un array (di oggetti che implementino l'interfaccia Comparable)
-    * `Arrays.sort (<array>);`
-* Ricerca binaria (o dicotomica)
-    * `Arrays.binarySearch (<array>);`
-
----
-
 ## Esempi di Array
 
 **Array Monodimensionali**
@@ -190,7 +169,6 @@ int[][] m = {
 
 ---
 
-
 ## Array di oggetti
 
 Per gli array di oggetti (e.g., Integer) `Integer [] voti = new Integer [5];` ogni elemento e' un riferimento
@@ -203,6 +181,24 @@ voti[1] = new Integer (2);
 ...
 voti[4] = new Integer (5);
 ```
+
+---
+
+## Algoritmi per lavorare con gli array: la classe `java.util.Arrays`
+
+* **Il pacchetto java.util contiene metodi statici di utilità per gli array**
+
+* Copia di un valore in tutti gli (o alcuni) elementi di un array
+  * `Arrays.fill (<array>, <value>);`
+  * `Arrays.fill (<array>, <from>, <to>,<value>);`
+* Copia di array
+  * `System.arraycopy (<arraySrc>, <offsetSrc>,<arrayDst>, <offsetDst>, <#elements>);`
+* Confronta due array
+  * `Arrays.equals (<array1>, <array2>);`
+* Ordina un array (di oggetti che implementino l'interfaccia Comparable)
+  * `Arrays.sort (<array>);`
+* Ricerca binaria (o dicotomica)
+  * `Arrays.binarySearch (<array>);`
 
 ---
 
