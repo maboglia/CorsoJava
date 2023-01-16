@@ -72,16 +72,16 @@ String s3 = s3.substring (2, 6);
 `"questa stringa" + "e` formata da tre" `+` "stringhe"`
 * La concatenazione funziona anche con altri tipi, che vengono automaticamente convertiti in stringhe
 * `System.out.println ("pi Greco = " + 3.14);`
-* `System.out.println ("x = " + x);`
 
 **NB: La classe String crea nuovi oggetti ogni volta che concateni con `+`, meglio usare la classe StringBuilder...**
-
----
 
 ### Carattere i-esimo
 
 * `char charAt (int)`
 * `myString.charAt(i)`
+
+---
+
 
 ### Lunghezza stringa
 
