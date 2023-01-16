@@ -4,19 +4,26 @@
   * Tipi primitivi (int, float, etc.)
   * Riferimenti ad oggetti ( vedere classi! )
 * Elementi dello stesso tipo
-    * Indirizzati da indici
-    * Raggiungibili con l'operatore di indicizzazione: le **parentesi quadre** []
     * Raggruppati sotto lo stesso nome
+    * Indirizzati da indici
+    * Raggiungibili con l'operatore di indicizzazione
+    * le **parentesi quadre** `[]`
 
 ---
+
+## Cosa sono gli array?
+
+Nel linguaggio di programmazione Java, gli array sono oggetti (§4.3.1), vengono creati dinamicamente e possono essere assegnati a variabili di tipo Object (§4.3.2). Tutti i metodi della classe Object possono essere invocati su un array.
+[Java docs](https://docs.oracle.com/javase/specs/jls/se7/html/jls-10.html)
 
 **In Java gli array sono Oggetti**
 * Sono allocati nell'area di memoria riservata agli oggetti creati dinamicamente (heap)
 
-Dimensione
+### Dimensione dell'array
+
 * Può essere stabilita a run-time (quando l'oggetto viene creato)
-* È fissa (non può essere modificata)
-* E' nota e ricavabile per ogni array 
+* È **fissa** (non può essere modificata)
+* E' **nota** e ricavabile per ogni array
 
 ---
 
@@ -31,6 +38,8 @@ Dichiarazione di un riferimento a un array
 La dichiarazione di un array non assegna alcuno spazio
 
 `voti == null`
+
+![](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/04_array/array.png)
 
 ---
 
@@ -121,6 +130,8 @@ Sintatticamente sono estensioni degli array a una dimensione
 ```java
 int[][] triangle = new int[3][]
 ```
+
+![](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/04_array/array2d.png)
 
 ---
 
