@@ -62,9 +62,6 @@ int[] voti;
 voti = new int[ARRAY_SIZE];
 ```
 
----
-
-
 *  Con valore definito a run-time
 ```java
 int[] voti;
@@ -74,8 +71,7 @@ voti = new int[x];
 
 ---
 
-**Utilizzando un inizializzatore-*
-(che permette anche di riempire l'array)
+## riempire l'array utilizzando un inizializzatore
 
 * L'operatore new inizializza le variabili
   * 0 - per variabili di tipo numerico (inclusi i char)
@@ -83,14 +79,11 @@ voti = new int[x];
 
 
 ```java
-int[] primi = {2,3,5,7,11,13};
-...
-int [] pari = {0, 2, 4, 6, 8, 10,};
+int[] numeriPrimi = {2,3,5,7,11,13};
+//...
 // La virgola finale e' facoltativa
-// (elenchi lunghi)
+int [] numeriPari = {0, 2, 4, 6, 8, 10,};
 ```
-
----
 
 * Dichiarazione e creazione possono avvenire contestualmente
 * L'attributo length indica la lunghezza dell'array, cioè il numero di elementi
@@ -100,8 +93,6 @@ int [] pari = {0, 2, 4, 6, 8, 10,};
 for (int i=0; i<voti.length; i++)
 voti[i] = i;
 ```
-
----
 
 **In Java viene fatto il bounds checking**
 
@@ -127,16 +118,15 @@ Sintatticamente sono estensioni degli array a una dimensione
 (matrice = array di array)
 
 
-```java
-int[][] triangle = new int[3][]
-```
-
 ![](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/04_array/array2d.png)
 
 ---
 
-**Le righe non sono memorizzate in posizioni adiacenti**
+```java
+int[][] triangle = new int[3][]
+```
 
+* **Le righe non sono memorizzate in posizioni adiacenti**
 * Possono essere spostate facilmente
 
 ```java
@@ -154,7 +144,9 @@ saldo[j] = temp;
 
 ---
 
-**Il pacchetto java.util contiene metodi statici di utilità per gli array**
+## Algoritmi per lavorare con gli array: la classe `java.util.Arrays`
+
+* **Il pacchetto java.util contiene metodi statici di utilità per gli array**
 
 * Copia di un valore in tutti gli (o alcuni) elementi di un array
     * `Arrays.fill (<array>, <value>);`
