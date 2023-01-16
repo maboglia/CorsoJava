@@ -50,6 +50,7 @@ Caratteristiche principali
 * La concatenazione funziona anche con altri tipi, che vengono automaticamente convertiti in stringhe
 * `System.out.println ("pi Greco = " + 3.14);`
 * `System.out.println ("x = " + x);`
+* meglio usare la classe StringBuilder...
 
 ---
 
