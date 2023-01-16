@@ -30,5 +30,5 @@
 
 ### Altri design patterns
 
-* MVC - Model View Controller
+* [MVC - Model View Controller](https://it.wikipedia.org/wiki/Model-view-controller)
 * [DAO - Data Access Object](https://github.com/maboglia/CorsoJava/blob/master/appunti/036_dao_pattern.md)
