@@ -4,8 +4,9 @@
 * Nella OOP tale termine si riferisce ai metodi: per definizione, il polimorfismo è la capacità di un oggetto, la cui classe fa parte di una gerarchia, di chiamare la versione corretta di un metodo.
 * Quindi il polimorfismo è necessario quando si ha una gerarchia di classi.
 
+---
 
-## Polimorfismo mediante (overloading)
+## Polimorfismo per metodi mediante overloading
 
 Una classe può avere più metodi con lo stesso nome
 
@@ -22,7 +23,7 @@ Il metodo da eseguire **NON** viene scelto in base al **valore di ritorno**
 
 ---
 
-### Il polimorfismo denota le differenze tra **Programmazione Procedurale e OOP**
+### Il polimorfismo evidenzia le differenze tra **Programmazione Procedurale e OOP**
 
 * Nella programmazione procedurale, il codice è centrale e i dati sono subordinati
 * abbiamo programmi che agiscono sui dati che di solito non sono strettamente collegati
@@ -49,6 +50,11 @@ n = n * 2
 Nella programmazione orientata agli oggetti si invia un "messaggio" all'oggetto chiamando un metodo per raddoppiare: ```n.raddoppia();```
 
 Un oggetto di tipo Operazione riceve la chiamata al metodo `raddoppia(<TIPO>)`, riconosce il tipo dell'argomento e richiama il metodo implementato per quel tipo.
+
+---
+
+
+### Codice esempio
 
 ```java
 class Operazione{
