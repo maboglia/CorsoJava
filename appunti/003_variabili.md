@@ -109,6 +109,30 @@ System.out.println(mioNumero);
 **NB**: una variabile **locale** deve **SEMPRE** essere **inizializzata**, prima di poter essere utilizzata
 
 ---
+
+## Scope: ambito di visibilità delle variabili
+
+```java
+public class Scope1
+{
+   public static void main(String[] args)      
+   {
+
+         double r;
+
+         r = 3.14;
+
+
+      System.out.println(r);
+   }
+}
+
+```
+
+**NB**: una variabile **locale** deve **SEMPRE** essere **inizializzata**, prima di poter essere utilizzata
+
+---
+
 ## Costanti
 
 Nella dichiarazione delle variabili che **NON DEVONO** mai cambiare valore si può utilizzare il modificatore **final**
