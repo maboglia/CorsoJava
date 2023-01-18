@@ -6,9 +6,9 @@ La localizzazione permette l'adattamento del software a una particolare regione 
 
 Occorre tener presente che, nella maggior parte dei casi, con internazionalizzazione si intendono entrambi gli aspetti.
 
---- 
+---
 
-# CLASSE Locale
+## CLASSE Locale
 
 ```java
 nomeLocale = new Locale("language", "country", ["variant"]);
@@ -23,6 +23,8 @@ Alcune sue classi possiedono metodi che usano Locale.
 Un esempio è la classe NumberFormat che possiede metodi che usano Locale per individuare l'uso della virgola o del punto per i numeri decimali.
 
 ---
+
+## Currency
 
 Un altro esempio sono le classi (come Currency) che usano Locale per rappresentare date, orari e valute.
 
@@ -80,7 +82,6 @@ Queste risorse hanno un formato molto semplice, in quanto contengono praticament
 
 ---
 
-
 Per creare l'oggetto ResourceBundle bisogna invocare il metodo getBundle() passandogli come parametri il nome del bundle (cioè la risorsa) e il nome del locale.
 
 Il metodo getBundle() per prima cosa cerca il file bundle specificato nel costruttore, se non lo trova cerca i file di proprietà di default.
@@ -94,7 +95,6 @@ System.out.println("testo");
 ```
 
 ---
-
 
 La stringa che ritorna dall'esempio è quella che corrisponde alla chiave che abbiamo specificato e sarà nella lingua identificata dal Locale.
 
@@ -130,7 +130,10 @@ public class Example {
 }
 ```
 
+---
+
 ## I file `.properties`
+
 ```java
 
 /* MyBundle.properties */
