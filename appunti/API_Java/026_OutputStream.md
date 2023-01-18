@@ -1,7 +1,5 @@
 # I membri di OutputStream.
 
-
-
 ## Metodi pubblici:
 
 metodo|descrizione

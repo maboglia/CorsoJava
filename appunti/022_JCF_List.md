@@ -46,7 +46,7 @@ ArrayList ha prestazioni nettamente superiori rispetto a Vector in quanto quest�
 
 ---
 
-## I metodi delle Collection sono i seguenti:
+## I metodi delle Collection sono i seguenti
 
 * `public boolean add(Object o)`
 aggiunge un oggetto alla Collection
@@ -60,6 +60,11 @@ verifica l’esistenza di un oggetto all’interno della collection
 verifica l’esistenza di una collection all’interno della collection considerata
 * `public boolean isEmpty()`
 verifica se la collection è vuota
+
+---
+
+## I metodi delle Collection (segue)
+
 * `public Iterator iterator()`
 restituisce un’istanza di Iterator che permette di scorrere gli elementi
 * `public boolean remove(Object o)`
@@ -77,7 +82,6 @@ restituisce la collection sottoforma di array
 
 ### ArrayList e Vector: Metodi pubblici
 
-
 * `void add(int i, Object o)`
 Aggiunge l'oggetto o alla lista, disponendolo alla posizione i. Se la posizione è già occupata, l'elemento corrispondente e tutti i suoi successivi verranno avanzati di un posto.
 * `boolean add(Object o)`
@@ -92,6 +96,11 @@ Restituisce true se la lista contiene l'oggetto o.
 Restituisce true se o è una lista dal contenuto identico all'oggetto di invocazione.
 * `Object get(int i)`
 	Restituisce l'elemento alla posizione i.
+
+---
+
+### ArrayList e Vector: Metodi pubblici (segue)
+
 * `int indexOf(Object o)`
 	Restituisce l'indice dell'elemento o, o -1 se l'elemento non compare nella lista.
 * `boolean isEmpty()`
@@ -131,13 +140,12 @@ while (it.hasNext()) {			|while (it.hasNext()) {
 La classe ArrayList permette di gestire array di oggetti dinamici. E indica il tipo di elementi contenuti nell’array.
 
 ## Costruttore 
-`ArrayList()` 
+`new ArrayList<T>()` 
 
 Costruisce una array dinamico di oggetti con una capacità iniziale di 10 elementi. 
 
 ---
 
-Alcuni Metodi 
 ### add 
 * `boolean add (Object oggetto)`
 Inserisce l'oggetto specificato alla fine del vettore restituisce true 
