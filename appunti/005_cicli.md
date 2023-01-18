@@ -22,10 +22,10 @@ if (condition) {
 ```
 
 ---
-## else if
+## else if [opzionale]
 
 ```java
-[optional]
+
 else if (condition2) {
     
     //statements;
@@ -34,12 +34,11 @@ else if (condition2) {
 
 ```
 
-## else
+## else [opzionale]
 
 ```java
 
 
-[optional]
 else {
     
 //statements;
@@ -50,8 +49,10 @@ else {
 
 ---
 
+## Switch Statements
 
-## switch Statements
+Serve per gestire in maniera più ordinata varie condizioni,
+è un modo più elegante in alcune situazioni.
 
 ```java
 switch (espressione) {
@@ -82,7 +83,7 @@ switch (espressione) {
 
 ## Cicli definiti - for
 
-Se il numero di iterazioni è prevedibile dal contenuto delle variabili all'inizio del ciclo.
+Se il numero di iterazioni è **prevedibile**.
 
 ```java
 
@@ -93,7 +94,7 @@ for (init; condition; adjustment) {
 }
 ```
 
-Esempio: prima di entrare nel ciclo so già che verrà ripetuto 10 volte
+### Esempio: prima di entrare nel ciclo so già che verrà ripetuto 10 volte
 
 ```java
 int n=10;
@@ -108,18 +109,24 @@ for (int i=0; i<n; ++i) {
 
 ## Cicli indefiniti - while
 
-Se il numero di iterazioni non è noto all'inizio del ciclo.
+Se il numero di iterazioni **non è noto** all'inizio del ciclo.
 
 ```java
-
 while (condition) {
-
-//statements;
-
+    //statements;
 }
+
+//Esempio: quando il numero di iterazioni dipende da valori in input
+while(true) {
+    x = Integer.parseInt(JOptionPane.showInputDialog("Immetti numero positivo"));
+    if (x > 0) break;
+}
+
 ```
 
 ## do-while
+
+Quando voglio eseguirealmeno una volta l'istruzione, anche se la condizione è impostata su `false`
 
 ```java
 
@@ -131,20 +138,9 @@ do {
 
 ```
 
-### Esempio: quando il numero di iterazioni dipende da valori in input
-
-```java
-while(true) {
-    x = Integer.parseInt(JOptionPane.showInputDialog("Immetti numero positivo"));
-    if (x > 0) break;
-}
-
-```
-
 ---
 
-
-## Cicli con filtro
+## Cicli con condizione
 
 Vengono passati in rassegna un insieme di valori e per ognuno di essi viene fatto un test per verificare se il valore ha o meno una certa proprietà in base alla quale decideremo se prenderlo in considerazione o meno.
 
@@ -158,7 +154,7 @@ for (int i=1; i<100; ++i) { // passa in rassegna tutti i numeri fra 1 e 100
 
 ```
 
-## Cicli con filtro e interruzione
+## Cicli con interruzione: break
 
 Se il ciclo viene interrotto dopo aver filtrato un valore con una data proprietà.
 
@@ -213,6 +209,8 @@ for (int i=0; i<v.length; ++i) // passa in rassegna tutti gli indici dell'array 
     if (v[i]>0) // filtra le celle che contengono valori positivi
         somma = somma + v[i]; // accumula valore nella variabile accumulatore
 ```
+
+---
 
 ## Cicli annidati
 

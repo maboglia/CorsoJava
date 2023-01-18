@@ -1,12 +1,13 @@
 # Le variabili e le costanti
 
-* Una variabile è un'area di memoria identificata da un nome
-* Il suo scopo è di contenere un valore di un certo tipo
+* Una variabile è **un'area di memoria** identificata da un **nome**
+* Il suo scopo è di contenere un valore di un **certo tipo**
 * Serve per memorizzare dati durante l'esecuzione di un programma
 * Il nome di una variabile è un **identificatore**
-  * può essere costituito da lettere, numeri e underscore 
-  * non deve coincidere con una parola chiave del linguaggio
+  * può essere costituito da lettere, numeri e underline
+  * NON deve coincidere con una parola chiave del linguaggio
   * è meglio scegliere un **identificatore** che sia **significativo** per il programma
+* Il modificatore **final** trasforma la variabile in una costante
 
 ---
 
@@ -32,6 +33,7 @@ Usando le variabili il programma risulta essere **più chiaro**:
 
 * Si capisce meglio quali siano la base e l'altezza del triangolo
 * Si capisce meglio che cosa calcola il programma
+* Evita la necessità di un commento per spiegare cosa contiene
 
 
 ---
@@ -64,14 +66,13 @@ area = base * altezza /2;
 * Esempi:
 
 ```java
-base =5;
-altezza =10;
+base = 5;
+altezza = 10;
 area = base * altezza /2;
 ```
 
 * I valori di base e altezza vengono letti e usati nell'espressione
 * Il risultato dell'espressione viene scritto nella variabile area
-
 
 ---
 
@@ -91,9 +92,23 @@ int altezza = 10;
 int area = base * altezza / 2;
 ```
 
-
 ---
 
+## uso della variabile locale
+
+```java
+
+//1) dichiarazione
+int mioNumero;
+//2) inizializzazione
+mioNumero = 100;
+//3) uso della variabile locale
+System.out.println(mioNumero);
+```
+
+**NB**: una variabile **locale** deve **SEMPRE** essere **inizializzata**, prima di poter essere utilizzata
+
+---
 ## Costanti
 
 Nella dichiarazione delle variabili che **NON DEVONO** mai cambiare valore si può utilizzare il modificatore **final**
@@ -103,11 +118,11 @@ final double IVA = 0.22;
 ```
 
 * Il modificatore **final** trasforma la variabile in una costante
-* Il compilatore si occuperà di controllare che il valore delle costanti non venga **mai modificato** (ri-assegnato) dopo essere stato inizializzato.
+* Il compilatore si occuperà di controllare che il valore delle costanti non venga **mai modificato** (impedisce di assegnare un nuovo valore) dopo essere stato inizializzato.
 * Aggiungere il modificatore **final** non cambia funzionamento programma, ma serve a prevenire errori di programmazione
 * Si chiede al compilatore di controllare che una variabile non venga ri-assegnata per sbaglio
 * Sapendo che una variabile non cambierà mai valore, il compilatore può anche eseguire delle **ottimizzazioni** sull'uso di tale variabile.
-
+* Il modificatore final viene utilizzato anche in altri contesti (per esempio nei metodi)
 
 ---
 

@@ -1,6 +1,5 @@
 # Tipi di dato primitivi
 
-
 * In un linguaggio ad oggetti puro, vi sono solo classi e istanze di classi:
 * i dati dovrebbero essere definiti sotto forma di oggetti
 
@@ -20,9 +19,7 @@
 
 ---
 
-## Tabelle riassuntive: tipi di dato 
-
-**Primitive Data Types**
+## Tabelle riassuntive: tipi di dato primitivi
 
  | type    | bits       |
  | ------- | ---------- |
@@ -80,44 +77,53 @@ char ch2 = ';';
 
 ---
 
+## uso della variabile locale
 
 ```java
 
-		//1) dichiarazione
-		int mioNumero;
-		//2) inizializzazione
-		mioNumero = 100;
-		//3) uso della variabile locale
-		System.out.println(mioNumero);
-		
-		//dichiarazione e inizializzazione contemporanea
-		short mioShort = 851;
-		System.out.println(mioShort);
-		
-		long mioLong = 34093L;
-		System.out.println(mioLong);
-		
-		double mioDouble = 3.14159732;
-		System.out.println(mioDouble);
-		
-		float mioFloat = 324.4f;
-		System.out.println(mioFloat);
-		
-		char mioChar = 'y';
-		System.out.println(mioChar);
-		
-		boolean mioBoolean = true;
-		System.out.println(mioBoolean);
-		
-		byte mioByte = 127;
-		System.out.println(mioByte);
+//1) dichiarazione
+int mioNumero;
+//2) inizializzazione
+mioNumero = 100;
+//3) uso della variabile locale
+System.out.println(mioNumero);
+```
 
+**NB**: una variabile **locale** deve **SEMPRE** essere **inizializzata**, prima di poter essere utilizzata
+
+---
+
+## Esempio tipi primitivi
+
+```java
+//dichiarazione e inizializzazione contemporanea
+byte mioByte = 127;
+System.out.println(mioByte);
+
+short mioShort = 851;
+System.out.println(mioShort);
+
+long mioLong = 34093L;
+System.out.println(mioLong);
+
+double mioDouble = 3.14159732;
+System.out.println(mioDouble);
+
+float mioFloat = 324.4f;
+System.out.println(mioFloat);
+
+char mioChar = 'y';
+System.out.println(mioChar);
+
+boolean mioBoolean = true;
+System.out.println(mioBoolean);
 ```
 
 ---
 
+## Tipi primitivi: range di valori ammissibili
+
 ![tipi primitivi](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/tipi.png)
 
-[Everything you'll ever need to work with Java primitive types!](https://github.com/deletescape/Primitives)
-
-[esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/02_tipi)
+* [Everything you'll ever need to work with Java primitive types!](https://github.com/deletescape/Primitives)
+* [Altri esempi sui tipi primitivi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/02_tipi)
