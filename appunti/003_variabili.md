@@ -113,20 +113,25 @@ System.out.println(mioNumero);
 ## Scope: ambito di visibilità delle variabili
 
 ```java
-public class Scope1
-{
-   public static void main(String[] args)      
-   {
+class Nascoste {
+  static int x,y; //Def. var. globali
 
-         double r;
+  static void f() {
+    int x;
+    x = 1;  // Locale
+    y = 1;  // Globale
+    System.out.println(x);
+    System.out.println(y);
+  }
 
-         r = 3.14;
-
-
-      System.out.println(r);
-   }
+  public static void main (String[] args) {
+    x = 0; // Globale
+    y = 0; // Globale
+    f();
+    System.out.println(x);
+    System.out.println(y);
+  }
 }
-
 ```
 
 **NB**: una variabile **locale** deve **SEMPRE** essere **inizializzata**, prima di poter essere utilizzata
