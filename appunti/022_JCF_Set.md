@@ -31,6 +31,8 @@ L’interfaccia `Set` prevede, tra l’altro, un’interfaccia derivata `SortedS
 
 * `HashSet` risulta più performante di `TreeSet`.
 
+---
+
 ## Esempio di `HashSet` e `TreeSet`
 
 HashSet | TreeSet
@@ -47,6 +49,8 @@ while (it.hasNext) {			|	while (it.hasNext()) {
 
 L’output sarà:
 	c a b			|			a b c
+
+---
 
 Come si può vedere dagli output, l’elemento duplicato (b) non è stato aggiunto e nel caso del `TreeSet` sono stati anche ordinati.
 
