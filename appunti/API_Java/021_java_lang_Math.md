@@ -3,6 +3,8 @@ I membri della classe Math.
 
 Questa classe serve per fare calcoli matematici e ha due attributi:
 
+## Costanti pubbliche statiche
+
 ```java
 static double E	; //E di Eulero
 static double PI; //Pi greca
@@ -25,11 +27,6 @@ static double PI; //Pi greca
 * arrotondamento classico, per eccesso e per difetto
 * generazione di numeri casuali
 
----
-
-## Costanti pubbliche statiche:
-* double E
-* double PI
 
 ---
 
