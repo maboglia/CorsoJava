@@ -6,7 +6,6 @@
 * Java prevede un sofisticato utilizzo dei tipi (primitivi e classi) che consente di individuare molti errori al momento della compilazione del programma 
 * Ciò nonostante si possono verificare varie situazioni impreviste o anomale durante l'esecuzione del programma che possono causare l'interruzione del programma stesso
 
----
 
 ## Ad esempio:
   * Tentativi di accedere a posizioni di un array che sono fuori dai limiti
@@ -26,7 +25,6 @@
   * Le eccezioni controllate vincolano il programmatore ad occuparsi della loro gestione
   * Le eccezioni controllate possono rendere troppo pesante la scrittura del codice
 
----
 
 **Unchecked** (o non controllate) per le quali il gestore non è obbligatorio
   * Per essere unchecked un'eccezione *deve essere una sottoclasse di **RuntimeException***, altrimenti è checked
@@ -46,33 +44,10 @@
 * le eccezioni definite dal programmatore
 
 
----
 
 ## La gerarchia delle eccezioni
 
 La classe **Exception** descrive un'eccezione generica, situazioni anomale più specifiche sono descritte dalle sottoclassi di Exception
-                                                          
-
-
-Le RuntimeException comprese nel pacchetto java.lang
---------------------------------------------------------------------------------
-Eccezione|Significato
----|---
-ArithmeticException|Operazione matematica non valida.
-ArrayIndexOutOfBoundsException|L'indice usato in un array non è valido.
-ArrayStoreException|Incompatibilità di tipo durante la assegnazione di un elemento di un array.
-ClassCastException|Conversione di tipo non valida.
-IllegalArgumentException|Argomento di un metodo non valido.
-IllegalMonitorStateException|Monitor su thread non valido.
-IllegalStateException|Oggetto in uno stato che non consente l'operazione richiesta.
-IllegalThreadStateException|Operazione incompatibile con lo stato attuale di un thread.
-IndexOutOfBoundsException|Indice non valido.
-NegativeArraySizeException|Array creato con dimensione negativa.
-NullPointerException|Utilizzo non corretto di un valore null.
-NumberFormatException|Conversione non valida di una stringa in un valore numerico.
-SecurityException|Violazione delle norme di sicurezza.
-StringIndexOutOfBoundsException|Indice non valido per i caratteri di una stringa.
-UnsupportedOperationException|Operazione non supportata.
 
 
 ---
@@ -89,10 +64,10 @@ UnsupportedOperationException|Operazione non supportata.
     programmatore)
   4. se il programmatore non ha previsto nessun gestore, interrompe il
     programma e stampa il messaggio di errore
-    
-    ---
-    
-    ## Il costrutto try-catch
+
+---
+
+## Il costrutto try-catch
 
 * Il costrutto try-catch consente di 
   * __monitorare__ una porzione di programma (all'interno di un metodo)
@@ -134,7 +109,7 @@ catch (NumberFormatException e) {
 catch (Exception e) {
   //codice
 }
-```                                     
+```
 
 ---
 
@@ -147,8 +122,6 @@ catch (Exception e) {
   * in alcuni casi le eccezioni non vanno gestite: segnalano un errore di programmazione che deve essere corretto!
     * verifica la correttezza dei cicli nel caso di scorrimento di una collezione
 
-    
-
 ---
 
 ## Il comando throw
@@ -160,12 +133,11 @@ catch (Exception e) {
 * Il costruttore di una eccezione prende come parametro (opzionale) una stringa di descrizione
 
 ```java
-           throw new Exception("Operazione non consentita");
-                throw new AritmeticException ();
-                throw new EccezionePersonalizzata ();
+throw new Exception("Operazione non consentita");
+    throw new AritmeticException ();
+    throw new EccezionePersonalizzata ();
 ```
 
----
 
 * Il comando throw si può usare direttamente dentro un try-catch,
 * l'uso più comune di throw è all'interno dei metodi
@@ -179,9 +151,7 @@ catch (Exception e) {
 * Chi invoca il metodo dovrà preoccuparsi di implementare un gestore delle eccezioni possibilmente sollevate
 * Questo consente di evitare valori di ritorno dei metodi che servono solo a dire se l'operazione è andata a buon fine
 * in caso di problemi si lancia l'eccezione, non si restituisce un valore particolare
-    
 
----
 
 ## parola chiave __throws__
 
@@ -195,8 +165,6 @@ catch (Exception e) {
 throws IOException , IllegalParameterException { ... }
 ```
 
-
-
 ---
 
 ### Terminologia
@@ -204,16 +172,11 @@ throws IOException , IllegalParameterException { ... }
 * **Errore**: problema con la logica applicativa, errore del programmatore (non gestibile)
 * **Eccezione**: evento anomalo recuperabile
 
-
----
-
 ### Una istruzione non terminata
 
 * Causa la creazione di un oggetto che rappresenta quanto è successo
 * Tale oggetto appartiene a una classe derivata da Throwable
 * Tali oggetti sono le eccezioni
-
----
 
 ### Si dice che l'eccezione
 
@@ -269,10 +232,7 @@ catch(IOException e) {
 }
 ```
 
----
-
-### Costrutti try-catch possono essere annidati 
-(catch che include try-catch) 
+* Costrutti try-catch possono essere annidati
 
 ---
 
@@ -298,11 +258,11 @@ finally {
 }
 ```
 
-
 ---
 
-### Permette a un metodo di gettare
-eccezioni
+### Permette a un metodo di lanciare eccezioni
+
+```java
 <tipoMetodo> <nomeMetodo> (<argomenti>)
 throws <classeEccezione 1 >
 [, <classeEccezione 2 >
@@ -310,26 +270,19 @@ throws <classeEccezione 1 >
 [, <classeEccezione n > ]...] {
 ...
 }
+```
 
 ---
 
-### Le eccezioni gettate sono catturate
-(responsabilità) dal chiamante
-si chiama il metodo leggi deve sapere se la lettura è andata a buon fine oppure no
+### Le eccezioni lanciate sono catturate dal chiamante
 
-* Con try-catch gestiamo l'eccezione a livello
-del chiamato (metodo leggi)
-
-* Sapere se la lettura è andata a buon fine, non "interessa" tanto al chiamato (metodo leggi)
-quanto al chiamante 
-
----
+* Con try-catch gestiamo l'eccezione a livello del chiamato (metodo leggi)
+* Sapere se la lettura è andata a buon fine, non "interessa" tanto al chiamato quanto al chiamante 
 
 ### throw
 
-Permette di "gettare" in modo "esplicito" una eccezione a livello di codice ```throw <oggettoEccezione>```
+Permette di "lanciare" in modo "esplicito" una eccezione a livello di codice ```throw <oggettoEccezione>```
 
----
 
 ### Provoca
 * L'interruzione dell'esecuzione del metodo
@@ -371,5 +324,29 @@ z = x/y;
   * ridefinire il metodo costruttore
   * definire dei metodi get/set
   * etc.
-  
-[esempi]([../esempi/08Eccezioni/snippets_eccezioni.md](https://github.com/maboglia/CorsoJava/blob/master/esempi/06Eccezioni/))
+
+---
+
+## Le RuntimeException comprese nel pacchetto java.lang
+
+Eccezione|Significato
+---|---
+ArithmeticException|Operazione matematica non valida.
+ArrayIndexOutOfBoundsException|L'indice usato in un array non è valido.
+ArrayStoreException|Incompatibilità di tipo durante la assegnazione di un elemento di un array.
+ClassCastException|Conversione di tipo non valida.
+IllegalArgumentException|Argomento di un metodo non valido.
+IllegalMonitorStateException|Monitor su thread non valido.
+IllegalStateException|Oggetto in uno stato che non consente l'operazione richiesta.
+IllegalThreadStateException|Operazione incompatibile con lo stato attuale di un thread.
+IndexOutOfBoundsException|Indice non valido.
+NegativeArraySizeException|Array creato con dimensione negativa.
+NullPointerException|Utilizzo non corretto di un valore null.
+NumberFormatException|Conversione non valida di una stringa in un valore numerico.
+SecurityException|Violazione delle norme di sicurezza.
+StringIndexOutOfBoundsException|Indice non valido per i caratteri di una stringa.
+UnsupportedOperationException|Operazione non supportata.
+
+---
+
+[esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/10_eccezioni.md)
