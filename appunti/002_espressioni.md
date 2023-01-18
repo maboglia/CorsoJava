@@ -2,7 +2,7 @@
 
 Un'espressione è un costrutto costituito da variabili, operatori e invocazioni di metodi, costruiti in base alla sintassi del linguaggio, che restituisce un singolo valore.
 
-|[](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/01_operatori_tipi_expr/int-expressions.png)
+![](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/01_operatori_tipi_expr/int-expressions.png)
 
 ---
 
