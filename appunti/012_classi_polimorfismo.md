@@ -47,12 +47,11 @@ n = n * 2
 
 ### In OOP: abbiamo un numero e vogliamo raddoppiarlo
 
-Nella programmazione orientata agli oggetti si invia un "messaggio" all'oggetto chiamando un metodo per raddoppiare: ```n.raddoppia();```
+Nella programmazione orientata agli oggetti si invia un "messaggio" all'oggetto chiamando un metodo per raddoppiare: `n.raddoppia();`
 
 Un oggetto di tipo Operazione riceve la chiamata al metodo `raddoppia(<TIPO>)`, riconosce il tipo dell'argomento e richiama il metodo implementato per quel tipo.
 
 ---
-
 
 ### Codice esempio
 
