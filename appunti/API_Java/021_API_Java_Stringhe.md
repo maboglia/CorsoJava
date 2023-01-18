@@ -95,6 +95,8 @@ Esegue una comparazione lessicale. Ritorna un intero:
 * `= 0` se le due stringhe sono identiche
 * `> 0` se la stringa corrente è maggiore di other
 
+---
+
 ```java
 int indexOf(int ch)
 ```
@@ -114,6 +116,8 @@ Restituisce il numero di caratteri di cui è costituita la stringa corrente
 String replace(char oldChar, char newChar)
 ```
 Restituisce una nuova stringa, dove tutte le occorrenze di oldChar sono rimpiazzate con newChar
+
+---
 
 ```java
 String substring(int startIndex)
