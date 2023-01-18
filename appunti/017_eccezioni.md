@@ -240,7 +240,7 @@ catch(IOException e) {
 
 * sia che si verifichino le eccezioni
 * sia che NON si verifichino le eccezioni
-* Anche in presenza di istruzioni **```return, break e continue```**
+* Anche in presenza di istruzioni **return, break e continue**
 
 ```java
 try {
