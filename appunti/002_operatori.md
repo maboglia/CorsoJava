@@ -12,15 +12,15 @@
 
 | Operatore | Significato    |
 | --------- | -------------- |
-| +         | addizione      |
-| \-        | sottrazione    |
-| \*        | motiplicazione |
-| /         | divisione      |
-| %         | resto          |
-| ++var     | preincremento   |
-| \--var    | predecremento   |
-| var++     | postincremento  |
-| var--     | postdecremento  |
+| `+`         | addizione      |
+| `-`        | sottrazione    |
+| `*`        | motiplicazione |
+| `/`         | divisione      |
+| `%`         | resto          |
+| `++var`     | preincremento   |
+| `--var`    | predecremento   |
+| `var++`     | postincremento  |
+| `var--`     | postdecremento  |
 
 ---
 
@@ -28,12 +28,12 @@
 
 | Operatore | Significato               |
 | --------- | ------------------------- |
-| \=        | addizione                |
-| +=        | addizione assegnazione       |
-| \-=       | sottrazione assegnazione    |
-| \*=       | motiplicazione assegnazione |
-| /=        | divisione assegnazione       |
-| %=        | resto assegnazione      |
+| `=`        | assegnazione                |
+| `+=`        | addizione assegnazione       |
+| `-=`       | sottrazione assegnazione    |
+| `*=`       | motiplicazione assegnazione |
+| `/=`        | divisione assegnazione       |
+| `%=`        | resto assegnazione      |
 
 ---
 
@@ -43,12 +43,12 @@
 
 | Operatore | Significato              |
 | --------- | ------------------------ |
-| <         | minore di                |
-| <=        | minore di o uguale a    |
-| \>        | maggiore di             |
-| \>=       | maggiore di o uguale a |
-| \==       | uguale a                 |
-| !=        | non uguale / diverso     |
+| `<`         | minore di                |
+| `<=`        | minore di o uguale a    |
+| `>`        | maggiore di             |
+| `>=`       | maggiore di o uguale a |
+| `==`       | uguale a                 |
+| `!=`        | non uguale / diverso     |
 
 
 ---
@@ -57,14 +57,14 @@
 ### Operatori per Booleani
 
 
-* Bitwise (interi): & | ^ << >> ~
+* Bitwise (interi): `& | ^ << >> ~`
 
 | Operatore | Significato       |
 | --------- | ----------------- |
-| &&        | short circuit AND |
-| \|\|      | short circuit OR  |
-| !         | NOT               |
-| ^         | exclusive OR      |
+| `&&`        | AND logico |
+| `||`      | OR logico  |
+| `!`         | NOT               |
+| `^`         | exclusive OR      |
 
 #### Attenzione:
 
@@ -88,7 +88,7 @@
 ---
 
 
-## Operatori matematici
+## Operazioni matematiche complesse
 
  Operazioni matematiche complesse sono permesse dalla **classe Math** (package java.lang)
 
@@ -99,13 +99,13 @@
 * `Math.exp (x) calcola e^x`
 * `Math.pow (x, y) calcola x^y`
 
-Esempio
+### Esempio
 
 * `z = Math.sin (x) – Math.PI / Math.sqrt(y)`
 
 ---
 
-## Type Comparison Operator
+## Comparazione del tipo di dato: Type Comparison Operator
 
 * `instanceof` - Verifica se un certo oggetto è istanza di un certo Tipo di dato
 * p.es: `if (a instanceof Automobile) //fai qualcosa`
@@ -127,5 +127,6 @@ Literal|Represents
 `\xdd`|Hexadecimal character
 `\udddd`|Unicode character
 
-[esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/00_Foundations)
+
+* [esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/00_Foundations)
 

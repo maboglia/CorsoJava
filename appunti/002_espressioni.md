@@ -1,6 +1,10 @@
-# Espressioni aritmetiche
+# Espressioni
 
 Un'espressione è un costrutto costituito da variabili, operatori e invocazioni di metodi, costruiti in base alla sintassi del linguaggio, che restituisce un singolo valore.
+
+|[](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/01_operatori_tipi_expr/int-expressions.png)
+
+---
 
 ## per esempio nel programma
 
@@ -19,8 +23,7 @@ Il programma risolve l'espressione aritmetica `5*10/2`, memorizza in `area` il r
 
 ---
 
-
-### Espressioni aritmetiche e precedenza
+## Espressioni aritmetiche e precedenza
 
 singoli "letterali"
 
@@ -29,17 +32,17 @@ singoli "letterali"
 
 operatori aritmetici
 
-* moltiplicazione *
-* divisione /
-* modulo % (resto della divisione tra interi)
-* addizione +
-* sottrazione -
+* moltiplicazione `*`
+* divisione `/`
+* modulo `%` (resto della divisione tra interi)
+* addizione `+`
+* sottrazione `-`
 
-Le operazioni sono elencate in **ordine decrescente di priorità** ossia 3+2*5 fa 13, non 25
+Le operazioni sono elencate in **ordine decrescente di priorità** ossia `3+2*5` fa 13, non 25
 
-Le parentesi tonde cambiano l'ordine di valutazione degli operatori ossia (3+2)*5 fa 25
+Le parentesi tonde cambiano l'ordine di valutazione degli operatori ossia `(3+2)*5` fa 25
 
-Inoltre, tutti gli operatori sono associativi a sinistra ossia 3+2+5 corrisponde a (3+2)+5 quindi 18/6/3 fa 1, non 9
+Inoltre, tutti gli operatori sono associativi a sinistra ossia `3+2+5` corrisponde a `(3+2)+5` quindi `18/6/3` fa 1, non 9
 
 ---
 
