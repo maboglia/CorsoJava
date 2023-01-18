@@ -8,7 +8,9 @@ static double E	; //E di Eulero
 static double PI; //Pi greca
 ```
 
-### metodi disponibili per le principali funzioni matematiche: 
+---
+
+### Mette a disposizione i metodi per le principali funzioni matematiche
 
 * valore assoluto, 
 * tangente, 
@@ -23,11 +25,13 @@ static double PI; //Pi greca
 * arrotondamento classico, per eccesso e per difetto
 * generazione di numeri casuali
 
+---
 
 ## Costanti pubbliche statiche:
 * double E
 * double PI
 
+---
 
 ## Metodi pubblici statici:
 
@@ -44,6 +48,10 @@ static double PI; //Pi greca
 * double **exp**(double a)
 * double **floor**(double a)
 * double **log**(double a)
+
+---
+
+## Metodi pubblici statici:
 * double **max**(double a, double b)
 * float **max**(float a, float b)
 * int **max**(int a, int b)
