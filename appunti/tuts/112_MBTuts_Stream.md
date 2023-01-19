@@ -1,7 +1,9 @@
-# Streams 
+# Stream e programmazione funzionale
 
 ## programmazione funzionale
+
 Gli stream portano  in Java la programmazione funzionale
+
 ---
 
 ### vantaggi
@@ -42,6 +44,7 @@ Gli stream portano  in Java la programmazione funzionale
 * `collect` salva gli elementi in una nuova collezione
 * altre opzioni riducono lo stream ad un singolo elemento sommario
 * `count()`, `max()`, `min()`, `reduce()`, `summaryStatistics()`
+
 ---
 
 ## Intstream
@@ -93,7 +96,9 @@ Stream.of("pino", "gino", "lino", "nino").findFirst().ifPresent(System.out::prin
 ---
 
 ## array
+
 ![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_09.jpg)
+
 ---
 
 ## average
@@ -122,6 +127,7 @@ List<String> moto = Arrays.asList("Yamaha", "BMW", "Honda", "Ducati");
 ---
 
 ## text file
+
 ![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_12.jpg)
 
 ---
@@ -140,11 +146,15 @@ Stream<String> studenti = Files.lines(Paths.get("aula.txt"), Charset.forName("Cp
 ---
 
 ## file e count
+
 ![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_15.jpg)
+
 ---
 
 ## split e foreach
+
 ![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_16.jpg)
+
 ---
 
 ## rimappa su hashmap
@@ -176,7 +186,9 @@ Stream<String> studenti = Files.lines(Paths.get("aula.txt"), Charset.forName("Cp
 ---
 
 ## reduce
+
 ![Java 8 Stream](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Java8_Streams_18.jpg)
+
 ---
 
 ## summaryStatistics
