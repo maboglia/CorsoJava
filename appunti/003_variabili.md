@@ -155,6 +155,19 @@ final double IVA = 0.22;
 
 ---
 
+## L'attributo final
+
+### Definisce un dato elemento come non più modificabile
+
+* Applicato a variabile la trasforma in costante
+* Applicato a un metodo
+  * Ne impedisce l'overriding in classi derivate
+  * Ne rende possibile l'inlining (binding statico - più efficiente)
+* Applicato a una classe
+  * Impedisce di derivare da essa altre classi (la classe deve essere una foglia dell'albero di ereditarietà)
+
+---
+
 ### Input dall'utente
 
 * Per ricevere valori in input dall'utente si può usare la classe Scanner, contenuta nel package **java.util**

@@ -35,7 +35,7 @@ HelloWorld!
 ### Classi ...
 
 * Non contengono direttamente istruzioni
-* Contengono metodi
+* Possono contenere proprietà e metodi
 
 ---
 
