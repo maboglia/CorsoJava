@@ -11,11 +11,6 @@
 * Ogni attributo o metodo non static esiste concretamente **in ogni istanza creata**
 * Esiste in “molteplici versioni” se vengono create più istanze
 * **Non esiste** concretamente **se il programma non crea almeno un’istanza** (tramite operatore new)
-
-
-
----
-
 * Ogni attributo o metodo static esiste concretamente a livello di classe
 * Esiste in un’unica versione
 * La sua esistenza non dipende da cosa fa il programma
@@ -25,11 +20,8 @@
 ## Variabili di classe
 
 * Rappresentano proprietà comuni a tutte le istanze
-
 * Esistono anche in assenza di istanze (oggetti)
-
 * Dichiarazione: static
-
 * Accesso: NomeClasse.attributo
 
 ```java
@@ -45,6 +37,7 @@ Automobile.numeroRuote;
 ## Metodi di classe
 
 ### Funzioni non associate ad alcuna istanza
+
 * Dichiarazione: static
 * Accesso: nome-classe . metodo()
 
@@ -58,17 +51,16 @@ double y = Math.cos(x);
 }
 }
 ```
+
 ---
 
 ## Accesso a metodi e attributi static
+
 * Essendo definiti a livello di classe, attributi e metodi static sono acceduti/invocati tramite il nome della classe:
 * `Math.sqrt (2);`
-* `String.valueOf ( Math .PI);`
+* `String.valueOf( Math .PI);`
 * In caso di classe istanziabile ibrida si può accedere tramite una qualunque istanza della classe, ma è meglio non farlo.
 * Nel corpo di un metodo `static` non si può accedere ad attributi e metodi non `static` della stessa classe
-
----
-
 * Il metodo `static` deve poter essere invocato a livello di classe (anche in assenza di istanze) mentre attributi e metodi non `static` esistono solo se c’è almeno un’istanza
 * Se nel corpo di un metodo appare il nome di un metodo o attributo `static` della sua classe è sottinteso che sia preceduto dal nome della classe stessa
 * Eventuali mescolanze improprie di `static` e non `static` causano errori di compilazione
