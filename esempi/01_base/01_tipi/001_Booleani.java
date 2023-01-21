@@ -1,9 +1,15 @@
-public class Booleani {
-    //variabile esterna al metodo main, quindi statica...
-    static boolean b3;
-
-    public static void main(String[] args) {
-
+	public static void main(String[] args) {
+		
+        //dichiarazione ed inizializzazione
+        boolean a, b = false;
+        //inizializzazione
+        a = true;
+        
+        if (a == b)
+                System.out.println("a e b sono uguali");
+        else
+                System.out.println("a e b sono diversi");
+			
         boolean b1 = true;
         boolean b2 = false;
 
@@ -20,6 +26,6 @@ public class Booleani {
 
         String sBool = "true";
         boolean parsed = Boolean.parseBoolean(sBool);
-        System.out.println(parsed);
-    }
-}
+        System.out.println(parsed);		
+
+	}

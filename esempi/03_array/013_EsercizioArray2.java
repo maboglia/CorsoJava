@@ -1,4 +1,3 @@
-package week2;
 
 public class EsercizioArray2 {
 

@@ -5,8 +5,8 @@ class OperatoreIncremento{
 		a++;
 		System.out.println("Dopo a++ a vale " + a);
 		b = a++;
-                System.out.println("Dopo b = a++ a vale " + a + " e b vale "+ b);
-                b = ++a;
-                System.out.println("Dopo b = ++a a vale " + a + " e b vale "+ b);
+		System.out.println("Dopo b = a++ a vale " + a + " e b vale "+ b);
+		b = ++a;
+		System.out.println("Dopo b = ++a a vale " + a + " e b vale "+ b);
 	}
 }

@@ -1,7 +1,3 @@
-package week2;
-
-
-import java.lang.reflect.Array;
 
 public class EsercizioArray1 {
 
