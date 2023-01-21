@@ -126,7 +126,7 @@ while(true) {
 
 ## do-while
 
-Quando voglio eseguirealmeno una volta l'istruzione, anche se la condizione è impostata su `false`
+Quando voglio eseguire almeno una volta l'istruzione, anche se la condizione è impostata su `false`
 
 ```java
 
@@ -169,6 +169,26 @@ for (int i=0; i<v.length; ++i) // passa in rassegna tutti gli indici dell'array 
     }
 // qui trovato vale true se e solo se vi sono numeri negativi in v
 
+```
+
+---
+
+## Cicli con salto: continue
+
+```java
+   {
+      int a;
+
+      for ( a = 1; a <= 10 ; a++ )            // Run a = 1, 2, ..., 10
+      {
+         if ( a == 4 )
+         {
+            continue;              // Skip printing 4...
+         }
+
+         System.out.println(a);    // Print a 
+      }
+   }
 ```
 
 ---
