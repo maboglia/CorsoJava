@@ -1,17 +1,11 @@
 # Le classi
 
----
-
 ## Definizione di una Classe
-
----
-
-### Definizione
 
 ```java
 class NomeClasse {
-<campi>
-<metodi>
+    <proprietà, attributi, campi>
+    <metodi>
 }
 ```
 
@@ -21,10 +15,10 @@ class NomeClasse {
 
 ```java
 class DataOnly {
-boolean b;
-char c;
-int i;
-float f;
+    boolean b;
+    char c;
+    int i;
+    float f;
 }
 ```
 
@@ -82,7 +76,6 @@ public class Studente {
  static int cont=0;
 ```
 
-
 ---
 
 ## metodo costruttore dell'oggetto
@@ -104,20 +97,23 @@ public Studente(String nome, String cognome, int anno) {
 }
 
 ```
+
 ---
 
 ### Visibilità Dati & Metodi - Incapsulamento
 
-* Public: visibili all'esterno della classe
-* Private: visibili solo dall'interno della classe
-* Protected: visibili ai discendenti e dall'interno del package
-* Nessuna specifica (visibilità package, friendly): ...
+* `Public`: visibili all'esterno della classe
+* `Private`: visibili solo dall'interno della classe
+* `Protected`: visibili ai discendenti e dall'interno del package
+* `Nessuna` specifica (visibilità package, friendly): ...
 
 NB: La definizione di classe non rappresenta alcun oggetto. Occorre istanziare usando l'operatore `new`
 
 ---
 
 ## metodi getters e setters
+
+Dato che le proprietà sono private, per accedervi in lettura o scrittura occorrono dei metodi c.d. accessori (getters) e mutatori (setters)
 
 ```java
 /**
@@ -127,14 +123,16 @@ public String getNome() {
  return nome;
 }
 
-
 public void setAssente() {
  this.presente = false;
+}
+//in caso di boolean il getter ha prefisso is
+public boolean isAssente() {
+ return this.assente;
 }
 
 
 ```
-
 
 ---
 
@@ -158,8 +156,6 @@ public String toString() {
 }
 
 ```
-
----
 
 ---
 
