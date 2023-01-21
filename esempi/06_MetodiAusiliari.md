@@ -1,6 +1,6 @@
 # metodi ausiliari
 
-Logica imperativa / procedurale in Java, applicazione del principio divide et impera: suddividere le istruzioni complesse in istruzioni elementari creando metodi privati statici di ausilio al metodo principale.
+Logica `imperativa` / `procedurale` in Java, applicazione del principio `divide et impera`: suddividere le istruzioni complesse in istruzioni elementari creando metodi privati statici di ausilio al metodo principale.
 
 ---
 
@@ -35,9 +35,10 @@ public class MetodiAusiliari {
 }
 
 ```
----
 
 ---
+
+## getInput
 
 ```java
 import java.util.Scanner;
@@ -66,16 +67,13 @@ public class GetInput {
         String miaStringa = stringa.next();
         
         return miaStringa;
-
     }
-
-
 }
 ```
 
 ---
 
-## esempio
+## esempio calcolatrice
 
 ```java
 import java.util.Scanner;
@@ -99,7 +97,7 @@ public class SimpleCalcolatrice {
  }
  
  /**
-  * Mio metodo per catturare l'input dell'utente
+  * Metodo per catturare l'input dell'utente
   * @param domanda String contenente la domanda da inoltrare all'utente
   * @return un double che rappresenta l'input utente
   */
@@ -128,16 +126,12 @@ public class SimpleCalcolatrice {
   return mioDouble;
   
  }
-
-
- 
- 
 }
 ```
 
 ---
 
-## esempio
+## esempio TuttiUguali
 
 ```java
 		/*TuttiUguali
@@ -161,7 +155,8 @@ public class SimpleCalcolatrice {
 
 ---
 
-## esempio ripetitore ripete una stringa str per num volte
+## esempio ripetitore 
+ripete una stringa str per num volte
 
 ```java 
 		/**
@@ -253,8 +248,6 @@ public class SimpleCalcolatrice {
 ## esempio Programma che legge due numeri interi e ne stampa la somma
 
 ```java
-/* Programma che legge due numeri interi e ne
-   stampa la somma */
 class Ingresso {
 
   static int leggiIntero() {
