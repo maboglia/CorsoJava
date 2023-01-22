@@ -4,6 +4,8 @@
 * Nella OOP tale termine si riferisce ai metodi: per definizione, il polimorfismo è la capacità di un oggetto, la cui classe fa parte di una gerarchia, di chiamare la versione corretta di un metodo.
 * Quindi il polimorfismo è necessario quando si ha una gerarchia di classi.
 
+![polimorfismo UML](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Polimorfismo1.png)
+
 ---
 
 ## Polimorfismo per metodi mediante overloading
