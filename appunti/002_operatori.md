@@ -128,5 +128,5 @@ Literal|Represents
 `\udddd`|Unicode character
 
 
-* [esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/00_Foundations)
+* [esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/01_Operatori)
 
