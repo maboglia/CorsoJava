@@ -276,3 +276,5 @@ class Ingresso {
 }
 
 ```
+
+* [esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/01_base/03_metodi_ausiliari)
