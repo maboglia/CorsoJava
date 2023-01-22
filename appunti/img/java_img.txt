@@ -57,10 +57,6 @@ Language/01_lang_base/03_system/stdin-api.png
 Language/01_lang_base/03_system/stdout-api.png
 Language/01_lang_base/03_system/system.png
 Language/02_costrutti/break.png
-Language/02_costrutti/condition.png
-Language/02_costrutti/Construct_IfElse.png
-Language/02_costrutti/Construct_IfThen.png
-Language/02_costrutti/Construct_WhileLoop.png
 Language/02_costrutti/do-while.png
 Language/02_costrutti/for.png
 Language/02_costrutti/for-while.png
@@ -68,8 +64,6 @@ Language/02_costrutti/if-else2.png
 Language/02_costrutti/if-else.png
 Language/02_costrutti/nested-if-else.png
 Language/02_costrutti/switch.png
-Language/02_costrutti/The logical flow of an if - else statement.png
-Language/02_costrutti/The logical flow of a while loop.png
 Language/02_costrutti/while.png
 Language/04_array/array2d-init.png
 Language/04_array/array2d.png
