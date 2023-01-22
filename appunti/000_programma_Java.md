@@ -1,8 +1,32 @@
 # Corso OOP JAVA
 
-## Schema Argomenti
+## Concetti principali
 
 ![schema UF](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/JavaRecap.drawio.png)
+
+---
+
+## Relazioni tra oggetti
+
+![Relazioni tra oggetti](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/UML_ClassDiagram/Class-Diagram-Relationships.png)
+
+---
+
+## Piattaforma Java
+
+![Piattaforma Java](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Plateform-Java.png)
+
+---
+
+## Restful web services con Java
+
+![Restful web services con Java](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/RESTful-Introduction.png)
+
+---
+
+## Tecnologie JavaEE JakartaEE
+
+![Tecnologie JavaEE JakartaEE](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/JEE/02_01-JavaEE7_tecnologie.jpg)
 
 ---
 
