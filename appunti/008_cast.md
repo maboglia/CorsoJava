@@ -14,6 +14,10 @@
 
 ---
 
+![casts](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/01_operatori_tipi_expr/casts.png)
+
+---
+
 ## casting dei tipi reference (oggetti)
 
 * è permesso solo in caso di **ereditarietà**
