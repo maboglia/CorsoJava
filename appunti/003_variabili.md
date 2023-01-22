@@ -9,6 +9,8 @@
   * è meglio scegliere un **identificatore** che sia **significativo** per il programma
 * Il modificatore **final** trasforma la variabile in una costante
 
+![dichiarazione variabile](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/01_operatori_tipi_expr/assignment.png)
+
 ---
 
 ### esempio
