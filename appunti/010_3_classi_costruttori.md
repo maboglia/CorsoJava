@@ -2,8 +2,6 @@
 
 Specifica le operazioni di inizializzazione (attributi, etc.) che vogliamo vengano eseguite su ogni oggetto della classe appena viene creato
 
----
-
 ## Il metodo **costruttore** ha:
 
 * Lo **stesso nome** della classe: inizia quindi _con lettera Maiuscola_
@@ -23,8 +21,6 @@ Spesso si usa l'**overloading** dei metodi definendo diversi costruttori per gli
 
 La distruzione di oggetti non è a carico del programmatore (garbage-collection)
 
----
-
 ### Il costrutto new
 
 * Crea una nuova istanza della classe specificata, allocandone la memoria
@@ -41,12 +37,10 @@ String s = new String ("ABC");
 
 ### Per "gestire" una classe occorre
 
-* Accedere ai metodi della classe
-* Accedere agli attributi della classe
+* Accedere mediante il reference ai metodi della classe
+* Accedere mediante il reference agli attributi della classe
 
----
-
-## Messaggi
+### inviare Messaggi
 
 * L'invio di un messaggio provoca l'esecuzione del metodo
 

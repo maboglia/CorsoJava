@@ -487,19 +487,14 @@ a.mettiInMoto();
 
 ## Type Casting di Oggetti
 
----### È possibile modificare il tipo di un riferimento ad oggetto soltanto tra 
 
-tipi in relazione di ereditarietà
-
+È possibile modificare il tipo di un riferimento ad oggetto soltanto tra tipi in relazione di ereditarietà
+L'oggetto rimane invariato
 
 ---
-
-### L'oggetto rimane invariato
-
 
 ## Upcasting
 
----
 
 ### Caratteristiche
 
@@ -507,7 +502,9 @@ tipi in relazione di ereditarietà
 * È sempre affidabile (è sempre vero che un auto elettrica è un auto)
 * È automatico
 
----### Poichè ogni classe è (direttamente o indirettamente) sottoclasse di 
+---
+
+### Poichè ogni classe è (direttamente o indirettamente) sottoclasse di 
 
 Object è sempre possibile fare upcast di qualsiasi oggetto su Object
 

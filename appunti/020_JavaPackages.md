@@ -1,6 +1,7 @@
 # Package in Java
 
 ## Organizzazione delle classi
+
 * La libreria standard segue il metodo di
 organizzazione delle classi previsto da Java: le classi
 tra loro “affini” sono raggruppate in package
@@ -14,6 +15,7 @@ gerarchica dei package simile a quella delle cartelle
 ---
 
 ## Esempi di package
+
 * `java.lang` Package fondamentale con
 classi di uso molto comune
 * `java.io` Package per l’Input/Output
@@ -26,6 +28,7 @@ testi e dati in formato testuale
 ---
 
 ## Uso di classi appartenenti ad un package
+
 * Solo le classi appartenenti al package java.lang sono
 automaticamente disponibili in ogni programma
 * Per l’uso di altri package in una classe è necessario
@@ -40,6 +43,7 @@ ma è più tipico importare comunque tutto il package:
 ---
 
 ## I package
+
 * All’atto pratico un package è un insieme di file `.class`
 tipicamente archiviati in un file compresso `.zip` o `.jar`
 * Ogni classe appartiene ad un package: la
@@ -61,15 +65,15 @@ presenti nella stessa directory
 
 ---
 
-
 ## Nomi
 
-### Un package è identificato univocamente
-da un nome costruito gerarchicamente (notazione puntata)
+Un package è identificato univocamente da un nome costruito gerarchicamente (notazione puntata)
+
 * `java.util`
 * `it.bogliaccino.utilita`
 
 ### Convenzione per generare nomi unici
+
 * Usare come prefisso del nome del package il proprio nome internet invertito
 
 ## Creazione di un package
@@ -88,10 +92,12 @@ Specifica che la classe pubblica contenuta in quel file fa parte di quel package
 ## Utilizzo di un package
 
 ### Un package può essere utilizzato
+
 * Mediante importazione del package
 * Mediante riferimento esplicito
 
 ### Importare un package significa
+
 * Importare la singola classe del package
 `import nomePackage.nomeClass;`
 * Importare tutte le classi del package
@@ -105,10 +111,12 @@ Specifica che la classe pubblica contenuta in quel file fa parte di quel package
 
 
 ### Riferimento esplicito (senza import)
+
 * Specificare il nome per intero `java.util.ArrayList `  
 * Invece di import `java.util.*;`
 
 ### Collisioni
+
 * Se due package definiscono classi omonime possono essere importati entrambi
 * La collisione si verifica solo quando si utilizzano gli elementi in conflitto
 
@@ -125,11 +133,9 @@ La directory in cui il package risiede deve avere un path che corrisponde a quel
 
 * File zippato ( .zip)
 * File archiviato ( .jar)
-Esempio
-`CLASSPATH=c:\java\jdk\lib;c:\java\mylibs`
+* Esempio `CLASSPATH=c:\java\jdk\lib;c:\java\mylibs`
 
 ---
-
 
 ## Visibilità
 
@@ -148,6 +154,7 @@ Esempio
 ---
 
 ### Classi all'interno di un package
+
 * public: elementi (attributi metodi) public della classe sono visibili anche fuori dal package 
 * package (VALORE DI DEFAULT): elementi (attributi metodi) public della classe sono visibili solo all'interno del package
 
@@ -155,4 +162,4 @@ Esempio
 
 ## Java packages
 
-[list of packages](https://docs.oracle.com/en/java/javase/13/docs/api/allpackages-index.html)
+[list of packages Java 13](https://docs.oracle.com/en/java/javase/13/docs/api/allpackages-index.html)

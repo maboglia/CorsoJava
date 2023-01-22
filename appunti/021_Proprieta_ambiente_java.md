@@ -1,5 +1,5 @@
-Le proprietà automaticamente disponibili nell'ambiente Java.
------------------------------------------------------------------
+# Le proprietà automaticamente disponibili nell'ambiente Java
+
 Chiave|Valore
 ---|---
 java.version|La versione di Java in uso.

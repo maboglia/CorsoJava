@@ -18,6 +18,7 @@ L'utilizzo di varargs è sicuro se e solo se:
 
 * Non memorizziamo nulla nell'array creato implicitamente. 
 * Non lasciamo che un riferimento all'array generato _sfugga_ al metodo
+
 ---
 
 ```java
