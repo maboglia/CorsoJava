@@ -44,8 +44,7 @@
 
 * `Home/End` Jump to beginning / jump to end of indention. Press home twice to jump to beginning of line
 * `Ctrl+Home`/End Jump to beginning / jump to end of source
-* `Ctrl+Arrow` Right/A rrow Left
-Jump one word to the left / one word to the right
+* `Ctrl+Arrow` Right/Arrow Left Jump one word to the left / one word to the right
 * `Ctrl+Shift+Arrow` Down/Arrow Up Jump to previous / jump to next method
 * `Ctrl+L` Jump to Line Number. To hide/show line numbers, press `ctrl+F10` and select 'Show Line Numbers'
 * `Ctrl+Q` Jump to last location edited
@@ -65,8 +64,7 @@ Jump one word to the left / one word to the right
 * `Shift+Arrow` Down/ Arrow Up Expand selection by one line down / one line up
 * `Shift+End`/Home Expand selection to end / to beginning of line
 * `Ctrl+A` Select all
-* `Alt+Shift`+Arrow Up Expand selection to current element (e.g. current
-one-line expression or content within brackets)
+* `Alt+Shift`+Arrow Up Expand selection to current element (e.g. current one-line expression or content within brackets)
 * `Alt+Shift`+Arrow Left/Arrow Right Expand selection to next / previous element
 * `Alt+Shift`+Arrow Down Reduce previously expanded selection by one step
 

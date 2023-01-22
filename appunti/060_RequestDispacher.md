@@ -7,9 +7,15 @@ messaggi tra il server ed i client stessi che hanno effettuato la richiesta.
 Girano all'interno di un Application Server e possono essere considerate delle classi
 che estendono le funzionalità del server.
 
+## MVC pattern con le servlet
+
+![servlet](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/JSP/model2.jpg)
+
 ---
 
-![](./img/JSP/httpsession.JPG)
+### httpsession
+
+![httpsession](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/JSP/httpsession.JPG)
 
 ---
 
@@ -33,7 +39,9 @@ servlet ha i controllo totale sul flusso dell'applicazione.
 
 ---
 
-![](./img/JSP/requestdispatcher.JPG)
+### requestdispatcher
+
+![requestdispatcher](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/JSP/requestdispatcher.JPG)
 
 ---
 
@@ -95,10 +103,14 @@ eseguito dopo che la JSP ha finito la sua esecuzione
 
 ---
 
-![](./img/JSP/JSP_include.jpeg)
+### JSP_include
+
+![JSP_include](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/JSP/JSP_include.jpeg)
 
 ---
 
-![](./img/JSP/JSP_forward.jpeg)
+### JSP_forward
+
+![JSP_forward](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/JSP/JSP_forward.jpeg)
 
 ---
