@@ -16,6 +16,11 @@ java.specification.version|La versione delle specifiche di Java in uso.
 java.specification.vendor|Il produttore delle specifiche di Java in uso.
 java.specification.name|Il nome delle specifiche di Java in uso.
 java.class.version|La versione delle classi di Java.
+
+---
+
+Chiave|Valore
+---|---
 java.class.path|Il percorso delle classi di Java.
 java.library.path|Il percorso delle librerie di Java.
 java.io.tmpdir|Il percorso della directory dei file temporanei.
@@ -29,3 +34,27 @@ line.separator|La sequenza impiegata dal sistema in uso per esprimere il ritorno
 user.name|Il nome dell'utente che sta usando l'applicazione.
 user.home|La home directory dell'utente che sta usando l'applicazione.
 user.dir|L'attuale cartella di lavoro dell'utente che sta usando l'applicazione.
+
+---
+
+## codice `System.getProperty("java.version")`
+
+```java
+  String[] keys = {
+   "java.version","java.vendor","java.vendor.url",
+   "java.home","java.vm.specification.version",
+   "java.vm.specification.vendor","java.vm.specification.name",
+   "java.vm.version","java.vm.vendor","java.vm.name",
+   "java.specification.version","java.specification.vendor",
+   "java.specification.name","java.class.version",
+   "java.class.path","java.library.path","java.io.tmpdir",
+   "java.exist.dirs","os.name","os.arch","os.version",
+   "file.separator","path.separator","line.separator",
+   "user.name","user.home","user.id"
+  };
+  for(int i=0; i<keys.length; i++){
+   System.out.println(
+    "[" + keys[i] + "] " + System.getProperty(keys[i]));
+  }
+
+```
