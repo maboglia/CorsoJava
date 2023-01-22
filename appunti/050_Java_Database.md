@@ -6,6 +6,8 @@ eseguire istruzioni SQL sui database.
 L'**API JDBC** si trova nel pacchetto java.sql; contiene poche classi concrete, è composta
 principalmente da interfacce indipendenti dal database.
 
+![JDBC](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/02_classe_base/function.png)
+
 ---
 
 Le **API JDBC** consentono di accedere a qualsiasi tipo
@@ -118,6 +120,7 @@ public Connection connetti() {
 
 
 ```
+
 ---
 
 connettersi ad un database
@@ -132,7 +135,6 @@ Se necessario, la sintassi per effettuare l'operazione è la seguente:
 Class.forName(stringa_driver);
 
 ```
-
 
 ---
 

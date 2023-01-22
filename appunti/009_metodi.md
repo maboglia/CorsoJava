@@ -7,6 +7,8 @@
 * Uno strumento per **ri-utilizzare** il lavoro già svolto
 * Uno  strumento per rendere il **programma più chiaro** e leggibile
 
+![metodo](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/02_classe_base/function.png)
+
 ---
 
 ## quando e perché usare i metodi
