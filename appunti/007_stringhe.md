@@ -186,3 +186,13 @@ String toUpperCase()
 ```
 
 Restituisce una nuova stringa equivalente a quella corrente ma con tutti i caratteri maiuscoli
+
+
+---
+
+## codice esempi d'uso
+
+* [raccolta esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/04_Stringhe.md)
+* [altri esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_API_Java/P01_java.lang/String)
+* [stringbuilder](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_API_Java/P01_java.lang/StringBuilder)
+

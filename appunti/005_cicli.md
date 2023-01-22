@@ -246,7 +246,12 @@ for (int i=0; i<n; i++) {
 
 ```
 
-* [esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/02_control-flow)
+---
+
+## codice esempi d'uso
+
+* [raccolta esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/03_Condizioni_Cicli.md)
+* [altri esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/02_control-flow)
 * [01_if-elseif-else](https://github.com/maboglia/CorsoJava/tree/master/esempi/02_control-flow/01_if-elseif-else)
 * [02_switch](https://github.com/maboglia/CorsoJava/tree/master/esempi/02_control-flow/02_switch)
 * [03_while](https://github.com/maboglia/CorsoJava/tree/master/esempi/02_control-flow/03_while)

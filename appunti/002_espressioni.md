@@ -57,3 +57,5 @@ Inoltre, tutti gli operatori sono associativi a sinistra ossia `3+2+5` corrispon
 * `25/2.0 = 12.5`
 * `1.5 + (25/2) = 13.5` (attenzione all'ordine di esecuzione delle operazioni)
 * `2 + (25.0/2.0) = 14.5` usare le parentesi ()
+
+[esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/01_Operatori_Tipi.md)

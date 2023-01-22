@@ -125,5 +125,6 @@ System.out.println(mioBoolean);
 
 ![tipi primitivi](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/tipi.png)
 
+* [raccolta esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/02_tipi_primitivi.md)
+* [altri esempi sui tipi primitivi](https://github.com/maboglia/CorsoJava/blob/master/esempi/01_base/01_tipi)
 * [Everything you'll ever need to work with Java primitive types!](https://github.com/deletescape/Primitives)
-* [Altri esempi sui tipi primitivi](https://github.com/maboglia/CorsoJava/blob/master/esempi/01_base/01_tipi)
