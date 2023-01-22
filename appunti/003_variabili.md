@@ -173,4 +173,4 @@ final double IVA = 0.22;
 * Per ricevere valori in input dall'utente si può usare la classe Scanner, contenuta nel package **java.util**
 * La classe Scanner deve essere richiamata usando la direttiva import prima dell'inizio del corpo della classe
 
-[esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/00_Foundations)
+[esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/02_variabili)
