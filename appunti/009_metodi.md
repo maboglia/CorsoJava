@@ -88,4 +88,8 @@ In inglese sono spesso introdotti da `is` oppure `has`: isMale(), hasNext().
 
 ---
 
-[Esempi sui metodi ausiliari](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/03_metodi_ausiliari)
+## codice esempi d'uso
+
+* [raccolta esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/06_MetodiAusiliari.md)
+* [Esempi sui metodi ausiliari](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/03_metodi_ausiliari)
+
