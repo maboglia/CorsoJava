@@ -103,7 +103,6 @@ JDBC/JDBC.png
 JEE/02_01-JavaEE7_tecnologie.jpg
 JEE/02_01-JavaEE7_versioni.jpg
 JEE/02_01-Java EE.jpg
-JEE_Technologies.jpg
 JSP/forward.JPG
 JSP/httpsession.JPG
 JSP/include.JPG
