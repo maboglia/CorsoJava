@@ -94,3 +94,9 @@ Con PHP e ASP il webserver interpreterà il codice ad ogni richiesta prima di se
   * `<jsp:plugin>`
 
 * azioni personalizzate - custom tags (vedi sotto tag libraries)
+
+---
+
+## Inclusioni JSP
+
+![JSP include](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/prj_JSP_schema_inclusioni.png)
