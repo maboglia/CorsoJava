@@ -1,7 +1,7 @@
 # Corso OOP JAVA - Schemi e riferimenti
 
-Il corso segue utilizza i seguenti schemi, concetti e parole chiave del linguaggio. 
-Lo scopo è quello di fornire una visione di insieme del linguaggio e delle tecnologie collegate, prima di approfondire i singoli aspetti.
+Allo scopo di fornire una visione di insieme del linguaggio e delle tecnologie collegate, prima di approfondire i singoli aspetti,
+sono disponibili i seguenti schemi che mostrano i principali concetti e parole chiave del linguaggio.
 
 ---
 
