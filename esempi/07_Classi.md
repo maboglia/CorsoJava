@@ -159,7 +159,7 @@ public String toString() {
 
 ---
 
-## model - altri esempi di classi incapsulate
+## model - esempi di classi incapsulate
 
 * [model Allievo](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/00_model/Allievo.java)
 * [model Automobile](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/00_model/Automobile.java)
