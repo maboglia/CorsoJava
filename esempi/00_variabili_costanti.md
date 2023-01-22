@@ -1,4 +1,4 @@
-# Varibili e costanti
+# Variabili e costanti
 
 ## Dichiarazione e assegnamento di valore a una variabile
 
