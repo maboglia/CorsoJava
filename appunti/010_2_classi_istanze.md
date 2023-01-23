@@ -6,6 +6,8 @@
 * Stato (valore attuale degli attributi)
 * Identificatore univoco (reference - handle - puntatore)
 
+![oggetti](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/model/car_class.jpeg)
+
 ---
 
 ## Per creare un oggetto occorre
