@@ -16,7 +16,7 @@ Sul mio sito trovi gli appunti anche in formato slide :)
 ## esempi codice Java
 
 * [variabili e costanti](https://github.com/maboglia/CorsoJava/blob/master/esempi/00_variabili_costanti.md)
-* [operatori e tipi]https://github.com/maboglia/CorsoJava/blob/master/esempi/01_Operatori_Tipi.md)
+* [operatori e tipi](https://github.com/maboglia/CorsoJava/blob/master/esempi/01_Operatori_Tipi.md)
 * [tipi primitivi](https://github.com/maboglia/CorsoJava/blob/master/esempi/02_tipi_primitivi.md)
 * [control flow: condizioni e cicli](https://github.com/maboglia/CorsoJava/blob/master/esempi/03_Condizioni_Cicli.md)
 * [stringhe](https://github.com/maboglia/CorsoJava/blob/master/esempi/04_Stringhe.md)
@@ -73,14 +73,15 @@ Sul mio sito trovi gli appunti anche in formato slide :)
 
 1. libreria (model Libro)
 2. todoList - blocco note (array)
-3. rubrica contatti (array)
-4. geometria piana
-5. orchestra strumenti musicali
-6. aula studenti
-7. distributore automatico
-8. banca: conti correnti
-9. banca: clienti
-10. gestionale dipendenti
-11. gestionale ordini
-12. appuntamento - persona - stanza
+3. [rubrica contatti](https://github.com/maboglia/java-projects-01-base/tree/main/01_Rubrica_telefonica) (array)
+4. [cambiamonete](https://github.com/maboglia/java-projects-01-base/tree/main/01_cambiamonete)
+5. [geometria piana](https://github.com/maboglia/TSS2021/tree/main/Prj_12_Geometria/src)
+6. orchestra strumenti musicali
+7. aula studenti
+8. [distributore automatico](https://github.com/maboglia/TSS2021/tree/main/Prj_09_DistributoreAutomatico/src) [v2](https://github.com/maboglia/TSS2021/tree/main/Prj_09_DistributoreAutomatico2/src)
+9. banca: conti correnti
+10. banca: clienti
+11. gestionale dipendenti
+12. gestionale ordini
+13. appuntamento - persona - stanza
 
