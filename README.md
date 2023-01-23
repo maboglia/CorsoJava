@@ -1,32 +1,30 @@
 # Corso Java
 
-## sito web
-[bogliaccino.it](http://www.bogliaccino.it/)
+## sito web 
+
+Sul mio sito trovi gli appunti anche in formato slide :)
+
+[bogliaccino.it](http://www.mauro.bogliaccino.it/public/java)
 
 ## Appunti, dispense, tutorial
 
 * [appunti](https://github.com/maboglia/CorsoJava/tree/master/appunti)
-* [slide](https://github.com/maboglia/CorsoJava/blob/master/appunti/00_link_slide.md)
-* [dispense](https://github.com/maboglia/CorsoJavaRisorse)
+* [dispense e altro materiale java](https://github.com/maboglia/CorsoJavaRisorse)
+* [altre risorse per programmare](https://github.com/maboglia/ProgrammingResources)
 
 
 ## esempi codice Java
 
-* [esempi 01_base](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base)
-* [esempi 02_API_Java](https://github.com/maboglia/CorsoJava/tree/master/esempi/02_API_Java)
-* [esempi 03_array](https://github.com/maboglia/CorsoJava/tree/master/esempi/03_array)
-* [esempi 04_control](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_control-flow)
-* [esempi 05_OOP](https://github.com/maboglia/CorsoJava/tree/master/esempi/05_OOP)
-* [esempi 06Eccezioni](https://github.com/maboglia/CorsoJava/tree/master/esempi/06Eccezioni)
-* [esempi 07Asserzioni](https://github.com/maboglia/CorsoJava/tree/master/esempi/07Asserzioni)
-* [esempi 08Networking](https://github.com/maboglia/CorsoJava/tree/master/esempi/08Networking)
-* [esempi 09_DesignPatterns](https://github.com/maboglia/CorsoJava/tree/master/esempi/09_DesignPatterns)
-* [esempi 10Gui](https://github.com/maboglia/CorsoJava/tree/master/esempi/10Gui)
-* [esempi 11JDBC](https://github.com/maboglia/CorsoJava/tree/master/esempi/11JDBC)
-* [esempi 12NewFeatures](https://github.com/maboglia/CorsoJava/tree/master/esempi/12NewFeatures)
-* [esempi 13_concurrency](https://github.com/maboglia/CorsoJava/tree/master/esempi/13_concurrency)
-* [esempi 14_Collections](https://github.com/maboglia/CorsoJava/tree/master/esempi/14_Collections)
-
+* [variabili e costanti](https://github.com/maboglia/CorsoJava/blob/master/esempi/00_variabili_costanti.md)
+* [operatori e tipi]https://github.com/maboglia/CorsoJava/blob/master/esempi/01_Operatori_Tipi.md)
+* [tipi primitivi](https://github.com/maboglia/CorsoJava/blob/master/esempi/02_tipi_primitivi.md)
+* [control flow: condizioni e cicli](https://github.com/maboglia/CorsoJava/blob/master/esempi/03_Condizioni_Cicli.md)
+* [stringhe](https://github.com/maboglia/CorsoJava/blob/master/esempi/04_Stringhe.md)
+* [array](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_Array.md)
+* [metodi ausiliari](https://github.com/maboglia/CorsoJava/blob/master/esempi/06_MetodiAusiliari.md)
+* [classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/07_Classi.md)
+* [Eccezioni](https://github.com/maboglia/CorsoJava/blob/master/esempi/10_eccezioni.md)
+* [typecasting](https://github.com/maboglia/CorsoJava/blob/master/esempi/09_typecasting.md)
 
 ## esercizi
 
@@ -46,14 +44,14 @@
 1. Lancia dadi
 2. Pietra-forbici-carta
 3. Tris
-4. sudoku
-5. Wordle
-6. Hang-man
-7. crucigramma
-8. master mind
-9. quiz lingue - dizionario ITA-ENG
-10. Quiz capitali
-11. Guess the number - three numbers
+4. Guess the number - three numbers
+5. sudoku
+6. Wordle
+7. Hang-man
+8. crucigramma
+9. master mind
+10. quiz lingue - dizionario ITA-ENG
+11. Quiz capitali
 
 ## esercitazioni
 
@@ -73,12 +71,16 @@
 
 ## esempi
 
-1. gestionale dipendenti
-2. geometria piana
-3. orchestra strumenti musicali
-4. aula studenti
-5. distributore automatico
-6. banca
-7. blocco note
-8. appuntamento - persona - stanza
+1. libreria (model Libro)
+2. todoList - blocco note (array)
+3. rubrica contatti (array)
+4. geometria piana
+5. orchestra strumenti musicali
+6. aula studenti
+7. distributore automatico
+8. banca: conti correnti
+9. banca: clienti
+10. gestionale dipendenti
+11. gestionale ordini
+12. appuntamento - persona - stanza
 
