@@ -63,7 +63,7 @@ Sul mio sito trovi gli appunti anche in formato slide :)
 6. biglietteria
 7. cinema multi sala
 8. flex bus
-9. canzoni - cra playlist - jukebox
+9. canzoni - crea playlist - jukebox
 10. dizionario ita-eng
 11. agenda
 12. agenzia viaggi
