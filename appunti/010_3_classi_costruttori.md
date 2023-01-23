@@ -11,6 +11,8 @@ Non possono esistere attributi non inizializzati
 
 * Gli attributi vengono inizializzati comunque con valori di **default**
 
+![costruttore](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/model/Class-Concept.png)
+
 ---
 
 ## il costruttore è sempre presente
