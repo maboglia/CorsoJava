@@ -2,7 +2,6 @@
 
 I cosiddetti metodi getters e setters, cioè accessori e mutatori, regolano l'accesso alle proprietà ed ai metodi delle classi
 
-
 ## Principi di encapsulation e visibilità
 
 * **Modularità** = diminuire le interazioni
@@ -75,7 +74,7 @@ class Automobile {
 
 //creazione oggetto
 Automobile a = new Automobile();
-a.colore = "bianco"; // error
+a.colore = "bianco"; // errore
 a.vernicia("verde"); // ok
 ```
 

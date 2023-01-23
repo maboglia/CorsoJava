@@ -21,11 +21,11 @@
 
 ## Classi `istanziabili`
 
-* Una classe `istanziabile` fornisce il prototipo di una famiglia di oggetti (istanze della classe) che hanno struttura simile ma proprietà distinte a livello individuale (valori diversi degli attributi e quindi risultati diversi prodotti dai metodi)
-* L'uso tipico è la costruzione di istanze (tramite new) e quindi l'invocazione di metodi su di esse
+* Una classe `istanziabile` fornisce il prototipo di una famiglia di **oggetti** (istanze della classe) che hanno **struttura simile** ma **proprietà distinte** a livello individuale (valori diversi degli attributi e quindi risultati diversi prodotti dai metodi)
+* L'uso tipico è la **costruzione** di istanze (tramite new) e quindi l'**invocazione di metodi** su di esse
 * Nel caso di una classe `istanziabile` attributi e metodi rappresentano proprietà possedute da tutti gli oggetti istanza della classe
-* Ogni oggetto istanza di una classe ha una sua identità "contiene" individualmente gli attributi e i metodi definiti nella classe
-* Ogni volta che si costruisce un'istanza con new si crea un nuovo insieme di attributi e metodi individuali
+* Ogni oggetto istanza di una classe **ha una sua identità** "contiene" individualmente gli attributi e i metodi definiti nella classe
+* Ogni volta che si costruisce un'istanza con **new** si crea un nuovo insieme di attributi e metodi individuali
 
 ---
 
