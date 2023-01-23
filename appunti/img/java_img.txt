@@ -11,9 +11,6 @@ diagrammi_flusso2.jpg
 diagrammi_flusso3.jpg
 dialogue.jpg
 directory.JPG
-factory_pattern_uml_diagram.jpeg
-Anatomy-of-bike.jpg
-bicicletta_model.jpeg
 scheda_schedario.jpg
 scheda_schedario_rotante2.jpg
 scheda_schedario_rotante.jpg
@@ -79,6 +76,7 @@ Pattern/MVC_JSP.png
 Pattern/mvc_pattern_uml_diagram.jpg
 Pattern/MVC.png
 Pattern/SchemaMVC.png
+Pattern/factory_pattern_uml_diagram.jpeg
 Plateform-Java.png
 Polimorfismo1.png
 singleton_pattern_uml_diagram.jpg
@@ -112,3 +110,5 @@ model/car_class.jpeg
 model/Class-Concept.png
 model/lego-bricks-as-connections.png
 model/mattoncini.webp
+model/Anatomy-of-bike.jpg
+model/bicicletta_model.jpeg
