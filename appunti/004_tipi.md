@@ -13,9 +13,17 @@
 * Rappresentazione indipendente dalla piattaforma
 
 ---
+
 ## Tipi di dato in Java
 
 ![primitive vs reference](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/PrimitiveVsReference.png)
+
+
+---
+
+## I mattoncini fondamentali
+
+![I mattoncini fondamentali](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/model/mattoncini.webp)
 
 ---
 
