@@ -108,3 +108,7 @@ JSP/httpsession.JPG
 JSP/include.JPG
 JSP/model2.jpg
 JSP/requestdispatcher.JPG
+model/car_class.jpeg
+model/Class-Concept.png
+model/lego-bricks-as-connections.png
+model/mattoncini.webp
