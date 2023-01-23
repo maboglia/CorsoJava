@@ -2,16 +2,20 @@
 
 Specifica le operazioni di inizializzazione (attributi, etc.) che vogliamo vengano eseguite su ogni oggetto della classe appena viene creato
 
-## Il metodo **costruttore** ha:
+![costruttore](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/model/Class-Concept.png)
 
-* Lo **stesso nome** della classe: inizia quindi _con lettera Maiuscola_
-* Tipo di ritorno **non** specificato
+---
+
+## Caratteristiche del costruttore
+
+Il metodo **costruttore** ha
+
+* Lo **stesso nome** della classe: **inizia** quindi **con lettera Maiuscola**
+* **Tipo** di ritorno **non** specificato
 
 Non possono esistere attributi non inizializzati
 
 * Gli attributi vengono inizializzati comunque con valori di **default**
-
-![costruttore](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/model/Class-Concept.png)
 
 ---
 
