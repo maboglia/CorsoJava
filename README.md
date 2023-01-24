@@ -44,9 +44,9 @@ Sul mio sito trovi gli appunti anche in formato slide :)
 1. Lancia dadi
 2. Pietra-forbici-carta
 3. Tris
-4. Guess the number - three numbers
+4. Guess the number - three numbers [Jato69](https://github.com/maboglia/Jato69/tree/main/Prj03_IndovinaNumero)
 5. sudoku
-6. Wordle
+6. Wordle [cloud2022](https://github.com/maboglia/Cloud2022/tree/main/workspace/Prj19_Wordle)
 7. Hang-man
 8. crucigramma
 9. master mind
@@ -71,17 +71,39 @@ Sul mio sito trovi gli appunti anche in formato slide :)
 
 ## esempi
 
-1. libreria (model Libro)
-2. todoList - blocco note (array)
+1. libreria (model Libro) [jato69](https://github.com/maboglia/Jato69/tree/main/Prj05_Libri)
+2. todoList - blocco note (array) [jato69](https://github.com/maboglia/Jato69/tree/main/Prj07_BloccoNote) [TSS2020](https://github.com/maboglia/TSS2020/tree/master/Prj01_ListaSpesa/src)
 3. [rubrica contatti](https://github.com/maboglia/java-projects-01-base/tree/main/01_Rubrica_telefonica) (array)
-4. [cambiamonete](https://github.com/maboglia/java-projects-01-base/tree/main/01_cambiamonete)
-5. [geometria piana](https://github.com/maboglia/TSS2021/tree/main/Prj_12_Geometria/src)
-6. orchestra strumenti musicali
-7. aula studenti
-8. [distributore automatico](https://github.com/maboglia/TSS2021/tree/main/Prj_09_DistributoreAutomatico/src) [v2](https://github.com/maboglia/TSS2021/tree/main/Prj_09_DistributoreAutomatico2/src)
-9. banca: conti correnti
-10. banca: clienti
-11. gestionale dipendenti
-12. gestionale ordini
-13. appuntamento - persona - stanza
+4. [Calcola IMC](https://github.com/maboglia/java-projects-01-base/tree/main/02imc)
+5. [cambiamonete](https://github.com/maboglia/java-projects-01-base/tree/main/01_cambiamonete)
+6. [geometria piana](https://github.com/maboglia/TSS2021/tree/main/Prj_12_Geometria/src) [jato69](https://github.com/maboglia/Jato69/tree/main/Prj08_Geometria1) [cloud2022](https://github.com/maboglia/Cloud2022/tree/main/workspace/Prj09_Geometria)
+7. [orchestra strumenti musicali](https://github.com/maboglia/Jato69/tree/main/Prj12_Orchestra)
+8. aula studenti [jato69](https://github.com/maboglia/Jato69/tree/main/Prj06_AulaInformatica)
+9. Veicoli [jato69](https://github.com/maboglia/Jato69/tree/main/Prj13_Veicoli)
+10. [distributore automatico](https://github.com/maboglia/TSS2021/tree/main/Prj_09_DistributoreAutomatico/src) [v2](https://github.com/maboglia/TSS2021/tree/main/Prj_09_DistributoreAutomatico2/src) [fintech2022](https://github.com/maboglia/Fintech2022/tree/main/Prj06_DistributoreAutomatico)
+11. banca: conti correnti
+12. banca: clienti
+13. gestionale dipendenti
+14. gestionale ordini
+15. [appuntamento - persona - stanza](https://github.com/maboglia/Jato69/tree/main/Ese01_Appuntamenti)
+16. [OutfitGenerator](https://github.com/maboglia/Jato69/tree/main/Prj09_OutfitGenerator)
+17. [Film](https://github.com/maboglia/Cloud2022/tree/main/workspace/Prj11_Film)
+
+
+## esempi JDBC - Web Applications
+
+1. [HelloDatabase](https://github.com/maboglia/Jato69/tree/main/Prj18_HelloDatabase)
+2. [BiglietteriaTeatro2](https://github.com/maboglia/Jato69/tree/main/Prj19_BiglietteriaTeatro2)
+3. [HelloTomcat](https://github.com/maboglia/Jato69/tree/main/Prj20_HelloTomcat)
+4. [Biblioteca](https://github.com/maboglia/Jato69/tree/main/Prj21_Biblioteca)
+5. [DataBaseService](https://github.com/maboglia/Jato69/tree/main/Prj22_DataBaseService)
+6. [AgendaCondivisa](https://github.com/maboglia/Jato69/tree/main/Prj23_AgendaCondivisa)
+7. [Geometria2](https://github.com/maboglia/Jato69/tree/main/Prj24_Geometria2)
+8. [AgendaCondivisa](https://github.com/maboglia/Jato69/tree/main/Prj25_AgendaCondivisa)
+9. [GestioneDipendenti](https://github.com/maboglia/Jato69/tree/main/Prj25_GestioneDipendenti)
+10. [Gestionale](https://github.com/maboglia/Jato69/tree/main/Prj28_Gestionale)
+11. [Noleggio Film](https://github.com/maboglia/Cloud2022/tree/main/workspace/Prj12_NoleggioFilm)
+12. [Libreria](https://github.com/maboglia/Cloud2022/tree/main/workspace/Prj13_Libreria)
+13. [Quotazioni](https://github.com/maboglia/Fintech2022/tree/main/Prj12-Quotazioni)
+14. [Parole](https://github.com/maboglia/Fintech2022/tree/main/Prj14_Parole)
 
