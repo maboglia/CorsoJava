@@ -53,21 +53,22 @@ Sul mio sito trovi gli appunti anche in formato slide :)
 10. quiz lingue - dizionario ITA-ENG
 11. Quiz capitali
 
-## esercitazioni
+## testo esercitazioni
 
 1. serie-tv - watch-list
-2. babbi natale
-3. alimenti
-4. crea quiz
-5. biblioteca
-6. biglietteria
-7. cinema multi sala
-8. flex bus
-9. canzoni - crea playlist - jukebox
-10. dizionario ita-eng
-11. agenda
-12. agenzia viaggi
-13. popolazione italiana
+2. [rubrica telefonica](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/0_Tracce/JavaSE/RubricaTelefonica.drawio.pdf)
+3. babbi natale
+4. alimenti
+5. crea quiz
+6. biblioteca
+7. biglietteria
+8. cinema multi sala
+9. flex bus
+10. canzoni - crea playlist - jukebox
+11. dizionario ita-eng
+12. agenda
+13. agenzia viaggi
+14. popolazione italiana
 
 ## esempi
 
