@@ -34,4 +34,4 @@ metodi **faiVerso()**, implementare le classi **Gatto**,
 
 ---
 
-[esercizi Java SE](../esercitazioni/0_Tracce/JavaSE)
+[esercizi Java SE](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/0_Tracce/JavaSE)
