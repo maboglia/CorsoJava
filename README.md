@@ -28,15 +28,15 @@ Sul mio sito trovi gli appunti anche in formato slide :)
 
 ## esercizi
 
-* [esercitazioni, progetti](https://github.com/maboglia/CorsoJava/tree/master/esercitazioni)
-* [Esercizi Controlflow](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/00_esercizi_controlflow.md)
-* [Esercizi MetodiAusiliari](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/01_EserciziMetodiAusiliari.md)
-* [Esercizi stringhe](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/02_esercizi_stringhe.md)
-* [Esercizi array](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/03_Esercizi_array.md)
-* [Esercizi file](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/04_esercizi_file.md)
-* [Esercizi avanzati](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/05_Esercizi_avanzati.md)
-* [Esercizi OOP](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/06_EserciziOOP.md)
-* [Esercizi eccezioni](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/esercizi/07_es_eccezioni.md)
+* [esercitazioni, progetti](https://github.com/maboglia/CorsoJava/tree/master/esercizi)
+* [Esercizi Controlflow](https://github.com/maboglia/CorsoJava/blob/master/esercizi/00_esercizi_controlflow.md)
+* [Esercizi MetodiAusiliari](https://github.com/maboglia/CorsoJava/blob/master/esercizi/01_EserciziMetodiAusiliari.md)
+* [Esercizi stringhe](https://github.com/maboglia/CorsoJava/blob/master/esercizi/02_esercizi_stringhe.md)
+* [Esercizi array](https://github.com/maboglia/CorsoJava/blob/master/esercizi/03_Esercizi_array.md)
+* [Esercizi file](https://github.com/maboglia/CorsoJava/blob/master/esercizi/04_esercizi_file.md)
+* [Esercizi avanzati](https://github.com/maboglia/CorsoJava/blob/master/esercizi/05_Esercizi_avanzati.md)
+* [Esercizi OOP](https://github.com/maboglia/CorsoJava/blob/master/esercizi/06_EserciziOOP.md)
+* [Esercizi eccezioni](https://github.com/maboglia/CorsoJava/blob/master/esercizi/07_es_eccezioni.md)
 
 
 ## giochi
