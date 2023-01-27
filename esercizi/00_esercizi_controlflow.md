@@ -15,7 +15,7 @@ Scrivere un programma che stampi a video i primi dieci interi pari compresi fra 
 
 ## 1.3. Esercizio
 
-Scrivere un programma che stampi le tabellina del numero dato come argomento
+Scrivere un programma che stampi la tabellina del numero dato come argomento
 
 ---
 
@@ -29,12 +29,6 @@ Stampare a video la seguente figura:
 **
 *
 ```
-
----
-
-## Esercizio
-
-* con i cicli innestati stampare a video la figura di un triangolo isoscele composto di lettere A maiuscola
 
 ---
 
@@ -138,6 +132,11 @@ di 2.
 Scrivere un programma che stampi 10 caratteri
 (letti da tastiera) ed i relativi codici ASCII.
 
+---
+
+## Esercizio
+
+* con i cicli innestati stampare a video la figura di un triangolo isoscele composto di lettere A maiuscola
 
 ---
 
@@ -182,35 +181,29 @@ Scrivere una funzione per calcolare l’importo di una tassa secondo la seguente
 * Oltre i 30.000 € ci si comporta come prima, aggiungendo un ulteriore 3% è sulla porzione oltre i 30.000 €.
 * Per ogni importo non valido si ritorni -1 (qualunque importo che non sia un numero reale e positivo).
 
-* Esempi:Un importo di 10, dovrebbe tornare 1 (1 è il 10% di 10)
+* Esempi: Un importo di 10, dovrebbe tornare 1 (1 è il 10% di 10)
 * Un importo di 21, dovrebbe tornare 1.75 (10% di 10 + 7% di 10 + 5% di 1)
-
-
 
 ---
 
 ## 1.20. Esercizio
 
-Scrivere un programma **IndovinaZero** che chiede all’utente di inserire numeri interi uno
-dopo l’altro fino a quando non inserisce il numero 0.
+Scrivere un programma **IndovinaZero** che chiede all’utente di inserire numeri interi uno dopo l’altro fino a quando non inserisce il numero 0.
 
 ---
 
 ## 1.21. Esercizio
 
-Scrivere un programma **ScrivoScrivoScrivo** che chiede all’utente di inserire un numero
-maggiore o uguale a zero e stampa il messaggio sto ciclando un numero di volte pari al numero inserito
-dall’utente. Se il valore inserito dall’utente è negativo il programma stampa un messaggio di errore.
+Scrivere un programma **ScrivoScrivoScrivo** che chiede all’utente di inserire un numero maggiore o uguale a zero e un messaggio, quindi stampa il messaggio ciclando un numero di volte pari al numero inserito dall’utente. 
 
+Se il valore inserito dall’utente è negativo il programma stampa un messaggio di errore.
 
 ---
 
 ## 1.22. Esercizio
 
-Scrivere un programma **Conteggio** che chiede all’utente di inserire un numero maggiore o
-uguale a zero e stampa uno dopo l’altro tutti i numeri da 0 al numero inserito compreso. Se il valore
-inserito dall’utente è negativo il programma stampa un messaggio di errore.
-
+Scrivere un programma **Conteggio** che chiede all’utente di inserire un numero maggiore o uguale a zero e stampa uno dopo l’altro tutti i numeri da 0 al numero inserito compreso. 
+Se il valore inserito dall’utente è negativo il programma stampa un messaggio di errore.
 
 ---
 
@@ -218,13 +211,11 @@ inserito dall’utente è negativo il programma stampa un messaggio di errore.
 
 Scrivere un programma **ContaNumeriCrescenti** che chiede all’utente di inserire una sequenza di numeri interi crescenti (man mano sempre più grandi) e ne stampa la lunghezza (il numero di valori inseriti dall’utente). Il programma termina non appena l’utente inserisce un valore minore o uguale al precedente).
 
-
 ---
 
 ## 1.24. Esercizio
 
-Scrivere un programma **MediaNumeri** che chiede all’utente di inserire una sequenza di numeri interi positivi. Non appena l’utente inserisce un numero negativo il programma si arresta e visualizza la media aritmetica dei valori positivi inseriti (senza approssimazione!).
-
+Scrivere un programma **MediaNumeri** che chiede all’utente di inserire una sequenza di numeri interi positivi. Non appena l’utente inserisce un numero negativo il programma si arresta e visualizza la media aritmetica dei valori positivi inseriti.
 
 ---
 
@@ -248,7 +239,9 @@ Scrivere un programma che implementi l'algoritmo di
 ordinamento per selezione su un vettore di 10
 caratteri inseriti da tastiera.
 
-Si ricorda l'algoritmo:
+Algoritmo:
+
+```java
 for (int i = 0; i < N - 1; i++)
     for (int j = i; j < N; j++)
          if (a[i] > a[j]) {
@@ -256,18 +249,11 @@ for (int i = 0; i < N - 1; i++)
               a[i] = a[j];
               a[j] = temp;
   }
+```
 
 ---
 
 ## 1.28.  Esercizio
 
-Scrivere un programma che converta una sequenza
-di caratteri letti in input nei corrispondenti
-caratteri maiuscoli.
+Scrivere un programma che usando i cicli converta una sequenza di caratteri letti in input nei corrispondenti caratteri maiuscoli.
 
----
-
-## 1.29.  Esercizio
-
-Scrivere un programma che legge da tastiera un
-intero, lo incrementa e lo restituisce in output.
