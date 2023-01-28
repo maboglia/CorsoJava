@@ -90,7 +90,7 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 ## Introduzione alla libreria standard
 
 * Il comando import
-* La classe String
+* La classe [String](https://github.com/maboglia/CorsoJava/blob/master/appunti/API_Java/021_API_Java_Stringhe.md)
 * La documentazione della libreria standard di Java
 * Cicli finiti, infiniti, annidati
 
@@ -98,7 +98,7 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 
 ## Descrivere oggetti e classi
 
-* Lavorare con oggetti e classi
+* Lavorare con [oggetti](https://github.com/maboglia/CorsoJava/blob/master/appunti/010_2_classi_istanze.md) e [classi](https://github.com/maboglia/CorsoJava/blob/master/appunti/010_classi.md)
 * Definizione di campi e metodi
 * Dichiarazione, istanziazione e inizializzazione di oggetti
 * Lavorare con i riferimenti agli oggetti
@@ -113,9 +113,9 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 * struttura delle classi,
 * progettazione delle classi in UML,
 * stato interno,
-* metodi costruttori, overloading
+* metodi [costruttori](https://github.com/maboglia/CorsoJava/blob/master/appunti/010_3_classi_costruttori.md), overloading
 
-## I metodi costruttori
+## I metodi [costruttori](https://github.com/maboglia/CorsoJava/blob/master/appunti/010_3_classi_costruttori.md)
 
 * Caratteristiche di un costruttore
 * Costruttore di default
@@ -133,12 +133,12 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 
 ---
 
-## Utilizzare l'incapsulamento
+## Utilizzare l'[incapsulamento](https://github.com/maboglia/CorsoJava/blob/master/appunti/010_5_incapsulamento.md)
 
 * Controllo di accesso
-* Incapsulamento
+* [Incapsulamento](https://github.com/maboglia/CorsoJava/blob/master/appunti/010_5_incapsulamento.md)
   * metodi getter e setter
-* Overload di Costruttori
+* Overload di [Costruttori](https://github.com/maboglia/CorsoJava/blob/master/appunti/010_3_classi_costruttori.md)
 
 ---
 
@@ -151,7 +151,7 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 
 ---
 
-## Utilizzo di operatori e costrutti decisionali
+## Utilizzo di operatori e [costrutti decisionali](https://github.com/maboglia/CorsoJava/blob/master/appunti/005_cicli.md)
 
 * Utilizzare gli operatori Java incluso l'uso della parentesi per sovrascrivere la precedenza dell'operatore
 * Utilizzare le istruzioni di controllo Java incluso if, else e switch
@@ -165,17 +165,17 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 
 ---
 
-## Lavorare con gli Array in Java
+## Lavorare con gli [Array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md) in Java
 
-* Gli array in Java
+* Gli [array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md) in Java
   * Dichiarazione
   * Creazione
   * Inizializzazione
-* Array **monodimensionali**
-* Array **bidimensionali**
-* Limiti degli array in JAVA: **dimensione prefissata**
-* **Copia** di array
-* Array e ArrayList.
+* [Array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md) **monodimensionali**
+* [Array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md) **bidimensionali**
+* Limiti degli [array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md) in JAVA: **dimensione prefissata**
+* **Copia** di [array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md)
+* [Array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md) e [Array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md)List.
 
 ---
 
@@ -185,7 +185,7 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 * Oggetti, variabili, riferimenti
 * Classi, metodi e variabili di istanza
 * Istanziare un oggetto: il metodo costruttore
-* Variabili d'istanza e incapsulamento
+* Variabili d'istanza e [incapsulamento](https://github.com/maboglia/CorsoJava/blob/master/appunti/010_5_incapsulamento.md)
 * Visibilità dei membri di una classe
 * La parola riservata null
 * Coesione, dipendenza, programmazione per contratto, parametro implicito, effetti collateral
@@ -222,9 +222,9 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 
 ---
 
-## La classe Math
+## La classe [Math](https://github.com/maboglia/CorsoJava/blob/master/appunti/API_Java/021_java_lang_Math.md)
 
-* La classe Math e i principali metodi.
+* La classe [Math](https://github.com/maboglia/CorsoJava/blob/master/appunti/API_Java/021_java_lang_Math.md) e i principali metodi.
 * uso di una classe con metodi statici
 * accedere a proprietà e metodi senza istanziare nuovi oggetti
 
@@ -245,14 +245,14 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 
 ---
 
-## **Ereditarietà in Java**
+## **[Ereditarietà](https://github.com/maboglia/CorsoJava/blob/master/appunti/011_classi_ereditarieta.md) in Java**
 
 * Panoramica
 * Lavorare con sottoclassi e superclassi
 * Metodi prioritari nella superclasse
 * Creazione ed estensione di classi astratte
 
-![ereditarietà](https://github.com/maboglia/CorsoJava/raw/master/appunti/img/gerarchia1.png)
+![[ereditarietà](https://github.com/maboglia/CorsoJava/blob/master/appunti/011_classi_ereditarieta.md)](https://github.com/maboglia/CorsoJava/raw/master/appunti/img/gerarchia1.png)
 
 * Teoria:
   * Class design: diversi ruoli degli oggetti/attori del progetto
@@ -261,81 +261,81 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 
 ---
 
-## Ereditarietà
+## [Ereditarietà](https://github.com/maboglia/CorsoJava/blob/master/appunti/011_classi_ereditarieta.md)
 
 * Riutilizzo del codice.
 * Strutture ereditarie
 * La parola riservata super
 * Modificatori d'accesso: package, private e protected
-* Impedire l'ereditarietà: la parola riservata final
+* Impedire l'[ereditarietà](https://github.com/maboglia/CorsoJava/blob/master/appunti/011_classi_ereditarieta.md): la parola riservata final
 * Creare e utilizzare sottoclassi e superclassi
 * Creare ed estendere le classi astratte
-* Abilitare il polimorfismo con metodi prioritari
-* Utilizzare il polimorfismo per lanciare e chiamare metodi, differenziando il tipo di oggetto rispetto al tipo di riferimento
+* Abilitare il [polimorfismo](https://github.com/maboglia/CorsoJava/blob/master/appunti/012_classi_polimorfismo.md) con metodi prioritari
+* Utilizzare il [polimorfismo](https://github.com/maboglia/CorsoJava/blob/master/appunti/012_classi_polimorfismo.md) per lanciare e chiamare metodi, differenziando il tipo di oggetto rispetto al tipo di riferimento
 * Distinguere tra overload, override e information hiding
 
 ---
 
-## Utilizzare le interfacce
+## Utilizzare le [interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md)
 
-* Polimorfismo
-* Utilizzo delle interfacce
+* [Polimorfismo](https://github.com/maboglia/CorsoJava/blob/master/appunti/012_classi_polimorfismo.md)
+* Utilizzo delle [interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md)
 * Inferenza di tipo variabile locale
 * Utilizzare l'interfaccia List
 * Presentazione delle espressioni Lambda
 
-![ereditarietà](https://github.com/maboglia/CorsoJava/raw/master/appunti/img/gerarchia5.png)
+![[ereditarietà](https://github.com/maboglia/CorsoJava/blob/master/appunti/011_classi_ereditarieta.md)](https://github.com/maboglia/CorsoJava/raw/master/appunti/img/gerarchia5.png)
 
 ---
 
-## Programmazione astratta attraverso le interfacce
+## Programmazione astratta attraverso le [interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md)
 
-* Creare e implementare interfacce
-* Distingua l'ereditarietà delle classi dall'ereditarietà dell'interfaccia comprese le classi astratte
-* Dichiarare e utilizzare le istanze List e ArrayList
+* Creare e implementare [interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md)
+* Distingua l'[ereditarietà](https://github.com/maboglia/CorsoJava/blob/master/appunti/011_classi_ereditarieta.md) delle classi dall'[ereditarietà](https://github.com/maboglia/CorsoJava/blob/master/appunti/011_classi_ereditarieta.md) dell'interfaccia comprese le classi astratte
+* Dichiarare e utilizzare le istanze List e [Array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md)List
 * Comprensione dell'espressione lambda
-* [interfacce](015_interfacce.md)
+* [interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md)
 
 ---
 
-## Gestione delle eccezioni e asserzioni
+## Gestione delle [eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md) e asserzioni
 
-* Eccezioni
+* [Eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md)
 * Gestione degli errori
 * Asserzioni
 * Panoramica
-* Propagazione di eccezioni
-* Catturare e lanciare eccezioni
-* Gestione di più eccezioni ed errori
-* Descrivere i vantaggi della gestione delle eccezioni e differenziare tra eccezioni verificate, non selezionate ed errori
+* Propagazione di [eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md)
+* Catturare e lanciare [eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md)
+* Gestione di più [eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md) ed errori
+* Descrivere i vantaggi della gestione delle [eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md) e differenziare tra [eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md) verificate, non selezionate ed errori
 
 ---
 
-## Gestire le eccezioni II
+## Gestire le [eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md) II
 
-* Creare blocchi try-catch e determinare in che modo le eccezioni alterano il flusso del programma
+* Creare blocchi try-catch e determinare in che modo le [eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md) alterano il flusso del programma
 * Crea e invoca un metodo che genera un'eccezione
 * **Java è robusto e sicuro, al limite si 'pianta' il programma**
-* usare la gestione eccezioni di JAVA
-* gestione delle eccezioni
+* usare la gestione [eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md) di JAVA
+* gestione delle [eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md)
 * blocco try-catch-finally
 * le parole chiave throws e throw
-* [eccezioni](017_eccezioni.md)
+* [[eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md)](017_[eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md).md)
 
 ---
 
-### Eccezioni
+### [Eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md)
 
 * Usa il costrutto try-with-resources
 * Creare e utilizzare classi di eccezione personalizzate
 * Metti alla prova gli invarianti usando le asserzioni
-* Meccanismo di gestione delle eccezioni
-* Eccezioni controllate e non
-* Errori ed eccezioni
+* Meccanismo di gestione delle [eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md)
+* [Eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md) controllate e non
+* Errori ed [eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md)
 * Il costrutto TRY-CATCH-FINALLY
 * Tipi di eccezione ed il costrutto Throws
 * Lanciare un'eccezione: il costrutto Throw
-* Eccezioni personalizzate
+* [Eccezioni](https://github.com/maboglia/CorsoJava/blob/master/appunti/017_eccezioni.md) personalizzate
 * Cenni sull'uso di un debugger
 * Il debugger di Eclipse
 * Correzione di un programma Java.
@@ -353,9 +353,9 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 
 ### Programmazione Funzionale
 
-* Interfacce funzionali ed espressioni lambda
+* [Interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md) funzionali ed espressioni lambda
 * Stream di raccolte e filtri
-* Interfacce funzionali integrate
+* [Interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md) funzionali integrate
 
 ---
 
@@ -385,7 +385,7 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 * Cosa sono i generici?
 * gestire le collezioni: List, Set e Map
 * I metodi di utilità di Collections
-* Vector, ArrayList
+* Vector, [Array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md)List
 * LinkedList
 * HashSet, TreeSet
 
@@ -453,10 +453,10 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 
 ---
 
-### Interfacce Java
+### [Interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md) Java
 
-* Creare e utilizzare interfacce con metodi predefiniti (default)
-* Creare e utilizzare interfacce con metodi privati
+* Creare e utilizzare [interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md) con metodi predefiniti (default)
+* Creare e utilizzare [interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md) con metodi privati
 
 ---
 
@@ -464,8 +464,8 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 
 * Utilizzare le classi wrapper, il boxing automatico e l'unboxing automatico
 * Creare e utilizzare classi generiche, metodi con notazione a diamante e caratteri jolly
-* Descrivi il Framework di raccolta e usa le interfacce di raccolta chiavi
-* Usa Comparator e interfacce comparabili
+* Descrivi il Framework di raccolta e usa le [interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md) di raccolta chiavi
+* Usa Comparator e [interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md) comparabili
 * Creare e utilizzare metodi di praticità per le raccolte
 
 ### Framework Collections
@@ -481,7 +481,7 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 
 ### Interfaccia funzionale ed espressioni lambda
 
-* Definire e scrivere interfacce funzionali
+* Definire e scrivere [interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md) funzionali
 * Crea e usa espressioni lambda tra cui istruzione lambdas, variabile locale per i parametri lambda
 
 ### API Java Stream
@@ -491,11 +491,11 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 
 ---
 
-### Interfacce funzionali integrate
+### [Interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md) funzionali integrate
 
-* Utilizzare le interfacce dal pacchetto java.util.function
-* Utilizzare le interfacce funzionali di base tra cui Predicato, Consumatore, Funzione e Fornitore
-* Usa le variazioni primitive e binarie delle interfacce di base del pacchetto java.util.function
+* Utilizzare le [interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md) dal pacchetto java.util.function
+* Utilizzare le [interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md) funzionali di base tra cui Predicato, Consumatore, Funzione e Fornitore
+* Usa le variazioni primitive e binarie delle [interfacce](https://github.com/maboglia/CorsoJava/blob/master/appunti/015_interfacce.md) di base del pacchetto java.util.function
 
 ### Operazioni Lambda in streaming
 
@@ -645,7 +645,7 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 ## Concorrenza
 
 * Creare thread di lavoro utilizzando Runnable, Callable e utilizzare un ExecutorService per eseguire contemporaneamente attività
-* Usa java util raccolte e classi simultanee tra cui CyclicBarrier e CopyOnWriteArrayList
+* Usa java util raccolte e classi simultanee tra cui CyclicBarrier e CopyOnWrite[Array](https://github.com/maboglia/CorsoJava/blob/master/appunti/006_array.md)List
 * Scrivi codici thread-safe
 * Identificare i problemi di threading come deadlock e livelock
 
