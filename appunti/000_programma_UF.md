@@ -1,33 +1,6 @@
 # Corso Java
 
-## Programma del corso Java SE - Java SE 11 Programmer I
-
-Programma dettagliato del Corso di programmazione Java
-
-* [Java SE 11 Programmer I](https://education.oracle.com/java/java-se/product_267)
-
----
-
-## obiettivi
-
-* Accedere e creare campi e metodi statici
-* Scrivere codice Java che utilizza variabili, array, costrutti condizionali e loop per raggiungere gli obiettivi del programma
-* Incapsulare una classe usando modificatori di accesso e overload dei costruttori
-* Manipolare i dati numerici, di testo e di stringa utilizzare gli operatori Java appropriati
-* Impostare le variabili di ambiente per consentire al compilatore Java e agli eseguibili di runtime di funzionare correttamente
-* Creare semplici classi Java e utilizzare riferimenti a oggetti per accedere a campi e metodi in una classe
-
----
-
-## obiettivi II
-
-* Dimostrare polimorfismo implementando un'interfaccia Java
-* Gestire un'eccezione controllata in un'applicazione Java
-* Utilizzare un'espressione Predicato Lambda come argomento di un metodo
-* Definire e implementare una semplice gerarchia di classi che supporti i requisiti dell'applicazione
-* Identificare i principi di programmazione modulari
-
----
+Introduzione al corso di programmazione orientato agli oggetti in linguaggio Java.
 
 ## Che cos'è un programma Java
 
@@ -37,7 +10,7 @@ Programma dettagliato del Corso di programmazione Java
 
 ---
 
-##  Comprensione della tecnologia e dell'ambiente Java
+## Comprensione della tecnologia e dell'ambiente Java
 
 * Descrivere la tecnologia Java e l'ambiente di sviluppo Java
 * Identificare le funzionalità chiave del linguaggio Java
@@ -76,9 +49,7 @@ Programma dettagliato del Corso di programmazione Java
 * Lavorare con i numeri
 * Manipolazione dei dati numerici
 
----
-
-## **Identificatori e tipi di dato**
+  **Identificatori e tipi di dato**
 
 * Schema Libero
 * Case sensitive
@@ -95,12 +66,10 @@ Programma dettagliato del Corso di programmazione Java
 * Scope delle variabili
 * Parametri formali
 * Argomenti passati al metodo main
-* Package introduzione
-* Consultazione Oracle API docs
 
 ---
 
-## **Tipi di dato primitivi**
+  **Tipi di dato primitivi**
 
 * Tipi di dati interi, casting e promotion
 * Tipi di dati a virgola mobile, casting e promotion
@@ -355,37 +324,30 @@ Programma dettagliato del Corso di programmazione Java
 
 ---
 
+### Eccezioni
+
+* Usa il costrutto try-with-resources
+* Creare e utilizzare classi di eccezione personalizzate
+* Metti alla prova gli invarianti usando le asserzioni
+* Meccanismo di gestione delle eccezioni
+* Eccezioni controllate e non
+* Errori ed eccezioni
+* Il costrutto TRY-CATCH-FINALLY
+* Tipi di eccezione ed il costrutto Throws
+* Lanciare un'eccezione: il costrutto Throw
+* Eccezioni personalizzate
+* Cenni sull'uso di un debugger
+* Il debugger di Eclipse
+* Correzione di un programma Java.
+* Test unitari
+
+---
+
 ## JShell
 
 * Codice di test
 * Nozioni di base di JShell
 * JShell in un IDE
-
-
-## Programma del corso Java SE - Java SE 11 Programmer II
-
-[Java SE 11 Programmer II](https://education.oracle.com/java/java-se/product_267)
-
----
-
-## obiettivi
-
-* Creare applicazioni Java che sfruttano le funzionalità orientate agli oggetti del linguaggio Java, come incapsulamento, ereditarietà e polimorfismo
-* Eseguire un'applicazione Java dalla riga di comando
-* Creare applicazioni che utilizzano il Java Collections Framework
-* Cercare e filtrare le raccolte utilizzando Lambda Expressions
-* Implementare tecniche di gestione degli errori utilizzando la gestione delle eccezioni
-* Implementare la funzionalità di input/output (I/O) per leggere e scrivere su file di dati e di testo
-
----
-
-## obiettivi II
-
-* Manipolare file, directory e file system usando la specifica JDK NIO.2
-* Eseguire più operazioni su tabelle di database, tra cui la creazione, la lettura, l'aggiornamento e l'eliminazione utilizzando sia la tecnologia JDBC che JPA
-* Utilizzare le funzionalità di concorrenza di Lambda Expression
-* Applicare pratiche e servizi di programmazione modulari alle applicazioni
-* Creare applicazioni multi-thread ad alte prestazioni
 
 ---
 
@@ -483,48 +445,13 @@ Programma dettagliato del Corso di programmazione Java
 
 ---
 
-### JDBC
-
-* JDBC
-  * connector-J
-  * Connection
-  * DriverManager
-  * Statement, PreparedStatement
-  * ResulSet
-  * executeQuery()
-  * executeUpdate()
-
----
-
 ### Fondamenti di Java
 
 * Creare e utilizzare le classi final
 * Creare e utilizzare classi interne, nidificate e anonime
 * Creare e utilizzare le enumerazioni
 
----
 
-### Gestione delle eccezioni e asserzioni
-
-* Usa il costrutto try-with-resources
-* Creare e utilizzare classi di eccezione personalizzate
-* Metti alla prova gli invarianti usando le asserzioni
-
----
-
-### Eccezioni
-
-* Meccanismo di gestione delle eccezioni
-* Eccezioni controllate e non
-* Errori ed eccezioni
-* Il costrutto TRY-CATCH-FINALLY
-* Tipi di eccezione ed il costrutto Throws
-* Lanciare un'eccezione: il costrutto Throw
-* Eccezioni personalizzate
-* Cenni sull'uso di un debugger
-* Il debugger di Eclipse
-* Correzione di un programma Java.
-* Test unitari
 
 ---
 
@@ -543,8 +470,6 @@ Programma dettagliato del Corso di programmazione Java
 * Usa Comparator e interfacce comparabili
 * Creare e utilizzare metodi di praticità per le raccolte
 
----
-
 ### Framework Collections
 
 * Foreach ed Iterator
@@ -561,8 +486,6 @@ Programma dettagliato del Corso di programmazione Java
 * Definire e scrivere interfacce funzionali
 * Crea e usa espressioni lambda tra cui istruzione lambdas, variabile locale per i parametri lambda
 
----
-
 ### API Java Stream
 
 * Descrivere l'interfaccia Stream e le pipeline
@@ -575,8 +498,6 @@ Programma dettagliato del Corso di programmazione Java
 * Utilizzare le interfacce dal pacchetto java.util.function
 * Utilizzare le interfacce funzionali di base tra cui Predicato, Consumatore, Funzione e Fornitore
 * Usa le variazioni primitive e binarie delle interfacce di base del pacchetto java.util.function
-
----
 
 ### Operazioni Lambda in streaming
 
@@ -632,9 +553,7 @@ Programma dettagliato del Corso di programmazione Java
 * Utilizzare PreparedStatement per eseguire operazioni CRUD
 * Utilizzare le API PreparedStatement e CallableStatement per eseguire operazioni sul database
 
----
-
-### Introduzione a JDBC
+### JDBC
 
 * Convenzioni JDBC URL Naming
 * Gestione dei driver: il DriverManager
@@ -645,6 +564,14 @@ Programma dettagliato del Corso di programmazione Java
 * Connection Pooling
 * Gestione dei dati: JDBC
 * Crud su DB
+* JDBC
+  * connector-J
+  * Connection
+  * DriverManager
+  * Statement, PreparedStatement
+  * ResulSet
+  * executeQuery()
+  * executeUpdate()
 
 ---
 
@@ -683,8 +610,6 @@ Programma dettagliato del Corso di programmazione Java
 * Pacchetti, JAR, architettura
 * Modifica e requisiti dell'applicazione
 
----
-
 ### Compredere l'uso dei moduli
 
 * Il sistema del modulo
@@ -699,8 +624,6 @@ Programma dettagliato del Corso di programmazione Java
 * Introduzione alla programmazione modulare in Java
 * Servizi in un'applicazione modulare
 * Migrazione ad un'applicazione modulare
-
----
 
 ### Comprensione dei moduli
 
@@ -718,8 +641,6 @@ Programma dettagliato del Corso di programmazione Java
 * Esegui un'applicazione modulaized su classpath e su modulepath
 * Utilizzare jdeps per determinare le dipendenze e identificare il modo per affrontare le dipendenze cicliche
 
----
-
 ### Servizi in un'applicazione modulare
 
 * Descrivere i componenti dei servizi, comprese le direttive
@@ -735,8 +656,6 @@ Programma dettagliato del Corso di programmazione Java
 * Usa java util raccolte e classi simultanee tra cui CyclicBarrier e CopyOnWriteArrayList
 * Scrivi codici thread-safe
 * Identificare i problemi di threading come deadlock e livelock
-
----
 
 ### Flusso parallelo
 
