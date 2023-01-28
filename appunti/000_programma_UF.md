@@ -451,8 +451,6 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 * Creare e utilizzare classi interne, nidificate e anonime
 * Creare e utilizzare le enumerazioni
 
-
-
 ---
 
 ### Interfacce Java
@@ -551,27 +549,21 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 
 * Collegati ai database utilizzando gli URL JDBC e DriverManager
 * Utilizzare PreparedStatement per eseguire operazioni CRUD
-* Utilizzare le API PreparedStatement e CallableStatement per eseguire operazioni sul database
-
-### JDBC
-
 * Convenzioni JDBC URL Naming
 * Gestione dei driver: il DriverManager
-* Gestione degli errori
-* Le SQLException
+* Gestione degli errori: le SQLException
 * Supporto per i tipi di dati
 * Estensioni standard di JDBC
 * Connection Pooling
-* Gestione dei dati: JDBC
 * Crud su DB
-* JDBC
-  * connector-J
+* Elementi principali JDBC
+  * Scaricare il connector-J
   * Connection
   * DriverManager
-  * Statement, PreparedStatement
+  * Statement, PreparedStatement, CallableStatement
   * ResulSet
-  * executeQuery()
-  * executeUpdate()
+    * executeQuery()
+    * executeUpdate()
 
 ---
 
