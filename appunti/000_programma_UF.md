@@ -241,7 +241,7 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 
 ## aggregazione
 
-![Esempio Aggregazione](https://github.com/maboglia/CorsoJava/raw/master/appunti/img/image010.jpgimage010.jpg)
+![Esempio Aggregazione](https://github.com/maboglia/CorsoJava/raw/master/appunti/img/image010.jpg)
 
 ---
 
@@ -252,7 +252,7 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 * Metodi prioritari nella superclasse
 * Creazione ed estensione di classi astratte
 
-![ereditarietà](https://github.com/maboglia/CorsoJava/raw/master/appunti/img/image010.jpggerarchia1.png)
+![ereditarietà](https://github.com/maboglia/CorsoJava/raw/master/appunti/img/gerarchia1.png)
 
 * Teoria:
   * Class design: diversi ruoli degli oggetti/attori del progetto
@@ -284,7 +284,7 @@ Introduzione al corso di programmazione orientato agli oggetti in linguaggio Jav
 * Utilizzare l'interfaccia List
 * Presentazione delle espressioni Lambda
 
-![ereditarietà](https://github.com/maboglia/CorsoJava/raw/master/appunti/img/image010.jpggerarchia5.png)
+![ereditarietà](https://github.com/maboglia/CorsoJava/raw/master/appunti/img/gerarchia5.png)
 
 ---
 
