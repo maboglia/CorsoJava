@@ -1,17 +1,18 @@
 # Corso Java
 
-## sito web 
-
-Sul mio sito trovi gli appunti anche in formato slide :)
-
-[bogliaccino.it](http://www.mauro.bogliaccino.it/public/java)
-
 ## Appunti, dispense, tutorial
 
 * [appunti](https://github.com/maboglia/CorsoJava/tree/master/appunti)
 * [dispense e altro materiale java](https://github.com/maboglia/CorsoJavaRisorse)
 * [altre risorse per programmare](https://github.com/maboglia/ProgrammingResources)
 
+## sito web
+
+Sul mio sito trovi tutti gli appunti anche in formato slide
+
+[bogliaccino.it](http://www.mauro.bogliaccino.it/public/java)
+
+---
 
 ## esempi codice Java
 
@@ -26,6 +27,8 @@ Sul mio sito trovi gli appunti anche in formato slide :)
 * [Eccezioni](https://github.com/maboglia/CorsoJava/blob/master/esempi/10_eccezioni.md)
 * [typecasting](https://github.com/maboglia/CorsoJava/blob/master/esempi/09_typecasting.md)
 
+---
+
 ## esercizi
 
 * [esercitazioni, progetti](https://github.com/maboglia/CorsoJava/tree/master/esercizi)
@@ -38,26 +41,29 @@ Sul mio sito trovi gli appunti anche in formato slide :)
 * [Esercizi OOP](https://github.com/maboglia/CorsoJava/blob/master/esercizi/06_EserciziOOP.md)
 * [Esercizi eccezioni](https://github.com/maboglia/CorsoJava/blob/master/esercizi/07_es_eccezioni.md)
 
+---
 
 ## giochi
 
-1. Lancia dadi
-2. Pietra-forbici-carta
-3. Tris
-4. Guess the number - three numbers - [Jato69](https://github.com/maboglia/Jato69/tree/main/Prj03_IndovinaNumero)
-5. sudoku
-6. Wordle - [cloud2022](https://github.com/maboglia/Cloud2022/tree/main/workspace/Prj19_Wordle)
-7. Hang-man
-8. crucigramma
-9. master mind
-10. quiz lingue - dizionario ITA-ENG
-11. Quiz capitali
+1. Pietra-forbici-carta
+2. Lancia dadi
+3. Guess the number - three numbers - [Jato69](https://github.com/maboglia/Jato69/tree/main/Prj03_IndovinaNumero)
+4. Quiz capitali
+5. quiz lingue - dizionario ITA-ENG
+6. Tris
+7. sudoku
+8. master mind
+9. Hang-man
+10. crucigramma
+11. Wordle - [cloud2022](https://github.com/maboglia/Cloud2022/tree/main/workspace/Prj19_Wordle)
+
+---
 
 ## esercitazioni
 
-1. serie-tv
-2. watch-list
-3. nota spese
+1. todo list - nota spese - rubrica contatti
+2. serie-tv
+3. watch-list
 4. babbi natale
 5. alimenti - preparazione ricetta e calcolo calorie
 6. crea quiz
@@ -71,7 +77,9 @@ Sul mio sito trovi gli appunti anche in formato slide :)
 14. agenzia viaggi
 15. popolazione italiana
 
-## esempi
+---
+
+## codice esempi esercitazioni
 
 1. libreria (model Libro) - [jato69](https://github.com/maboglia/Jato69/tree/main/Prj05_Libri)
 2. todoList - blocco note (array) - [jato69](https://github.com/maboglia/Jato69/tree/main/Prj07_BloccoNote) - [TSS2020](https://github.com/maboglia/TSS2020/tree/master/Prj01_ListaSpesa/src) - [TSS2022](https://github.com/maboglia/TSS2022/tree/main/workspace/Prj07_TodoList/src) - [TSS2022-ArrayList](https://github.com/maboglia/TSS2022/tree/main/workspace/Prj08_TodoList2/src)
@@ -92,8 +100,9 @@ Sul mio sito trovi gli appunti anche in formato slide :)
 17. [OutfitGenerator](https://github.com/maboglia/Jato69/tree/main/Prj09_OutfitGenerator)
 18. [Film](https://github.com/maboglia/Cloud2022/tree/main/workspace/Prj11_Film)
 
+---
 
-## esempi JDBC - Web Applications
+## codice JDBC - Web Applications
 
 1. [HelloDatabase](https://github.com/maboglia/Jato69/tree/main/Prj18_HelloDatabase)
 2. [BiglietteriaTeatro2](https://github.com/maboglia/Jato69/tree/main/Prj19_BiglietteriaTeatro2)
