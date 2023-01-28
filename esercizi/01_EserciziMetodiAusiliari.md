@@ -1,6 +1,6 @@
-# Esercizi sui metodi ausiliari
+# 1. Esercizi sui metodi ausiliari
 
-## Es. 1: 
+## 1.1. Es. 1: 
 
 Scrivere un programma **Ripeti** che chiede all’utente di inserire una stringa e un numero intero positivo. 
 
@@ -12,7 +12,7 @@ Il nome del metodo ausiliario può essere scelto a piacere.
 
 ---
 
-## Es. 2: 
+## 1.2. Es. 2: 
 
 Scrivere un programma "**TuttiUguali**" che chiede all'utente di inserire tre numeri e stampa "Tutti uguali!" se i tre numeri sono tutti uguali,altrimenti stampa "Almeno uno e' diverso".
 
@@ -21,7 +21,7 @@ Il controllo che i tre numeri siano uguali dovrà essere fatto da un metodo ausi
 
 ---
 
-## Es. 3: 
+## 1.3. Es. 3: 
 
 Scrivere un programma **MezziCasuali** che stampa un numero frazionario ottenuto come risultato della chiamata di un metodo ausiliario che al suo interno richiama il metodo di libreria Math.random(). 
 
@@ -33,7 +33,7 @@ Il nome del metodo ausiliario può essere scelto a piacere.
 
 ---
 
-## Es. 4: 
+## 1.4. Es. 4: 
 
 Scrivere un programma **Concatena** che chiede all'utente di inserire tre singole parole e le ristampa interponendovi un asterisco.
 
@@ -43,26 +43,26 @@ Per concatenare le tre parole si utilizzi un metodo ausiliario che prende due st
 
 ---
 
-## Esercizio 5
+## 1.5. Esercizio 5
 
 Scrivere un programma **Incrementa** contenente un metodo ausiliario che
 incrementi il valore di una variabile.
 
 ---
 
-## Esercizio Swap
+## 1.6. Esercizio Swap
 
 * Scambia il contenuto di due variabili, usando un metodo ausiliario swap(a,b)
 
 ---
 
-## max di interi
+## 1.7. max di interi
 
 Trova il valore max tra 2 numeri interi usando un metodo ausiliario max(x, y)
 
-## Esercizi sui metodi statici con esempio di soluzione
+## 1.8. Esercizi sui metodi statici con esempio di soluzione
 
-## Esercizio dati un array di interi a ed un intero n
+## 1.9. Esercizio dati un array di interi a ed un intero n
 
 Scrivere un metodo che, dati un array di interi a ed un intero n, restituisce true se n compare in a, false altrimenti.
 
@@ -96,7 +96,7 @@ return false;
 
 ---
 
-## Esercizio   numero delle occorrenze di n in a
+## 1.10. Esercizio   numero delle occorrenze di n in a
 
 Scrivere un metodo che, dati un array di interi a ed un intero n, restituisce il numero delle occorrenze di n in a.
 
@@ -114,7 +114,7 @@ return cont;
 
 ---
 
-## Esercizio  prima occorrenza di n in a
+## 1.11. Esercizio  prima occorrenza di n in a
 
 Scrivere un metodo che, dati un array di interi a ed un intero n, restituisce la posizione della prima occorrenza di n in a, e -1 se n non compare in a.
 
@@ -135,7 +135,7 @@ else return -1;
 
 ---
 
-## Esercizio  elementi identici
+## 1.12. Esercizio  elementi identici
 
 Scrivere un metodo in linguaggio Java che dato un array di interi restituisca true se
 tutti i suoi elementi sono identici, e false altrimenti.
@@ -156,7 +156,7 @@ return equal;
 
 ---
 
-## Esercizio   ordine non decrescente
+## 1.13. Esercizio ordine non decrescente
 
 Scrivere un metodo in linguaggio Java che, dato un array di interi a, restituisca true se
 i suoi elementi sono in ordine non decrescente (a[0]≤ a[1] ≤ . . .), e false altrimenti.
@@ -175,8 +175,7 @@ return cond;
 }
 ```
 
-Un semplice metodo main per provare i metodi uguali e nondecr è il seguente (si
-assume che entrambi i metodi siano definiti in una classe ArrayProp):
+Un semplice metodo main per provare i metodi uguali e nondecr è il seguente (si assume che entrambi i metodi siano definiti in una classe ArrayProp):
 
 ```java
 public static void main (String[] args) {
@@ -189,12 +188,11 @@ System.out.println("Elementi non decrescenti? " + ArrayProp.nondecr(a));
 }
 ```
 
-Scrivere una versione diversa per i metodi uguali e nondecr in cui, invece di definire
-una variabile booleana locale, vengono utilizzate opportune istruzioni di return.
+Scrivere una versione diversa per i metodi uguali e nondecr in cui, invece di definire una variabile booleana locale, vengono utilizzate opportune istruzioni di return.
 
 ---
 
-## Esercizio  valore minimo
+## 1.14. Esercizio  valore minimo
 
 Scrivere un metodo che, dato un array di interi a, restituisce il valore minimo in a.
 
@@ -210,9 +208,9 @@ return min;
 
 ---
 
-## Esercizio 7
+## 1.15. Esercizio 7
 
-Scrivere un metodo che, dati un array di interi a ed un intero k, restituisce true se in a compaiono almeno k numeri strettamente positivi, false altrimenti.
+Scrivere un metodo che, dati un array di interi `a` ed un intero `k`, restituisce true se in `a` compaiono almeno `k` numeri strettamente positivi, false altrimenti.
 
 ```java
 public static boolean almenokPos (int[] a, int k) {

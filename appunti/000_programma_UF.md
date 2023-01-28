@@ -272,7 +272,7 @@ Programma dettagliato del Corso di programmazione Java
 
 ## aggregazione
 
-![Esempio Aggregazione](./img/image010.jpg)
+![Esempio Aggregazione](https://github.com/maboglia/CorsoJava/raw/master/appunti/img/image010.jpgimage010.jpg)
 
 ---
 
@@ -283,7 +283,7 @@ Programma dettagliato del Corso di programmazione Java
 * Metodi prioritari nella superclasse
 * Creazione ed estensione di classi astratte
 
-![ereditarietà](./img/gerarchia1.png)
+![ereditarietà](https://github.com/maboglia/CorsoJava/raw/master/appunti/img/image010.jpggerarchia1.png)
 
 * Teoria:
   * Class design: diversi ruoli degli oggetti/attori del progetto
@@ -315,7 +315,7 @@ Programma dettagliato del Corso di programmazione Java
 * Utilizzare l'interfaccia List
 * Presentazione delle espressioni Lambda
 
-![ereditarietà](./img/gerarchia5.png)
+![ereditarietà](https://github.com/maboglia/CorsoJava/raw/master/appunti/img/image010.jpggerarchia5.png)
 
 ---
 
