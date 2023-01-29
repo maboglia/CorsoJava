@@ -398,7 +398,7 @@ public static void main(String[] args)
 
 ## Trova gli elementi comuni tra due array
 
-Scrivete un programma Java per trovare gli elementi comuni tra due array (string
+Scrivete un programma Java per trovare gli elementi comuni tra due array di stringhe
 
 ```java
 import java.util.*;
@@ -436,7 +436,7 @@ public static void main(String[] args)
 
 ## Trova gli elementi comuni tra due array di numeri interi
 
-Scrivete un programma Java per trovare gli elementi comuni tra due array di
+Scrivete un programma Java per trovare gli elementi comuni tra due array di interi
 
 
 ```java
@@ -819,3 +819,5 @@ static void  equality_checking_two_arrays(int[] my_array1, int[] my_array2)
   equality_checking_two_arrays(array1, array3);
   }
   }
+  ```
+  
