@@ -104,6 +104,7 @@ public double impaziente();
 public double statistica();
 public toString();
 };
+
 ```
 
 Le due variabili verde e rosso sono mutuamente esclusive. Qualora il semaforo
@@ -273,24 +274,40 @@ Si desidera simulare un parcheggio a pagamento per autovetture.
 
 * Sviluppare tutti i metodi della classe.
 
+---
 
+## Esercizio
+
+Dato un elenco di N dipendenti inserire, per ciascuno di essi, nome, cognome e stipendio.
+Stampare l'elenco di quelli che guadagnano più di € 1.000 ed, in fine, nome, cognome e
+stipendio del dipendente con stipendio massimo.
 
 ---
 
-## Esercizio interfacce
+## Esercizio
 
-A partire dall'**interfaccia Animale**, che definisce
-i metodi **faiVerso()** e **dimmiCiboPreferito()**,
-implementare le classi **Gatto**, **Cane** e **Topo**
-attraverso l'uso delle interfacce.
+Un azienda vuole effettuare una statistica sugli stipendi pagati mensilmente ai dipendenti. Di
+ciascun dipendente si conoscono i seguenti dati:
+
+* cognome e nome,
+* stipendio mensile.
+Dopo aver stampato il tabulato:
+si vogliono ottenere i seguenti dati statistici:
+* stipendio mensile medio,
+* numero dipendenti con stipendio mensile maggiore di € 2.000,
+* cognome, nome e stipendio del dipendente che percepisce lo stipendio più alto.
 
 ---
 
-## Esercizio classi astratte
+## Esercizio
 
-A partire dalla **classe Animale**, che definisce i
-metodi **faiVerso()**, implementare le classi **Gatto**,
-**Cane** e **Topo** attraverso l'uso dell'astrazione.
+Per N città vengono registrate le temperature massime e minime di una giornata.
+Stampare una tabella con:
+
+* nome della città,
+* temperatura massima,
+* temperatura minima
+* ed alla fine stampare il nome della città più calda e di quella più fredda.
 
 ---
 

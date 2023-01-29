@@ -1,42 +1,62 @@
 # Esercizi Java sui file
 
+---
+
 ## Esercizio 1
+
 Scrivere un programma Java per la gestione di un
 archivio di persone e animali. Definire, in
 particolare, la seguente gerarchia:
-- Essere vivente (con attributo eta')
-  - Animale (con nome)
-  - Persona (con cognome, nome)
-    - Studente (con matricola)
-    - Lavoratore (con lavoro e stipendio)
+
+* Essere vivente (con attributo eta')
+  * Animale (con nome)
+  * Persona (con cognome, nome)
+    * Studente (con matricola)
+    * Lavoratore (con lavoro e stipendio)
   
+---
+
 ## Esercizio 2
-Scrivere un programma che visualizzi il contenuto
-di un file.
+
+Scrivere un programma che visualizzi il contenuto di un file.
+
+---
 
 ## Esercizio 3
+
 Scrivere un programma che copi, byte dopo byte, un
 file in un altro file.
 
+---
+
 ## Esercizio 4
+
 Scrivere un programma che crei un file di tipi
 primitivi.
 
+---
+
 ## Esercizio 5
+
 Scrivere un programma che crei un file tmp, vi
 scriva i caratteri "abcdef" e poi acceda a tmp
 utilizzando un'istanza di RandomAccessFile, il
 metodo seek() e il metodo readByte() per leggere
 un byte alla volta.
 
+---
+
 ## Esercizio 6 Archivio studenti
 
 Alla fine dell’anno scolastico, il Preside desidera archiviare in una file gli esiti di fine anno degli
 studenti della sua scuola. I dati da archiviare, per ogni studente sono:
+
+```text
 cognome studente
 nome studente
 classe
 esito di fine anno: “P” per indicare che lo studente è stato promosso e “B” per indicare che lo studente è stato bocciato.
+```
 
 Scrivere i seguenti programmi:
 
@@ -63,6 +83,7 @@ Integer.parseInt(((String)A.get(i)).trim()) .
 Questa operazione non è indispensabile nel caso il file sia vuoto oppure contenga un solo numero.
 La variabile 'tot' funziona da accumulatore e restituisce il prodotto dei due numeri incontrati oppure la somma dei più numeri trovati.
 
+```java
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -95,6 +116,7 @@ System.out.println(tot);
 
 }//fine main
 }//fine class
+```
 
 ---
 
@@ -111,6 +133,7 @@ Qui si è scelto di affidare a due metodi le operazioni di input e di salvataggi
 La funzione caricaesalva() riceve in ingresso due vettori A e B ciascuno di 5 posti. La stessa funzione salva in un file la somma delle singole componenti dei due vettori.
 La funzione stampa() non fa altro che aprire il file e mostrare a video i risultati della precedente operazione.
 
+```java
 import java.io.*;
 class vettori{
 final static int n=5;
@@ -160,18 +183,23 @@ f.close();
 for(i=0;i < n;i++)System.out.print(T[i]+" ");
 }//fine salva()
 }//fine class
+```
 
 ---
 
 ## Esercizio no.3
 
 Scrivi un programma che sia in grado di leggere un file di testo nel quale siano contenute una serie di stringhe su più righe consecutive, ad es.
+
+```text
 alpha
 bravo
 charlie
 delta
 echo
 foxtrot
+```
+
 lo stesso programma deve permettere di modificare una delle stringhe salvando successivamente sullo stesso file, il cambiamento.
 
 ---
@@ -182,6 +210,7 @@ Il programma principale apre il file contenente le stringhe e le memorizza in un
 L'arraylist viene stampato dal metodo vista().
 L'arraylist (A) viene passato al metodo mod(A) che ne permette la modifica. Dopo le modifiche il nuovo arraylist viene stampato a video, prima del suo successivo salvataggio nel file.
 
+```java
 import java.io.*;
 import java.util.ArrayList;
 class nomi{
@@ -233,14 +262,18 @@ for(int i=0;i < A.size();i++)f.println(A.get(i));
 f.close();
 }//fine metodo salva
 }//fine class
+```
 
 
 In un file viene memorizzato il magazzino di una azienda, secondo la notazione
 
+```text
 biella#7@5
 ruota#3@8
 stelo#2@9
-prima del simbolo '#' vi è il nome del prodotto; fra il simbolo '#' e il simbolo '@' vi è il costo del prodotto; dopo il simbolo '@' vi è il quantitativo in pezzi di quel prodotto.
+```
+
+prima del simbolo `#` vi è il nome del prodotto; fra il simbolo `#` e il simbolo `@` vi è il costo del prodotto; dopo il simbolo `@` vi è il quantitativo in pezzi di quel prodotto.
 Il programma deve restituire il controvalore del magazzino .
 
 ---
@@ -251,6 +284,7 @@ E' chiaro che in questo problema, a parte le operazioni sul file di testo, il la
 Per ogni stringa deve essere calcolato il subtotale 'sub' dato dal prodotto del costo 'prz' del prodotto per la sua quantità 'qta'. Poi bisogna progressivamente sommare i subtotali.
 Prima di procedere esaminiamo la questione di come estrarre dalla stringa gli elementi che ci interessano. In questo programma, utilizzando gli operatori indexOf e substring, prima rileviamo la posizione dei marcatori che ci interessano, poi estraiamo le sottostringhe comprese fra le posizioni dei marcatori, qui memorizzati nelle variabili i ed f.
 
+```java
 class parser {
 public static void main (String args []) {
 String s="biella#7@3";
@@ -265,10 +299,13 @@ qta=Integer.parseInt(s.substring(i,f).trim());
 somma=prz+qta; System.out.println(somma);
 }//fine main
 }// fine classe
+```
 
 Qui viene restituita la somma fra il prezzo prz e la quantità qta.
-L'operazione è paradossale dal punto di vista logico ma ci serve solo per capire se il programma fonziona. Basandoci su questo esperimento preliminare, possiamo scrivere il programma che deve elaborare i dati provenienti dal file di testo.
+L'operazione ci serve solo per capire se il programma fonziona. 
+Basandoci su questo esperimento preliminare, possiamo scrivere il programma che deve elaborare i dati provenienti dal file di testo.
 
+```java
 import java.io.*;
 class maga{
 public static void main (String args []){
@@ -303,5 +340,6 @@ sub=prz*qta;
 return sub;
 }//fine subtotale
 }//fine class
+```
 
 Come si nota, il lavoro di estrazione delle sottostringhe di interesse e la loro conversione in numeri, viene eseguita dal metodo subtotale() che viene richiamato dal ciclo while che rileva ogni occorrenza di una stringa all'interno del file.
