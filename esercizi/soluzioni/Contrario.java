@@ -4,7 +4,6 @@ stampa al contrario.
 Per esempio, se si immette la stringa "Viva Java", il programma stampa "avaJ aviV"*/
 
 
-package esempi.week4;
 
 import java.util.Scanner;
 

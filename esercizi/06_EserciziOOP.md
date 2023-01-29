@@ -249,6 +249,34 @@ vernice rovinata o se è sporca.
 
 ---
 
+## Parcheggio
+
+Si desidera simulare un parcheggio a pagamento per autovetture. 
+
+* Si sviluppi la classe Vettura, avente le variabili d’istanza private int targa, private short oraArrivo, private short oraScadenza, dove le ore sono interi compresi tra 0 e 23. 
+
+* Implementare i relativi metodi di accesso e riscrittura per tali variabili, più un costruttore. 
+
+* Il parcheggio è rappresentato mediante la classe Parcheggio. 
+
+* Il costruttore inizializza un parcheggio con massima capienza numPosti e 0 vetture. 
+
+* I metodi entraVettura ed esceVettura aggiungono e rimuovono, rispettivamente, le vetture dei clienti del parcheggio. 
+
+* Viene restituito il valore true solo nel caso l’operazione possa essere eseguita. 
+
+* Il metodo aggiornaOra incrementa di una unità l’ora corrente, e sposta nella zona rimozione tutte le vetture il cui tempo sia scaduto. 
+
+* Il metodo promozione offre gratuitamente oreGratuite ore a tutte le vetture nel parcheggio il cui numero di targa termini con le cifre codice, dove codice deve essere un numero di due cifre. 
+
+* Il metodo statVetture restituisce una arraylist con tutte le vetture che hanno il più alto numero di ore di parcheggio pagato. 
+
+* Sviluppare tutti i metodi della classe.
+
+
+
+---
+
 ## Esercizio interfacce
 
 A partire dall'**interfaccia Animale**, che definisce
