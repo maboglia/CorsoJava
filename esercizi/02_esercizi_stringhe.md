@@ -100,3 +100,14 @@ l’utente inserisce la stringa vuota.
 Scrivere un programma `SpezzaMeta` che chiede all’utente di inserire una stringa e stampa
 tale stringa divisa a metà su due righe (se la lunghezza della stringa è dispari una delle due parti sarà
 più lunga dell’altra di un carattere)
+
+---
+
+## Tandem
+
+Una stringa è un tandem se è composta da due sequenze esattamente uguali. Ad
+esempio, la stringa "toctoc" è un tandem. Si assuma una classe Tandem con una
+sola variabile d'istanza `private String mystring`. Utilizzando la ricorsione, si
+implementi un metodo `boolean tandem(){...}` che restituisce ` se mystring è un
+tandem, e ` altrimenti. Non usare alcuna istruzione di iterazione.
+
