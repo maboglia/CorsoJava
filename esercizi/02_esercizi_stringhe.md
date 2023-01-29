@@ -111,3 +111,13 @@ sola variabile d'istanza `private String mystring`. Utilizzando la ricorsione, s
 implementi un metodo `boolean tandem(){...}` che restituisce ` se mystring è un
 tandem, e ` altrimenti. Non usare alcuna istruzione di iterazione.
 
+---
+
+## Shuffle
+
+Date due stringhe, la stringa shuffle delle due si ottiene alternando i
+caratteri della prima stringa con i caratteri della seconda, e copiando i
+rimanenti caratteri nel caso le due stringhe abbiano diversa lunghezza. Ad
+esempio, date le stringhe "dna" e "on", la stringa shuffle delle due è "donna".
+Si implementi un metodo statico String shuffle(String s1, String s2){...} che
+restituisce la stringa shuffle di s1 e s2.

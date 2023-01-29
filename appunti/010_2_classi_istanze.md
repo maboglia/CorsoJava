@@ -1,6 +1,8 @@
 # Instanziare una Classe: gli oggetti
 
- Gli oggetti sono caratterizzati da
+Gli `oggetti` sono istanze (esemplari) delle classi
+
+Gli oggetti sono caratterizzati da
 
 * Classe di appartenenza - tipo (ne descrive attributi e metodi)
 * Stato (valore attuale degli attributi)
@@ -46,9 +48,6 @@ Le principali operazioni che si possono effettuare sulle variabili che riferisco
 * assegnamento
 * confronto
 * invocazione di metodi
-
-
-
 * Il valore di una variabile di tipo reference è il riferimento ad un oggetto (istanza di una classe)
 * Una stessa variabile può riferire oggetti diversi in tempi diversi a seguito di operazioni di assegnazione sul suo valore
 * Se la variabile contiene il valore `null` non riferisce nessun oggetto in quel momento
@@ -85,8 +84,8 @@ La sintassi è simile al caso precedente, ma ovviamente l’accesso/invocazione 
 
 ## Confronto tra riferimenti vs. confronto tra oggetti
 
-* Usare == fa il confronto tra i riferimenti non fra i valori contenuti negli oggetti
-* Di solito si vogliono confrontare i contenuti non i riferimenti: per questo si usa il **metodo** __equals__ 
+* Usare `==` fa il confronto tra i **riferimenti** NON fra i **valori** contenuti negli oggetti
+* Di solito si vogliono confrontare i contenuti non i riferimenti: per questo si usa il **metodo** `equals()` 
 * Il metodo booleano `equals` della classe String accetta come argomento il riferimento ad un altro oggetto e ritorna true se le stringhe contenute sono uguali, false altrimenti
 * Il metodo booleano `equalsIgnoreCase` fa lo stesso senza distinguere maiuscole/minuscole
 
