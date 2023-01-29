@@ -14,18 +14,30 @@
 ## quando e perché usare i metodi
 
 1. Quando il programma da realizzare è articolato diventa conveniente identificare **sottoproblemi** che possono essere risolti individualmente
-
 2. scrivere **sottoprogrammi** che risolvono i sottoproblemi richiamare i **sottoprogrammi** dal programma principale (main)
-
 3. Questo approccio prende il nome di **programmazione procedurale** (o astrazione funzionale)
-
 4. In Java i **sottoprogrammi** si realizzano tramite **metodi ausiliari**
-
 5. Sinonimi usati in altri linguaggi di programmazione: **funzioni**, **procedure** e (sub)**routines**
 
 ---
 
+## Argomenti attuali e formali
 
+* Ogni volta che si invoca un metodo si deve specificare una lista di argomenti attuali
+* Gli argomenti attuali e formali sono in corrispondenza posizionale
+* Gli argomenti attuali possono essere delle variabili o delle espressioni
+* Gli argomenti attuali devono rispettare il tipo attribuito agli argomenti formali
+
+---
+
+## Overloading dei metodi
+
+* E' possibile definire metodi con lo stesso nome ma liste degli argomenti diverse, cioè varianti diverse dello stesso metodo
+* La diversità delle liste riguarda il numero, tipo e ordine di argomenti formali, non il loro nome
+* A seconda degli argomenti passati verrà selezionato ed eseguito il metodo appropriato (se esiste)
+* Non è ammesso overloading sul tipo ritornato: metodi con nome e lista degli argomenti uguali ma tipo ritornato diverso non vengono distinti e danno luogo ad errori di compilazione
+
+---
 
 ## Metodi ausiliari (static)
 
@@ -58,14 +70,13 @@ public class ProvaMetodi
 
 ---
 
-
 ## Metodi non static
 
 * I metodi **non static** rappresentano operazioni effettuabili su singoli oggetti
 * La documentazione indica per ogni metodo il tipo ritornato e la lista degli argomenti formali che rappresentano i dati che il metodo deve ricevere in ingresso da chi lo invoca
 * Per ogni argomento formale sono specificati:
-	* un tipo (primitivo o reference)
-	* un nome (identificatore che segue le regole di naming)
+  * un tipo (primitivo o reference)
+  * un nome (identificatore che segue le regole di naming)
 
 ---
 

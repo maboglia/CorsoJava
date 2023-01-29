@@ -1,26 +1,28 @@
 # 1. Esercizi su istruzioni condizionali e cicli
 
 
-## 1.1. Esercizio
+## 1.1. Esercizio dieci numeri interi
 
 Scrivere un programma che stampi a video i primi dieci numeri interi
 
 ---
 
-## 1.2. Esercizio
+## 1.2. Esercizio dieci interi pari
 
 Scrivere un programma che stampi a video i primi dieci interi pari compresi fra 20 e 0, partendo da 20.
 
 ---
 
-## 1.3. Esercizio
+## 1.3. Esercizio tabellina
 
 Scrivere un programma che stampi la tabellina del numero dato come argomento
 
 ---
 
 ## 1.4. Esercizio
+
 Stampare a video la seguente figura:
+
 ```java
 ******
 *****
@@ -33,7 +35,9 @@ Stampare a video la seguente figura:
 ---
 
 ## 1.5. Esercizio
+
 Stampare a video la seguente figura:
+
 ```java
 #
 ##
@@ -48,6 +52,7 @@ Stampare a video la seguente figura:
 ## 1.6. Esercizio
 
 Stampare a video la seguente figura:
+
 ```java
 1      654321
 12      54321
@@ -59,19 +64,19 @@ Stampare a video la seguente figura:
 
 ---
 
-## 1.7. Esercizio
+## 1.7. Esercizio Fibonacci
 
 Scrivere un programma che stampi i primi 100 elementi della successione di Fibonacci.
 
 ---
 
-## 1.8. Esercizio
+## 1.8. Esercizio TuttiPositiviPari
 
 Scrivere un programma **TuttiPositiviPari** che chiede all’utente di inserire una sequenza di interi (chiedendo prima quanti numeri voglia inserire) e poi, al termine dell’inserimento dell’intera sequenza, stampa "Tutti positivi e pari" se i numeri inseriti sono tutti positivi e pari, altrimenti stampa "NO". 
 
 ---
 
-## 1.9. Esercizio
+## 1.9. Esercizio ContinuaFino
 
 Scrivere un programma **ContinuaFino** che chiede all’utente di inserire una sequenza di
 interi. Il programma continua a chiedere all’utente di inserire valori fintanto che i valori inseriti soddisfano
@@ -84,14 +89,14 @@ Al termine il programma stampa la somma di tutti i valori inseriti escluso quell
 
 ---
 
-## 1.10. Esercizio
+## 1.10. Esercizio PositivoNegativo
 
 Scrivere un programma **PositivoNegativo** che chiede all’utente di inserire una sequenza di interi terminata quando l’utente immette il valore 0 e poi stampa "OK" se la sequenza contiene un valore positivo seguito da uno negativo, altrimenti stampa il messaggio "NO". A vostra scelta, la stampa
 del messaggio "OK" può interrompere o meno l’inserimento dei valori. 
 
 ---
 
-## 1.11. Esercizio
+## 1.11. Esercizio MediaMultipliDiTre
 
 Scrivere un programma **MediaMultipliDiTre** che chiede all’utente di inserire una sequenza di interi (chiedendo prima quanti numeri voglia inserire) e poi stampa la media di tutti i numeri inseriti che siano divisibili per tre. 
 
@@ -99,7 +104,7 @@ Per esempio, se si immettono i valori 5, 8, 9, 12, 7, 6 ,1 il risultato stampato
 
 ---
 
-## 1.12. Esercizio
+## 1.12. Esercizio Ripetizioni
 
 Scrivere un programma **Ripetizioni** che chiede all’utente di inserire una sequenza di caratteri (chiedendo prima quanti caratteri voglia inserire) e li ristampa man mano che vengono inseriti.
 
@@ -107,18 +112,23 @@ L’intero procedimento (chiedere quanti caratteri voglia inserire, leggere i ca
 
 ---
 
-## 1.13. Esercizio 
+## 1.13. Esercizio Classificazione voto esame
 
 Una classe di 10 studenti ha sostenuto un esame.
-I voti sono espressi con lettere: 'O' = ottimo
-(corrispondente al 10), 'B' = buono (8),
-'S' = sufficiente (6), 'I' = insufficiente (4).
+
+I voti sono espressi con lettere: 
+
+* 'O' = ottimo (corrispondente al 10), 
+* 'B' = buono (8),
+* 'S' = sufficiente (6), 
+* 'I' = insufficiente (4).
+
 Scrivere un  programma che consenta il calcolo
 della media aritmetica dei voti di tale esame.
 
 ---
 
-## 1.14. Esercizio  
+## 1.14. Esercizio 44 gatti
 
 Scrivere un programma per stampare 44 caratteri
 (inseriti da tastiera) in fila per 6 con resto
@@ -127,20 +137,20 @@ di 2.
 
 ---
 
-## 1.15. Esercizio  
+## 1.15. Esercizio Codi ASCII
 
 Scrivere un programma che stampi 10 caratteri
 (letti da tastiera) ed i relativi codici ASCII.
 
 ---
 
-## Esercizio
+## Esercizio Triangolo isoscele
 
 * con i cicli innestati stampare a video la figura di un triangolo isoscele composto di lettere A maiuscola
 
 ---
 
-## 1.17. Esercizio
+## 1.17. Esercizio Calcola il voto dell’esame
 
 Scrivere un programma che calcoli il risultato dell’esame di uno studente.
     Il programma prenderà in ingresso:
@@ -153,25 +163,25 @@ Memorizzati questi dati procederà al calcolo del risultato finale in trentesimi
 * se il voto di teoria è minore (o uguale) di zero e la somma dei voti di teoria e pratica è maggiore di 18 lo studente è bocciato.
 * se il voto di teoria è minore (o uguale) di zero e il voto di pratica è minore di 18 il programmalo studente è bocciato.
 * se il voto di teoria è maggiore di zero e la somma dei voti di teoria e pratica è minore di 18lo studente è bocciato.
-* se la somma di teoria e pratica vale 31 o 32 il programma stampa: “congratulazioni: 30 e lode”
+* se la somma di teoria e pratica vale 31 o 32 il programma stampa: "congratulazioni: 30 e lode"
 * in tutti gli altri casi lo studente è promosso e viene riportato il voto calcolato.
 
 
 ---
 
-## 1.18. Esercizio
+## 1.18. Esercizio Carta, forbici, sasso
 
-Scrivere un programma che chieda agli utenti due stringhe in ingresso, le stringhe possono valere solo: “carta”, “forbice” o “sasso”. 
+Scrivere un programma che chieda agli utenti due stringhe in ingresso, le stringhe possono valere solo: "carta", "forbici" o "sasso". 
 
 Il programma dovrà quindi effettuare i dovuti controlli e dichiarare il vincitore secondo le regole: 
 
-* forbice vince su carta, 
+* forbici vince su carta, 
 * carta vince su sasso, 
-* sasso vince su forbice.
+* sasso vince su forbici.
 
 ---
 
-## 1.19. Esercizio
+## 1.19. Esercizio calcolare l’importo di una tassa
 
 Scrivere una funzione per calcolare l’importo di una tassa secondo la seguente tabella:
 
@@ -186,13 +196,13 @@ Scrivere una funzione per calcolare l’importo di una tassa secondo la seguente
 
 ---
 
-## 1.20. Esercizio
+## 1.20. Esercizio IndovinaZero
 
 Scrivere un programma **IndovinaZero** che chiede all’utente di inserire numeri interi uno dopo l’altro fino a quando non inserisce il numero 0.
 
 ---
 
-## 1.21. Esercizio
+## 1.21. Esercizio ScrivoScrivoScrivo
 
 Scrivere un programma **ScrivoScrivoScrivo** che chiede all’utente di inserire un numero maggiore o uguale a zero e un messaggio, quindi stampa il messaggio ciclando un numero di volte pari al numero inserito dall’utente. 
 
@@ -200,26 +210,26 @@ Se il valore inserito dall’utente è negativo il programma stampa un messaggio
 
 ---
 
-## 1.22. Esercizio
+## 1.22. Esercizio Conteggio
 
 Scrivere un programma **Conteggio** che chiede all’utente di inserire un numero maggiore o uguale a zero e stampa uno dopo l’altro tutti i numeri da 0 al numero inserito compreso. 
 Se il valore inserito dall’utente è negativo il programma stampa un messaggio di errore.
 
 ---
 
-## 1.23. Esercizio
+## 1.23. Esercizio ContaNumeriCrescenti
 
 Scrivere un programma **ContaNumeriCrescenti** che chiede all’utente di inserire una sequenza di numeri interi crescenti (man mano sempre più grandi) e ne stampa la lunghezza (il numero di valori inseriti dall’utente). Il programma termina non appena l’utente inserisce un valore minore o uguale al precedente).
 
 ---
 
-## 1.24. Esercizio
+## 1.24. Esercizio MediaNumeri
 
 Scrivere un programma **MediaNumeri** che chiede all’utente di inserire una sequenza di numeri interi positivi. Non appena l’utente inserisce un numero negativo il programma si arresta e visualizza la media aritmetica dei valori positivi inseriti.
 
 ---
 
-## 1.25. Esercizio
+## 1.25. Esercizio Asterischi
 
 Scrivere un programma **Asterischi** che chiede all’utente di inserire un numero intero e stampa un triangolo fatto di asterischi con un numero di righe pari al valore inserito dall’utente.
 
@@ -227,13 +237,13 @@ Se l’utente inserisce un valore negativo il programma deve visualizzare un mes
 
 ---
 
-## 1.26. Esercizio
+## 1.26. Esercizio TavolaPitagorica
 
 Scrivere un programma **TavolaPitagorica** in modo che i valori stampati siano ben incolonnati
 
 ---
 
-## 1.27.  Esercizio
+## 1.27. Esercizio Ordinamento per selezione
 
 Scrivere un programma che implementi l'algoritmo di
 ordinamento per selezione su un vettore di 10
@@ -253,7 +263,21 @@ for (int i = 0; i < N - 1; i++)
 
 ---
 
-## 1.28.  Esercizio
+## 1.28. Esercizio Converti in maiuscolo
 
 Scrivere un programma che usando i cicli converta una sequenza di caratteri letti in input nei corrispondenti caratteri maiuscoli.
+
+---
+
+## Esercizio TestaCroce
+
+Scrivere un programma `TestaCroce` che genera un numero casuale 0 oppure 1 e stampa
+Testa se ha generato 0, o Croce se ha generato 1.
+
+---
+
+## Esercizio GrandiNumeri
+
+Scrivere un programma `GrandiNumeri` che genera 0 oppure 1 per 1000 volte e stampa quante volte è stato generato 0 e quante volte è stato generato 1.
+
 

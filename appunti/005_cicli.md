@@ -2,6 +2,11 @@
 
 Java mette a disposizione del programmatore diverse strutture sintattiche per consentire il **controllo del flusso**
 
+* IF – ELSE
+* WHILE e DO-WHILE
+* FOR e FOREACH
+* SWITCH - CASE
+
 ![control flow](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Progr_strutt_composizione.gif)
 
 ---
@@ -11,6 +16,8 @@ Java mette a disposizione del programmatore diverse strutture sintattiche per co
 ![if...else](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/02_costrutti/if-else.png)
 
 **if statements**
+
+* E' un’istruzione condizionale, permette cioè di eseguire un blocco di istruzioni solo se si verifica una determinata condizione.
 
 ```java
 if (condition) {
@@ -22,7 +29,10 @@ if (condition) {
 ```
 
 ---
+
 ## else if [opzionale]
+
+* Indichiamo anche cosa fare se non si supera la condizione
 
 ```java
 
@@ -86,6 +96,11 @@ switch (espressione) {
 Se il numero di iterazioni è **prevedibile**.
 
 ```java
+for (partenza, fine, incremento) 
+blocco di istruzioni da ripetere
+```
+
+```java
 
 for (init; condition; adjustment) {
 
@@ -109,7 +124,12 @@ for (int i=0; i<n; ++i) {
 
 ## Cicli indefiniti - while
 
-Se il numero di iterazioni **non è noto** all'inizio del ciclo.
+si ripete il ciclo fintanto che una condizione è verificata (è vera)
+
+* LA CONDIZIONE BOOLEANA `true/false`
+* DETERMINA LA CONTINUAZIONE DEL PROGRAMMA
+* ED ESEGUE L'ELENCO DELLE OPERAZIONI DEL BLOCCO
+* Da usare se il numero di iterazioni **non è noto** all'inizio del ciclo.
 
 ```java
 while (condition) {
@@ -124,9 +144,13 @@ while(true) {
 
 ```
 
+---
+
 ## do-while
 
-Quando voglio eseguire almeno una volta l'istruzione, anche se la condizione è impostata su `false`
+* Quando voglio eseguire almeno una volta l'istruzione, anche se la condizione è impostata su `false`
+* Si verifica la condizione dopo il primo ciclo
+
 
 ```java
 
@@ -140,23 +164,12 @@ do {
 
 ---
 
-## Cicli con condizione
-
-Vengono passati in rassegna un insieme di valori e per ognuno di essi viene fatto un test per verificare se il valore ha o meno una certa proprietà in base alla quale decideremo se prenderlo in considerazione o meno.
-
-Esempio: stampa tutti i numeri pari fino a 100
-
-```java
-for (int i=1; i<100; ++i) { // passa in rassegna tutti i numeri fra 1 e 100
-    if (i % 2 == 0) // filtra quelli pari
-        System.out.println(i);
-}
-
-```
-
 ## Cicli con interruzione: break
 
 Se il ciclo viene interrotto dopo aver filtrato un valore con una data proprietà.
+
+* Se stiamo eseguendo un ciclo, possiamo utilizzare la parola `break` per interromperlo in qualsiasi momento.
+* Si interrompe quindi il ciclo e si riprende l'esecuzione delle istruzioni al di fuori di esso.
 
 ### Esempio: verifica se un array contiene o meno numeri negativi
 
@@ -175,6 +188,8 @@ for (int i=0; i<v.length; ++i) // passa in rassegna tutti gli indici dell'array 
 
 ## Cicli con salto: continue
 
+Invece terminare completamente il ciclo ed uscire fuori, `continue` interrompe solo l'iterazione corrente e passa alla successiva.
+
 ```java
    {
       int a;
@@ -189,6 +204,22 @@ for (int i=0; i<v.length; ++i) // passa in rassegna tutti gli indici dell'array 
          System.out.println(a);    // Print a 
       }
    }
+```
+
+---
+
+## Cicli con condizione
+
+Vengono passati in rassegna un insieme di valori e per ognuno di essi viene fatto un test per verificare se il valore ha o meno una certa proprietà in base alla quale decideremo se prenderlo in considerazione o meno.
+
+Esempio: stampa tutti i numeri pari fino a 100
+
+```java
+for (int i=1; i<100; ++i) { // passa in rassegna tutti i numeri fra 1 e 100
+    if (i % 2 == 0) // filtra quelli pari
+        System.out.println(i);
+}
+
 ```
 
 ---

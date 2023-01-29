@@ -83,7 +83,7 @@ Se il valore minimo è presente più di una volta, stampa la posizione della pri
 
 ## Esercizio Cerca
 
-Scrivere il programma **Cerca** che crea e inizializza un array di int contenete 10 valori a piacere (usando il comando di inizializzazione che prevede la lista dei valori tra parentesi graffe), chiede all’utente di inserire un numero e stampa Presente se il numero è presente nell’array, oppure Assente se il numero non è presente. 
+Scrivere il programma **Cerca** che crea e inizializza un array di int contenente 10 valori a piacere (usando il comando di inizializzazione che prevede la lista dei valori tra parentesi graffe), chiede all’utente di inserire un numero e stampa Presente se il numero è presente nell’array, oppure Assente se il numero non è presente. 
 Provare a risolvere questo esercizio in due modi: tramite un for-each e tramite un while. 
 Nel caso del while il ciclo deve interrompersi non appena l’elemento (se presente) viene trovato.
 
@@ -130,7 +130,7 @@ Note: usare due array distinti per memorizzare i nomi e i numeri di telefono; at
 
 ---
 
-## Esercizio Lettura e stampa di un array...
+## Esercizio Lettura e stampa di un array
 
 * Scrivere un programma che legge da input 5 elementi interi, li memorizza in un array e stampa il contenuto dell’array
 
@@ -150,8 +150,8 @@ massimo di a
 ---
 
 ## Verifica Sequenza crescente
-* Scrivere un metodo boolean **crescente**(int[ ] a)
-che verifica se a è ordinato in modo crescente
+
+* Scrivere un metodo boolean `crescente(int[ ] a)` che verifica se a è ordinato in modo crescente
 * un array è ordinato in modo crescente se per ogni indice k, l’elemento di indice k è maggiore di tutti gli elementi di indice minore di k
 * è sufficiente verificare se ogni elemento è minore dell’elemento che lo segue immediatamente
 * intuitivamente, bisogna confrontare ciascun elemento di indice i dell’array con l’elemento che lo segue immediatamente, quello di indice i+1
@@ -184,6 +184,7 @@ Inoltre
 ---
 
 ## Elemento più frequente
+
 * Scrivere un metodo che, dato un array a, calcola e restituisce l’elemento più frequente di a
 * calcolare prima l’array occorrenze delle frequenze degli elementi di a
 * l’elemento da restituire è quello che in a occupa la posizione del massimo di occorrenze
@@ -202,3 +203,23 @@ di un elemento se è già stato esaminato?
 0 1 2 3 4 5 6 7 8 9
 * Si devono ricordare gli elementi di cui si sono già calcolate le occorrenze, come?
 * Con un array di booleani in cui ogni elemento è true se l’occorrenza è ancora da calcolare, false altrimenti
+
+---
+
+## Esercizio Temperature
+
+Scrivere un programma `Temperature` che crea e inizializza un array di double contenente
+12 valori a piacere che rappresentano temperature atmosferiche (usando il comando di inizializzazione
+che prevede la lista dei valori tra parentesi graffe). Il programma calcola la media di tali temperature e,
+per ogni valore di temperatura nell’array, stampa un messaggio che dice se essa è maggiore (o uguale)
+oppure inferiore alla media.
+
+---
+
+## Esercizio ParoleMisteriose
+
+Scrivere un programma `ParoleMisteriose` che crea e inizializza un array di stringhe
+contenente 5 parole a piacere (usando il comando di inizializzazione che prevede la lista dei valori tra
+parentesi graffe) e chiede all’utente di indovinare una tra le 5 parole entro 3 tentativi.
+
+
