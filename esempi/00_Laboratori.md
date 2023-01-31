@@ -14,7 +14,7 @@
 * esempio classe Studente
 
 ---
-* 
+
 ### Laboratorio 3
 
 * Approfondiamo la classe Studente

@@ -280,4 +280,42 @@ Testa se ha generato 0, o Croce se ha generato 1.
 
 Scrivere un programma `GrandiNumeri` che genera 0 oppure 1 per 1000 volte e stampa quante volte è stato generato 0 e quante volte è stato generato 1.
 
+---
+
+## Esercizio ordina 3 numeri interi
+
+Esercizio: dati 3 numeri visualizzarli in ordine crescente.
+
+```java
+public class Example {
+   public static void main(String args[]) {
+      int num1 = 15;
+      int num2 = -5;
+      int num3 = 7;
+      if (num1 >= num2 && num1 >= num3)
+         System.out.println( num1 + " è il numero maggiore.");
+      else if (num2 >= num1 && num2 >= num3)
+         System.out.println( num2 + " è il numero maggiore.");
+      else
+         System.out.println( num3 + " è il numero maggiore.");
+   }
+}
+```
+
+Per ordinarli:
+
+```java
+if (a > c)
+   swap(a, c);
+
+if (a > b)
+   swap(a, b);
+
+//Controlla il 2° e il 3°
+
+if (b > c)
+   swap(b, c);
+```
+
+swap() è un metodo che scambia i valori
 
