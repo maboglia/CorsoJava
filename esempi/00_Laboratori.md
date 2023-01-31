@@ -6,31 +6,17 @@
 ### Laboratorio  1
 
 * Compilazione ed esecuzione del programma Helloworld via **CLI**
-* file: HelloWorld.java, HelloWorld.class 
-* esempi algoritmi
-* esempio classe Studente (nome, cognome, eta)
-
 
 ---
 
 ### Laboratorio 2
 
-* Introduzione a git e github, materiale condiviso
-* Esercizi sui tipi e sui metodi ausiliari
 * esempio classe Studente
 
 ---
 * 
 ### Laboratorio 3
 
-* esercizi sulle stringhe
-* **Esercizi sul Flusso di lavoro del programma** 
-
----
-
-### Laboratorio 4
-
-* esercizi java sugli array
 * Approfondiamo la classe Studente
   * array elenco allievi 
   * scorro elenco allievi utilizzando un ciclo for
@@ -38,10 +24,16 @@
 
 ---
 
-### Laboratorio 5
+### Laboratorio 4
 
+* esercizi java sugli array
 * contocorrente
 * progetto agenda
+
+---
+
+### Laboratorio 5
+
 * progetto aula.v3
 * esercitazione luoghi e figure geometriche
 * gioco - rock, scissors, paper
@@ -49,17 +41,17 @@
 ---
 
 ### Laboratorio 6
+
 * Esercizi
   * dato il main di una classe NegozioTester, sviluppare le classi Negozio e Prodotto
   * dato il main di una classe AutomobileTester, sviluppare le classi Automobile e Guidatore
-
-
 
 ---
 
 ### Laboratorio 7
 
-* esempio Studente/Professore - Teatro
+* esempio Studente/Professore - 
+* Teatro
 * Esercitazione guidata:
   * zaino
   * arraylist
@@ -80,8 +72,8 @@
 ---
 
 ### Laboratorio 9
-* esempio classificazione animali, mammiferi
 
+* esempio classificazione animali, mammiferi
 
 ---
 
