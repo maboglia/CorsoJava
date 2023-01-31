@@ -77,6 +77,38 @@
 
 Esercizio: dati 3 numeri visualizzarli in ordine crescente.
 
+### uso variabile `temp` e 3 `if`
+
+```java
+    int a = 25;
+    int b = 15;
+    int c = 20;
+
+    int temp;
+
+    if (b < a) {
+      temp = a;
+      a = b;
+      b = temp;
+    }
+
+    if (c < b) {
+      temp = b;
+      b = c;
+      c = temp;
+    }
+
+    if (b < a) {
+      temp = a;
+      a = b;
+      b = temp;
+    }
+
+    System.out.println(a);
+    System.out.println(b);
+    System.out.println(c);
+```
+
 ### uso `if` e `and`
 
 ```java
