@@ -286,9 +286,10 @@ Scrivere un programma `GrandiNumeri` che genera 0 oppure 1 per 1000 volte e stam
 
 Esercizio: dati 3 numeri visualizzarli in ordine crescente.
 
+### uso `if` e `and`
+
 ```java
-public class Example {
-   public static void main(String args[]) {
+
       int num1 = 15;
       int num2 = -5;
       int num3 = 7;
@@ -298,11 +299,10 @@ public class Example {
          System.out.println( num2 + " è il numero maggiore.");
       else
          System.out.println( num3 + " è il numero maggiore.");
-   }
-}
+
 ```
 
-Per ordinarli:
+Logica per ordinarli:
 
 ```java
 if (a > c)
@@ -317,5 +317,45 @@ if (b > c)
    swap(b, c);
 ```
 
-swap() è un metodo che scambia i valori
+Dove swap(...) è un metodo che scambia i valori
 
+---
+
+## Esercizio ordina 3 numeri interi (2)
+
+### uso `if` e `or`
+
+```java
+double max = z;
+if (x > max || y > max) {
+    if (x > y) {
+        max = x;
+    } else {
+        max = y;
+    }
+}
+double min = z;
+if (x < min || y < min) {
+    if (x < y) {
+        min = x;
+    } else {
+        min = y;
+    }
+}
+
+double mid = x + y + z - max - min;
+System.out.printf("In ordine %f %f %f%n", min, mid, max);
+```
+
+---
+
+## Esercizio ordina 3 numeri interi (3)
+
+### uso `Math.max()`
+
+```java
+double max = Math.max(x, Math.max(y, z));
+double min = Math.min(x, Math.min(y, z));
+double mid = x + y + z - max - min;
+System.out.printf("In ordine %f %f %f%n", min, mid, max);
+```
