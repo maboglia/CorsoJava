@@ -3,6 +3,12 @@
 * **due aspetti** che risultano fondamentali in un software:
   * **Interfaccia**: definita come gli **elementi che sono visibili dall'esterno**, cioè come il sw può essere utilizzato
   * **Implementazione**: la realizzazione pratica interna dei metodi e la loro interazione con le proprietà degli oggetti
+* L'incapsulamento è uno dei concetti fondamentali di OOP.
+* L'incapsulamento è la tecnica mediante la quale lo stato dell'oggetto è nascosto dal mondo esterno e viene esposto un insieme di metodi pubblici per l'accesso a questo stato.
+* L'incapsulamento si ottiene quando ogni oggetto mantiene il proprio stato privato, all'interno di una classe.
+* L'incapsulamento è noto come meccanismo di occultamento dei dati.
+* L'incapsulamento ha una serie di importanti vantaggi ad esso associati, come codice debolmente accoppiato, riutilizzabile, sicuro e facile da testare.
+* In Java, l'incapsulamento viene implementato tramite i modificatori di accesso: public, private e protected.
 
 ---
 

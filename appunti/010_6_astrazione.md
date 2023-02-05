@@ -1,5 +1,18 @@
 # Astrazione 
 
+* L'astrazione è uno dei concetti fondamentali di OOP.
+* L'astrazione è il concetto di esporre all'utente solo quelle cose che sono rilevanti per lui e nascondere il resto dei dettagli.
+* L'astrazione consente all'utente di concentrarsi su ciò che fa l'applicazione invece che su come lo fa.
+* L'astrazione si ottiene in Java tramite classi e interfacce astratte.
+
+L'astrazione è uno dei principali concetti OOP che si sforzano di rendere le cose il più semplici possibile per l'utente. In altre parole, l'astrazione espone l'utente solo alle cose che sono rilevanti per lui e nasconde il resto dei dettagli. In termini OOP, diciamo che un oggetto dovrebbe esporre ai suoi utenti solo un insieme di operazioni di alto livello, mentre l'implementazione interna di tali operazioni è nascosta. 
+
+Quindi, l'astrazione consente all'utente di concentrarsi su ciò che fa l'applicazione invece che su come lo fa. In questo modo, l'astrazione riduce la complessità dell'esposizione delle cose, aumenta la riusabilità del codice, evita le duplicazioni del codice e sostiene un basso accoppiamento e un'elevata coesione. Inoltre, mantiene la sicurezza e la discrezione dell'applicazione esponendo solo i dettagli importanti.
+
+---
+
+## In ingegneria del software
+
 Nell'ingegneria del software e nell'informatica, l'astrazione è:
 
 Il processo di rimozione o generalizzazione di dettagli o attributi fisici, spaziali o temporali nello studio di oggetti o sistemi per focalizzare l'attenzione su dettagli di maggiore importanza; è di natura simile al processo di generalizzazione;

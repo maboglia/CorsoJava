@@ -64,15 +64,15 @@
 * `Shift+Arrow` Down/ Arrow Up Expand selection by one line down / one line up
 * `Shift+End`/Home Expand selection to end / to beginning of line
 * `Ctrl+A` Select all
-* `Alt+Shift`+Arrow Up Expand selection to current element (e.g. current one-line expression or content within brackets)
-* `Alt+Shift`+Arrow Left/Arrow Right Expand selection to next / previous element
-* `Alt+Shift`+Arrow Down Reduce previously expanded selection by one step
+* `Alt+Shift+Arrow` Up Expand selection to current element (e.g. current one-line expression or content within brackets)
+* `Alt+Shift+Arrow` Left/Arrow Right Expand selection to next / previous element
+* `Alt+Shift+Arrow` Down Reduce previously expanded selection by one step
 
 ---
 
 ## Edit Text
 
-* `Ctrl+C`/`Ctrl+X`/`Ctrl+ `V Cut, copy and paste
+* `Ctrl+C`/`Ctrl+X`/`Ctrl+V` Cut, copy and paste
 * `Ctrl+Z` Undo last action
 * `Ctrl+Y` Redo last (undone) action
 * `Ctrl+D` Delete Line
@@ -82,10 +82,10 @@
 * `Ctrl+Delete` Delete next word
 * `Ctrl+Backspace` Delete previous word
 * `Shift+Enter` Enter line below current line
-* `Shift+`Ctrl`+Enter` Enter line above current line
+* `Shift+`Ctrl+Enter`` Enter line above current line
 * `Insert` Switch between insert and overwrite mode
-* `Shift+`Ctrl`+Y` Change selection to all lower case
-* `Shift+`Ctrl`+X` Change selection to all upper case
+* `Shift+`Ctrl+Y`` Change selection to all lower case
+* `Shift+`Ctrl+X`` Change selection to all upper case
 
 ---
 
@@ -105,9 +105,9 @@
 * `Ctrl+I` Correct indention of selected text or of current line
 * `Ctrl+Shift+F` Autoformat all code in Editor using code formatter
 * `Ctrl+/` Comment / uncomment line or selection ( adds '//' )
-* `Ctrl+hift`+/` Add Block Comment around selection ( adds '/... */' )
-* `Ctrl+hift`+\` Remove Block Comment
-* `Alt+Shift`+J Add Element Comment ( adds '/** ... */')
+* `Ctrl+hift+/`` Add Block Comment around selection ( adds '/... */' )
+* `Ctrl+hift+\`` Remove Block Comment
+* `Alt+Shift+J` Add Element Comment ( adds '/** ... */')
 
 ---
 
@@ -136,12 +136,12 @@
 
 ## Refactoring
 
-* `Alt+Shift`+R Rename selected element and all references
-* `Alt+Shift`+V Move selected element to other class or file (With complete method or class selected)
-* `Alt+Shift`+C Change method signature (with method name selected)
-* `Alt+Shift`+M Extract selection to method
-* `Alt+Shift`+L Extract local variable: Create and assigns a variable from a selected expression
-* `Alt+Shift`+I Inline selected local variables, methods, or constants if possible (replaces variable with its declarations/ assignment and puts it directly into the statements)
+* `Alt+Shift+R` Rename selected element and all references
+* `Alt+Shift+V` Move selected element to other class or file (With complete method or class selected)
+* `Alt+Shift+C` Change method signature (with method name selected)
+* `Alt+Shift+M` Extract selection to method
+* `Alt+Shift+L` Extract local variable: Create and assigns a variable from a selected expression
+* `Alt+Shift+I` Inline selected local variables, methods, or constants if possible (replaces variable with its declarations/ assignment and puts it directly into the statements)
 
 ---
 

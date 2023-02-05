@@ -1,4 +1,23 @@
-# Instanziare una Classe: gli oggetti
+# Instanze di una Classe: gli oggetti
+
+* Un oggetto è uno dei concetti fondamentali di OOP.
+* Un oggetto è un'entità del mondo reale.
+* Un oggetto ha stato (campi) e comportamenti (metodi).
+* Un oggetto rappresenta un'istanza di una classe.
+* Un oggetto occupa un po' di spazio nella memoria.
+* Un oggetto può comunicare con altri oggetti.
+
+---
+
+## Cos'è un oggetto?
+
+Un oggetto è uno dei concetti fondamentali di OOP. Un oggetto è un'entità del mondo reale, come un'auto, un tavolo o un gatto. 
+Durante il suo ciclo di vita, un oggetto ha stati e comportamenti. 
+Ad esempio, lo stato di un gatto può essere colore, nome e razza, mentre i suoi comportamenti possono essere giocare, mangiare, dormire e miagolare. 
+In Java, un oggetto è un'istanza di una classe solitamente costruita tramite la parola chiave `new`, ha lo stato memorizzato nei campi ed espone il suo comportamento attraverso i metodi. 
+Ogni istanza occupa un po' di spazio in memoria e può comunicare con altri oggetti.
+
+---
 
 Gli `oggetti` sono istanze (esemplari) delle classi
 
