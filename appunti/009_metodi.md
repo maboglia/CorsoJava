@@ -94,8 +94,8 @@ public class ProvaMetodi
 
 Argomenti correlati
 
-* [I metodi costruttori](010_3_classi_costruttori.md)
-* [I metodi getters e setters](010_4_classi_metodi_getter_setter.md)
+* [I metodi costruttori](https://github.com/maboglia/CorsoJava/blob/master/appunti/010_3_classi_costruttori.md)
+* [I metodi getters e setters](https://github.com/maboglia/CorsoJava/blob/master/appunti/010_4_classi_metodi_getter_setter.md)
 
 ---
 
