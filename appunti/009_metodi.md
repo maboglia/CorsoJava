@@ -87,10 +87,15 @@ public class ProvaMetodi
 * Gli argomenti attuali e formali sono in corrispondenza posizionale
 * Gli argomenti attuali possono essere delle variabili o delle espressioni
 * Gli argomenti attuali devono rispettare il tipo attribuito agli argomenti formali
-* La documentazione di ogni classe ( istanziabile o no) contiene l’elenco dei metodi disponibili
+* La documentazione di ogni classe (istanziabile o no) contiene l’elenco dei metodi disponibili
 * La classe **Math** non è istanziabile
 * La classe **String** è "istanziabile ibrida"
 * La classe **StringBuilder** è "istanziabile pura"
+
+Argomenti correlati
+
+* [I metodi costruttori](010_3_classi_costruttori.md)
+* [I metodi getters e setters](010_4_classi_metodi_getter_setter.md)
 
 ---
 
