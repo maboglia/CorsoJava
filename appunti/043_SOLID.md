@@ -1,4 +1,4 @@
-# SOLID
+# the SOLID principles
 
 Cinque famosi design patterns per scrivere classi – the SOLID principles
 
