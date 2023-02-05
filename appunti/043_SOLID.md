@@ -12,7 +12,7 @@ SOLID è l'acronimo dei primi cinque principi di Object-Oriented Design (OOD) en
 
 ---
 
-## S
+## S: Single Responsibility Principle
 
 * S sta per Single Responsibility Principle (SRP).
 * S sta per Una classe dovrebbe avere una e una sola responsabilità.
@@ -23,7 +23,7 @@ S è il primo principio di SOLID ed è noto come Single Responsibility Principle
 
 ---
 
-## O
+## O: Open Closed Principle
 
 * O sta per Open Closed Principle (OCP).
 * O sta per I componenti software dovrebbero essere aperti per l'estensione, ma chiusi per la modifica.
@@ -34,7 +34,7 @@ O è il secondo principio di SOLID ed è noto come Open Closed Principle (OCP). 
 
 ---
 
-## L
+## L: Liskov's Substitution Principle
 
 * L sta per principio di sostituzione di Liskov (LSP).
 * L sta per I tipi derivati devono essere completamente sostituibili per i loro tipi di base.
@@ -45,7 +45,7 @@ L è il terzo principio di SOLID ed è noto come principio di sostituzione di Li
 
 ---
 
-## I
+## I: Interface Segregation Principle
 
 * I sta per il principio di segregazione dell'interfaccia (ISP).
 * I sta per I clienti non dovrebbero essere costretti a implementare metodi non necessari che non useranno.
@@ -53,7 +53,7 @@ L è il terzo principio di SOLID ed è noto come principio di sostituzione di Li
 
 È il quarto principio di SOLID ed è noto come Principio di segregazione dell'interfaccia (ISP). Questo principio sta per I client non dovrebbero essere costretti a implementare metodi non necessari che non useranno. In altre parole, dovremmo dividere un'interfaccia in due o più interfacce finché i client non sono obbligati a implementare metodi che non useranno.
 
-## D
+## D: Dependency Inversion Principle
 
 * D sta per il principio di inversione delle dipendenze (DIP).
 * D sta per Dipende dalle astrazioni, non dalle concrezioni.
