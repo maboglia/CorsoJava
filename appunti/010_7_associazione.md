@@ -23,4 +23,4 @@ L'associazione può essere unidirezionale/bidirezionale, uno-a-uno, uno-a-molti,
 
 ## Rappresentazione UML
 
-![](./img/../../../../01Programma/06_classi_base/aggregazione-composizione-associazione.png)
+![](./img/aggregazione-composizione-associazione.png)

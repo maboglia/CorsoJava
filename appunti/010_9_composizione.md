@@ -22,4 +22,4 @@ Si dice che la composizione sia migliore dell'ereditarietà perché sostiene il 
 
 ## Rappresentazione UML
 
-![](./img/../../../../01Programma/06_classi_base/aggregazione-composizione-associazione.png)
+![](./img/aggregazione-composizione-associazione.png)

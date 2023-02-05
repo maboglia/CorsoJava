@@ -21,4 +21,4 @@ Avere il proprio ciclo di vita significa che la fine di un oggetto non influirà
 
 ## Rappresentazione UML
 
-![](./img/../../../../01Programma/06_classi_base/aggregazione-composizione-associazione.png)
+![](./img/aggregazione-composizione-associazione.png)
