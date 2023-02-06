@@ -51,11 +51,3 @@ Altre funzionalità
 * StackTraceElement
 * Thread
 * Throwable
-
----
-
-## Classe Runtime
-
-* Questa classe astrae il concetto di `runtime` (esecuzione) del programma. Non ha costruttori pubblici e una sua istanza si ottiene chiamando il metodo factory `getRuntime()`.
-* Caratteristica interessante di questa classe è permette di eseguire comandi del sistema operativo direttamente da Java, come ad esempio `exec` (di cui esistono più versioni).
-* Bisogna tener conto che l’uso della classe Runtime potrebbe **compromettere la portabilità** delle applicazioni, infatti questa classe dipende fortemente dal sistema operativo.
