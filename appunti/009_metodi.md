@@ -21,6 +21,19 @@
 
 ---
 
+## Componenti dei metodi
+
+Più in generale, le dichiarazioni di metodo hanno **sei** componenti (alcuni sono opzionali), nell'ordine:
+
+* **Modificatori**, come public, private e altri che imparerai in seguito.
+* Il **tipo restituito**: il tipo di dati del valore restituito dal metodo o void se il metodo non restituisce un valore.
+* Il **nome del metodo**: le regole per i nomi dei campi si applicano anche ai nomi dei metodi, ma la convenzione è leggermente diversa.
+* L'**elenco di parametri** tra parentesi: un elenco delimitato da virgole di parametri di input, preceduti dai rispettivi tipi di dati, racchiusi tra parentesi (). Se non sono presenti parametri, è necessario utilizzare parentesi vuote.
+* Un **elenco di eccezioni**, opzionali, da discutere in seguito.
+* Il **corpo del metodo**, racchiuso tra parentesi graffe: il codice del metodo, inclusa la dichiarazione delle variabili locali, va qui.
+
+---
+
 ## Argomenti attuali e formali
 
 * Ogni volta che si invoca un metodo si deve specificare una lista di argomenti attuali
