@@ -1,6 +1,6 @@
 # MVC design pattern - model view controller
 
-![MVC](./img/mvc_pattern_uml_diagram.jpeg)
+![MVC](https://github.com/maboglia/CorsoJava/raw/master/appunti/img/mvc_pattern_uml_diagram.jpeg)
 
 ---
 
@@ -71,4 +71,4 @@ L’architettura MVC si basa su tre componenti principali:
 
 ---
 
-![MVC](./img/mvc_schema.jpg)
+![MVC](https://github.com/maboglia/CorsoJava/blob/master/appunti/img/mvc_schema.jpg)
