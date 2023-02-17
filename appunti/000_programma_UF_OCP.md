@@ -4,7 +4,6 @@ title: Fondamenti
 paginate: true
 author: mauro
 ---
-![bg](./background.jpg)
 
 Mauro Bogliaccino
 
@@ -15,7 +14,6 @@ Mauro Bogliaccino
 [Java SE 11 Programmer II](https://education.oracle.com/java/java-se/product_267)
 
 ---
-![bg](./background.jpg)
 
 ## obiettivi
 
@@ -27,7 +25,6 @@ Mauro Bogliaccino
 * Implementare la funzionalità di input/output (I/O) per leggere e scrivere su file di dati e di testo
 
 ---
-![bg](./background.jpg)
 
 ## obiettivi II
 
@@ -38,7 +35,6 @@ Mauro Bogliaccino
 * Creare applicazioni multi-thread ad alte prestazioni
 
 ---
-![bg](./background.jpg)
 
 ### Programmazione Funzionale
 
@@ -47,7 +43,6 @@ Mauro Bogliaccino
 * Interfacce funzionali integrate
 
 ---
-![bg](./background.jpg)
 
 ### Stream e stream paralleli
 
@@ -57,7 +52,6 @@ Mauro Bogliaccino
 * Creazione di stream personalizzati
 
 ---
-![bg](./background.jpg)
 
 ### Programmazione API Java e concetti di codifica sicura
 
@@ -67,7 +61,6 @@ Mauro Bogliaccino
 * Localizzazione
 
 ---
-![bg](./background.jpg)
 
 ### Collezioni e generici
 
@@ -82,7 +75,6 @@ Mauro Bogliaccino
 * HashSet, TreeSet
 
 ---
-![bg](./background.jpg)
 
 ### Elementi Sintassi JAVA
 
@@ -96,7 +88,6 @@ Mauro Bogliaccino
 * Reflection, Class, Constructor classes
 
 ---
-![bg](./background.jpg)
 
 ### Advanced Class design
 
@@ -112,7 +103,6 @@ Mauro Bogliaccino
 * Lambda espressioni.
 
 ---
-![bg](./background.jpg)
 
 ### design patterns
 
@@ -123,7 +113,6 @@ Mauro Bogliaccino
 * factory
 
 ---
-![bg](./background.jpg)
 
 ### JAVA WEB
 
@@ -140,7 +129,6 @@ Mauro Bogliaccino
 * RequestDispatcher
 
 ---
-![bg](./background.jpg)
 
 ### JDBC
 
@@ -154,7 +142,6 @@ Mauro Bogliaccino
   * executeUpdate()
 
 ---
-![bg](./background.jpg)
 
 ### Fondamenti di Java
 
@@ -163,7 +150,6 @@ Mauro Bogliaccino
 * Creare e utilizzare le enumerazioni
 
 ---
-![bg](./background.jpg)
 
 ### Gestione delle eccezioni e asserzioni
 
@@ -172,7 +158,6 @@ Mauro Bogliaccino
 * Metti alla prova gli invarianti usando le asserzioni
 
 ---
-![bg](./background.jpg)
 
 ### Eccezioni
 
@@ -189,7 +174,6 @@ Mauro Bogliaccino
 * Test unitari
 
 ---
-![bg](./background.jpg)
 
 ### Interfacce Java
 
@@ -197,7 +181,6 @@ Mauro Bogliaccino
 * Creare e utilizzare interfacce con metodi privati
 
 ---
-![bg](./background.jpg)
 
 ### Generici e Collezioni
 
@@ -208,7 +191,6 @@ Mauro Bogliaccino
 * Creare e utilizzare metodi di praticità per le raccolte
 
 ---
-![bg](./background.jpg)
 
 ### Framework Collections
 
@@ -220,7 +202,6 @@ Mauro Bogliaccino
 * Tipi Generics
 
 ---
-![bg](./background.jpg)
 
 ### Interfaccia funzionale ed espressioni lambda
 
@@ -228,7 +209,6 @@ Mauro Bogliaccino
 * Crea e usa espressioni lambda tra cui istruzione lambdas, variabile locale per i parametri lambda
 
 ---
-![bg](./background.jpg)
 
 ### API Java Stream
 
@@ -236,7 +216,6 @@ Mauro Bogliaccino
 * Usa espressioni lambda e riferimenti a metodi
 
 ---
-![bg](./background.jpg)
 
 ### Interfacce funzionali integrate
 
@@ -245,7 +224,6 @@ Mauro Bogliaccino
 * Usa le variazioni primitive e binarie delle interfacce di base del pacchetto java.util.function
 
 ---
-![bg](./background.jpg)
 
 ### Operazioni Lambda in streaming
 
@@ -257,7 +235,6 @@ Mauro Bogliaccino
 * Utilizzare i raccoglitori con stream, incluse le operazioni groupingBy e partitioningBy
 
 ---
-![bg](./background.jpg)
 
 ### I/O (Fundamentals e NIO2)
 
@@ -269,7 +246,6 @@ Mauro Bogliaccino
 * Usa l'API Stream con i file
 
 ---
-![bg](./background.jpg)
 
 ### Input/Output
 
@@ -285,7 +261,6 @@ Mauro Bogliaccino
 * Serializzazione e deserializzazione.
 
 ---
-![bg](./background.jpg)
 
 ### Codifica sicura nell'applicazione Java SE
 
@@ -297,7 +272,6 @@ Mauro Bogliaccino
 * Protezione della serializzazione e della deserializzazione
 
 ---
-![bg](./background.jpg)
 
 ### Applicazioni di database con JDBC
 
@@ -306,7 +280,6 @@ Mauro Bogliaccino
 * Utilizzare le API PreparedStatement e CallableStatement per eseguire operazioni sul database
 
 ---
-![bg](./background.jpg)
 
 ### Introduzione a JDBC
 
@@ -321,7 +294,6 @@ Mauro Bogliaccino
 * Crud su DB
 
 ---
-![bg](./background.jpg)
 
 ### Localizzazione
 
@@ -330,7 +302,6 @@ Mauro Bogliaccino
 * Formatta messaggi, date e numeri con Java
 
 ---
-![bg](./background.jpg)
 
 ### annotazioni
 
@@ -340,7 +311,6 @@ Mauro Bogliaccino
 * Dichiara annotazioni personalizzate
 
 ---
-![bg](./background.jpg)
 
 ### JSP e Servlet
 
@@ -354,7 +324,6 @@ Mauro Bogliaccino
 * Uso di Etichette personalizzate
 
 ---
-![bg](./background.jpg)
 
 ### Distribuire e mantenere un'applicazione
 
@@ -362,7 +331,6 @@ Mauro Bogliaccino
 * Modifica e requisiti dell'applicazione
 
 ---
-![bg](./background.jpg)
 
 ### Compredere l'uso dei moduli
 
@@ -372,7 +340,6 @@ Mauro Bogliaccino
 * JDK modulare
 
 ---
-![bg](./background.jpg)
 
 ## Programmazione modulare
 
@@ -381,7 +348,6 @@ Mauro Bogliaccino
 * Migrazione ad un'applicazione modulare
 
 ---
-![bg](./background.jpg)
 
 ### Comprensione dei moduli
 
@@ -392,7 +358,6 @@ Mauro Bogliaccino
 [Guida su baeldung.com](https://www.baeldung.com/java-9-modularity)
 
 ---
-![bg](./background.jpg)
 
 ### Migrazione ad un'applicazione modulare
 
@@ -401,7 +366,6 @@ Mauro Bogliaccino
 * Utilizzare jdeps per determinare le dipendenze e identificare il modo per affrontare le dipendenze cicliche
 
 ---
-![bg](./background.jpg)
 
 ### Servizi in un'applicazione modulare
 
@@ -411,7 +375,6 @@ Mauro Bogliaccino
 * verificare le dipendenze dei servizi inclusi i moduli consumer e provider
 
 ---
-![bg](./background.jpg)
 
 ## Concorrenza
 
@@ -421,7 +384,6 @@ Mauro Bogliaccino
 * Identificare i problemi di threading come deadlock e livelock
 
 ---
-![bg](./background.jpg)
 
 ### Flusso parallelo
 
