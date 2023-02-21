@@ -37,7 +37,7 @@ ovvero ad ogni operazione di prelievo vi è una spesa di 1€.
 
 La direttrice di un centro di formazione ha bisogno di un programma per formare le classi per il nuovo anno formativo:
 
-* Stampare o visualizzare il numero di classi che si possono ottenere con un gruppo di studenti di cui si conosce l'anno di nascita.
+* tampare o visualizzare il numero di classi che si possono ottenere con un gruppo di studenti di cui si conosce l'anno di nascita.
 * Le classi devono essere omogenee per età e possono contenere max 16 studenti.
 
 
@@ -49,11 +49,11 @@ Un azienda vuole effettuare una statistica sugli stipendi pagati mensilmente ai 
 ciascun dipendente si conoscono i seguenti dati:
 
 * cognome e nome,
-* stipendio mensile.
+* tipendio mensile.
 
 Dopo aver stampato il tabulato, si vogliono ottenere i seguenti dati statistici:
 
-* stipendio mensile medio,
+* tipendio mensile medio,
 * numero dipendenti con stipendio mensile maggiore di € 2.000,
 * cognome, nome e stipendio del dipendente che percepisce lo stipendio più alto.
 
@@ -198,7 +198,7 @@ Un ristorante offre un certo numero di pietanze, ognuna delle quali ha un nome e
 
 * Inoltre, potrebbe essere necessario determinare il numero di ingredienti necessari alla preparazione di una pietanza. 
 
-* Si progetti e si implementi una gerarchia di classi che sia in grado di soddisfare le esigenze del ristorante.
+* i progetti e si implementi una gerarchia di classi che sia in grado di soddisfare le esigenze del ristorante.
 
 ---
 
@@ -212,7 +212,7 @@ Uno studente del corso di laurea in informatica vuole gestire in modo automatizz
 
 * Potrebbe poi essere interessato a sapere il numero di esami che ha sostenuto con profitto. 
 
-* Si progetti e si implementi una gerarchia di classi JAVA che sia in grado di soddisfare le esigenze dello studente.
+* i progetti e si implementi una gerarchia di classi JAVA che sia in grado di soddisfare le esigenze dello studente.
 
 ---
 
@@ -228,7 +228,7 @@ Il docente del corso di Analisi Matematica vuole tenere traccia dei punteggi ott
 
 * Potrebbe essere infine interessante, per il docente, poter calcolare la percentuale di studenti con un voto insufficiente sul totale. 
 
-* Si progetti e si implementi una gerarchia di classi JAVA che sia in grado di soddisfare le esigenze del docente.
+* i progetti e si implementi una gerarchia di classi JAVA che sia in grado di soddisfare le esigenze del docente.
 
 ---
 
@@ -250,15 +250,18 @@ Il titolare di un negozio di vestiti è interessato a realizzare un registro ele
 
 * Infine, potrebbe essere interessante per il titolare del negozio determi- nare quante volte un certo prodotto (con un certo nome) sia stato venduto, complessivamente. 
 
-* Si progetti e si implementi una gerarchia di classi JAVA che sia in grado di soddisfare le esigenze del negoziante.
+* i progetti e si implementi una gerarchia di classi JAVA che sia in grado di soddisfare le esigenze del negoziante.
 
 ---
 
 ## Semaforo
 
 Si vuole simulare il traffico automobilistico in prossimità di un semaforo
-stradale. Si assuma una classe Auto, avente la variabile d'istanza targa
+stradale. 
+
+* Si assuma una classe Auto, avente la variabile d'istanza targa
 (stringa) e gli usuali metodi (non sviluppare il codice relativo).
+
 La classe Semaforo è così definita:
 
 ```java
@@ -277,27 +280,35 @@ public toString();
 
 ```
 
-Le due variabili verde e rosso sono mutuamente esclusive. Qualora il semaforo
-sia rosso, le automobili in arrivo rimangono in coda in attesa del verde.
+Le due variabili verde e rosso sono mutuamente esclusive. 
+
+* Qualora il semaforo sia rosso, le automobili in arrivo rimangono in coda in attesa del verde.
 Inoltre, se la coda ha lunghezza maggiore di 10, l'auto in arrivo decide di
-abbandonare la coda con probabilità un mezzo (usare la classe Random). La coda
+abbandonare la coda con probabilità un mezzo (usare la classe Random). 
+
+* La coda
 viene svuotata allo scattare del verde, e viene restituito il numero di auto che
 lasciano il semaforo.
 Il metodo impaziente causa, da parte di ciascuna auto, l'abbandono della coda
 con probabilità un sesto.
 Il metodo statistica restituisce il valore medio della lunghezza della coda allo
 scattare del verde, calcolato su tutte le osservazioni effettuate da quando il
-semaforo è attivo. Utilizzare le variabili d'istanza numOsservazioni e
+semaforo è attivo. 
+
+* Utilizzare le variabili d'istanza numOsservazioni e
 totLunghezze per tale calcolo.
 
 ---
 
 ## magazzino di articoli
 
-Un rivenditore vuole gestire un magazzino di articoli. Sviluppare una classe
+Un rivenditore vuole gestire un magazzino di articoli. 
+* Sviluppare una classe
 Articolo avente come variabili d’istanza un codice (stringa), un prezzo (intero) ed un
-quantitativo di disponibilità a (intero). Definire i relativi metodi di accesso
-ed un costruttore. Il magazzino è rappresentato dalla seguente classe:
+quantitativo di disponibilità a (intero). 
+* Definire i relativi metodi di accesso
+ed un costruttore. 
+* Il magazzino è rappresentato dalla seguente classe:
 
 ```java
 public class Magazzino {
@@ -311,14 +322,20 @@ public int conteggiaArticoli(String prefisso){...}}
 
 Nel magazzino non possono essere presenti più articoli aventi lo stesso codice;
 inoltre, gli articoli aventi quantitativo pari a zero devono essere cancellati
-dal magazzino. Il metodo rifornisciArticolo aggiunge un nuovo articolo al
+dal magazzino. 
+* Il metodo rifornisciArticolo aggiunge un nuovo articolo al
 magazzino, se questo non è presente, oppure aggiorna il quantitativo di un
-articolo. Il metodo vendiArticolo preleva dal magazzino una specificata
-quantità di un certo articolo, e comunque non oltre esaurimento. Viene
-restituito il ricavo totale. Il metodo aggiornaPrezzi aumenta della percentuale
-indicata il prezzo di tutti gli articoli disponibili. Il metodo
+articolo. 
+* Il metodo vendiArticolo preleva dal magazzino una specificata
+quantità di un certo articolo, e comunque non oltre esaurimento. 
+* Viene
+restituito il ricavo totale. 
+* Il metodo aggiornaPrezzi aumenta della percentuale
+indicata il prezzo di tutti gli articoli disponibili. 
+* Il metodo
 conteggiaArticoli restituisce la totale quantità di articoli presenti nel
-magazzino, aventi codice che inizi con uno specificato prefisso. Sviluppare
+magazzino, aventi codice che inizi con uno specificato prefisso. 
+* Sviluppare
 tutte le funzioni associate alla classe.
 
 ---
@@ -326,9 +343,11 @@ tutte le funzioni associate alla classe.
 ## prenotazione dei posti per un concerto
 
 Un'agenzia per il turismo desidera gestire automaticamente la prenotazione dei
-posti per un concerto. Si sviluppi una classe Cliente avente come variabili
+posti per un concerto. 
+* Si sviluppi una classe Cliente avente come variabili
 d'istanza il nominativo ed numero telefonico del cliente, rappresentati entrambi
-come stringhe, con i relativi metodi di accesso ed un costruttore. Si sviluppi
+come stringhe, con i relativi metodi di accesso ed un costruttore. 
+* Si sviluppi
 inoltre la seguente classe:
 
 ```java
@@ -346,15 +365,23 @@ public boolean incompleto(){...}
 ```
 
 L'array prenotazioni contiene i clienti che hanno il posto, la lista attesa
-contiene i clienti in lista d'attesa. La lista d'attesa deve essere gestita con
-la politica primo arrivato, primo servito. Il costruttore inizializza una classe
+contiene i clienti in lista d'attesa. 
+* La lista d'attesa deve essere gestita con
+la politica primo arrivato, primo servito. 
+* Il costruttore inizializza una classe
 con un array prenotazioni (inizialmente vuoto) avente lunghezza n specificata
-come parametro. Il metodo libero restituisce true solo se vi sono posti ancora
-liberi. Il metodo trova restituisce 0 se il cliente specificato ha il posto, 1
-se il cliente è in attesa e -1 altrimenti. Il metodo prenota inserisce il
-cliente specificato nell'oggetto (eventualmente in attesa). Il metodo disdici
-rimuove il cliente specificato dall'oggetto. Nel caso venga liberato un posto in
-prenotazioni, viene trasferito il primo cliente da attesa. Infine, il metodo
+come parametro. 
+* Il metodo libero restituisce true solo se vi sono posti ancora
+liberi. 
+* Il metodo trova restituisce 0 se il cliente specificato ha il posto, 1
+se il cliente è in attesa e -1 altrimenti. 
+* Il metodo prenota inserisce il
+cliente specificato nell'oggetto (eventualmente in attesa). 
+* Il metodo disdici
+rimuove il cliente specificato dall'oggetto. 
+* Nel caso venga liberato un posto in
+prenotazioni, viene trasferito il primo cliente da attesa. 
+* Infine, il metodo
 incompleto restituisce true se esiste almeno un cliente che abbia almeno un
 posto ed almeno una prenotazione in attesa; il metodo restituisce false
 in caso contrario.
@@ -400,7 +427,7 @@ vernice rovinata o se è sporca.
 
 Si desidera simulare un parcheggio a pagamento per autovetture. 
 
-* Si sviluppi la classe Vettura, avente le variabili d’istanza private int targa, private short oraArrivo, private short oraScadenza, dove le ore sono interi compresi tra 0 e 23. 
+* i sviluppi la classe Vettura, avente le variabili d’istanza private int targa, private short oraArrivo, private short oraScadenza, dove le ore sono interi compresi tra 0 e 23. 
 
 * Implementare i relativi metodi di accesso e riscrittura per tali variabili, più un costruttore. 
 
@@ -418,7 +445,7 @@ Si desidera simulare un parcheggio a pagamento per autovetture.
 
 * Il metodo statVetture restituisce una arraylist con tutte le vetture che hanno il più alto numero di ore di parcheggio pagato. 
 
-* Sviluppare tutti i metodi della classe.
+* viluppare tutti i metodi della classe.
 
 
 ---
