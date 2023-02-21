@@ -47,10 +47,12 @@ che estendono le funzionalità del server.
 * A tal fine esiste una coppia di metodi della classe `HttpServletRequest` che permettono di gestire un numero arbitrario di oggetti passati comee parametri della `request`. 
 
 __Questi metodi sono:__
+
 * setAttribute(String, Object)
 * getAttribute(String)
 
 ---
+
 ## Trasferimento del controllo dalla servlet alla JSP
 
 * Quando all'interno di una servlet, dopo aver preparato i dati in JDB e averli inseriti nell'oggetto request (parametro del metodo `doGet` o `doPost`), si vuole richiamare una **JSP** per visualizzare i dati, si dice che si trasferisce il controllo (**forward**) alla JSP.
