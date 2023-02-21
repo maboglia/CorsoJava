@@ -22,18 +22,20 @@ Simulare un Conto Corrente Generico. Ogni conto corrente ha un saldo su cui è
 possibile: prelevare, depositare, verificarne la disponibilità.
 Oltre ad un conto corrente generico ad un utente possono anche essere assegnati altri
 due tipi di conti:
-– Conto Corrente con Interessi:
+
+* Conto Corrente con Interessi:
 oltre al versamento normale vi è la possibilità di un versamento con
 interessi; ci deve quindi essere la possibilità di stabilire un tasso di interesse
 e ci deve essere una nuova operazione di versamento con interesse, in cui la
 quantità di soldi versata viene incrementata del 3%.
-– Conto Corrente con Spese:
+
+* Conto Corrente con Spese:
 oltre al versamento normale vi è la possibilità di un versamento con spese,
 ovvero ad ogni operazione di prelievo vi è una spesa di 1€.
 
 ---
 
-## Esercizio centro di formazione
+## Centro di formazione
 
 La direttrice di un centro di formazione ha bisogno di un programma per formare le classi per il nuovo anno formativo:
 
@@ -43,7 +45,7 @@ La direttrice di un centro di formazione ha bisogno di un programma per formare 
 
 ---
 
-## Esercizio statistica sugli stipendi
+## Statistica sugli stipendi
 
 Un azienda vuole effettuare una statistica sugli stipendi pagati mensilmente ai dipendenti. Di
 ciascun dipendente si conoscono i seguenti dati:
@@ -59,7 +61,7 @@ Dopo aver stampato il tabulato, si vogliono ottenere i seguenti dati statistici:
 
 ---
 
-## Esercizio temperature massime e minime
+## Temperature massime e minime
 
 Per N città vengono registrate le temperature massime e minime di una giornata.
 Stampare una tabella con:
