@@ -11,3 +11,7 @@ Scrivere un programma che lanci manualmente un'eccezione.
 ## Esercizio 3
 
 Scrivere un programma che gestisca una eccezione personalizzata.
+
+## Riesegui gli eserci OOP
+
+Utilizzando correttamente le eccezioni...
