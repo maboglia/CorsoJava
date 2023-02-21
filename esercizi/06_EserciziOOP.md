@@ -393,18 +393,18 @@ in caso contrario.
 ## Gestione fotocopiatrice
 
 Per ogni libro è indicato il numero di pagine, un editore, un autore ed un genere.
-Ho due tipologie di libri: libri fotocopiati a colori e libri fotocopiati in B/N.
-Per ogni tipologia di libro ho il prezzo di ogni pagina; deve inoltre essere possibile
+* Ho due tipologie di libri: libri fotocopiati a colori e libri fotocopiati in B/N.
+* Per ogni tipologia di libro ho il prezzo di ogni pagina; deve inoltre essere possibile
 calcolare il prezzo di un tot di pagine ed il prezzo totale del libro.
-Per ogni editore è nota solo la ragione sociale.
-Per ogni autore ho semplicemente nome e cognome.
-Per ogni genere ho il nome ed una breve descrizione.
-Ho poi una fotocopiatrice di cui conosco il numero di fogli a disposizione ed il
+* Per ogni editore è nota solo la ragione sociale.
+* Per ogni autore ho semplicemente nome e cognome.
+* Per ogni genere ho il nome ed una breve descrizione.
+* Ho poi una fotocopiatrice di cui conosco il numero di fogli a disposizione ed il
 guadagno che mi produce fotocopiando i libri.
-Tale fotocopiatrice quindi, indicato un libro ed il numero di pagine da fotocopiare,
+* Tale fotocopiatrice quindi, indicato un libro ed il numero di pagine da fotocopiare,
 decrementa il numero di fogli a disposizione ed incrementa l'indicatore dei miei
 guadagni.
-Vi è infine la possibilità di controllare se sono finiti i fogli ed in tal caso caricarne
+* Vi è infine la possibilità di controllare se sono finiti i fogli ed in tal caso caricarne
 altri.
 
 ---
@@ -412,13 +412,13 @@ altri.
 ## Centro d'Assistenza
 
 Simulare un centro d'assistenza per auto.
-Tale centro ha un nome ed un proprietario.
-E' composto da un meccanico (che ripara l'auto), da un carrozziere (che la rivernicia),
+* Tale centro ha un nome ed un proprietario.
+* E' composto da un meccanico (che ripara l'auto), da un carrozziere (che la rivernicia),
 da un autolavaggio (che la lava).
-Quando da assistenza all'auto verifica se questa è da riparare, riverniciare o lavare ed
+* Quando da assistenza all'auto verifica se questa è da riparare, riverniciare o lavare ed
 affida il lavoro rispettivamente al meccanico (che la ripara), al carrozziere (che la
 rivernicia) o all'autolavaggio (che la lava).
-Per ogni auto conosco il nome del modello e posso verificare se è rotta, con la
+* Per ogni auto conosco il nome del modello e posso verificare se è rotta, con la
 vernice rovinata o se è sporca.
 
 ---
