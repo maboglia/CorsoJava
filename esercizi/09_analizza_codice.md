@@ -2,9 +2,9 @@
 
 Provare ad eseguire il programma su carta e, successivamente, verificare la risposta eseguendo il programma su calcolatore
 
-## 0.22. Esercizio
+## 0.22. Esercizio Scope 
 
-Scope Provare ad eseguire il programma su carta e, successivamente, verificare la risposta eseguendo il programma su calcolatore:
+Provare ad eseguire il programma su carta e, successivamente, verificare la risposta eseguendo il programma su calcolatore:
 
 ```java
 class Nascoste {
@@ -30,9 +30,9 @@ System.out.println(y);
 
 ---
 
-## 0.23. Esercizio
+## 0.23. Esercizio Lifetime 
 
-Lifetime Provare ad eseguire il programma su carta e, successivamente, verificare la risposta eseguendo il programma su calcolatore:
+Provare ad eseguire il programma su carta e, successivamente, verificare la risposta eseguendo il programma su calcolatore:
 
 ```java
 
@@ -53,9 +53,9 @@ f();
 
 ---
 
-## 0.24. Esercizio
+## 0.24. Esercizio Che cosa visualizza il programma seguente?
 
-Che cosa visualizza il programma seguente? Provare ad eseguire il programma su carta e, successivamente, verificare la risposta eseguendo il programma su calcolatore:
+Provare ad eseguire il programma su carta e, successivamente, verificare la risposta eseguendo il programma su calcolatore:
 
 ---
 
@@ -90,9 +90,9 @@ System.out.println("main " + x + " " + y);
 
 ---
 
-## 0.25. Esercizio
+## 0.25. Esercizio Che cosa visualizza il programma seguente?
 
-Che cosa visualizza il programma seguente? Provare ad eseguire il programma su carta e, successivamente, verificare la risposta eseguendo il programma su calcolatore:
+Provare ad eseguire il programma su carta e, successivamente, verificare la risposta eseguendo il programma su calcolatore:
 
 ---
 
@@ -127,9 +127,9 @@ System.out.println("main " + x + " " + y);
 
 ---
 
-## 0.26. Esercizio
+## 0.26. Esercizio Overloading
 
-Overloading Che cosa visualizza il programma seguente? Provare ad eseguire il programma su carta e, successivamente, verificare la risposta eseguendo il programma su calcolatore:
+Che cosa visualizza il programma seguente? Provare ad eseguire il programma su carta e, successivamente, verificare la risposta eseguendo il programma su calcolatore:
 
 ```java
 

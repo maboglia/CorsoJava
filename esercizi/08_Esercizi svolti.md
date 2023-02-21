@@ -143,10 +143,11 @@ else
 
 ## Esercizio DoppioUnoDellaltro
 
-Scrivere un programma DoppioUnoDellaltro che he prevede un array di 10 numeri interi contenente valori a
+Scrivere un programma DoppioUnoDellaltro che he prevede 
 
-* piacere e stampa "Doppio uno dell’altro" se nell’array sono presenti due
-* valori che sono l’uno il doppio dell’altro, oppure stampa "NO" altrimenti.
+* un array di 10 numeri interi contenente valori a piacere
+* e stampa "Doppio uno dell’altro" se nell’array sono presenti due
+* valori che sono l’uno il doppio dell’altro, altrimenti stampa "NO" .
 
 ```java
 
