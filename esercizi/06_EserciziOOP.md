@@ -71,7 +71,7 @@ Stampare una tabella con:
 
 ---
 
-## 0.1. Esercizio concessionario d'auto
+## Concessionario d'auto
 
 Supponiamo di voler gestire i dati relativi ai modelli in vendita presso un concessionario d'auto. 
 
@@ -92,7 +92,7 @@ Si progetti e si implementi una classe automobile che sia in grado di soddisfare
 
 ---
 
-## 0.2. Esercizio classi scuola superiore
+## Classi scuola superiore
 
 Una scuola superiore è organizzata in classi, ciascuna delle quali è composta da un certo numero di studenti. 
 
@@ -108,7 +108,7 @@ Si progetti e si implementi una gerarchia di classi che sia in grado di soddisfa
 
 ---
 
-## 0.3. Esercizio azienda di trasporti
+## Azienda di trasporti
 
 Si supponga di voler progettare e implementare parte del sistema informativo di una azienda di trasporti su rotaia. 
 
@@ -129,7 +129,7 @@ Nei treni espressi occorrerà tenere conto anche del ricavo che si presume di ot
 
 ---
 
-## 0.4. Esercizio biblioteca
+## Biblioteca
 
 Una biblioteca ha la necessità di tenere traccia dei prestiti dei libri e dei DVD in catalogo. 
 
@@ -145,7 +145,7 @@ Occorre, infinte, permettere al bibliotecario di controllare se nella lista di p
 
 ---
 
-## 0.5. Esercizio gestione degli alberi genealogici
+## Gestione degli alberi genealogici
 
 Si progetti parte di un programma per la gestione degli alberi genealogici. 
 
@@ -166,7 +166,7 @@ Infine, si costruiscano
 
 ---
 
-## 0.7. Esercizio parco veicoli
+## Parco veicoli
 
 Un'azienda ha bisogno di gestire il suo parco veicoli tramite uno strumento informatico.
 
@@ -186,7 +186,7 @@ Si progetti e si implementi una gerarchia di classi che sia in grado di soddisfa
 
 ---
 
-## 0.8. Esercizio ristorante
+## Ristorante
 
 Un ristorante offre un certo numero di pietanze, ognuna delle quali ha un nome e un prezzo al pubblico. 
 
@@ -202,7 +202,7 @@ Un ristorante offre un certo numero di pietanze, ognuna delle quali ha un nome e
 
 ---
 
-## 0.9. Esercizio registro degli esami
+## Registro degli esami
 
 Uno studente del corso di laurea in informatica vuole gestire in modo automatizzato il registro degli esami che ha sostenuto. 
 
@@ -216,7 +216,7 @@ Uno studente del corso di laurea in informatica vuole gestire in modo automatizz
 
 ---
 
-## 0.10. Esercizio punteggi ottenuti dagli studenti
+## Punteggi ottenuti dagli studenti
 
 Il docente del corso di Analisi Matematica vuole tenere traccia dei punteggi ottenuti dagli studenti in una certa prova scritta. 
 
@@ -232,7 +232,7 @@ Il docente del corso di Analisi Matematica vuole tenere traccia dei punteggi ott
 
 ---
 
-## 0.11. Esercizio registro elettronico
+## Registro elettronico
 
 Il titolare di un negozio di vestiti è interessato a realizzare un registro elettronico dei suoi clienti. 
 
