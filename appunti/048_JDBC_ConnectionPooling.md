@@ -5,9 +5,12 @@
 Una delle operazioni più comuni in un’applicazione web è la gestione di dati
 immagazzinati in un database.
 L'accesso ai dati in Java si effettua usando il package JDBC (Java DataBase
-Connectivity). Un uso tipico delle classi JDBC prevede i seguenti passi:
+Connectivity). 
+
 
 ---
+
+## Un uso tipico delle classi JDBC prevede i seguenti passi:
 
 * Si rende disponibile il driver JDBC per il DBMS in uso nel classpath di Java.
 * Si carica il driver facendo riferimento alla classe che lo implementa tramite metodo
