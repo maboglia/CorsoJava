@@ -151,3 +151,50 @@ System.out.println(quarta(b));
   }
 }
 ```
+
+---
+
+## Si dica cosa stampa il seguente programma, motivando la risposta
+
+```java
+public class A {
+  private int n;
+  public A(int n) {
+  this.n=n;
+  }
+  public int getN() {
+  return n;
+  }
+  public double calcola(int m) {
+  return n+m;
+  }
+  public double calcola(double m) {;
+  return n+m+1;
+  }
+}
+public class B extends A {
+  public B(int n) {
+  super(n);
+  }
+  public double calcola(int m) {
+  return getN() + m + 10;
+  }
+}
+public class C extends B{
+  public C(int n) {
+  super(n);
+  }
+  public double calcola(int m) {
+  return getN() + m + 100;
+  }
+}
+
+public class Test {
+  public static void main(String[] args) {
+    C c = new C(2);
+    B b = new B(5);
+    A a = b;
+    System.out.println(c.calcola(a.calcola(0)));
+  }
+}
+```

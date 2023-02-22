@@ -35,18 +35,15 @@ Si noti che data una prenotazione è di interesse conoscere i posti per disabili
 
 ## Addetto biglietteria
 
-L’addetto alla biglietteria del teatro è interessato ad effettuare alcuni con- trolli. 
+L’addetto alla biglietteria del teatro è interessato ad effettuare alcuni controlli. 
 
 In particolare:
 
 * dato uno spettacolo s ed una tipologia di posto t, 
-    * restituire il costo associato alla tipologia t per lo spettacolo s, 
-    * se questo costo è specificato ed è unico. 
-    * Restituire −1 in caso contrario (questo segnala una situazione di errore);
+  * restituire il costo associato alla tipologia t per lo spettacolo s, 
+  * se questo costo è specificato ed è unico. 
+  * Restituire −1 in caso contrario (questo segnala una situazione di errore);
 
 * dato un insieme I di posti ed una replica r, 
-    * restituire l’insieme dei posti in I che sono disponibili per r 
-    * (cioè i posti contenuti in I che non risultano prenotati per r).
-
-
-  
+  * restituire l’insieme dei posti in I che sono disponibili per r 
+  * (cioè i posti contenuti in I che non risultano prenotati per r).
