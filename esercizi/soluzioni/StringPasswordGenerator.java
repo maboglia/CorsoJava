@@ -1,3 +1,4 @@
+package w02.stringhe;
 
 /* 
    Questo programma costruisce una parola di 8 lettere 

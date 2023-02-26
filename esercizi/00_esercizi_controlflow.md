@@ -1,6 +1,5 @@
 # 1. Esercizi su istruzioni condizionali e cicli
 
-
 ## 1.1. Esercizio dieci numeri interi
 
 Scrivere un programma che stampi a video i primi dieci numeri interi
@@ -130,17 +129,14 @@ della media aritmetica dei voti di tale esame.
 
 ## 1.14. Esercizio 44 gatti
 
-Scrivere un programma per stampare 44 caratteri
-(inseriti da tastiera) in fila per 6 con resto
-di 2.
+Scrivere un programma per stampare 44 caratteri (inseriti da tastiera) in fila per 6 con resto di 2.
 
 
 ---
 
 ## 1.15. Esercizio Codi ASCII
 
-Scrivere un programma che stampi 10 caratteri
-(letti da tastiera) ed i relativi codici ASCII.
+Scrivere un programma che stampi 10 caratteri (letti da tastiera) ed i relativi codici ASCII.
 
 ---
 
@@ -153,9 +149,10 @@ Scrivere un programma che stampi 10 caratteri
 ## 1.17. Esercizio Calcola il voto dell’esame
 
 Scrivere un programma che calcoli il risultato dell’esame di uno studente.
-    Il programma prenderà in ingresso:
-        Il voto ottenuto nella prova scritta (variabile tra -8 e +8)
-        Il voto ottenuto nella prova pratica (variabile tra 0 e 24)
+
+* Il programma prenderà in ingresso:
+  *Il voto ottenuto nella prova scritta (variabile tra -8 e +8)
+  *Il voto ottenuto nella prova pratica (variabile tra 0 e 24)
 
 Memorizzati questi dati procederà al calcolo del risultato finale in trentesimi come segue:
 
@@ -165,7 +162,6 @@ Memorizzati questi dati procederà al calcolo del risultato finale in trentesimi
 * se il voto di teoria è maggiore di zero e la somma dei voti di teoria e pratica è minore di 18lo studente è bocciato.
 * se la somma di teoria e pratica vale 31 o 32 il programma stampa: "congratulazioni: 30 e lode"
 * in tutti gli altri casi lo studente è promosso e viene riportato il voto calcolato.
-
 
 ---
 

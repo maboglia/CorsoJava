@@ -1,3 +1,4 @@
+package w02.stringhe;
 
 /*
   Questo programma scrive una parola a caso di 10 lettere
