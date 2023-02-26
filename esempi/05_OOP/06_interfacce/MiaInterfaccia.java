@@ -1,8 +1,11 @@
 package interfacce;
 
-@FunctionalInterface
 public interface MiaInterfaccia {
-
-	void saluta(String s);
 	
+	//tutte le prop sono implicitamente public e final
+	String SALUTO = "ciao";
+	
+	String saluta();
+	String saluta(String s);
+
 }
