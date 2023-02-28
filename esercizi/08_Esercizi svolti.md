@@ -15,7 +15,7 @@ else i++;
 }
 ```
 
-Determinare il valore finale delle variabili condizione e i nei seguenti casi:
+Determinare il valore finale delle variabili `condizione` e `i` nei seguenti casi:
 
 1) lista = {4,5,6,4,5};
 2) lista = {4,3,4,4,4};
@@ -356,7 +356,7 @@ return min;
 
 ---
 
-## 1.15. Esercizio 7
+## 1.15. Esercizio numeri strettamente positivi
 
 Scrivere un metodo che, dati un array di interi `a` ed un intero `k`, restituisce true se in `a` compaiono almeno `k` numeri strettamente positivi, false altrimenti.
 

@@ -24,14 +24,14 @@ Oltre ad un conto corrente generico ad un utente possono anche essere assegnati 
 due tipi di conti:
 
 * Conto Corrente con Interessi:
-oltre al versamento normale vi è la possibilità di un versamento con
-interessi; ci deve quindi essere la possibilità di stabilire un tasso di interesse
-e ci deve essere una nuova operazione di versamento con interesse, in cui la
-quantità di soldi versata viene incrementata del 3%.
+    oltre al versamento normale vi è la possibilità di un versamento con
+    interessi; ci deve quindi essere la possibilità di stabilire un tasso di interesse
+    e ci deve essere una nuova operazione di versamento con interesse, in cui la
+    quantità di soldi versata viene incrementata del 3%.
 
 * Conto Corrente con Spese:
-oltre al versamento normale vi è la possibilità di un versamento con spese,
-ovvero ad ogni operazione di prelievo vi è una spesa di 1€.
+    oltre al versamento normale vi è la possibilità di un versamento con spese,
+    ovvero ad ogni operazione di prelievo vi è una spesa di 1€.
 
 ---
 
@@ -39,9 +39,8 @@ ovvero ad ogni operazione di prelievo vi è una spesa di 1€.
 
 La direttrice di un centro di formazione ha bisogno di un programma per formare le classi per il nuovo anno formativo:
 
-* tampare o visualizzare il numero di classi che si possono ottenere con un gruppo di studenti di cui si conosce l'anno di nascita.
+* Stampare o visualizzare il numero di classi che si possono ottenere con un gruppo di studenti di cui si conosce l'anno di nascita.
 * Le classi devono essere omogenee per età e possono contenere max 16 studenti.
-
 
 ---
 
@@ -115,6 +114,7 @@ Si progetti e si implementi una gerarchia di classi che sia in grado di soddisfa
 Si supponga di voler progettare e implementare parte del sistema informativo di una azienda di trasporti su rotaia. 
 
 Per ogni treno occorrerà tenere traccia 
+
 * delle stazioni di fermata, 
 * della stazione di partenza e 
 * di quella di arrivo, 
@@ -133,7 +133,7 @@ Nei treni espressi occorrerà tenere conto anche del ricavo che si presume di ot
 
 ## Biblioteca
 
-Una biblioteca ha la necessità di tenere traccia dei prestiti dei libri e dei DVD in catalogo. 
+Una biblioteca ha la necessità di tenere traccia dei **prestiti dei libri e dei DVD** in catalogo. 
 
 Ad ogni libro o DVD sarà quindi associata una sequenza di prestiti, ad ognuno dei quali corrispondono la 1data di inizio prestito, la data di riconsegna, il nome e cognome dell'utente. 
 
@@ -173,6 +173,7 @@ Infine, si costruiscano
 Un'azienda ha bisogno di gestire il suo parco veicoli tramite uno strumento informatico.
 
 Per ogni veicolo occorrerà tenere traccia 
+
 * della targa, 
 * dell'anno di immatricolazione, 
 * dei chilometri percorsi 
@@ -234,7 +235,7 @@ Il docente del corso di Analisi Matematica vuole tenere traccia dei punteggi ott
 
 ---
 
-## Registro elettronico
+## Registro elettronico clienti
 
 Il titolare di un negozio di vestiti è interessato a realizzare un registro elettronico dei suoi clienti. 
 
@@ -268,16 +269,16 @@ La classe Semaforo è così definita:
 
 ```java
 public class Semaforo {
-private boolean rosso, verde;
-private int numOsservazioni, totLunghezze;
-private ArrayList<Auto> coda;
-public Semaforo(){};
-public void rosso(); // porto il semaforo a rosso
-public int verde(); // porto il semaforo a verde
-public void arrivo(String unaTarga); // arrivo auto
-public double impaziente();
-public double statistica();
-public toString();
+    private boolean rosso, verde;
+    private int numOsservazioni, totLunghezze;
+    private ArrayList<Auto> coda;
+    public Semaforo(){};
+    public void rosso(); // porto il semaforo a rosso
+    public int verde(); // porto il semaforo a verde
+    public void arrivo(String unaTarga); // arrivo auto
+    public double impaziente();
+    public double statistica();
+    public toString();
 };
 
 ```
@@ -285,60 +286,43 @@ public toString();
 Le due variabili verde e rosso sono mutuamente esclusive. 
 
 * Qualora il semaforo sia rosso, le automobili in arrivo rimangono in coda in attesa del verde.
-Inoltre, se la coda ha lunghezza maggiore di 10, l'auto in arrivo decide di
-abbandonare la coda con probabilità un mezzo (usare la classe Random). 
+* Inoltre, se la coda ha lunghezza maggiore di 10, l'auto in arrivo decide di abbandonare la coda con probabilità un mezzo (usare la classe Random). 
 
-* La coda
-viene svuotata allo scattare del verde, e viene restituito il numero di auto che
-lasciano il semaforo.
-Il metodo impaziente causa, da parte di ciascuna auto, l'abbandono della coda
-con probabilità un sesto.
-Il metodo statistica restituisce il valore medio della lunghezza della coda allo
-scattare del verde, calcolato su tutte le osservazioni effettuate da quando il
-semaforo è attivo. 
-
-* Utilizzare le variabili d'istanza numOsservazioni e
-totLunghezze per tale calcolo.
+* La coda viene svuotata allo scattare del verde, e viene restituito il numero di auto che lasciano il semaforo.
+* Il metodo impaziente causa, da parte di ciascuna auto, l'abbandono della coda con probabilità un sesto.
+* Il metodo statistica restituisce il valore medio della lunghezza della coda allo scattare del verde, calcolato su tutte le osservazioni effettuate da quando il semaforo è attivo. 
+* Utilizzare le variabili d'istanza numOsservazioni e totLunghezze per tale calcolo.
 
 ---
 
 ## magazzino di articoli
 
 Un rivenditore vuole gestire un magazzino di articoli. 
-* Sviluppare una classe
-Articolo avente come variabili d’istanza un codice (stringa), un prezzo (intero) ed un
-quantitativo di disponibilità a (intero). 
-* Definire i relativi metodi di accesso
-ed un costruttore. 
+
+* Sviluppare una classe Articolo avente come variabili d’istanza un codice (stringa), un prezzo (intero) ed un quantitativo di disponibilità a (intero). 
+* Definire i relativi metodi di accesso ed un costruttore. 
 * Il magazzino è rappresentato dalla seguente classe:
 
 ```java
 public class Magazzino {
-private ArrayList<Articolo> articoli;
-public Magazzino(){...}
-public void rifornisciArticolo(String codice, int quantita, int prezzo){...}
-public int vendiArticolo(String codice, int quantita){...}
-public void aggiornaPrezzi(int percentuale){...}
-public int conteggiaArticoli(String prefisso){...}}
+    private ArrayList<Articolo> articoli;
+    public Magazzino(){...}
+    public void rifornisciArticolo(String codice, int quantita, int prezzo){...}
+    public int vendiArticolo(String codice, int quantita){...}
+    public void aggiornaPrezzi(int percentuale){...}
+    public int conteggiaArticoli(String prefisso){...}
+}
 ```
 
 Nel magazzino non possono essere presenti più articoli aventi lo stesso codice;
 inoltre, gli articoli aventi quantitativo pari a zero devono essere cancellati
 dal magazzino. 
-* Il metodo rifornisciArticolo aggiunge un nuovo articolo al
-magazzino, se questo non è presente, oppure aggiorna il quantitativo di un
-articolo. 
-* Il metodo vendiArticolo preleva dal magazzino una specificata
-quantità di un certo articolo, e comunque non oltre esaurimento. 
-* Viene
-restituito il ricavo totale. 
-* Il metodo aggiornaPrezzi aumenta della percentuale
-indicata il prezzo di tutti gli articoli disponibili. 
-* Il metodo
-conteggiaArticoli restituisce la totale quantità di articoli presenti nel
-magazzino, aventi codice che inizi con uno specificato prefisso. 
-* Sviluppare
-tutte le funzioni associate alla classe.
+
+* Il metodo rifornisciArticolo aggiunge un nuovo articolo al magazzino, se questo non è presente, oppure aggiorna il quantitativo di un articolo. * Il metodo vendiArticolo preleva dal magazzino una specificata quantità di un certo articolo, e comunque non oltre esaurimento. 
+* Viene restituito il ricavo totale. 
+* Il metodo aggiornaPrezzi aumenta della percentuale indicata il prezzo di tutti gli articoli disponibili. 
+* Il metodo conteggiaArticoli restituisce la totale quantità di articoli presenti nel magazzino, aventi codice che inizi con uno specificato prefisso. 
+* Sviluppare tutte le funzioni associate alla classe.
 
 ---
 
@@ -346,82 +330,61 @@ tutte le funzioni associate alla classe.
 
 Un'agenzia per il turismo desidera gestire automaticamente la prenotazione dei
 posti per un concerto. 
-* Si sviluppi una classe Cliente avente come variabili
-d'istanza il nominativo ed numero telefonico del cliente, rappresentati entrambi
-come stringhe, con i relativi metodi di accesso ed un costruttore. 
-* Si sviluppi
-inoltre la seguente classe:
+
+* Si sviluppi una classe Cliente avente come variabili d'istanza il nominativo ed numero telefonico del cliente, rappresentati entrambi come stringhe, con i relativi metodi di accesso ed un costruttore. 
+* Si sviluppi inoltre la seguente classe:
 
 ```java
 public class Spettacolo {
-private Cliente[] prenotazioni;
-private int n_prenotazione;
-private ArrayList<Cliente> attesa;
-public Spettacolo(int n){...}
-public boolean libero(){...}
-public int trova(String nome, String tel){...}
-public void prenota(String nome, String tel){...}
-public void disdici(String nome, String tel){...}
-public boolean incompleto(){...}
+    private Cliente[] prenotazioni;
+    private int n_prenotazione;
+    private ArrayList<Cliente> attesa;
+    public Spettacolo(int n){...}
+    public boolean libero(){...}
+    public int trova(String nome, String tel){...}
+    public void prenota(String nome, String tel){...}
+    public void disdici(String nome, String tel){...}
+    public boolean incompleto(){...}
 }
 ```
 
 L'array prenotazioni contiene i clienti che hanno il posto, la lista attesa
 contiene i clienti in lista d'attesa. 
-* La lista d'attesa deve essere gestita con
-la politica primo arrivato, primo servito. 
-* Il costruttore inizializza una classe
-con un array prenotazioni (inizialmente vuoto) avente lunghezza n specificata
-come parametro. 
-* Il metodo libero restituisce true solo se vi sono posti ancora
-liberi. 
-* Il metodo trova restituisce 0 se il cliente specificato ha il posto, 1
-se il cliente è in attesa e -1 altrimenti. 
-* Il metodo prenota inserisce il
-cliente specificato nell'oggetto (eventualmente in attesa). 
-* Il metodo disdici
-rimuove il cliente specificato dall'oggetto. 
-* Nel caso venga liberato un posto in
-prenotazioni, viene trasferito il primo cliente da attesa. 
-* Infine, il metodo
-incompleto restituisce true se esiste almeno un cliente che abbia almeno un
-posto ed almeno una prenotazione in attesa; il metodo restituisce false
-in caso contrario.
+
+* La lista d'attesa deve essere gestita con la politica primo arrivato, primo servito. 
+* Il costruttore inizializza una classe con un array prenotazioni (inizialmente vuoto) avente lunghezza n specificata come parametro. 
+* Il metodo libero restituisce true solo se vi sono posti ancora liberi. 
+* Il metodo trova restituisce 0 se il cliente specificato ha il posto, 1 se il cliente è in attesa e -1 altrimenti. 
+* Il metodo prenota inserisce il cliente specificato nell'oggetto (eventualmente in attesa). 
+* Il metodo disdici rimuove il cliente specificato dall'oggetto. 
+* Nel caso venga liberato un posto in prenotazioni, viene trasferito il primo cliente da attesa. 
+* Infine, il metodo incompleto restituisce true se esiste almeno un cliente che abbia almeno un posto ed almeno una prenotazione in attesa; il metodo restituisce false in caso contrario.
 
 ---
-
-
 
 ## Gestione fotocopiatrice
 
 Per ogni libro è indicato il numero di pagine, un editore, un autore ed un genere.
+
 * Ho due tipologie di libri: libri fotocopiati a colori e libri fotocopiati in B/N.
-* Per ogni tipologia di libro ho il prezzo di ogni pagina; deve inoltre essere possibile
-calcolare il prezzo di un tot di pagine ed il prezzo totale del libro.
+* Per ogni tipologia di libro ho il prezzo di ogni pagina; deve inoltre essere possibile calcolare il prezzo di un tot di pagine ed il prezzo totale del libro.
 * Per ogni editore è nota solo la ragione sociale.
 * Per ogni autore ho semplicemente nome e cognome.
 * Per ogni genere ho il nome ed una breve descrizione.
-* Ho poi una fotocopiatrice di cui conosco il numero di fogli a disposizione ed il
-guadagno che mi produce fotocopiando i libri.
-* Tale fotocopiatrice quindi, indicato un libro ed il numero di pagine da fotocopiare,
-decrementa il numero di fogli a disposizione ed incrementa l'indicatore dei miei
-guadagni.
-* Vi è infine la possibilità di controllare se sono finiti i fogli ed in tal caso caricarne
-altri.
+* Ho poi una fotocopiatrice di cui conosco il numero di fogli a disposizione ed il guadagno che mi produce fotocopiando i libri.
+* Tale fotocopiatrice quindi, indicato un libro ed il numero di pagine da fotocopiare, decrementa il numero di fogli a disposizione ed incrementa l'indicatore dei miei guadagni.
+* Vi è infine la possibilità di controllare se sono finiti i fogli ed in tal caso caricarne altri.
 
 ---
 
 ## Centro d'Assistenza
 
 Simulare un centro d'assistenza per auto.
+
 * Tale centro ha un nome ed un proprietario.
-* E' composto da un meccanico (che ripara l'auto), da un carrozziere (che la rivernicia),
-da un autolavaggio (che la lava).
-* Quando da assistenza all'auto verifica se questa è da riparare, riverniciare o lavare ed
-affida il lavoro rispettivamente al meccanico (che la ripara), al carrozziere (che la
-rivernicia) o all'autolavaggio (che la lava).
-* Per ogni auto conosco il nome del modello e posso verificare se è rotta, con la
-vernice rovinata o se è sporca.
+* E' composto da un meccanico (che ripara l'auto), da un carrozziere (che la rivernicia), da un autolavaggio (che la lava).
+* Quando da assistenza all'auto verifica se questa è da riparare, riverniciare o lavare ed affida il lavoro rispettivamente al meccanico (che la ripara), al carrozziere (che la rivernicia) o all'autolavaggio (che la lava).
+* Per ogni auto conosco il nome del modello e posso verificare se è rotta, con la vernice rovinata o se è sporca.
 
 ---
 
