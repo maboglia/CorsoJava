@@ -1,6 +1,7 @@
 # Programma Certificazione Oracle OCA Oracle Certified Associate, Java SE 
 
 ## Java Building Blocks
+
 * Understanding the Java Class Structure
     * Fields and Methods
     * Comments
@@ -35,6 +36,7 @@
 * Benefits of Java
 
 ## Operators and Statements
+
 * Understanding Java Operators
 * Working with Binary Arithmetic Operators
     * Arithmetic Operators
@@ -62,6 +64,7 @@
     * The continue Statement
 
 ## Core Java APIs
+
 * Creating and Manipulating Strings
     * Concatenation
     * Immutability
@@ -97,6 +100,7 @@
     * Parsing Dates and Times
 
 ## Methods and Encapsulation 
+
 * Designing Methods
     * Optional Specifiers
     * Return Type
@@ -131,6 +135,7 @@
     * Predicates
 
 ## Class Design
+
 * Introducing Class Inheritance
     * Extending a Class
     * Applying Class Access Modifiers
@@ -157,6 +162,7 @@
     * Polymorphism and Method Overriding
 
 ## Exceptions
+
 * Understanding Exceptions
     * The Role of Exceptions
     * Understanding Exception Types
