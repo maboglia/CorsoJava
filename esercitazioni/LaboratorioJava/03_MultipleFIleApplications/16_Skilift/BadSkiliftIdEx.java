@@ -1,0 +1,1 @@
+class BadSkiliftIdEx extends Exception{}

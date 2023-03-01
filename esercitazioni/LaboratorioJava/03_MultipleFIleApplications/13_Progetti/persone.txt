@@ -1,0 +1,4 @@
+p1 Rossi Mario
+p2 Verdi Gianni
+p3 Bianchi Erminio
+p4 Neri Nero

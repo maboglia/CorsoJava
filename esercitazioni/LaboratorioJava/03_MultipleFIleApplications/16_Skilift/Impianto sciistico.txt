@@ -1,0 +1,35 @@
+Sistema per il controllo degli accessi ad un impianto sciistico
+
+Ogni sciatore ha una tessera caratterizzata da un identificatore
+(numero su 6 cifre decimali). Ogni skilift ha un lettore di
+tessera e un identificatore di skilift (2 cifre decimali). Il
+sistema riceve una lettura da uno skilift (parametri della
+lettura: id skilift, id tessera) e rilascia o meno l'autorizzazione
+al passaggio. L'obbiettivo e' evitare che persone diverse usino la
+stessa tessera. Quindi l'autorizzazione viene data solo se la
+tessera non e' gia' passata per lo skilift X negli ultimi Delta(X)
+secondi. Notare che Delta  dipende dallo skilift. 
+I ritardi Delta degli skilift vengono letti da un file passato come
+primo parametro sulla linea di comando. Il file e' formattato come
+segue: 
+id_skilift,ritardo_delta
+Il sistema, una volta inizializzato, deve fornire una funzione di
+autorizzazione del tipo:
+boolean auth(long cardId, int skiliftId) throws BadSkiliftIdException
+Vincoli: 
+- Numero di tessere non noto a compile time, e crescente nel corso
+  della giornata, variabile da qualche centinaio a 50-100.000. 
+- Numero di skilift non noto a compile time (ordine delle centinaia).
+  Il numero skilift e' noto solo a fine lettura del file
+  corrispondente. 
+- Minima occupazione memoria 
+-------------------------------------------------------------------------------
+Funzioni relative al tempo: 
+
+import java.util.Date;
+
+Date currentDate = new Date();
+long currentTime = currentTime.getTime();
+/* currentTime contiene il tempo attuale, in secondi, a partire dal 1.1.1970 */
+
+

@@ -1,0 +1,15 @@
+Scrivere un programma che gestisca un dizionario italiano - inglese.
+In particolare, il programma deve consentire di inserire sul file
+dizionario.txt l'elenco dei vocaboli italiani e delle relative
+traduzioni in inglese. Ciascun vocabolo può avere una o più
+traduzioni.
+Il formato del file è il seguente:
+
+vocabolo_italiano_1; traduzione_inglese_1_1 traduzione_inglese_1_2 ..... traduzione_inglese_1_n
+vocabolo_italiano_2; traduzione_inglese_2_1 traduzione_inglese_2_2 ..... traduzione_inglese_2_n
+.
+.
+vocabolo_italiano_m; traduzione_inglese_m_1 traduzione_inglese_m_2 ..... traduzione_inglese_m_n
+
+Al contempo, il programma deve garantire l'accesso a tale file per consentire
+all'utente una traduzione automatica del vocabolo inserito da tastiera.

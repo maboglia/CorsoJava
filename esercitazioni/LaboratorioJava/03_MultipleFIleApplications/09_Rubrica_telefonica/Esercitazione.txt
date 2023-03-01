@@ -1,0 +1,5 @@
+Scrivere un programma che gestisca una rubrica telefonica
+Tale programma deve consentire di:
+1) Aggiungere una voce alla rubrica
+2) Eliminare una voce dalla rubrica
+3) Visualizzare l'elenco dinamico della rubrica

@@ -1,0 +1,6 @@
+prog1 p1 10
+prog1 p2 10
+prog1 p3 13
+prog2 p1 14
+prog2 p2 10
+prog2 p2 14

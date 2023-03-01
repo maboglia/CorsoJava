@@ -1,0 +1,31 @@
+Tema d'esame: Analisi traffico di rete
+
+Sia dato un file ('traffico.txt') contenente la traccia
+dei dati scambiati su una rete locale. Ogni riga del file
+descrive un pacchetto di dati scambiato in rete ed ha il
+seguente formato:
+ip_addr nbytes 
+dove ip_addr è un indirizzo di rete IP (specificato come
+x.x.x.x con x compreso fra 0 e 255) ed identifica il nodo
+che ha spedito il pacchetto mentre nbytes specifica il
+numero di byte contenuti nel pacchetto. La lunghezza di
+tale file non è nota a priori e può essere arbitrariamente
+grande. Si noti come lo stesso nodo possa comparire più
+volte nel file.
+Un secondo file ('indirizzi.txt') descrive invece
+l'associazione fra gli indirizzi IP e il nome dei nodi,
+secondo il seguente formato:
+ip_addr name 
+dove name è una stringa di caratteri alfanumerici (lunga
+fino a 40 caratteri). La dimensione di tale file non è
+nota a priori ma è tale da poter essere caricato in
+memoria.
+Si scriva un programma in linguaggio Java in grado di
+determinare il numero di byte complessivo trasmesso da
+ogni nodo. Gli indirizzi, i nomi dei nodi ed il numero di
+byte trasmessi da ciascun nodo dovranno essere quindi
+stampati sullo standard output.
+Esempio di output:
+130.192.4.10 torbeno 40
+130.192.4.11  barisone 400
+130.192.4.230 ungone 400

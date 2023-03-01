@@ -1,0 +1,39 @@
+Si scriva in linguaggio Java un programma che gestisca
+i progetti software di una software house. Il programma
+deve eseguire le seguenti operazioni:
+
+- Leggere da tre file di testo le tre tabelle:
+  - PROGETTI contenente i dati relativi ai progetti
+    software 
+  - PROGRAMMATORI contenente i dati relativi ai
+    programmatori impiegati nella software house 
+  - LAVORA-IN contenente l'elenco di tutti i programmatori
+    coinvolti in ognuno dei progetti contenuti nella
+    tabella PROGETTI
+
+- Rappresentare le informazioni in memoria, in modo tale che:
+  - data la sigla di un progetto, permetta di generare
+    l'elenco di tutti i programmatori che vi hanno
+    partecipato, il numero di ore in cui ha lavorato ciascuno
+    e la somma di tutte le ore spese dai programmatori su quel
+    progetto 
+  - dato il numero impiegato di un programmatore, permetta di
+    generare l'elenco di tutti i progetti a cui ha partecipato,
+    il numero di ore in cui ha lavorato a ciascun progetto e
+    la somma di tutte le ore in cui ha lavorato
+
+Si noti che ad ogni progetto possono essere assegnati uno o
+piu’ programmatori e ogni programmatore puo’ partecipare a uno
+o piu’ progetti.
+
+Formato del file progetti.txt, contenente la tabella PROGETTI:
+<sigla progetto> <descrizione> \n
+
+Formato del file persone.txt, contenente la tabella
+PROGRAMMATORI:
+<numero impiegato> <cognome> <nome> \n
+
+Formato del file relazioni.txt, contenente la tabella
+LAVORA-IN:
+<sigla progetto> <numero impiegato> <ore lavorate> \n
+
