@@ -11,7 +11,7 @@ public class Prefisso {
 	}
 	
 	private static String pref(String s) {
-		if (s.length()>3) //4 nel compito B
+		if (s.length()>3) 
 			s=s.substring(0,3);
 		return s;
 	}
