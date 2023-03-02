@@ -38,8 +38,8 @@ primitivi.
 
 ## Esercizio 5
 
-Scrivere un programma che crei un file tmp, vi
-scriva i caratteri "abcdef" e poi acceda a tmp
+Scrivere un programma che crei un file `temp.txt`, vi
+scriva i caratteri "abcdef" e poi acceda a `temp.txt`
 utilizzando un'istanza di RandomAccessFile, il
 metodo seek() e il metodo readByte() per leggere
 un byte alla volta.
