@@ -1,4 +1,4 @@
-# 1. Esercizi su istruzioni condizionali e cicli
+# Esercizi su istruzioni condizionali e cicli
 
 ## 1.1. Esercizio dieci numeri interi
 
@@ -60,6 +60,12 @@ Stampare a video la seguente figura:
 12345      21
 123456      1
 ```
+
+---
+
+## Esercizio Triangolo isoscele
+
+* con i cicli innestati stampare a video la figura di un triangolo isoscele composto di lettere A maiuscola
 
 ---
 
@@ -134,15 +140,16 @@ Scrivere un programma per stampare 44 caratteri (inseriti da tastiera) in fila p
 
 ---
 
-## 1.15. Esercizio Codi ASCII
+## 1.15. Esercizio Codice ASCII
 
 Scrivere un programma che stampi 10 caratteri (letti da tastiera) ed i relativi codici ASCII.
 
 ---
 
-## Esercizio Triangolo isoscele
+## Esercizio TestaCroce
 
-* con i cicli innestati stampare a video la figura di un triangolo isoscele composto di lettere A maiuscola
+Scrivere un programma `TestaCroce` che genera un numero casuale 0 oppure 1 e stampa
+Testa se ha generato 0, o Croce se ha generato 1.
 
 ---
 
@@ -239,7 +246,19 @@ Scrivere un programma **TavolaPitagorica** in modo che i valori stampati siano b
 
 ---
 
-## 1.27. Esercizio Ordinamento per selezione
+## 1.28. Esercizio Converti in maiuscolo
+
+Scrivere un programma che usando i cicli converta una sequenza di caratteri letti in input nei corrispondenti caratteri maiuscoli.
+
+---
+
+## Esercizio GrandiNumeri
+
+Scrivere un programma `GrandiNumeri` che genera 0 oppure 1 per 1000 volte e stampa quante volte è stato generato 0 e quante volte è stato generato 1.
+
+---
+
+## Esercizio Ordinamento per selezione
 
 Scrivere un programma che implementi l'algoritmo di
 ordinamento per selezione su un vettore di 10
@@ -256,25 +275,6 @@ for (int i = 0; i < N - 1; i++)
               a[j] = temp;
   }
 ```
-
----
-
-## 1.28. Esercizio Converti in maiuscolo
-
-Scrivere un programma che usando i cicli converta una sequenza di caratteri letti in input nei corrispondenti caratteri maiuscoli.
-
----
-
-## Esercizio TestaCroce
-
-Scrivere un programma `TestaCroce` che genera un numero casuale 0 oppure 1 e stampa
-Testa se ha generato 0, o Croce se ha generato 1.
-
----
-
-## Esercizio GrandiNumeri
-
-Scrivere un programma `GrandiNumeri` che genera 0 oppure 1 per 1000 volte e stampa quante volte è stato generato 0 e quante volte è stato generato 1.
 
 ---
 
