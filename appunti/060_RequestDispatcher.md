@@ -1,12 +1,12 @@
 # LE SERVLET
 
-Una Servlet è un programma scritto in Java e residente su un server.
-Le servlet si occupano di comunicazione, una `HttpServlet` estende la `GenericServlet` e permette di gestire la comunicazione sul protocollo `http`.
+Una `Servlet` è un programma scritto in Java e residente su un server.
+Le `servlet` si occupano di comunicazione, una `HttpServlet` estende la `GenericServlet` e permette di gestire la comunicazione sul protocollo `http`.
 
-Una servlet è in grado di gestire le richieste generate da uno o più client, attraverso uno scambio di
+Una `servlet` è in grado di gestire le richieste generate da uno o più client, attraverso uno scambio di
 messaggi tra il server ed i client stessi che hanno effettuato la richiesta.
 
-Le servlet girano all'interno di un `Application Server` (e.g. Apache Tomcat) e possono essere considerate delle classi
+Le `servlet` girano all'interno di un `Application Server` (e.g. Apache Tomcat) e possono essere considerate delle classi
 che estendono le funzionalità del server.
 
 ---
@@ -26,11 +26,11 @@ che estendono le funzionalità del server.
 ## RequestDispatcher
 
 * L'approccio **servlet-centric** prevede di utilizzare le pagine JSP solo per la presentazione e delegare il controllo ad una o ad un gruppo di servlet
-* Le servlet quindi
+* Le `servlet` quindi
 * gestiscono le richieste (vengono cioè invocate tramite URL) elaborano i dati necessari a soddisfare le richieste (interagendo con la classe DBMS.java e utilizzando i Java Data Bean come componenti per rappresentare le informazioni di interesse)
 * trasferiscono il controllo alla JSP designata a presentare i risultati.
 
-* Se il gruppo di servlet che realizzano l'applicazione web viene ristretto a contenere una sola servlet, allora l'applicazione ha un solo punto di accesso e questa servlet ha i controllo totale sul flusso dell'applicazione.
+* Se il gruppo di `servlet` che realizzano l'applicazione web viene ristretto a contenere una sola `servlet`, allora l'applicazione ha un solo punto di accesso e questa `servlet` ha i controllo totale sul flusso dell'applicazione.
 
 ---
 
@@ -61,10 +61,8 @@ __Questi metodi sono:__
 * Ci sono due modi equivalenti per definire un oggetto **RequestDispatcher** associato ad una JSP all'interno di una servlet:
 
 ```java
-RequestDispatcher rd =
-request.getRequestDispatcher(“PathRelativoJSP")
-RequestDispatcher rd =
-getServletContext.getRequestDispatcher(“PathAssolutoJSP")
+RequestDispatcher rd = request.getRequestDispatcher("PathRelativoJSP");
+RequestDispatcher rd = getServletContext.getRequestDispatcher("PathAssolutoJSP");
 ```
 
 * Una volta ottenuto l'oggetto `RequestDispatcher rd`, è sufficiente invocare il suo metodo forward:
