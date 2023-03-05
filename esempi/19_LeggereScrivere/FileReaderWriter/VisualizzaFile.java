@@ -1,4 +1,3 @@
-package week6.giorno1;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -30,7 +29,7 @@ public class VisualizzaFile {
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				//e.printStackTrace();
-				System.out.println("spiacenti, si è verificato un errore di tipo NonHoTrovatoIlFILE");
+				System.out.println("spiacenti, si Ã¨ verificato un errore di tipo NonHoTrovatoIlFILE");
 				return;
 			}
 			
