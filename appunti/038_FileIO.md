@@ -175,7 +175,7 @@ Alcuni dei metodi di cui sopra hanno un comportamento predefinito di cui devi es
 ```java
 
 
-Files.copy(Path.di("input.txt"), Path.di("output.txt"),
+Files.copy(Path.of("input.txt"), Path.of("output.txt"),
             StandardCopyOption.REPLACE_EXISTING);
 ```
 
@@ -424,7 +424,7 @@ OutputStream os = Files.newOutputStream(target);
 
 ```java
 
-var logFile = Path.di("/tmp/mio.log");
+var logFile = Path.of("/tmp/mio.log");
 try (var writer =
         Files.newBufferedWriter(logFile, StandardCharsets.UTF_8,
                                 StandardOpenOption.WRITE)) {
@@ -465,7 +465,12 @@ _(Ben Evans)_
 
 ---
 
-Attributi del file
+## NIO 2.0 in pratica
+
+_(Ben Evans)_
+
+---
+## Attributi dei file
 
 Ogni file system ha il proprio set di attributi e la propria interpretazione del significato di tali attributi di file. Fortunatamente, tutte le versioni moderne di Java supportano gli attributi dei file nei numerosi file system tramite implementazioni delle interfacce FileAttributeView e BasicFileAttributes.
 
@@ -475,42 +480,45 @@ Il listato 1 manipola i permessi dei file di un file di testo (sample.txt) che s
 
 ---
 
-## Listato 1. Supporto degli attributi di file in NIO.2
+### Listato 1. Supporto degli attributi di file in NIO.2
 
 
 ```java
 import java.nio.file.attribute.*;
 
-import java.nio.file.attribute.PosixFilePermission.GROUP_READ statico;
+import static java.nio.file.attribute.PosixFilePermission.GROUP_READ;
 
 try {
-     var teamList = Path.of("/Users/ben/sample.txt");
-     PosixFileAttributes attrs =
-         Files.readAttributes(teamList, PosixFileAttributes.class);
+    var teamList = Path.of("/Users/ben/sample.txt");
+    PosixFileAttributes attrs =
+        Files.readAttributes(teamList, PosixFileAttributes.class);
 
-     Set<PosixFilePermission> posixFilePermissions = attrs.permissions();
+    Set<PosixFilePermission> posixFilePermissions = attrs.permissions();
 
-     var proprietario = attrs.owner().getName();
-     var perms = PosixFilePermissions.toString(posixFilePermissions);
-     System.out.format("%s %s%n", proprietario, perms);
+    var owner = attrs.owner().getName();
+    var perms = PosixFilePermissions.toString(posixFilePermissions);
+    System.out.format("%s %s%n", owner, perms);
 
-     posixFilePermissions.add(GROUP_READ);
-     Files.setPosixFilePermissions(teamList, posixFilePermissions);
+    posixFilePermissions.add(GROUP_READ);
+    Files.setPosixFilePermissions(teamList, posixFilePermissions);
 } catch(IOException e) {
-     e.printStackTrace();
+    e.printStackTrace();
 }
 ```
 
 Il codice inizia importando alcune classi di attributi e una costante PosixFilePermission, quindi ottiene un handle per il file sample.txt. Utilizzando un metodo helper da Files, ottiene l'accesso agli attributi PosixFileAttributes e successivamente agli attributi PosixFilePermission. Il codice ripete le autorizzazioni correnti e quindi aggiunge la nuova autorizzazione di lettura del gruppo al file.
 
 (Ho lasciato alcune informazioni di tipo non necessarie per facilitare la leggibilità nell'esempio. Nel codice funzionante, parte di questo boilerplate potrebbe essere rimosso.)
-Collegamenti simbolici
-
-Oltre a questi tipi di attributi di base, Java dispone anche di un sistema estensibile per supportare funzioni speciali del sistema operativo. Mostrerò questo supporto esaminando un esempio di supporto di collegamento simbolico. I collegamenti simbolici (link simbolici) sono disponibili in molti sistemi operativi comuni inclusi (ma non limitati a) Linux, macOS e Windows.
 
 ---
 
+## Collegamenti simbolici
+
+Oltre a questi tipi di attributi di base, Java dispone anche di un sistema estensibile per supportare funzioni speciali del sistema operativo. Mostrerò questo supporto esaminando un esempio di supporto di collegamento simbolico. I collegamenti simbolici (link simbolici) sono disponibili in molti sistemi operativi comuni inclusi (ma non limitati a) Linux, macOS e Windows.
+
 Un collegamento simbolico può essere pensato come un puntatore a un altro file o directory e nella maggior parte dei casi questi collegamenti vengono trattati in modo trasparente. Ad esempio, l'utilizzo di un collegamento simbolico per passare a una directory ti porterà nella directory a cui punta il collegamento simbolico. Tuttavia, alcuni software, come le utilità di backup, devono discernere e manipolare i collegamenti simbolici come caso speciale. NIO.2 lo consente.
+
+---
 
 Il supporto Java per i collegamenti simbolici segue fondamentalmente la semantica dell'implementazione UNIX. L'esempio seguente esamina e segue un collegamento simbolico per /opt/maven che punta alla directory specifica per apache-maven-3.6.1. Il file system è simile al seguente:
 
@@ -521,28 +529,26 @@ drwxr-xr-x 9 root wheel 288 21 aprile 2019 apache-maven-3.6.1
 lrwxr-xr-x 1 root wheel 18 21 aprile 2019 maven -> apache-maven-3.6.1
 ```
 
-Il listato 2 esplora il collegamento simbolico.
 
 ---
 
-## Listato 2. Esplorazione di un collegamento simbolico
+### Listato 2. Esplorazione di un collegamento simbolico
 
+Il listato 2 esplora il collegamento simbolico.
 
 ```java
-
-
-Path Path = Path.di("/opt/esperto");
+Path path = Path.of("/opt/maven");
 try {
-     if (Files.isSymbolicLink(Path)) {
-         Contenuto del Path = Files.readSymbolicLink(Path);
-         Destinazione Path = Path.toRealPath();
-         System.out.println("Link contenuti: "+ contenuti);
-         System.out.println("Link destinazione: "+ destinazione);
-         var attrs = Files.readAttributes(target, BasicFileAttributes.class);
-         System.out.println(attrs);
-     }
+    if (Files.isSymbolicLink(path)) {
+        Path contents = Files.readSymbolicLink(path);
+        Path target = path.toRealPath();
+        System.out.println("Link contents: "+ contents);
+        System.out.println("Link target: "+ target);
+        var attrs = Files.readAttributes(target, BasicFileAttributes.class);
+        System.out.println(attrs);
+    }
 } catch (IOException e) {
-     e.printStackTrace();
+    e.printStackTrace();
 }
 ```
 
@@ -553,8 +559,9 @@ Il codice inizia controllando se il Path è un collegamento simbolico e, in tal 
 Invece, per accedere al file, usa toRealPath(), che restituisce un Path che è il Path fisico completamente risolto.
 
 Nota: questa discussione riguarda solo i collegamenti simbolici. Nelle API Java, più file hard-link (supponendo che siano supportati dal sistema operativo) non vengono distinti. Ad esempio, tutti gli hard link sono trattati come equivalenti.
-Trattare con le directory in NIO.2
 
+---
+## Trattare con le directory in NIO.2
 
 La capacità di Java di navigare nelle directory è stata oggetto di un'importante revisione in NIO.2. L'aggiunta della nuova interfaccia java.nio.file.DirectoryStream e le relative classi di implementazione consentono di eseguire i seguenti tipi di operazioni:
 
@@ -567,28 +574,26 @@ La capacità di Java di navigare nelle directory è stata oggetto di un'importan
 
 Il listato 3 mostra un semplice esempio di come utilizzare una corrispondenza del modello di espressione regolare per elencare tutti i file .java in una directory di progetto.
 
-## Listato 3. Trovare i file corrispondenti
+### Listato 3. Trovare i file corrispondenti
 
 
 ```java
-
-
 try {
-     var dir = Path.of("/Users/ben/projects/openjdk/jdk");
-     DirectoryStream<Path> stream = Files.newDirectoryStream(dir, "*.java");
-     for (Voce del Path: stream) {
-         System.out.println(entry.getFileName());
-     }
+    var dir = Path.of("/Users/ben/projects/openjdk/jdk");
+    DirectoryStream<Path> stream = Files.newDirectoryStream(dir, "*.java");
+    for (Path entry: stream) {
+        System.out.println(entry.getFileName());
+    }
 } catch (IOException e) {
-     e.printStackTrace();
+    e.printStackTrace();
 }
 ```
 
 Il codice inizia da un Path di base e costruisce un DirectoryStream. È fonte di confusione perché, nonostante il nome, questa classe non implementa l'interfaccia Stream (infatti, DirectoryStream è precedente a Java 8). Invece, la classe è destinata ad essere utilizzata come strumento di filtraggio. Il codice itera sulle voci che sono state trovate e le stampa ciascuna.
 
----
-
 Il listato 3 mostra quanto sia facile utilizzare questa API quando si ha a che fare con una singola directory. Ma c'è un problema che vedrai se esegui il codice: non restituisce risultati. Questo perché il codice cercherà solo in una singola directory, il che non è molto utile.
+
+---
 
 Cosa puoi fare se devi filtrare in modo ricorsivo tra più directory?
 
@@ -597,7 +602,7 @@ Ad esempio, i file sorgente di Java in genere si trovano in una struttura di pac
 L'esplorazione di un albero di directory è una caratteristica relativamente rara di Java e coinvolge una serie di interfacce e dettagli di implementazione. Il metodo chiave da utilizzare per percorrere la directory è
 
 ```java
-Files.walkFileTree(Path che iniziaDir, FileVisitor<? super Path> visitatore);
+Files.walkFileTree(Path inizialeDir, FileVisitor<? super Path> visitatore);
 ```
 
 ---
@@ -611,11 +616,11 @@ Fornire la startingDir è abbastanza facile, ma per quanto riguarda un'implement
 * `FileVisitResult visitFileFailed(T file, IOException exc)`
 * `FileVisitResult postVisitDirectory(T dir, IOException exc)`
 
-Sembra una discreta quantità di lavoro, ma fortunatamente l'API fornisce un'implementazione predefinita, SimpleFileVisitor. Continuando dall'esempio nel Listato 3 di trovare i file sorgente .java in una directory, ora puoi elencare i file sorgente .java da tutte le directory che si trovano sotto /Users/ben/projects/openjdk/jdk. Il listato 4 mostra questo utilizzo del metodo walkFileTree().
+Sembra una discreta quantità di lavoro, ma fortunatamente l'API fornisce un'implementazione predefinita, **SimpleFileVisitor**. Continuando dall'esempio nel Listato 3 di trovare i file sorgente .java in una directory, ora puoi elencare i file sorgente .java da tutte le directory che si trovano sotto /Users/ben/projects/openjdk/jdk. Il listato 4 mostra questo utilizzo del metodo walkFileTree().
 
 ---
 
-## Listato 4. Ricerca del codice sorgente Java nelle sottodirectory
+### Listato 4. Ricerca del codice sorgente Java nelle sottodirectory
 
 
 ```java
@@ -624,20 +629,20 @@ Sembra una discreta quantità di lavoro, ma fortunatamente l'API fornisce un'imp
 var startingDir = Path.of("/Users/ben/projects/openjdk/jdk");
 Files.walkFileTree(startingDir, new FindJavaVisitor());
 
-public class FindJavaVisitor estende SimpleFileVisitor<Path> {
-     @Override
-     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
-         if (file != null && attrs != null) {
-             if (file.getFileName().toString().endsWith(".java")) {
-                 System.out.println(file.getFileName());
-             }
-         }
-         return FileVisitResult.CONTINUE;
-     }
+public class FindJavaVisitor extends SimpleFileVisitor<Path> {
+    @Override
+    public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
+        if (file != null && attrs != null) {
+            if (file.getFileName().toString().endsWith(".java")) {
+                System.out.println(file.getFileName());
+            }
+        }
+        return FileVisitResult.CONTINUE;
+    }
 }
 ```
 
-Si inizia creando un oggetto Path e quindi si chiama il metodo Files.walkFileTree(). Passa un oggetto FindJavaVisitor, che è un'implementazione che estende SimpleFileVisitor. In altre parole, lascia che SimpleFileVisitor faccia la maggior parte del lavoro di attraversamento delle directory e così via. L'unico codice che devi scrivere è quando esegui l'override del metodo visitFile(). In questo metodo, scrivi un semplice codice per vedere se un file termina con .java e fai eco al suo nome su stdout se lo fa.
+Si inizia creando un oggetto Path e quindi si chiama il metodo Files.walkFileTree(). Passa un oggetto **FindJavaVisitor**, che è un'implementazione che estende SimpleFileVisitor. In altre parole, lascia che SimpleFileVisitor faccia la maggior parte del lavoro di attraversamento delle directory e così via. L'unico codice che devi scrivere è quando esegui l'override del metodo visitFile(). In questo metodo, scrivi un semplice codice per vedere se un file termina con .java e fai eco al suo nome su stdout se lo fa.
 
 ---
 
@@ -652,38 +657,36 @@ Questo tipo di notifica degli eventi può essere utileul per il monitoraggio del
 
 ---
 
-## Listato 5. Utilizzo di WatchService
+### Listato 5. Utilizzo di WatchService
 
 
 ```java
-
-
 try {
-     var watcher = FileSystems.getDefault().newWatchService();
-     var dir = Path.of("/Users/ben");
+    var watcher = FileSystems.getDefault().newWatchService();
+    var dir = Path.of("/Users/ben");
 
-     var register = dir.register(osservatore, ENTRY_MODIFY);
+    var registered = dir.register(watcher, ENTRY_MODIFY);
 
-     while (!arresto) {
-         Chiave WatchKey = null;
-         try {
-             chiave = watcher.take();
-             for (WatchEvent<?> event : key.pollEvents()) {
-                 if (evento == null) {
-                     Continua;
-                 }
-                 if (event.kind() == ENTRY_MODIFY) {
-                     System.out.println("Home directory cambiata!");
-                 }
-             }
-             chiave.reset();
-         } catch (Eccezione interrotta e) {
-             // Registra l'interruzione
-             spegnimento = vero;
-         }
-     }
+    while (!shutdown) {
+        WatchKey key = null;
+        try {
+            key = watcher.take();
+            for (WatchEvent<?> event : key.pollEvents()) {
+                if (event == null) {
+                    continue;
+                }
+                if (event.kind() == ENTRY_MODIFY) {
+                    System.out.println("Home dir changed!");
+                }
+            }
+            key.reset();
+        } catch (InterruptedException e) {
+            // Log interruption
+            shutdown = true;
+        }
+    }
 } catch (IOException | InterruptedException e) {
-     e.printStackTrace();
+    e.printStackTrace();
 }
 ```
 
@@ -738,31 +741,29 @@ Come puoi vedere, il file temporaneo verrà automaticamente eliminato quando il 
 
 Il Listato 6 decomprime un file .jar in una directory temporanea. Questo utilizza non solo la gestione della directory temporanea, ma anche un ZipInputStream. Questa è una classe molto utile per lavorare con i file .zip (ricorda che i file JAR sono in realtà solo file .zip con una directory di metadati memorizzata al loro interno insieme al codice).
 
-## Listato 6. Lavorare con i file .zip
+### Listato 6. Lavorare con i file .zip
 
 
 ```java
+public static Path unpackJar(String zipFilePath) throws IOException {
+    var tmpDir = Files.createTempDirectory(Path.of("/tmp"), "jar-extract");
 
+    try (var zipIn = new ZipInputStream(new FileInputStream(zipFilePath))) {
+        var entry = zipIn.getNextEntry();
 
-public static Path unpackJar(String zipFilePath) getta IOException {
-     var tmpDir = Files.createTempDirectory(Path.of("/tmp"), "jar-extract");
+        while (entry != null) {
+            var newFile = tmpDir.resolve(entry.getName());
+            if (entry.isDirectory()) {
+                Files.createDirectory(newFile);
+            } else {
+                Files.copy(zipIn, newFile);
+            }
+            zipIn.closeEntry();
+            entry = zipIn.getNextEntry();
+        }
+    }
 
-     prova (var zipIn = new ZipInputStream(new FileInputStream(zipFilePath))) {
-         var entry = zipIn.getNextEntry();
-
-         while (voce != null) {
-             var nuovoFile = tmpDir.resolve(entry.getName());
-             if (entry.isDirectory()) {
-                 File.createDirectory(nuovoFile);
-             } altro {
-                 File.copia(zipIn, nuovoFile);
-             }
-             zipIn.closeEntry();
-             voce = zipIn.getNextEntry();
-         }
-     }
-
-     return tmpDir;
+    return tmpDir;
 }
 ```
 
