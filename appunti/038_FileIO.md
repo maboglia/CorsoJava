@@ -138,7 +138,7 @@ Attributes attr;
 Files.createFile(target, attr);
 
 // Eliminazione di file
-File.delete(destinazione);
+Files.delete(destinazione);
 boolean eliminato = Files.deleteIfExists(target);
 
 // Copia/spostamento di file
@@ -146,7 +146,7 @@ Files.copy(origine, destinazione);
 Files.move(sorgente, destinazione);
 
 // Metodi di utilità per recuperare informazioni
-dimensione lunga = Files.size(target);
+long dimensione = Files.size(target);
 FileTime fTime = Files.getLastModifiedTime(target);
 System.out.println(fTime.to(TimeUnit.SECONDS));
 
