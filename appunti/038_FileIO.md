@@ -41,9 +41,7 @@ Files.write(file, data);
 
 ---
 
-## Java NIO.2
-
-Input/output di file moderno con Java Path API e metodi helper Files
+## Java NIO.2: Input/output di file moderno con Java Path API e metodi helper Files
 
 Sono in circolazione da Java 7, ma non tutti sanno come utilizzare le funzionalità di I/O del file NIO.2.
 
@@ -55,42 +53,46 @@ Le versioni successive di Java hanno introdotto altre API per semplificare la vi
 
 ---
 
-Per lo sviluppo Java moderno, dovresti passare direttamente a queste API moderne (note come NIO.2 o semplicemente API Path) per attività semplici. Tutte le altre API, inclusa la gestione di I/O di basso livello, sono ancora disponibili se ne hai bisogno, ma per la maggior parte delle attività quotidiane dovrebbe essere sufficiente la semplice API Path.
+Per lo sviluppo Java moderno, dovresti passare direttamente a queste API moderne (note come NIO.2 o semplicemente API **Path**) per attività semplici. Tutte le altre API, inclusa la gestione di I/O di basso livello, sono ancora disponibili se ne hai bisogno, ma per la maggior parte delle attività quotidiane dovrebbe essere sufficiente la semplice API **Path**.
 
-Ci sono due parti nella semplice API, che vive nel pacchetto java.nio.file. Ancora più importante, c'è l'interfaccia Path stessa. Esistono anche numerosi metodi di supporto per implementare attività comuni di gestione dei file, che sono per lo più contenute nella classe Files.
+Ci sono due parti nella semplice API, che vive nel pacchetto java.nio.file. Ancora più importante, c'è l'interfaccia **Path** stessa. Esistono anche numerosi metodi di supporto per implementare attività comuni di gestione dei file, che sono per lo più contenute nella classe Files.
 
-Incontriamo l'API, partendo dall'astrazione fondamentale, il Path stesso.
-Presentazione dell'API Path di Java
-
----
-
-Un'istanza di Path è un oggetto che può essere utilizzato per individuare un file in un file system. Rappresenta una posizione del file system che
-
-     È gerarchico
-     È composto da una sequenza di elementi di Path
-     È dipendente dal sistema nella sua implementazione
-     Può corrispondere o meno a un file esistente
-
-È importante notare che l'API Path può essere utilizzata per fare riferimento a file che non sono ancora stati creati o che sono già stati eliminati; quindi, l'ultimo punto sopra.
-
-Questi aspetti rendono Path fondamentalmente diverso dall'altra astrazione Java comune (ma molto più antica) per l'I/O: l'oggetto File.
-
-In effetti, Path è un'interfaccia non una classe. Ciò consente a diversi sistemi operativi e altri fornitori di file system di creare diverse implementazioni dell'interfaccia Path. Ciò fornisce un'astrazione condivisa ma consente anche funzionalità dipendenti dal sistema che non devono essere supportate su tutti i file system.
+Incontriamo l'API, partendo dall'astrazione fondamentale, il **Path** stesso.
+Presentazione dell'API **Path** di Java
 
 ---
 
-Tutte le istanze di Path possono essere pensate come composte da zero o più nomi di directory e quindi da un elemento name. Inoltre, alcuni percorsi hanno un componente radice (come / o C:\), ma questo non è obbligatorio perché alcune istanze (come oggetti che rappresentano percorsi relativi) non hanno una radice.
+Un'istanza di **Path** è un oggetto che può essere utilizzato per individuare un file in un file system. Rappresenta una posizione del file system che
 
-L'elemento name è l'elemento "più lontano" dalla radice della gerarchia di directory e rappresenta il nome del file o della directory. Puoi pensare intuitivamente a un Path come costituito dagli elementi uniti insieme da un delimitatore. Quel delimitatore è tutto ciò che è appropriato per il sistema operativo.
+* È gerarchico
+* È composto da una sequenza di elementi di **Path**
+* È dipendente dal sistema nella sua implementazione
+* Può corrispondere o meno a un file esistente
 
-Java 7 è stato fornito con una classe Paths che fornisce metodi factory per la creazione di oggetti Path. In Java 11 e versioni successive, questi metodi sono disponibili anche come metodi statici direttamente nell'interfaccia Path.
+È importante notare che l'API **Path** può essere utilizzata per fare riferimento a file che non sono ancora stati creati o che sono già stati eliminati; quindi, l'ultimo punto sopra.
+
+Questi aspetti rendono **Path** fondamentalmente diverso dall'altra astrazione Java comune (ma molto più antica) per l'I/O: l'oggetto File.
+
+In effetti, **Path** è un'interfaccia non una classe. Ciò consente a diversi sistemi operativi e altri fornitori di file system di creare diverse implementazioni dell'interfaccia **Path**. Ciò fornisce un'astrazione condivisa ma consente anche funzionalità dipendenti dal sistema che non devono essere supportate su tutti i file system.
+
+---
+
+Tutte le istanze di **Path** possono essere pensate come composte da zero o più nomi di directory e quindi da un elemento name. Inoltre, alcuni percorsi hanno un componente radice (come / o C:\), ma questo non è obbligatorio perché alcune istanze (come oggetti che rappresentano percorsi relativi) non hanno una radice.
+
+L'elemento name è l'elemento "più lontano" dalla radice della gerarchia di directory e rappresenta il nome del file o della directory. Puoi pensare intuitivamente a un **Path** come costituito dagli elementi uniti insieme da un delimitatore. Quel delimitatore è tutto ciò che è appropriato per il sistema operativo.
+
+
+---
+
+Java 7 è stato fornito con una classe **Paths** che fornisce metodi factory per la creazione di oggetti **Path**. In Java 11 e versioni successive, questi metodi sono disponibili anche come metodi statici direttamente nell'interfaccia **Path**.
 
 Le factory forniscono metodi (Paths.get () e Path.of()) per creare oggetti Path. Il normale sovraccarico di questi metodi accetta una stringa e utilizza il provider del file system predefinito. Una versione alternativa accetta invece un URI; questo fornisce un gancio per la capacità di NIO.2 di collegare fornitori di implementazioni di file system personalizzate o non standard, come file system compatibili con la rete o file zip.
 
+Una volta che si dispone di un oggetto Path, è possibile utilizzarlo per eseguire operazioni comuni mediante i metodi pratici e di utilità per gestire file e file system, molti dei quali sono contenuti come metodi statici nella classe Files.
+
 ---
 
-Una volta che si dispone di un oggetto Path, è possibile utilizzarlo per eseguire operazioni comuni mediante i metodi pratici e di utilità per gestire file e file system, molti dei quali sono contenuti come metodi statici nella classe Files.
-I metodi ausiliari
+## I metodi ausiliari
 
 Gli zelanti sostenitori di altri linguaggi a volte si lamentano del fatto che Java abbia troppi standard. Storicamente, questo potrebbe essere stato in qualche modo accurato per Java I/O, ma i tempi sono cambiati in meglio. Ad esempio, in Java moderno una semplice operazione di copia è ora semplice come la seguente:
 
@@ -113,9 +115,9 @@ Questa è all'incirca la stessa quantità di codice che ci si aspetterebbe in un
 
 Avviso: noterai che l'unica eccezione verificata generata dai metodi in Path è una IOException. Questo aiutoÈ l'obiettivo della semplicità di codifica, ma a volte può oscurare un problema di fondo. Potrebbe essere necessario scrivere una gestione extra delle eccezioni se si desidera gestire un sottotipo esplicito di IOException.
 
-La classe Files è enorme e vale la pena familiarizzare con i metodi in essa contenuti. (Esistono anche varianti che utilizzano le API precedenti, incluso File, ma iniziamo usando solo l'API moderna.)
-
 ---
+
+La classe Files è enorme e vale la pena familiarizzare con i metodi in essa contenuti. (Esistono anche varianti che utilizzano le API precedenti, incluso File, ma iniziamo usando solo l'API moderna.)
 
 Ecco il mio suggerimento: prima di scrivere un metodo di I/O file da zero, controlla se Files ha già un metodo che fa quello che vuoi (o qualcosa di simile).
 
@@ -123,9 +125,11 @@ Il codice seguente mostra alcuni dei principali metodi in Files. Il loro funzion
 
 Nei commenti seguenti, sono esplicito sui tipi restituiti per quei metodi in cui il tipo restituito è importante. Alcuni degli altri metodi, come copy(), non hanno tipi restituiti particolarmente utili. Il punto di questi metodi sono gli effetti collaterali, ovvero la copia effettiva del file.
 
+---
+
 ```java
-Sorgente del Path, destinazione;
-Attributi attr;
+Path sorgente, destinazione;
+Attributes attr;
 
 // Creazione di file
 //
@@ -168,9 +172,6 @@ Stream<String> tmp = Files.lines(source, cs);
 
 Alcuni dei metodi di cui sopra hanno un comportamento predefinito di cui devi essere a conoscenza. Ad esempio, per impostazione predefinita, un'operazione di copia non sovrascriverà un file esistente, quindi è necessario specificare questo comportamento come opzione di copia, come segue:
 
-
-
-
 ```java
 
 
@@ -188,14 +189,11 @@ Una breve ma rilevante storia dell'I/O Java
 
 Uno dei motivi per cui Java è così popolare è perché le sue ricche librerie offrono API potenti e concise per risolvere la maggior parte delle tue esigenze di programmazione. Tuttavia, ci sono alcune aree in cui le versioni precedenti di Java non erano all'altezza. Un esempio di questo tipo di mal di testa per gli sviluppatori era tradizionalmente nelle API di I/O. Ci sono stati diversi tentativi per risolvere questo problema, portando a diverse API I/O diverse.
 
----
 
 * Java 1.0: le API File, InputStream e OutputStream
 * Java 1.1: L'API Readers and Writeers
 * Java 1.4: la nuova API I/O (NIO).
 * Java 7: l'API del Path (NIO.2)
-
----
 
 La classe java.io.File originale, in particolare, presentava limitazioni significative.
 
@@ -204,15 +202,15 @@ La classe java.io.File originale, in particolare, presentava limitazioni signifi
 * Era difficile usarlo per attraversare le directory.
 * Non consentiva l'uso di funzionalità specifiche della piattaforma (come i collegamenti simbolici).
 
+---
+
 Anche le API precedenti non riuscivano a gestire le operazioni non bloccanti per i file system. Queste limitazioni e la necessità di fornire supporto per approcci moderni all'I/O, hanno portato al lavoro che è diventato NIO.2 in Java 7 (come specificato in JSR 203: More New I/O APIs for the Java Platform “NIO.2 ”). Questo progetto aveva tre obiettivi principali.
 
 * Una nuova interfaccia del file system
 * Un'API per operazioni di I/O asincrone (al contrario di polling, non bloccanti) su socket e file
 * Il completamento della funzionalità socket-channel (precedentemente definita in JSR 51), inclusa l'aggiunta del supporto per l'associazione, la configurazione delle opzioni e i datagrammi multicast
 
----
-
-La prima pelliccia di obiettivopoi si è suddiviso in tre obiettivi secondari.
+e tre obiettivi secondari:
 
 * Accesso completo agli attributi dei file
 * Possibilità di accedere alle API specifiche del file system
@@ -220,7 +218,7 @@ La prima pelliccia di obiettivopoi si è suddiviso in tre obiettivi secondari.
 
 Queste sono riconoscibilmente le capacità fondamentali offerte dall'API Path e non sorprende che l'API sia stata adottata con entusiasmo dagli sviluppatori. Nonostante ciò, tuttavia, a volte è necessario interagire con codice precedente o con codice relativamente nuovo scritto da uno sviluppatore che preferisce i vecchi metodi di I/O su file. Ecco perché la familiarità con le altre API fornite da JDK ripagherà i dividendi per il programmatore attento.
 
-Fondamentale per queste API precedenti è la classe File, ed è lì che mi rivolgo alla prossima. (Ricorda: questo è completamente diverso dalla classe File delle applicazioni di supporto che funzionano con Path.)
+Fondamentale per queste API precedenti è la classe File.
 
 ---
 
@@ -303,7 +301,7 @@ if (f.exists() && f.isFile() && f.canRead()) {
    configdir.mkdir();
 
    // Infine, sposta il file di configurazione nella sua nuova home
-   f.renameTo(nuovo File(configdir, ".config"));
+   f.renameTo(new File(configdir, ".config"));
 }
 ```
 
@@ -326,7 +324,7 @@ Ad esempio, per contare tutte le volte in cui la a minuscola (valore ASCII 97) c
 ```java
 
 try (var is = new FileInputStream("/Users/ben/alice.txt")) {
-   var buf = nuovo byte[4096];
+   var buf = new byte[4096];
    int len, count = 0;
    while ((len = is.read(buf)) > 0) {
      per (var i = 0; i < len; i = i + 1)
@@ -363,16 +361,17 @@ try {
 
 
 Ora non dovrebbe sorprendere che non posso consigliare di utilizzare le vecchie API di basso livello. Invece, le API più moderne basate su Path si adatteranno molto meglio per la maggior parte del tempo. Tuttavia, ci sono circostanze in cui è necessario utilizzare una combinazione delle API moderne e di alcune delle alternative precedenti.
-Bridging delle API di file e Path
 
 ---
+
+## Bridging delle API di file e Path
 
 Ecco un esempio che mostra la facile interazione tra gli oggetti Path e File. Innanzitutto, si noti come i metodi Path factory possono essere utilizzati per accedere allo stesso Path in modi diversi.
 
 ```java
 
 var p = Path.of("/Users/ben/cluster.txt");
-var p2 = Path.of(nuovo URI("file:///Users/ben/cluster.txt"));
+var p2 = Path.of(new URI("file:///Users/ben/cluster.txt"));
 System.out.println(p2.equals(p));
 ```
 
@@ -436,10 +435,10 @@ try (var writer =
 }
 ```
 
+Ciò fornisce un semplice collegamento al codice precedente che utilizza l'API Readers and Writers.
 ---
 
-Ciò fornisce un semplice collegamento al codice precedente che utilizza l'API Readers and Writers.
-Estensibilità con FileSystem e FileStore
+## Estensibilità con FileSystem e FileStore
 
 L'API Path è stata progettata pensando all'estensibilità per i futuri tipi di file I/O. Ad esempio, le interfacce OpenOption e CopyOption possono essere estese per fornire opzioni aggiuntive per l'apertura e la copia di file o entità simili a file. Per quanto riguarda questa estensibilità, tre dei tipi più importanti nel pacchetto java.nio.file sono
 
@@ -752,7 +751,7 @@ public static Path unpackJar(String zipFilePath) getta IOException {
          var entry = zipIn.getNextEntry();
 
          while (voce != null) {
-             var newFile = tmpDir.resolve(entry.getName());
+             var nuovoFile = tmpDir.resolve(entry.getName());
              if (entry.isDirectory()) {
                  File.createDirectory(nuovoFile);
              } altro {
@@ -818,6 +817,7 @@ In particolare, Reader dichiara i metodi per leggere flussi di caratteri da una 
 
 
 Il metodo read() della classe **Reader** si occupa di leggere flussi di caratteri da una sorgente specifica e restituisce:
+
 * un int (da 0 a 65535) che rappresenta il carattere letto
 * il valore -1 se il file è terminato
 
@@ -843,7 +843,6 @@ l'I/O da file
 
 ```java
 import java.io.*;
-...
 
 public metodo() throws IOException {
 File <inF> = new File ("<nameIn>");
@@ -857,9 +856,6 @@ while ((c = <inR>.read()) != -1)
 <outW>.close ();
 }
 ```
-
----
-
 
 * Chiusura degli stream
   * gli stream devono essere chiusi, oggi si può fare con il blocco try-with-resources
@@ -937,7 +933,6 @@ Scriviamo un blocco di codice di prova per serializzare e deserializzare un ogge
 
 ```
 
-
 ---
 
 ## snippets
@@ -975,31 +970,24 @@ possono essere scritti come segue
 ---
 ### Modalità di scrittura
 
-  * Scrittura di caratteri singoli
-public void write (int c) throws
-IOException
-  * Scrittura di un vettore di caratteri
-public void write (char [] charArray)
-throws IOException
-  * Scrittura parziale di un vettore di caratteri
-public void write (char [] charArray, int
-da, int a) throws IOException
-  * Scrittura di una stringa
-public void write (String s) throws
-IOException
-  * Scrittura parziale di una stringa
-public void write (String s, int da, int a)
-throws IOException
+* Scrittura di caratteri singoli
+  * `public void write (int c) throws IOException`
+* Scrittura di un vettore di caratteri
+  * `public void write (char [] charArray) throws IOException`
+* Scrittura parziale di un vettore di caratteri
+  * `public void write (char [] charArray, int da, int a) throws IOException`
+* Scrittura di una stringa
+  * `public void write (String s) throws IOException`
+* Scrittura parziale di una stringa
+  * `public void write (String s, int da, int a) throws IOException`
 
 ---
 
 ## I/O orientato alle righe
 
-### La lettura di righe intere è permessa
-dalla classe BufferedReader
+La lettura di righe intere è permessa dalla classe BufferedReader
 
----
-### I metodi di tale classe
+### I metodi di BufferedReader
 
 * Sono analoghi a quelli della classe Writer (metodo write)
 * L'I/O bufferizzato è più efficiente
@@ -1025,6 +1013,7 @@ while ((str = <inB>.readLine ()) != null)
 <outB>.close ();
 }
 ```
+
 ---
 
 ### I costrutti
@@ -1048,41 +1037,43 @@ possono essere scritti come
 
 ---
 ### Definisce/rappresenta nomi/path
+
   * Crea un oggetto di tipo file
-public File (String pathName)
+`public File (String pathName)`
 e.g.,
 `File <x> = new File ("<nameIn>");`
 `File <y> = new File ("c:\dir1\dir2", "<nameOut>");`
 
 ---
 ### Check file/direttory
-  * Verifica che l'oggetto esista
-`public boolean exists()`
+
+* Verifica che l'oggetto esista
+  * `public boolean exists()`
 e.g., if (<x>.exists ()) ...
-  * Verifica se l'oggetto è un file
-`public boolean isFile()`
+* Verifica se l'oggetto è un file
+  * `public boolean isFile()`
 e.g., if (<x>.isFile ()) ...
-  * Verifica se l'oggetto è una directory
-`public boolean isDirectory()`
-  * Restituisce il nome del file o directory
-`public String getName()`
-  * Restituisce la stringa che descrive il path
-completo del file
+* Verifica se l'oggetto è una directory
+  * `public boolean isDirectory()`
+* Restituisce il nome del file o directory
+  * `public String getName()`
+* Restituisce la stringa che descrive il path
+  * completo del file
 `public String getAbsolutePath ()`
-  * Restituisce dimensione in byte
-`public long length ()`
-  * Controlla se il file può essere scritto
-`public boolean canWrite()`
-  * Controlla se il file può essere letto
-`public boolean canRead ()`
+* Restituisce dimensione in byte
+  * `public long length ()`
+* Controlla se il file può essere scritto
+  * `public boolean canWrite()`
+* Controlla se il file può essere letto
+  * `public boolean canRead ()`
 
 ---
 ### Contenuto di una directory
-  * Restituisce l'array di stringhe contenenti I nomi
-dei file/directory nel direttorio corrente
-`String [] list ()`
-e.g.,
-`String fileName[] = <x>.list ();`
-`for (int i=0; i<fileName.length; i++)`
-`System.out.println (filename[i]);`
+
+* Restituisce l'array di stringhe contenenti I nomi dei file/directory nel direttorio corrente
+* `String [] list ()`
+* e.g.,
+* `String fileName[] = <x>.list ();`
+* `for (int i=0; i<fileName.length; i++)`
+* `System.out.println (filename[i]);`
 
