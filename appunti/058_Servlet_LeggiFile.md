@@ -1,5 +1,38 @@
 # Leggi file su WEB-INF
 
+
+```java
+ @Override
+ protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+  
+  ServletContext context = getServletContext();
+  String filename = "/WEB-INF/files/hit-estate-2022.txt";
+  
+  InputStream is = context.getResourceAsStream(filename);
+  
+  if (is!=null) {
+   
+   InputStreamReader isr = new InputStreamReader(is);
+   BufferedReader reader = new BufferedReader(isr);
+   
+   PrintWriter pw = response.getWriter();
+   String text;
+   
+   response.setContentType("text/html");
+   
+   while ( (text = reader.readLine()) != null  ) {
+    pw.println(text + "<br>");
+   }
+   
+   
+  }
+ }
+
+```
+
+
+
+
 ```xml
 <dependency>
     <groupId>javax.servlet</groupId>
