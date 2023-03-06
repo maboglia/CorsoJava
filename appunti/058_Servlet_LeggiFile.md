@@ -31,6 +31,60 @@
 ```
 
 
+```java
+public static String getBody(HttpServletRequest request)  {
+
+    String body = null;
+    StringBuilder stringBuilder = new StringBuilder();
+    BufferedReader bufferedReader = null;
+
+    try {
+        InputStream inputStream = request.getInputStream();
+        if (inputStream != null) {
+            bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+            char[] charBuffer = new char[128];
+            int bytesRead = -1;
+            while ((bytesRead = bufferedReader.read(charBuffer)) > 0) {
+                stringBuilder.append(charBuffer, 0, bytesRead);
+            }
+        } else {
+            stringBuilder.append("");
+        }
+    } catch (IOException ex) {
+        // throw ex;
+        return "";
+    } finally {
+        if (bufferedReader != null) {
+            try {
+                bufferedReader.close();
+            } catch (IOException ex) {
+
+            }
+        }
+    }
+
+    body = stringBuilder.toString();
+    return body;
+}
+
+
+@Override
+public void doPut(HttpServletRequest request, HttpServletResponse response) {
+  // this parses the incoming JSON from the body.
+  JSONObject jObj = new JSONObject(getBody(request));
+
+  Iterator<String> it = jObj.keys();
+
+  while(it.hasNext())
+  {
+    String key = it.next(); // get key
+    Object o = jObj.get(key); // get value
+    System.out.println(key + " : " +  o); // print the key and value
+  }
+
+```
+
+
 
 
 ```xml
