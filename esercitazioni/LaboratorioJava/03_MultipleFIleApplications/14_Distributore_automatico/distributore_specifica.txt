@@ -3,8 +3,8 @@ automatico di bibite fresche. Tale sistema deve fare
 fronte alle seguenti richieste:
 
 1) Bevande
-   Il distributore automatico puÚ gestire diversi tipi di
-   bevande.  Ogni bevanda Ë caratterizzata dal nome
+   Il distributore automatico pu√≤ gestire diversi tipi di
+   bevande.  Ogni bevanda √® caratterizzata dal nome
    (univoco) e dal prezzo di vendita. Per esempio:
    Nome bevanda   Prezzo di vendita
    Gulkcola	  1.2
@@ -20,7 +20,7 @@ fronte alle seguenti richieste:
 
 2) Schede prepagate
    Il distributore automatico funziona per mezzo di schede
-   prepagate. Ogni scheda Ë caratterizzata da un id
+   prepagate. Ogni scheda √® caratterizzata da un id
    univoco (numero intero) ed il credito disponibile.
    Per esempio:
    Id Scheda	  Credito
@@ -37,22 +37,22 @@ fronte alle seguenti richieste:
    errore (per esempio -1).
 
 3) Ricarica del distributore
-   Il distributore Ë strutturato su 4 colonne, ciascuna
-   delle quali Ë caratterizzata da un tipo particolare di
+   Il distributore √® strutturato su 4 colonne, ciascuna
+   delle quali √® caratterizzata da un tipo particolare di
    bevanda e dal numero di lattine presenti.
-   La stessa bevanda puÚ essere presente su pi˘ colonne
+   La stessa bevanda pu√≤ essere presente su pi√π colonne
    (ma ogni colonna contiene soltanto un tipo di bevanda).
    Allo startup del sistema le colonne sono vuote.
    Per caricare le colonne, si stabilisce il tipo di
-   bevanda da inserire e la quantit‡ di lattine.
-   Per far ciÚ si utilizza il metodo ricaricaColonna().
+   bevanda da inserire e la quantit√† di lattine.
+   Per far ci√≤ si utilizza il metodo ricaricaColonna().
    Le colonne sono numerate a partire da 1. Per esempio:
    Numero colonna	Nome bevanda	Numero di lattine
    1			Gulkcola	20
    2		  	Birronza	15
    3			Gulkcola	20
    4			Splite		10
-   Dato il nome della bevanda (es. Gulkcola) Ë possibile
+   Dato il nome della bevanda (es. Gulkcola) √® possibile
    conoscere, attraverso il metodo lattineDisponibili(),
    la quantita totale di lattine disponibile per quella
    bevanda.
@@ -61,13 +61,13 @@ fronte alle seguenti richieste:
    Il distributore automatico vende un prodotto quando si
    specifica il nome della bevanda e l'id della scheda
    prepagata. Il metodo vendi() restituisce la colonna da
-   dove la lattina Ë stata prelevata. Se i codici non sono
+   dove la lattina √® stata prelevata. Se i codici non sono
    validi (bevanda o scheda), oppure la bevanda selezionata
-   Ë esaurita, o ancora il credito sulla scheda prepagata
-   non Ë sufficiente per comprare la bevanda richiesta,
+   √® esaurita, o ancora il credito sulla scheda prepagata
+   non √® sufficiente per comprare la bevanda richiesta,
    il sistema restituisce un codice di errore (per esempio,
    -1). In comportamento normale, il sistema riduce il
-   credito sulla scheda prepagata e la quantit‡ di lattine
+   credito sulla scheda prepagata e la quantit√† di lattine
    disponibili per la colonna selezionata. Si noti che il
-   distributore seleziona la prima colonna sulla quale Ë
+   distributore seleziona la prima colonna sulla quale √®
    disponibile la bevanda richiesta.

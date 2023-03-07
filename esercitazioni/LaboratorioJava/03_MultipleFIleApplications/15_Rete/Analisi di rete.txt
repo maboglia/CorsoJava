@@ -5,20 +5,20 @@ dei dati scambiati su una rete locale. Ogni riga del file
 descrive un pacchetto di dati scambiato in rete ed ha il
 seguente formato:
 ip_addr nbytes 
-dove ip_addr è un indirizzo di rete IP (specificato come
+dove ip_addr Ã¨ un indirizzo di rete IP (specificato come
 x.x.x.x con x compreso fra 0 e 255) ed identifica il nodo
 che ha spedito il pacchetto mentre nbytes specifica il
 numero di byte contenuti nel pacchetto. La lunghezza di
-tale file non è nota a priori e può essere arbitrariamente
-grande. Si noti come lo stesso nodo possa comparire più
+tale file non Ã¨ nota a priori e puÃ² essere arbitrariamente
+grande. Si noti come lo stesso nodo possa comparire piÃ¹
 volte nel file.
 Un secondo file ('indirizzi.txt') descrive invece
 l'associazione fra gli indirizzi IP e il nome dei nodi,
 secondo il seguente formato:
 ip_addr name 
-dove name è una stringa di caratteri alfanumerici (lunga
-fino a 40 caratteri). La dimensione di tale file non è
-nota a priori ma è tale da poter essere caricato in
+dove name Ã¨ una stringa di caratteri alfanumerici (lunga
+fino a 40 caratteri). La dimensione di tale file non Ã¨
+nota a priori ma Ã¨ tale da poter essere caricato in
 memoria.
 Si scriva un programma in linguaggio Java in grado di
 determinare il numero di byte complessivo trasmesso da
