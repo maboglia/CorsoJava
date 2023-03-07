@@ -1,5 +1,7 @@
 import java.util.*;
 
+//MEGLIO USARE il metodo split() di String
+
 public class StringTokenizerTest {
 	public static void main(String[] args){
 		String demoString = "Nome=Mario\r\n" +
