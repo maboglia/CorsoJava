@@ -2,6 +2,114 @@
 
 ---
 
+1) Scrivi un programma Java per contare il numero totale di caratteri in una stringa
+
+---
+
+2) Scrivi un programma Java per contare il numero totale di caratteri in una stringa 2
+
+---
+
+3) Scrivi un programma Java per contare il numero totale di caratteri di punteggiatura presenti in una Stringa
+
+---
+
+4) Scrivi un programma Java per contare il numero totale di vocali e consonanti in una stringa
+
+---
+
+5) Scrivi un programma Java per determinare se due stringhe sono l'anagramma
+
+---
+
+6) Scrivi un programma Java per dividere una stringa in 'N' parti uguali.
+
+---
+
+7) Scrivi un programma Java per trovare tutti i sottoinsiemi di una stringa
+
+---
+
+8) Scrivi un programma Java per trovare la sequenza ripetuta più lunga in una stringa
+
+---
+
+9) Scrivi un programma Java per trovare tutte le permutazioni di una stringa
+
+---
+
+10) Scrivi un programma Java per togliere tutti gli spazi bianchi da una stringa
+
+---
+
+11) Scrivi un programma Java per sostituire caratteri minuscoli con maiuscoli e viceversa
+
+---
+
+12) Scrivi un programma Java per sostituire gli spazi di una stringa con un carattere specifico
+
+---
+
+13) Scrivi un programma Java per determinare se una data stringa è palindromo
+
+---
+
+14) Scrivi un programma Java per determinare se una stringa è una rotazione di un'altra
+
+---
+
+15) Scrivi un programma Java per trovare il carattere massimo e minimo occorrente in una stringa
+
+---
+
+16) Scrivi un programma Java per trovare il Reverse della stringa
+
+---
+
+17) Scrivi un programma Java per trovare i caratteri duplicati in una stringa
+
+---
+
+18) Scrivi un programma Java per trovare le parole duplicate in una stringa
+
+---
+
+19) Scrivi un programma Java per trovare la frequenza dei caratteri
+
+---
+
+20) Scrivi un programma Java per trovare la parola più grande e più piccola in una stringa
+
+---
+
+21) Scrivi un programma Java per trovare la parola più ripetuta in un file di testo
+
+---
+
+22) Scrivi un programma Java per trovare il numero delle parole nel file di testo dato
+
+---
+
+23) Scrivi un programma Java per separare i Singoli Caratteri da una Stringa
+
+---
+
+24) Scrivi un programma Java per scambiare due variabili stringa senza utilizzare la terza variabile o temp.
+
+---
+
+25) Scrivi un programma Java per stampare la parola palindromo più piccola e più grande possibile in una data stringa
+
+---
+
+26) Crea una stringa inversa in Java parola per parola
+
+---
+
+27) Crea una stringa inversa senza la funzione reverse()
+
+---
+
 ## Esercizio Contrario
 
 Scrivere un programma Contrario che chiede all’utente di inserire una stringa e la stampa al contrario. 

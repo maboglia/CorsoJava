@@ -1,0 +1,5 @@
+ciao; hello hi
+mamma; mom mummy
+tavolo; desk table
+penna; pen
+matita; pencil

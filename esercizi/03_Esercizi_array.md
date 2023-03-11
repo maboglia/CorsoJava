@@ -1,5 +1,89 @@
 # Esercizi con gli array
 
+Scrivi un programma Java per copiare tutti gli elementi di un array in un altro array
+
+---
+
+Scrivi un programma Java per trovare la frequenza di ogni elemento dell'array
+
+---
+
+Scrivi un programma Java per ruotare a sinistra gli elementi di un array
+
+---
+
+Scrivi un programma Java per stampare gli elementi duplicati di un array
+
+---
+
+Scrivi un programma Java per stampare gli elementi di un array
+
+---
+
+Scrivi un programma Java per stampare in ordine inverso gli elementi di un array
+
+---
+
+Scrivi un programma Java per stampare gli elementi di un array presenti in posizione pari
+
+---
+
+Scrivi un programma Java per stampare gli elementi di un array presenti in posizione dispari
+
+---
+
+Scrivi un programma Java per stampare l'elemento più grande di un array
+
+---
+
+Scrivi un programma Java per stampare l'elemento più piccolo di un array
+
+---
+
+Scrivi un programma Java per stampare il numero di elementi presenti in un array
+
+---
+
+Scrivi un programma Java per stampare la somma di tutti gli elementi dell'array
+
+---
+
+Scrivi un programma Java per ruotare a destra gli elementi di un array
+
+---
+
+Scrivi un programma Java per ordinare gli elementi di un array in ordine crescente
+
+---
+
+Scrivi un programma Java per ordinare gli elementi di un array in ordine decrescente
+
+---
+
+Scrivi un programma Java per trovare il terzo numero più grande in un array
+
+---
+
+Scrivi un programma Java per trovare il secondo numero più grande in un array
+
+---
+
+Scrivi un programma Java per trovare il numero più grande in un array
+
+---
+
+Scrivi un programma Java per trovare il numero più piccolo in un array
+
+---
+
+Scrivi un programma Java per rimuovere elementi duplicati in un array
+
+---
+
+Scrivi un programma Java per stampare numeri pari e dispari da un array
+
+---
+
 ## Esercizio Lettura e stampa di un array
 
 Scrivere un programma che legge da input 5 elementi interi, li memorizza in un array e stampa il contenuto dell’array
