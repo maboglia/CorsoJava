@@ -3,7 +3,7 @@ import java.io.*;
 public class Deserializza {
 	public static void main(String[] args){
 		// Il file da recuperare
-		File f = new File("sergioporcu.ser");
+		File f = new File("mariorossi.ser");
 		// Deserializzazione
 		ObjectInputStream in = null;
 		try{
@@ -17,7 +17,7 @@ public class Deserializza {
 		}catch(IOException e){
 			System.out.println("Impossibile deserializzare...");
 		}catch(ClassNotFoundException e){
-			// Bisogna gestire l'eventualità che la classe
+			// Bisogna gestire l'eventualitï¿½ che la classe
 			// persona non venga trovata
 			System.out.println("Impossibile deserializzare...");
 		}finally{

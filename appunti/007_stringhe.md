@@ -125,6 +125,8 @@ String s3 = s3.substring (2, 6);
 
 ---
 
+### compareTo
+
 ```java
 int compareTo(String other)
 ```
@@ -137,11 +139,17 @@ Esegue una comparazione lessicale. Ritorna un intero:
 
 ---
 
+
+
+#### indexOf
+
 ```java
 int indexOf(int ch)
 ```
 
 Restituisce l’indice del carattere specificato
+
+#### lastIndexOf
 
 ```java
 int lastIndexOf(int ch)
@@ -149,19 +157,25 @@ int lastIndexOf(int ch)
 
 E’ come indexOf() ma viene restituito l’indice dell’ultima occorrenza trovata
 
+#### length
+
 ```java
 int length()
 ```
 
 Restituisce il numero di caratteri di cui è costituita la stringa corrente
 
+#### replace
+
 ```java
 String replace(char oldChar, char newChar)
 ```
 
+Restituisce una nuova stringa, dove tutte le occorrenze di oldChar sono rimpiazzate con newChar
+
 ---
 
-Restituisce una nuova stringa, dove tutte le occorrenze di oldChar sono rimpiazzate con newChar
+#### substring
 
 ```java
 String substring(int startIndex)
@@ -169,17 +183,24 @@ String substring(int startIndex)
 
 Restituisce una sottostringa della stringa corrente, composta dai caratteri che partono dall’indice startIndex alla fine
 
+
+#### substring 
+
 ```java
 String substring(int startIndex, int number)
 ```
 
 Restituisce una sottostringa della stringa corrente, composta dal numero number di caratteri che partono dall’indice startIndex
 
+#### toLowerCase
+
 ```java
 String toLowerCase()
 ```
 
 Restituisce una nuova stringa equivalente a quella corrente ma con tutti i caratteri minuscoli
+
+#### toUpperCase
 
 ```java
 String toUpperCase()

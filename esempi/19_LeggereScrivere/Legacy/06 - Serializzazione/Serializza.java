@@ -3,9 +3,9 @@ public class Serializza{
 	
 	public static void main(String[] args){
 		// Creazione di un oggetto Persona
-		Persona p = new Persona("Sergio","Porcu");
+		Persona p = new Persona("mario","rossi");
 		// Il file in cui riporre la serializzazione
-		File f = new File("sergioporcu.ser");
+		File f = new File("mariorossi.ser");
 		// Serializzazione dell'oggetto
 		ObjectOutputStream out = null;
 		try{
