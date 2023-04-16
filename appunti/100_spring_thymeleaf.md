@@ -66,7 +66,6 @@ I condizionali e l'iterazione possono anche utilizzare un'espressione variabile:
 L'espressione di selezione opera su un oggetto scelto in precedenza. Ci aiuta a selezionare il figlio dell'oggetto scelto.
 
 La sintassi dell'espressione di selezione è una combinazione di asterisco e parentesi graffe. Il nostro oggetto figlio risiede all'interno delle parentesi graffe:
-freestar
 
 *{...}
 
@@ -134,7 +133,6 @@ Gli URL possono essere assoluti o relativi. Quando si utilizza un'espressione di
 <a th:href="@{http://www.example.com}"> Casa example</a>
 
 Un collegamento relativo, invece, si lega al contesto del nostro server web. Possiamo facilmente navigare attraverso i nostri file modello come definito nel controller:
-freestar
 
 @RequestMapping("/create")
 public String BulbaCreate(modello modello) {
