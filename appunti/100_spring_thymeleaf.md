@@ -1,9 +1,14 @@
 # Tipi di espressione in Thymeleaf
 
-1. Panoramica
+---
 
-Thymeleaf è un motore di template popolare nell'ecosistema Java. Aiuta a associare i dati dal livello del controller al livello di visualizzazione. Gli attributi Thymeleaf vengono impostati utilizzando le espressioni. In questo tutorial, discuteremo i tipi di espressione con esempi.
-2. Installazione di esempio
+## 1. Panoramica
+
+Thymeleaf è un motore di template popolare nell'ecosistema Java. Aiuta a associare i dati dal livello del controller al livello di visualizzazione. Gli ttributi Thymeleaf vengono impostati utilizzando le espressioni. In questo tutorial, discuteremo i tipi di espressione con esempi.
+
+---
+
+## 2. Installazione di esempio
 
 Useremo una semplice applicazione web Bulba come esempio. È una semplice app Web per creare un profilo di Bulbasauro.
 
@@ -30,8 +35,11 @@ public class BulbaController {
 }
 
 Con la nostra configurazione di esempio, saremo in grado di iniettare un'istanza di Bulba nei nostri file modello.
-freestar
-3. Espressione variabile
+reestar
+
+---
+
+## 3. Espressione variabile
 
 L'espressione variabile aiuta a inserire i dati dal controller nel file modello. Espone gli attributi del modello alla visualizzazione Web.
 
@@ -52,7 +60,9 @@ I condizionali e l'iterazione possono anche utilizzare un'espressione variabile:
 <!-- nei condizionali -->
 <div th:if="${Bulbas.id == 2}">
 
-4. Espressione di selezione
+---
+
+## 4. Espressione di selezione
 L'espressione di selezione opera su un oggetto scelto in precedenza. Ci aiuta a selezionare il figlio dell'oggetto scelto.
 
 La sintassi dell'espressione di selezione è una combinazione di asterisco e parentesi graffe. Il nostro oggetto figlio risiede all'interno delle parentesi graffe:
@@ -76,7 +86,9 @@ A differenza dell'espressione variabile, non è necessario trattare ogni element
      <p>Nome: <input type="text" th:field="*{name}" /></p>
 </form>
 
-5. Espressione del messaggio
+---
+
+## 5. Espressione del messaggio
 
 Questa espressione aiuta a portare il testo esternalizzato nel nostro file modello. Si chiama anche esternalizzazione del testo.
 
@@ -106,8 +118,11 @@ Inoltre, possiamo rendere dinamico il segnaposto inserendo un'espressione variab
 
 <h2 th:text="#{Bulba.color(${Bulba.color})}"></h2>
 
-Questa espressione è anche chiamata internazionalizzazione. Può aiutarci ad adattare la nostra applicazione web per adattarsi a lingue diverse.
-6. Espressione di collegamento
+uesta espressione è anche chiamata internazionalizzazione. Può aiutarci ad adattare la nostra applicazione web per adattarsi a lingue diverse.
+
+---
+
+## 6. Espressione di collegamento
 Le espressioni di collegamento sono parte integrante della creazione di URL. Questa espressione si collega all'URL specificato.
 
 La sintassi dell'espressione di collegamento è una combinazione del segno "chiocciola" e delle parentesi graffe. Il nostro collegamento risiede all'interno delle parentesi graffe:
@@ -139,7 +154,9 @@ Le espressioni di collegamento possono impostare URL relativi al protocollo. Il 
 
 <a th:href="@{//example.com}">example</a>
 
-7. Espressione del frammento
+---
+
+## 7. Espressione del frammento
 
 L'espressione del frammento può aiutarci a spostare i markup tra i nostri file modello. L'espressione ci consente di generare un frammento di markup mobile.
 
