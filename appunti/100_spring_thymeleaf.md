@@ -49,7 +49,7 @@ L'espressione variabile aiuta a inserire i dati dal controller nel file modello.
 
 La sintassi dell'espressione variabile è una combinazione di simbolo del dollaro e parentesi graffe. Il nome della nostra variabile risiede all'interno delle parentesi graffe:
 
-${...}
+`${...}`
 
 Iniettiamo i nostri dati Bulba nel file modello:
 
@@ -178,6 +178,18 @@ Le espressioni di collegamento possono impostare URL relativi al protocollo. Il 
 
 ```html
 <a th:href="@{//example.com}">example</a>
+```
+
+```html
+<a th:href="@{https://example.com/tags/thymeleaf/}">example.com</a>
+<a th:href="@{//example.com/tags/thymeleaf/}">example.com (server protocol)</a>
+<a th:href="@{manage/edit}">Edit Page</a>
+<a th:href="@{/users/manage/edit}">Another way to Edit page</a>
+<a th:href="@{~/corporate/contact-us/}">Contact us</a>
+<a th:href="@{/users/{userId}/edit(userId=${userInfo.id})}">View user by Id</a>
+<a th:href="@{/users/{userId}/{operation(userId=${userInfo.id},operation=${currentOperation})}"
+   th:text="${currentOperation + ' user by Id'">
+</a>
 ```
 
 ---
