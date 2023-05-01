@@ -2,10 +2,9 @@
 
 ## application.properties
 
-# Hibernate
-
 ```text
 
+# Hibernate
 spring.datasource.url=jdbc:mysql://localhost:3306/test
 spring.datasource.username=root
 spring.datasource.password=
@@ -13,9 +12,11 @@ spring.datasource.driver-class-name=com.mysql.jdbc.Driver
 
 # The SQL dialect makes Hibernate generate better SQL for the chosen database
 spring.jpa.properties.hibernate.dialect = org.hibernate.dialect.MySQL5InnoDBDialect
+# spring.jpa.database-platform=org.hibernate.dialect.MySQL57Dialect
 
 # Hibernate ddl auto (create, create-drop, validate, update)
 spring.jpa.hibernate.ddl-auto = update
+spring.jpa.generate-ddl=true
 
 # Logging
 logging.level.org.hibernate.SQL=DEBUG
