@@ -96,7 +96,7 @@ Sul mio sito trovi tutti gli appunti anche in formato slide
 * [distributore automatico](https://github.com/maboglia/TSS2021/tree/main/Prj_09_DistributoreAutomatico/src) - [v2](https://github.com/maboglia/TSS2021/tree/main/Prj_09_DistributoreAutomatico2/src) - [fintech2022](https://github.com/maboglia/Fintech2022/tree/main/Prj06_DistributoreAutomatico)
 * [banca: conti correnti](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/Testi/JavaSE/009_ContoCOrrente.md)
 * banca: clienti [TSS2022](https://github.com/maboglia/TSS2022/tree/main/workspace/Prj16_Banca/src)
-* gestionale dipendenti
+* [gestionale dipendenti](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/Testi/JavaSE/010_GestionaleDipendenti.md)
 * gestionale ordini
 * [appuntamento - persona - stanza](https://github.com/maboglia/Jato69/tree/main/Ese01_Appuntamenti)
 * [OutfitGenerator](https://github.com/maboglia/Jato69/tree/main/Prj09_OutfitGenerator)
