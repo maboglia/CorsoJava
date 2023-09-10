@@ -186,3 +186,140 @@ public class Test {
   }
 }
 ```
+
+
+Si dica cosa stampa il seguente programma, motivando la risposta.
+
+```java
+public class A {
+private int a=10;
+int calcola(int n) throws Exception {
+if (n==0) throw new Exception("ERRORE A");
+return n+a;
+}
+}
+public class B extends A {
+int calcola(int n) throws Exception {
+if (n==1)
+throw new Exception("ERRORE B");
+return 2*n+super.calcola(n+1);
+}
+}
+public class Test {
+public static void main(String[] args) {
+B b = new B();
+A a = b;
+try {
+System.out.println(a.calcola(0));
+System.out.println(a.calcola(1));
+System.out.println(b.calcola(0));
+System.out.println(b.calcola(1));
+}
+catch (Exception e) {
+System.out.println(e.getMessage());
+}
+System.out.print("END");
+}
+}
+```
+
+Si dica cosa stampa il seguente programma, motivando la risposta.
+```java
+public class A {
+private int n=1;
+public int calcola(int a) {
+return n+a;
+}
+}
+public class B extends A {
+public B() {
+super();
+}}
+public int calcola(int a) {
+return super.calcola(a)+1;
+}
+public class Test {
+public static void main(String[] args) {
+A[] a = new A[2];
+a[0] = new A();
+a[1] = new B();
+}
+}
+System.out.println(a[0].calcola(10));
+System.out.println(a[1].calcola(10));
+```
+
+Si dica cosa stampa il seguente programma motivando la risposta e indicando, per ogni chiamata
+ad un metodo, la lista delle firme candidate.
+
+```java
+public class
+A {
+public int m(A a, B b) {return 2; };
+public int m(B a, B b) {return 10; };
+public B m(B c, A b) {return c; }
+} 
+
+public class B extends A {
+public int m(A a, B b) {return 3; }
+public A m(C c, B b) {return b; }
+public Object m(C c, Object o) {return o; }
+} 
+
+public class C extends B {
+public A m(C c, A a) {return c; }
+public int m(B a, B b) {return 5; }
+}
+public class Test {
+public static void main(String[] args) {
+C gamma = new C();
+B beta = gamma;
+A alfa = gamma;
+System.out.println(alfa.m(beta, beta));
+System.out.println(gamma.m(beta.m(gamma, beta),beta));
+}
+}
+```
+
+Si dica cosa stampa il seguente programma, motivando la risposta.public class A {
+```java
+private int n;
+public A(int n) {
+this.n=n;
+}
+public int getN() {
+return n;
+}
+public void setN(int n) {
+this.n=n;
+}
+public double calcola(int m) {
+n= n + m;
+return n;
+}
+public double calcola(double m) {
+return n + m + 5;
+}
+}
+
+public class B extends A {
+public B(int n) {
+super(n);
+}
+public double calcola(int m) {
+setN(getN() * m);
+return getN();
+}
+}
+
+public class Appello1 {
+public static void main(String[] args) {
+int i = 2;
+int k = 3;
+B b = new B(i);
+A a = b;
+System.out.println(a.calcola(k));
+System.out.println(b.calcola(b.calcola(k)));
+}
+}
+```
