@@ -47,7 +47,7 @@ Sul mio sito trovi tutti gli appunti anche in formato slide
 
 * Lancia dadi
 * [CartaForbiciSasso](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/Testi/JavaSE/012_CartaForbiciSasso.md)
-* Guess the number - three numbers 
+* [Guess the number](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/Testi/JavaSE/013_GuessTheNumber.md) - three numbers
   * [Jato69](https://github.com/maboglia/Jato69/tree/main/Prj03_IndovinaNumero)
 * Quiz capitali
 * Hang-man
