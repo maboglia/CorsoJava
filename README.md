@@ -94,7 +94,7 @@ Sul mio sito trovi tutti gli appunti anche in formato slide
 * aula studenti - [jato69](https://github.com/maboglia/Jato69/tree/main/Prj06_AulaInformatica)
 * Veicoli - [jato69](https://github.com/maboglia/Jato69/tree/main/Prj13_Veicoli)
 * [distributore automatico](https://github.com/maboglia/TSS2021/tree/main/Prj_09_DistributoreAutomatico/src) - [v2](https://github.com/maboglia/TSS2021/tree/main/Prj_09_DistributoreAutomatico2/src) - [fintech2022](https://github.com/maboglia/Fintech2022/tree/main/Prj06_DistributoreAutomatico)
-* banca: conti correnti
+* [banca: conti correnti](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/003_ContoCOrrente.md)
 * banca: clienti [TSS2022](https://github.com/maboglia/TSS2022/tree/main/workspace/Prj16_Banca/src)
 * gestionale dipendenti
 * gestionale ordini
