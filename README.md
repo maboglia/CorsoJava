@@ -46,7 +46,7 @@ Sul mio sito trovi tutti gli appunti anche in formato slide
 ## giochi
 
 * Lancia dadi
-* Pietra-forbici-carta
+* [CartaForbiciSasso](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/Testi/JavaSE/012_CartaForbiciSasso.md)
 * Guess the number - three numbers 
   * [Jato69](https://github.com/maboglia/Jato69/tree/main/Prj03_IndovinaNumero)
 * Quiz capitali
