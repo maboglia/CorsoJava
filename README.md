@@ -97,7 +97,7 @@ Sul mio sito trovi tutti gli appunti anche in formato slide
 * [banca: conti correnti](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/Testi/JavaSE/009_ContoCOrrente.md)
 * banca: clienti [TSS2022](https://github.com/maboglia/TSS2022/tree/main/workspace/Prj16_Banca/src)
 * [gestionale dipendenti](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/Testi/JavaSE/010_GestionaleDipendenti.md)
-* gestionale ordini
+* [gestionale ordini](https://github.com/maboglia/CorsoJava/blob/master/esercitazioni/Testi/JavaSE/011_GestionaleOrdiniAzienda.md)
 * [appuntamento - persona - stanza](https://github.com/maboglia/Jato69/tree/main/Ese01_Appuntamenti)
 * [OutfitGenerator](https://github.com/maboglia/Jato69/tree/main/Prj09_OutfitGenerator)
 * [Film](https://github.com/maboglia/Cloud2022/tree/main/workspace/Prj11_Film)
