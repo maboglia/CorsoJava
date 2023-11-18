@@ -35,91 +35,90 @@
 * [Typecasting: la conversione del tipo](./appunti/010_6_classi_typecasting.md)
 
 ### Principi OOP in Java
-* [010_7_associazione](./appunti/010_7_associazione.md)
-* [010_8_aggregazione](./appunti/010_8_aggregazione.md)
-* [010_9_composizione](./appunti/010_9_composizione.md)
-* [010_6_astrazione](./appunti/010_6_astrazione.md)
-* [010_5_incapsulamento](./appunti/010_5_incapsulamento.md)
-* [011_classi_ereditarieta](./appunti/011_classi_ereditarieta.md)
-* [012_classi_polimorfismo](./appunti/012_classi_polimorfismo.md)
+* [Associazione](./appunti/010_7_associazione.md)
+* [Aggregazione](./appunti/010_8_aggregazione.md)
+* [Composizione](./appunti/010_9_composizione.md)
+* [Astrazione](./appunti/010_6_astrazione.md)
+* [Incapsulamento](./appunti/010_5_incapsulamento.md)
+* [Ereditarieta](./appunti/011_classi_ereditarieta.md)
+* [Polimorfismo](./appunti/012_classi_polimorfismo.md)
 
 ### Advanced Class Design: classi astratte, interfacce, eccezioni
 
-* [014_classi_astratte](./appunti/014_classi_astratte.md)
-* [015_interfacce](./appunti/015_interfacce.md)
-* [018_interfacce_funzionali](./appunti/018_interfacce_funzionali.md)
-* [020_JavaPackages](./appunti/020_JavaPackages.md)
-* [021_Classi_wrapper](./appunti/021_Classi_wrapper.md)
-* [017_eccezioni](./appunti/017_eccezioni.md)
-* [030_annotazioni](./appunti/030_annotazioni.md)
+* [Classi_astratte](./appunti/014_classi_astratte.md)
+* [Interfacce](./appunti/015_interfacce.md)
+* [Interfacce_funzionali](./appunti/018_interfacce_funzionali.md)
+* [JavaPackages](./appunti/020_JavaPackages.md)
+* [Classi_wrapper](./appunti/021_Classi_wrapper.md)
+* [Eccezioni](./appunti/017_eccezioni.md)
+* [Annotazioni](./appunti/030_annotazioni.md)
 
 ### Collezioni
 
-* [022_JCFLike_Map](./appunti/022_JCFLike_Map.md)
-* [022_JCF_AlgoritmiCollections](./appunti/022_JCF_AlgoritmiCollections.md)
-* [022_JCF_List](./appunti/022_JCF_List.md)
-* [022_JCF_Queue](./appunti/022_JCF_Queue.md)
-* [022_JCF_Set](./appunti/022_JCF_Set.md)
-* [022_JCF_collezioni](./appunti/022_JCF_collezioni.md)
-* [022_JCF_generics](./appunti/022_JCF_generics.md)
+* [JCFLike_Map](./appunti/022_JCFLike_Map.md)
+* [JCF_AlgoritmiCollections](./appunti/022_JCF_AlgoritmiCollections.md)
+* [JCF_List](./appunti/022_JCF_List.md)
+* [JCF_Queue](./appunti/022_JCF_Queue.md)
+* [JCF_Set](./appunti/022_JCF_Set.md)
+* [JCF_collezioni](./appunti/022_JCF_collezioni.md)
+* [JCF_generics](./appunti/022_JCF_generics.md)
 
 
 ### design pattern
 
-* [043_SOLID](./appunti/043_SOLID.md)
-* [032_design_patterns](./appunti/032_design_patterns.md)
-* [037_design_patterns](./appunti/037_design_patterns.md)
-* [033_singleton_pattern](./appunti/033_singleton_pattern.md)
-* [034_decorator_pattern](./appunti/034_decorator_pattern.md)
-* [035_factory_pattern](./appunti/035_factory_pattern.md)
-* [036_dao_pattern](./appunti/036_dao_pattern.md)
-* [044_mvc_pattern](./appunti/044_mvc_pattern.md)
+* [SOLID](./appunti/043_SOLID.md)
+* [Design patterns](./appunti/032_design_patterns.md)
+* [Singleton pattern](./appunti/033_singleton_pattern.md)
+* [Decorator pattern](./appunti/034_decorator_pattern.md)
+* [Factory pattern](./appunti/035_factory_pattern.md)
+* [Dao pattern](./appunti/036_dao_pattern.md)
+* [Mvc pattern](./appunti/044_mvc_pattern.md)
 
 
 ### Input/output: gestione dei file con Java
 
-* [038_FileIO](./appunti/038_FileIO.md)
-* [040_FileIO_esempi](./appunti/040_FileIO_esempi.md)
-* [041_File_NIO_esempi](./appunti/041_File_NIO_esempi.md)
-* [061_JSON_Java](./appunti/061_JSON_Java.md)
-* [062_JSON_leggi_Java8](./appunti/062_JSON_leggi_Java8.md)
+* [FileIO](./appunti/038_FileIO.md)
+* [FileIO_esempi](./appunti/040_FileIO_esempi.md)
+* [File_NIO_esempi](./appunti/041_File_NIO_esempi.md)
+* [JSON_Java](./appunti/061_JSON_Java.md)
+* [JSON_leggi_Java8](./appunti/062_JSON_leggi_Java8.md)
 
 ### Java Database: JDBC
 
-* [049_JavaWebeDB](./appunti/049_JavaWebeDB.md)
-* [050_Java_Database](./appunti/050_Java_Database.md)
-* [051_Java_Database](./appunti/051_Java_Database.md)
-* [052_Java_Database](./appunti/052_Java_Database.md)
-* [048_JDBC_ConnectionPooling](./appunti/048_JDBC_ConnectionPooling.md)
+* [JavaWebeDB](./appunti/049_JavaWebeDB.md)
+* [Java_Database](./appunti/050_Java_Database.md)
+* [Java_Database](./appunti/051_Java_Database.md)
+* [Java_Database](./appunti/052_Java_Database.md)
+* [JDBC_ConnectionPooling](./appunti/048_JDBC_ConnectionPooling.md)
 
 
 ## Java Web: JSP e Servlet
 
-* [058_Servlet_LeggiFile](./appunti/058_Servlet_LeggiFile.md)
-* [060_RequestDispatcher](./appunti/060_RequestDispatcher.md)
-* [057_JSP_appunti](./appunti/057_JSP_appunti.md)
-* [053_JSP_Fondamenti](./appunti/053_JSP_Fondamenti.md)
-* [054_JSP_Azioni](./appunti/054_JSP_Azioni.md)
-* [055_JSP_Dichiarazioni](./appunti/055_JSP_Dichiarazioni.md)
-* [056_JSP_Direttive](./appunti/056_JSP_Direttive.md)
-* [058_JSP_1](./appunti/058_JSP_1.md)
-* [059_JSP_2](./appunti/059_JSP_2.md)
+* [Servlet_LeggiFile](./appunti/058_Servlet_LeggiFile.md)
+* [RequestDispatcher](./appunti/060_RequestDispatcher.md)
+* [JSP_appunti](./appunti/057_JSP_appunti.md)
+* [JSP_Fondamenti](./appunti/053_JSP_Fondamenti.md)
+* [JSP_Azioni](./appunti/054_JSP_Azioni.md)
+* [JSP_Dichiarazioni](./appunti/055_JSP_Dichiarazioni.md)
+* [JSP_Direttive](./appunti/056_JSP_Direttive.md)
+* [JSP_1](./appunti/058_JSP_1.md)
+* [JSP_2](./appunti/059_JSP_2.md)
 * [jsp_appunti](./appunti/jsp_appunti.md)
 
 
 ## Framework Java: Spring 
-* [069_spring_framework](./appunti/069_spring_framework.md)
-* [070_spring_core_boot](./appunti/070_spring_core_boot.md)
-* [071_spring_mvc](./appunti/071_spring_mvc.md)
-* [072_spring_cloud](./appunti/072_spring_cloud.md)
-* [073_spring_test_cache](./appunti/073_spring_test_cache.md)
-* [074_spring_snippets](./appunti/074_spring_snippets.md)
-* [075_spring-ddl-auto](./appunti/075_spring-data-ddl-auto.md)
-* [076_spring_application_properties](./appunti/076_spring_application_properties.md)
-* [077_Spring_JPA_Hibernate](./appunti/077_Spring_JPA_Hibernate.md)
-* [078_ThymeleafExpressionsinSpringBoot](./appunti/078_ThymeleafExpressionsinSpringBoot.md)
-* [079_thymeleaf](./appunti/079_thymeleaf.md)
-* [100_spring_thymeleaf](./appunti/100_spring_thymeleaf.md)
+* [Spring framework](./appunti/069_spring_framework.md)
+* [Spring core_boot](./appunti/070_spring_core_boot.md)
+* [Spring mvc](./appunti/071_spring_mvc.md)
+* [Spring cloud](./appunti/072_spring_cloud.md)
+* [Spring test_cache](./appunti/073_spring_test_cache.md)
+* [Spring snippets](./appunti/074_spring_snippets.md)
+* [Spring ddl-auto](./appunti/075_spring-data-ddl-auto.md)
+* [Spring application_properties](./appunti/076_spring_application_properties.md)
+* [Spring JPA_Hibernate](./appunti/077_Spring_JPA_Hibernate.md)
+* [Thymeleaf](./appunti/079_thymeleaf.md)
+* [Spring thymeleaf](./appunti/100_spring_thymeleaf.md)
+* [Thymeleaf Expressions in SpringBoot](./appunti/078_ThymeleafExpressionsinSpringBoot.md)
 
 ### approfondimenti
 
