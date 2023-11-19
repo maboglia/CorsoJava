@@ -48,10 +48,32 @@
 * [Classi_astratte](./appunti/014_classi_astratte.md)
 * [Interfacce](./appunti/015_interfacce.md)
 * [Interfacce_funzionali](./appunti/018_interfacce_funzionali.md)
-* [JavaPackages](./appunti/020_JavaPackages.md)
-* [Classi_wrapper](./appunti/021_Classi_wrapper.md)
 * [Eccezioni](./appunti/017_eccezioni.md)
 * [Annotazioni](./appunti/030_annotazioni.md)
+
+### Java Packages
+
+* [JavaPackages](./appunti/020_JavaPackages.md)
+* [Classi_wrapper](./appunti/021_Classi_wrapper.md)
+
+* [Il package java.lang](021_java_lang.md)
+  * [java_lang_System.](021_java_lang_System.md)
+  * [java_lang_Math](021_java_lang_Math.md)
+  * [java_lang_Object](021_java_lang_Object.md)
+  * [java.lang.Runtime](java.lang.Runtime.md)
+  * [API Java Stringhe](021_API_Java_Stringhe.md)
+  * [java.lang.String](java.lang.StringBuffer.md)
+* [La casse Random](022_java_util_Membri_classe_Random.md)
+* [022_API_Java_date_time](022_API_Java_date_time.md)
+* [024_classe_File.md](024_classe_File.md)
+* [028_InputStream_OutputStream](028_InputStream_OutputStream.md)
+* [025_InputStream.md](025_InputStream.md)
+* [026_OutputStream.md](026_OutputStream.md)
+* [029_InputStreamReader_Output](029_InputStreamReader_OutputStreamReader.md)
+* [027_Reader_Writer.md](027_Reader_Writer.md)
+* [030_BufferedReader_BufferedWriter](030_BufferedReader_BufferedWriter.md)
+* [032_PrintStream.md](032_PrintStream.md)
+* [031_FileReader_FileWriter](031_FileReader_FileWriter.md)
 
 ### Collezioni
 
@@ -62,7 +84,6 @@
 * [JCF_Set](./appunti/022_JCF_Set.md)
 * [JCF_collezioni](./appunti/022_JCF_collezioni.md)
 * [JCF_generics](./appunti/022_JCF_generics.md)
-
 
 ### design pattern
 
