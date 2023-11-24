@@ -2,6 +2,77 @@
 
 ---
 
+Le annotazioni sono uno strumento potente in Spring e Spring Boot per semplificare la configurazione e il comportamento delle classi. Di seguito, una panoramica delle annotazioni più comuni in entrambi i framework:
+
+## Annotazioni in Spring
+
+1. **`@Component` / `@Service` / `@Repository` / `@Controller`:**
+   - Indicano che una classe è un componente, un servizio, un repository o un controller rispettivamente.
+   - Consentono la scansione automatica delle classi e la loro registrazione nel contesto di Spring.
+
+2. **`@Autowired`:**
+   - Utilizzata per l'iniezione automatica delle dipendenze, riducendo la necessità di configurare manualmente le dipendenze nelle classi.
+
+3. **`@Qualifier`:**
+   - Specifica il nome o l'ID di un bean quando ci sono più implementazioni dello stesso tipo.
+
+4. **`@Configuration` / `@Bean`:**
+   - `@Configuration` indica che una classe contiene metodi con definizioni di bean.
+   - `@Bean` viene utilizzata per dichiarare un metodo come produttore di bean, restituendo un oggetto che verrà gestito dal container IoC.
+
+5. **`@Value`:**
+   - Utilizzata per l'iniezione di valori da properties o da espressioni di Spring.
+
+6. **`@Qualifier`:**
+   - Viene utilizzata in combinazione con `@Autowired` per specificare quale bean deve essere iniettato quando ci sono più implementazioni dello stesso tipo.
+
+7. **`@Scope`:**
+   - Specifica il ciclo di vita di un bean (singleton, prototype, etc.).
+
+8. **`@ComponentScan`:**
+   - Indica a Spring di eseguire la scansione delle classi nel package specificato per individuare e registrare i bean.
+
+9. **`@Conditional`:**
+   - Consente di condizionare la registrazione di un bean in base a determinate condizioni.
+
+## Annotazioni in Spring Boot
+
+1. **`@SpringBootApplication`:**
+   - Raggruppa diverse annotazioni come `@Configuration`, `@EnableAutoConfiguration`, e `@ComponentScan` in un'unica annotazione per l'applicazione principale.
+
+2. **`@RestController` / `@RequestMapping`:**
+   - `@RestController` combina `@Controller` e `@ResponseBody`, semplificando la creazione di API RESTful.
+   - `@RequestMapping` specifica il percorso delle richieste HTTP gestite dal controller.
+
+3. **`@SpringBootTest`:**
+   - Indica che la classe è una classe di test per un'applicazione Spring Boot e consente di configurare l'ambiente di test.
+
+4. **`@ConfigurationProperties`:**
+   - Lega i valori delle proprietà dell'applicazione a un bean.
+
+5. **`@EnableAutoConfiguration`:**
+   - Consente all'applicazione di configurarsi automaticamente in base alle dipendenze presenti nel classpath.
+
+6. **`@EnableConfigurationProperties`:**
+   - Abilita la configurazione di proprietà definite dall'utente con `@ConfigurationProperties`.
+
+7. **`@SpringBootTest`:**
+   - Segnala a Spring Boot di inizializzare un contesto dell'applicazione completo per il test.
+
+8. **`@EnableScheduling`:**
+   - Abilita la pianificazione delle attività nel contesto dell'applicazione.
+
+9. **`@EnableTransactionManagement`:**
+   - Abilita la gestione delle transazioni.
+
+10. **`@SpringBootApplication` / `@EntityScan` / `@EnableJpaRepositories`:**
+
+- Utilizzate in combinazione per configurare e scansionare le entità JPA e i repository.
+
+Queste annotazioni semplificano la configurazione e forniscono funzionalità avanzate in Spring e Spring Boot. Puoi scegliere le annotazioni più appropriate in base alle esigenze specifiche della tua applicazione.
+
+---
+
 
 ## @Autowired
 

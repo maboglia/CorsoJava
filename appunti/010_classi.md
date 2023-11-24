@@ -61,10 +61,10 @@ public class Persona {
     //proprietà private - vedi incapsulamento
     private String nome;
     private String cognome;
-    private Integer eta;
+    private int eta;
 
     //metodo costruttore
-    public Persona (String nome, String cognome, Integer eta)  {
+    public Persona (String nome, String cognome, int eta)  {
     this.nome = nome;
     this.cognome = cognome;
     this.eta = eta;
