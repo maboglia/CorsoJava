@@ -126,9 +126,9 @@ for (int i=0; i<n; ++i) {
 
 si ripete il ciclo fintanto che una condizione è verificata (è vera)
 
-* LA CONDIZIONE BOOLEANA `true/false`
-* DETERMINA LA CONTINUAZIONE DEL PROGRAMMA
-* ED ESEGUE L'ELENCO DELLE OPERAZIONI DEL BLOCCO
+* la condizione booleana `true/false`
+* determina la continuazione del programma
+* ed esegue l'elenco delle operazioni del blocco
 * Da usare se il numero di iterazioni **non è noto** all'inizio del ciclo.
 
 ```java
