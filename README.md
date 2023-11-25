@@ -1,5 +1,55 @@
 # Corso Java
 
+Il linguaggio di programmazione Java è ampiamente utilizzato per lo sviluppo di applicazioni aziendali, applicazioni mobili Android e molto altro ancora. Ecco una guida di base per iniziare:
+
+1. **Installazione di Java:**
+   - Prima di tutto, è necessario installare il JDK (Java Development Kit) sul tuo computer. Puoi scaricarlo dal sito ufficiale di Oracle o utilizzare una distribuzione come OpenJDK.
+
+2. **Ambiente di sviluppo (IDE):**
+   - Puoi scegliere un ambiente di sviluppo integrato (IDE) per scrivere il tuo codice Java. Alcuni IDE popolari includono Eclipse, IntelliJ IDEA e NetBeans. Questi strumenti offrono funzionalità avanzate per la scrittura, il debug e il testing del codice.
+
+3. **Hello World in Java:**
+   - Comincia con il classico esempio "Hello World" per comprendere la struttura di base di un programma Java.
+
+    ```java
+    public class HelloWorld {
+        public static void main(String[] args) {
+            System.out.println("Hello, World!");
+        }
+    }
+    ```
+
+4. **Fondamenti del linguaggio:**
+   - Impara i concetti fondamentali di Java, come variabili, tipi di dati, operatori, strutture di controllo (if, else, switch), cicli (for, while), e altro ancora.
+
+5. **OOP (Programmazione Orientata agli Oggetti):**
+   - Java è un linguaggio di programmazione orientato agli oggetti. Impara i concetti chiave come classi, oggetti, ereditarietà, incapsulamento e polimorfismo.
+
+6. **Gestione delle eccezioni:**
+   - Comprendi come gestire le eccezioni in Java per scrivere codice robusto e gestire situazioni impreviste.
+
+7. **Collezioni:**
+   - Studia le collezioni standard come liste, insiemi e mappe, e impara come usarle per manipolare dati in modo efficiente.
+
+8. **File e IO:**
+   - Conosci come leggere e scrivere su file, gestire lo stream di input/output e gestire le risorse esterne.
+
+9. **Thread e Concorrenza:**
+   - Comprendi i concetti di threading e come gestire la concorrenza in Java.
+
+10. **Java API e Librerie:**
+    - Esplora le ampie librerie Java standard (Java API) che forniscono funzionalità pronte per l'uso.
+
+11. **Framework:**
+    - Esplora i framework Java come Spring, Hibernate o Apache Struts, a seconda delle tue esigenze di sviluppo.
+
+12. **Progetti Pratici:**
+    - Applica ciò che hai imparato attraverso progetti pratici. Questo ti darà un'esperienza pratica e ti aiuterà a consolidare le tue conoscenze.
+
+Ricorda che la pratica è fondamentale nella programmazione. Scrivi regolarmente codice per acquisire esperienza e migliorare le tue abilità. Ci sono anche molte risorse online, tutorial e corsi che possono aiutarti ad approfondire i tuoi studi su Java.
+
+---
+
 ## Appunti, dispense, tutorial
 
 * [appunti](https://github.com/maboglia/CorsoJava/tree/master/appunti)

@@ -1,4 +1,5 @@
 # Java SE 11 Programmer I
+
 (Programma del corso Java SE - Java SE 11 Programmer I)
 
 * [Java SE 11 Programmer I](https://education.oracle.com/java/java-se/product_267)
@@ -22,10 +23,10 @@
 * Definire e implementare una semplice gerarchia di classi che supporti i requisiti dell'applicazione
 * Identificare i principi di programmazione modulari
 
-
 ---
 
 ## Introduzione
+
 * Programmare in Java
   * [Un esempio elementare](https://github.com/maboglia/CorsoJava/blob/master/esempi/01_base/02_tipi/01_Interi/Interi.java)
   * Gli strumenti di Java
@@ -83,6 +84,7 @@
 ---
 
 ### Il compilatore
+
 * Il compilatore: `javac`
 * Traduzione dei sorgenti testuali in bytecode
   * Linguaggio della macchina virtuale Java
@@ -90,17 +92,17 @@
 
 ![compilazione](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/03_system/developing.png)
 
-
 ---
 
 ### Ambienti di sviluppo
+
 * Il codice sorgente Java è  composto da testo
   * Un editor qualsiasi è sufficiente
 * Si possono usare ambienti integrati per lo sviluppo (IDE)
   * Offrono strumenti per la redazione,  la compilazione, l'esecuzione e  la ricerca degli errori
 
-
 #### Esempi
+
 * [Eclipse](http://www.eclipse.org)
 * [Netbeans]()
 * [IntelliJ IDEA]()
@@ -108,6 +110,7 @@
 ---
 
 ### Documentazione
+
 * Strumento necessario!
 * [Documentazione relativa alle classi standard Java API](https://docs.oracle.com/en/java/javase/)
 * Per ogni classe:
@@ -118,6 +121,7 @@
 ---
 
 ### Il debugger
+
 * Strumento ausiliario
   * Monitorare l'esecuzione di una applicazione
   * Analisi dei valori assunti dalle variabili, i metodi della classe, …
@@ -126,6 +130,7 @@
 ---
 
 ### Java nei sistemi Client
+
 * Vantaggi
   * Facilità di realizzazione delle interfacce grafiche
   * Indipendenza dalla piattaforma di sviluppo e di utilizzo
@@ -138,6 +143,7 @@
 ---
 
 ### Java nei sistemi Server
+
 * Varie tipologie di utilizzo:
   * Servlet / Java Server Pages / Java Server Faces
   * EJB / EnterpriseJavaBean
@@ -148,6 +154,7 @@
 ---
 
 ### Java nei sistemi Embedded
+
 * Segmento di mercato in forte crescita:
   * Milioni di PC connessi ad Internet
   * Centinaia di milioni di telefoni cellulari
@@ -158,13 +165,14 @@
 ---
 
 ### Installare Java
+
 * Java Software  Development KIT  (J2SE SDK)
   * Versione utilizzata nel corso 17
   * Disponibile gratuitamente:
   * compilatore, librerie standard, macchina  virtuale, …
 
-
 ### Variabili d'ambiente
+
 * Se necessario, modificare la variabile d'ambiente
   * `PATH= ... ;<JAVA_HOME>/bin`
   * per invocare i comandi java (compilatore, macchina virtuale, debugger, ...)
@@ -174,6 +182,7 @@
 ---
 
 ### Struttura dei file
+
 * `<File>.java`
   * Contengono il codice sorgente Java
 * `<File>.class`
@@ -191,6 +200,7 @@
 ---
 
 ### Programmi Java
+
 * Java è un linguaggio ad oggetti
   * L'unità minima di programmazione è la classe
   * Un programma Java utilizza una o più classi
@@ -198,7 +208,6 @@
   * Un solo file sorgente
   * Il nome del file coincide con il nome della classe
   * L'estensione del file è ".java"
-
 
 ![compilazione](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/03_system/developing.png)
 ---
@@ -210,10 +219,10 @@
   * Invocato automaticamente dalla VM Java
 
 ### Il metodo main()
+
 * Quando un programma inizia, non può esistere ancora nessun oggetto
   * Il punto di ingresso deve essere un metodo statico e pubblico
   * `public static void main(String[ ] args){ /* istruzioni */ }`
-
 
 ![esempio](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/02_classe_base/hello.png)
 ---
@@ -256,10 +265,10 @@
 
 ---
 
-### __OPERATORI DI BASE__ 
+### __OPERATORI DI BASE__
 
-* Operatore d'assegnazione 
-* Operatori aritmetici 
+* Operatore d'assegnazione
+* Operatori aritmetici
 * Operatori unari (aggiungono o sottraggono 1)
 * Operatori relazionali o di confronto
 * Operatori logici
@@ -272,6 +281,7 @@
 ---
 
 ### [Tipi primitivi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=004_tipi.md)
+
 * Numerici interi
   * byte, short, int, long
 * Numerici reali
@@ -282,6 +292,7 @@
 ---
 
 ### Tipi numerici interi
+
 * Valori ammissibili
   * byte {-128 ... 127}
   * short {-32768 ... 32767}
@@ -291,6 +302,7 @@
 ---
 
 ### Tipi numerici interi
+
 * Operazioni consentite
   * aritmetiche  +, -, *, /, %, ++,  --, >>
   * logiche (bit a bit) ^, &, |, ~, <<, >>>
@@ -299,6 +311,7 @@
 ---
 
 ### Tipi numerici reali
+
 * Valori
   * float {±3.403E38}   6 cifre significative
   * double {±1.798E308}   15 cifre significative
@@ -309,6 +322,7 @@
 ---
 
 ### Tipi non numerici: boolean
+
 * Valori
   * {false, true}
 * Operazioni
@@ -318,6 +332,7 @@
 ---
 
 ### Tipi non numerici: char
+
 * Rappresentazione  dei caratteri secondo  lo standard Unicode
   * Lettere di vari alfabeti arabo, armeno, bengalese, cirillico, greco, latino, ...
   * Simboli diacritici, punteggiatura,  matematici, tecnici, ...
@@ -326,10 +341,13 @@
   * I valori non stampabili sono rappresentati nel formato unicode (‘\u27AF')
 * Operazioni
   * confronto  (==, !=, >,>=, <, <=)
+
 ### [slide tipi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=004_tipi.md)
+
 ---
 
 ### Dichiarazioni
+
 * Introducono l'utilizzo di una variabile
 * Formato generale
   * `<Tipo> <Nome>;`
@@ -343,6 +361,7 @@
 ---
 
 ### Usare le variabili
+
 * Si può dichiarare una variabile ovunque nel codice di un metodo
   * Bisogna farlo, però, prima di usarla
   * Visibilità limitata al blocco di istruzioni in cui è dichiarata
@@ -353,6 +372,7 @@
 ---
 
 ### Usare le variabili
+
 * Ad una variabile può essere assegnato:
   * Un valore costante
   * Il risultato di una formula
@@ -368,6 +388,7 @@
 ---
 
 ## Modellare la realtà
+
 * Le classi: il modello
   * Attributi e metodi
 * Gli oggetti: il mattone
@@ -397,9 +418,11 @@
   * Deve essere univoco
 
 ### [slide classi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_classi.md)
+
 ---
 
 ### Costruire Oggetti
+
 * Data una classe, è possibile costruire uno o più oggetti
   * Gli oggetti vengono detti "istanze" della classe
   * In Java si utilizza la notazione   `new NomeClasse ( );`
@@ -408,9 +431,11 @@
   * Oggetti differenti occupano posizioni differenti
 
 ### [slide costruttori](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_3_classi_costruttori.md)
+
 ---
 
 ### Cosa c'è negli Oggetti
+
 * **Stato**
   * L'insieme dei parametri caratteristici che contraddistinguono un oggetto in un dato istante
   * Modellato come insieme di attributi
@@ -421,6 +446,7 @@
 ---
 
 ### Stato di un oggetto
+
 * Ogni oggetto ha un proprio stato:
   * Insieme dei valori assunti dagli attributi dell'oggetto
   * Operando sui metodi, si può modificare lo stato
@@ -436,25 +462,28 @@
 ---
 
 ### Costruttore
+
 * Metodo che inizializza gli attributi di una classe
 * Sintassi particolare:
   * Ha lo stesso nome della classe
   * Non indica nessun tipo ritornato
 
 * [010_3_classi_costruttori.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_3_classi_costruttori.md)
+
 ---
 
 ### Costruttore e parametri
+
 * Normalmente un costruttore assegna valori "standard" agli attributi
 * Se ha dei parametri, può differenziare gli oggetti costruiti
   * Chi invoca il costruttore deve fornire  i parametri richiesti
 * Una classe può avere molti costruttori
   * Occorre che siano distinguibili attraverso il numero ed il tipo di parametri richiesti
 
-
 ---
 
 ### Riferimenti
+
 * Si opera su un oggetto attraverso un riferimento
   * Indica la posizione in memoria occupata dall'oggetto
 * All'atto della costruzione, l'operatore new:
@@ -465,13 +494,16 @@
 ---
 
 ### Variabili
+
 * I riferimenti possono essere memorizzati all'interno di variabili locali
   * Devono avere un tipo compatibile con il tipo di riferimento che si intende memorizzare al loro interno
   * Devono essere dichiarate prima di essere usate
 ![variabili](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/02_classe_base/instance-variables.png)
+
 ---
 
 ### Ciclo di vita  delle variabili locali
+
 * Le variabili locali "esistono" finché il metodo (blocco di codice) che le definisce è in esecuzione
   * Quando si incontra la loro definizione, il sistema riserva un'area di memoria per ospitarne il contenuto
   * Quando il metodo (blocco) termina, l'area viene rilasciata ed il contenuto della variabile perso
@@ -480,6 +512,7 @@
 ---
 
 ### Riferimenti multipli
+
 * Uno stesso oggetto può essere riferito da più variabili
   * Succede quando si assegna ad un variabile il valore contenuto in un'altra variabile
   * Le variabili condividono il riferimento allo stesso oggetto
@@ -488,20 +521,24 @@
 ---
 
 ### Variabili elementari
+
 * Non tutte le variabili contengono un riferimento
   * Le informazioni più semplici possono essere memorizzate direttamente nella variabile
   * È il caso delle variabili il cui tipo è elementare (c.d. primitivo)
 
 * [004_tipi.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=004_tipi.md)
+
 ---
 
 ### Copia di variabili elementari
+
 * Se si assegna ad una variabile elementare il valore di un'altra variabile viene eseguita una copia del valore
   * I due valori diventano disgiunti e potranno evolvere indipendentemente
 
 ---
 
 ### Riferimenti nulli
+
 * Nel caso di variabili di tipo classe, a volte occorre indicare che non contengono nessun valore
   * Si usa la parola chiave null
 * Se una variabile vale null, non è possibile accedere ai metodi o agli attributi
@@ -509,6 +546,7 @@
 ---
 
 ### Accedere agli oggetti
+
 * Noto il riferimento ad un oggetto, è possibile invocarne i metodi
   * Si usa la notazione   `variabile.metodo(...);`
   * Nelle parentesi si indicano gli eventuali parametri
@@ -520,6 +558,7 @@
 ---
 
 ### Parametri
+
 * Un metodo può avere parametri
   * Internamente, appaiono come variabili locali
   * Il loro valore, però, è fornito dal chiamante
@@ -540,6 +579,7 @@
 ### [slide metodi](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=009_metodi.md)
 
 ### Valori di ritorno
+
 * Alcuni metodi restituiscono un valore
   * Il tipo del valore ritornato viene dichiarato prima del nome del metodo
   * `double calcolaPerimetro() { … }`
@@ -549,10 +589,10 @@
   * In questo caso dichiarano di ritornare il tipo predefinito void
   * `void setRaggio(double r) { … }`
 
-
 ---
 
 ### Tipologie di metodi
+
 * Un metodo, in generale, può operare liberamente sull'oggetto su cui viene invocato…
   * Modificandone lo stato
   * Invocando metodi su altri oggetti conosciuti
@@ -572,6 +612,7 @@
 ---
 
 ### Attributi
+
 * Come le variabili, anche gli attributi possono avere tipi
   * **Elementari**
   * **Complessi** (riferimenti ad oggetti)
@@ -583,6 +624,7 @@
 ---
 
 ### Attributi e costruttore
+
 * All'atto dell'invocazione del costruttore, tutti gli attributi hanno un valore di default
   * Gli attributi semplici valgono 0 (false, nel caso dei valori booleani)
   * Quelli complessi, valgono null
@@ -590,9 +632,11 @@
   * Questo può comportare anche la creazione di oggetti
 
 * [010_3_classi_costruttori.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=010_3_classi_costruttori.md)
+
 ---
 
 ### Ciclo di vita di un oggetto
+
 * L'operatore new, su richiesta del programmatore, alloca la memoria necessaria a contenere un oggetto
   * la memoria viene rilasciata quando l'oggetto non serve più!
   * cioè quando tutti i riferimenti all'oggetto sono **null**
@@ -600,6 +644,7 @@
 ---
 
 ### Accessibilità
+
 * Un oggetto è accessibile fino a che ne esiste un riferimento
 * Nel momento in cui non esistano più riferimenti, l'oggetto può essere eliminato
   * Rilasciando la memoria che occupa
@@ -610,6 +655,7 @@
 ---
 
 ### Conteggio dei riferimenti
+
 * All'interno di ogni oggetto, Java mantiene un **contatore** nascosto
   * Indica il **numero di riferimenti** esistenti a quello specifico oggetto
   * Quando il suo valore scende a 0, indica che l'oggetto può essere eliminato, rilasciando la memoria che occupa
@@ -619,6 +665,7 @@
 ---
 
 ### Costrutti di programmazione
+
 * Istruzioni semplici
   * Scelta
   * Ripetizione
@@ -631,30 +678,35 @@
 ---
 
 ### Istruzioni di scelta
+
 * Verifica della condizione
   * Vera si esegue l'istruzione o il blocco di istruzioni successivo
   * Falsa si salta all'istruzione successiva oppure viene eseguito il blocco "else"
 * if - else [esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_control-flow/01If)
 * switch [esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_control-flow/02Switch)
 * operatore ternario, è un if su una riga:
-* `condizione ? true : false ;` 
+* `condizione ? true : false ;`
 
 ### Istruzioni di scelta multipla
+
 * Struttura di selezione multipla
   * Valutazione del valore di una variabile
   * val1, …, valN:  espressioni costanti  (interi o caratteri)
 
 ---
 
-### Istruzioni di ripetizione	- for
+### Istruzioni di ripetizione - for
+
 * for: per scorrere per esempio un array in entrambe le direzioni
   * espr1: inizializzazione variabile/i di controllo
   * espr2: condizione di continuazione
   * espr3: modifica della/e variabili di controllo
 * for(each): scorre solo in una direzione
+
 ---
 
-### Istruzioni di ripetizione	- while
+### Istruzioni di ripetizione - while
+
 * while
   * Esecuzione di un blocco di istruzioni finché la condizione rimane vera
 * do/while garantisce almeno una iterazione
@@ -662,6 +714,7 @@
 ---
 
 ### Salto strutturato
+
 * Istruzioni che permettono di alterare il flusso di esecuzione:
   * **break** : provoca l'uscita immediata dal blocco
   * **continue**: salto delle rimanenti istruzioni del blocco, procede con l'interazione successiva del ciclo
@@ -670,15 +723,18 @@
 ---
 
 ### Array
+
 * All'interno di un programma può essere necessario gestire collezioni di dati:
   * Il modo più semplice per organizzarli, se sono di tipo omogeneo, è attraverso il concetto di array o vettore
 * Array in Java: oggetti che incapsulano sequenze ordinate di dati
   * Hanno dimensione fissa, definita all'atto della creazione
   * Sintassi semplificata per accedere ai singoli elementi
 * [006_array.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=006_array.md)
+
 ---
 
 ### Tipologie di array
+
 * Esistono due gruppi di array
   * Quelli che modellano sequenze di tipi elementari (interi, reali, caratteri, booleani)
   * Quelli che modellano sequenze di oggetti
@@ -689,6 +745,7 @@
 ---
 
 ### Inizializzare un array
+
 * Nel caso di array di tipi elementari, all'atto della creazione vengono assegnati valori di default
   * 0 per i numeri (interi e reali)
   * false per i valori logici
@@ -699,6 +756,7 @@
 ---
 
 ### Uso degli array
+
 * Per accedere ad un singolo elemento, si utilizza la sintassi
   * nome_array [ indice ]
   * L'indice deve essere compreso tra 0 e il numero di elementi presenti nell'array
@@ -709,6 +767,7 @@
 ---
 
 ### Array a più dimensioni
+
 * È anche possibile creare matrici
   * int [ ] [ ] matrice=   new int [3] [3];
 * Si tratta di "array di array"
@@ -719,6 +778,7 @@
 ---
 
 ### Oggetti e utilizzatori
+
 * Non tutte le caratteristiche di un oggetto devono essere visibili dall'esterno
   * Rischio di manomissioni indebite
   * Occorre separare l'interfaccia dall'implementazione
@@ -728,6 +788,7 @@
 ---
 
 ### Modificatori di visibilità
+
 * **Private**
   * Indica che si può accedere all'elemento solo da altri metodi appartenenti alla stessa classe
 * **Public**
@@ -738,6 +799,7 @@
 ---
 
 ### Visibilità delle classi
+
 * Anche le classi possono essere precedute da un modificatore di visibilità
   * In questo caso, **"private" non ha senso**
 * Se una classe è dichiarata **pubblica**, può essere utilizzata da classi appartenenti a qualsiasi gruppo (package)
@@ -746,6 +808,7 @@
 ---
 
 ### Incapsulamento
+
 * Per massimizzare il riuso, solo l'informazione minima necessaria al funzionamento deve essere accessibile
 * Di solito:
   * Attributi privati
@@ -755,6 +818,7 @@
 ---
 
 ### Metodi e attributi statici
+
 * Oggetti appartenenti ad una stessa classe hanno lo stesso insieme di attributi
   * Ogni oggetto ha però i propri valori, indipendenti dagli altri
   * Un metodo opera sui valori dell'oggetto su cui è invocato
@@ -763,6 +827,7 @@
 ---
 
 ### Attributi statici
+
 * Talora, si vuole memorizzare un'informazione comune a tutti gli oggetti di una data classe
   * Si utilizzano gli attributi "statici"
   * Il loro valore viene conservato in un blocco di memoria separato, relativo alla classe
@@ -771,6 +836,7 @@
 ---
 
 ### Uso degli attributi statici
+
 * Si può fare accesso ad un attributo statico anche in mancanza di un oggetto specifico
   * `double d= Cerchio.PI/2;`
 * Gli attributi statici devono essere inizializzati
@@ -781,17 +847,18 @@
 ---
 
 ### Metodi statici
+
 * Non fanno riferimento a nessun attributo specifico di un oggetto
   * Preceduti dal modificatore "static"
   * Equivalenti a procedure e funzioni di altri linguaggi
   * Possono essere invocati a partire dal nome della classe
-
 
 ### [slide static](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=013_classi_static.md)
 
 ---
 
 ### Math
+
 * La classe "Math" contiene metodi statici per le principali operazioni matematiche
   * double d1,d2;
   * d1 = Math.sqrt( 2.0 );
@@ -802,15 +869,17 @@
 ---
 
 ### System
+
 * La classe "System" contiene, sotto forma di attributi statici, oggetti che modellano le interazioni con la console di sistema
   * `System.out`  //output su schermo
   * `System.in` //input da tastiera
 
 ### [slide System](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_java_lang_System.md)
+
 ---
 
-
 ### La classe String
+
 * Classe che modella sequenze immutabili di caratteri
 * Sintassi semplificata
   * `String s1=  "Hello" ;`
@@ -819,10 +888,12 @@
   * Confronto, ricerca, derivazione di nuove stringhe, informazioni generali, …
 
 ### [slide String](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_API_Java_Stringhe.md)
-* 
+
+*
 ---
 
 ### Confronto e ricerca
+
 * `public boolean equals(String s)`
   * Restituisce true se il parametro contiene gli stessi caratteri dell'oggetto corrente
 * `public boolean equalsIgnoreCase(String s)`
@@ -833,6 +904,7 @@
 ---
 
 ### Derivazione e informazioni
+
 * `public String toUpperCase()`
   * Restituisce una nuova stringa contenente gli stessi caratteri in versione maiuscola
 * `public String replace(char oldChar, char newChar)`
@@ -845,6 +917,7 @@
 ---
 
 ## packages
+
 * Raccolte di classi
 * Raggruppare le classi in package, modularizzare il codice
 * Struttura dei package delle API Java
@@ -855,6 +928,7 @@
 ---
 
 ### Nomi delle classi
+
 * La metodologia ad oggetti favorisce il **riuso** delle classi
   * Il nome della classe dovrebbe suggerirne la **semantica**
   * A volte bisogna utilizzare nello stesso progetto classi già esistenti, di provenienza diversa ed aventi lo stesso nome
@@ -863,6 +937,7 @@
 ---
 
 ### Package: un cognome per le classi
+
 * Le classi possono essere raggruppate in "**package**"
   * Ogni package ha un **nome**
   * Viene scelto in modo da essere **univoco**
@@ -873,6 +948,7 @@
 ---
 
 ### Package: appartenenza
+
 * Le classi che appartengono ad uno stesso package formano un **gruppo**
 * Come nel caso di una famiglia, c'è un **rapporto privilegiato**:
   * Accessibilità a tutti i componenti non privati (public, protected, <vuoto>)
@@ -880,6 +956,7 @@
 ---
 
 ### Il nome dei package
+
 * Sequenza di parole separate da ‘.'
   * Dovrebbe suggerire lo scopo comune del gruppo di classi
   * Per evitare collisioni, spesso inizia con il nome DNS in ordine inverso
@@ -888,6 +965,7 @@
 ---
 
 ### Sintassi
+
 * La parola chiave "package" denota il gruppo di appartenenza
   * È seguita dal nome del package
   * Deve essere posta all'inizio del file sorgente
@@ -899,6 +977,7 @@
 ---
 
 ### Importare riferimenti
+
 * L'uso di nomi completi è scomodo
   * Gli amici si chiamano per nome
 * Il costrutto "import" permette di definire le classi note
@@ -908,6 +987,7 @@
 ---
 
 ### Importare riferimenti
+
 * Si possono includere un numero qualsiasi di clausole import
   * Devono sempre  precedere la definizione della classe
 * Per importare tutte le classi di un package, si usa la sintassi
@@ -916,6 +996,7 @@
 ---
 
 ### Gerarchia di package
+
 * Il nome di un package può essere formato da molti segmenti
   * Package che condividono lo stesso prefisso, possono avere funzionalità "collegate"
   * Per Java, sono gruppi totalmente separati
@@ -923,12 +1004,14 @@
 ---
 
 ### Package anonimo
+
 * Le classi che non dichiarano in modo esplicito il proprio package appartengono al package "anonimo"
   * A partire dalla versione 1.4, le classi del package anonimo non possono essere utilizzate da classi appartenenti ad altri package
 
 ---
 
 ### Compilare ed eseguire
+
 * Per poter utilizzare una classe all'interno di un'altra non basta "risolverne" il nome
   * Occorre localizzare il codice ad essa associato
   * Altrimenti viene lanciato l'errore "NoClassDefFoundError"
@@ -936,6 +1019,7 @@
 ---
 
 ### Rappresentazione su disco
+
 * Ad ogni classe, corrisponde un file ".class" che contiene il codice eseguibile
   * Questo deve risiedere in una (gerarchia di) cartella il cui nome coincide con quello del package
   * Le classi del package anonimo si trovano nella cartella radice
@@ -943,6 +1027,7 @@
 ---
 
 ### La variabile CLASSPATH
+
 * Variabile d'ambiente del sistema operativo
   * Specifica un insieme di cartelle radice in cui cercare i file ".class" o le sottocartelle dei package
   * Può contenere cartelle e file java compresse (file ".jar")
@@ -950,6 +1035,7 @@
 ---
 
 ### File Jar
+
 * Gerarchie di cartelle e file compressi
   * Analoghi a file ".zip"
   * Possono essere manipolati con il comando "jar"
@@ -958,6 +1044,7 @@
 ---
 
 ### API Java
+
 * Application Programming Interface
   * Insieme di meccanismi per interagire con il sistema ospitante
   * Progettati interamente ad oggetti
@@ -968,6 +1055,7 @@
 ---
 
 ### Package principali
+
 * [java.lang](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_java_lang.md)
   * Contiene le classi fondamentali del linguaggio
 * [java.math](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=021_java_lang_Math.md)
@@ -980,6 +1068,7 @@
 ---
 
 ### Package principali
+
 * `java.nio`
   * New Input/Output
   * Meccanismi di basso livello per interfacciarsi con il mondo esterno
@@ -995,6 +1084,7 @@
 ---
 
 ### java.lang: l'ABC delle applicazioni Java
+
 * Fornisce le classi fondamentali  per la programmazione Java
   * Importato automaticamente dal compilatore in tutti i programmi
 * Contiene – tra le altre – le classi  **Object**, **Throwable**, **String**
@@ -1002,6 +1092,7 @@
 ---
 
 ### java.lang.StringBuilder
+
 * Analoga alla classe **String**
   * Ma permette di modificare i caratteri contenuti
 * Principali operazioni
@@ -1011,6 +1102,7 @@
 ---
 
 ### Classi "wrapper"
+
 * Utilizzate per trasformare in oggetti dati elementari
   * Il dato contenuto è immutabile
 * Pattern generale dell'ingegneria del software
@@ -1019,6 +1111,7 @@
 ---
 
 ### Wrapper numerici
+
 * Sottoclassi di Number
 * Metodi per
   * Trasformare una stringa  in un numero e viceversa
@@ -1028,6 +1121,7 @@
 ---
 
 ### Character, Boolean
+
 * `Character`
   * Maiuscolo / minuscolo
   * Valore Unicode
@@ -1041,6 +1135,7 @@
 ---
 
 ### java.lang.System
+
 * Contiene attributi e metodi statici, utilizzati per:
   * Interazione con il sistema
   * Acquisizione di informazioni
@@ -1052,6 +1147,7 @@
 ---
 
 ### System: i metodi
+
 * `exit(…)`
   * terminazione della JVM
 * currentTimeMillis()
@@ -1062,6 +1158,7 @@
 ---
 
 ### System: i metodi
+
 * `gc()`
   * invocazione del garbage collector
 * load(…) / loadLibrary(…)
@@ -1072,6 +1169,7 @@
 ---
 
 ### java.lang.Math
+
 * Mette a disposizione gli strumenti necessari per le operazioni matematiche base
   * Contiene solo metodi e attributi statici
   * valore assoluto, logaritmo, potenza, trigonometrici, minimo, massimo, …
@@ -1080,6 +1178,7 @@
 ---
 
 ### java.lang.Runtime
+
 * Singola istanza per ogni applicazione
   * Consente di interfacciarsi con il sistema operativo
 * Metodi
@@ -1089,6 +1188,7 @@
 ---
 
 ## OOP Design
+
 * I concetti principali
 * Ereditarietà in Java
 * La classe Object
@@ -1097,6 +1197,7 @@
 ---
 
 ### Riuso del software
+
 * A volte si incontrano classi con funzionalità simili
   * In quanto sottendono concetti semanticamente "vicini"
   * Una mountain bike assomiglia ad una bicicletta tradizionale
@@ -1109,6 +1210,7 @@
 ---
 
 ### Ereditarietà
+
 * Meccanismo per definire una nuova classe (classe derivata) come specializzazione di un'altra (classe base)
   * La classe base modella un concetto generico
   * La classe derivata modella un concetto più specifico
@@ -1120,6 +1222,7 @@
 ---
 
 ### Astrazione
+
 * Il processo di analisi e progettazione del software di solito procede per raffinamenti successivi
   * Spesso capita che le similitudini tra classi non siano colte inizialmente
   * In una fase successiva, si coglie l'esigenza/opportunità di introdurre un concetto più generico da cui derivare classi specifiche
@@ -1130,6 +1233,7 @@
 ---
 
 ### Tipi ed ereditarietà
+
 * Ogni classe definisce un tipo:
   * Un oggetto, istanza di una sotto-classe, è formalmente compatibile con il tipo della classe base
   * Il contrario non è vero!
@@ -1144,6 +1248,7 @@
 ---
 
 ### Vantaggi dell'ereditarietà
+
 * Evitare la duplicazione  di codice
 * Permettere il riuso  di funzionalità
 * Semplificare la costruzione  di nuove classi
@@ -1153,6 +1258,7 @@
 ---
 
 ### Ereditarietà in Java
+
 * Si definisce una classe derivata attraverso la parola chiave "extends"
   * Seguita dal nome della classe base
 * Gli oggetti della classe derivata sono, a tutti gli effetti, estensioni della classe base
@@ -1161,6 +1267,7 @@
 ---
 
 ### Meccanismi
+
 * Costruzione di oggetti di classi derivate
 * Accesso alle funzionalità della superclasse
 * Ri-definizione di metodi
@@ -1168,6 +1275,7 @@
 ---
 
 ### Costruzione
+
 * Per realizzare un'istanza di una classe derivata, occorre – innanzi tutto – costruire l'oggetto base
   * Di solito, provvede automaticamente il compilatore, invocando – come prima operazione di ogni costruttore della classe derivata – il costruttore anonimo della superclasse
   * Si può effettuare in modo esplicito, attraverso il costrutto super(…)
@@ -1176,6 +1284,7 @@
 ---
 
 ### Accedere alla superclasse
+
 * L'oggetto derivato contiene tutti i componenti (attributi e metodi) dell'oggetto da cui deriva
   * Ma i suoi metodi non possono operare direttamente su quelli definiti privati
 * La restrizione può essere allentata:
@@ -1185,6 +1294,7 @@
 ---
 
 ### Ridefinire i metodi
+
 * Una sottoclasse può ridefinire metodi presenti nella superclasse
 * A condizione che abbiano
   * Lo stesso nome
@@ -1196,12 +1306,14 @@
 ---
 
 ### Ridefinire i metodi
+
 * A volte, una sottoclasse vuole "perfezionare" un metodo ereditato, non sostituirlo in toto
   * Per invocare l'implementazione presente nella super-classe, si usa il costrutto  super.<nomeMetodo> ( … )
 
 ---
 
 ### Compatibilità formale
+
 * Un'istanza di una classe derivata è formalmente compatibile con il tipo della super-classe
   * `Base b = new Derivata( );`
 * Il tipo della variabile "b" (Base) limita le operazioni che possono essere eseguite  sull'oggetto contenuto
@@ -1211,6 +1323,7 @@
 ---
 
 ### Polimorfismo
+
 * Java mantiene traccia della classe effettiva di un dato oggetto
   * Seleziona sempre il metodo più specifico anche se la variabile che lo contiene appartiene ad una classe più generica
 * Una variabile generica può avere "**molte forme**"
@@ -1220,6 +1333,7 @@
 ---
 
 ### Polimorfismo
+
 * Per sfruttare questa tecnica:
   * Si definiscono, nella super-classe, metodi con implementazione **generica**
   * sostituiti, nelle sottoclassi, da implementazioni **specifiche**
@@ -1229,6 +1343,7 @@
 ---
 
 ### La classe java.lang.Object
+
 * In Java:
   * Gerarchia di ereditarietà semplice
   * Ogni classe ha una sola super-classe
@@ -1238,6 +1353,7 @@
 ---
 
 ### Metodi di Object
+
 * Object definisce un certo numero di metodi pubblici
   * Qualunque oggetto di qualsiasi classe li eredita
   * La loro implementazione base è spesso minimale
@@ -1249,6 +1365,7 @@
 ---
 
 ### Metodi di Object
+
 * **public String toString()**
   * Restituisce una rappresentazione stampabile dell'oggetto
   * L'implementazione base fornita indica il nome della classe seguita dal riferimento relativo all'oggetto (`java.lang.Object@123456ab`)
@@ -1261,6 +1378,7 @@
 ---
 
 ### Controllare l'ereditarietà
+
 * In alcuni casi, si vuole impedire esplicitamente l'utilizzo della tecnica del polimorfismo
   * Ad esempio, per motivi di sicurezza o per garantire il mantenimento di una data proprietà del sistema
   * Si utilizza la parola chiave "final"
@@ -1272,6 +1390,7 @@
 ---
 
 ### Controllare l'ereditarietà
+
 * In altri casi si vuole obbligare l'utilizzo del polimorfismo
   * Si introducono metodi privi di implementazione
   * Facendoli precedere dalla parola chiave "abstract"
@@ -1283,6 +1402,7 @@
 ---
 
 ### Interfacce
+
 * Una classe astratta può contenere metodi non astratti
   * A beneficio delle proprie sottoclassi
 * In alcuni casi, si vogliono definire metodi astratti senza vincolare la gerarchia di ereditarietà delle classi che li implementeranno
@@ -1295,6 +1415,7 @@
 ---
 
 ### Interfacce e tipi
+
 * Analogamente alle classi, ogni interfaccia definisce un tipo
   * Un oggetto che implementa una data interfaccia ha come tipo anche il tipo dell'interfaccia
   * Un oggetto può implementare molte interfacce
@@ -1305,6 +1426,7 @@
 ---
 
 ### Interfacce vuote
+
 * Alcune interfacce non hanno metodi
   * Servono solo come "marcatori" o indicatori di tipo
   * Indicano che gli oggetti delle classi che le implementano godono di qualche proprietà
@@ -1312,6 +1434,7 @@
 ---
 
 ## Eccezioni in Java
+
 * Eventi eccezionali
   * Identificazione,  descrizione e  segnalazione
 * Eccezioni in Java
@@ -1322,6 +1445,7 @@
 ---
 
 ### Affidabilità di un programma
+
 * Un programma esegue una sequenza di operazioni su un calcolatore
   * Alcune direttamente, altre attraverso le funzionalità offerte dal sistema operativo
 * Talvolta qualche operazione non può essere effettuata
@@ -1330,6 +1454,7 @@
 ---
 
 ### Le ragioni del fallimento
+
 * Mancanza di risorse
   * Memoria esaurita, disco pieno, autorizzazioni insufficienti, …
 * Parametri errati
@@ -1340,6 +1465,7 @@
 ---
 
 ### Le ragioni del fallimento
+
 * Alcune dipendono dal programmatore
   * Altre, dal contesto di esecuzione
 * In ogni caso, quando si rileva un'anomalia
@@ -1350,6 +1476,7 @@
 ---
 
 ### Strategie
+
 * Tutte le operazioni che possono fallire, devono indicare:
   * Se sono terminate con successo o meno
   * L'eventuale anomalia riscontrata
@@ -1364,6 +1491,7 @@
 ---
 
 ### Complessità
+
 * Rapidamente, il codice associato ad una procedura semplice diventa ingestibile
   * La reazione comune consiste nell'omettere i test
 * Cosa fare quando si rileva un malfunzionamento?
@@ -1371,6 +1499,7 @@
 ---
 
 ### Contesto
+
 * Spesso, ci si accorge dei fallimenti all'interno di procedure generiche
   * Non si sa quali contromisure prendere
 * Occorrerebbe segnalare il malfunzionamento al chiamante
@@ -1380,6 +1509,7 @@
 ---
 
 ### La risposta di Java
+
 * Un'insieme di classi per modellare l'anomalia riscontrata
   * Fa capo alla classe Throwable
 * Meccanismi per
@@ -1391,6 +1521,7 @@
 ---
 
 ### Sintassi
+
 * Un metodo che può fallire deve segnalarlo nella propria dichiarazione
   * Attraverso la parola chiave "**throws**"
   * Seguita dal tipo (o dai tipi) di **eccezione** che si può verificare durante l'esecuzione
@@ -1401,18 +1532,21 @@
 ---
 
 ### Try/Catch
+
 * Costrutto utilizzato per il controllo delle eccezioni
   * Isola le parti di codice che possono provocare anomalie
 
 ---
 
 ### Try/Catch
+
 * È possibile reagire in modo differente a tipi diversi di eccezioni mettendo più clausole "catch" in sequenza
   * Avendo cura di indicare dapprima le anomalie più specifiche
 
 ---
 
 ### La clausola "finally"
+
 * finally indica le istruzioni che devono essere eseguite comunque
   * Tanto nel caso in cui il codice controllato sia stato eseguito correttamente
   * Quanto nel caso in cui si sia verificata un'eccezione
@@ -1420,6 +1554,7 @@
 ---
 
 ### Problemi
+
 * Il codice del blocco catch selezionato dovrebbe ripristinare la coerenza nel sistema
   * Non è detto sia possibile!
 * È possibile che si verifichi un'eccezione durante l'esecuzione del blocco catch
@@ -1429,19 +1564,23 @@
 ---
 
 ### Gestire le eccezioni
+
 * Stampare un messaggio di errore
   * Non risolve nulla, ma aiuta il debugging
 
 ---
 
 ### Gestire le eccezioni
+
 * Generare una nuova eccezione
   * Permette di aggiungere informazioni sul contesto in cui si è verificata l'anomalia originale
 
 * [017_eccezioni.md](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=017_eccezioni.md)
+
 ---
 
 ### Modellare le eccezioni
+
 * Java prevede che un'anomalia sia descritta da un oggetto di tipo Throwable
   * Classe radice della gerarchia delle eccezioni
   * Offre vari metodi per la gestione dell'anomalia
@@ -1450,6 +1589,7 @@
 ---
 
 ### La classe Throwable
+
 * String getMessage()
   * Restituisce la stringa che descrive l'anomalia
   * Inizializzata nel costruttore a partire da un parametro
@@ -1460,6 +1600,7 @@
 ---
 
 ### Tipologie di anomalie
+
 * Errori della **macchina virtuale**
   * Fanno capo alla classe **Error**
   * Non possono essere recuperati
@@ -1472,6 +1613,7 @@
 ---
 
 ### Definire nuove eccezioni
+
 * È possibile creare classi di eccezioni personalizzate
   * Spesso non contengono nessun metodo né attributo
   * Di solito, hanno un costruttore anonimo, che associa all'oggetto una descrizione generica ed un costruttore che accetta una stringa, che permette di dettagliare l'anomalia verificatasi
@@ -1479,6 +1621,7 @@
 ---
 
 ## Input e Output Stream
+
 * Flussi di dati
 * Lettura e scrittura
 * Interagire con  il file system
@@ -1487,6 +1630,7 @@
 ---
 
 ### Flussi di dati
+
 * Sequenze continue e monodirezionali di informazioni che transitano da un'entità ad un'altra
 * Attraverso un flusso possono scorrere dati di qualsiasi tipo:
   * Omogenei / eterogenei
@@ -1497,6 +1641,7 @@
 ---
 
 ### Classi Java per I/O
+
 * Modellano l'interazione di un programma con flussi dati
   * Ingresso o uscita
   * Binari o testuali
@@ -1507,6 +1652,7 @@
 ---
 
 ### InputStream
+
 * Modella le operazioni di lettura da un flusso binario
   * Opera su sequenze di byte
   * Classe astratta
@@ -1516,6 +1662,7 @@
 ---
 
 ### Metodi principali
+
 * `int read()`
   * Attende il prossimo byte, dopodiché ne restituisce il valore (0-255)
   * Ritorna -1 se il flusso è terminato
@@ -1525,6 +1672,7 @@
 ---
 
 ### Metodi principali
+
 * `long skip(long n)`
   * Scarta i prossimi "n" byte dal flusso, se esistono
   * Ritorna il numero di caratteri scartati
@@ -1535,6 +1683,7 @@
 ---
 
 ### Sorgenti
+
 * `InputStream` offre funzionalità minimali:
   * Non indica da dove provengano i dati letti
 * Sottoclassi "sorgente"
@@ -1544,6 +1693,7 @@
 ---
 
 ### FileInputStream
+
 * Permette di leggere il contenuto di un file
   * Parametro del costruttore
   * Deve esistere ed essere leggibile
@@ -1553,6 +1703,7 @@
 ---
 
 ### Filtri
+
 * InputStream offre funzionalità minimali:
   * Permette solo di leggere byte
 * Classi "filtro"
@@ -1561,6 +1712,7 @@
 ---
 
 ### Classi filtro
+
 * Richiedono un InputStream da cui prelevare i dati
   * Deve essere passato nel costruttore
 * Trasformano i dati letti da tale flusso
@@ -1569,6 +1721,7 @@
 ---
 
 ### Composizione
+
 * Il meccanismo dei filtri è molto flessibile
   * Più filtri possono essere concatenati (in che ordine?)
   * Si possono costruire oggetti con tutte e sole le funzionalità richieste
@@ -1576,6 +1729,7 @@
 ---
 
 ### OutputStream
+
 * Modella le operazioni di scrittura su un flusso binario
   * Classe astratta
 * Offre metodi per scrivere i singoli byte
@@ -1584,6 +1738,7 @@
 ---
 
 ### Metodi principali
+
 * `void write(int b)`
   * Scrive il valore b (troncato ad 8 bit) sul flusso
 * `void flush()`
@@ -1596,6 +1751,7 @@
 ---
 
 ### Destinazioni
+
 * Anche OutputStream offre funzionalità minimali:
   * Non indica dove scrivere i dati letti
 * Sottoclassi "destinazione"
@@ -1605,6 +1761,7 @@
 ---
 
 ### FileOutputStream
+
 * Permette di scrivere un file
   * Parametro del costruttore
   * Può non esistere
@@ -1616,6 +1773,7 @@
 ---
 
 ### Filtri
+
 * Insieme di classi che estendono le capacità di OutputStream
   * Inserimento di un buffer
   * Scrittura di dati elementari ed oggetti
@@ -1624,6 +1782,7 @@
 ---
 
 ### Reader & Writer
+
 * Classi duali di InputStream e OutputStream
   * Modellano operazioni su flussi di caratteri UNICODE
   * Classi astratte
@@ -1632,6 +1791,7 @@
 ---
 
 ### Codifica dei caratteri
+
 * Un carattere UNICODE è rappresentato su 16 bit
   * Esistono vari modi per trasformarlo in una sequenza di byte
 * InputStreamReader e OutputStreamWriter hanno, all'interno, il codice necessario alla conversione in byte
@@ -1640,6 +1800,7 @@
 ---
 
 ### La classe File
+
 * Modella il nome di file e cartelle in modo indipendente dal sistema operativo:
   * Il file corrispondente può non esistere
   * Permette di creare, cancellare, rinominare, … file e cartelle
@@ -1647,6 +1808,7 @@
 ---
 
 ### Creazione e cancellazione
+
 * `boolean createNewFile();`
 * `boolean mkdir();`
 * `boolean renameTo(File dest);`
@@ -1656,6 +1818,7 @@
 ---
 
 ### Proprietà di un file
+
 * `boolean canRead();`
 * `boolean canWrite();`
 * `boolean isDirectory();`
@@ -1667,6 +1830,7 @@
 ---
 
 ### Ulteriori funzionalità
+
 * `static File[] listRoots();`
   * Elenca le possibili radici del filesystem corrente ("a:", "c:", …)
 * `static String separator;`
@@ -1675,6 +1839,7 @@
 ---
 
 ### File ad accesso casuale
+
 * In alcune situazioni occorre operare su un file, procedendo in modo non sequenziale
   * Lettura e scrittura possono avvenire in qualsiasi posizione del file
   * indipendentemente dall'operazione precedente
@@ -1686,6 +1851,7 @@
 ---
 
 ### Operare in lettura
+
 * `void seek(long pos)`
   * Posiziona il puntatore interno a pos byte dall'inizio del file
 * `long getFilePointer( )`
@@ -1700,7 +1866,8 @@
 ---
 
 ### Operare in scrittura
-* `void writeBytes(String s)	`
+
+* `void writeBytes(String s) `
   * Scrive la sequenza di byte meno significativi corrispondenti ai caratteri contenuti in "s"
 * `void writeChars(String s)`
   * Scrive la sequenza di caratteri (due byte ciascuno) contenuti in "s"
@@ -1708,7 +1875,6 @@
   * Scrive la rappresentazione della stringa "s" nel formato UTF-8
 * Altri metodi dell'interfaccia DataOutput
   * Permettono la scrittura di dati elementari
-
 
 ---
 
@@ -1811,10 +1977,10 @@
 
 * [design patterns](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=037_design_patterns.md)
   * [singleton](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=033_singleton_pattern.md)
-	* [decorator](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=034_decorator_pattern.md)
-	* mvc
-	* [dao](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=036_dao_pattern.md)
-	* [factory](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=035_factory_pattern.md)
+    * [decorator](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=034_decorator_pattern.md)
+    * mvc
+    * [dao](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=036_dao_pattern.md)
+    * [factory](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=035_factory_pattern.md)
 
 ### JAVA WEB
 
@@ -1825,7 +1991,7 @@
   * [JSP: le espressioni]
   * [JSP: le dichiarazioni]
 * [RequestDispatcher](http://www.bogliaccino.it/teaching/lab/CorsoJAVA/pages/slideshow.php?parameter=060_RequestDispacher.md)
-*	GlassFish e TomCat
+* GlassFish e TomCat
 * JSTL: Jsp standard action
 * Servlet REST controller: doGet, doPost
 
@@ -1875,6 +2041,7 @@
 ---
 
 ### Interfacce Java
+
 * Creare e utilizzare interfacce con metodi predefiniti (default)
 * Creare e utilizzare interfacce con metodi privati
 
@@ -2086,4 +2253,3 @@
 * Sviluppa il codice che utilizza il flusso parallelo
 * Implementa decomposizione e riduzione con stream
 
----

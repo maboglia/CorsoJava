@@ -8,7 +8,6 @@
 * Per efficienza Java definisce tipi primitivi
 * La dichiarazione di una istanza alloca spazio in memoria
 * Un valore è associato direttamente alla variabile 
-* (e.g, i == 0) 
 * Ne vengono definiti dimensioni e codifica
 * Rappresentazione indipendente dalla piattaforma
 
