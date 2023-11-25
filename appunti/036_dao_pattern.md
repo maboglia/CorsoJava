@@ -1,4 +1,4 @@
-# dao pattern
+# DAO pattern
 
 Il **DAO (Data Access Object) Pattern** è un design pattern strutturale che fornisce un'astrazione dell'accesso ai dati. L'obiettivo principale di questo pattern è separare la logica di accesso ai dati dalla logica di business. Ciò consente di modificare la modalità di accesso ai dati senza influenzare il resto del sistema.
 
