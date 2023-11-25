@@ -1,5 +1,46 @@
 # MVC design pattern - model view controller
 
+Il pattern MVC (Model-View-Controller) è un design pattern architetturale ampiamente utilizzato nell'ambito dello sviluppo del software per organizzare il codice in un modo che faciliti la manutenibilità, l'estensibilità e la separazione delle responsabilità. Il pattern MVC suddivide un'applicazione in tre componenti principali:
+
+1. **Model (Modello):**
+   - Rappresenta la struttura dei dati e le regole di business dell'applicazione. Il Modello gestisce la logica di dominio e fornisce un'interfaccia per accedere e modificare i dati. Quando il Modello cambia, notifica gli osservatori (solitamente le componenti della View) che possono essere interessati a quei cambiamenti.
+
+2. **View (Vista):**
+   - Visualizza l'informazione e interagisce con l'utente. La View è responsabile di presentare i dati provenienti dal Modello all'utente in un formato comprensibile. Può anche raccogliere input dall'utente e inoltrarli al Controller per l'elaborazione. La View può anche essere un osservatore del Modello, in modo da poter essere aggiornata quando il Modello cambia.
+
+3. **Controller (Controllore):**
+   - Gestisce gli input dell'utente e interpreta le azioni da eseguire. Il Controller è responsabile di ricevere gli input dall'utente attraverso la View, elaborarli e coordinare il Modello e la View in base a quelle azioni. Il Controller può aggiornare il Modello, che a sua volta notifica le View interessate.
+
+### Flusso di Controllo in MVC:
+
+1. L'utente interagisce con la View, ad esempio, facendo clic su un pulsante.
+2. La View invia l'input al Controller.
+3. Il Controller interpreta l'input e decide come gestirlo.
+4. Il Controller può aggiornare il Modello in base all'input.
+5. Il Modello notifica la View se è stato modificato.
+6. La View ottiene i dati aggiornati dal Modello e li visualizza all'utente.
+
+### Vantaggi del Pattern MVC:
+
+1. **Separazione delle Responsabilità:**
+   - Chiara separazione delle responsabilità tra Modello, Vista e Controller facilita la manutenibilità e l'estendibilità del codice.
+
+2. **Riutilizzo del Codice:**
+   - I componenti del pattern MVC possono essere riutilizzati in diverse parti dell'applicazione.
+
+3. **Facilità nella Manutenzione:**
+   - Modifiche in un componente (ad esempio, una nuova interfaccia utente) possono essere apportate senza dover toccare gli altri componenti.
+
+4. **Testabilità:**
+   - La separazione dei componenti facilita il testing unitario e l'isolamento delle parti dell'applicazione per testare la loro funzionalità in modo indipendente.
+
+5. **Flessibilità e Scalabilità:**
+   - Il pattern MVC è flessibile e può essere adattato per soddisfare le esigenze specifiche dell'applicazione. Inoltre, facilita la scalabilità dell'applicazione.
+
+Il pattern MVC è ampiamente utilizzato in molti contesti di sviluppo software, inclusi framework web come Django (Python), Ruby on Rails (Ruby) e Spring MVC (Java), tra gli altri.
+
+---
+
 ![MVC](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/mvc_pattern_uml_diagram.jpeg)
 
 ---

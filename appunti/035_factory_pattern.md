@@ -1,5 +1,86 @@
 # factory pattern
 
+Il **Factory Pattern** è un design pattern creazionale che fornisce un'interfaccia per creare istanze di una classe, permettendo alle sottoclassi di alterare il tipo delle istanze che vengono create. In altre parole, il Factory Pattern fornisce un modo per incapsulare la creazione di oggetti e delegare la decisione di quale classe istanziare alle sottoclassi.
+
+### Componenti del Factory Pattern:
+
+1. **Product (Prodotto):**
+   - Definisce l'interfaccia per gli oggetti creati dal factory pattern.
+
+    ```java
+    public interface Product {
+        void operazione();
+    }
+    ```
+
+2. **ConcreteProduct (Prodotto Concreto):**
+   - Implementa l'interfaccia del Product e rappresenta l'oggetto concreto che verrà creato dal factory.
+
+    ```java
+    public class ConcreteProduct implements Product {
+        @Override
+        public void operazione() {
+            System.out.println("Operazione eseguita da ConcreteProduct");
+        }
+    }
+    ```
+
+3. **Creator (Creatore):**
+   - Dichiara il metodo di fabbrica astratto che le sottoclassi implementeranno per creare un oggetto di tipo Product.
+
+    ```java
+    public abstract class Creator {
+        public abstract Product factoryMethod();
+    }
+    ```
+
+4. **ConcreteCreator (Creatore Concreto):**
+   - Implementa il metodo di fabbrica astratto per creare un oggetto di tipo Product concreto.
+
+    ```java
+    public class ConcreteCreator extends Creator {
+        @Override
+        public Product factoryMethod() {
+            return new ConcreteProduct();
+        }
+    }
+    ```
+
+### Utilizzo del Factory Pattern:
+
+```java
+public class Client {
+    public static void main(String[] args) {
+        Creator creator = new ConcreteCreator();
+        Product product = creator.factoryMethod();
+        product.operazione();
+    }
+}
+```
+
+In questo esempio, `Client` utilizza un oggetto `ConcreteCreator` per creare un oggetto `ConcreteProduct` attraverso il metodo di fabbrica `factoryMethod`. Il client interagisce solo con l'interfaccia del `Product`, senza conoscere la classe concreta effettiva che viene istanziata.
+
+### Vantaggi del Factory Pattern:
+
+1. **Astrazione della Creazione:**
+   - Il client non deve conoscere le classi concrete ma solo l'interfaccia del prodotto, consentendo una maggiore astrazione.
+
+2. **Decoupling delle Classi:**
+   - Riduce l'accoppiamento tra il client e le classi concrete, facilitando la sostituzione di implementazioni senza modificare il client.
+
+3. **Promozione della Coerenza:**
+   - Assicura che gli oggetti siano creati in modo coerente, centralizzando la logica di creazione in una classe dedicata.
+
+4. **Semplificazione dell'Estensibilità:**
+   - Facilita l'aggiunta di nuovi prodotti senza modificare il client, introducendo nuove sottoclassi di Creator e ConcreteProduct.
+
+5. **Configurabilità:**
+   - Consente di configurare il sistema con diverse implementazioni di prodotti senza apportare modifiche significative al codice esistente.
+
+Il Factory Pattern è particolarmente utile quando la creazione di un oggetto coinvolge logiche complesse o la decisione sulla classe da istanziare deve essere ritardata o variabile.
+
+---
+
 ![factory](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/factory_pattern_uml_diagram.jpeg)
 
 ---
