@@ -2,6 +2,9 @@
 
 Il **DAO (Data Access Object) Pattern** è un design pattern strutturale che fornisce un'astrazione dell'accesso ai dati. L'obiettivo principale di questo pattern è separare la logica di accesso ai dati dalla logica di business. Ciò consente di modificare la modalità di accesso ai dati senza influenzare il resto del sistema.
 
+
+---
+
 ### Componenti del DAO Pattern:
 
 1. **Interfaccia DAO (Data Access Object):**
@@ -17,6 +20,8 @@ Il **DAO (Data Access Object) Pattern** è un design pattern strutturale che for
         // Altri metodi relativi all'accesso ai dati
     }
     ```
+
+---
 
 2. **Classe concreta DAO:**
    - Implementa l'interfaccia DAO per un tipo specifico di sorgente dati, come un database relazionale, un file di testo, ecc.
@@ -46,6 +51,8 @@ Il **DAO (Data Access Object) Pattern** è un design pattern strutturale che for
     }
     ```
 
+---
+
 3. **Modello di Dominio (Model):**
    - Rappresenta l'oggetto di dominio che viene memorizzato o recuperato dal sorgente dati.
    - Nell'esempio, `User` rappresenta l'oggetto utente.
@@ -58,6 +65,8 @@ Il **DAO (Data Access Object) Pattern** è un design pattern strutturale che for
         // Altri attributi e metodi
     }
     ```
+
+---
 
 4. **Client:**
    - Utilizza l'interfaccia DAO per interagire con i dati senza preoccuparsi dei dettagli di implementazione o della sorgente dati sottostante.
@@ -77,14 +86,22 @@ Il **DAO (Data Access Object) Pattern** è un design pattern strutturale che for
 
 ### Vantaggi del DAO Pattern:
 
+---
+
 1. **Separazione delle Responsabilità:**
    - Isola la logica di accesso ai dati dal resto del sistema, consentendo cambiamenti indipendenti in ciascun componente.
+
+---
 
 2. **Riutilizzo del Codice:**
    - La logica di accesso ai dati è incapsulata all'interno del DAO, consentendo il riutilizzo dello stesso DAO in diverse parti dell'applicazione.
 
+---
+
 3. **Manutenibilità:**
    - Facilita la manutenzione del codice, poiché le modifiche nel sistema di memorizzazione dati possono essere gestite facilmente modificando solo l'implementazione del DAO.
+
+---
 
 4. **Testabilità:**
    - Semplifica il test delle operazioni di accesso ai dati, poiché è possibile sostituire facilmente un DAO con un'implementazione "mock" o di test.
