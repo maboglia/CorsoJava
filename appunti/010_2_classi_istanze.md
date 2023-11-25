@@ -79,38 +79,35 @@ Le principali operazioni che si possono effettuare sulle variabili che riferisco
 
 ## 1.6. Accesso a metodi e attributi non static
 
-La sintassi è simile al caso precedente, ma ovviamente l’accesso/invocazione è possibile solo tramite un’istanza specifica: 
-
-* Nel corpo di un metodo **non** `static` si può accedere a qualunque attributo e metodo della stessa classe
-* All'interno del corpo di un metodo si possono riferire in modo abbreviato attributi e metodi definiti nella stessa classe
-* Se nel corpo di un metodo non `static` appare il nome di un metodo o attributo non `static` della sua classe è sottinteso che sia riferito all’istanza su cui è stato invocato il metodo
-
+* All'interno del corpo di un metodo che **non è** dichiarato `static`, è possibile accedere a qualsiasi attributo e metodo della stessa classe.
+* Nel contesto di un metodo, è consentito riferirsi in modo abbreviato agli attributi e ai metodi definiti all'interno della stessa classe.
+* Quando, all'interno di un metodo non `static`, compare il nome di un metodo o attributo anch'esso non `static`, è implicito che si stia facendo riferimento all'istanza specifica su cui è stato invocato il metodo.
 ---
 
 ## 1.7. Oggetti e riferimenti
 
-* Le variabili hanno un nome, gli oggetti no
-* Per utilizzare un oggetto bisogna passare attraverso una variabile che ne contiene il riferimento
-* Uno stesso oggetto può essere riferito da più variabili e quindi essere raggiunto tramite nomi diversi (di variabili)
-* Il rapporto variabili - oggetti riferiti è dinamico, il riferimento iniziale non necessariamente rimane legato all'oggetto per tutta la sua esistenza
-* Se un oggetto non è (più) riferito da nessuna variabile diventa irraggiungibile (e quindi interviene il garbage collector)
+* Mentre le variabili sono dotate di un nome distintivo, gli oggetti non lo sono.
+* Per interagire con un oggetto, è necessario passare attraverso una variabile che contiene il suo riferimento.
+* Un singolo oggetto può essere accessibile tramite diverse variabili, consentendo l'utilizzo di nomi variabili per accedervi.
+* Il rapporto tra variabili e gli oggetti a cui fanno riferimento è dinamico; il riferimento iniziale non è necessariamente vincolato all'oggetto per l'intera durata della sua esistenza.
+* Quando nessuna variabile fa più riferimento a un oggetto, quest'ultimo diventa irraggiungibile e il garbage collector interviene per liberare le risorse associate.
 
 ---
 
 ## 1.8. Confronti tra variabili di tipo strutturato
 
-* E' possibile applicare gli operatori di confronto == e != a variabili di tipo strutturato
-* Se uno dei due termini del confronto è il valore null si verifica se una certa variabile riferisce un oggetto oppure no, p.e. saluto3 != null
-* Se entrambi i termini del confronto sono variabili, si verifica se hanno lo stesso valore (cioè riferiscono esattamente lo stesso oggetto)
+* Gli operatori di confronto `==` e `!=` possono essere impiegati con variabili di tipo strutturato.
+* Quando uno dei due termini del confronto è il valore `null`, l'analisi verifica se una specifica variabile fa riferimento a un oggetto o se è priva di un riferimento, ad esempio, nell'espressione `saluto3 != null`.
+* Quando entrambi i termini del confronto sono variabili, il confronto determina se possiedono lo stesso valore, indicando se fanno riferimento esattamente allo stesso oggetto.
 
 ---
 
 ## 1.9. Confronto tra riferimenti vs. confronto tra oggetti
 
-* Usare `==` fa il confronto tra i **riferimenti** NON fra i **valori** contenuti negli oggetti
-* Di solito si vogliono confrontare i contenuti non i riferimenti: per questo si usa il **metodo** `equals()` 
-* Il metodo booleano `equals` della classe String accetta come argomento il riferimento ad un altro oggetto e ritorna true se le stringhe contenute sono uguali, false altrimenti
-* Il metodo booleano `equalsIgnoreCase` fa lo stesso senza distinguere maiuscole/minuscole
+* L'operatore `==` confronta i **riferimenti**, non i **valori**, contenuti negli oggetti.
+* Tipicamente, si desidera confrontare i contenuti, non i riferimenti, ed è per questo che si utilizza il **metodo** `equals()`.
+* Il metodo booleano `equals` della classe String richiede come argomento il riferimento a un altro oggetto e restituisce `true` se le stringhe contenute sono uguali, altrimenti restituisce `false`.
+* In modo simile, il metodo booleano `equalsIgnoreCase` effettua la stessa operazione senza fare distinzione tra maiuscole e minuscole.
 
 
 [esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)
