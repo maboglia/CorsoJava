@@ -4,7 +4,7 @@ Il DTO (Data Transfer Object) è un design pattern strutturale che fornisce un o
 
 ---
 
-### Caratteristiche chiave del DTO:
+### Caratteristiche chiave del DTO
 
 1. **Trasferimento di Dati:**
    - Il DTO è progettato principalmente per trasferire dati tra il livello di presentazione (o altri componenti) e il livello di persistenza (o altri componenti).
@@ -23,7 +23,7 @@ Il DTO (Data Transfer Object) è un design pattern strutturale che fornisce un o
 
 ---
 
-### Esempio di DTO:
+### Esempio di DTO
 
 Consideriamo un esempio semplificato di DTO per rappresentare i dati di un utente:
 
@@ -43,7 +43,7 @@ In questo esempio, `UserDTO` è un oggetto contenente solo i dati relativi a un 
 
 ---
 
-### Utilizzo del DTO:
+### Utilizzo del DTO
 
 1. **Riduzione del Traffico di Rete:**
    - In un'applicazione distribuita, quando si trasferiscono dati tra il client e il server, l'utilizzo di DTO può ridurre il traffico di rete raggruppando più dati in un'unica richiesta o risposta.
@@ -75,12 +75,12 @@ Caro studente in formazione, vedrai che qualcuno in azienda (tutor, CTO, collega
 
 ---
 
-#### Sebbene i DTO abbiano i loro vantaggi, presentano anche diversi svantaggi:
+#### Sebbene i DTO abbiano i loro vantaggi, presentano anche diversi svantaggi
 
-Bloatware: i DTO possono aggiungere bloatware (software aggiuntivo a volte inutile, come quello preinstallato su alcuni dispostivi) non necessari a un codice che dovrebbe essere pulito e semplice.
-Complessità: l'utilizzo dei DTO può introdurre ulteriore complessità, che può rendere difficile spiegare la struttura del sistema o quale modello utilizzare ai nuovi membri del team.
-Manutenzione: nel corso del tempo, le DTO possono introdurre un livello aziendale che non dovrebbe esistere, il che può portare a problemi di test e modelli di dati anemici.
-Disaccoppiamento: l'utilizzo di DTO per scopi di disaccoppiamento in un'architettura di microservizi non ha senso se rispecchia solo i cambiamenti qua e là senza una ragione rilevante.
-Mappatura: la mappatura dei DTO può essere noiosa e richiedere molto tempo, soprattutto se deve essere eseguita per più livelli o servizi.
+- **Bloatware**: i DTO possono aggiungere bloatware (software aggiuntivo a volte inutile, come quello preinstallato su alcuni dispostivi) non necessari a un codice che dovrebbe essere pulito e semplice.
+- **Complessità**: l'utilizzo dei DTO può introdurre ulteriore complessità, che può rendere difficile spiegare la struttura del sistema o quale modello utilizzare ai nuovi membri del team.
+- **Manutenzione**: nel corso del tempo, le DTO possono introdurre un livello aziendale che non dovrebbe esistere, il che può portare a problemi di test e modelli di dati anemici.
+- **Disaccoppiamento**: l'utilizzo di DTO per scopi di disaccoppiamento in un'architettura di microservizi non ha senso se rispecchia solo i cambiamenti qua e là senza una ragione rilevante.
+- **Mappatura**: la mappatura dei DTO può essere noiosa e richiedere molto tempo, soprattutto se deve essere eseguita per più livelli o servizi.
 
 [Articolo su DTO](https://www.linkedin.com/pulse/disadvantages-using-data-transfer-objects-dtos-how-uzc%C3%A1tegui-pescozo/)
