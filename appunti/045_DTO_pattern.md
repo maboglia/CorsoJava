@@ -64,7 +64,7 @@ In conclusione, il DTO è uno strumento utile per semplificare il trasferimento 
 
 ---
 
-## Quando andrai in stage
+### Quando andrai in stage
 
 Caro studente in formazione, vedrai che qualcuno in azienda (tutor, CTO, collega) con dieci anni di esperienza e una formazione accademica ti dirà che non basta aver imparato in sei mesi le basi di Java, la connessione al database, altre tecnologie web, Spring, MVC, ...
 
@@ -73,3 +73,14 @@ Caro studente in formazione, vedrai che qualcuno in azienda (tutor, CTO, collega
 ![DTO](https://github.com/maboglia/ProgrammingResources/blob/master/images/funny/DTO2.png)
 [Spring boot learning](https://www.youtube.com/watch?v=mRHSCQ9PYso)
 
+---
+
+#### Sebbene i DTO abbiano i loro vantaggi, presentano anche diversi svantaggi:
+
+Bloatware: i DTO possono aggiungere bloatware (software aggiuntivo a volte inutile, come quello preinstallato su alcuni dispostivi) non necessari a un codice che dovrebbe essere pulito e semplice.
+Complessità: l'utilizzo dei DTO può introdurre ulteriore complessità, che può rendere difficile spiegare la struttura del sistema o quale modello utilizzare ai nuovi membri del team.
+Manutenzione: nel corso del tempo, le DTO possono introdurre un livello aziendale che non dovrebbe esistere, il che può portare a problemi di test e modelli di dati anemici.
+Disaccoppiamento: l'utilizzo di DTO per scopi di disaccoppiamento in un'architettura di microservizi non ha senso se rispecchia solo i cambiamenti qua e là senza una ragione rilevante.
+Mappatura: la mappatura dei DTO può essere noiosa e richiedere molto tempo, soprattutto se deve essere eseguita per più livelli o servizi.
+
+[Articolo su DTO](https://www.linkedin.com/pulse/disadvantages-using-data-transfer-objects-dtos-how-uzc%C3%A1tegui-pescozo/)
