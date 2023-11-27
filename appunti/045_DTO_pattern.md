@@ -2,6 +2,8 @@
 
 Il DTO (Data Transfer Object) è un design pattern strutturale che fornisce un oggetto semplice per trasferire dati tra componenti del sistema. Il suo scopo principale è quello di ottimizzare le prestazioni, riducendo il numero di chiamate remote in un'applicazione distribuita.
 
+---
+
 ### Caratteristiche chiave del DTO:
 
 1. **Trasferimento di Dati:**
@@ -18,6 +20,8 @@ Il DTO (Data Transfer Object) è un design pattern strutturale che fornisce un o
 
 5. **Serializzazione:**
    - Può essere facilmente serializzato per il trasferimento su una rete o attraverso confini di sistema.
+
+---
 
 ### Esempio di DTO:
 
@@ -37,6 +41,8 @@ public class UserDTO {
 
 In questo esempio, `UserDTO` è un oggetto contenente solo i dati relativi a un utente senza alcuna logica aziendale associata. Può essere utilizzato per trasferire i dati dell'utente tra il livello di presentazione e il livello di persistenza.
 
+---
+
 ### Utilizzo del DTO:
 
 1. **Riduzione del Traffico di Rete:**
@@ -55,3 +61,14 @@ In questo esempio, `UserDTO` è un oggetto contenente solo i dati relativi a un 
    - Ottimizza le prestazioni riducendo il numero di dati trasferiti, specialmente in scenari in cui le risorse di rete sono limitate.
 
 In conclusione, il DTO è uno strumento utile per semplificare il trasferimento di dati tra diversi componenti di un sistema, riducendo la complessità e migliorando le prestazioni in contesti distribuiti.
+
+---
+
+## Quando andrai in stage
+
+Caro studente in formazione, vedrai che qualcuno in azienda (tutor, CTO, collega) con dieci anni di esperienza e una formazione accademica ti dirà che non basta aver imparato in sei mesi le basi di Java, la connessione al database, altre tecnologie web, Spring, MVC, ...
+
+ "Eh, ma il DTO..."
+
+![DTO](https://github.com/maboglia/ProgrammingResources/blob/master/images/funny/DTO2.png)
+
