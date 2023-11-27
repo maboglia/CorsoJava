@@ -71,4 +71,5 @@ Caro studente in formazione, vedrai che qualcuno in azienda (tutor, CTO, collega
  "Eh, ma il DTO..."
 
 ![DTO](https://github.com/maboglia/ProgrammingResources/blob/master/images/funny/DTO2.png)
+[Spring boot learning](https://www.youtube.com/watch?v=mRHSCQ9PYso)
 
