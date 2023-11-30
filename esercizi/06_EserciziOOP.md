@@ -46,15 +46,14 @@ La direttrice di un centro di formazione ha bisogno di un programma per formare 
 
 ## Statistica sugli stipendi
 
-Un azienda vuole effettuare una statistica sugli stipendi pagati mensilmente ai dipendenti. Di
-ciascun dipendente si conoscono i seguenti dati:
+Un azienda vuole effettuare una statistica sugli stipendi pagati mensilmente ai dipendenti. Di ciascun dipendente si conoscono i seguenti dati:
 
 * cognome e nome,
-* tipendio mensile.
+* stipendio mensile.
 
 Dopo aver stampato il tabulato, si vogliono ottenere i seguenti dati statistici:
 
-* tipendio mensile medio,
+* stipendio mensile medio,
 * numero dipendenti con stipendio mensile maggiore di € 2.000,
 * cognome, nome e stipendio del dipendente che percepisce lo stipendio più alto.
 
@@ -76,7 +75,6 @@ Stampare una tabella con:
 
 Supponiamo di voler gestire i dati relativi ai modelli in vendita presso un concessionario d'auto. 
 
-
 Per ogni modello occorre tener traccia 
 
 * della marca, 
@@ -90,22 +88,6 @@ Il titolare del concessionario potrebbe essere interessato a calcolare l'autonom
 Inoltre, potrebbe essere utile poter costruire facilmente un nuovo modello d'auto che sia del tutto simile ad un modello esistente, ma che abbia una cilindrata diversa. 
 
 Si progetti e si implementi una classe automobile che sia in grado di soddisfare le esigenze del titolare del concessionario in questione.
-
----
-
-## Classi scuola superiore
-
-Una scuola superiore è organizzata in classi, ciascuna delle quali è composta da un certo numero di studenti. 
-
-Ogni classe ha un nome (che possiamo pensare essere una stringa di caratteri, ad esempio “5A” o “3C”) e ad essa è associato un anno, ossia l'anno di nascita degli studenti che normalmente frequentano tale classe. 
-
-Per ogni studente occorre tener traccia della data e del luogo di nascita, oltre che del cognome e del nome. 
-
-Il preside della scuola superiore potrebbe essere interessato a determinare il numero di studenti della classe in questione. 
-
-Inoltre, il preside potrebbe essere interessato a sapere se di una certa classe fa parte anche qualche studente bocciato. 
-
-Si progetti e si implementi una gerarchia di classi che sia in grado di soddisfare le esigenze del preside.
 
 ---
 
@@ -147,27 +129,6 @@ Occorre, infinte, permettere al bibliotecario di controllare se nella lista di p
 
 ---
 
-## Gestione degli alberi genealogici
-
-Si progetti parte di un programma per la gestione degli alberi genealogici. 
-
-Per ogni persona occorre tenere traccia del nome, del cognome, della data e del luogo di nascita. 
-
-Non è detto che di ogni persona si conoscano entrambi i genitori: potrebbe essere noto solo uno dei due genitori oppure nessuno dei due. 
-
-Per ogni persona, occorre poi essere in grado di calcolare la dimensione del rispettivo albero genealogico, ossia il numero di antenati conosciuti. 
-
-Inoltre, dato un numero naturale n e una persona, occorre poter calcolare se sono noti tutti gli antenati della persona vissuti n generazioni prima della generazione corrente. 
-
-Per esempio, se n è 2, si deve determinare se tutti i nonni della persona in questione sono noti.
-
-Infine, si costruiscano 
-
-* un metodo che calcola la lista di tutti gli antenati della persona in questione 
-* e un altro metodo, che dato un numero n, calcola la lista di tutti gli antenati vissuti esattamente n generazioni prima della generazione corrente. 
-
----
-
 ## Parco veicoli
 
 Un'azienda ha bisogno di gestire il suo parco veicoli tramite uno strumento informatico.
@@ -201,7 +162,7 @@ Un ristorante offre un certo numero di pietanze, ognuna delle quali ha un nome e
 
 * Inoltre, potrebbe essere necessario determinare il numero di ingredienti necessari alla preparazione di una pietanza. 
 
-* i progetti e si implementi una gerarchia di classi che sia in grado di soddisfare le esigenze del ristorante.
+* si progetti e si implementi una gerarchia di classi che sia in grado di soddisfare le esigenze del ristorante.
 
 ---
 
@@ -215,7 +176,7 @@ Uno studente del corso di laurea in informatica vuole gestire in modo automatizz
 
 * Potrebbe poi essere interessato a sapere il numero di esami che ha sostenuto con profitto. 
 
-* i progetti e si implementi una gerarchia di classi JAVA che sia in grado di soddisfare le esigenze dello studente.
+* si progetti e si implementi una gerarchia di classi JAVA che sia in grado di soddisfare le esigenze dello studente.
 
 ---
 
@@ -231,7 +192,7 @@ Il docente del corso di Analisi Matematica vuole tenere traccia dei punteggi ott
 
 * Potrebbe essere infine interessante, per il docente, poter calcolare la percentuale di studenti con un voto insufficiente sul totale. 
 
-* i progetti e si implementi una gerarchia di classi JAVA che sia in grado di soddisfare le esigenze del docente.
+* si progetti e si implementi una gerarchia di classi JAVA che sia in grado di soddisfare le esigenze del docente.
 
 ---
 
@@ -253,45 +214,7 @@ Il titolare di un negozio di vestiti è interessato a realizzare un registro ele
 
 * Infine, potrebbe essere interessante per il titolare del negozio determi- nare quante volte un certo prodotto (con un certo nome) sia stato venduto, complessivamente. 
 
-* i progetti e si implementi una gerarchia di classi JAVA che sia in grado di soddisfare le esigenze del negoziante.
-
----
-
-## Semaforo
-
-Si vuole simulare il traffico automobilistico in prossimità di un semaforo
-stradale. 
-
-* Si assuma una classe Auto, avente la variabile d'istanza targa
-(stringa) e gli usuali metodi (non sviluppare il codice relativo).
-
-La classe Semaforo è così definita:
-
-```java
-public class Semaforo {
-    private boolean rosso, verde;
-    private int numOsservazioni, totLunghezze;
-    private ArrayList<Auto> coda;
-    public Semaforo(){};
-    public void rosso(); // porto il semaforo a rosso
-    public int verde(); // porto il semaforo a verde
-    public void arrivo(String unaTarga); // arrivo auto
-    public double impaziente();
-    public double statistica();
-    public toString();
-};
-
-```
-
-Le due variabili verde e rosso sono mutuamente esclusive. 
-
-* Qualora il semaforo sia rosso, le automobili in arrivo rimangono in coda in attesa del verde.
-* Inoltre, se la coda ha lunghezza maggiore di 10, l'auto in arrivo decide di abbandonare la coda con probabilità un mezzo (usare la classe Random). 
-
-* La coda viene svuotata allo scattare del verde, e viene restituito il numero di auto che lasciano il semaforo.
-* Il metodo impaziente causa, da parte di ciascuna auto, l'abbandono della coda con probabilità un sesto.
-* Il metodo statistica restituisce il valore medio della lunghezza della coda allo scattare del verde, calcolato su tutte le osservazioni effettuate da quando il semaforo è attivo. 
-* Utilizzare le variabili d'istanza numOsservazioni e totLunghezze per tale calcolo.
+* si progetti e si implementi una gerarchia di classi JAVA che sia in grado di soddisfare le esigenze del negoziante.
 
 ---
 
@@ -410,7 +333,7 @@ Si desidera simulare un parcheggio a pagamento per autovetture.
 
 * Il metodo statVetture restituisce una arraylist con tutte le vetture che hanno il più alto numero di ore di parcheggio pagato. 
 
-* viluppare tutti i metodi della classe.
+* sviluppare tutti i metodi della classe.
 
 
 ---

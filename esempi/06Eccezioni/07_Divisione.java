@@ -1,7 +1,7 @@
 package esempio;
 
 public class Divisione {
-	// questo metodo pu� lanciare un'eccezione (throws Exception)
+	// questo metodo può lanciare un'eccezione (throws Exception)
 	public double div(double numeratore, double denominatore) throws Exception {
 		// controllo che il denominatore non sia ammissibile
 		if (denominatore == 0) {
