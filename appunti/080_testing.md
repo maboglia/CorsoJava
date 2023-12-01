@@ -50,9 +50,9 @@ Il testing è una parte fondamentale dello sviluppo del software che mira a gara
 9. **Test di Sicurezza:**
    - Verificano la sicurezza del software identificando possibili vulnerabilità.
 
----1
+---
 
-0. **Test di Regression:**
+10. **Test di Regression:**
     - Garantiscono che le modifiche apportate al codice non abbiano impattato negativamente sulle funzionalità esistenti.
 
 Ricorda che il testing è un processo continuo e dovrebbe essere parte integrante del ciclo di sviluppo del software. L'obiettivo è garantire la qualità del software e la riduzione del rischio di errori in produzione.
