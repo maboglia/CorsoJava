@@ -4,6 +4,8 @@
 
 Ecco alcuni dei metodi più comuni forniti da `WebElement`:
 
+---
+
 1. **`click()`:**
    - Simula un clic sull'elemento.
 
@@ -11,6 +13,8 @@ Ecco alcuni dei metodi più comuni forniti da `WebElement`:
    WebElement buttonElement = driver.findElement(By.id("submitButton"));
    buttonElement.click();
    ```
+
+---
 
 2. **`sendKeys(CharSequence... keysToSend)`:**
    - Invia una sequenza di tasti a un elemento, ad esempio per inserire testo in un campo di input.
@@ -20,6 +24,8 @@ Ecco alcuni dei metodi più comuni forniti da `WebElement`:
    inputElement.sendKeys("username123");
    ```
 
+---
+
 3. **`getText()`:**
    - Restituisce il testo dell'elemento.
 
@@ -27,6 +33,8 @@ Ecco alcuni dei metodi più comuni forniti da `WebElement`:
    WebElement resultElement = driver.findElement(By.id("result"));
    String resultText = resultElement.getText();
    ```
+
+---
 
 4. **`getAttribute(String name)`:**
    - Restituisce il valore di un attributo specificato dell'elemento.
@@ -36,6 +44,8 @@ Ecco alcuni dei metodi più comuni forniti da `WebElement`:
    String hrefValue = linkElement.getAttribute("href");
    ```
 
+---
+
 5. **`clear()`:**
    - Cancella il contenuto di un campo di input.
 
@@ -43,6 +53,8 @@ Ecco alcuni dei metodi più comuni forniti da `WebElement`:
    WebElement inputElement = driver.findElement(By.id("searchInput"));
    inputElement.clear();
    ```
+
+---
 
 6. **`isSelected()`:**
    - Restituisce `true` se l'elemento è selezionato (ad esempio, una casella di controllo).
@@ -52,6 +64,8 @@ Ecco alcuni dei metodi più comuni forniti da `WebElement`:
    boolean isSelected = checkboxElement.isSelected();
    ```
 
+---
+
 7. **`isEnabled()`:**
    - Restituisce `true` se l'elemento è abilitato.
 
@@ -59,6 +73,8 @@ Ecco alcuni dei metodi più comuni forniti da `WebElement`:
    WebElement submitButton = driver.findElement(By.id("submitButton"));
    boolean isEnabled = submitButton.isEnabled();
    ```
+
+---
 
 8. **`submit()`:**
    - Invia un modulo se l'elemento è all'interno di un `<form>`.
@@ -70,10 +86,13 @@ Ecco alcuni dei metodi più comuni forniti da `WebElement`:
 
 Questi sono solo alcuni esempi di come puoi utilizzare `WebElement` per interagire con gli elementi della pagina web. Selenium fornisce un'ampia gamma di metodi per gestire diversi tipi di elementi e azioni. La gestione degli elementi è una parte essenziale dell'automazione dei test web, e `WebElement` gioca un ruolo fondamentale in questo contesto.
 
+---
 
 ## Il metodo findElement di Selenium
 
 Il metodo `findElement` in Selenium consente di individuare un elemento della pagina web utilizzando diversi criteri come ID, nome, classe, selettore CSS, selettore XPath e altri. Ecco alcune opzioni comuni che puoi utilizzare come argomenti per `By` nella funzione `findElement`:
+
+---
 
 1. **By.id(String id):**
    - Trova un elemento utilizzando l'attributo "id".
@@ -82,12 +101,16 @@ Il metodo `findElement` in Selenium consente di individuare un elemento della pa
    WebElement element = driver.findElement(By.id("elementId"));
    ```
 
+---
+
 2. **By.name(String name):**
    - Trova un elemento utilizzando l'attributo "name".
 
    ```java
    WebElement element = driver.findElement(By.name("elementName"));
    ```
+
+---
 
 3. **By.className(String className):**
    - Trova un elemento utilizzando il nome della classe.
@@ -96,12 +119,16 @@ Il metodo `findElement` in Selenium consente di individuare un elemento della pa
    WebElement element = driver.findElement(By.className("elementClass"));
    ```
 
+---
+
 4. **By.tagName(String tagName):**
    - Trova un elemento utilizzando il nome del tag HTML.
 
    ```java
    WebElement element = driver.findElement(By.tagName("input"));
    ```
+
+---
 
 5. **By.linkText(String linkText):**
    - Trova un elemento utilizzando il testo completo di un link.
@@ -110,6 +137,8 @@ Il metodo `findElement` in Selenium consente di individuare un elemento della pa
    WebElement element = driver.findElement(By.linkText("Click me"));
    ```
 
+---
+
 6. **By.partialLinkText(String partialLinkText):**
    - Trova un elemento utilizzando una parte del testo di un link.
 
@@ -117,12 +146,16 @@ Il metodo `findElement` in Selenium consente di individuare un elemento della pa
    WebElement element = driver.findElement(By.partialLinkText("Click"));
    ```
 
+---
+
 7. **By.cssSelector(String cssSelector):**
    - Trova un elemento utilizzando un selettore CSS.
 
    ```java
    WebElement element = driver.findElement(By.cssSelector("#elementId"));
    ```
+
+---
 
 8. **By.xpath(String xpathExpression):**
    - Trova un elemento utilizzando un'espressione XPath.
