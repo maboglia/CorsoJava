@@ -23,12 +23,16 @@ L'integrazione di Selenium in un progetto Spring Boot consente di automatizzare 
      </dependencies>
      ```
 
+---
+
    - Se stai usando Gradle, puoi aggiungere le dipendenze nel tuo file `build.gradle`.
 
 ---
 
 2. **Configura il WebDriver:**
    - Puoi configurare il WebDriver nel tuo codice Spring Boot, ad esempio all'interno di una classe di configurazione o di un componente. Assicurati di scaricare il driver corrispondente per il browser che intendi utilizzare (ad esempio, ChromeDriver per Google Chrome).
+
+---
 
    ```java
    import org.openqa.selenium.WebDriver;
@@ -47,12 +51,16 @@ L'integrazione di Selenium in un progetto Spring Boot consente di automatizzare 
    }
    ```
 
+---
+
    - Puoi anche utilizzare le annotazioni `@Before` e `@After` di JUnit o TestNG per inizializzare e chiudere il WebDriver prima e dopo l'esecuzione dei test.
 
 ---
 
 3. **Scrivi i test:**
    - Ora puoi scrivere i tuoi test utilizzando Selenium insieme alle funzionalità di testing di Spring Boot. Ad esempio, puoi utilizzare JUnit o TestNG come framework di test.
+
+---
 
    ```java
    import org.junit.jupiter.api.Test;
@@ -78,6 +86,8 @@ L'integrazione di Selenium in un progetto Spring Boot consente di automatizzare 
        }
    }
    ```
+
+---
 
    - L'annotazione `@SpringBootTest` consente di caricare l'applicazione Spring Boot durante l'esecuzione del test. L'autowiring del WebDriver viene gestito da Spring.
 

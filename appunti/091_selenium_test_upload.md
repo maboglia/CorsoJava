@@ -2,6 +2,8 @@
 
 In questo esempio, utilizzeremo una pagina che richiede l'upload di un file. La pagina di esempio [File Upload](http://the-internet.herokuapp.com/upload) consente agli utenti di caricare un file e visualizzarne il nome dopo l'upload. Qui di seguito un esempio di codice Java che utilizza Selenium per automatizzare il processo di upload di un file:
 
+---
+
 ```java
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -48,6 +50,8 @@ public class FileUploadExample {
     }
 }
 ```
+
+---
 
 Assicurati di sostituire "percorso/del/chromedriver" con il percorso effettivo del tuo driver Chrome e "percorso/completo/del/tuo/file.txt" con il percorso completo del file che desideri caricare.
 

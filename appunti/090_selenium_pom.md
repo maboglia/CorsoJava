@@ -8,7 +8,7 @@ Il Page Object Model (POM) è un design pattern ampiamente utilizzato nell'autom
 
 ---
 
-### A cosa serve il Page Object Model (POM)?
+## A cosa serve il Page Object Model (POM)?
 
 ---
 
@@ -32,7 +32,7 @@ Il Page Object Model (POM) è un design pattern ampiamente utilizzato nell'autom
 
 ---
 
-### Come si usa il Page Object Model con Selenium?
+## Come si usa il Page Object Model con Selenium?
 
 ---
 

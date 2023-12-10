@@ -114,3 +114,25 @@ Selenium è uno strumento ampiamente utilizzato per l'automazione dei test su ap
      ```
 
 Ricorda di sostituire "percorso/del/chromedriver" con il percorso effettivo del tuo driver Chrome. Selenium supporta anche altri browser come Firefox, Edge, ecc. Puoi trovare i driver corrispondenti sul sito ufficiale di Selenium.
+
+
+---
+
+L'istruzione `System.setProperty("webdriver.chrome.driver", "percorso/del/chromedriver");` in Selenium è utilizzata per specificare il percorso del driver di Chrome nel tuo sistema. Questa configurazione è necessaria per indicare a Selenium WebDriver dove trovare l'eseguibile del driver di Chrome, in modo che possa interagire con il browser Chrome durante l'esecuzione dei test automatizzati.
+
+Quando avvii un'istanza di WebDriver per Chrome nel tuo codice Java, devi fornire il percorso del driver di Chrome. Questo driver è un file eseguibile specifico del browser che stabilisce una connessione tra il tuo codice di automazione e il browser Chrome. È responsabile di controllare e automatizzare le interazioni tra il tuo script di automazione e il browser.
+
+---
+
+L'istruzione `System.setProperty("webdriver.chrome.driver", "percorso/del/chromedriver");` dovrebbe essere chiamata prima di istanziare l'oggetto WebDriver di Chrome. Ad esempio:
+
+```java
+System.setProperty("webdriver.chrome.driver", "percorso/del/chromedriver");
+WebDriver driver = new ChromeDriver();
+```
+
+---
+
+Nel codice sopra, stiamo impostando la proprietà del sistema "webdriver.chrome.driver" con il percorso del driver di Chrome. Successivamente, istanziamo un oggetto WebDriver di Chrome, che utilizzerà questa impostazione per stabilire la connessione con il browser.
+
+È importante notare che devi scaricare il driver di Chrome compatibile con la versione del browser che hai installato sul tuo sistema. Puoi scaricare il driver di Chrome dal sito ufficiale di ChromeDriver: [ChromeDriver - WebDriver for Chrome](https://sites.google.com/chromium.org/driver/). Assicurati di scaricare la versione corretta del driver e impostare il percorso nel tuo codice come mostrato sopra.
