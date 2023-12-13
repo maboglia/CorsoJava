@@ -9,6 +9,9 @@ Ecco alcune informazioni fondamentali su JUnit:
 1. **Annotazioni di Test:**
    - JUnit fa ampio uso di annotazioni per identificare i metodi di test e specificare il loro comportamento. Le annotazioni principali includono `@Test`, `@Before`, `@After`, `@BeforeClass`, e `@AfterClass`.
 
+---
+
+
    ```java
    import org.junit.Test;
    import static org.junit.Assert.*;
