@@ -2,24 +2,40 @@
 
 Docker è una piattaforma open-source che facilita la creazione, la distribuzione e l'esecuzione di applicazioni in contenitori. I contenitori consentono di impacchettare un'applicazione insieme a tutte le sue dipendenze, garantendo che l'applicazione funzioni in modo coerente in qualsiasi ambiente. Di seguito sono riportati i concetti e le operazioni fondamentali relativi a Docker:
 
+---
+
 ### Concetti Fondamentali
+
+---
 
 1. **Contenitore:**
    - Un contenitore è un'unità standardizzata di software che racchiude l'applicazione e tutte le sue dipendenze, inclusi il codice, le librerie e le configurazioni.
 
+---
+
 2. **Immagine:**
    - Un'immagine Docker è uno snapshot leggero e eseguibile di un sistema, che include il codice dell'applicazione, le librerie e altre dipendenze necessarie per eseguire l'applicazione.
+
+---
 
 3. **Dockerfile:**
    - Un Dockerfile è un file di testo che contiene le istruzioni per la costruzione di un'immagine Docker. Specifica le dipendenze, le configurazioni e i comandi necessari per creare l'immagine.
 
+---
+
 4. **Registro Docker (Docker Hub):**
    - Il registro Docker è un servizio che ospita immagini Docker. Docker Hub è il registro pubblico di Docker, ma è possibile utilizzare registri privati per immagini personalizzate.
 
+---
+
 ### Operazioni Principali
+
+---
 
 1. **Installazione di Docker:**
    - Scarica e installa Docker sul tuo sistema operativo seguendo le istruzioni specifiche per il tuo ambiente: <https://docs.docker.com/get-docker/>
+
+---
 
 2. **Verifica dell'Installazione:**
    - Dopo l'installazione, verifica che Docker sia correttamente installato eseguendo il comando:
@@ -28,8 +44,12 @@ Docker è una piattaforma open-source che facilita la creazione, la distribuzion
       docker --version
       ```
 
+---
+
 3. **Creazione di un Dockerfile:**
    - Crea un file chiamato `Dockerfile` nel tuo progetto e definisci le istruzioni necessarie per creare l'immagine Docker.
+
+---
 
 4. **Costruzione dell'Immagine:**
    - Naviga nella directory del progetto contenente il Dockerfile e esegui il comando per costruire l'immagine:
@@ -38,12 +58,16 @@ Docker è una piattaforma open-source che facilita la creazione, la distribuzion
       docker build -t nome_immagine:tag .
       ```
 
+---
+
 5. **Esecuzione di un Contenitore:**
    - Dopo la costruzione dell'immagine, esegui un contenitore utilizzando il comando:
 
       ```bash
       docker run -d -p porta_locale:porta_contenitore nome_immagine:tag
       ```
+
+---
 
 6. **Gestione dei Contenitori:**
    - Puoi visualizzare i contenitori in esecuzione con il comando:
@@ -57,6 +81,8 @@ Docker è una piattaforma open-source che facilita la creazione, la distribuzion
       ```bash
       docker stop ID_contenitore
       ```
+
+---
 
 7. **Push e Pull da Docker Hub:**
    - Puoi condividere le tue immagini su Docker Hub eseguendo i comandi:
@@ -72,12 +98,16 @@ Docker è una piattaforma open-source che facilita la creazione, la distribuzion
       docker pull nome_utente/nome_immagine:tag
       ```
 
+---
+
 8. **Pulizia del Sistema:**
    - Puoi rimuovere immagini e contenitori non utilizzati con i comandi:
 
       ```bash
       docker system prune
       ```
+
+---
 
 ### Esempio di Dockerfile
 
@@ -276,6 +306,8 @@ L'applicazione Java sarà quindi accessibile sulla porta 8080 del tuo host local
 
 Per utilizzare Docker Hub da linea di comando (CLI), puoi eseguire diversi comandi per autenticarti, caricare immagini, scaricare immagini e gestire il tuo account Docker. Ecco alcuni comandi comuni:
 
+---
+
 ### Autenticazione
 
 Prima di eseguire operazioni su Docker Hub, devi autenticarti con il tuo account Docker. Puoi farlo con il comando:
@@ -286,6 +318,8 @@ docker login
 
 Ti verrà chiesto di inserire le tue credenziali Docker Hub (nome utente, password e, se abilitata, autenticazione a due fattori).
 
+---
+
 ### Caricamento di un'immagine su Docker Hub
 
 Se hai un'immagine locale che desideri caricare su Docker Hub, usa il comando `docker push`. Assicurati di taggare l'immagine con il formato `nome_utente/nome_immagine:tag` prima del push.
@@ -295,6 +329,8 @@ docker tag nome_immagine:tag nome_utente/nome_immagine:tag
 docker push nome_utente/nome_immagine:tag
 ```
 
+---
+
 ### Scaricamento di un'immagine da Docker Hub
 
 Per scaricare un'immagine da Docker Hub, puoi usare il comando `docker pull`. Ad esempio:
@@ -302,6 +338,8 @@ Per scaricare un'immagine da Docker Hub, puoi usare il comando `docker pull`. Ad
 ```bash
 docker pull nome_utente/nome_immagine:tag
 ```
+
+---
 
 ### Esempi di Comandi di Base
 
@@ -334,6 +372,8 @@ docker pull nome_utente/nome_immagine:tag
   ```bash
   docker rm nome_container
   ```
+
+---
 
 ### Altri Comandi Utili
 
