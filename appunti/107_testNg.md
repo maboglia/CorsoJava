@@ -1,5 +1,11 @@
 # TestNG
 
+---
+
+![TestNG](./img/features-of-testng.png)
+
+---
+
 TestNG (Test Next Generation) è un framework di testing per Java che offre molte caratteristiche avanzate rispetto a JUnit. Di seguito sono elencate alcune delle caratteristiche principali di TestNG e le differenze chiave rispetto a JUnit:
 
 ### Caratteristiche Principali di TestNG
