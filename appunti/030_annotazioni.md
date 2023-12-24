@@ -1,86 +1,196 @@
 # Annotazioni
 
-Le annotazioni sono lo strumento utilizzato da Java per definire metadati, cioè "informazioni sulle informazioni".
+In Java, le "annotations" (annotazioni) sono metadati associati al codice sorgente che forniscono informazioni aggiuntive o istruzioni al compilatore, all'ambiente di esecuzione o ad altre utility di sviluppo. Le annotazioni in Java iniziano con il simbolo `@` seguito dal nome dell'annotazione.
 
-Possiamo definire un’annotation (annotazione) come un appunto che mettiamo per specificare qualcosa relativo al codice che stiamo scrivendo, un attributo particolare, un metodo o una classe che hanno delle peculiarità.
+Le annotazioni possono essere utilizzate in diverse situazioni, ad esempio per fornire informazioni sulla struttura del codice, specificare configurazioni per il compilatore o l'ambiente di runtime, o addirittura per generare automaticamente codice da parte di strumenti di sviluppo.
 
-Le annotazioni servono soprattutto per il compilatore che, ricorrendo al loro utilizzo, avrà la possibilità di effettuare determinate operazioni.
+Ecco alcune annotazioni comuni in Java:
 
-## Sintassi
+1. **`@Override`:**
+   - **Utilizzo:** Applicato a un metodo per indicare che il metodo sta effettuando l'override di un metodo nella classe genitore.
+   - **Esempio:**
 
-* Ogni annotazione si presenta con il simbolo @ seguito dal nome dell’annotazione.
-* Eventualmente può essere valorizzata con dei valori, tra parentesi tonde come coppia nome-valore. 
-* Essa precede la classe, il metodo o l’attributo che vogliamo annotare.
-* Un’annotazione si presente nella seguente forma.
+     ```java
+     @Override
+     public void myMethod() {
+         // implementazione del metodo
+     }
+     ```
 
-```java
-@Autore(
-  name = "Java",
-  company = "oracle.it"
-)
-class ClasseAnnotata() {
-  ...
-}
-```
+2. **`@Deprecated`:**
+   - **Utilizzo:** Indica che un elemento (classe, metodo, campo) è deprecato e dovrebbe essere evitato, perché potrebbe essere rimosso in future versioni.
+   - **Esempio:**
 
-Nell’esempio abbiamo annotato la classe con l’annotazione Autore ed i due attributi name e company.
+     ```java
+     @Deprecated
+     public class OldClass {
+         // implementazione della classe
+     }
+     ```
 
+3. **`@SuppressWarnings`:**
+   - **Utilizzo:** Supprime i warning del compilatore per un elemento specifico o per tutto il metodo.
+   - **Esempio:**
 
-## Tipi di annotations: @OVERRIDE
+     ```java
+     @SuppressWarnings("unchecked")
+     public List<String> getOldList() {
+         // restituisce una lista di stringhe
+     }
+     ```
 
-* L’annotazione @Override è probabilmente la più utile in quanto consente di evitare degli errori, che in fase di codifica spesso accadono. 
-* L’annotazione dice che l’elemento indicato è un elemento che fa l’override (sovrascrive) del relativo elemento, del genitore da cui eredita.
+4. **`@FunctionalInterface`:**
+   - **Utilizzo:** Applicato a un'interfaccia per indicare che si tratta di un'interfaccia funzionale, cioè un'interfaccia con un unico metodo astratto.
+   - **Esempio:**
 
+     ```java
+     @FunctionalInterface
+     public interface MyFunctionalInterface {
+         void myMethod();
+     }
+     ```
 
-```java
-class A{
-  void metodo1(){
-    System.out.println("Metodo 1");
-  }
-}
+5. **`@Entity`, `@Column`, `@Table` (JPA Annotations):**
+   - **Utilizzo:** Utilizzato nel contesto di Java Persistence API (JPA) per mappare classi Java a tabelle di database.
+   - **Esempio:**
 
-class B extends A{
-  @Override
-  void metodoo1(){
-    System.out.println("Override A.metodo1()");
-  }
-}
-```
+     ```java
+     @Entity
+     @Table(name = "employees")
+     public class Employee {
+         @Id
+         @GeneratedValue
+         private Long id;
+         
+         @Column(name = "employee_name")
+         private String name;
+     }
+     ```
 
-* Abbiamo la classe genitore A che presenta un metodo, metodo1(). 
-* Creiamo una classe B, erede di A. Vogliamo fare l’override di metodo1(), quindi annotiamo il metodo presente nella classe B con l’annotazione @Override, indicando che il metodo annotato è un metodo che sovrascrive un metodo del genitore.
-* Se si prova a compilare il codice, il compilatore restituirà un errore 
-* è stato inserito un errore di battitura nel nome del metodo. 
-* Senza l’annotazione @Override la compilazione sarebbe andata a buon fine e non ci saremmo accorti dell’errore.
+6. **`@Test` (JUnit Annotation):**
+   - **Utilizzo:** Utilizzato nei test unitari con JUnit per indicare che un metodo è un test.
+   - **Esempio:**
 
+     ```java
+     @Test
+     public void testAddition() {
+         assertEquals(4, calculator.add(2, 2));
+     }
+     ```
 
-## Tipi di annotations:  @DEPRECATED
+È importante notare che alcune annotazioni sono standard del linguaggio Java (come `@Override`), mentre altre possono provenire da librerie specifiche (come `@Entity` in JPA o `@Test` in JUnit). Le annotazioni possono anche essere create personalizzate per scopi specifici di un'applicazione o di un framework.
 
-*L’annotazione @Deprecated viene usata per specificare che l’elemento indicato è un elemento deprecato, cioè, attivo (per mantenere retrocompatibilità) ma non consigliato in quanto è stato rimpiazzato da uno nuovo e supportato.
-```java
-public class TestDeprecated {
-  @Deprecated
-  public void metodoA() {
-    System.out.println("Questo metodo è DEPRECATO, usa metodoB().");
-  }
+---
 
-  public void metodoB() {
-    System.out.println("Questo metodo è SUPPORTATO.");
-  }
-}
-```
+Domande:
 
-La compilazione di questa classe non darà alcun segnale, procederà tutto normalmente. Sarà la compilazione della classe che userà TestDeprecated a ricevere segnalazioni di warning dal compilatore quando viene utilizzato il metodo metodoA().
+1. **Domanda:** Cosa c'è di sbagliato nell'interfaccia seguente:
 
-## Tipi di annotations: @SUPPRESSWARNING
-* L’annotazione @SuppressWarning è utile quando vogliamo sopprimere le indicazioni di warning da parte del compilatore, ad esempio, perché stiamo usando dei metodi deprecati.
+    ```java
+    public interface House {
+        @Deprecated
+        public void open();
+        public void openFrontDoor();
+        public void openBackDoor();
+    }
+    ```
 
-```java
-@SuppressWarnings({"deprecation"})
-public void usaMetodoDeprecato() {
-TestDeprecated t = new TestDeprecated();
-t.metodoA();
-}
-```
+    **Risposta:** La documentazione dovrebbe riflettere il motivo per cui open è deprecato e cosa utilizzare al suo posto. Ad esempio:
 
-Pur usando dei metodi deprecated, al compilatore abbiamo segnalato di sopprimere i warning.
+    ```java
+    public interface House {
+        /**
+         * @deprecated l'uso di open è scoraggiato, utilizzare openFrontDoor o openBackDoor al suo posto.
+         */
+        @Deprecated
+        public void open(); 
+        public void openFrontDoor();
+        public void openBackDoor();
+    }
+    ```
+
+2. **Domanda:** Considera questa implementazione dell'interfaccia House, mostrata nella Domanda 1.
+
+    ```java
+    public class MyHouse implements House {
+        public void open() {}
+        public void openFrontDoor() {}
+        public void openBackDoor() {}
+    }
+    ```
+
+    Se compili questo programma, il compilatore genera un avviso perché open è stato deprecato (nell'interfaccia). Cosa puoi fare per eliminare quell'avviso?
+
+    **Risposta:** Puoi deprecare l'implementazione di open:
+
+    ```java
+    public class MyHouse implements House {
+        // La documentazione è ereditata dall'interfaccia.
+        @Deprecated
+        public void open() {} 
+        public void openFrontDoor() {}
+        public void openBackDoor() {}
+    }
+    ```
+
+    In alternativa, puoi sopprimere l'avviso:
+
+    ```java
+    public class MyHouse implements House { 
+        @SuppressWarnings("deprecation")
+        public void open() {} 
+        public void openFrontDoor() {}
+        public void openBackDoor() {}
+    }
+    ```
+
+3. **Domanda:** Il seguente codice compila senza errori? Perché sì o no?
+
+    ```java
+    public @interface Meal { ... }
+
+    @Meal("breakfast", mainDish="cereal")
+    @Meal("lunch", mainDish="pizza")
+    @Meal("dinner", mainDish="salad")
+    public void evaluateDiet() { ... }
+    ```
+
+    **Risposta:** Il codice non compila. Prima di JDK 8, le annotazioni ripetibili non sono supportate. A partire da JDK 8, il codice non compila perché il tipo di annotazione Meal non è stato definito come ripetibile. Può essere corretto aggiungendo la meta-annotazione @Repeatable e definendo un tipo di annotazione contenitore:
+
+    ```java
+    public class AnnotationTest {
+
+        public @interface MealContainer {
+            Meal[] value();
+        }
+
+        @java.lang.annotation.Repeatable(MealContainer.class)
+        public @interface Meal {
+            String value();
+            String mainDish();
+        }
+
+        @Meal(value="breakfast", mainDish="cereal")
+        @Meal(value="lunch", mainDish="pizza")
+        @Meal(value="dinner", mainDish="salad")
+        public void evaluateDiet() { }
+    }
+    ```
+
+Esercizio:
+
+1. **Esercizio:** Definisci un tipo di annotazione per una richiesta di miglioramento con gli elementi id, synopsis, engineer e date. Specifica il valore predefinito come non assegnato per engineer e sconosciuto per date.
+
+    **Risposta:**
+
+    ```java
+    /**
+     * Descrive il tipo di annotazione Richiesta di Miglioramento (RFE).
+     */
+    public @interface RequestForEnhancement {
+        int id();
+        String synopsis();
+        String engineer() default "[non assegnato]";
+        String date() default "[sconosciuto]";
+    }
+    ```

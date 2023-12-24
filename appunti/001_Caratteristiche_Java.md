@@ -1,109 +1,46 @@
 # Caratteristiche principali di Java
 
-* Java è un linguaggio di alto livello e orientato agli oggetti, creato da un team guidato da James Gosling a partire dal 1991 e rilasciato dalla Sun Microsystems nel 1995.
+Java è un linguaggio di programmazione di alto livello e orientato agli oggetti, concepito da un team guidato da James Gosling a partire dal 1991 e ufficialmente rilasciato dalla Sun Microsystems nel 1995. L'obiettivo principale era sviluppare un linguaggio semplice e familiare. Le sue caratteristiche distintive includono:
 
-Le motivazioni, che guidarono lo sviluppo di Java, erano quelle di creare un linguaggio semplice e familiare. 
+1. **Orientato agli oggetti:**
+   - Incorpora concetti come ereditarietà e polimorfismo.
+   - Utilizza il collegamento dinamico.
+   - Non supporta l'ereditarietà multipla e l'overload degli operatori.
 
-Le caratteristiche del linguaggio di programmazione Java sono:
+2. **Gestione automatica della memoria:**
+   - La memoria è allocata e deallocata automaticamente dal sistema, riducendo il rischio di errori di gestione della memoria da parte degli sviluppatori.
 
-* La tipologia di linguaggio orientato agli oggetti (ereditarietà, polimorfismo, ...)
-* la gestione della memoria effettuata automaticamente dal sistema 
-* che si preoccupa dell'allocazione e della successiva deallocazione della memoria 
-* la portabilità, cioè la capacità di un programma di poter essere eseguito su piattaforme diverse 
-* senza dover essere e modificato e ricompilato
+3. **Portabilità:**
+   - Capacità di eseguire programmi su piattaforme diverse senza richiedere modifiche o ricompilazioni.
 
 ---
 
 ## Caratteristiche di Java
 
-I 5 obiettivi primari nella creazione del linguaggio
+Gli obiettivi primari nella creazione del linguaggio sono i seguenti:
 
-1. Orientato agli oggetti, semplice e _familiare_
-2. Robusto e sicuro
-3. Indipendente dalla piattaforma
-4. Ad alte prestazioni
-5. Interpretato, multi-thread, distribuito e dinamico
+1. **Orientato agli oggetti, semplice e familiare:**
+   - Basato su C, ma sviluppato da zero per essere estremamente semplice, senza l'uso di puntatori, macro o registri.
+   - Scopo di semplificare la programmazione e ridurre gli errori.
 
----
+2. **Robusto e sicuro:**
+   - Supporta la sicurezza attraverso il concetto di sandboxing.
+   - Verifica del bytecode, restrizioni nell'accesso alla rete e assegnazione dei tipi restrittiva contribuiscono alla robustezza e sicurezza.
+   - La gestione della memoria è affidata al sistema.
 
-## Semplice e familiare
+3. **Indipendente dalla piattaforma:**
+   - Utilizza la macchina virtuale Java (JVM) per garantire l'indipendenza dalla piattaforma.
+   - Il linguaggio macchina è espresso tramite bytecode.
 
-* Basato su C (il principale linguaggio disponibile ad inizio anni '90)
-* Sviluppato da zero
-* Estremamente semplice: senza puntatori, macro, registri
-* Apprendimento rapido ;)
-* Creato con lo scopo di semplificare la programmazione
-* Riduzione del numero di errori
+4. **Ad alte prestazioni:**
+   - Risulta più efficiente di altri linguaggi interpretati grazie all'utilizzo della JVM.
 
----
+5. **Interpretato, multi-thread, distribuito e dinamico:**
+   - Il bytecode deve essere interpretato, offrendo vantaggi in termini di compattezza, efficienza e sicurezza del codice.
+   - Supporta la programmazione multi-thread, consentendo l'esecuzione simultanea di diverse attività.
+   - Progettato per esecuzioni remote e distribuite, con un sistema dinamico che carica classi quando sono richieste.
 
-## Orientato agli oggetti
-
-* Orientato agli oggetti dalla base
-* In Java tutto è un oggetto
-* Incorpora le caratteristiche
-  * Incapsulamento
-  * Polimorfismo
-  * Ereditarietà
-* Collegamento dinamico
-* Non sono disponibili
-  * Ereditarietà multipla
-  * Overload degli operatori
-
----
-
-## Robusto e sicuro
-
-* Supporta la sicurezza di tipo sandboxing
-* Verifica del bytecode
-* Altre misure di sicurezza
-* Caricatore di classi
-* Restrizioni nell’accesso alla rete
-* L’esecuzione nella JVM impedisce di bloccare il sistema
-* L’assegnazione dei tipi è molto restrittiva
-* La gestione della memoria è sempre a carico del sistema
-* Il controllo del codice avviene sia a tempo di compilazione sia a tempo di esecuzione (runtime)
-
----
-
-## Indipendente dalla piattaforma
-
-* Più efficiente di altri linguaggi interpretati
-* Soluzione: la macchina virtuale: JVM
-* Linguaggio macchina bytecode
-
----
-
-## Interpretato
-
-* Il bytecode deve essere interpretato
-
-[!["java_processo"](http://www.bogliaccino.it/img/java_processo-400x87.jpg)](http://www.bogliaccino.it/corso-android-2-java-fondamentale/java_processo/)
-
-* Vantaggi rispetto ad altri linguaggi interpretati
-* Codice più compatto
-* Efficiente
-* Codice confidenziale (non esposto)
-
----
-
-## Multi-thread
-
-* Soluzione semplice ed elegante per la multiprogrammazione
-* Un programma può lanciare differenti processi
-* Non si tratta di nuovi processi, condividono il codice e le variabili col processo principale
-* Simultaneamente si possono svolgere vari compiti
-
----
-
-## Distribuito e dinamico
-
-* Disegnato per un’esecuzione remota e distribuita
-* Sistema dinamico
-* Classe collegata quando è richiesta
-* Può essere caricata via rete
-* Dinamicamente estensibile
-* Disegnato per adattarsi ad ambienti in evoluzione
+In sintesi, Java è un linguaggio versatile e potente che ha raggiunto un'elevata popolarità grazie alla sua facilità d'uso, robustezza e portabilità su diverse piattaforme
 
 ---
 
@@ -120,7 +57,9 @@ J2SE 1.4|February 2002|October 2008|February 2013
 J2SE 5.0|September 2004|November 2009|April 2015
 Java SE 6|December 2006|April 2013|December 2018
 Java SE 7|July 2011|April 2015|July 2022
-Java SE 8 (LTS)|March 2014 January 2019 for Oracle (commercial) Indefinitely for Oracle (personal use) At least May 2026 for AdoptOpenJDK At least May 2026 for Amazon Corretto|December 2030|N/A
+Java SE 8 (LTS)|March 2014|December 2030|N/A
+
+---
 
 ---
 

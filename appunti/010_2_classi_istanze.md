@@ -111,3 +111,72 @@ Le principali operazioni che si possono effettuare sulle variabili che riferisco
 
 
 [esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)
+
+---
+
+**Domande:**
+
+1. **Domanda:** Cosa c'è di sbagliato nel seguente programma?
+
+   ```java
+   public class SomethingIsWrong {
+       public static void main(String[] args) {
+           Rectangle myRect;
+           myRect.width = 40;
+           myRect.height = 50;
+           System.out.println("myRect's area is " + myRect.area());
+       }
+   }
+   ```
+
+   * **Risposta:** Il codice non crea mai un oggetto Rectangle. In questo semplice programma, il compilatore genera un errore. Tuttavia, in una situazione più realistica, myRect potrebbe essere inizializzato a null in un punto, ad esempio in un costruttore, e utilizzato successivamente. In tal caso, il programma verrà compilato correttamente, ma genererà una NullPointerException durante l'esecuzione.
+
+2. **Domanda:** Il seguente codice crea un array e una stringa. Quante referenze a questi oggetti esistono dopo l'esecuzione del codice? Uno di questi oggetti è idoneo per la garbage collection?
+
+   ```java
+   ...
+   String[] students = new String[10];
+   String studentName = "Peter Smith";
+   students[0] = studentName;
+   studentName = null;
+   ...
+   ```
+
+   * **Risposta:** C'è un riferimento all'array students e tale array ha un riferimento alla stringa "Peter Smith". Nessuno degli oggetti è idoneo per la garbage collection. L'array students non è idoneo per la garbage collection perché ha un riferimento all'oggetto studentName, anche se a quest'ultimo è stato assegnato il valore null. Anche l'oggetto studentName non è idoneo perché students[0] fa ancora riferimento ad esso.
+
+3. **Domanda:** Come un programma distrugge un oggetto che crea?
+
+   * **Risposta:** Un programma non distrugge esplicitamente gli oggetti. Un programma può impostare tutti i riferimenti a un oggetto su null in modo che diventi idoneo per la garbage collection. Ma il programma non distrugge effettivamente gli oggetti.
+
+**Esercizi:**
+
+1. **Esercizio:** Correggi il programma chiamato SomethingIsWrong mostrato nella Domanda 1.
+
+   * **Risposta:** Vedi SomethingIsRight:
+
+   ```java
+   public class SomethingIsRight {
+       public static void main(String[] args) {
+           Rectangle myRect = new Rectangle();
+           myRect.width = 40;
+           myRect.height = 50;
+           System.out.println("myRect's area is " + myRect.area());
+       }
+   }
+   ```
+
+2. **Esercizio:** Dato il seguente codice della classe NumberHolder, chiamato NumberHolder, scrivi del codice che crei un'istanza della classe, inizializzi le sue due variabili di istanza e quindi visualizzi il valore di ciascuna variabile di istanza.
+
+   * **Risposta:** Vedi NumberHolderDisplay:
+
+   ```java
+   public class NumberHolderDisplay {
+       public static void main(String[] args) {
+           NumberHolder aNumberHolder = new NumberHolder();
+           aNumberHolder.anInt = 1;
+           aNumberHolder.aFloat = 2.3f;
+           System.out.println(aNumberHolder.anInt);
+           System.out.println(aNumberHolder.aFloat);
+       }
+   }
+   ```
