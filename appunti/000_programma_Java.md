@@ -9,7 +9,7 @@ Programma del corso Oracle Java SE per la Certificazione Oracle OCA (Oracle Cert
 
 ---
 
-## Blocchi di Costruzione di Java
+## Fondamenti di Java
 
 * Comprendere la Struttura della Classe Java
   * Campi e Metodi
