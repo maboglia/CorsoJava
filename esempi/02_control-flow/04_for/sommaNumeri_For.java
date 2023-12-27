@@ -7,7 +7,7 @@ class sommaNumeri_For
 		{
 		int contatore, somma, n;
 
-		System.out.println("            SOMMA DEI PRIMI N NUMERI NATURALI");
+		System.out.println("SOMMA DEI PRIMI N NUMERI NATURALI");
 
 		System.out.print("Introduci un numero naturale: ");
 		n=10;

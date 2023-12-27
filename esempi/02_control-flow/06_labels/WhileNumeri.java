@@ -9,7 +9,7 @@ public class WhileNumeri {
 		int a = 0;
 		while(a < 10){
 			if((a % 2)>0){
-				System.out.println("il valore di a è:" + a);
+				System.out.println("il valore di a:" + a);
 				a++;
 			}else{
 				a++;

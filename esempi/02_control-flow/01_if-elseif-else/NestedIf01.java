@@ -7,33 +7,33 @@ public class NestedIf01
       char  sesso;
       int   eta, prezzo = 0;
  
-      Scanner in = new Scanner(System.in); // Construct Scanner object  
+      Scanner in = new Scanner(System.in); 
  
       System.out.print("Enter sesso (M or F) = ");
-      sesso = in.next().charAt(0);         // Read in next char into sesso
+      sesso = in.next().charAt(0);         
       System.out.print("Enter eta = ");
-      eta = in.nextInt();                // Read in next integer into eta
+      eta = in.nextInt();                
 
       if ( sesso == 'M' )
       {
          if ( eta <= 13 )
          {
-            prezzo = 10;        // Boy
+            prezzo = 10;        
          }
          else
          {
-            prezzo = 15;        // Man
+            prezzo = 15;        
          }
       }
       else
       {
          if ( eta <= 13 )
          {
-            prezzo = 12;        // Girl
+            prezzo = 12;        
          }
          else
          {
-            prezzo = 25;        // Woman
+            prezzo = 25;        
          }
       }
 
