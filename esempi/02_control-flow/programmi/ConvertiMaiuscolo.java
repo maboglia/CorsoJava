@@ -2,7 +2,7 @@
    letti in input nei corrispondenti caratteri
    maiuscoli */
 import java.io.*;
-class ConvertiMetodo {
+class ConvertiMaiuscolo {
 
   static char convertiInMaiuscolo(char c) {
     if (c < 'a' || c > 'z')

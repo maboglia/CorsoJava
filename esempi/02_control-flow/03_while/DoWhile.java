@@ -1,6 +1,6 @@
 
 
-class sommaNumeri_Do
+class DoWhile
 {
 
 	public static void main (String [] args)
