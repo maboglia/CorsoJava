@@ -6,18 +6,20 @@
 ### Laboratorio  1
 
 * Compilazione ed esecuzione del programma Helloworld via **CLI**
+* variabili, operatori ed espressioni
 
 ---
 
 ### Laboratorio 2
 
-* esempio classe Studente
+* cicli e condizioni
+* lancia dadi
 
 ---
 
 ### Laboratorio 3
 
-* Approfondiamo la classe Studente
+* la classe Studente
   * array elenco allievi 
   * scorro elenco allievi utilizzando un ciclo for
   * gestione base di possibili errori/eccezioni: if
@@ -72,8 +74,7 @@
 
 ### Laboratorio 11
 
-
-  * dato il main di una classe AutomobileTester, sviluppare le classi Automobile e Guidatore
+* dato il main di una classe AutomobileTester, sviluppare le classi Automobile e Guidatore
 
 ---
 

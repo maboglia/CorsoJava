@@ -82,7 +82,7 @@ Le eccezioni forniscono un meccanismo robusto per gestire condizioni anomale dur
 
 ---
 
-## Le RuntimeException comprese nel pacchetto java.lang
+## Le RuntimeException comprese nel pacchetto java.lang 
 
 Eccezione|Significato
 ---|---
