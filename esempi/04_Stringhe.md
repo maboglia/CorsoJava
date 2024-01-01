@@ -1,49 +1,52 @@
 # Costruttori e proprietà della classe String
 
 ```java
-		/* assegnazione a una variabile String di un letterale */
-		String s;
-		s = "Ciao mondo";
-		System.out.println(s);
+  /* assegnazione a una variabile String di un letterale */
+  String s;
+  s = "Ciao mondo";
+  System.out.println(s);
 ```
 
 ---
 
 ## costruzione da un array di char
 
-```java		
-		char c[] ={'h', 'e', 'l', 'l', 'o'};
-		String t = new String(c);
-		System.out.println(t);
+```java  
+  char c[] ={'h', 'e', 'l', 'l', 'o'};
+  String t = new String(c);
+  System.out.println(t);
 ```
 
 ---
 
-## costruzione da un sottoinsieme di un array di char 
-con il costruttore String(char chars[],int inizio, int numCaratteri) 
+## costruzione da un sottoinsieme di un array di char
 
-```java		
-		/* */ String u = new String(c,2,3);
-		/* Restituisce "llo", perche il primo carattere corrisponde alla posizione 0 */
-		System.out.println(u);
+con il costruttore String(char chars[],int inizio, int numCaratteri)
+
+```java  
+  /* */ String u = new String(c,2,3);
+  /* Restituisce "llo", perche il primo carattere corrisponde alla posizione 0 */
+  System.out.println(u);
 ```
 
 ---
 
 ## costruzione da stringa esistente
+
 viene creato un oggetto con lo stesso testo contenuto
-```java		
-		String v = new String(u);
-		// Restituisce "llo";
-		System.out.println(v);
+
+```java  
+  String v = new String(u);
+  // Restituisce "llo";
+  System.out.println(v);
 ```
 
 ---
 
 ## il metodo length() restituisce il numero di caratteri
 
-```java		
-			System.out.println("la stringa \"" + u + "\" ha " + u.length() + " caratteri");
+```java  
+   System.out.println("la stringa \"" + u + "\" ha " + u.length() + " caratteri");
 ```
 
 ---
@@ -51,7 +54,7 @@ viene creato un oggetto con lo stesso testo contenuto
 ## i letterali stringa sono oggetti e hanno metodi
 
 ```java
-		System.out.println("il letterale \"" + "llo" + "\" ha " + "llo".length()+" caratteri");
+  System.out.println("il letterale \"" + "llo" + "\" ha " + "llo".length()+" caratteri");
 ```
 
 ---
@@ -59,52 +62,52 @@ viene creato un oggetto con lo stesso testo contenuto
 ## metodo equals
 
 ```java
-		String a = new String ("Ciao");
-		String b = a;
-		String c = " ";
-		String ok = "a e b sono uguali";
-		String nonOk = "a e b sono diversi";
-		String same = "a e b contengono lo stesso testo";
-		
-		System.out.println( a + c + b );
-		
-		if (a == b) System.out.println(ok);
-		else System.out.println(nonOk);
-		
-		if (a.equals(b)) System.out.println(same);
+  String a = new String ("Ciao");
+  String b = a;
+  String c = " ";
+  String ok = "a e b sono uguali";
+  String nonOk = "a e b sono diversi";
+  String same = "a e b contengono lo stesso testo";
+  
+  System.out.println( a + c + b );
+  
+  if (a == b) System.out.println(ok);
+  else System.out.println(nonOk);
+  
+  if (a.equals(b)) System.out.println(same);
 ```
 
 ---
 
 ## charAt() e length()
 
-```java		
-		
-		System.out.println(ok.length());
-		System.out.println(nonOk.length());
-		System.out.println(same.length());
-		
-		char s1 = ok.charAt(ok.length() - 1  );
-		System.out.println(s1);
+```java  
+  
+  System.out.println(ok.length());
+  System.out.println(nonOk.length());
+  System.out.println(same.length());
+  
+  char s1 = ok.charAt(ok.length() - 1  );
+  System.out.println(s1);
 
-		for (int i = 0; i < same.length(); i++) {
-			System.out.println(same.charAt(i));
-		}
+  for (int i = 0; i < same.length(); i++) {
+   System.out.println(same.charAt(i));
+  }
 ```
 
 ---
 
 ## metodo toCharArray()
 
-```java		
+```java  
 
-		char[] stringaArray = same.toCharArray();
-		
-		System.out.println(stringaArray);
-		
-		for (int i = 0; i < stringaArray.length; i++) {
-			System.out.println(stringaArray[i]);
-		}
+  char[] stringaArray = same.toCharArray();
+  
+  System.out.println(stringaArray);
+  
+  for (int i = 0; i < stringaArray.length; i++) {
+   System.out.println(stringaArray[i]);
+  }
 ```
 
 ---
@@ -129,7 +132,7 @@ viene creato un oggetto con lo stesso testo contenuto
 
 ## stringa da array di char e viceversa
 
-```java		
+```java  
 
     char[] caratteri = { 'c','i','a','o' };
         String s6 = new String(caratteri);
@@ -169,9 +172,9 @@ else  System.out.println("nome e test sono diversi");
 
 //verifica uguaglianza col metodo equals()
 if (firma.equals(test)) 
-	System.out.println("nome e test sono uguali");
+ System.out.println("nome e test sono uguali");
 else 
-	System.out.println("nome e test sono diversi");
+ System.out.println("nome e test sono diversi");
 
 //sostituire caratteri della stringa
 System.out.println(     firma.replace('o', 'i')             );
@@ -216,19 +219,19 @@ System.out.println(     firma.replace('o', 'i')             );
 
       System.out.println( " 0123456789012345678901");
       System.out.println( "\"" + s + "\"" 
-		+ ".indexOf( \"World\" ) = "  + i );
+  + ".indexOf( \"World\" ) = "  + i );
 
       i = s.indexOf( "By" );
 
       System.out.println( " 0123456789012345678901");
       System.out.println( "\"" + s + "\"" 
-		+ ".indexOf( \"By\" ) = "  + i );
+  + ".indexOf( \"By\" ) = "  + i );
 
       i = s.indexOf( "by" );
 
       System.out.println( " 0123456789012345678901");
       System.out.println( "\"" + s + "\"" 
-		+ ".indexOf( \"by\" ) = "  + i );
+  + ".indexOf( \"by\" ) = "  + i );
 
 ```
 
@@ -241,7 +244,7 @@ System.out.println(     firma.replace('o', 'i')             );
 
       System.out.println( " 0123456789012345678901");
       System.out.println( "\"" + s + "\"" 
-		+ ".lastIndexOf( \"World\" ) = "  + i );
+  + ".lastIndexOf( \"World\" ) = "  + i );
 
 ```
 
@@ -251,13 +254,13 @@ System.out.println(     firma.replace('o', 'i')             );
 
 ```java
       System.out.println(" \"abc\".compareTo( \"abc\" ) = " 
-					+ "abc".compareTo( "abc" ) );
+     + "abc".compareTo( "abc" ) );
 
       System.out.println(" \"abc\".compareTo( \"xyz\" ) = " 
-					+ "abc".compareTo( "xyz" ) );
+     + "abc".compareTo( "xyz" ) );
 
       System.out.println(" \"abc\".compareTo( \"ABC\" ) = " 
-					+ "abc".compareTo( "ABC" ) );
+     + "abc".compareTo( "ABC" ) );
 
 ```
 
@@ -267,13 +270,13 @@ System.out.println(     firma.replace('o', 'i')             );
 
 ```java
      System.out.println(" \"abc\".compareToIgnoreCase( \"abc\" ) = " 
-					+ "abc".compareToIgnoreCase( "abc" ) );
+     + "abc".compareToIgnoreCase( "abc" ) );
 
       System.out.println(" \"abc\".compareToIgnoreCase( \"xyz\" ) = " 
-					+ "abc".compareToIgnoreCase( "xyz" ) );
+     + "abc".compareToIgnoreCase( "xyz" ) );
 
       System.out.println(" \"abc\".compareToIgnoreCase( \"ABC\" ) = " 
-					+ "abc".compareToIgnoreCase( "ABC" ) );
+     + "abc".compareToIgnoreCase( "ABC" ) );
 
 ```
 
@@ -282,12 +285,12 @@ System.out.println(     firma.replace('o', 'i')             );
 ## join
 
 ```java
-		String nani = String.join(" e ", "Pisolo", "Mammolo", "Gongolo");
-		System.out.println(nani);
-		
-		String[] stati = {"Italia", "Spagna", "Portogallo"};
-		String statiUniti = String.join(",", stati);
-		System.out.println(statiUniti);
+  String nani = String.join(" e ", "Pisolo", "Mammolo", "Gongolo");
+  System.out.println(nani);
+  
+  String[] stati = {"Italia", "Spagna", "Portogallo"};
+  String statiUniti = String.join(",", stati);
+  System.out.println(statiUniti);
 
 ```
 
@@ -319,14 +322,14 @@ System.out.println(     firma.replace('o', 'i')             );
 ## hash if
 
 ```java
-		String s1="Ciao";
-		String s2="Ci"+"ao";
-		System.out.println(s1.hashCode());
-		System.out.println(s2.hashCode());
-		if(s1.hashCode()==s2.hashCode())
-			System.out.println("Le due stringhe sono uguali.");
-		else
-			System.out.println("Le due stringhe sono diverse.");		
+  String s1="Ciao";
+  String s2="Ci"+"ao";
+  System.out.println(s1.hashCode());
+  System.out.println(s2.hashCode());
+  if(s1.hashCode()==s2.hashCode())
+   System.out.println("Le due stringhe sono uguali.");
+  else
+   System.out.println("Le due stringhe sono diverse.");  
 
 ```
 
@@ -335,14 +338,14 @@ System.out.println(     firma.replace('o', 'i')             );
 ## hash equals
 
 ```java
-		String s1="Ciao";
-		String s2="Ci"+"ao";
-		System.out.println(s1.hashCode());
-		System.out.println(s2.hashCode());
-		if(s1.equals(s2))
-			System.out.println("Le due stringhe sono uguali.");
-		else
-			System.out.println("Le due stringhe sono diverse.");
+  String s1="Ciao";
+  String s2="Ci"+"ao";
+  System.out.println(s1.hashCode());
+  System.out.println(s2.hashCode());
+  if(s1.equals(s2))
+   System.out.println("Le due stringhe sono uguali.");
+  else
+   System.out.println("Le due stringhe sono diverse.");
 
 ```
 
@@ -357,15 +360,15 @@ System.out.println(     firma.replace('o', 'i')             );
       r = s.replaceFirst( "World", "Class" );
 
       System.out.println( "\"" + s + "\"" 
-		+ ".replaceFirst( \"World\", \"Class\" ) = "  + 
-		"\"" + r + "\"" );
+  + ".replaceFirst( \"World\", \"Class\" ) = "  + 
+  "\"" + r + "\"" );
       System.out.println( "Diventa: s = " + "\"" + s + "\"\n\n" );
 
       r = s.replaceAll( "World", "Class" );
 
       System.out.println( "\"" + s + "\"" 
-		+ ".replaceAll( \"World\", \"Class\" ) = "  + 
-		"\"" + r + "\"" );
+  + ".replaceAll( \"World\", \"Class\" ) = "  + 
+  "\"" + r + "\"" );
       System.out.println( "Diventa: s = " + "\"" + s + "\"" );
 
 ```
@@ -375,44 +378,44 @@ System.out.println(     firma.replace('o', 'i')             );
 ## substring()
 
 ```java
-	String messaggio; // la stringa che conterra' il messaggio.
+ String messaggio; // la stringa che conterra' il messaggio.
 
-	// scrivo un messaggio (il codice Unicode \u00e8 corrisponde
-	// alla lettera "e con accento grave").
-	messaggio = "questo \u00e8 il messaggio da analizzare";
+ // scrivo un messaggio (il codice Unicode \u00e8 corrisponde
+ // alla lettera "e con accento grave").
+ messaggio = "questo \u00e8 il messaggio da analizzare";
 
-	int lunghezzaMessaggio = messaggio.length();
+ int lunghezzaMessaggio = messaggio.length();
 
-	char primaLettera = messaggio.charAt(0);
+ char primaLettera = messaggio.charAt(0);
 
-	char ultimaLettera = messaggio.charAt(lunghezzaMessaggio - 1);
+ char ultimaLettera = messaggio.charAt(lunghezzaMessaggio - 1);
 
-	String prime5Lettere = messaggio.substring(0,5);
+ String prime5Lettere = messaggio.substring(0,5);
 
-	System.out.println();
-	System.out.println("Il messaggio considerato e': \n" 
-			   + messaggio);
-	System.out.println();
-	System.out.println("esso e' composto da " + lunghezzaMessaggio
-			   + " caratteri");
-	System.out.println("Il primo carattere e': \"" + primaLettera
-			   + "\", l'ultimo carattere e': \"" 
-			   + ultimaLettera + "\"");
+ System.out.println();
+ System.out.println("Il messaggio considerato e': \n" 
+      + messaggio);
+ System.out.println();
+ System.out.println("esso e' composto da " + lunghezzaMessaggio
+      + " caratteri");
+ System.out.println("Il primo carattere e': \"" + primaLettera
+      + "\", l'ultimo carattere e': \"" 
+      + ultimaLettera + "\"");
 
-	System.out.println("La sottostringa dei primi 5 caratteri e': \""
-			   + prime5Lettere + "\".");
+ System.out.println("La sottostringa dei primi 5 caratteri e': \""
+      + prime5Lettere + "\".");
 
-	System.out.println();
-	System.out.println("Il messaggio puo' essere convertito " 
-			   + "tutto in lettere maiuscole: ");
+ System.out.println();
+ System.out.println("Il messaggio puo' essere convertito " 
+      + "tutto in lettere maiuscole: ");
 
-	String messaggioMaiuscolo;  // si noti che una nuova variabile 
-	                            // puo' essere dichiarata in un qs
-	                            // punto del programma.
+ String messaggioMaiuscolo;  // si noti che una nuova variabile 
+                             // puo' essere dichiarata in un qs
+                             // punto del programma.
 
-	messaggioMaiuscolo = messaggio.toUpperCase();
+ messaggioMaiuscolo = messaggio.toUpperCase();
 
-	System.out.println(messaggioMaiuscolo);
+ System.out.println(messaggioMaiuscolo);
 
 ```
 
@@ -421,30 +424,30 @@ System.out.println(     firma.replace('o', 'i')             );
 ## Stringhe dinamiche con StringBuilder()
 
 ```java
-		String s1 = "ciao";
-		s1 = s1 +  " mondo";
-		
-		StringBuilder s2 = new StringBuilder();
-		s2.append(s1);
-		s2.append(" mondo");
-		
-		System.out.println(s1);
-		System.out.println(s2);
-		
-		Scanner scanner = new Scanner(System.in);
-		
-		System.out.println("componi dei versi!");
-		
-		String input;
-		
-		s2.delete(0, s2.length());
-		
-		for (int i = 0; i < 4; i++) {
-			input = scanner.nextLine();
-			s2.append(i + ") ").append(input).append("\n");
-		}
-		
-		System.out.println(s2);
+  String s1 = "ciao";
+  s1 = s1 +  " mondo";
+  
+  StringBuilder s2 = new StringBuilder();
+  s2.append(s1);
+  s2.append(" mondo");
+  
+  System.out.println(s1);
+  System.out.println(s2);
+  
+  Scanner scanner = new Scanner(System.in);
+  
+  System.out.println("componi dei versi!");
+  
+  String input;
+  
+  s2.delete(0, s2.length());
+  
+  for (int i = 0; i < 4; i++) {
+   input = scanner.nextLine();
+   s2.append(i + ") ").append(input).append("\n");
+  }
+  
+  System.out.println(s2);
 
 ```
 
@@ -491,23 +494,23 @@ System.out.println(     firma.replace('o', 'i')             );
 
 ```java
 class BufferStringhe{
-	public static void main(String args[]){
-		String s;
-		int i;
-		StringBuilder sb = new StringBuilder("Ciao ");
-		// Aggiunge caratteri a sb
-		sb.append("mondo!");
-		System.out.print("sb vale ");
-		System.out.println(sb);
-		// converte sb a un tipo String
-		s = sb.toString();
-		System.out.println(s);
-		// lunghezza della stringa
-		i = sb.length();
-		System.out.println("sb consta di " + i + " caratteri");
-		// numero di caratteri per cui e allocata memoria
-		i = sb.capacity();
-		System.out.println("sb alloca memoria per " + i + " caratteri");
-	}
+ public static void main(String args[]){
+  String s;
+  int i;
+  StringBuilder sb = new StringBuilder("Ciao ");
+  // Aggiunge caratteri a sb
+  sb.append("mondo!");
+  System.out.print("sb vale ");
+  System.out.println(sb);
+  // converte sb a un tipo String
+  s = sb.toString();
+  System.out.println(s);
+  // lunghezza della stringa
+  i = sb.length();
+  System.out.println("sb consta di " + i + " caratteri");
+  // numero di caratteri per cui e allocata memoria
+  i = sb.capacity();
+  System.out.println("sb alloca memoria per " + i + " caratteri");
+ }
 }
 ```
