@@ -7,6 +7,8 @@
 		System.out.println(s);
 ```
 
+---
+
 ## costruzione da un array di char
 
 ```java		
@@ -14,6 +16,8 @@
 		String t = new String(c);
 		System.out.println(t);
 ```
+
+---
 
 ## costruzione da un sottoinsieme di un array di char 
 con il costruttore String(char chars[],int inizio, int numCaratteri) 
@@ -24,6 +28,8 @@ con il costruttore String(char chars[],int inizio, int numCaratteri)
 		System.out.println(u);
 ```
 
+---
+
 ## costruzione da stringa esistente
 viene creato un oggetto con lo stesso testo contenuto
 ```java		
@@ -32,11 +38,15 @@ viene creato un oggetto con lo stesso testo contenuto
 		System.out.println(v);
 ```
 
+---
+
 ## il metodo length() restituisce il numero di caratteri
 
 ```java		
 			System.out.println("la stringa \"" + u + "\" ha " + u.length() + " caratteri");
 ```
+
+---
 
 ## i letterali stringa sono oggetti e hanno metodi
 
@@ -64,6 +74,8 @@ viene creato un oggetto con lo stesso testo contenuto
 		if (a.equals(b)) System.out.println(same);
 ```
 
+---
+
 ## charAt() e length()
 
 ```java		
@@ -79,6 +91,8 @@ viene creato un oggetto con lo stesso testo contenuto
 			System.out.println(same.charAt(i));
 		}
 ```
+
+---
 
 ## metodo toCharArray()
 
@@ -110,6 +124,8 @@ viene creato un oggetto con lo stesso testo contenuto
     String s5 = s3 + s4;
         System.out.println(s5);
 ```
+
+---
 
 ## stringa da array di char e viceversa
 
