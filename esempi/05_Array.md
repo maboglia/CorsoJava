@@ -243,6 +243,8 @@ public class VarArgs {
 
 ```
 
+---
+
 ## System.arraycopy() - Copia di array
 
 ```java
