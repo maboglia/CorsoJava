@@ -2,6 +2,8 @@
 
 Le espressioni in programmazione sono combinazioni di valori, operatori e chiamate di funzioni che possono essere valutate per produrre un risultato. Le espressioni possono rappresentare calcoli aritmetici, valutazioni booleane, concatenazioni di stringhe e altro ancora. Le espressioni sono fondamentali per la creazione di logica e la manipolazione dei dati all'interno di un programma. Ecco alcuni esempi di espressioni:
 
+---
+
 1. **Espressioni Aritmetiche:**
 
    ```java
@@ -9,6 +11,8 @@ Le espressioni in programmazione sono combinazioni di valori, operatori e chiama
    ```
 
    In questo esempio, l'espressione aritmetica viene valutata secondo le regole di precedenza degli operatori.
+
+---
 
 2. **Espressioni Booleane:**
 
@@ -18,6 +22,8 @@ Le espressioni in programmazione sono combinazioni di valori, operatori e chiama
 
    Qui, l'espressione booleana verifica se entrambe le condizioni sono vere.
 
+---
+
 3. **Espressioni di Concatenazione di Stringhe:**
 
    ```javascript
@@ -25,6 +31,8 @@ Le espressioni in programmazione sono combinazioni di valori, operatori e chiama
    ```
 
    Questa espressione concatena le variabili `nome` e `cognome` in una stringa più lunga.
+
+---
 
 4. **Espressioni di Assegnamento:**
 
@@ -34,6 +42,8 @@ Le espressioni in programmazione sono combinazioni di valori, operatori e chiama
 
    In questo caso, l'espressione assegna a `x` il valore di `y` più 5.
 
+---
+
 5. **Chiamate di Funzioni:**
 
    ```java
@@ -42,6 +52,8 @@ Le espressioni in programmazione sono combinazioni di valori, operatori e chiama
 
    L'espressione chiama la funzione `sqrt` della classe `Math` per calcolare la radice quadrata di 25.
 
+---
+
 6. **Espressioni Ternarie:**
 
    ```javascript
@@ -49,6 +61,8 @@ Le espressioni in programmazione sono combinazioni di valori, operatori e chiama
    ```
 
    Questa espressione ternaria restituisce "Positivo" se `x` è maggiore di 0 e "Negativo" altrimenti.
+
+---
 
 7. **Espressioni di Array e Oggetti:**
 
