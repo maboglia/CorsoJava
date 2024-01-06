@@ -1,8 +1,9 @@
 ---
-marp: false
+marp: true
 title: Fondamenti
 paginate: true
 author: mauro
+header: ![LOGHI_GOL_ALTO.png](LOGHI_GOL_ALTO.png)
 ---
 
 Mauro Bogliaccino
