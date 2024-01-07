@@ -1,4 +1,5 @@
 # Stringhe e Caratteri
+
 Caratteristiche principali
 
 ## Classi disponibili
