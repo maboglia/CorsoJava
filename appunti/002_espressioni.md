@@ -27,7 +27,7 @@ Le espressioni in programmazione sono combinazioni di valori, operatori e chiama
 3. **Espressioni di Concatenazione di Stringhe:**
 
    ```javascript
-   let nomeCompleto = nome + " " + cognome;
+   let nomeCompleto = nome + " " + cognome; 
    ```
 
    Questa espressione concatena le variabili `nome` e `cognome` in una stringa più lunga.
