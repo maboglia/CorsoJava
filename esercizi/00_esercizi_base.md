@@ -44,7 +44,6 @@ Scrivere un programma SommaProdotto che chiede all’utente di inserire due valo
 ## Esercizio SommaDiQuattro
 
 Scrivere un programma SommaDiQuattro che chiede all’utente di inserire quattro valori interi, e ne stampa la somma. 
-ATTENZIONE: il programma deve utilizzare in tutto solo 2 variabili!
 
 ---
 
