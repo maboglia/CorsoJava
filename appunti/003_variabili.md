@@ -186,14 +186,22 @@ final double IVA = 0.22;
 1. Il termine "variabile di istanza" è un altro nome per ___.
    * Risposta: Variabile membro.
 
+---
+
 2. Il termine "variabile di classe" è un altro nome per ___.
    * Risposta: Variabile statica.
+
+---
 
 3. Una variabile locale memorizza uno stato temporaneo; è dichiarata all'interno di un ___.
    * Risposta: Metodo.
 
+---
+
 4. Una variabile dichiarata tra la parentesi di apertura e chiusura della firma di un metodo è chiamata ___.
    * Risposta: Parametro.
+
+---
 
 5. Quali sono gli otto tipi di dati primitivi supportati dal linguaggio di programmazione Java?
    * Risposta:
@@ -206,15 +214,23 @@ final double IVA = 0.22;
      * char
      * boolean
 
+---
+
 6. Le stringhe di caratteri sono rappresentate dalla classe ___.
    * Risposta: Stringa.
+
+---
 
 7. Un ___ è un oggetto contenitore che tiene un numero fisso di valori di un singolo tipo.
    * Risposta: Array.
 
+---
+
 **Esercizi:**
 
 1. Crea un piccolo programma che definisce alcuni campi. Prova a creare alcuni nomi di campi illegali e verifica quale tipo di errore il compilatore produce. Usa le regole e le convenzioni di denominazione come guida.
+
+---
 
 ```java
 public class EsempioNomiCampi {
@@ -229,7 +245,11 @@ public class EsempioNomiCampi {
 }
 ```
 
+---
+
 2. Nel programma creato nell'Esercizio 1, prova a lasciare i campi non inizializzati e stampa i loro valori. Prova la stessa cosa con una variabile locale e verifica quale tipo di errori del compilatore puoi produrre. Conoscere gli errori comuni del compilatore renderà più facile riconoscere bug nel tuo codice.
+
+---
 
 ```java
 public class EsempioInizializzazioneVariabili {
