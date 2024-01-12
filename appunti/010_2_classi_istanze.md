@@ -1,6 +1,6 @@
 # 1. Instanze di una Classe: gli oggetti
 
-In programmazione orientata agli oggetti (OOP), un oggetto è uno dei concetti centrali, rappresentando un'entità del mondo reale dotata di stato e comportamenti. Gli oggetti hanno attributi, chiamati campi, che definiscono il loro stato, e metodi, che determinano il loro comportamento. Ogni oggetto rappresenta un'istanza di una classe, fungendo da esempio concreto dei concetti astratti definiti dalla classe stessa. Gli oggetti occupano spazio nella memoria del sistema, consentendo loro di mantenere uno stato persistente. Un aspetto fondamentale degli oggetti è la loro capacità di comunicare tra loro, permettendo lo scambio di informazioni e il coordinamento delle attività all'interno di un programma. Questa interazione tra oggetti è uno dei pilastri della programmazione orientata agli oggetti, consentendo la creazione di sistemi complessi e dinamici.
+In programmazione orientata agli oggetti (OOP), un oggetto è uno dei concetti centrali, rappresentando un'entità del mondo reale dotata di **stato** e **comportamenti**. Gli oggetti hanno attributi, chiamati **campi**, che definiscono il loro stato, e **metodi**, che determinano il loro comportamento. Ogni oggetto rappresenta un'**istanza** di una **classe**, fungendo da esempio concreto dei concetti astratti definiti dalla classe stessa. Gli oggetti occupano spazio nella memoria del sistema, consentendo loro di mantenere uno stato persistente. Un aspetto fondamentale degli oggetti è la loro **capacità di comunicare** tra loro, permettendo lo **scambio di informazioni** e il coordinamento delle **attività** all'interno di un programma. Questa **interazione** tra oggetti è uno dei pilastri della programmazione orientata agli oggetti, consentendo la creazione di sistemi complessi e dinamici.
 
 
 
@@ -10,7 +10,7 @@ In programmazione orientata agli oggetti (OOP), un oggetto è uno dei concetti c
 
 * Un oggetto è uno dei concetti fondamentali di OOP.
 * Un oggetto è un'entità del mondo reale.
-* Un oggetto ha stato (campi) e comportamenti (metodi).
+* Un oggetto ha stato (campi) e comportamenti (metodi: modi per compiere azioni).
 * Un oggetto rappresenta un'istanza di una classe.
 * Un oggetto occupa un po' di spazio nella memoria.
 * Un oggetto può comunicare con altri oggetti.
