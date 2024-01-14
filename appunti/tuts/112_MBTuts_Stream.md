@@ -194,6 +194,6 @@ Stream<String> studenti = Files.lines(Paths.get("aula.txt"), Charset.forName("Cp
 ## summaryStatistics
 
 ```java
-		 IntSummaryStatistics stats = IntStream.of(1,2,5,78,9,45).summaryStatistics();
-		 System.out.println(stats);
+IntSummaryStatistics stats = IntStream.of(1,2,5,78,9,45).summaryStatistics();
+System.out.println(stats);
 ```

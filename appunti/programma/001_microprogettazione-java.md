@@ -265,7 +265,7 @@
 
 ---
 
-### __OPERATORI DI BASE__
+### OPERATORI DI BASE
 
 * Operatore d'assegnazione
 * Operatori aritmetici
