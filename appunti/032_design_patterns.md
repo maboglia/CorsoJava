@@ -67,10 +67,8 @@ Questi sono solo alcuni dei design pattern più noti. L'uso appropriato di desig
 ## 1) 5 Creational Pattern
 
 Scopo dei design pattern creazionali
-- Rendere un sistema indipendente
-dall’implementazione concreta delle sue componenti
-- Si nascondono i tipi concreti delle classi realmente
-utilizzate
+- Rendere un sistema indipendente dall’implementazione concreta delle sue componenti
+- Si nascondono i tipi concreti delle classi realmente utilizzate
 - Si nascondono i dettagli sulla composizione e creazione
 - Riduzione accoppiamento e flessibilità
 - Ampio uso dell’astrazione / interfacce
