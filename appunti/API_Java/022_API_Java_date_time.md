@@ -49,9 +49,9 @@ che permettono la trasformazione da stringa a data e viceversa.
 ## In Java 8: LocalDate, LocalTime, LocalDateTime III
 
 ```java
-      DayOfWeek inizioMillenio = LocalDate.of(2000, 1, 1).getDayOfWeek();
-      System.out.println("inizioMillenio: " + inizioMillenio);
-      System.out.println(inizioMillenio.getValue());
+      DayOfWeek inizioMillennio = LocalDate.of(2000, 1, 1).getDayOfWeek();
+      System.out.println("inizioMillennio: " + inizioMillennio);
+      System.out.println(inizioMillennio.getValue());
       System.out.println(DayOfWeek.SATURDAY.plus(3));	  
       LocalDateTime ldt = LocalDateTime.now();
       System.out.println(ldt);
