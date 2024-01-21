@@ -73,22 +73,3 @@ Ecco alcune caratteristiche chiave delle enum in Java:
 Le enum sono utili quando devi rappresentare un insieme fisso e ben noto di valori correlati, come giorni della settimana, mesi, ecc. Forniscono un codice più leggibile e robusto rispetto all'utilizzo di costanti intere o stringhe.
 
 
-
-
----
-
-**Domande:**
-
-1. **Domanda:** Vero o falso: un tipo Enum può essere una sottoclasse di java.lang.String.
-
-   - **Risposta:** Falso. Tutti gli enum estendono implicitamente java.lang.Enum. Poiché una classe può estendere solo un genitore, il linguaggio Java non supporta l'ereditarietà multipla dello stato e quindi un enum non può estendere nient'altro.
-
-**Esercizi:**
-
-1. **Esercizio:** Riscrivi la classe Card dall'esercizio in Questions and Exercises: Classes in modo che rappresenti il rango e il seme di una carta con tipi Enum.
-
-   - **Risposta:** Vedi [Card3.java](in un file di origine .java), [Suit.java](in un file di origine .java) e [Rank.java](in un file di origine .java).
-
-2. **Esercizio:** Riscrivi la classe Deck.
-
-   - **Risposta:** Vedi [Deck3.java](in un file di origine .java).

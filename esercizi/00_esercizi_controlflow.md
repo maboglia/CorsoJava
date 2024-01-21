@@ -355,3 +355,106 @@ double min = Math.min(x, Math.min(y, z));
 double mid = x + y + z - max - min;
 System.out.printf("In ordine %f %f %f%n", min, mid, max);
 ```
+
+---
+
+**Risposte alle Domande:**
+
+1. La più basilare istruzione di flusso di controllo supportata dal linguaggio di programmazione Java è l'istruzione if-then.
+   * Risposta: Vero, l'istruzione if-then è l'istruzione di flusso di controllo più basilare.
+
+---
+
+2. L'istruzione switch consente qualsiasi numero di percorsi di esecuzione possibili.
+   * Risposta: Vero, l'istruzione switch permette percorsi di esecuzione multipli.
+
+---
+
+3. L'istruzione do-while è simile all'istruzione while, ma valuta la sua espressione in fondo al ciclo.
+   * Risposta: Vero, l'istruzione do-while valuta la sua espressione alla fine del ciclo.
+
+---
+
+4. **Domanda:** Come si scrive un ciclo infinito utilizzando l'istruzione for?
+
+   * **Risposta:**
+
+   ```java
+   for ( ; ; ) {
+
+   }
+   ```
+
+---
+
+5. **Domanda:** Come si scrive un ciclo infinito utilizzando l'istruzione while?
+
+   * **Risposta:**
+
+   ```java
+   while (true) {
+
+   }
+   ```
+
+---
+
+**Esercizi:**
+
+---
+
+1. **Esercizio:** Qual è l'output che pensi produrrà il codice se aNumber è 3?
+
+   * **Soluzione:**
+
+   ```
+   second string
+   third string
+   ```
+
+---
+
+2. **Esercizio:** Scrivi un programma di test contenente il frammento di codice precedente; fai diventare aNumber 3. Qual è l'output del programma? È quello che hai previsto? Spiega il motivo per cui l'output è quello che è. In altre parole, qual è il flusso di controllo per il frammento di codice?
+
+   * **Soluzione:**
+
+   ```
+   second string
+   third string
+   ```
+
+   3 è maggiore o uguale a 0, quindi l'esecuzione procede al secondo statement if. Il test del secondo statement if fallisce perché 3 non è uguale a 0. Pertanto, si esegue la clausola else (poiché è collegata al secondo statement if). Di conseguenza, viene visualizzata la seconda stringa. La println finale è completamente fuori da qualsiasi statement if, quindi viene sempre eseguita, e quindi viene sempre visualizzata la terza stringa.
+
+---
+
+3. **Esercizio:** Utilizzando solo spazi e interruzioni di linea, riformatta il frammento di codice per rendere più facile comprendere il flusso di controllo.
+
+   * **Soluzione:**
+
+   ```java
+   if (aNumber >= 0)
+       if (aNumber == 0)
+           System.out.println("first string");
+       else
+           System.out.println("second string");
+
+   System.out.println("third string");
+   ```
+
+---
+
+4. **Esercizio:** Usa le parentesi graffe `{` e `}` per chiarire ulteriormente il codice e ridurre la possibilità di errori da parte di futuri manutentori del codice.
+
+   * **Soluzione:**
+
+   ```java
+   if (aNumber >= 0) {
+       if (aNumber == 0) {
+           System.out.println("first string");
+       } else {
+           System.out.println("second string");
+       }
+   }
+
+   System.out.println("third string");
+   ```
