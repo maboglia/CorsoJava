@@ -10,6 +10,8 @@
 * Permette ricerche data la chiave
 * Non possono esserci chiavi duplicate
 
+---
+
 ## Implementazioni di Map  
 
 * **HashMap**

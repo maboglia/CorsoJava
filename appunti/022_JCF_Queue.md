@@ -4,7 +4,6 @@
 
 * Una Queue permette di gestire collezioni di oggetti gestiti con la filosofia FIFO (First In First Out) in modo che il primo oggetto inserito sia il primo candidato ad essere letto.
 
-
 ---
 
 ## Implementazione di Queue
