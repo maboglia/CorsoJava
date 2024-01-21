@@ -80,9 +80,13 @@ MATH.PI //3.1415
 
 ## Classi `istanziabili` “ibride”
 
+---
+
 **Titolo: Esplorando la Dualità delle Classi Istanziabili: Statiche e Dinamiche**
 
 Le classi istanziabili svolgono un ruolo fondamentale nella programmazione orientata agli oggetti, rappresentando concetti che possono esistere in molteplici versioni individuali. Tuttavia, in alcuni casi, queste classi mostrano una dualità intrigante, incorporando sia aspetti statici che dinamici.
+
+---
 
 **Ibridi: Classi Istanziabili con Natura Statica e Dinamica**
 
@@ -90,11 +94,15 @@ Un esempio comune di questa dualità si trova in classi come `String` della libr
 
 È come se queste classi avessero due sottoparti distintive: una statica e una dinamica, ciascuna operante secondo le proprie regole. La parte dinamica rappresenta le istanze specifiche di quella classe, ciascuna con la propria identità e dati unici. D'altra parte, la parte statica è condivisa tra tutte le istanze e può essere utilizzata senza dover istanziare un oggetto specifico.
 
+---
+
 **Consigli sulla Creazione di Classi Ibride**
 
 Sebbene questa dualità possa sembrare interessante, è importante notare che, in generale, la creazione di classi istanziabili ibride è sconsigliata, salvo rari casi. Mentre l'uso di attributi costanti definiti come statici può essere accettabile, combinare aspetti statici e dinamici all'interno di una stessa classe può complicare la progettazione e la comprensione del codice.
 
 Le classi istanziabili sono progettate per rappresentare concetti che esistono in molteplici forme, ciascuna con le proprie caratteristiche dinamiche. Introdurre elementi statici in questo contesto può portare a una confusione concettuale e potenziali problemi di manutenzione del codice.
+
+---
 
 In conclusione, mentre alcune classi istanziabili possono sfidare le convenzioni includendo elementi statici, è essenziale valutare attentamente la necessità di questa dualità nella progettazione del software. In genere, è consigliabile mantenere la distinzione tra classi istanziabili e non istanziabili, preservando la chiarezza e la coerenza nella struttura del codice.
 
