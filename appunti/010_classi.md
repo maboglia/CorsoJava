@@ -6,6 +6,10 @@
 * Una classe può essere istanziata più volte.
 * Una classe fa una, e solo una, cosa.
 
+---
+
+## La classe
+
 Una classe è uno dei concetti fondamentali di OOP. Una classe è un insieme di istruzioni necessarie per costruire un tipo specifico di oggetto. 
 Possiamo pensare a una classe come a un modello, un progetto o una ricetta che ci dice come creare oggetti di quella classe. 
 
@@ -43,6 +47,8 @@ Possono essere definite
 
 * Dal programmatore (p.es. Automobile, Topo, Studente, ...)
 * Dall'ambiente Java (p.es. String, System, Scanner, ...)
+
+---
 
 ## La "gestione" di una classe avviene mediante
 
