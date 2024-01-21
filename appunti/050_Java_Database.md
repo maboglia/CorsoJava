@@ -1,167 +1,136 @@
-# JDBC
+# JDBC (Java Database Connectivity)
 
-JDBC (Java Database Connectivity) è un’interfaccia completamente Java utilizzata per
-eseguire istruzioni SQL sui database.
+JDBC (Java Database Connectivity) è un'interfaccia completamente Java utilizzata per eseguire istruzioni SQL sui database.
 
-L'**API JDBC** si trova nel pacchetto java.sql; contiene poche classi concrete, è composta
-principalmente da interfacce indipendenti dal database.
+L'**API JDBC** si trova nel pacchetto java.sql; contiene poche classi concrete ed è composta principalmente da interfacce indipendenti dal database.
 
 ![JDBC](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/02_classe_base/function.png)
 
 ---
 
-Le **API JDBC** consentono di accedere a qualsiasi tipo
-di dati tabulari, in particolare ai dati memorizzati
-in database relazionali
+## Caratteristiche principali di JDBC
 
-* JDBC consente di scrivere applicazioni Java che gestiscono queste tre attività di programmazione:
-  * Connettere un'origine dati (e.g., database)
-  * Inviare query e istruzioni di aggiornamento per il
-database
-  * Recuperare ed elaborare i risultati ricevuti
+Le **API JDBC** consentono di accedere a qualsiasi tipo di dati tabulari, in particolare ai dati memorizzati in database relazionali. JDBC consente di scrivere applicazioni Java che gestiscono tre attività principali di programmazione:
+
+1. **Connettere un'origine dati (e.g., database)**
+2. **Inviare query e istruzioni di aggiornamento per il database**
+3. **Recuperare ed elaborare i risultati ricevuti**
 
 ---
 
-### JDBC include:
+## Componenti principali di JDBC
 
-* **API JDBC** - Un insieme di interfacce che fanno parte
-della piattaforma Java e costituiscono le API per il
-programmatore
-* **JDBC Driver Manager** - Gestore di driver che
-permette a driver di terze parti di connettersi ad un
-DB specifico
+### 1. API JDBC
 
-### Un driver JDBC permette di
+Un insieme di interfacce che fanno parte della piattaforma Java e costituiscono le API per il programmatore.
 
-* Connettersi ad un DB
-* Inviare un comando SQL
-* Processare il risultato
+### 2. JDBC Driver Manager
+
+Gestore di driver che permette a driver di terze parti di connettersi a un DB specifico.
 
 ---
 
-L'impiego di JDBC solitamente si articola attraverso quattro passi:
+## Funzioni principali di un driver JDBC
 
-1. Per prima cosa, è necessario caricare il **driver** idoneo per l'utilizzo del particolare database che si intende sfruttare. Può essere caricato un apposito driver JDBC installato in precedenza nel sistema, oppure può essere sfruttato il ponte JDBC-ODBC. Non è importante il nome o il funzionamento interno del particolare driver selezionato: l'interfaccia di programmazione sarà sempre la medesima.
+Un driver JDBC permette di:
 
-2. Si **apre una connessione** verso il particolare database necessario all'applicazione, sfruttando il driver caricato al passo precedente.
+1. **Connettersi a un DB**
+2. **Inviare un comando SQL**
+3. **Processare il risultato**
 
-3. Si impiegano l'**interfaccia di JDBC** ed il linguaggio **SQL** per interagire con la base di dati. Generalmente, viene sottoposta al DBMS una query volta all'ottenimento di alcuni risultati.
-
-4. I risultati ottenuti possono essere manipolati sfruttando le classi JDBC e del codice Java studiato per il compito.
+L'utilizzo di JDBC segue generalmente quattro passi:
 
 ---
 
+1. **Caricamento del Driver**: Inizialmente, è necessario caricare il driver JDBC appropriato per il database specifico che si intende utilizzare. Questo può essere un driver JDBC installato localmente o il ponte JDBC-ODBC. Il nome o il funzionamento interno del driver selezionato non è rilevante, poiché l'interfaccia di programmazione rimane la stessa.
+
+---
+
+2. **Apertura della Connessione**: Successivamente, si apre una connessione verso il database necessario all'applicazione utilizzando il driver caricato nel passo precedente.
+
+---
+
+3. **Interazione con la Base di Dati**: L'interfaccia JDBC e il linguaggio SQL vengono utilizzati per interagire con la base di dati. Di solito, viene eseguita una query per ottenere alcuni risultati dal DBMS.
+
+---
+
+4. **Manipolazione dei Risultati**: I risultati ottenuti possono essere manipolati utilizzando le classi JDBC e il codice Java appositamente progettato.
+
+---
+
+Esempio di codice:
 
 ```java
-
-private Connection con =null ;
-
+private Connection con = null;
 private final String URL = "jdbc:mysql://localhost:3306/nomeDB";
 private final String USER = "username";
 private final String PASS = "password";
 
 public Connection connetti() {
-	try {
-		if(this.con==null) {
-		this.con= DriverManager.getConnection(URL, USER, PASS);
-		System.out.println("Siamo connessi!");	
-		}
-	
-	} catch (SQLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-		
-	}
-	return this.con;
-};
-
+    try {
+        if (this.con == null) {
+            this.con = DriverManager.getConnection(URL, USER, PASS);
+            System.out.println("Siamo connessi!");
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    return this.con;
+}
 ```
+
 ---
+
+Esempio di codice per eseguire una query e recuperare i risultati:
 
 ```java
-	private Connection con = null;
-	private Statement statement = null;
-	private PreparedStatement ps=null;
-	private ResultSet rs = null;
+private Connection con = null;
+private Statement statement = null;
+private ResultSet rs = null;
 
-	private Connessione c = new Connessione();
-
-// Scorro il ResultSet usando il metodo next() e mostro i risultati.
-//in questo caso riempio un ArrayList di libri e lo ritorno
-
-		List<Libro> libri = new ArrayList<>();
-		this.con = c.connetti();
-		try {
-			this.statement = this.con.createStatement();
-		} catch (SQLException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		try {
-			this.rs = this.statement.executeQuery(FIND_ALL);
-			while(this.rs.next()) {
-				Libro l = new Libro();
-				l.setId(rs.getInt("id"));
-				l.setPagine(rs.getInt("pagine"));
-				l.setEditore_id(rs.getInt("editore_id"));
-				l.setPrezzo(rs.getDouble("prezzo"));
-//				l.setP_iva(rs.getDouble("p_iva"));
-				l.setTitolo(rs.getString("titolo"));
-				libri.add(l);
-				
-				
-			}
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		return libri;
-
-
+public List<Libro> findAllLibri() {
+    List<Libro> libri = new ArrayList<>();
+    this.con = connetti();
+    try {
+        this.statement = this.con.createStatement();
+        this.rs = this.statement.executeQuery(FIND_ALL);
+        while (this.rs.next()) {
+            Libro l = new Libro();
+            l.setId(rs.getInt("id"));
+            l.setPagine(rs.getInt("pagine"));
+            l.setEditore_id(rs.getInt("editore_id"));
+            l.setPrezzo(rs.getDouble("prezzo"));
+            l.setTitolo(rs.getString("titolo"));
+            libri.add(l);
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    }
+    return libri;
+}
 ```
 
 ---
 
-connettersi ad un database
-----------------------------
+Questi esempi illustrano il caricamento del driver e l'esecuzione di una query per recuperare una lista di libri dal database.
 
-Da JDBC 4 non è più necessario caricare in memoria il driver corrispondente,  questo è già disponibile.
-
-Se necessario, la sintassi per effettuare l'operazione è la seguente:
+Con JDBC 4 e versioni successive, non è più necessario caricare manualmente il driver JDBC in memoria. Il caricamento automatico è gestito dal sistema. Tuttavia, se si utilizzano versioni precedenti di JDBC, è possibile caricare il driver utilizzando il seguente metodo:
 
 ```java
-
-Class.forName(stringa_driver);
-
+Class.forName("stringa_driver");
 ```
 
 ---
 
-* [source](http://www.oracle.com/technetwork/database/features/jdbc/)  
-
----
-
-java.sql.Connection
----------------------
-
-A questo punto entrano in gioco 
-* l'interfaccia `java.sql.Connection` 
-* e la classe `java.sql.DriverManager`. 
-
-La prima descrive le funzionalità necessarie per entrare in comunicazione con uno specifico database, mentre `DriverManager` offre una serie di metodi statici, utili per stabilire qualsiasi tipo di connessione consentita dai driver `JDBC` già caricati in memoria. 
-
-Il modello generalmente osservato è il seguente:
+Inoltre, per stabilire una connessione al database, si utilizza l'interfaccia `java.sql.Connection` insieme alla classe `java.sql.DriverManager`. Il modello generale è il seguente:
 
 ```java
-
-	Connection conn = DriverManager.getConnection(url_database);
-
+Connection conn = DriverManager.getConnection(url_database);
 ```
----
 
-Una volta ottenuta una connessione attiva, diventa possibile sfruttare i metodi descritti da `Connection`. I più frequentemente utilizzati sono:  
+Una volta ottenuta una connessione attiva, è possibile utilizzare i metodi forniti da `Connection`. Alcuni dei metodi più comuni includono:
 
- 
-*   `createStatement()` Crea e restituisce un oggetto java.sql.Statement, utile per interagire con il database mediante dei comandi SQL.
-*   `close()` Chiude la connessione.
+- `createStatement()`: Crea e restituisce un oggetto `java.sql.Statement`, utile per interagire con il database attraverso comandi SQL.
+- `close()`: Chiude la connessione.
+
+Questo approccio permette di eseguire operazioni come l'esecuzione di query SQL e l'interazione con il database in modo più flessibile e dinamico.
