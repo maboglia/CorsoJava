@@ -1,5 +1,7 @@
 # Esempi JSP
 
+---
+
 ## Ciclo DO WHILE
 
 * Ciclo DO WHILE con JSP
@@ -35,6 +37,8 @@
 </html>
 ```
 
+---
+
 ## Funzione contatore accessi + esempio uso dichiarazioni e espressioni
 
 * Funzione contatore accessi + esempio uso dichiarazioni e espressioni
@@ -59,6 +63,8 @@ Questa pagina è stata caricata <%= conta %> volte.
 </body>
 </html>
 ```
+
+---
 
 ### Esempio Java Server Faces
 
