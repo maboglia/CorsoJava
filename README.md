@@ -263,16 +263,18 @@ Sul mio sito trovi tutti gli appunti anche in formato slide
 
 ## esercitazioni
 
-* todo list - nota spese - rubrica contatti
+* todo list 
+* nota spese 
+* rubrica contatti
 * serie-tv
 * watch-list
 * agenda appuntamenti
 * crea quiz
 * gestione biblioteca
 * biglietteria teatro
+* canzoni - crea playlist - jukebox
 * alimenti - preparazione ricetta e calcolo calorie
 * cinema multi sala
-* canzoni - crea playlist - jukebox
 * popolazione italiana
 * babbi natale (DB)
 * flex bus - prenotazione viaggi
