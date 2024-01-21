@@ -4,6 +4,8 @@ In Java, le enum (abbreviazione di "enumeration") sono un tipo di dato speciale 
 
 Ecco alcune caratteristiche chiave delle enum in Java:
 
+---
+
 1. **Dichiarazione:**
    Puoi dichiarare un tipo enum utilizzando la parola chiave `enum`. Ad esempio:
 
@@ -15,8 +17,12 @@ Ecco alcune caratteristiche chiave delle enum in Java:
 
    In questo esempio, `Days` è una enum con sette costanti rappresentanti i giorni della settimana.
 
+---
+
 2. **Valori della Enum:**
    Gli elementi di una enum sono chiamati valori della enum. Nel caso dell'esempio sopra, i valori sono `MONDAY`, `TUESDAY`, ecc.
+
+---
 
 3. **Uso delle Enum:**
    Puoi utilizzare le enum in dichiarazioni di variabili, switch statement, e altri contesti in cui sono richiesti valori costanti.
@@ -34,6 +40,8 @@ Ecco alcune caratteristiche chiave delle enum in Java:
        // Altri casi...
    }
    ```
+
+---
 
 4. **Metodi nelle Enum:**
    Puoi aggiungere campi e metodi alle enum. Ad esempio, ogni valore di una enum può avere attributi associati.
@@ -61,6 +69,8 @@ Ecco alcune caratteristiche chiave delle enum in Java:
    ```java
    System.out.println(Days.MONDAY.getDescription()); // Stampa "Start of the week"
    ```
+
+---
 
 5. **Metodo `values()` e `valueOf()`:**
    Le enum forniscono metodi utili come `values()`, che restituisce un array di tutte le costanti di una enum, e `valueOf(String)`, che restituisce la costante con il nome specificato.
