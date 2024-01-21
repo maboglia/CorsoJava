@@ -1,56 +1,48 @@
-L'interfaccia ResultSet
--------------------------
+# L'interfaccia ResultSet in JDBC
 
-* L'interfaccia **java.sql.ResultSet** comprende i metodi indispensabili per scorrere l'insieme dei risultati restituiti da una query SQL.
-* Il metodo **next()** scorre in avanti tale insieme.
+L'interfaccia **java.sql.ResultSet** fornisce i metodi essenziali per attraversare l'insieme di risultati restituiti da una query SQL. Il metodo principale, **next()**, sposta il cursore attraverso l'insieme.
 
-### in pratica
+### In pratica
 
-* Inizialmente, il cursore del corrente oggetto ResultSet sarà posizionato prima del primo dei record restituiti.
-* In questa condizione, non è possibile svolgere operazioni di analisi dei risultati: nessun record è puntato dal cursore corrente.
-* Una prima chiamata a next() farà in modo che il cursore venga spostato sul primo record restituito dalla query.
-* Ogni volta che un record è puntato dal cursore, diventa possibile estrarne i contenuti.
-* Quando non ci sono più record nel ResultSet, il metodo next() ritorna **false**
-* Non conoscendo il numero di righe restituite dal db, un ResultSet solitamente viene passato in rassegna con un codice del tipo:
+1. Inizialmente, il cursore del ResultSet è posizionato prima del primo record restituito.
+2. In questa fase, il cursore non punta a nessun record, impedendo l'analisi dei risultati.
+3. La prima chiamata a **next()** sposterà il cursore sul primo record restituito dalla query.
+4. Ogni volta che un record è puntato dal cursore, è possibile estrarre i suoi contenuti.
+5. Quando non ci sono più record nel ResultSet, il metodo **next()** ritorna **false**.
+6. Per scorrere un ResultSet, spesso si utilizza un ciclo come il seguente:
 
-```java
-while (resultSet.next()) { 
- // Esamina il record corrente. 
-}
-```
-
-Un ciclo di questo tipo termina non appena tutti i record restituiti dalla query eseguita sono stati passati in rassegna.
-
----
+   ```java
+   while (resultSet.next()) { 
+      // Esamina il record corrente. 
+   }
+   ```
 
 ### Leggere i valori del record corrente
 
-Quando un record è correttamente puntato dal cursore, è possibile esaminare i suoi campi attraverso dei metodi che hanno tutti la forma:
-`getTipo(int indiceColonna)`
+Quando il cursore punta a un record, è possibile esaminarne i campi tramite metodi come:
 
-Ad esempio, si supponga di voler ottenere il contenuto del primo campo del record corrente, sotto forma di **stringa**:
+- `getTipo(int indiceColonna)`: Restituisce il valore del campo specificato dell'indice della colonna.
 
-`String stringa = resultSet.getString(1);`
+  ```java
+  String stringa = resultSet.getString(1);
+  ```
 
-Se si conoscono i **nomi** associati ai singoli campi del record, è possibile usare la variante: `getTipo(String nomeColonna)`
+- `getTipo(String nomeColonna)`: Restituisce il valore del campo specificato dal nome della colonna.
 
-Ad esempio: `String nome = resultSet.getString("Nome");`
+  ```java
+  String nome = resultSet.getString("Nome");
+  ```
 
----
+### Metodi comuni per la lettura
 
-### I metodi per leggere
+Di seguito, sono elencati alcuni dei metodi comuni utilizzati per leggere i dati dal ResultSet:
 
-Il seguente elenco riporta i metodi di questa famiglia più frequentemente utilizzati:
-
-* `getBoolean()`  Restituisce il campo specificato sotto forma di **boolean**.
-* `getByte()`  Restituisce il campo specificato sotto forma di **byte**.
-* `getDate()`  Restituisce il campo specificato sotto forma di **oggetto java.util.Date**.
-* `getDouble()`  Restituisce il campo specificato sotto forma di **double**.
-* `getFloat()`  Restituisce il campo specificato sotto forma di **float**.
-* `getInt()`  Restituisce il campo specificato sotto forma di **int**.
-* `getLong()`  Restituisce il campo specificato sotto forma di **long**.
-* `getShort()`  Restituisce il campo specificato sotto forma di **short**.
-* `getString()`  Restituisce il campo specificato sotto forma di **oggetto java.lang.String**.
-
----
-
+- `getBoolean()`: Restituisce il campo specificato come booleano.
+- `getByte()`: Restituisce il campo specificato come byte.
+- `getDate()`: Restituisce il campo specificato come oggetto java.util.Date.
+- `getDouble()`: Restituisce il campo specificato come double.
+- `getFloat()`: Restituisce il campo specificato come float.
+- `getInt()`: Restituisce il campo specificato come int.
+- `getLong()`: Restituisce il campo specificato come long.
+- `getShort()`: Restituisce il campo specificato come short.
+- `getString()`: Restituisce il campo specificato come oggetto java.lang.String.
