@@ -37,12 +37,66 @@ Questo approccio semplifica notevolmente la gestione delle informazioni e l'inte
 
 ## Ambito delle Variabili in JSP
 
-L'ambito definisce dove e per quanto tempo saranno accessibili le variabili, inclusi gli oggetti impliciti, JavaBeans, ecc. In JSP, le variabili possono avere diversi ambiti:
+In JSP (JavaServer Pages), il concetto di scope è applicato attraverso l'uso di oggetti impliciti noti come oggetti di ambito (scope objects). Gli oggetti di ambito consentono di memorizzare e recuperare dati durante il ciclo di vita di una richiesta HTTP. Ci sono quattro tipi principali di oggetti di ambito in JSP:
 
-* **`page` (di pagina)**: L'oggetto o la variabile è accessibile solo nella servlet che rappresenta la pagina JSP.
-* **`request` (di richiesta)**: L'oggetto viene creato durante la richiesta e distrutto dopo l'uso.
-* **`session` (di sessione)**: L'oggetto è accessibile durante tutta la durata della sessione dell'utente.
-* **`application` (di applicazione)**: L'oggetto è accessibile nella servlet che rappresenta la pagina ed è condiviso da tutte le richieste della web application.
+1. **Page Scope**: La variabile è valida solo per la durata della richiesta e della pagina. Non è condivisa con altre pagine o richieste.
+
+2. **Request Scope**: La variabile è valida solo per la durata della richiesta. Può essere condivisa tra le diverse pagine all'interno della stessa richiesta.
+
+3. **Session Scope**: La variabile è valida per tutta la sessione dell'utente. Può essere condivisa tra le diverse richieste dello stesso utente.
+
+4. **Application Scope (o ServletContext Scope)**: La variabile è valida per l'intera applicazione web. Può essere condivisa tra le diverse sessioni e richieste degli utenti.
+
+---
+
+### Ecco un esempio di utilizzo di variabili con differenti ambiti in un'applicazione JSP:
+
+```jsp
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Scope Example</title>
+</head>
+<body>
+
+<%
+    // Page Scope: Variabile valida solo per questa pagina
+    pageContext.setAttribute("pageVariable", "Page Scope Variable");
+
+    // Request Scope: Variabile valida solo per questa richiesta
+    request.setAttribute("requestVariable", "Request Scope Variable");
+
+    // Session Scope: Variabile valida per tutta la sessione dell'utente
+    session.setAttribute("sessionVariable", "Session Scope Variable");
+
+    // Application Scope: Variabile valida per l'intera applicazione
+    application.setAttribute("applicationVariable", "Application Scope Variable");
+%>
+
+<h2>Page Scope Variable: <%= pageContext.getAttribute("pageVariable") %></h2>
+<h2>Request Scope Variable: <%= request.getAttribute("requestVariable") %></h2>
+<h2>Session Scope Variable: <%= session.getAttribute("sessionVariable") %></h2>
+<h2>Application Scope Variable: <%= application.getAttribute("applicationVariable") %></h2>
+
+</body>
+</html>
+```
+
+---
+
+### In questo esempio:
+
+* `pageVariable` è una variabile con ambito di pagina.
+* `requestVariable` è una variabile con ambito di richiesta.
+* `sessionVariable` è una variabile con ambito di sessione.
+* `applicationVariable` è una variabile con ambito di applicazione.
+
+Le variabili vengono impostate e lette utilizzando gli oggetti di ambito appropriati (`pageContext`, `request`, `session`, `application`).
 
 ---
 
