@@ -47,7 +47,7 @@ e memorizzato nel registro con data odierna
 
 #### Visualizza tutti i dati inseriti
 
-* visualizza gli esami per ogni studente, a meno dei commenti
+* visualizza gli esami per ogni studente, non pubblicare i commenti
 
 #### Aggiungi commento a esame
 
