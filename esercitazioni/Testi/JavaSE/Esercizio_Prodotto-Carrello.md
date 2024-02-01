@@ -25,7 +25,7 @@ public class ProvaEserc1 {
 		Prodotto p4 = new Prodotto("monitor",300,false);
 		Prodotto p5 = new Prodotto("tastiera",25.5,true);
 		Prodotto p6 = new Prodotto("mouse",12.5,true);
-		Carrello o = new Carrello("mauro");
+		Carrello o = new Carrello("Il carrello di Andrea");
 		o.aggiungiProdotto(p1, 3);
 		o.aggiungiProdotto(p2, 4);
 		o.aggiungiProdotto(p3, 3);

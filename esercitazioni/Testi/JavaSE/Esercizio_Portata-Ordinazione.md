@@ -20,7 +20,7 @@ Si scrivano le classi in modo da potercompilare ed eseguire la seguente classe d
 public class ProvaEserc1 {
 	public static void main(String[] args) {
 		Portata p1 = new Portata("antipasto",8.5,false);
-		Portata p2 = new Portata("matriciana",12.5,false);
+		Portata p2 = new Portata("amatriciana",12.5,false);
 		Portata p3 = new Portata("bistecca",25,false);
 		Portata p4 = new Portata("insalata",3,false);
 		Portata p5 = new Portata("negramaro",15.5,true);
