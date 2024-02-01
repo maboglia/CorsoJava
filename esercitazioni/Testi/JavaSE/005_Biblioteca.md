@@ -8,7 +8,7 @@ booleana inPrestito indica se il libro è attualmente in prestito. Si inseriscan
 segunti metodi:
 
 * `String getDescrizione()`: restituisce una descrizione contenente il titolo e l'autore del libro;
-* `boolean getInPrestito()`: restituisce true se il libro è in prestito, false altrimenti;
+* `boolean isInPrestito()`: restituisce true se il libro è in prestito, false altrimenti;
 * `void setInPrestito(boolean stato)`: cambia lo stato del libro (in prestito oppure disponibile).
 
 La classe **LibroPerBambini**, sottoclasse di Libro, deve contenere una variabile d'istanza
