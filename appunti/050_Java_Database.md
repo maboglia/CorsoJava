@@ -4,7 +4,6 @@ JDBC (Java Database Connectivity) è un'interfaccia completamente Java utilizzat
 
 L'**API JDBC** si trova nel pacchetto java.sql; contiene poche classi concrete ed è composta principalmente da interfacce indipendenti dal database.
 
-![JDBC](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/02_classe_base/function.png)
 
 ---
 
