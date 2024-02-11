@@ -1,4 +1,3 @@
-
 ## application.properties
 
 ```java
