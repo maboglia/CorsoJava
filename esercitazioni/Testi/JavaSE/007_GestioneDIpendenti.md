@@ -3,6 +3,7 @@
 ## Dipendente
 
 Scrivere la classe **Dipendente** che ha i seguenti attributi 
+
 * matricola: una stringa indicante il numero di matricola del dipendente, 
 * stipendio: un numero con la virgola indicante lo stipendio base che possiede il dipendente, 
 * straordinario: un numero con la virgola indicante l’importo dovuto per ciascuna ora di straordinario effettuata dal dipendente. 
