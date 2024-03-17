@@ -1,49 +1,181 @@
-# Biglietteria teatro
+# # Biglietteria Teatro
 
-L’applicazione da progettare riguarda la gestione della vendita di biglietti in un teatro. 
+L'applicazione che si intende progettare gestisce la vendita dei biglietti in un teatro.
 
-## spettacolo
+## Spettacolo
 
-Ogni spettacolo che si svolge nel teatro è caratterizzato da:
+Ogni spettacolo tenuto nel teatro è definito dai seguenti attributi:
 
-* titolo (una stringa), 
-* nome del regista (una stringa) e 
-* nome degli attori che vi recitano (un array non vuoto di stringhe)
+- Titolo: una stringa che rappresenta il titolo dello spettacolo.
+- Regista: una stringa che indica il nome del regista dello spettacolo.
+- Attori: un array non vuoto di stringhe che contiene i nomi degli attori che partecipano allo spettacolo.
 
-## replica
+## Replica
 
-Per uno spettacolo si prevedono un certo numero di repliche (almeno una), di cui interessa la data e l’ora in cui si svolgono. 
+Per ciascuno spettacolo sono programmate una o più repliche. Ogni replica è caratterizzata da una data e un'ora specifiche.
 
-## posto
+## Posto
 
-Dei posti del teatro interessa conoscere la fila, il numero ed il tipo (platea, palco, galleria, ecc.). 
+I posti all'interno del teatro sono identificati per fila, numero e tipo (ad esempio: platea, palco, galleria, ecc.). Alcuni posti sono appositamente adattati per ospitare persone con disabilità.
 
-__Alcuni posti sono adatti ad accogliere disabili.__
+## Biglietto
 
-## biglietto
+Il costo di ciascun biglietto è determinato dal tipo di posto e dallo spettacolo. Ad esempio, il costo dei posti in platea per lo spettacolo "Cats" potrebbe essere di 50 euro.
 
-Il costo del biglietto riferito ad un posto (un reale positivo) è stabilito in base al tipo di posto ed allo spettacolo 
-(ad esempio, per lo spettacolo __“Cats”__, il costo dei posti di platea è di 50 euro). 
+## Prenotazione
 
-## Prenotazione 
+Una prenotazione è caratterizzata dai seguenti attributi:
 
-Di una prenotazione p interessa il nome del cliente (una stringa) che l’ha effettuata, la data in cui è stata effettuata, la replica dello spettacolo a cui p si riferisce, ed i posti (almeno uno) che sono prenotati tramite p. 
+- Nome del cliente: una stringa che rappresenta il nome del cliente che ha effettuato la prenotazione.
+- Data di prenotazione: la data in cui è stata effettuata la prenotazione.
+- Replica dello spettacolo: la replica dello spettacolo per cui è stata effettuata la prenotazione.
+- Posti prenotati: almeno un posto che è stato prenotato tramite questa prenotazione. Se sono inclusi posti per persone con disabilità, viene registrato anche il tipo di disabilità.
 
-Inoltre, se p prenota anche posti per disabili, interessa conoscere il tipo di disabilità (una stringa) di colui per cui è prenotato il posto. 
+## Addetto Biglietteria
 
-Si noti che data una prenotazione è di interesse conoscere i posti per disabili eventualmente prenotati (con annesse disabilità indicate per i vari posti prenotati).
+L'addetto alla biglietteria del teatro esegue i seguenti controlli:
 
-## Addetto biglietteria
+- Dato uno spettacolo e un tipo di posto, restituisce il costo associato al tipo di posto per lo spettacolo. Se il costo è unico e specificato, altrimenti restituisce -1.
+- Dato un insieme di posti e una replica, restituisce l'insieme dei posti disponibili per quella replica (cioè i posti che non sono stati prenotati per quella replica).
 
-L’addetto alla biglietteria del teatro è interessato ad effettuare alcuni controlli. 
+Questo testo descrive le principali caratteristiche e funzionalità del sistema di gestione della biglietteria del teatro.
 
-In particolare:
+## Esempio di soluzione
 
-* dato uno spettacolo s ed una tipologia di posto t, 
-  * restituire il costo associato alla tipologia t per lo spettacolo s, 
-  * se questo costo è specificato ed è unico. 
-  * Restituire −1 in caso contrario (questo segnala una situazione di errore);
+Ecco un esempio di possibile implementazione delle classi per gestire la biglietteria del teatro:
 
-* dato un insieme I di posti ed una replica r, 
-  * restituire l’insieme dei posti in I che sono disponibili per r 
-  * (cioè i posti contenuti in I che non risultano prenotati per r).
+```java
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+// Classe Spettacolo
+class Spettacolo {
+    private String titolo;
+    private String regista;
+    private List<String> attori;
+
+    public Spettacolo(String titolo, String regista, List<String> attori) {
+        this.titolo = titolo;
+        this.regista = regista;
+        this.attori = attori;
+    }
+
+    // getter e setter
+}
+
+// Classe Replica
+class Replica {
+    private Date dataOra;
+
+    public Replica(Date dataOra) {
+        this.dataOra = dataOra;
+    }
+
+    // getter e setter
+}
+
+// Enum TipoPosto
+enum TipoPosto {
+    PLATEA,
+    PALCO,
+    GALLERIA,
+    // altri tipi di posto...
+}
+
+// Classe Posto
+class Posto {
+    private int fila;
+    private int numero;
+    private TipoPosto tipo;
+    private boolean disabile;
+    private String tipoDisabilita;
+
+    public Posto(int fila, int numero, TipoPosto tipo, boolean disabile, String tipoDisabilita) {
+        this.fila = fila;
+        this.numero = numero;
+        this.tipo = tipo;
+        this.disabile = disabile;
+        this.tipoDisabilita = tipoDisabilita;
+    }
+
+    // getter e setter
+}
+
+// Classe Biglietto
+class Biglietto {
+    private Posto posto;
+    private double costo;
+
+    public Biglietto(Posto posto, double costo) {
+        this.posto = posto;
+        this.costo = costo;
+    }
+
+    // getter e setter
+}
+
+// Classe Prenotazione
+class Prenotazione {
+    private String nomeCliente;
+    private Date dataPrenotazione;
+    private Replica replica;
+    private List<Biglietto> biglietti;
+
+    public Prenotazione(String nomeCliente, Date dataPrenotazione, Replica replica, List<Biglietto> biglietti) {
+        this.nomeCliente = nomeCliente;
+        this.dataPrenotazione = dataPrenotazione;
+        this.replica = replica;
+        this.biglietti = biglietti;
+    }
+
+    // getter e setter
+}
+
+// Classe AddettoBiglietteria
+class AddettoBiglietteria {
+    private Map<Spettacolo, Map<TipoPosto, Double>> prezzi;
+
+    public AddettoBiglietteria() {
+        prezzi = new HashMap<>();
+        // Inizializza i prezzi per ciascun tipo di posto per ogni spettacolo
+        // Questa è solo una simulazione, i prezzi effettivi dovrebbero essere impostati in base alla politica del teatro
+        prezzi.put(SPETTACOLO1, initPrezzi());
+        prezzi.put(SPETTACOLO2, initPrezzi());
+    }
+
+    private Map<TipoPosto, Double> initPrezzi() {
+        Map<TipoPosto, Double> prezzi = new HashMap<>();
+        prezzi.put(TipoPosto.PLATEA, 50.0);
+        prezzi.put(TipoPosto.PALCO, 40.0);
+        prezzi.put(TipoPosto.GALLERIA, 30.0);
+        return prezzi;
+    }
+
+    public double getPrezzoPosto(Spettacolo spettacolo, TipoPosto tipoPosto) {
+        if (prezzi.containsKey(spettacolo) && prezzi.get(spettacolo).containsKey(tipoPosto)) {
+            return prezzi.get(spettacolo).get(tipoPosto);
+        }
+        return -1; // Segnala una situazione di errore
+    }
+
+    public List<Posto> postiDisponibili(List<Posto> posti, Replica replica) {
+        List<Posto> postiDisponibili = new ArrayList<>();
+        // Implementa la logica per verificare quali posti sono disponibili per la replica specificata
+        return postiDisponibili;
+    }
+}
+
+// Classe principale per testare il funzionamento
+public class Main {
+    public static void main(String[] args) {
+        // Esempio di utilizzo delle classi sopra definite
+        // Creazione di spettacoli, repliche, posti, biglietti, prenotazioni, ecc.
+        // Utilizzo degli oggetti per gestire la biglietteria del teatro
+    }
+}
+```
+
+Questa soluzione fornisce una struttura di base per gestire la vendita di biglietti in un teatro, includendo la definizione di spettacoli, repliche, posti, biglietti e prenotazioni, insieme alla logica per calcolare i prezzi dei posti e verificare la disponibilità dei posti per una replica specificata.
