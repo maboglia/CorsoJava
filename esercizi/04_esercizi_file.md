@@ -75,48 +75,70 @@ Se nel file di testo non vi è niente, il programma deve avvisare che il file è
 
 ## Esercizio no.1:soluzione
 
-Non conoscendo a priori quanti numeri interi sono contenuti nel file 'numeri.txt' conviene fare uso di un arraylist.
-L'operatore A.size() ci dice quanti numeri ci sono (quante righe sono occupate). A secondo del suo valore la struttura decisionale if-else if esegue le operazioni indicate dalle specifiche del problema. Ogni singolo numero memorizzato nell'arraylist deve prima essere convertito in stringa e poi in numero, tramite l'istruzione:
-
-Integer.parseInt(((String)A.get(i)).trim()) .
-
-Questa operazione non è indispensabile nel caso il file sia vuoto oppure contenga un solo numero.
-La variabile 'tot' funziona da accumulatore e restituisce il prodotto dei due numeri incontrati oppure la somma dei più numeri trovati.
+Ecco un programma Java che legge i numeri da un file di testo e implementa le regole richieste:
 
 ```java
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Collections;
-class nomi{
-public static void main (String args [])throws IOException{
-BufferedReader f=null;
-int i=0,tot=0;
-String s="";
-ArrayList A=new ArrayList(0);
-try {
-   f=new BufferedReader(new FileReader("numeri.txt"));
-   while(s!=null){
-      s=f.readLine();
-      if(s!=null){
-         A.add(s);
-         i++;
-      }//fine if
-   }//fine while
-f.close();
-}catch (IOException e){
-System.err.println("errore"); }//fine try-catch
-if(A.size()==0)System.out.println("file vuoto");
-else if(A.size()==1) System.out.println(A.get(0));
-else if(A.size()==2){
-   tot=Integer.parseInt(((String)A.get(0)).trim());    tot*=Integer.parseInt(((String)A.get(1)).trim());
-System.out.println(tot);
-} else { for(i=0;i < A.size();i++)    tot+=Integer.parseInt(((String)A.get(i)).trim());
-System.out.println(tot);
-}// fine else
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
-}//fine main
-}//fine class
+public class LeggiNumeriDaFile {
+    public static void main(String[] args) {
+        // Percorso del file di testo
+        String nomeFile = "numeri.txt";
+
+        try {
+            // Apriamo il file per la lettura
+            FileReader fileReader = new FileReader(nomeFile);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
+
+            // Variabili per tenere traccia del conteggio e della somma dei numeri
+            int conteggio = 0;
+            int somma = 0;
+            int prodotto = 1;
+
+            // Leggiamo il file riga per riga
+            String linea;
+            while ((linea = bufferedReader.readLine()) != null) {
+                // Incrementiamo il conteggio
+                conteggio++;
+
+                // Parsiamo la riga in un numero intero
+                int numero = Integer.parseInt(linea);
+
+                // Aggiungiamo il numero alla somma o al prodotto
+                somma += numero;
+                prodotto *= numero;
+            }
+
+            // Chiudiamo il bufferedReader
+            bufferedReader.close();
+
+            // Verifichiamo il conteggio e stampiamo il risultato appropriato
+            if (conteggio == 0) {
+                System.out.println("Il file è vuoto.");
+            } else if (conteggio == 1) {
+                System.out.println("Il numero nel file è: " + somma);
+            } else if (conteggio == 2) {
+                System.out.println("Il prodotto dei due numeri nel file è: " + prodotto);
+            } else {
+                System.out.println("La somma dei numeri nel file è: " + somma);
+            }
+
+        } catch (IOException e) {
+            // Gestione dell'eccezione in caso di errore di lettura del file
+            System.out.println("Si è verificato un errore durante la lettura del file.");
+            e.printStackTrace();
+        } catch (NumberFormatException e) {
+            // Gestione dell'eccezione in caso di errore di parsing del numero
+            System.out.println("Il file contiene un valore non numerico.");
+            e.printStackTrace();
+        }
+    }
+}
 ```
+
+Assicurati di avere un file di testo chiamato "numeri.txt" nella stessa directory del programma Java, e inserisci i numeri desiderati in questo file seguendo le regole specificate.
 
 ---
 
@@ -129,61 +151,76 @@ in seguito caricare il file salvato in un vettore T (avente la stessa dimensione
 
 ## Esercizio no.2:soluzione
 
-Qui si è scelto di affidare a due metodi le operazioni di input e di salvataggio e quella di stampa del vettore finale.
-La funzione caricaesalva() riceve in ingresso due vettori A e B ciascuno di 5 posti. La stessa funzione salva in un file la somma delle singole componenti dei due vettori.
-La funzione stampa() non fa altro che aprire il file e mostrare a video i risultati della precedente operazione.
+Ecco un programma Java che accetta in input due vettori di interi, calcola la loro somma, scrive la somma su disco in un file, quindi carica il file salvato in un vettore e lo stampa a video:
 
 ```java
-import java.io.*;
-class vettori{
-final static int n=5;
-public static void main (String args [])throws IOException{
-caricaesalva();
-stampa();
-}//fine main
-//-----
-static void caricaesalva() throws IOException{
-InputStreamReader input=new InputStreamReader(System.in);
-BufferedReader h= new BufferedReader(input);
-int i;
-int A[] = new int[n];
-int B[] = new int[n];
-for(i=0;i < A.length;i++){
-   System.out.print("A-ins "+(i+1)+"°:");    A[i]=Integer.parseInt(h.readLine().trim());
-}//fine for A
-for(i=0;i < B.length;i++){
-   System.out.print("B-ins "+(i+1)+"°:");    B[i]=Integer.parseInt(h.readLine().trim());
-}//fine for B
-PrintWriter f=null;
-try {
-f=new PrintWriter(new FileWriter("sommavettori.txt"));
-}catch (IOException e){ System.err.println("errore"); }
-//scrittura
-for(i=0;i < n;i++)f.println(A[i]+B[i]);
-f.close();
-}//fine carica()
-//-----
-static void stampa(){
-BufferedReader f=null;
-int i=0;
-int T[] = new int[n];
-String s=""; //lettura del file e caricamento array
-try {
-f=new BufferedReader(new FileReader("sommavettori.txt"));
-while(s!=null){
-   s=f.readLine();
-   if(s!=null){
-      T[i]=Integer.parseInt(s.trim());
-      i++;
-   }//fine if
-}//fine while
-f.close();
-}catch (IOException e){ System.err.println("errore");}
-//stampo T
-for(i=0;i < n;i++)System.out.print(T[i]+" ");
-}//fine salva()
-}//fine class
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class SommaVettori {
+    public static void main(String[] args) {
+        // Definizione delle dimensioni dei vettori
+        final int DIMENSIONE = 5;
+
+        // Creazione dei vettori A e B
+        int[] A = new int[DIMENSIONE];
+        int[] B = new int[DIMENSIONE];
+
+        // Lettura dei vettori A e B da input
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Inserisci i valori del vettore A:");
+        for (int i = 0; i < DIMENSIONE; i++) {
+            System.out.print("A[" + i + "]: ");
+            A[i] = scanner.nextInt();
+        }
+        System.out.println("Inserisci i valori del vettore B:");
+        for (int i = 0; i < DIMENSIONE; i++) {
+            System.out.print("B[" + i + "]: ");
+            B[i] = scanner.nextInt();
+        }
+
+        // Calcolo della somma dei vettori A e B
+        int[] T = new int[DIMENSIONE];
+        for (int i = 0; i < DIMENSIONE; i++) {
+            T[i] = A[i] + B[i];
+        }
+
+        // Scrittura della somma su disco
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("somma.txt"));
+            for (int i = 0; i < DIMENSIONE; i++) {
+                writer.write(Integer.toString(T[i]));
+                writer.newLine();
+            }
+            writer.close();
+            System.out.println("La somma è stata scritta sul file somma.txt.");
+        } catch (IOException e) {
+            System.out.println("Si è verificato un errore durante la scrittura su file.");
+            e.printStackTrace();
+        }
+
+        // Caricamento della somma dal file
+        try {
+            Scanner fileScanner = new Scanner("somma.txt");
+            System.out.println("Il contenuto del file somma.txt è:");
+            for (int i = 0; i < DIMENSIONE; i++) {
+                if (fileScanner.hasNextLine()) {
+                    String line = fileScanner.nextLine();
+                    System.out.println(line);
+                }
+            }
+            fileScanner.close();
+        } catch (IOException e) {
+            System.out.println("Si è verificato un errore durante la lettura dal file.");
+            e.printStackTrace();
+        }
+    }
+}
 ```
+
+Assicurati di inserire i valori dei vettori A e B quando richiesto e controlla il file "somma.txt" per vedere i risultati della somma.
 
 ---
 
@@ -206,63 +243,87 @@ lo stesso programma deve permettere di modificare una delle stringhe salvando su
 
 ## Esercizio no.3:soluzione
 
-Il programma principale apre il file contenente le stringhe e le memorizza in un arraylist, dato che non possiamo conoscere preventivamente quante parole ci sono nel file.
-L'arraylist viene stampato dal metodo vista().
-L'arraylist (A) viene passato al metodo mod(A) che ne permette la modifica. Dopo le modifiche il nuovo arraylist viene stampato a video, prima del suo successivo salvataggio nel file.
+
+Ecco un programma Java che legge un file di testo contenente una serie di stringhe su righe consecutive, permette all'utente di modificare una delle stringhe e salva le modifiche nello stesso file:
 
 ```java
 import java.io.*;
 import java.util.ArrayList;
-class nomi{
-public static void main (String args []) throws IOException{
-BufferedReader f=null;
-int i=0;
-String s="";
-ArrayList A=new ArrayList(0);
-//lettura del file e caricamento array
-try {
-f=new BufferedReader(new FileReader("nomi.txt"));
-while(s!=null){
-   s=f.readLine();
-   if(s!=null){
-      A.add(s);
-      i++;
-   }//fine if
-}//fine while
-f.close();
-}catch (IOException e){ System.err.println("errore");}
-vista(A);
-mod(A);
-vista(A);
-salva(A);
-}//fine main
-//-----
-static void vista(ArrayList A){
-for(int i=0;i < A.size();i++)System.out.print(i+" "+A.get(i)+"\n");
-}//fine metodo vista
-//-----
-static void mod(ArrayList A) throws IOException{
-InputStreamReader input=new InputStreamReader(System.in);
-BufferedReader h= new BufferedReader(input);
-String s;
-int i;
-System.out.print("index:");
-i=Integer.parseInt(h.readLine().trim());
-System.out.print("nuovo nome:");
-s=h.readLine();
-A.set(i,s); } //fine mod
-//-----
-static void salva(ArrayList A){
-PrintWriter f=null;
-try {
-f=new PrintWriter(new FileWriter("nomi.txt"));
-}catch (IOException e){ System.err.println("errore");}
-//scrittura
-for(int i=0;i < A.size();i++)f.println(A.get(i));
-f.close();
-}//fine metodo salva
-}//fine class
+import java.util.Scanner;
+
+public class ModificaFileTesto {
+
+    public static void main(String[] args) {
+        // Percorso del file di testo
+        String percorsoFile = "test.txt";
+
+        // Leggi le stringhe dal file
+        ArrayList<String> stringhe = leggiFile(percorsoFile);
+
+        // Stampa le stringhe lette
+        System.out.println("Contenuto del file:");
+        for (String s : stringhe) {
+            System.out.println(s);
+        }
+
+        // Richiedi all'utente di scegliere quale stringa modificare
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("\nQuale stringa vuoi modificare? (Inserisci il numero di riga): ");
+        int numeroRiga = scanner.nextInt();
+        scanner.nextLine(); // Consuma il carattere di fine riga
+
+        // Richiedi all'utente la nuova stringa
+        System.out.print("Inserisci la nuova stringa: ");
+        String nuovaStringa = scanner.nextLine();
+
+        // Modifica la stringa nella lista
+        if (numeroRiga >= 1 && numeroRiga <= stringhe.size()) {
+            stringhe.set(numeroRiga - 1, nuovaStringa);
+
+            // Scrivi le stringhe modificate sul file
+            scriviFile(percorsoFile, stringhe);
+
+            System.out.println("Stringa modificata con successo!");
+        } else {
+            System.out.println("Numero di riga non valido.");
+        }
+    }
+
+    // Metodo per leggere le stringhe da un file di testo
+    private static ArrayList<String> leggiFile(String percorso) {
+        ArrayList<String> stringhe = new ArrayList<>();
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(percorso));
+            String linea;
+            while ((linea = reader.readLine()) != null) {
+                stringhe.add(linea);
+            }
+            reader.close();
+        } catch (IOException e) {
+            System.out.println("Errore durante la lettura del file: " + e.getMessage());
+        }
+        return stringhe;
+    }
+
+    // Metodo per scrivere le stringhe su un file di testo
+    private static void scriviFile(String percorso, ArrayList<String> stringhe) {
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter(percorso));
+            for (String s : stringhe) {
+                writer.write(s);
+                writer.newLine();
+            }
+            writer.close();
+        } catch (IOException e) {
+            System.out.println("Errore durante la scrittura sul file: " + e.getMessage());
+        }
+    }
+}
 ```
+
+Assicurati di inserire il percorso corretto del file di testo che desideri leggere e modificare. Una volta eseguito il programma, segui le istruzioni visualizzate per modificare una delle stringhe nel file di testo.
+
+---
 
 
 In un file viene memorizzato il magazzino di una azienda, secondo la notazione
@@ -280,66 +341,55 @@ Il programma deve restituire il controvalore del magazzino .
 
 ## Esercizio no.5:soluzione
 
-E' chiaro che in questo problema, a parte le operazioni sul file di testo, il lavoro maggiore sarà quello di estrarre le sottostringhe rappresentative il prezzo 'prz' del prodotto e il suo quantitativo 'qta' a magazzino.
-Per ogni stringa deve essere calcolato il subtotale 'sub' dato dal prodotto del costo 'prz' del prodotto per la sua quantità 'qta'. Poi bisogna progressivamente sommare i subtotali.
-Prima di procedere esaminiamo la questione di come estrarre dalla stringa gli elementi che ci interessano. In questo programma, utilizzando gli operatori indexOf e substring, prima rileviamo la posizione dei marcatori che ci interessano, poi estraiamo le sottostringhe comprese fra le posizioni dei marcatori, qui memorizzati nelle variabili i ed f.
+Ecco un programma Java che legge un file contenente informazioni sul magazzino di un'azienda e calcola il controvalore totale del magazzino:
 
 ```java
-class parser {
-public static void main (String args []) {
-String s="biella#7@3";
-char ch;
-int i,f,prz,qta,somma;
-i=s.indexOf('#')+1;
-f=s.indexOf('@');
-prz=Integer.parseInt(s.substring(i,f).trim());
-i=s.indexOf('@')+1;
-f=s.length();
-qta=Integer.parseInt(s.substring(i,f).trim());
-somma=prz+qta; System.out.println(somma);
-}//fine main
-}// fine classe
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class CalcolaControvaloreMagazzino {
+
+    public static void main(String[] args) {
+        // Percorso del file contenente le informazioni sul magazzino
+        String percorsoFile = "magazzino.txt";
+
+        // Calcola il controvalore del magazzino
+        double controvalore = calcolaControvaloreMagazzino(percorsoFile);
+
+        // Stampa il controvalore del magazzino
+        System.out.println("Il controvalore del magazzino è: " + controvalore + " euro.");
+    }
+
+    // Metodo per calcolare il controvalore del magazzino
+    private static double calcolaControvaloreMagazzino(String percorsoFile) {
+        double controvaloreTotale = 0.0;
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(percorsoFile));
+            String linea;
+            while ((linea = reader.readLine()) != null) {
+                // Split della linea usando '#' e '@' come delimitatori
+                String[] parti = linea.split("#|@");
+                if (parti.length == 3) {
+                    // Estrai il costo e il quantitativo dal file
+                    double costo = Double.parseDouble(parti[1]);
+                    int quantitativo = Integer.parseInt(parti[2]);
+                    // Calcola il controvalore del prodotto e aggiungilo al controvalore totale
+                    controvaloreTotale += costo * quantitativo;
+                } else {
+                    System.out.println("Formato non valido per la riga: " + linea);
+                }
+            }
+            reader.close();
+        } catch (IOException e) {
+            System.out.println("Errore durante la lettura del file: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.out.println("Errore di conversione: " + e.getMessage());
+        }
+        return controvaloreTotale;
+    }
+}
 ```
 
-Qui viene restituita la somma fra il prezzo prz e la quantità qta.
-L'operazione ci serve solo per capire se il programma fonziona. 
-Basandoci su questo esperimento preliminare, possiamo scrivere il programma che deve elaborare i dati provenienti dal file di testo.
+Assicurati di sostituire `"magazzino.txt"` con il percorso effettivo del file contenente le informazioni sul magazzino. Una volta eseguito il programma, restituirà il controvalore totale del magazzino.
 
-```java
-import java.io.*;
-class maga{
-public static void main (String args []){
-BufferedReader f=null;
-String s="";
-int somma=0;
-//leggo il file
-try {
-   f=new BufferedReader(new FileReader("maga.txt"));
-   while(s!=null){
-      System.out.println(s);
-      s=f.readLine();
-      if(s!=null){
-         somma+=subtotale(s);
-      }//fine if
-      }//fine while
-f.close();
-}catch (IOException e){System.err.println("errore");}
-System.out.println(somma);
-}//fine main
-
-static int subtotale(String s){
-char ch;
-int i,f,prz,qta,sub;
-i=s.indexOf('#')+1;
-f=s.indexOf('@');
-prz=Integer.parseInt(s.substring(i,f).trim());
-i=s.indexOf('@')+1;
-f=s.length();
-qta=Integer.parseInt(s.substring(i,f).trim());
-sub=prz*qta;
-return sub;
-}//fine subtotale
-}//fine class
-```
-
-Come si nota, il lavoro di estrazione delle sottostringhe di interesse e la loro conversione in numeri, viene eseguita dal metodo subtotale() che viene richiamato dal ciclo while che rileva ogni occorrenza di una stringa all'interno del file.
