@@ -2,6 +2,30 @@
 
 ---
 
+Spring MVC è un framework leggero che facilita lo sviluppo di applicazioni Web basate su Java. Utilizza il pattern architetturale MVC (Model-View-Controller) per separare la logica di presentazione, la logica di business e la gestione delle richieste.
+
+Ecco alcune delle principali annotazioni utilizzate in Spring MVC:
+
+1. **@Controller**: Utilizzata per annotare una classe che funge da controller. Indica a Spring che la classe contiene metodi di gestione delle richieste HTTP.
+
+2. **@RequestMapping**: Utilizzata per mappare le richieste HTTP a metodi di controller specifici. Può essere applicata a livello di classe per definire un mapping di base per tutti i metodi del controller, o a livello di metodo per definire un mapping specifico per quel metodo.
+
+3. **@GetMapping**, **@PostMapping**, **@PutMapping**, **@DeleteMapping**: Sono annotazioni di convenienza che combinano @RequestMapping con i metodi HTTP GET, POST, PUT e DELETE rispettivamente. Consentono di definire facilmente il tipo di richiesta HTTP gestita da un metodo del controller.
+
+4. **@RequestParam**: Utilizzata per estrarre i parametri della richiesta HTTP. Viene utilizzata per mappare i parametri della richiesta HTTP ai parametri dei metodi del controller.
+
+5. **@PathVariable**: Utilizzata per estrarre i valori delle variabili della richiesta URI. Consente di utilizzare variabili nella parte di percorso dell'URL e mapparle a parametri dei metodi del controller.
+
+6. **@ResponseBody**: Utilizzata per indicare che il valore restituito da un metodo del controller deve essere serializzato direttamente nella risposta HTTP come corpo della risposta.
+
+7. **@ModelAttribute**: Utilizzata per aggiungere un oggetto al modello di dati del controller. Può essere utilizzata per passare dati dal client al server o per preparare dati per la visualizzazione nel modello.
+
+8. **@PathVariable**: Utilizzata per estrarre i valori delle variabili della richiesta URI. Consente di utilizzare variabili nella parte di percorso dell'URL e mapparle a parametri dei metodi del controller.
+
+Queste sono solo alcune delle annotazioni più comuni utilizzate in Spring MVC. Oltre a queste, ci sono molte altre annotazioni utili per configurare e personalizzare il comportamento del framework.
+
+---
+
 ## @Controller
 
 
@@ -36,55 +60,6 @@ In questo esempio solo le richieste GET a / welcome sono gestite dal metodo welc
 Questa annotazione può essere utilizzata anche con Spring MVC e Spring WebFlux.
 
 L'annotazione` @RequestMapping `è molto versatile. Si prega di consultare il mio post approfondito su Richiesta Mapping bere.
-
----
-
-## @CookieValue
-
-
-Questa annotazione è usata a livello di parametro del metodo. `@CookieValue `è usato come argomento del metodo di mappatura delle richieste. Il cookie HTTP è associato al parametro `@CookieValue` per un determinato nome di cookie. Questa annotazione viene utilizzata nel metodo annotato con @RequestMapping.
-Consideriamo che il seguente valore di cookie viene ricevuto con una richiesta http:
-
-JSESSIONID = 418AB76CD83EF94U85YD34W
-
-Per ottenere il valore del cookie, usa `@CookieValue` in questo modo:
-
-```java
-    @RequestMapping("/cookieValue")
-      public void getCookieValue(@CookieValue "JSESSIONID" String cookie){
-    }
-```
-
-
----
-
-## @CrossOrigin
-
-Questa annotazione viene utilizzata sia a livello di classe che di metodo per abilitare le richieste di origine incrociata. In molti casi l'host che serve JavaScript sarà diverso dall'host che serve i dati. In tal caso, la condivisione di risorse tra origini (CORS) consente la comunicazione tra domini. Per abilitare questa comunicazione devi solo aggiungere l'annotazione` @CrossOrigin`.
-
-Per impostazione predefinita, l'annotazione` @CrossOrigin` consente a tutte le origini, tutte le intestazioni, i metodi HTTP specificati nell'annotazione` @RequestMapping `e maxAge di 30 min. È possibile personalizzare il comportamento specificando i valori degli attributi corrispondenti.
-
-Un esempio per usare `@CrossOrigin` sia a livello di controller che di gestore è questo.
-
-```java
-    @CrossOrigin(maxAge = 3600)
-    @RestController
-    @RequestMapping("/account")
-    public class AccountController {
-    @CrossOrigin(origins = "http://example.com")
-    @RequestMapping("/message")
-      public Message getMessage() {
-          // ...
-        }
-     
-    @RequestMapping("/note")
-        public Note getNote() {
-            // ...
-        }
-    }
-```
-
-In questo esempio, entrambi i metodi getExample () e getNote () avranno un massimo di 3600 secondi. Inoltre, getExample () consentirà solo le richieste di origine incrociata da http://example.com, mentre getNote () consentirà le richieste di origine incrociata da tutti gli host.
 
 ---
 
@@ -264,3 +239,49 @@ Considera questo esempio.
 
 Il nome `@ModelAttribute` è assegnato a `@SessionAttributes` come valore. `@SessionAttributes` ha due elementi. L'elemento value è il nome della sessione nel modello e l'elemento types è il tipo di attributi della sessione nel modello.
 
+---
+
+## @CookieValue
+
+Questa annotazione è usata a livello di parametro del metodo. `@CookieValue`è usato come argomento del metodo di mappatura delle richieste. Il cookie HTTP è associato al parametro `@CookieValue` per un determinato nome di cookie. Questa annotazione viene utilizzata nel metodo annotato con @RequestMapping.
+Consideriamo che il seguente valore di cookie viene ricevuto con una richiesta http:
+
+JSESSIONID = 418AB76CD83EF94U85YD34W
+
+Per ottenere il valore del cookie, usa `@CookieValue` in questo modo:
+
+```java
+    @RequestMapping("/cookieValue")
+      public void getCookieValue(@CookieValue "JSESSIONID" String cookie){
+    }
+```
+
+---
+
+## @CrossOrigin
+
+Questa annotazione viene utilizzata sia a livello di classe che di metodo per abilitare le richieste di origine incrociata. In molti casi l'host che serve JavaScript sarà diverso dall'host che serve i dati. In tal caso, la condivisione di risorse tra origini (CORS) consente la comunicazione tra domini. Per abilitare questa comunicazione devi solo aggiungere l'annotazione`@CrossOrigin`.
+
+Per impostazione predefinita, l'annotazione`@CrossOrigin` consente a tutte le origini, tutte le intestazioni, i metodi HTTP specificati nell'annotazione` @RequestMapping `e maxAge di 30 min. È possibile personalizzare il comportamento specificando i valori degli attributi corrispondenti.
+
+Un esempio per usare `@CrossOrigin` sia a livello di controller che di gestore è questo.
+
+```java
+    @CrossOrigin(maxAge = 3600)
+    @RestController
+    @RequestMapping("/account")
+    public class AccountController {
+    @CrossOrigin(origins = "http://example.com")
+    @RequestMapping("/message")
+      public Message getMessage() {
+          // ...
+        }
+     
+    @RequestMapping("/note")
+        public Note getNote() {
+            // ...
+        }
+    }
+```
+
+In questo esempio, entrambi i metodi getExample () e getNote () avranno un massimo di 3600 secondi. Inoltre, getExample () consentirà solo le richieste di origine incrociata da <http://example.com>, mentre getNote () consentirà le richieste di origine incrociata da tutti gli host.
