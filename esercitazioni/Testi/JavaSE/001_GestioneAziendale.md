@@ -52,3 +52,127 @@ calcola lo stipendio totale come somma di tutti gli stipendi.
 * Crea un tot di Impiegati chiedendo l'input da tastiera (usare un for);
 * Aggiunge man mano questi impiegati all'azienda;
 * Calcola e stampa lo stipendio totale.
+
+
+## Esempio soluzione
+
+```java
+import java.util.Scanner;
+
+class Segreteria {
+    public static String creaID(String n, String c, int a) {
+        return n.substring(0, 2) + c.substring(0, 2) + a;
+    }
+}
+
+class Impiegato {
+    private String nome;
+    private String cognome;
+    private String id;
+    private int annoNascita;
+    private int stipendio;
+
+    public Impiegato(String nome, String cognome, int annoNascita, int stipendio) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.annoNascita = annoNascita;
+        this.stipendio = stipendio;
+        this.id = Segreteria.creaID(nome, cognome, annoNascita);
+    }
+
+    // Getter e Setter
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getCognome() {
+        return cognome;
+    }
+
+    public void setCognome(String cognome) {
+        this.cognome = cognome;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId() {
+        this.id = Segreteria.creaID(nome, cognome, annoNascita);
+    }
+
+    public int getAnnoNascita() {
+        return annoNascita;
+    }
+
+    public void setAnnoNascita(int annoNascita) {
+        this.annoNascita = annoNascita;
+    }
+
+    public int getStipendio() {
+        return stipendio;
+    }
+
+    public void setStipendio(int stipendio) {
+        this.stipendio = stipendio;
+    }
+}
+
+class Azienda {
+    private Impiegato[] impiegati;
+    private int numMaxImpiegati;
+    private int numAttualeImpiegati;
+
+    public Azienda(int numMaxImpiegati) {
+        this.numMaxImpiegati = numMaxImpiegati;
+        this.impiegati = new Impiegato[numMaxImpiegati];
+        this.numAttualeImpiegati = 0;
+    }
+
+    public void addImpiegato(String nome, String cognome, int annoNascita, int stipendio) {
+        if (numAttualeImpiegati < numMaxImpiegati) {
+            impiegati[numAttualeImpiegati] = new Impiegato(nome, cognome, annoNascita, stipendio);
+            numAttualeImpiegati++;
+        } else {
+            System.out.println("Errore: Numero massimo di impiegati raggiunto.");
+        }
+    }
+
+    public int stipendioTOT() {
+        int totale = 0;
+        for (int i = 0; i < numAttualeImpiegati; i++) {
+            totale += impiegati[i].getStipendio();
+        }
+        return totale;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Inserisci il numero massimo di impiegati: ");
+        int numMaxImpiegati = scanner.nextInt();
+        Azienda azienda = new Azienda(numMaxImpiegati);
+
+        for (int i = 0; i < numMaxImpiegati; i++) {
+            System.out.println("\nInserimento dati impiegato " + (i + 1));
+            System.out.print("Nome: ");
+            String nome = scanner.next();
+            System.out.print("Cognome: ");
+            String cognome = scanner.next();
+            System.out.print("Anno di nascita: ");
+            int annoNascita = scanner.nextInt();
+            System.out.print("Stipendio: ");
+            int stipendio = scanner.nextInt();
+
+            azienda.addImpiegato(nome, cognome, annoNascita, stipendio);
+        }
+
+        System.out.println("\nStipendio totale dell'azienda: " + azienda.stipendioTOT());
+    }
+}
+```
