@@ -1,53 +1,49 @@
-# Esercizio Canzone-Playlist
+# Web Application per la Gestione della Playlist di Canzoni
 
-Si realizzi una classe JAVA **Canzone** per la reppresentazione di brani musicali. Una **canzone** e' caratterizzata dal titolo (una stringa), dalla durata (un intero) e dall'autore (una stringa). La classe deve avere un metodo costruttore che presi in ingresso due stringhe ed un intero inizializzi opportunamente le variabili di istanza del nuovo oggetto. La classe deve inoltre fornire i seguenti metodi:
+Realizzate una web application per la gestione di una playlist di canzoni, seguendo il pattern architetturale Model-View-Controller (MVC) e il pattern DAO (Data Access Object) per interagire con il database.
 
-* `haAutore(c)` che data una stringa c restituisce TRUE se l'autore della **canzone** e' uguale alla stringa passata come parametro;
-* `uguali(s)` che preso in ingresso una **canzone** s restituisce TRUE se la **canzone** in ingresso ha lo stesso titolo e la stessa durata dell'oggetto di invocazione
-* `toString()` che restituisce una stringa contenente la rappresentazione della **canzone**
+### Modello
 
-Si realizzi poi una classe **Playlist** per la rappresentazione di elenchi di riproduzione di canzoni. Un'istanza della classe deve contenere, come attributo d'istanza, un array di canzoni e deve fornire i seguenti metodi:
+Il modello sarà costituito dalle seguenti classi:
 
-* `aggiungi(u,d,c)` che prese in ingresso due stringhe u,c ed un intero d aggiunge una nuova canzone alla **playlist** avente u come titolo, d come durata e c come autore;
-* `eliminaAutore(c)` che presa in ingresso una stinga c elimina dalla **playlist** tutte le canzoni aventi c come autore;
-* `haDuplicati()` che restituisce TRUE se all'interno delle **playlist** ci sono due canzoni uguali fra loro (ovvero aventi stesso titolo e durata);
-* `quanteAutore(c)` che data una stringa c restituisce un intero corrispondente al numero di canzoni contenute nella **playlist** con autore c;
-* `quanteCanzoni()` che restituisce un intero rappresentante il numero totale delle canzoni salvate nella **playlist**;
-* `stampaAutore(c)` che data una stringa c stampa tutti le canzoni con autore c;
+1. **Canzone**: rappresenta un singolo brano musicale e conterrà i seguenti attributi:
+   - `id`: identificatore univoco della canzone
+   - `titolo`: titolo della canzone
+   - `cantante`: nome del cantante o della band che ha eseguito la canzone
 
-Scrivere le classi in modo da compilare ed eseguire la seguente classe di prova senza modificarla.
+2. **Playlist**: rappresenta una collezione di brani musicali e avrà i seguenti attributi:
+   - `id`: identificatore univoco della playlist
+   - `nome`: nome della playlist
+   - `canzoni`: elenco delle canzoni presenti nella playlist
 
-```java
-public class ProvaEserc1 {
-	public static void main(String[] args) {
-		Canzone s1 = new Canzone("a",200,"c1");
-		Canzone s2 = new Canzone("a",300,"c2");
-		Canzone s3 = new Canzone("a3",400,"c3");
-		System.out.println(s1);
-		System.out.println(s1.haAutore("c1"));
-		System.out.println(s1.haAutore("c2"));
-		System.out.println(s1.uguali(s2));
-		System.out.println(s1.uguali(s3));
-		Playlist pref = new Playlist();
-		pref.aggiungi("Forever young", 300, "Bob Dylan");
-		pref.aggiungi("Tomorrow never comes", 300, "The Beatles");
-		pref.aggiungi("To Ramona", 400, "Bob Dylan");
-		pref.aggiungi("She's leaving home", 150, "The Beatles");
-		pref.aggiungi("Martha my dear", 300, "The Beatles");
-		pref.aggiungi("Someday never comes", 430, "Creedence Clearwater Revival");
-		System.out.println(pref.quanteAutore("Bob Dylan"));
-		System.out.println(pref.quanteAutore("The Beatles"));
-		System.out.println(pref.quanteAutore("Franco Califano"));
-		System.out.println(pref.quanteAutore("Creedence Clearwater Revival"));
-		pref.stampaAutore("The Beatles");
-		pref.eliminaAutore("The Beatles");
-		pref.stampaAutore("The Beatles");
-		System.out.println(pref.quanteAutore("Bob Dylan"));
-		System.out.println(pref.quanteAutore("The Beatles"));
-		System.out.println(pref.quanteAutore("Creedence Clearwater Revival"));
-		System.out.println(pref.haDuplicati());
-		pref.aggiungi("To Ramona", 400, "Bob Dylan");
-		System.out.println(pref.haDuplicati());		
-	}
-}
-```
+### Controller
+
+Il controller sarà responsabile di gestire le richieste degli utenti e di coordinare il flusso di dati tra il modello e la vista. Le principali funzionalità del controller includeranno:
+
+1. Aggiunta di una nuova canzone alla playlist
+2. Rimozione di una canzone dalla playlist
+3. Visualizzazione dell'elenco completo delle canzoni presenti nella playlist
+4. Ricerca di una canzone per titolo o per cantante
+5. Creazione di una nuova playlist e registrazione nel database
+
+### Vista
+
+La vista sarà responsabile di presentare i dati all'utente in modo chiaro e comprensibile. Le viste richieste includeranno:
+
+1. Pagina principale con le opzioni per aggiungere, rimuovere, visualizzare e cercare canzoni nella playlist
+2. Form per aggiungere una nuova canzone alla playlist
+3. Elenco delle canzoni presenti nella playlist
+4. Form per cercare una canzone per titolo o per cantante
+5. Pagina per creare una nuova playlist e salvarla nel database
+
+### DAO (Data Access Object)
+
+Il DAO sarà responsabile di interagire con il database per eseguire operazioni di lettura e scrittura. Le operazioni principali includeranno:
+
+1. Recupero dell'elenco completo delle canzoni dal database
+2. Aggiunta di una nuova canzone al database
+3. Rimozione di una canzone dal database
+4. Ricerca di una canzone per titolo o per cantante nel database
+5. Creazione di una nuova playlist e registrazione nel database
+
+Implementate la web application utilizzando tecnologie come Spring MVC per il controller, Thymeleaf per la vista e JDBC per il DAO per interagire con il database. Assicuratevi che l'applicazione sia intuitiva e facile da usare per gli utenti, consentendo loro di gestire la propria playlist in modo efficiente e piacevole.
