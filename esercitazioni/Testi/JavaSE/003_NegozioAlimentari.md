@@ -14,7 +14,7 @@ Un prodotto è caratterizzato da un codice univoco, una descrizione e un prezzo 
 | C00002 | Latte TappoRosso    | 1.65   |
 | C00003 | Caffe' Lavazza      | 2.5    |
 | C00004 | Caffe' Illy         | 2.0    |
-| C00005 | Biscotti Cioccolato| 2.0    |
+| C00005 | Biscotti Cioccolato | 2.0    |
 | C00006 | Vino Rosso          | 2.0    |
 
 ### Gli sconti
