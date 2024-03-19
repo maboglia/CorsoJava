@@ -16,9 +16,10 @@ In particolare il metodo:
 
 * creaID (String n, String c, Int a)
 che prende 2 stringhe ed un intero (in particolare saranno un nome, un
-cognome e l'età) e ritorna una Stringa formata dalla concatenazione di: le prime
-2 lettere di n, le prime 2 lettere di c, a (esempio: con l'input “paolo”, “rossi”,
-1995 ritorna come risultato: paro1995).
+cognome e l'età), verifica la lunghezza delle stringhe e ritorna una Stringa formata dalla concatenazione di:
+
+le prime 3 lettere di n, le prime 3 lettere di c, a (esempio: con l'input “paolo”, “rossi”,
+1995 ritorna come risultato: paoros1995).
 
 ## IMPIEGATO
 
@@ -27,8 +28,8 @@ La classe Impiegato ha
 * attributi di tipo string: nome, cognome, id;
 * attributi di tipo int: anno di nascita e stipendio;
 * i relativi metodi getter e setter di tutti.
-Il setter dell'attributo id però non prende in input il valore ma lo ottiene con il metodo
-creaID della classe Segreteria.
+Il setter dell'attributo id però non prende in input il valore ma lo ottiene con il metodo static
+`creaID()` della classe Segreteria, ed è privato.
 
 ## AZIENDA (Classe Main)
 
