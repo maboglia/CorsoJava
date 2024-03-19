@@ -1,3 +1,26 @@
+/*
+
+
+**CoppiePari**
+
+Scrivi un programma Java che trovi e stampi tutte le coppie di numeri pari presenti nell'array dato.
+
+L'array di numeri è già fornito nel codice e contiene i seguenti valori: {5, 6, 11, 13, 9, 14, 31, 90, 21, 30}.
+
+Il programma deve scorrere l'array e trovare tutte le coppie di numeri pari, stampando entrambi i numeri della coppia.
+
+Ecco un esempio di output del programma:
+
+**Output:**
+```
+6 14
+6 30
+14 30
+90 30
+```
+
+---
+*/
 
 public class CoppiePari {
 

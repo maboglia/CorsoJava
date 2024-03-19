@@ -1,8 +1,5 @@
 # Cassa pub
 
-
-# Cassa pub
-
 Realizziamo un programma per gestire una cassa di un pub che permetta di registrare scontrini, consumazioni, camerieri e clienti, e fornisca funzionalità statistiche.
 
 ### Entità del sistema

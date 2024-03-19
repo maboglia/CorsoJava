@@ -1,15 +1,18 @@
-/*
+Il programma Java "CoppiePariFacoltativo" trova e stampa le prime 10 coppie di numeri pari presenti nell'array dato.
+
 Ecco il testo dell'esercizio:
 
 ---
 
-**CoppiePari2**
+**CoppiePariFacoltativo**
 
 Scrivi un programma Java che trovi e stampi le prime 10 coppie di numeri pari presenti nell'array dato.
 
 L'array di numeri è già fornito nel codice e contiene i seguenti valori: {4, 6, 11, 10, 9, 14, 31, 90, 20, 30}.
 
 Il programma deve scorrere l'array e trovare le prime 10 coppie di numeri pari, stampando entrambi i numeri della coppia.
+
+**Nota:** Questo esercizio è opzionale e ha la stessa logica dell'esercizio "CoppiePari2", ma utilizza un approccio differente utilizzando un ciclo while anziché un ciclo for.
 
 Ecco un esempio di output del programma:
 
@@ -28,8 +31,9 @@ Ecco un esempio di output del programma:
 ```
 
 ---
-*/
-public class CoppiePari2 {
+
+```java
+public class CoppiePariFacoltativo {
 
 	public static void main(String[] args) {
 
@@ -51,3 +55,5 @@ public class CoppiePari2 {
 	}
 
 }
+
+```
