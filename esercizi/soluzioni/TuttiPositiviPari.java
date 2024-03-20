@@ -6,7 +6,6 @@ public class TuttiPositiviPari {
 
 	public static void main(String[] args) {
 		/*
-		 * Esercizio 2.1: 
 
 TuttiPositiviPari 
 
