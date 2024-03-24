@@ -1,6 +1,6 @@
 # OneToOne
 
-sempio di relazione One-to-One utilizzando Spring Boot e JPA. In questo esempio, considereremo una relazione tra due entità: `Studente` e `LibrettoUniversitario`, dove ogni studente ha un solo libretto universitario e ogni libretto universitario è associato a uno studente.
+Esempio di relazione One-to-One utilizzando Spring Boot e JPA. In questo esempio, considereremo una relazione tra due entità: `Studente` e `LibrettoUniversitario`, dove ogni studente ha un solo libretto universitario e ogni libretto universitario è associato a uno studente.
 
 ### 1. Definizione delle Entità
 
