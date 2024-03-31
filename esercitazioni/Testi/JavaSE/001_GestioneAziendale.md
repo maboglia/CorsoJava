@@ -1,179 +1,108 @@
 # ESERCIZIO: GESTIONE AZIENDALE
 
-## DESCRIZIONE GENERICA
+## **Esercitazione: Gestione degli Impiegati in un'azienda con calcolo dello stipendio totale**
 
-Ho un'azienda in cui lavorano Impiegati.
-Ogni Impiegato ha un proprio nome, cognome, id e stipendio.
-Ho una Segreteria utilizzata per il calcolo degli ID degli impiegati.
-Devo poter calcolare lo stipendio totale.
+**Introduzione:**
+In questa esercitazione, svilupperemo un'applicazione Java per gestire gli impiegati di un'azienda. Gli impiegati saranno identificati da un nome, un cognome, un ID univoco e uno stipendio. Utilizzeremo anche una Segreteria per il calcolo degli ID degli impiegati. Inoltre, implementeremo una funzionalità per calcolare lo stipendio totale di tutti gli impiegati dell'azienda.
 
-## SEGRETERIA
+**Requisiti:**
 
-Definire una classe Segreteria che ci permette (dato un nome, un cognome ed un anno
-di nascita) di creare un ID
-Questa classe ha un solo metodo statico.
-In particolare il metodo:
+1. Conoscenza di base della programmazione Java.
+2. Comprensione dei concetti di classi, oggetti e metodi in Java.
 
-* creaID (String n, String c, Int a)
-che prende 2 stringhe ed un intero (in particolare saranno un nome, un
-cognome e l'età), verifica la lunghezza delle stringhe e ritorna una Stringa formata dalla concatenazione di:
+**Descrizione:**
+L'applicazione Java che creeremo consentirà di:
 
-le prime 3 lettere di n, le prime 3 lettere di c, a (esempio: con l'input “paolo”, “rossi”,
-1995 ritorna come risultato: paoros1995).
+1. Creare e gestire gli impiegati dell'azienda, includendo la generazione degli ID tramite la Segreteria.
+2. Calcolare lo stipendio totale di tutti gli impiegati dell'azienda.
 
-## IMPIEGATO
+**Passaggi:**
 
-La classe Impiegato ha
+1. **Definire la classe Impiegato:**
+   - La classe Impiegato avrà gli attributi `nome`, `cognome`, `id` e `stipendio`.
+   - Implementeremo i metodi getter e setter per accedere e modificare gli attributi dell'impiegato.
 
-* attributi di tipo string: nome, cognome, id;
-* attributi di tipo int: anno di nascita e stipendio;
-* i relativi metodi getter e setter di tutti.
-Il setter dell'attributo id però non prende in input il valore ma lo ottiene con il metodo static
-`creaID()` della classe Segreteria, ed è privato.
+2. **Definire la classe Segreteria:**
+   - La classe Segreteria avrà un metodo per generare un ID univoco per gli impiegati.
+   - L'ID potrebbe essere generato utilizzando una sequenza numerica incrementale o un algoritmo più complesso.
 
-## AZIENDA (Classe Main)
+3. **Creare la classe Azienda:**
+   - La classe Azienda conterrà una lista di impiegati e avrà un metodo per aggiungere nuovi impiegati alla lista.
+   - Implementeremo un metodo per calcolare lo stipendio totale di tutti gli impiegati presenti nell'azienda.
 
-La classe Azienda conserva il riferimento a tutti gli impiegati e può calcolare lo
-stipendio totali di tutti essi.
-Quindi ha come attributo:
+4. **Testare l'applicazione:**
+   - Creeremo un programma principale per testare tutte le funzionalità implementate.
+   - Aggiungeremo alcuni impiegati all'azienda e testeremo il calcolo dello stipendio totale.
 
-* un array di Impiegati;
-* numero massimo di impiegati;
-* numero attuale di impiegati.
-Ha come metodi:
-* un metodo addImpiegato( ... ):
-aggiunge un impiegato all'array (se non è già pieno);
-* un metodo stipendioTOT( ):
-calcola lo stipendio totale come somma di tutti gli stipendi.
-
-## MAIN
-
-* Crea uno Scanner per prendere input da tastiera;
-* Crea un oggetto azienda;
-* Crea un tot di Impiegati chiedendo l'input da tastiera (usare un for);
-* Aggiunge man mano questi impiegati all'azienda;
-* Calcola e stampa lo stipendio totale.
-
-
-## Esempio soluzione
+**Esempio di Implementazione:**
 
 ```java
-import java.util.Scanner;
-
-class Segreteria {
-    public static String creaID(String n, String c, int a) {
-        return n.substring(0, 2) + c.substring(0, 2) + a;
-    }
-}
-
-class Impiegato {
+public class Impiegato {
     private String nome;
     private String cognome;
-    private String id;
-    private int annoNascita;
-    private int stipendio;
+    private int id;
+    private double stipendio;
 
-    public Impiegato(String nome, String cognome, int annoNascita, int stipendio) {
+    // Costruttore
+    public Impiegato(String nome, String cognome, int id, double stipendio) {
         this.nome = nome;
         this.cognome = cognome;
-        this.annoNascita = annoNascita;
+        this.id = id;
         this.stipendio = stipendio;
-        this.id = Segreteria.creaID(nome, cognome, annoNascita);
     }
 
-    // Getter e Setter
-    public String getNome() {
-        return nome;
-    }
+    // Metodi getter e setter
+    // ...
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    // Altri metodi se necessario
+}
 
-    public String getCognome() {
-        return cognome;
-    }
+public class Segreteria {
+    private static int prossimoId = 1;
 
-    public void setCognome(String cognome) {
-        this.cognome = cognome;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId() {
-        this.id = Segreteria.creaID(nome, cognome, annoNascita);
-    }
-
-    public int getAnnoNascita() {
-        return annoNascita;
-    }
-
-    public void setAnnoNascita(int annoNascita) {
-        this.annoNascita = annoNascita;
-    }
-
-    public int getStipendio() {
-        return stipendio;
-    }
-
-    public void setStipendio(int stipendio) {
-        this.stipendio = stipendio;
+    public static int generaId() {
+        return prossimoId++;
     }
 }
 
-class Azienda {
-    private Impiegato[] impiegati;
-    private int numMaxImpiegati;
-    private int numAttualeImpiegati;
+import java.util.ArrayList;
 
-    public Azienda(int numMaxImpiegati) {
-        this.numMaxImpiegati = numMaxImpiegati;
-        this.impiegati = new Impiegato[numMaxImpiegati];
-        this.numAttualeImpiegati = 0;
+public class Azienda {
+    private ArrayList<Impiegato> impiegati;
+
+    public Azienda() {
+        this.impiegati = new ArrayList<>();
     }
 
-    public void addImpiegato(String nome, String cognome, int annoNascita, int stipendio) {
-        if (numAttualeImpiegati < numMaxImpiegati) {
-            impiegati[numAttualeImpiegati] = new Impiegato(nome, cognome, annoNascita, stipendio);
-            numAttualeImpiegati++;
-        } else {
-            System.out.println("Errore: Numero massimo di impiegati raggiunto.");
-        }
+    public void aggiungiImpiegato(Impiegato impiegato) {
+        impiegati.add(impiegato);
     }
 
-    public int stipendioTOT() {
-        int totale = 0;
-        for (int i = 0; i < numAttualeImpiegati; i++) {
-            totale += impiegati[i].getStipendio();
+    public double calcolaStipendioTotale() {
+        double stipendioTotale = 0;
+        for (Impiegato impiegato : impiegati) {
+            stipendioTotale += impiegato.getStipendio();
         }
-        return totale;
+        return stipendioTotale;
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Inserisci il numero massimo di impiegati: ");
-        int numMaxImpiegati = scanner.nextInt();
-        Azienda azienda = new Azienda(numMaxImpiegati);
+        // Creazione di un'azienda
+        Azienda azienda = new Azienda();
 
-        for (int i = 0; i < numMaxImpiegati; i++) {
-            System.out.println("\nInserimento dati impiegato " + (i + 1));
-            System.out.print("Nome: ");
-            String nome = scanner.next();
-            System.out.print("Cognome: ");
-            String cognome = scanner.next();
-            System.out.print("Anno di nascita: ");
-            int annoNascita = scanner.nextInt();
-            System.out.print("Stipendio: ");
-            int stipendio = scanner.nextInt();
+        // Aggiunta di impiegati all'azienda
+        azienda.aggiungiImpiegato(new Impiegato("Mario", "Rossi", Segreteria.generaId(), 2500));
+        azienda.aggiungiImpiegato(new Impiegato("Luca", "Verdi", Segreteria.generaId(), 2800));
+        azienda.aggiungiImpiegato(new Impiegato("Anna", "Bianchi", Segreteria.generaId(), 3000));
 
-            azienda.addImpiegato(nome, cognome, annoNascita, stipendio);
-        }
-
-        System.out.println("\nStipendio totale dell'azienda: " + azienda.stipendioTOT());
+        // Calcolo dello stipendio totale
+        double stipendioTotale = azienda.calcolaStipendioTotale();
+        System.out.println("Lo stipendio totale degli impiegati dell'azienda è: " + stipendioTotale);
     }
 }
 ```
+
+**Conclusioni:**
+Con questa esercitazione, gli studenti avranno imparato a creare un'applicazione Java per gestire gli impiegati di un'azienda e calcolare lo stipendio totale. Potranno esplorare ulteriori funzionalità e miglioramenti per l'applicazione, come la gestione avanzata degli impiegati o l'integrazione con un'interfaccia utente grafica.
