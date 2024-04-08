@@ -10,20 +10,30 @@ Un prodotto è caratterizzato da un codice univoco, una descrizione e un prezzo 
 
 | Codice | Descrizione         | Prezzo |
 | ------ | ------------------- | ------ |
-| C00001 | Pasta Barilla       | 0.7    |
-| C00002 | Latte TappoRosso    | 1.65   |
-| C00003 | Caffe' Lavazza      | 2.5    |
-| C00004 | Caffe' Illy         | 2.0    |
+| C00001 | Pasta Zarilla       | 0.7    |
+| C00002 | Latte GattoRosso    | 1.65   |
+| C00003 | Caffe' Latazza      | 2.5    |
+| C00004 | Caffe' Billy        | 2.0    |
 | C00005 | Biscotti Cioccolato | 2.0    |
 | C00006 | Vino Rosso          | 2.0    |
 
 ### Gli sconti
 
-Possiamo stabilire uno sconto promozionale per un particolare prodotto. Per attivare la promozione, utilizziamo il metodo `promozione()`, specificando il codice del prodotto e la percentuale di sconto da applicare. È importante notare che è possibile avere un solo prodotto in promozione per volta.
+Possiamo stabilire uno sconto promozionale per un particolare prodotto. Per attivare la promozione, utilizziamo il metodo `promozione()`, specificando il codice del prodotto e la percentuale di sconto da applicare.
 
 ### I prodotti venduti
 
-Ogni volta che viene letto il codice di un prodotto, la cassa accede al listino dei prodotti per recuperarne il prezzo e la descrizione. Il metodo `leggi()` restituisce informazioni sul prodotto acquistato. Possiamo ottenere l'importo totale lordo delle tasse attraverso il metodo `totale()`. Inoltre, è possibile ottenere l'importo totale netto e l'ammontare dell'IVA attraverso i metodi `netto()` e `tasse()`. Il metodo `stampa()` consente di visualizzare l'elenco degli articoli venduti, ordinati lessicograficamente. Infine, il metodo `chiude()` conclude la registrazione dei prodotti venduti.
+Ogni volta che viene letto il codice di un prodotto, la cassa accede al listino dei prodotti per recuperarne il prezzo e la descrizione. 
+
+Il metodo `leggi()` restituisce informazioni sul prodotto acquistato. 
+
+Possiamo ottenere l'importo totale lordo delle tasse attraverso il metodo `totale()`. 
+
+Inoltre, è possibile ottenere l'importo totale netto e l'ammontare dell'IVA attraverso i metodi `netto()` e `tasse()`. 
+
+Il metodo `stampa()` consente di visualizzare l'elenco degli articoli venduti, ordinati lessicograficamente. 
+
+Infine, il metodo `chiude()` conclude la registrazione dei prodotti venduti.
 
 Con questa base, possiamo iniziare a implementare il nostro sistema per gestire il negozio alimentari. Buon lavoro!
 
