@@ -16,7 +16,7 @@ Per ciascuno spettacolo sono programmate una o più repliche. Ogni replica è ca
 
 ## Posto
 
-I posti all'interno del teatro sono identificati per fila, numero e tipo (ad esempio: platea, palco, galleria, ecc.). Alcuni posti sono appositamente adattati per ospitare persone con disabilità.
+I posti all'interno del teatro sono identificati per fila, numero e tipo (ad esempio: platea, palco, galleria, ecc.). 
 
 ## Biglietto
 
@@ -29,7 +29,7 @@ Una prenotazione è caratterizzata dai seguenti attributi:
 - Nome del cliente: una stringa che rappresenta il nome del cliente che ha effettuato la prenotazione.
 - Data di prenotazione: la data in cui è stata effettuata la prenotazione.
 - Replica dello spettacolo: la replica dello spettacolo per cui è stata effettuata la prenotazione.
-- Posti prenotati: almeno un posto che è stato prenotato tramite questa prenotazione. Se sono inclusi posti per persone con disabilità, viene registrato anche il tipo di disabilità.
+- Posti prenotati: almeno un posto che è stato prenotato tramite questa prenotazione. 
 
 ## Addetto Biglietteria
 
@@ -90,15 +90,11 @@ class Posto {
     private int fila;
     private int numero;
     private TipoPosto tipo;
-    private boolean disabile;
-    private String tipoDisabilita;
 
-    public Posto(int fila, int numero, TipoPosto tipo, boolean disabile, String tipoDisabilita) {
+    public Posto(int fila, int numero, TipoPosto tipo) {
         this.fila = fila;
         this.numero = numero;
         this.tipo = tipo;
-        this.disabile = disabile;
-        this.tipoDisabilita = tipoDisabilita;
     }
 
     // getter e setter
