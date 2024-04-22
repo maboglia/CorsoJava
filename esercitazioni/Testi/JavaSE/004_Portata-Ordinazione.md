@@ -1,8 +1,6 @@
-# Modello MVC per la Gestione di Portate e Ordinazioni
+# Gestione di Portate e Ordinazioni
 
-## Modello
-
-### Portata
+## Portata
 
 La classe `Portata` rappresenta una portata ordinabile in un ristorante. Ogni portata è caratterizzata da:
 
@@ -16,7 +14,7 @@ La classe `Portata` include i seguenti metodi:
 - `getPrezzo()`: restituisce il prezzo della portata
 - `setPrezzo(double prezzo)`: imposta il prezzo della portata con il valore specificato
 
-### Ordinazione
+## Ordinazione
 
 La classe `Ordinazione` rappresenta un ordine effettuato da un cliente in un ristorante. Ogni ordinazione è caratterizzata da:
 
@@ -31,14 +29,6 @@ La classe `Ordinazione` include i seguenti metodi:
 - `numeroTotalePortate()`: restituisce la somma delle quantità ordinate di tutte le portate
 - `portateOrdinate()`: restituisce il numero totale di diverse portate ordinate
 
-## Vista
-
-La vista sarà implementata utilizzando tecnologie web come HTML, CSS e JavaScript per fornire un'interfaccia utente intuitiva e interattiva. La vista includerà:
-
-- Form per inserire una nuova portata con descrizione, prezzo e indicazione se è una bevanda
-- Form per inserire una nuova ordinazione con il nome del cliente e le portate ordinate con le rispettive quantità
-- Tabelle per visualizzare le portate ordinate e i relativi dettagli (descrizione, prezzo, quantità)
-- Campi per visualizzare il totale del conto dell'ordinazione e il totale del conto delle bevande
 
 ## Controller
 
@@ -82,3 +72,14 @@ public class Main {
 ```
 
 In questo metodo `main`, vengono creati alcuni oggetti `Portata` e un'istanza di `Ordinazione`. Successivamente, vengono aggiunte alcune portate all'ordinazione e visualizzate alcune informazioni sull'ordinazione, come il cliente, le portate ordinate, il totale del conto e altro ancora. Questo metodo main può essere utilizzato per testare l'applicazione.
+
+---
+
+## Web app
+
+La vista sarà implementata utilizzando tecnologie web come HTML, CSS e JavaScript per fornire un'interfaccia utente intuitiva e interattiva. La vista includerà:
+
+- Form per inserire una nuova portata con descrizione, prezzo e indicazione se è una bevanda
+- Form per inserire una nuova ordinazione con il nome del cliente e le portate ordinate con le rispettive quantità
+- Tabelle per visualizzare le portate ordinate e i relativi dettagli (descrizione, prezzo, quantità)
+- Campi per visualizzare il totale del conto dell'ordinazione e il totale del conto delle bevande
