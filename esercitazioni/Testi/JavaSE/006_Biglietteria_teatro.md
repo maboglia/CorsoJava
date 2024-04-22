@@ -1,4 +1,4 @@
-# # Biglietteria Teatro
+# Biglietteria Teatro
 
 L'applicazione che si intende progettare gestisce la vendita dei biglietti in un teatro.
 
