@@ -245,3 +245,4 @@ Sul mio sito trovi tutti gli appunti anche in formato slide
 ## Esercitazioni
 
 - [Repo esercitazioni](https://github.com/maboglia/esercitazioni)
+- [Altre Risorse Java](https://github.com/maboglia/CorsoJavaRisorse)
