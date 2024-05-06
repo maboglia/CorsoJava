@@ -286,9 +286,7 @@ Controlla le tue risposte.
 
 1. Correggi il programma chiamato SomethingIsWrong mostrato nella Domanda 1.
 
-2. Dato il segu
-
-ente codice:
+2. Dato il seguente codice:
 
    ```java
    public class NumberHolder {
@@ -456,9 +454,7 @@ Controlla le tue risposte.
    b. Quale metodo nasconde un metodo nella superclass?
    c. Cosa fanno gli altri metodi?
 
-2. Considera le classi Card, Deck e DisplayDeck che hai scritto in Domande ed Eserc
-
-izi: Tipi Enumerati. Riscrivi queste classi in modo che Card e Deck estendano rispettivamente Rank e Suit, e DisplayDeck estenda Deck.
+2. Considera le classi Card, Deck e DisplayDeck che hai scritto in Domande ed Esercizi: Tipi Enumerati. Riscrivi queste classi in modo che Card e Deck estendano rispettivamente Rank e Suit, e DisplayDeck estenda Deck.
 
 3. Qual è il risultato di compilare la seguente classe?
 

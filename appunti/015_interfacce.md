@@ -8,9 +8,9 @@ Le interfacce in Java sono uno strumento potente per definire contratti o specif
    - Un'interfaccia è definita utilizzando la parola chiave `interface`. Essa contiene dichiarazioni di metodi, ma non fornisce l'implementazione dei metodi stessi.
 
    ```java
-   public interface MioInterfaccia {
-       void metodoUno();
-       int metodoDue(String parametro);
+   public interface Contratto {
+       void obbligoUno();
+       int obbligoDue(String parametro);
    }
    ```
 
@@ -21,15 +21,15 @@ Le interfacce in Java sono uno strumento potente per definire contratti o specif
    - Una classe implementa un'interfaccia utilizzando la parola chiave `implements`. La classe deve fornire un'implementazione per tutti i metodi dichiarati nell'interfaccia.
 
    ```java
-   public class MiaClasse implements MioInterfaccia {
+   public class MiaClasse implements Contratto {
        @Override
-       public void metodoUno() {
-           // Implementazione del metodoUno
+       public void obbligoUno() {
+           // Implementazione del obbligoUno
        }
 
        @Override
-       public int metodoDue(String parametro) {
-           // Implementazione del metodoDue
+       public int obbligoDue(String parametro) {
+           // Implementazione del obbligoDue
            return 42;
        }
    }
@@ -42,7 +42,7 @@ Le interfacce in Java sono uno strumento potente per definire contratti o specif
    - Un'interfaccia può estendere una o più interfacce. Questo consente di creare gerarchie di interfacce, ereditando i metodi delle interfacce padre.
 
    ```java
-   public interface AltraInterfaccia extends MioInterfaccia {
+   public interface AltraInterfaccia extends Contratto {
        void nuovoMetodo();
    }
    ```
