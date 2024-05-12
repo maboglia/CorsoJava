@@ -114,16 +114,16 @@ Ricorda che la pratica è fondamentale nella programmazione. Scrivi regolarmente
   * [API Java Stringhe](021_API_Java_Stringhe.md)
   * [java.lang.String](java.lang.StringBuffer.md)
 * [La casse Random](022_java_util_Membri_classe_Random.md)
-* [022_API_Java_date_time](022_API_Java_date_time.md)
-* [024_classe_File.md](024_classe_File.md)
-* [028_InputStream_OutputStream](028_InputStream_OutputStream.md)
-* [025_InputStream.md](025_InputStream.md)
-* [026_OutputStream.md](026_OutputStream.md)
-* [029_InputStreamReader_Output](029_InputStreamReader_OutputStreamReader.md)
-* [027_Reader_Writer.md](027_Reader_Writer.md)
-* [030_BufferedReader_BufferedWriter](030_BufferedReader_BufferedWriter.md)
-* [032_PrintStream.md](032_PrintStream.md)
-* [031_FileReader_FileWriter](031_FileReader_FileWriter.md)
+* [API_Java_date_time](022_API_Java_date_time.md)
+* [classe_File](024_classe_File.md)
+* [InputStream_OutputStream](028_InputStream_OutputStream.md)
+* [InputStream](025_InputStream.md)
+* [OutputStream](026_OutputStream.md)
+* [InputStreamReader_Output](029_InputStreamReader_OutputStreamReader.md)
+* [Reader_Writer](027_Reader_Writer.md)
+* [BufferedReader_BufferedWriter](030_BufferedReader_BufferedWriter.md)
+* [PrintStream](032_PrintStream.md)
+* [FileReader_FileWriter](031_FileReader_FileWriter.md)
 
 ### Collezioni
 
@@ -156,25 +156,25 @@ Ricorda che la pratica è fondamentale nella programmazione. Scrivi regolarmente
 
 ### Java Database: JDBC
 
-* [JavaWebeDB](./appunti/049_JavaWebeDB.md)
-* [Java_Database](./appunti/050_Java_Database.md)
-* [Java_Database](./appunti/051_Java_Database.md)
-* [Java_Database](./appunti/052_Java_Database.md)
-* [JDBC_ConnectionPooling](./appunti/048_JDBC_ConnectionPooling.md)
+* [Java per il Web e DataBase](./appunti/049_JavaWebeDB.md)
+* [Java JDBC](./appunti/050_Java_Database.md)
+* [Java Statement](./appunti/051_Java_Database.md)
+* [Java ResultSet](./appunti/052_Java_Database.md)
+* [Connection Pooling](./appunti/048_JDBC_ConnectionPooling.md)
 
 
 ## Java Web: JSP e Servlet
 
-* [Servlet_LeggiFile](./appunti/058_Servlet_LeggiFile.md)
-* [RequestDispatcher](./appunti/060_RequestDispatcher.md)
-* [JSP_appunti](./appunti/057_JSP_appunti.md)
-* [JSP_Fondamenti](./appunti/053_JSP_Fondamenti.md)
-* [JSP_Azioni](./appunti/054_JSP_Azioni.md)
-* [JSP_Dichiarazioni](./appunti/055_JSP_Dichiarazioni.md)
-* [JSP_Direttive](./appunti/056_JSP_Direttive.md)
-* [JSP_1](./appunti/058_JSP_1.md)
-* [JSP_2](./appunti/059_JSP_2.md)
-* [jsp_appunti](./appunti/jsp_appunti.md)
+* [JSP Fondamenti](./appunti/053_JSP_Fondamenti.md)
+* [JSP Azioni](./appunti/054_JSP_Azioni.md)
+* [JSP Dichiarazioni](./appunti/055_JSP_Dichiarazioni.md)
+* [JSP Direttive](./appunti/056_JSP_Direttive.md)
+* [JSP 1](./appunti/058_JSP_1.md)
+* [JSP 2](./appunti/059_JSP_2.md)
+* [Java Servlet](./appunti/060_RequestDispatcher.md)
+* [Servlet LeggiFile](./appunti/058_Servlet_LeggiFile.md)
+* [JSP appunti](./appunti/jsp_appunti.md)
+* [JSP appunti](./appunti/057_JSP_appunti.md)
 
 
 ## Framework Java: Spring 
@@ -193,16 +193,16 @@ Ricorda che la pratica è fondamentale nella programmazione. Scrivi regolarmente
 
 ### approfondimenti
 
-* [039_regexp](./appunti/039_regexp.md)
-* [042_moduli](./appunti/042_moduli.md)
-* [096_algoritmi_sort](./appunti/096_algoritmi_sort.md)
-* [101_eclipse](./appunti/101_eclipse.md)
-* [097_ricorsione](./appunti/097_ricorsione.md)
-* [023_locale](./appunti/023_locale.md)
-* [031_Serializzazione](./appunti/031_Serializzazione.md)
-* [000_programma_Java](./appunti/000_programma_Java.md)
-* [000_programma_UF](./appunti/000_programma_UF.md)
-* [000_programma_UF_OCP](./appunti/000_programma_UF_OCP.md)
+* [Espressioni Regolari - Regexp](./appunti/039_regexp.md)
+* [Moduli](./appunti/042_moduli.md)
+* [Algoritmi_sort](./appunti/096_algoritmi_sort.md)
+* [Eclipse](./appunti/101_eclipse.md)
+* [Ricorsione](./appunti/097_ricorsione.md)
+* [Locale](./appunti/023_locale.md)
+* [Serializzazione](./appunti/031_Serializzazione.md)
+* [Programma Java](./appunti/000_programma_Java.md)
+* [Programma OCA](./appunti/000_programma_UF.md)
+* [Programma OCP](./appunti/000_programma_UF_OCP.md)
 
 ## sito web
 
