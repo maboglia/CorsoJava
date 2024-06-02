@@ -1,5 +1,6 @@
 Ecco un esempio di come trasformare un numero double in formato decimale con la lingua italiana (`Locale.ITALY`):
 
+
 ```java
 import java.text.NumberFormat;
 import java.util.Locale;

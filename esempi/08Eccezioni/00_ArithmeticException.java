@@ -14,7 +14,7 @@ public class AritmeticaSbagliata {
 			System.out.println(z);
 		} catch (ArithmeticException e) {
 			// TODO Auto-generated catch block
-			System.out.println("eccezione di tipo aritmetico, devi aver inserito ei valori non accettabili");
+			System.out.println("eccezione di tipo aritmetico, devi aver inserito dei valori non accettabili");
 			//e.printStackTrace();
 		}
 		
