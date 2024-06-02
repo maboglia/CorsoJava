@@ -18,4 +18,15 @@
       {
          System.out.println("a NON è uguale a b");
       }
+
+
+
+      if ( Math.abs(b-a) < 0.000000001 )
+      {
+         System.out.println("a è (approssimativamente) uguale a b");
+      }
+      else
+      {
+         System.out.println("a NON è (approssimativamente) uguale a b");
+      }
    }

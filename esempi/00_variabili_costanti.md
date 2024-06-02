@@ -193,14 +193,6 @@ public class Scope7
 
 ---
 
-## Scope: ambito di visibilità delle variabili
-
-```java
-
-```
-
----
-
 ## Uso la variabile per lo scambio di valori
 
 ```java
