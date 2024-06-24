@@ -93,3 +93,218 @@ In questo modo, la variabile `r` viene dichiarata all'interno del metodo `main` 
 ```
 3.14
 ```
+
+---
+
+### Esempi di scope
+
+```java
+public class Scope1
+{
+   public static void main(String[] args)      
+   {
+
+         double r;
+
+         r = 3.14;
+
+
+      System.out.println(r);
+   }
+}
+
+```
+
+---
+
+```java
+public class Scope2
+{
+   public static void main(String[] args)      
+   {
+      {
+         double r;
+
+         r = 3.14;
+      }
+
+      System.out.println(r);
+   }
+}
+
+
+```
+
+---
+
+```java
+public class Scope3
+{
+   public static void main(String[] args)      
+   {
+      {
+         r = 1;            // (1)
+
+         double r;
+
+         r = r + 5;        // (2)
+      }
+
+      r = r + 2;           // (3)
+   }
+
+   r = r + 3;              // (4)
+}
+
+
+```
+
+---
+
+```java
+public class Scope4
+{
+   public static void main(String[] args)      
+   {
+      {
+         double r = 3.14;
+
+         r = r + 5;
+         System.out.println(r);
+      }
+
+      {
+         String r = "3.14";
+
+         r = r + 5;
+         System.out.println(r);
+      }
+
+   }
+}
+
+
+```
+
+---
+
+```java
+
+public class Scope5
+{
+   public static void main(String[] args)      
+   {
+      {
+         double r = 3.14;
+
+         {
+            r = 5;    // No error
+            t = 5;    // Will cause "undefined variable" error
+         }
+
+         double t = 1.0;
+      }
+
+   }
+}
+
+```
+
+---
+
+```java
+public class Scope6
+{
+   public static void main(String[] args)      
+   {
+      {  // Start of outer scope
+         double r;
+
+         {  // Start of inner scope
+            String r;
+
+         }
+
+      }
+
+   }
+}
+
+
+```
+
+---
+
+```java
+
+public class Scope7
+{
+   public static void main(String[] args)      
+   {
+      /* -------------------------------------------
+         2 variables named r inside the SAME scope
+         ------------------------------------------- */
+      double r = 0.0;
+
+      int r = 0;
+
+      System.out.println(r);
+
+   }
+}
+
+```
+
+---
+
+```java
+
+public class ScopeX
+{
+   public static void main(String[] args)      
+   {
+ 
+      {
+         String r = "abc" ;
+         System.out.println(r);
+      }
+
+      double r = 4.0;
+      System.out.println(r);
+
+   }
+}
+
+
+```
+
+---
+
+```java
+public class EsempioScope
+{
+   public static void main(String[] args)            
+   {
+      {
+         double r = 3.14;
+ 
+         {
+            String s = "1234";
+            r = r + 2;
+            System.out.println( s + r );
+         }
+ 
+         {
+            int s = 1234;
+ 
+            System.out.println( s + r );
+         }
+      }
+   }
+}
+
+
+```
+
+---
+
