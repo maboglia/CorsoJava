@@ -1,180 +1,159 @@
-# Le variabili e le costanti
+### Le variabili e le costanti in Java (2024)
 
-* Una variabile è **un'area di memoria** identificata da un **nome**
-* Il suo scopo è di contenere un valore di un **certo tipo**
-* Serve per memorizzare dati durante l'esecuzione di un programma
-* Il nome di una variabile è un **identificatore**
-  * può essere costituito da lettere, numeri e underline
-  * NON deve coincidere con una parola chiave del linguaggio
-  * è meglio scegliere un **identificatore** che sia **significativo** per il programma
-* Il modificatore **final** trasforma la variabile in una costante
-
-![dichiarazione variabile](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/01_operatori_tipi_expr/assignment.png)
+In Java, **variabili** e **costanti** sono i fondamenti per la gestione dei dati. Le variabili rappresentano delle aree di memoria destinate a memorizzare informazioni che possono cambiare durante l'esecuzione del programma, mentre le costanti sono utilizzate per memorizzare valori che rimangono invariati. Con le versioni avanzate del linguaggio Java, il concetto di variabili e costanti è rimasto centrale per il funzionamento e l'efficienza dei programmi.
 
 ---
 
-### esempio
+### **Variabili: concetti chiave**
+
+- Una **variabile** è **un'area di memoria** identificata da un **nome**.
+- Il suo scopo è quello di contenere un valore di un **certo tipo**.
+- Le variabili sono usate per **memorizzare dati** durante l'esecuzione del programma.
+- Il nome di una variabile è un **identificatore**:
+  - Può contenere lettere, numeri e l'underscore `_`.
+  - Non deve coincidere con una parola chiave del linguaggio Java (ad es., `int`, `class`).
+  - Si consiglia di scegliere un **nome significativo** per migliorare la leggibilità del programma.
+  
+![dichiarazione variabile](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/01_operatori_tipi_expr/assignment.png)
+
+### Esempio di utilizzo:
 
 ```java
 public class Triangolo {
-    public static void main ( String [] args ) {
-        
-        int base , altezza ; //dichiarazione di variabili locali
-        double area ;
+    public static void main(String[] args) {
+        int base, altezza; // Dichiarazione di variabili locali
+        double area;
         
         base = 5;
         altezza = 10;
         area = base * altezza / 2;
 
-        System.out.println ( area );
+        System.out.println(area);
     }
 }
 ```
 
-Usando le variabili il programma risulta essere **più chiaro**:
-
-* Si capisce meglio quali siano la base e l'altezza del triangolo
-* Si capisce meglio che cosa calcola il programma
-* Evita la necessità di un commento per spiegare cosa contiene
-
+Questo esempio mostra come l'uso delle variabili renda il programma più **chiaro** e più facile da comprendere.
 
 ---
 
-### Dichiarazione
+### Dichiarazione di variabili
 
-* In Java ogni variabile deve essere **dichiarata prima del suo uso**
-* Nella dichiarazione di una variabile se ne specifica il **nome** e il **tipo** 
-* Nell'esempio, abbiamo dichiarato tre variabili con nomi base, altezza e area, tutte di tipo int (numeri interi)
-  * int base , altezza ;
-  * int area ;
-
-__ATTENZIONE!__ Ogni variabile deve essere dichiarata **UNA SOLA VOLTA**
-(la prima volta che compare nel programma)
-
+- In Java, **ogni variabile deve essere dichiarata** prima del suo utilizzo.
+- La dichiarazione richiede la specifica del **nome** della variabile e del suo **tipo**.
+  
+Esempio:
 ```java
-base =5;
-altezza =10;
-area = base * altezza /2;
+int base, altezza;
+double area;
 ```
+  
+### **Regole per le variabili:**
+- Ogni variabile deve essere dichiarata **una sola volta**.
+- Le variabili non possono essere utilizzate finché non sono state **inizializzate**.
 
+### Assegnazione:
 
----
+L'assegnazione permette di **memorizzare un valore** in una variabile. Un'assegnazione può essere effettuata con un letterale o con il risultato di un'espressione.
 
-### Assegnazione
-
-* Si può memorizzare un valore in una variabile tramite l'operazione di assegnazione
-* Il valore da assegnare a una variabile può essere un letterale o il risultato della valutazione di un'espressione
-
-* Esempi:
-
+Esempio:
 ```java
 base = 5;
 altezza = 10;
-area = base * altezza /2;
+area = base * altezza / 2;
 ```
 
-* I valori di base e altezza vengono letti e usati nell'espressione
-* Il risultato dell'espressione viene scritto nella variabile area
+### Dichiarazione + Assegnazione:
 
----
-
-### Dichiarazione + Assegnazione
-
-Prima di poter essere usata in un'espressione una variabile deve:
-
-* essere stata dichiarata
-* essere stata assegnata almeno una volta (inizializzata)
-* NB: **si possono combinare dichiarazione e assegnazione**. 
-
-Ad esempio:
-
+Si può combinare la dichiarazione e l'assegnazione in un'unica linea:
 ```java
 int base = 5;
 int altezza = 10;
-int area = base * altezza / 2;
+double area = base * altezza / 2;
 ```
 
 ---
 
-## uso della variabile locale
+### **Scope: ambito di visibilità delle variabili**
 
-```java
+Lo **scope** di una variabile definisce dove essa può essere utilizzata nel programma. Le variabili possono essere **locali** (definite all'interno di un metodo o di un blocco) o **globali** (definite a livello di classe).
 
-//1) dichiarazione
-int mioNumero;
-//2) inizializzazione
-mioNumero = 100;
-//3) uso della variabile locale
-System.out.println(mioNumero);
-```
-
-**NB**: una variabile **locale** deve **SEMPRE** essere **inizializzata**, prima di poter essere utilizzata
-
----
-
-## Scope: ambito di visibilità delle variabili
-
+Esempio:
 ```java
 class Nascoste {
-  static int x,y; //Def. var. globali
+  static int x, y; // Variabili globali
 
   static void f() {
     int x;
-    x = 1;  // Locale
-    y = 1;  // Globale
-    System.out.println(x);
-    System.out.println(y);
+    x = 1;  // Variabile locale
+    y = 1;  // Variabile globale
+    System.out.println(x); // Stampa la variabile locale
+    System.out.println(y); // Stampa la variabile globale
   }
 
-  public static void main (String[] args) {
-    x = 0; // Globale
-    y = 0; // Globale
+  public static void main(String[] args) {
+    x = 0; // Variabile globale
+    y = 0; // Variabile globale
     f();
-    System.out.println(x);
-    System.out.println(y);
+    System.out.println(x); // Stampa la variabile globale
+    System.out.println(y); // Stampa la variabile globale
   }
 }
 ```
 
-**NB**: una variabile **locale** deve **SEMPRE** essere **inizializzata**, prima di poter essere utilizzata
+### Costanti
 
----
-
-## Costanti
-
-Nella dichiarazione delle variabili che **NON DEVONO** mai cambiare valore si può utilizzare il modificatore **final**
+Le **costanti** sono variabili il cui valore **non può cambiare** dopo essere stato inizializzato. Per dichiarare una costante, si utilizza il modificatore `final`:
 
 ```java
 final double IVA = 0.22;
 ```
 
-* Il modificatore **final** trasforma la variabile in una costante
-* Il compilatore si occuperà di controllare che il valore delle costanti non venga **mai modificato** (impedisce di assegnare un nuovo valore) dopo essere stato inizializzato.
-* Aggiungere il modificatore **final** non cambia funzionamento programma, ma serve a prevenire errori di programmazione
-* Si chiede al compilatore di controllare che una variabile non venga ri-assegnata per sbaglio
-* Sapendo che una variabile non cambierà mai valore, il compilatore può anche eseguire delle **ottimizzazioni** sull'uso di tale variabile.
-* Il modificatore final viene utilizzato anche in altri contesti (per esempio nei metodi)
+- Il modificatore **final** impedisce di assegnare un nuovo valore alla variabile dopo la sua inizializzazione.
+- L'uso delle costanti può aiutare a **prevenire errori** e consente al compilatore di eseguire **ottimizzazioni**.
+
+### **L'attributo `final`:** 
+
+- **Variabile:** la trasforma in una costante.
+- **Metodo:** impedisce l'overriding (ridefinizione) in una classe derivata.
+- **Classe:** impedisce la derivazione di altre classi (la classe diventa una "foglia" nell'albero di ereditarietà).
 
 ---
 
-## L'attributo final
-
-### Definisce un dato elemento come non più modificabile
-
-* Applicato a variabile la trasforma in costante
-* Applicato a un metodo
-  * Ne impedisce l'overriding in classi derivate
-  * Ne rende possibile l'inlining (binding statico - più efficiente)
-* Applicato a una classe
-  * Impedisce di derivare da essa altre classi (la classe deve essere una foglia dell'albero di ereditarietà)
+### **Esempio di costanti:**
+```java
+final double PI = 3.14159;
+final int MAX_VALUE = 100;
+```
 
 ---
 
-### Input dall'utente
+### **Input dell'utente**
 
-* Per ricevere valori in input dall'utente si può usare la classe Scanner, contenuta nel package **java.util**
-* La classe Scanner deve essere richiamata usando la direttiva import prima dell'inizio del corpo della classe
+Per ottenere valori dall'utente, in Java si può utilizzare la classe `Scanner`, che appartiene al package **`java.util`**:
 
-* [raccolta esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/00_variabili_costanti.md)
-* [altri esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/02_variabili)
+```java
+import java.util.Scanner;
 
+public class InputExample {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Inserisci un numero: ");
+        int numero = input.nextInt();
+        System.out.println("Hai inserito: " + numero);
+    }
+}
+```
+
+---
+
+### **Conclusione:**
+
+Le variabili e le costanti rappresentano due elementi fondamentali nella programmazione in Java. Le prime consentono di **memorizzare dati variabili** nel corso dell'esecuzione di un programma, mentre le seconde garantiscono la sicurezza e la stabilità delle informazioni che non devono cambiare. Utilizzare questi elementi in modo corretto aiuta a scrivere codice più chiaro, efficiente e meno incline agli errori.
+
+---
+
+**Esempi e risorse aggiuntive:**
+
+- [Raccolta di esempi su variabili e costanti](https://github.com/maboglia/CorsoJava/blob/master/esempi/00_variabili_costanti.md)
+- [Altri esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/02_variabili)
