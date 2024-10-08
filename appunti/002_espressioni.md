@@ -4,129 +4,177 @@ Le espressioni in programmazione sono combinazioni di valori, operatori e chiama
 
 ---
 
-1. **Espressioni Aritmetiche:**
+### Espressioni in Java (2024)
 
-   ```java
-   int risultato = 2 + 3 * (5 - 1);
-   ```
-
-   In questo esempio, l'espressione aritmetica viene valutata secondo le regole di precedenza degli operatori.
+In Java, un'espressione è una combinazione di **operandi** (variabili, valori o oggetti) e **operatori** (simboli che eseguono operazioni su uno o più operandi). Un'espressione calcola un valore e può essere utilizzata in vari contesti, come assegnazioni, condizioni e loop.
 
 ---
 
-2. **Espressioni Booleane:**
+### **Tipi di espressioni**
 
-   ```python
-   boolean condizione = (x > 5) && (y <= 10);
-   ```
+1. **Espressioni letterali**  
+   Un'espressione letterale è costituita da un valore costante (un numero, un carattere, ecc.).
+   - Esempi:
+     ```java
+     5      // Un intero
+     'A'    // Un carattere
+     3.14   // Un valore decimale (double)
+     true   // Un booleano
+     ```
 
-   Qui, l'espressione booleana verifica se entrambe le condizioni sono vere.
+2. **Espressioni di variabili**  
+   Un'espressione di variabile utilizza una variabile come operando.
+   - Esempio:
+     ```java
+     int x = 10;
+     x;  // Variabile che rappresenta il valore 10
+     ```
+
+3. **Espressioni aritmetiche**  
+   Queste espressioni coinvolgono operazioni matematiche su numeri e variabili. Gli operatori principali sono:
+   - `+` (somma), `-` (sottrazione), `*` (moltiplicazione), `/` (divisione), `%` (modulo)
+   - Esempio:
+     ```java
+     int somma = 10 + 5;         // 15
+     int prodotto = 2 * 3;       // 6
+     int modulo = 10 % 3;        // 1 (resto)
+     ```
+
+4. **Espressioni di assegnazione**  
+   Le espressioni di assegnazione memorizzano il risultato di un'espressione in una variabile.
+   - Operatore: `=`
+   - Esempio:
+     ```java
+     int x;
+     x = 5 + 3;   // Assegna 8 a x
+     ```
+
+5. **Espressioni boolean**  
+   Espressioni che restituiscono `true` o `false`, spesso utilizzate nelle condizioni.
+   - Operatori logici:
+     - `&&` (and), `||` (or), `!` (not)
+   - Operatori di confronto:
+     - `==` (uguale), `!=` (diverso), `<`, `>`, `<=`, `>=`
+   - Esempio:
+     ```java
+     boolean isEqual = (5 == 5);  // true
+     boolean isGreater = (10 > 3); // true
+     ```
+
+6. **Espressioni condizionali (ternarie)**  
+   L'operatore ternario valuta un'espressione e restituisce un valore in base a una condizione.
+   - Sintassi:
+     ```java
+     condizione ? valoreSeTrue : valoreSeFalse;
+     ```
+   - Esempio:
+     ```java
+     int max = (a > b) ? a : b;
+     ```
 
 ---
 
-3. **Espressioni di Concatenazione di Stringhe:**
+### **Operatori in Java**
 
-   ```javascript
-   let nomeCompleto = nome + " " + cognome; 
-   ```
+Gli operatori in Java possono essere classificati in base alla loro funzione:
 
-   Questa espressione concatena le variabili `nome` e `cognome` in una stringa più lunga.
+#### **Operatori aritmetici**  
+Utilizzati per eseguire operazioni matematiche.
+- `+` (somma)
+- `-` (sottrazione)
+- `*` (moltiplicazione)
+- `/` (divisione)
+- `%` (modulo)
 
----
+#### **Operatori di assegnazione**  
+Permettono di assegnare il valore di un'espressione a una variabile.
+- `=` (assegnazione semplice)
+- Operatori di assegnazione combinati:
+  - `+=`, `-=`, `*=`, `/=`, `%=`
+  - Esempio:
+    ```java
+    int a = 10;
+    a += 5;  // Equivale a: a = a + 5;
+    ```
 
-4. **Espressioni di Assegnamento:**
+#### **Operatori di confronto**  
+Questi operatori restituiscono un valore booleano (`true` o `false`).
+- `==` (uguale)
+- `!=` (diverso)
+- `<` (minore)
+- `>` (maggiore)
+- `<=` (minore o uguale)
+- `>=` (maggiore o uguale)
 
-   ```c
-   x = y + 5;
-   ```
+#### **Operatori logici**  
+Utilizzati nelle espressioni booleane per combinare più condizioni.
+- `&&` (and logico)
+- `||` (or logico)
+- `!` (not logico)
+  
+#### **Operatori di incremento/decremento**  
+Usati per aumentare o diminuire il valore di una variabile di 1.
+- `++` (incremento)
+- `--` (decremento)
+  
+  **Pre-incremento e post-incremento**:
+  - `++x` (incrementa prima di usare il valore)
+  - `x++` (incrementa dopo aver usato il valore)
 
-   In questo caso, l'espressione assegna a `x` il valore di `y` più 5.
-
----
-
-5. **Chiamate di Funzioni:**
-
-   ```java
-   double risultatoFunzione = Math.sqrt(25);
-   ```
-
-   L'espressione chiama la funzione `sqrt` della classe `Math` per calcolare la radice quadrata di 25.
-
----
-
-6. **Espressioni Ternarie:**
-
-   ```javascript
-   let risultato = (x > 0) ? "Positivo" : "Negativo";
-   ```
-
-   Questa espressione ternaria restituisce "Positivo" se `x` è maggiore di 0 e "Negativo" altrimenti.
-
----
-
-7. **Espressioni di Array e Oggetti:**
-
-   ```python
-   valore = array[indice];
-   ```
-
-   Questa espressione ottiene il valore di un elemento specifico in un array.
-
-Le espressioni possono essere più complesse con l'uso di parentesi per determinare l'ordine di valutazione. Possono anche coinvolgere variabili, costanti e altri costrutti del linguaggio di programmazione. In generale, le espressioni sono fondamentali per scrivere codice che esegue calcoli e prende decisioni in base alle condizioni e ai dati presenti nel programma
-
----
-
-## per esempio nel programma
-
+Esempio:
 ```java
-public class Triangolo {
-    public static void main ( String [] args ) {
-        
-        double area = 5*10/2;
-        System.out.println (area);
-    }
-}
+int a = 5;
+int b = ++a; // a viene incrementato prima, quindi b = 6
+int c = a--; // a viene usato prima, quindi c = 6 e poi a = 5
 ```
 
-Il programma risolve l'espressione aritmetica `5*10/2`, memorizza in `area` il risultato e lo stampa a video
+---
 
+### **Ordine di valutazione: precedenza e associatività degli operatori**
+
+In un'espressione complessa, l'ordine con cui gli operatori vengono valutati dipende dalla loro **precedenza** e **associatività**.
+
+- **Precedenza**: gli operatori con precedenza più alta vengono valutati per primi.
+  - Ad esempio: `*` e `/` hanno precedenza più alta di `+` e `-`.
+
+- **Associatività**: quando due operatori hanno la stessa precedenza, l'**associatività** determina l'ordine di valutazione.
+  - Ad esempio, la maggior parte degli operatori aritmetici sono **associativi da sinistra**:
+    ```java
+    int x = 5 - 3 + 2; // (5 - 3) + 2 = 4
+    ```
+  - L'operatore di assegnazione `=` è **associativo da destra**:
+    ```java
+    int x, y;
+    x = y = 5; // Assegna 5 a y, poi a x
+    ```
 
 ---
 
-## Espressioni aritmetiche e precedenza
+### **Espressioni con casting**
 
-singoli "letterali"
+In alcuni casi, è necessario forzare la conversione di un tipo di dato in un altro. Questo processo è chiamato **casting**.
 
-* Letterali interi: 3425, 12, -34, 0, -4, 34, -1234, ....
-* Letterali frazionari: 3.4, 5.2, -0.1, 0.0, -12.45, 1235.3423, ....
-
-operatori aritmetici
-
-* moltiplicazione `*`
-* divisione `/`
-* modulo `%` (resto della divisione tra interi)
-* addizione `+`
-* sottrazione `-`
-
-Le operazioni sono elencate in **ordine decrescente di priorità** ossia `3+2*5` fa 13, non 25
-
-Le parentesi tonde cambiano l'ordine di valutazione degli operatori ossia `(3+2)*5` fa 25
-
-Inoltre, tutti gli operatori sono associativi a sinistra ossia `3+2+5` corrisponde a `(3+2)+5` quindi `18/6/3` fa 1, non 9
+Esempio:
+```java
+int x = 10;
+double y = (double) x / 3; // Il cast forza la divisione in double
+```
 
 ---
 
-### operazione di divisione
+### **Espressioni di stringhe**
 
-* L'operazione di divisione / si comporta diversamente a seconda che sia applicato a letterali interi o frazionari
-* `25/2 = 12` (divisione intera)
-* `25%2 = 1` (resto della divisione intera)
-* `25.0/2.0 = 12.5` (divisione reale)
-* `25.0%2.0 = 1.0` (resto della divisione intera)
-* Una operazione tra un letterale intero e un frazionario viene eseguita come tra due frazionari
-* `25/2.0 = 12.5`
-* `1.5 + (25/2) = 13.5` (attenzione all'ordine di esecuzione delle operazioni)
-* `2 + (25.0/2.0) = 14.5` usare le parentesi ()
+In Java, si possono utilizzare le espressioni per **concatenare** stringhe utilizzando l'operatore `+`.
+```java
+String nome = "Mario";
+String saluto = "Ciao, " + nome;  // Concatenazione di stringhe
+```
+
+---
+
+### **Conclusione**
+
+Le espressioni in Java sono fondamentali per eseguire operazioni su dati, effettuare confronti, assegnare valori e controllare il flusso di un programma. La comprensione dei vari tipi di espressioni e degli operatori utilizzati in Java è essenziale per scrivere codice efficiente e corretto.
 
 [esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/01_Operatori_Tipi.md)
 
