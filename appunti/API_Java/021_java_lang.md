@@ -113,7 +113,7 @@ Queste classi costituiscono la base della programmazione in Java e offrono numer
 
 ---
 
-[Classi wrapper](https://github.com/maboglia/CorsoJava/blob/master/appunti/API_Java/021_Classi_wrapper.md) e gestione tipi
+[Classi wrapper](https://github.com/maboglia/CorsoJava/blob/master/appunti/021_Classi_wrapper.md) e gestione tipi
 
 - Boolean
 - Byte
@@ -130,7 +130,7 @@ Queste classi costituiscono la base della programmazione in Java e offrono numer
 
 Gestire le Stringhe
 
-- [String](https://github.com/maboglia/CorsoJava/blob/master/appunti/API_Java/007_stringhe.md)
+- [String](https://github.com/maboglia/CorsoJava/blob/master/appunti/007_stringhe.md)
 - [StringBuffer](https://github.com/maboglia/CorsoJava/blob/master/appunti/007_stringhe.md)
 - [StringBuilder](https://github.com/maboglia/CorsoJava/blob/master/appunti/007_stringhe.md)
 
