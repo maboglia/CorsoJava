@@ -16,10 +16,10 @@ gerarchica dei package simile a quella delle cartelle
 
 ## Esempi di package
 
-* `java.lang` Package fondamentale con
+* [`java.lang`](API_Java/021_java_lang.md) Package fondamentale con
 classi di uso molto comune
 * `java.io` Package per l’Input/Output
-* `java.util` Package con classi varie di
+* [`java.util`](API_Java/033_java.util.md) Package con classi varie di
 utilità generale
 * `java.text` Package con classi per la
 gestione ed elaborazione di
@@ -163,8 +163,6 @@ La directory in cui il package risiede deve avere un path che corrisponde a quel
 ## Java packages
 
 [list of packages Java 13](https://docs.oracle.com/en/java/javase/13/docs/api/allpackages-index.html)
-
-Ecco la tabella in formato markdown con i dati forniti:
 
 ```markdown
 | Package                          | Description                                                                                                                                        |
