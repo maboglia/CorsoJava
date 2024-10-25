@@ -131,7 +131,6 @@ Queste classi costituiscono la base della programmazione in Java e offrono numer
 Gestire le Stringhe
 
 - [String](https://github.com/maboglia/CorsoJava/blob/master/appunti/007_stringhe.md)
-- [StringBuffer](https://github.com/maboglia/CorsoJava/blob/master/appunti/007_stringhe.md)
 - [StringBuilder](https://github.com/maboglia/CorsoJava/blob/master/appunti/007_stringhe.md)
 
 Gestire i numeri - Math
