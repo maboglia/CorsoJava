@@ -4,8 +4,6 @@ Il package `java.util` è una raccolta fondamentale di classi e interfacce che f
 
 ---
 
----
-
 ### 1. **Collection** e **Collections**
 
 - **Descrizione**: `Collection` è un'interfaccia che rappresenta un gruppo di oggetti (o elementi). `Collections` è una classe di utilità per operazioni di gestione delle collezioni come ordinamento e ricerca.
