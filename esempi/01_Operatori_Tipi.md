@@ -1,6 +1,10 @@
 # Elementi fondamentali Java: commenti, operatori ed espressioni
 
+---
+
 ![operatori](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/01_operatori_tipi_expr/built-in.png)
+
+---
 
 ![expressions](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/01_operatori_tipi_expr/comparison-expressions.png)
 
