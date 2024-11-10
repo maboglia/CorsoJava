@@ -1,129 +1,142 @@
 # JSP: Azioni standard
 
-### jsp:include
+In JSP, le **azioni standard** sono tag speciali che forniscono funzionalità predefinite e semplificano le operazioni comuni come l'inclusione di contenuti, la gestione dei JavaBean e l'inoltro di richieste. Questi tag offrono un modo dichiarativo per eseguire attività server-side senza dover scrivere codice Java direttamente nella pagina JSP.
 
-Chiama una pagina JSP da un'altra
+---
 
-Al termine, la pagina di destinazione restituisce il controllo alla pagina chiamante.
+### Principali Azioni Standard di JSP
 
-```java
-<jsp:include page="path" flush="true"/>
-<jsp:include page="path" flush="true">
-<jsp:param name="paramName" value="paramValue" /> ..
-</jsp:include>
-```
+1. **<jsp:include>**
+   - **Descrizione**: Include dinamicamente il contenuto di un'altra pagina JSP o file all'interno della pagina corrente.
+   - **Quando usare**: Quando si vuole includere una risorsa esterna (come un'intestazione o un piè di pagina) ed eseguire l'aggiornamento in tempo reale durante la richiesta.
+   - **Sintassi**:
 
-### jsp:forward
+     ```jsp
+     <jsp:include page="header.jsp" />
+     ```
 
-Chiama una pagina JSP da un'altra
+   - **Esempio con passaggio parametri**:
 
-L'esecuzione della pagina chiamante viene terminata dalla chiamata
+     ```jsp
+     <jsp:include page="header.jsp">
+         <jsp:param name="utente" value="Mario Rossi" />
+     </jsp:include>
+     ```
 
-```java
-<jsp:forward page="path" />
-<jsp:forward page="path">
-<jsp:param name="paramName" value="paramValue" /> ..
-</jsp:forward>
-```
+2. **<jsp:forward>**
+   - **Descrizione**: Inoltra la richiesta corrente a un'altra pagina JSP, servlet o risorsa. La pagina che riceve l'inoltro gestirà la risposta al client.
+   - **Quando usare**: Quando si vuole redirigere il flusso a una nuova risorsa, come un'altra pagina JSP, senza inviare una risposta immediata al client.
+   - **Sintassi**:
 
-## jsp:forward
+     ```jsp
+     <jsp:forward page="nuovaPagina.jsp" />
+     ```
 
-L'azione forward serve per trasferire l'utente da una pagina jsp ad un'altra. Come l'azione jsp:include è possibile utlizzare forward con o senza parametri. In quest'ultimo caso occorre terminare l'istruzione inserendo / prima della parentesi angolare di chiusura tag :
+   - **Esempio con passaggio parametri**:
 
-```<jsp:forward page="URL" />```
-Nel caso si vogliano utilizare dei parametri, invece, utilizzeremo il tag di chiusura del blocco di codice </jsp:forward> :
+     ```jsp
+     <jsp:forward page="login.jsp">
+         <jsp:param name="messaggio" value="Accesso necessario" />
+     </jsp:forward>
+     ```
 
-```html
-<jsp:forward page="URL" > 
-<jsp:param name="ParamName1" value="ParamValue1" /> 
-<jsp:param name="ParamName2" value="ParamValue2" /> 
-</jsp:forward>
-```
+3. **<jsp:useBean>**
+   - **Descrizione**: Crea o individua un JavaBean, che può quindi essere utilizzato per archiviare dati o per eseguire logiche applicative.
+   - **Quando usare**: Quando si vuole istanziare o accedere a un JavaBean nella pagina JSP per gestire dati persistenti, come un oggetto di un form.
+   - **Sintassi**:
 
-Esempio di codice (incluso in tomcat 7)
-per trovarne altri, dopo l'indirizzo del server (es. localhost:8080) scrivi /examples/jsp/
+     ```jsp
+     <jsp:useBean id="utente" class="com.example.Utente" scope="session" />
+     ```
 
-```html
+4. **<jsp:setProperty>**
+   - **Descrizione**: Imposta il valore di una proprietà di un JavaBean creato con `<jsp:useBean>`.
+   - **Quando usare**: Quando si vuole assegnare valori a proprietà di un JavaBean, ad esempio dati di input utente.
+   - **Sintassi**:
+
+     ```jsp
+     <jsp:setProperty name="utente" property="nome" value="Mario" />
+     ```
+
+   - **Esempio di impostazione multipla**:
+
+     ```jsp
+     <jsp:setProperty name="utente" property="*" />
+     ```
+
+5. **<jsp:getProperty>**
+   - **Descrizione**: Recupera il valore di una proprietà da un JavaBean per visualizzarlo nella pagina.
+   - **Quando usare**: Quando si vuole visualizzare il valore di una proprietà precedentemente impostata in un JavaBean.
+   - **Sintassi**:
+
+     ```jsp
+     <jsp:getProperty name="utente" property="nome" />
+     ```
+
+6. **<jsp:param>**
+   - **Descrizione**: Utilizzato con `<jsp:include>`, `<jsp:forward>`, e `<jsp:plugin>`, permette di passare parametri a una risorsa JSP o servlet.
+   - **Quando usare**: Quando è necessario trasferire parametri insieme a un'azione di inclusione o inoltro.
+   - **Sintassi**:
+
+     ```jsp
+     <jsp:include page="header.jsp">
+         <jsp:param name="utente" value="Mario" />
+     </jsp:include>
+     ```
+
+7. **<jsp:plugin>**
+   - **Descrizione**: Rende possibile l'integrazione di applet Java, includendo tag HTML specifici per visualizzare un'applicazione.
+   - **Quando usare**: Quando si vuole includere e gestire un'applet Java in una pagina JSP.
+   - **Sintassi**:
+
+     ```jsp
+     <jsp:plugin type="applet" code="MyApplet.class" width="300" height="200">
+         <jsp:param name="param1" value="valore1" />
+     </jsp:plugin>
+     ```
+
+---
+
+### Esempio Completo di Uso delle Azioni JSP
+
+Questa pagina JSP utilizza `<jsp:useBean>`, `<jsp:setProperty>`, e `<jsp:getProperty>` per creare un oggetto `Utente`, impostare le sue proprietà e visualizzarle.
+
+```jsp
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<%
-   double freeMem = Runtime.getRuntime().freeMemory();
-   double totlMem = Runtime.getRuntime().totalMemory();
-   double percent = freeMem/totlMem;
-   if (percent < 0.5) {
-%>
+<head>
+    <title>Profilo Utente</title>
+</head>
+<body>
 
-<jsp:forward page="one.jsp"/>
+<jsp:useBean id="utente" class="com.example.Utente" scope="session" />
+<jsp:setProperty name="utente" property="nome" value="Mario" />
+<jsp:setProperty name="utente" property="cognome" value="Rossi" />
 
-<% } else { %>
+<h1>Profilo Utente</h1>
+<p>Nome: <jsp:getProperty name="utente" property="nome" /></p>
+<p>Cognome: <jsp:getProperty name="utente" property="cognome" /></p>
 
-<jsp:forward page="two.html"/>
-
-<% } %>
-
+</body>
 </html>
 ```
 
+---
 
+### Riepilogo delle Azioni Standard di JSP
+
+| Tag             | Funzione                                               | Esempio                        |
+|-----------------|--------------------------------------------------------|--------------------------------|
+| `<jsp:include>` | Include dinamicamente un'altra risorsa JSP o file      | `<jsp:include page="header.jsp" />` |
+| `<jsp:forward>` | Inoltra la richiesta a un'altra pagina                 | `<jsp:forward page="login.jsp" />` |
+| `<jsp:useBean>` | Crea o individua un JavaBean                           | `<jsp:useBean id="utente" class="com.example.Utente" />` |
+| `<jsp:setProperty>` | Imposta una proprietà di un JavaBean               | `<jsp:setProperty name="utente" property="nome" value="Mario" />` |
+| `<jsp:getProperty>` | Recupera una proprietà da un JavaBean              | `<jsp:getProperty name="utente" property="nome" />` |
+| `<jsp:param>`   | Passa parametri a una risorsa JSP o servlet            | `<jsp:param name="utente" value="Mario" />` |
+| `<jsp:plugin>`  | Integra un’applet Java nella pagina                    | `<jsp:plugin type="applet" code="MyApplet.class" />` |
 
 ---
 
-### jsp:plugin
+### Conclusioni
 
-* `type="bean|applet"`
-
-opzionali
-
-* `code="objectCode"`
-* `codebase="objectCodebase"`
-* `align="alignment"`
-* `archive="archiveList"`
-* `height="height"`
-* `hspace="hspace"`
-* `jreversion="jreversion"`
-* `name="componentName"`
-* `vspace="vspace"`
-* `width="width"`
-* `nspluginurl="url"`
-* `iepluginurl="url"`
-
-sintassi alternativa
-
-* `<jsp:params><jsp:param name="paramName"value="paramValue" /></jsp:params>`
-* `<jsp:fallback>testo in caso di fallimento del plugin</jsp:fallback>  >`
-
----
-
-## Utilizzo di JavaBeans
-
-### jsp:useBean
-
-Definisce un'istanza di Java bean.
-<jsp:useBean id="name" scope="page|request|session|application" typeSpec />
-<jsp:useBean id="name" scope="page|request|session|application"typeSpec >body</jsp:useBean>
-
-dove `typespec` è una delle seguenti possibilità:
-
-* `class="className"`
-* `class="className" type="typeName"`
-* `beanName="beanName" type=" typeName"`
-* `type="typeName"`
-
----
-
-### jsp:setProperty
-
-Imposta il valore di una o più proprietà in un bean.
-
-<jsp:setPropertyname="beanName" prop_expr />
-
-dove `prop_expr` è una delle seguenti possibilità:
-
-* `property="*"`
-* `property="propertyName"`
-* `property="propertyName" param="parameterName"`
-* `property="propertyName" value="propertyValue"`
-
-### jsp:getProperty
-
-Scrive il valore di una proprietà bean come stringa nell'oggetto out.
-<jsp:getProperty name="name" property="propertyName" />
+Le azioni standard JSP sono strumenti potenti che rendono più semplice l’inclusione di risorse, la gestione di JavaBean e la manipolazione di dati. La loro sintassi dichiarativa consente di ridurre il codice Java nella pagina JSP, migliorando la leggibilità e la manutenibilità del codice.
