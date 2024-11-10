@@ -1,6 +1,6 @@
 # Elementi fondamentali JSP
 
-## Utilizzo degli Oggetti Impliciti (Built-in) in JSP
+## Oggetti Impliciti (Built-in) in JSP
 
 JSP (JavaServer Pages) semplifica la programmazione web fornendo oggetti impliciti, istanziati automaticamente nell'ambiente JSP. Non è necessario importarli o istanziarli manualmente, rendendo più agevole lo sviluppo delle pagine. Per accedervi, è sufficiente utilizzare la sintassi `nomeOggetto.nomeMetodo`.
 
@@ -52,10 +52,6 @@ In JSP (JavaServer Pages), il concetto di scope è applicato attraverso l'uso di
 ### Ecco un esempio di utilizzo di variabili con differenti ambiti in un'applicazione JSP:
 
 ```jsp
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="java.util.ArrayList" %>
-<%@ page import="java.util.List" %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -97,6 +93,92 @@ In JSP (JavaServer Pages), il concetto di scope è applicato attraverso l'uso di
 * `applicationVariable` è una variabile con ambito di applicazione.
 
 Le variabili vengono impostate e lette utilizzando gli oggetti di ambito appropriati (`pageContext`, `request`, `session`, `application`).
+
+---
+
+In JSP, l’ambito (scope) delle variabili indica la durata e la visibilità di queste variabili all'interno di un'applicazione web. JSP supporta quattro tipi di ambiti principali per le variabili, ognuno con uno scopo e una durata specifica.
+
+### 1. **Page Scope**
+- **Descrizione**: Le variabili con ambito di pagina sono visibili e accessibili solo nella pagina JSP in cui sono definite.
+- **Durata**: Esistono solo per la durata della richiesta corrente e non sono condivise con altre pagine JSP o servlet.
+- **Utilizzo**: Tipicamente usato per variabili temporanee che non devono essere condivise.
+- **Sintassi**: Utilizzo implicito nel codice JSP, senza necessità di configurazioni particolari.
+
+  ```jsp
+  <%
+      String message = "Messaggio per questa pagina";
+      out.println(message);
+  %>
+  ```
+
+### 2. **Request Scope**
+- **Descrizione**: Le variabili con ambito di richiesta sono visibili e accessibili a tutte le risorse (JSP, servlet, ecc.) coinvolte nella stessa richiesta HTTP.
+- **Durata**: Durano per tutto il ciclo di vita della richiesta HTTP, dal momento in cui viene creata fino alla risposta al client.
+- **Utilizzo**: Usato per passare dati tra più pagine JSP o servlet durante una singola richiesta (ad esempio, un form multipagina).
+- **Sintassi**:
+  ```jsp
+  <% 
+      request.setAttribute("username", "Mario"); 
+  %>
+  ```
+
+  Per recuperare il valore:
+  ```jsp
+  <%
+      String username = (String) request.getAttribute("username");
+      out.println("Username: " + username);
+  %>
+  ```
+
+### 3. **Session Scope**
+- **Descrizione**: Le variabili con ambito di sessione sono visibili e accessibili in tutte le pagine JSP e servlet durante la sessione dell'utente.
+- **Durata**: Durano per l'intera sessione dell'utente, fino alla chiusura della sessione (ad esempio, quando l'utente chiude il browser o la sessione scade).
+- **Utilizzo**: Usato per mantenere dati specifici dell'utente, come il nome o lo stato di autenticazione.
+- **Sintassi**:
+  ```jsp
+  <% 
+      session.setAttribute("user", "Mario Rossi"); 
+  %>
+  ```
+
+  Per recuperare il valore:
+  ```jsp
+  <%
+      String user = (String) session.getAttribute("user");
+      out.println("User: " + user);
+  %>
+  ```
+
+### 4. **Application Scope**
+- **Descrizione**: Le variabili con ambito di applicazione sono visibili e accessibili a tutte le pagine JSP e servlet all'interno dell'intera applicazione web.
+- **Durata**: Durano per tutta la vita dell'applicazione web, fino allo spegnimento del server o al riavvio dell'applicazione.
+- **Utilizzo**: Usato per dati condivisi da tutti gli utenti e per l’intera applicazione, come le configurazioni globali.
+- **Sintassi**:
+  ```jsp
+  <% 
+      application.setAttribute("appName", "Gestione Biblioteca"); 
+  %>
+  ```
+
+  Per recuperare il valore:
+  ```jsp
+  <%
+      String appName = (String) application.getAttribute("appName");
+      out.println("Nome Applicazione: " + appName);
+  %>
+  ```
+
+### Riepilogo degli ambiti delle variabili JSP
+
+| Ambito         | Durata                                | Visibilità                   | Esempio di utilizzo                            |
+|----------------|--------------------------------------|------------------------------|------------------------------------------------|
+| **Page**       | Fino alla fine della pagina JSP      | Solo nella pagina corrente   | Variabili temporanee                           |
+| **Request**    | Per la durata della richiesta HTTP   | Tutte le risorse della richiesta | Dati temporanei tra pagine (form multipagina) |
+| **Session**    | Per la durata della sessione utente  | Tutte le pagine JSP e servlet della sessione | Informazioni utente, autenticazione           |
+| **Application**| Per la durata dell’applicazione web  | Tutte le pagine JSP e servlet dell'applicazione | Dati e configurazioni globali                 |
+
+### Conclusioni
+Gli ambiti delle variabili in JSP permettono di gestire e mantenere i dati in modo efficace, secondo necessità e contesto. Scegliere l'ambito corretto consente di ottimizzare la gestione della memoria e migliorare la struttura e la manutenibilità dell'applicazione.
 
 ---
 
