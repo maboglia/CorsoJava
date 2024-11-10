@@ -1,48 +1,115 @@
 # L'interfaccia ResultSet in JDBC
 
-L'interfaccia **java.sql.ResultSet** fornisce i metodi essenziali per attraversare l'insieme di risultati restituiti da una query SQL. Il metodo principale, **next()**, sposta il cursore attraverso l'insieme.
+`ResultSet` è un’interfaccia JDBC che rappresenta un insieme di risultati ottenuti da una query SQL, tipicamente `SELECT`. Un oggetto `ResultSet` è simile a un cursore che scorre tra le righe del risultato, consentendo di leggere e manipolare i dati recuperati dal database.
 
-### In pratica
+### Caratteristiche principali
 
-1. Inizialmente, il cursore del ResultSet è posizionato prima del primo record restituito.
-2. In questa fase, il cursore non punta a nessun record, impedendo l'analisi dei risultati.
-3. La prima chiamata a **next()** sposterà il cursore sul primo record restituito dalla query.
-4. Ogni volta che un record è puntato dal cursore, è possibile estrarre i suoi contenuti.
-5. Quando non ci sono più record nel ResultSet, il metodo **next()** ritorna **false**.
-6. Per scorrere un ResultSet, spesso si utilizza un ciclo come il seguente:
+- **Iterazione sui risultati**: `ResultSet` permette di muoversi tra le righe dei dati (solitamente in avanti), ma con configurazioni specifiche è possibile navigare anche all’indietro.
+- **Accesso ai dati per colonna**: consente di ottenere i valori di ciascuna colonna specificandone il nome o l'indice.
+- **Aggiornabilità**: con un `ResultSet` aggiornabile, è possibile modificare i dati direttamente e propagare i cambiamenti nel database.
 
-   ```java
-   while (resultSet.next()) { 
-      // Esamina il record corrente. 
-   }
-   ```
+### Creazione di un ResultSet
 
-### Leggere i valori del record corrente
+Un `ResultSet` viene generato eseguendo una query SQL tramite `Statement` o `PreparedStatement`:
 
-Quando il cursore punta a un record, è possibile esaminarne i campi tramite metodi come:
+```java
+ResultSet rs = statement.executeQuery("SELECT * FROM libri");
+```
 
-- `getTipo(int indiceColonna)`: Restituisce il valore del campo specificato dell'indice della colonna.
+### Principali Metodi di ResultSet
+
+- **next()**: sposta il cursore alla riga successiva. Restituisce `true` se ci sono ancora righe, `false` se si è raggiunta la fine del set.
 
   ```java
-  String stringa = resultSet.getString(1);
+  while (rs.next()) {
+      // Operazioni sui dati
+  }
   ```
 
-- `getTipo(String nomeColonna)`: Restituisce il valore del campo specificato dal nome della colonna.
+- **getXXX()**: restituisce il valore della colonna corrente, dove `XXX` rappresenta il tipo di dato (`getInt`, `getString`, `getDouble`, ecc.). Si può specificare il nome o l’indice della colonna.
 
   ```java
-  String nome = resultSet.getString("Nome");
+  int id = rs.getInt("id");
+  String titolo = rs.getString("titolo");
   ```
 
-### Metodi comuni per la lettura
+- **close()**: chiude il `ResultSet` e libera le risorse.
 
-Di seguito, sono elencati alcuni dei metodi comuni utilizzati per leggere i dati dal ResultSet:
+  ```java
+  rs.close();
+  ```
 
-- `getBoolean()`: Restituisce il campo specificato come booleano.
-- `getByte()`: Restituisce il campo specificato come byte.
-- `getDate()`: Restituisce il campo specificato come oggetto java.util.Date.
-- `getDouble()`: Restituisce il campo specificato come double.
-- `getFloat()`: Restituisce il campo specificato come float.
-- `getInt()`: Restituisce il campo specificato come int.
-- `getLong()`: Restituisce il campo specificato come long.
-- `getShort()`: Restituisce il campo specificato come short.
-- `getString()`: Restituisce il campo specificato come oggetto java.lang.String.
+- **beforeFirst()**: riporta il cursore all'inizio del `ResultSet`.
+- **absolute(int row)**: sposta il cursore alla riga specificata.
+- **updateXXX()**: aggiorna i dati nella riga corrente, utilizzando metodi come `updateInt`, `updateString`, ecc., e `updateRow()` per salvare le modifiche.
+
+### Esempio di utilizzo
+
+Ecco un esempio di come ottenere e manipolare i dati di un `ResultSet`:
+
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ResultSetExample {
+    private static final String URL = "jdbc:mysql://localhost:3306/nomeDB";
+    private static final String USER = "username";
+    private static final String PASS = "password";
+
+    public static void main(String[] args) {
+        try (Connection con = DriverManager.getConnection(URL, USER, PASS);
+             Statement stmt = con.createStatement();
+             ResultSet rs = stmt.executeQuery("SELECT * FROM libri")) {
+
+            // Iterazione sui risultati
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String titolo = rs.getString("titolo");
+                int pagine = rs.getInt("pagine");
+                double prezzo = rs.getDouble("prezzo");
+
+                System.out.println("ID: " + id + ", Titolo: " + titolo + ", Pagine: " + pagine + ", Prezzo: " + prezzo);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Tipi di ResultSet
+
+`ResultSet` può avere diverse modalità di scorrimento e aggiornabilità:
+
+- **Scorrimento (scrollability)**:
+  - `ResultSet.TYPE_FORWARD_ONLY` (predefinito): scorre solo in avanti.
+  - `ResultSet.TYPE_SCROLL_INSENSITIVE`: scorre in avanti e indietro; non rispecchia le modifiche fatte nel database dopo l’ottenimento dei risultati.
+  - `ResultSet.TYPE_SCROLL_SENSITIVE`: scorre in avanti e indietro; rispecchia le modifiche fatte nel database.
+
+- **Aggiornabilità**:
+  - `ResultSet.CONCUR_READ_ONLY` (predefinito): dati non modificabili.
+  - `ResultSet.CONCUR_UPDATABLE`: consente modifiche ai dati, che possono essere aggiornate direttamente nel database.
+
+Esempio di `ResultSet` aggiornabile e scrollabile:
+
+```java
+Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+```
+
+### Vantaggi e Limitazioni di ResultSet
+
+**Vantaggi**:
+
+- **Accesso flessibile**: consente accesso ai dati di una riga alla volta, minimizzando l’uso della memoria.
+- **Supporto per modifiche in tempo reale**: permette di aggiornare i dati se configurato come aggiornabile.
+  
+**Limitazioni**:
+
+- **Dipendenza dal driver**: alcune funzionalità avanzate (come `scrollability` e `updatability`) dipendono dal supporto del driver JDBC specifico.
+- **Gestione della memoria**: mantenere un `ResultSet` aperto su grandi set di dati può consumare molta memoria.
+
+L’interfaccia `ResultSet` è fondamentale in JDBC per gestire e manipolare i dati restituiti da una query, supportando un accesso efficace e dettagliato ai dati tabulari del database.

@@ -1,167 +1,295 @@
 # L'interfaccia Statement in JDBC
 
-Il linguaggio SQL offre un insieme di istruzioni fondamentali per interagire con un database. Tra le principali operazioni supportate vi sono:
+**Interfaccia Statement in JDBC**
 
-1. **Selezione e Ricerca:** Utilizzando l'istruzione SELECT è possibile effettuare interrogazioni su una o più tabelle.
-2. **Modifica del Contenuto:** Le istruzioni DELETE, INSERT e UPDATE permettono di modificare i dati all'interno di una tabella.
-3. **Modifica della Struttura:** Operazioni come CREATE TABLE consentono di alterare la struttura del database.
+L'interfaccia `Statement` di JDBC è utilizzata per eseguire istruzioni SQL semplici su un database, come query `SELECT`, `INSERT`, `UPDATE`, e `DELETE`. Appartiene al pacchetto `java.sql` e fornisce metodi per interagire con il database in modo sincrono.
 
-L'interfaccia `java.sql.Statement` fornisce i metodi necessari per inviare tali istruzioni SQL al Database Management System (DBMS):
+### Caratteristiche principali
 
-* Il metodo `executeQuery()` viene utilizzato per eseguire istruzioni di tipo SELECT.
-* Il metodo `executeUpdate()` viene impiegato per eseguire istruzioni di aggiornamento delle tabelle (DELETE, INSERT, UPDATE) e del database (CREATE TABLE, INDEX, ecc.).
+- `Statement` viene creato tramite un oggetto `Connection`.
+- Viene utilizzato per eseguire query SQL statiche, dove non ci sono parametri variabili all'interno dell'istruzione SQL.
+- Fornisce metodi per:
+  - Eseguire query (metodi `executeQuery`, `executeUpdate`, `execute`)
+  - Gestire il risultato delle query (`ResultSet`)
 
-## Metodo `executeQuery()`
+### Principali metodi dell'interfaccia Statement
 
-* Il metodo `executeQuery()` restituisce sempre un oggetto che implementa l'interfaccia **java.sql.ResultSet**. Questo oggetto consente di esaminare i risultati restituiti dall'istruzione SQL di ricerca eseguita dal DBMS.
+- **executeQuery(String sql)**: Esegue un'istruzione `SELECT` e restituisce un `ResultSet` con i dati ottenuti.
 
-## Metodo `executeUpdate()`
+  ```java
+  ResultSet rs = statement.executeQuery("SELECT * FROM libri");
+  ```
 
-* Diversamente, il metodo `executeUpdate()` non restituisce risultati.
-* Ritorna un valore di tipo **int**, che rappresenta il numero di righe coinvolte nell'esecuzione di istruzioni di tipo DELETE, INSERT e UPDATE.
-* Nel caso in cui non ci siano righe da restituire (ad esempio, in operazioni di creazione o modifica della struttura del database), il valore di ritorno sarà 0 (zero).
+- **executeUpdate(String sql)**: Esegue un'istruzione di aggiornamento (come `INSERT`, `UPDATE` o `DELETE`) e restituisce un intero che indica il numero di righe affette dall'operazione.
+
+  ```java
+  int rowsAffected = statement.executeUpdate("INSERT INTO libri (titolo, pagine) VALUES ('Nuovo Libro', 100)");
+  ```
+
+- **execute(String sql)**: Esegue un'istruzione SQL generica. Restituisce `true` se è stato generato un `ResultSet`, `false` in caso contrario.
+
+  ```java
+  boolean isResultSet = statement.execute("DELETE FROM libri WHERE id = 1");
+  ```
+
+- **close()**: Chiude l'oggetto `Statement` e libera le risorse.
+
+  ```java
+  statement.close();
+  ```
+
+### Esempio di utilizzo
+
+Ecco un esempio che mostra come creare un `Statement`, eseguire una query, e gestire i risultati:
+
+```java
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class StatementExample {
+    private static final String URL = "jdbc:mysql://localhost:3306/nomeDB";
+    private static final String USER = "username";
+    private static final String PASS = "password";
+
+    public static void main(String[] args) {
+        try (Connection con = DriverManager.getConnection(URL, USER, PASS);
+             Statement stmt = con.createStatement()) {
+
+            // Esecuzione di una query SELECT
+            ResultSet rs = stmt.executeQuery("SELECT * FROM libri");
+
+            // Lettura dei dati dal ResultSet
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String titolo = rs.getString("titolo");
+                int pagine = rs.getInt("pagine");
+                System.out.println("ID: " + id + ", Titolo: " + titolo + ", Pagine: " + pagine);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+### Vantaggi e Limitazioni di Statement
+
+**Vantaggi**:
+
+- Semplicità: facile da usare per istruzioni SQL statiche e semplici.
+- Ideale per operazioni singole e senza parametri variabili.
+
+**Limitazioni**:
+
+- Vulnerabilità SQL Injection: con query dinamiche, dove i dati dell'utente sono inseriti direttamente nell'SQL.
+- Non ottimizzato per query ripetitive con valori variabili (per cui è preferibile `PreparedStatement`).
+
+L'interfaccia `Statement` è ideale per istruzioni SQL semplici, ma per query parametriche o operazioni più complesse è preferibile utilizzare `PreparedStatement`.
 
 ---
 
-# PreparedStatement in JDBC
+## **PreparedStatement in JDBC**
 
-Miglioramento del Codice SQL con PreparedStatement
+`PreparedStatement` è un'interfaccia JDBC che estende `Statement`, progettata per eseguire query SQL parametrizzate in modo più sicuro ed efficiente. A differenza di `Statement`, consente di inserire parametri variabili (attraverso segnaposti `?`), prevenendo SQL Injection e ottimizzando l'esecuzione di query ripetitive.
 
-L'interfaccia **java.sql.PreparedStatement**, una sottoclasse di **Statement**, semplifica e velocizza la gestione del codice SQL nelle interazioni con il database.
+### Caratteristiche principali
 
-[esempio input errato/malizioso]()
+- **Parametri**: utilizza segnaposti `?` per i parametri, che vengono successivamente valorizzati tramite metodi specifici.
+- **Sicurezza**: aiuta a prevenire attacchi di SQL Injection poiché i parametri vengono trattati come dati e non come parte del codice SQL.
+- **Ottimizzazione**: ideale per query ripetitive, poiché il DBMS può ottimizzare l’esecuzione della query grazie alla sua pre-compilazione.
 
-**PreparedStatement** consente di implementare **codice SQL parametrico**, sostituendo i dati in input concatenati tramite stringhe con caratteri di punto interrogativo.
+### Principali Metodi di PreparedStatement
 
-Dopo questa operazione, è possibile impostare uno ad uno i parametri utilizzando i metodi setter forniti da **PreparedStatement**.
+- **setInt(int parameterIndex, int value)**, **setString(int parameterIndex, String value)**, ecc.: impostano i valori per i segnaposti `?` in base al tipo di dato.
 
-Tali metodi permettono di inserire i parametri senza preoccuparsi della sicurezza dei loro contenuti: JDBC, in collaborazione con il driver del DBMS specifico, si occupa di risolvere eventuali problematiche.
+  ```java
+  preparedStatement.setInt(1, 10);       // Imposta il primo parametro come un intero
+  preparedStatement.setString(2, "test"); // Imposta il secondo parametro come stringa
+  ```
 
-I setter di **PreparedStatement**, simili ai getter di **ResultSet**, coprono i principali tipi di dato di Java. Un elenco riassuntivo è il seguente:
+- **executeQuery()**: esegue una query `SELECT` e restituisce un `ResultSet`.
 
-* `setBoolean(int p, boolean value)` - Imposta il booleano value come valore del parametro alla posizione p.
-* `setByte(int p, byte value)` - Imposta il byte value come valore del parametro alla posizione p.
-* `setDate(int p, Date value)` - Imposta l'oggetto java.util.Date value come valore del parametro alla posizione p.
-* `setDouble(int p, double value)` - Imposta il double value come valore del parametro alla posizione p.
-* `setFloat(int p, float value)` - Imposta il float value come valore del parametro alla posizione p.
-* `setInt(int p, int value)` - Imposta l'intero value come valore del parametro alla posizione p.
-* `setLong(int p, long value)` - Imposta il long value come valore del parametro alla posizione p.
-* `setShort(int p, short value)` - Imposta lo short value come valore del parametro alla posizione p.
-* `setString(int p, String value)` - Imposta la stringa value come valore del parametro alla posizione p.
+  ```java
+  ResultSet rs = preparedStatement.executeQuery();
+  ```
 
-**PreparedStatement**, oltre a risolvere le problematiche esposte, offre maggiori prestazioni e riusabilità. Quando si crea un oggetto di questo tipo, il relativo codice SQL viene precompilato.
+- **executeUpdate()**: esegue un'istruzione `INSERT`, `UPDATE` o `DELETE`, restituendo il numero di righe interessate.
 
-Inoltre, la stessa **PreparedStatement** può essere riutilizzata più volte consecutivamente, consentendo di variare i parametri tramite i suoi metodi setter per ottenere risultati differenti, senza la necessità di ricompilare ogni volta il codice SQL, come avverrebbe con uno Statement tradizionale.
+  ```java
+  int rowsAffected = preparedStatement.executeUpdate();
+  ```
 
-Per utilizzare un oggetto **PreparedStatement** invece di uno Statement convenzionale, è sufficiente sostituire:
+- **close()**: chiude il `PreparedStatement` e libera le risorse.
 
-```java
-Statement statement = connection.createStatement();
-```
+  ```java
+  preparedStatement.close();
+  ```
 
-con:
+### Esempio di utilizzo
 
-```java
-PreparedStatement statement = connection.prepareStatement(CODICE_SQL);
-```
-
-Il codice SQL deve essere specificato al momento della creazione dell'oggetto **PreparedStatement**, non al momento dell'esecuzione dei metodi executeQuery() o executeUpdate(). Le versioni di questi metodi offerte da PreparedStatement, infatti, non richiedono argomenti.
-
-Di seguito è riportato un esempio riscritto utilizzando **PreparedStatement**:
+Vediamo un esempio di come utilizzare `PreparedStatement` per una query parametrizzata:
 
 ```java
-// Questo metodo aggiunge un nuovo record alla tabella nel DB.
-private static boolean aggiungiRecord(String nome, String cognome, String indirizzo) {
-    // Preparo il riferimento alla connessione.
-    Connection connection = null;
-    try {
-        // Apro la connessione verso il database.
-        connection = DriverManager.getConnection(DB_URL);
-        // Preparo lo Statement per interagire con il database.
-        PreparedStatement statement = connection.prepareStatement(
-            "INSERT INTO Persone ( " +
-            " Nome, Cognome, Indirizzo " +
-            ") VALUES ( " +
-            " ?, ?, ? " +
-            ")"
-        );
-        // Imposto i parametri.
-        statement.setString(1, nome);
-        statement.setString(2, cognome);
-        statement.setString(3, indirizzo);
-        // Eseguo l'aggiornamento.
-        statement.executeUpdate();
-        return true;
-    } //...
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class PreparedStatementExample {
+    private static final String URL = "jdbc:mysql://localhost:3306/nomeDB";
+    private static final String USER = "username";
+    private static final String PASS = "password";
+
+    public static void main(String[] args) {
+        String query = "SELECT * FROM libri WHERE pagine > ? AND prezzo < ?";
+
+        try (Connection con = DriverManager.getConnection(URL, USER, PASS);
+             PreparedStatement pstmt = con.prepareStatement(query)) {
+
+            // Imposta i parametri della query
+            pstmt.setInt(1, 100);      // Numero di pagine
+            pstmt.setDouble(2, 20.00); // Prezzo massimo
+
+            // Esecuzione della query e lettura dei risultati
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                int id = rs.getInt("id");
+                String titolo = rs.getString("titolo");
+                int pagine = rs.getInt("pagine");
+                double prezzo = rs.getDouble("prezzo");
+                System.out.println("ID: " + id + ", Titolo: " + titolo + ", Pagine: " + pagine + ", Prezzo: " + prezzo);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
 ```
 
-# CallableStatement in JDBC
+### Vantaggi e Limitazioni di PreparedStatement
 
-Chiamare le Procedure Memorizzate con `CallableStatement`
+**Vantaggi**:
 
-L'interfaccia `CallableStatement`, che estende `PreparedStatement`, consente di richiamare procedure memorizzate all'interno del database.
+- **Prevenzione SQL Injection**: separa i dati dal codice SQL.
+- **Performance ottimizzata**: l’istruzione SQL viene pre-compilata dal database, rendendo le esecuzioni successive più rapide.
+- **Riusabilità**: ideale per query ripetitive con parametri variabili.
 
-Con `CallableStatement`, non è necessario specificare la query direttamente nel codice Java. La query può essere memorizzata in modo permanente nel database, pronta per essere riutilizzata in tutte le parti di tutte le applicazioni.
+**Limitazioni**:
 
-Per illustrare l'utilizzo di `CallableStatement`, supponiamo di avere un database inizialmente vuoto con una tabella chiamata "Utenti". La struttura della tabella è la seguente:
+- **Solo query statiche**: `PreparedStatement` non può essere utilizzato per query dinamiche in cui cambiano le colonne o le condizioni SQL in fase di esecuzione. Per queste esigenze, occorre utilizzare `Statement` o comporre dinamicamente la query prima di utilizzare `PreparedStatement`.
 
-* ID: di tipo Contatore, utilizzato come chiave primaria.
-* Nome: di tipo Testo.
-* Cognome: di tipo Testo.
-* Email: di tipo Testo.
-* AnnoNascita: di tipo Numerico.
+`PreparedStatement` è la scelta preferibile per query sicure, parametrizzate e ripetitive, in particolare quando si gestiscono dati forniti dall'utente.
 
-Popoliamo la tabella con alcuni record arbitrari:
+---
+
+## **CallableStatement in JDBC**
+
+`CallableStatement` è un'interfaccia JDBC usata per eseguire stored procedure nel database, ovvero funzioni o procedure predefinite e salvate lato server. A differenza di `Statement` e `PreparedStatement`, che sono utilizzati per inviare comandi SQL diretti, `CallableStatement` permette di interagire con procedure memorizzate, consentendo operazioni più complesse e ottimizzate lato database.
+
+### Caratteristiche principali
+
+- **Esecuzione di stored procedure**: `CallableStatement` è progettato specificamente per chiamare procedure memorizzate nel database.
+- **Supporto di parametri IN, OUT e INOUT**: può gestire parametri di input (`IN`), di output (`OUT`) e misti (`INOUT`).
+- **Riusabilità e ottimizzazione**: l’utilizzo di stored procedure rende le operazioni ripetitive e complesse più efficienti e consente di riutilizzare la logica direttamente dal database.
+
+### Sintassi e Metodi principali
+
+La sintassi per creare un `CallableStatement` varia a seconda dei parametri:
+
+```sql
+{call nome_procedura(?, ?, ...)}
+```
+
+#### Principali metodi di `CallableStatement`
+
+- **registerOutParameter(int parameterIndex, int sqlType)**: registra un parametro `OUT` specificando il tipo di dato SQL.
+
+  ```java
+  callableStatement.registerOutParameter(2, java.sql.Types.INTEGER); // Parametro OUT di tipo INTEGER
+  ```
+
+- **setXXX(int parameterIndex, XXX value)**: imposta i valori dei parametri `IN` usando metodi come `setInt`, `setString`, ecc.
+
+  ```java
+  callableStatement.setInt(1, 10); // Parametro IN di tipo INTEGER
+  ```
+
+- **getXXX(int parameterIndex)**: recupera i valori dei parametri `OUT` dopo l’esecuzione.
+
+  ```java
+  int result = callableStatement.getInt(2); // Recupera il valore OUT
+  ```
+
+- **execute()**: esegue la stored procedure. Restituisce `true` se è stato generato un `ResultSet`, `false` altrimenti.
+
+### Esempio di utilizzo
+
+Consideriamo una stored procedure nel database chiamata `getLibriPerPrezzo`, che accetta un parametro `IN` (prezzo massimo) e restituisce un parametro `OUT` (numero di libri trovati).
+
+```sql
+DELIMITER //
+CREATE PROCEDURE getLibriPerPrezzo(IN maxPrezzo DECIMAL(10, 2), OUT numeroLibri INT)
+BEGIN
+    SELECT COUNT(*) INTO numeroLibri FROM libri WHERE prezzo <= maxPrezzo;
+END //
+DELIMITER ;
+```
+
+Ecco come usare `CallableStatement` per chiamare questa procedura:
 
 ```java
-// Mi preparo a richiamare la procedura memorizzata.
-CallableStatement statement = connection.prepareCall("{call NotNullMail}");
-// Interrogo il DBMS.
-ResultSet resultSet = statement.executeQuery();
-// Scorro e mostro i risultati.
-while (resultSet.next()) {
-    int id = resultSet.getInt(1);
-    String nome = resultSet.getString(2);
-    String cognome = resultSet.getString(3);
-    String email = resultSet.getString(4);
-    int annoNascita = resultSet.getInt(5);
-    System.out.println("Lette informazioni...");
-    System.out.println("ID: " + id);
-    System.out.println("Nome: " + nome);
-    System.out.println("Cognome: " + cognome);
-    System.out.println("Email: " + email);
-    System.out.println("Anno di nascita: " + annoNascita);
-    System.out.println();
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.CallableStatement;
+import java.sql.SQLException;
+import java.sql.Types;
+
+public class CallableStatementExample {
+    private static final String URL = "jdbc:mysql://localhost:3306/nomeDB";
+    private static final String USER = "username";
+    private static final String PASS = "password";
+
+    public static void main(String[] args) {
+        try (Connection con = DriverManager.getConnection(URL, USER, PASS);
+             CallableStatement cstmt = con.prepareCall("{call getLibriPerPrezzo(?, ?)}")) {
+
+            // Imposta il parametro IN
+            cstmt.setDouble(1, 20.00); // prezzo massimo
+
+            // Registra il parametro OUT
+            cstmt.registerOutParameter(2, Types.INTEGER);
+
+            // Esegue la stored procedure
+            cstmt.execute();
+
+            // Recupera il parametro OUT
+            int numeroLibri = cstmt.getInt(2);
+            System.out.println("Numero di libri con prezzo <= 20.00: " + numeroLibri);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
 ```
 
-Nel secondo esempio, prepariamo la chiamata a una procedura memorizzata con parametri:
+### Vantaggi e Limitazioni di CallableStatement
 
-```java
-// Mi preparo a richiamare la procedura memorizzata.
-CallableStatement statement = connection.prepareCall("{call AnnoNascita(?,?)}");
-// Imposto i parametri.
-statement.setInt(1, 1969);
-statement.setInt(2, 1989);
-// Interrogo il DBMS.
-ResultSet resultSet = statement.executeQuery();
-// Scorro e mostro i risultati.
-while (resultSet.next()) {
-    int id = resultSet.getInt(1);
-    String nome = resultSet.getString(2);
-    String cognome = resultSet.getString(3);
-    String email = resultSet.getString(4);
-    int annoNascita = resultSet.getInt(5);
-    System.out.println("Lette informazioni...");
-    System.out.println("ID: " + id);
-    System.out.println("Nome: " + nome);
-    System.out.println("Cognome: " + cognome);
-    System.out.println("Email: " + email);
-    System.out.println("Anno di nascita: " + annoNascita);
-    System.out.println();
-}
-//...
-```
+**Vantaggi**:
 
-L'esempio dimostra come utilizzare `CallableStatement` per chiamare una procedura memorizzata con e senza parametri. Questo approccio offre un modo flessibile per gestire logicamente le operazioni del database in modo efficiente.
+- **Riuso di codice lato server**: permette di eseguire procedure memorizzate, evitando di ripetere la logica lato applicativo.
+- **Efficienza**: le stored procedure possono essere più efficienti, specie per operazioni complesse e transazionali.
+- **Gestione dei parametri OUT**: consente di ottenere risultati direttamente come parametri di output.
+
+**Limitazioni**:
+
+- **Dipendenza dal DBMS**: l’utilizzo di stored procedure può rendere l'applicazione meno portabile tra diversi database.
+- **Sintassi specifica**: la sintassi per `CallableStatement` può variare a seconda del database.
+
+`CallableStatement` è ideale per chiamare stored procedure, offrendo un’interfaccia flessibile per operazioni complesse ed efficienti gestite lato database.
