@@ -83,3 +83,35 @@ Per inviare un'email con Java, puoi utilizzare la libreria `JavaMail API`. Di se
 - **Autenticazione a due fattori**: Se hai l'autenticazione a due fattori abilitata sul tuo account (ad esempio, Gmail), dovrai generare e utilizzare una password per le app. Puoi farlo nel tuo account Google nelle impostazioni di sicurezza.
 - **Server SMTP alternativi**: Se non usi Gmail, dovrai configurare correttamente il server SMTP, come indicato nelle impostazioni del provider (ad esempio, Yahoo, Outlook, etc.).
 
+---
+
+### Ecco le impostazioni SMTP per alcuni dei principali provider di posta elettronica.
+
+
+| **Provider**       | **Server SMTP**                | **Porta (SSL)** | **Porta (TLS)** | **Autenticazione**     | **Sicurezza**           |
+|--------------------|---------------------------------|-----------------|-----------------|------------------------|-------------------------|
+| **Gmail**          | smtp.gmail.com                  | 465             | 587             | Richiesta (username e password) | SSL/TLS                |
+| **Yahoo**          | smtp.mail.yahoo.com             | 465             | 587             | Richiesta (username e password) | SSL/TLS                |
+| **Outlook.com**    | smtp-mail.outlook.com            | 465             | 587             | Richiesta (username e password) | SSL/TLS                |
+| **Zoho Mail**      | smtp.zoho.com                   | 465             | 587             | Richiesta (username e password) | SSL/TLS                |
+| **iCloud (Apple)** | smtp.mail.me.com                 | 587             | 587             | Richiesta (username e password) | TLS                    |
+| **ProtonMail**     | mail.protonmail.com              | 465             | 587             | Richiesta (username e password) | SSL/TLS                |
+| **FastMail**       | smtp.fastmail.com                | 465             | 587             | Richiesta (username e password) | SSL/TLS                |
+| **Gandi Mail**     | mail.gandi.net                   | 465             | 587             | Richiesta (username e password) | SSL/TLS                |
+| **Mailgun**        | smtp.mailgun.org                 | 465             | 587             | Richiesta (username e password) | SSL/TLS                |
+| **SendGrid**       | smtp.sendgrid.net                | 465             | 587             | Richiesta (username e password) | SSL/TLS                |
+| **Amazon SES**     | email-smtp.us-east-1.amazonaws.com | 465             | 587             | Richiesta (username e password) | SSL/TLS                |
+
+### Legenda delle colonne
+
+- **Server SMTP**: Il server che gestisce l'invio delle email.
+- **Porta (SSL)**: La porta utilizzata per la connessione sicura tramite SSL (Secure Socket Layer).
+- **Porta (TLS)**: La porta utilizzata per la connessione sicura tramite TLS (Transport Layer Security).
+- **Autenticazione**: Indica se è necessaria l'autenticazione, che in genere richiede il nome utente e la password dell'account.
+- **Sicurezza**: Il tipo di crittografia usata per garantire la sicurezza della connessione (SSL o TLS).
+
+### Considerazioni aggiuntive
+
+1. **Autenticazione a due fattori**: Se hai attivato l'autenticazione a due fattori (2FA) nel tuo account, alcuni provider potrebbero richiedere una password per l'applicazione o un codice di accesso specifico per l'uso di SMTP.
+
+2. **Limitazioni e blocchi**: Alcuni provider di posta elettronica potrebbero limitare o bloccare l'accesso SMTP se rilevano un utilizzo eccessivo o se il tuo account non è verificato.
