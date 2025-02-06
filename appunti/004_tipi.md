@@ -4,6 +4,10 @@ I **tipi di dato primitivi** rappresentano i costituenti fondamentali in Java. E
 
 ---
 
+![Types](img/PrimitiveVsReference.png)
+
+---
+
 ### 1. **byte:**
    - **Dimensione:** 8 bit
    - **Intervallo:** -128 a 127
@@ -23,6 +27,8 @@ I **tipi di dato primitivi** rappresentano i costituenti fondamentali in Java. E
    - **Dimensione:** 64 bit
    - **Intervallo:** -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807
    - Usato per numeri interi che superano l'intervallo dell'`int`.
+
+---
 
 ### 5. **float:**
    - **Dimensione:** 32 bit
@@ -82,6 +88,8 @@ boolean mioBoolean = true;
 System.out.println(mioBoolean);
 ```
 
+---
+
 ### Dichiarazione e utilizzo di variabili locali:
 
 ```java
@@ -114,4 +122,3 @@ System.out.println(mioNumero);
 ### **Conclusioni**
 
 I **tipi primitivi** in Java rimangono fondamentali per la gestione di dati semplici e per garantire l'efficienza nelle applicazioni. Con l'evoluzione del linguaggio, Java ha mantenuto il focus sulla robustezza e sull'efficienza di questi tipi, continuando a renderli la scelta preferita per le operazioni di base, specialmente in ambiti ad alte prestazioni come il machine learning, l'intelligenza artificiale e i sistemi embedded.
-
