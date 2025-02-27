@@ -10,277 +10,200 @@
 
 ---
 
-```java
-public static void main(String[] args) {
-	//commento su una linea
-	String mioNome = "mauro";
-	
-	/*
-	* questo commento si estende su più
-	* linee
-	*/
-
-	/*
-	va bene anche così
-	senza asterisco, 
-	è utile anche per disabilitare blocchi di codice 
-	*/
-	float numeroSettimana = 11;
-	
-	/**
-	* Questo è un commento JavaDoc, sarà interpretato in modo speciale
-	NB: si possono utilizzare dei parametri di configurazione speciali
-	*/
-	System.out.println(mioNome + " è arrivato alla settimana " + numeroSettimana + " in condizioni ... ");
-
- }
-```
-
----
-
-## Utilizzo dell'operatore incremento
+### **Esempio base di commenti e tipi di dato**
 
 ```java
-class PrimoIncremento{
- public static void main(String args[]){
-	int a = 1, b;
-	System.out.println("a vale " + a);
-	a++;
-	System.out.println("Dopo a++ a vale " + a);
-	b = a++;
-	System.out.println("Dopo b = a++ a vale " + a + " e b vale "+ b);
-	b = ++a;
-	System.out.println("Dopo b = ++a a vale " + a + " e b vale "+ b);
- }
+public class EsempioCommentiETipi {
+    public static void main(String[] args) {
+        // Dichiarazione e inizializzazione di una stringa
+        String nomeUtente = "Mauro";
+
+        /*
+         * Questo è un commento multi-linea.
+         * Utile per descrivere blocchi di codice più complessi.
+         */
+
+        /*
+        Anche senza asterischi, un commento multi-linea è valido.
+        Può essere usato per disabilitare temporaneamente codice.
+        */
+
+        // Dichiarazione e inizializzazione di un numero decimale
+        float numeroSettimana = 11;
+
+        /**
+         * Questo è un commento JavaDoc.
+         * Viene utilizzato per documentare metodi e classi.
+         */
+        System.out.println(nomeUtente + " è arrivato alla settimana " + numeroSettimana + " in condizioni ottimali.");
+    }
 }
 ```
 
 ---
 
-## Semplici operazioni matematiche
+### **Utilizzo dell'operatore di incremento**
 
 ```java
-class Elementari{
- public static void main(String args[]){
-  int i1 = 5, i2 = 10, i3;
-  double d1= 5, d2 = 10, d3;
-  i3 =- i1;
-  System.out.println("-i1 vale " + i3);
-  i3 = i1 + i2;
-  System.out.println("i1+i2 vale " + i3);
-  i3 = i1 - i2;
-  System.out.println("i1-i2 vale " + i3);
-  i3 = i1 * i2;
-  System.out.println("i1*i2 vale " + i3);
-  d3 =- d1;
-  System.out.println("-d1 vale " + d3);
-  d3 = d1 + d2;
-  System.out.println("d1+d2 vale " + d3);
-  d3 = d1 - d2;
-  System.out.println("d1-d2 vale " + d3);
-  d3 = d1 * d2;
-  System.out.println("d1*d2 vale " + d3);
-  System.out.println(d3);
- }
+public class OperatoreIncremento {
+    public static void main(String[] args) {
+        int a = 1, b;
+
+        System.out.println("a inizialmente vale " + a);
+        a++;
+        System.out.println("Dopo a++, a vale " + a);
+        
+        // Post-incremento: il valore originale di a viene assegnato a b, poi a viene incrementato
+        b = a++;
+        System.out.println("Dopo b = a++, a vale " + a + " e b vale " + b);
+
+        // Pre-incremento: a viene incrementato prima di essere assegnato a b
+        b = ++a;
+        System.out.println("Dopo b = ++a, a vale " + a + " e b vale " + b);
+    }
 }
 ```
 
 ---
 
-## Divisioni tra variabili intere e variabili decimali
+### **Semplici operazioni matematiche**
 
 ```java
-class Divisione{
- public static void main(String args[]){
-  int i1 = 6, i2 = 5, i3 = 3, i4;
-  float f1 = 6, f2 = 5, f3 = 3, f4;
-  i4 = i1 / i2;
-  System.out.println(i1 + "/" + i2 + " vale " + i4);
-  i4 = i1 / i3;
-  System.out.println(i1 + "/" + i3 + " vale " + i4);
-  i4 = i2 / i3;
-  System.out.println(i2 + "/" + i3 + " vale " + i4);
-  f4 = f1 / f2;
-  System.out.println(f1 + "/" + f2 + " vale " + f4);
-  f4 = f1 / f3;
-  System.out.println(f1 + "/" + f3 + " vale " + f4);
-  f4 = f2 / f3;
-  System.out.println(f2 + "/" + f3 + " vale " + f4);
-  System.out.println(f1 / f2);
- }
-}
+public class OperazioniMatematiche {
+    public static void main(String[] args) {
+        int num1 = 5, num2 = 10, risultatoIntero;
+        double dec1 = 5.0, dec2 = 10.0, risultatoDecimale;
 
-```
+        // Operazioni con interi
+        risultatoIntero = -num1;
+        System.out.println("-" + num1 + " vale " + risultatoIntero);
+        System.out.println(num1 + " + " + num2 + " = " + (num1 + num2));
+        System.out.println(num1 + " - " + num2 + " = " + (num1 - num2));
+        System.out.println(num1 + " * " + num2 + " = " + (num1 * num2));
 
----
-
-## Operatore modulo e approssimazione nei calcoli
-
-```java
-class Modulo{
- public static void main(String args[]){
-  int i1 = 5, i2 = 6, i3;
-  double d1 = 1.2, d2 = 6.1,d3;
-  i3 = i2 % i1;
-  System.out.println(i2 + "%" + i1 + " vale " + i3);
-  d3 = d2 % d1;
-  System.out.println(d2 + "%" + d1 + " vale " + d3);
- }
-}
-
-```
-
----
-
-## Operatori di confronto
-
-```java
-class Confronti{
- public static void main(String args[]){
-  boolean b1, b2;
-  int i1 = 3, i2 = 6;
-  char c1 = 'a', c2 = 'b';
-                b1 = i1 >= i2; // e' falso
-  System.out.println(i1 + ">=" + i2 + " restituisce " + b1);
-                b2 = c1 < c2; // e' vero
-  System.out.println(c1 + "<=" + c2 + " restituisce " + b2);
-  System.out.print(b1 + "!=" + b2 + " restituisce ");
-                // visualizza vero, poiche' b1 e' falso e b2 e' vero
-  System.out.println(b1 != b2);
- }
+        // Operazioni con numeri decimali
+        risultatoDecimale = -dec1;
+        System.out.println("-" + dec1 + " vale " + risultatoDecimale);
+        System.out.println(dec1 + " + " + dec2 + " = " + (dec1 + dec2));
+        System.out.println(dec1 + " - " + dec2 + " = " + (dec1 - dec2));
+        System.out.println(dec1 + " * " + dec2 + " = " + (dec1 * dec2));
+    }
 }
 ```
 
 ---
 
-## Operatori logici booleani
+### **Divisioni tra interi e decimali**
 
 ```java
-class Booleani{
- public static void main(String args[]){
-  boolean b1,b2,b3;
-  // b1 vale false
-  b1 = 3 > 5;
-  // b2 vale true
-  b2 = 1 < 10;
-  b3 = b1 & b2;
-                System.out.println("L'affermazione \" 3 > 5 e 1 < 10 \" risulta " + b3);
-  b3 = b1 | b2;
-  System.out.println("L'affermazione \" 3 > 5 o 1 < 10 \" risulta " + b3);
-  b3 = b1 ^ b2;
-  System.out.println("L'affermazione \" o 3 > 5 o 1 < 10 \" risulta " + b3);
-  b1 = 2 < 10;
-  b3 = b1 ^ b2;
-  // Attenzione alla sequenza \"
-  System.out.println("L'affermazione \" o 2 < 10 o 1 < 10 \" risulta " + b3);
- }
-}
+public class OperazioniDivisione {
+    public static void main(String[] args) {
+        int intero1 = 6, intero2 = 5, intero3 = 3, risultatoIntero;
+        float float1 = 6.0f, float2 = 5.0f, float3 = 3.0f, risultatoFloat;
 
-```
+        // Divisioni con numeri interi (senza decimali)
+        risultatoIntero = intero1 / intero2;
+        System.out.println(intero1 + " / " + intero2 + " = " + risultatoIntero);
+        risultatoIntero = intero1 / intero3;
+        System.out.println(intero1 + " / " + intero3 + " = " + risultatoIntero);
 
----
-
-## Generazione di un errore di divisione per zero
-
-```java
-class NoCortoCircuito{
- public static void main(String args[]){
-                int i = 5, j = 2, k = 0;
-  boolean b1;
-                // i e' maggiore di j e quindi b1 e' true
-  b1 = (i > j) | (i > (j / k));
-  System.out.println(b1);
- }
-}
-
-```
-
----
-
-## Tipo char
-
-```java
-class Caratteri{
- public static void main(String args[]){
-  char c1,c2,c3;
-  // Inizializza c1 al carattere 97, vale a dire 'a'
-  c1 = 97;
-  c2 = 'a';
-  c3= 'z';
-  System.out.println("c1 vale " + c1);
-  System.out.println("c2 vale " + c2);
-  System.out.println("c3 vale " + c3);
-  /* Restituisce in output il carattere corrispondente
-  al codice Unicode di c1 */
-  System.out.println(c1);
-                /* Incrementa di una unita' il codice
-  del carattere Unicode */
-  c1 = ++c1;
-  System.out.println(c1);
- }
+        // Divisioni con numeri decimali (mantiene i decimali)
+        risultatoFloat = float1 / float2;
+        System.out.println(float1 + " / " + float2 + " = " + risultatoFloat);
+        risultatoFloat = float1 / float3;
+        System.out.println(float1 + " / " + float3 + " = " + risultatoFloat);
+    }
 }
 ```
 
 ---
 
-## Cast da int a byte
+### **Operatore modulo e approssimazione nei calcoli**
 
 ```java
-class CastInteri{
- public static void main(String args[]){
-  int i1 = 10, i2 = 257, i3 = 513;
-  byte b1,b2,b3;
-  b1 = (byte)i1;
-  b2 = (byte)i2;
-  b3 = (byte)i3;
-  System.out.println("Esempi di cast da int a byte");
-  System.out.println("Il cast di " + i1 + " vale " + b1);
-  System.out.println("Il cast di " + i2 + " vale " + b2);
-  System.out.println("Il cast di " + i3 + " vale " + b3);
- }
-}
+public class OperatoreModulo {
+    public static void main(String[] args) {
+        int intero1 = 6, intero2 = 5;
+        double decimale1 = 6.1, decimale2 = 1.2;
 
-```
-
----
-
-## Generazione di un errore di perdita di precisione
-
-```java
-class PromoErrata{
- public static void main(String args[]){
-  byte b1=10, b2;
-  // b2 riceve 50, ma genera un errore di compilazione
-  b2 = b1 * 5;
-  System.out.println(b2);
- }
+        System.out.println(intero1 + " % " + intero2 + " = " + (intero1 % intero2));
+        System.out.println(decimale1 + " % " + decimale2 + " = " + (decimale1 % decimale2));
+    }
 }
 ```
 
 ---
 
-## Espressione con operandi di tipo diverso
+### **Operatori di confronto**
 
 ```java
-class Promo{
- public static void main(String args[]){
-  byte b1=10, b2;
-  b2 = (byte)(b1 * 5);
-  System.out.println(b2);
- }
+public class OperatoriConfronto {
+    public static void main(String[] args) {
+        int num1 = 3, num2 = 6;
+        char char1 = 'a', char2 = 'b';
+
+        System.out.println(num1 + " >= " + num2 + " restituisce " + (num1 >= num2));
+        System.out.println(char1 + " <= " + char2 + " restituisce " + (char1 <= char2));
+        System.out.println("Confronto booleano: " + (num1 >= num2) + " != " + (char1 <= char2) + " restituisce " + ((num1 >= num2) != (char1 <= char2)));
+    }
 }
 ```
 
 ---
 
-## Errore di conversione da int a byte (perdita di dati)
+### **Operatori logici booleani**
 
 ```java
-class Interi{
- public static void main(String args[]){
-  int a = 1;
-  byte b;
-  b = a;
- }
+public class OperatoriBooleani {
+    public static void main(String[] args) {
+        boolean b1 = 3 > 5;
+        boolean b2 = 1 < 10;
+
+        System.out.println("3 > 5 e 1 < 10 → " + (b1 & b2));
+        System.out.println("3 > 5 o 1 < 10 → " + (b1 | b2));
+        System.out.println("O esclusivo: 3 > 5 XOR 1 < 10 → " + (b1 ^ b2));
+    }
 }
 ```
+
+---
+
+### **Tipo `char` e Unicode**
+
+```java
+public class EsempioCaratteri {
+    public static void main(String[] args) {
+        char c1 = 97; // Codice ASCII per 'a'
+        char c2 = 'a';
+        char c3 = 'z';
+
+        System.out.println("c1: " + c1);
+        System.out.println("c2: " + c2);
+        System.out.println("c3: " + c3);
+
+        // Incremento del carattere
+        c1++;
+        System.out.println("Dopo incremento, c1 vale " + c1);
+    }
+}
+```
+
+---
+
+### **Cast da `int` a `byte`**
+
+```java
+public class CastNumerico {
+    public static void main(String[] args) {
+        int int1 = 10, int2 = 257, int3 = 513;
+        byte b1 = (byte) int1;
+        byte b2 = (byte) int2;
+        byte b3 = (byte) int3;
+
+        System.out.println("Cast di " + int1 + " a byte: " + b1);
+        System.out.println("Cast di " + int2 + " a byte: " + b2);
+        System.out.println("Cast di " + int3 + " a byte: " + b3);
+    }
+}
+```
+

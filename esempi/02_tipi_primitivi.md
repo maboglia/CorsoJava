@@ -1,14 +1,10 @@
 # Tipi primitivi
 
----
-
-## 
-
 ```java
 public class TipiPrimitivi {
 
     public static void main(String[] args) {
-   /* I tipi primitivi in Java sono 8 */
+        /* I tipi primitivi in Java sono 8 */
 
         // 4 tipi per rappresentare numeri interi
         byte b = 1;
@@ -36,14 +32,12 @@ public class TipiPrimitivi {
         System.out.println(c);
         System.out.println(bo);
     }
-
 }
-
 ```
 
 ---
 
-## Caratteri: il singolo char
+# Caratteri: il singolo char
 
 ```java
 public class Caratteri {
@@ -57,13 +51,13 @@ public class Caratteri {
         System.out.println("Carattere 2: " + c2);
         System.out.println("Carattere 3: " + c3);
 
-        char dollaro = '\u0024';
+        char dollaro = '\u0024'; // uso di escape sequence per il simbolo $
         System.out.println("Valuta: " + dollaro);
 
         char a1 = 'a';
         char a2 = 'b';
         char a3 = 'c';
-        //uso la classe wrapper e i suoi metodi
+        //uso la classe wrapper e i suoi metodi per trasformare in maiuscolo
         System.out.print(Character.toUpperCase(a1));
         System.out.print(Character.toUpperCase(a2));
         System.out.println(Character.toUpperCase(a3));
@@ -71,12 +65,11 @@ public class Caratteri {
     }
 
 }
-
 ```
 
 ---
 
-## Double: precisione decimale
+# Double: precisione decimale
 
 ```java
 import java.math.BigDecimal;
@@ -91,9 +84,9 @@ public class PrecisioneDecimale {
 
         System.out.println("Somma di primitivi: " + primitiviSomma);
 
-        String stringaValore = Double.toString(valore);
+        String stringaValore = Double.toString(valore); // converte il valore double in stringa
         System.out.println("stringaValore: " + stringaValore);
-        BigDecimal bigDecimalValore = new BigDecimal(stringaValore);
+        BigDecimal bigDecimalValore = new BigDecimal(stringaValore); // uso di BigDecimal per una maggiore precisione
 
         BigDecimal bigSomma = bigDecimalValore.add(bigDecimalValore).add(bigDecimalValore);
 
@@ -106,33 +99,33 @@ public class PrecisioneDecimale {
 
 ---
 
-## Rappresentare i numeri reali
+# Rappresentare i numeri reali
 
 ```java
 public class Reali {
-	public static void main(String[] args) {
-		
-		float f;
-		double d = 3.14;
-		
-		f =  1.5f;
-		
-		if (    d > 3  || d != 3.14    ) {
-			System.out.println("d è maggiore di 3");
-		} 
-		else if (d > 3.14) {
-			System.out.println("d è uguale a 3.14");
-		}
-		else {
-			System.out.println("d è NON maggiore di 3");
-		}
-	}
+    public static void main(String[] args) {
+        
+        float f;
+        double d = 3.14;
+        
+        f =  1.5f; // in Java, per i numeri float è necessario il suffisso 'f'
+        
+        if (d > 3  || d != 3.14) {
+            System.out.println("d è maggiore di 3");
+        } 
+        else if (d > 3.14) {
+            System.out.println("d è uguale a 3.14");
+        }
+        else {
+            System.out.println("d è NON maggiore di 3");
+        }
+    }
 }
 ```
 
 ---
 
-## tit
+# Tipi booleani: Confronto tra variabili
 
 ```java
 public static void main(String[] args) {
@@ -147,16 +140,12 @@ public static void main(String[] args) {
   else
    System.out.println("a e b sono diversi");
    
-  
-  
-
- }
-
+}
 ```
 
 ---
 
-## tit
+# Tipi booleani: stampa dei valori
 
 ```java
 public class Booleani {
@@ -172,15 +161,15 @@ public class Booleani {
         System.out.println(b2);
         System.out.println(b3);
 
-        boolean b4 = !b1;
+        boolean b4 = !b1; // negazione del valore di b1
         System.out.println("b4 vale: " + b4);
 
         int i1 = 0;
-        boolean b5 = (i1 != 0);
+        boolean b5 = (i1 != 0); // controllo se i1 è diverso da zero
         System.out.println(b5);
 
         String sBool = "true";
-        boolean parsed = Boolean.parseBoolean(sBool);
+        boolean parsed = Boolean.parseBoolean(sBool); // parsing di una stringa in un valore booleano
         System.out.println(parsed);
     }
 }
@@ -188,19 +177,18 @@ public class Booleani {
 
 ---
 
-## tit
+# Booleani: operazioni logiche
 
 ```java
 public class Booleani {
 
  public static void main(String[] args) {
   
-  
   boolean presente;
   
   boolean test = false;
   
-  
+  // controlla il valore di test
   if (!test) {
    System.out.println("falso");
   }
@@ -208,16 +196,13 @@ public class Booleani {
   presente = true;
   presente = false;
   
-
  }
-
 }
-
 ```
 
 ---
 
-## tit
+# Booleani: variabili statiche
 
 ```java
 public class Booleani {
@@ -227,10 +212,8 @@ public class Booleani {
 
  public static void main(String[] args) {
   
-  //dichiarazione
-  //dichiarazione ed inizializzazione
+  //dichiarazione ed inizializzazione di variabili booleane
   boolean a, b = false;
-
   a = true;
   
   if (a == b)
@@ -244,15 +227,13 @@ public class Booleani {
   a = false;
   System.out.println(a);
 
-  a = (3 > 1);
+  a = (3 > 1); // confronto tra numeri
   System.out.println(a);
 
-  a = (3 <= 1);
+  a = (3 <= 1); // confronto tra numeri
   System.out.println(a);  
 
-  
-  //esempio 3
-
+  //esempio con variabili booleane
   boolean b1 = true;
   boolean b2 = false;
 
@@ -270,57 +251,7 @@ public class Booleani {
   String stringaBoolean = "true";
   boolean parsed = Boolean.parseBoolean(stringaBoolean);
   System.out.println("Dopo il parsing: " + parsed);  
-
-
  }
-
 }
 ```
 
----
-
-## tit
-
-```java
-
-```
-
----
-
-## tit
-
-```java
-
-```
-
----
-
-## tit
-
-```java
-
-```
-
----
-
-## tit
-
-```java
-
-```
-
----
-
-## tit
-
-```java
-
-```
-
----
-
-## tit
-
-```java
-
-```

@@ -29,20 +29,14 @@
 ## Scope: ambito di visibilità delle variabili
 
 ```java
-public class Scope1
-{
-   public static void main(String[] args)      
-   {
-
-         double r;
-
-         r = 3.14;
-
-
+public class Scope1 {
+   public static void main(String[] args) {
+      // Dichiarazione e inizializzazione di una variabile all'interno dello scope del metodo
+      double r;
+      r = 3.14;
       System.out.println(r);
    }
 }
-
 ```
 
 ---
@@ -50,20 +44,17 @@ public class Scope1
 ## Scope: ambito di visibilità delle variabili
 
 ```java
-public class Scope2
-{
-   public static void main(String[] args)      
-   {
+public class Scope2 {
+   public static void main(String[] args) {
       {
+         // Dichiarazione e inizializzazione di una variabile all'interno di un blocco
          double r;
-
          r = 3.14;
       }
-
-      System.out.println(r);
+      // Questa riga genera errore poiché la variabile r è fuori dallo scope
+      // System.out.println(r);
    }
 }
-
 ```
 
 ---
@@ -71,24 +62,19 @@ public class Scope2
 ## Scope: ambito di visibilità delle variabili
 
 ```java
-public class Scope3
-{
-   public static void main(String[] args)      
-   {
+public class Scope3 {
+   public static void main(String[] args) {
       {
-         r = 1;            // (1)
-
+         // Utilizzo di una variabile prima della dichiarazione: errore di compilazione
+         // r = 1;            // (1)
          double r;
-
          r = r + 5;        // (2)
       }
-
-      r = r + 2;           // (3)
+      // Anche questa riga genera errore poiché la variabile r è fuori dallo scope
+      // r = r + 2;        // (3)
    }
-
-   r = r + 3;              // (4)
+   // r = r + 3;          // (4)
 }
-
 ```
 
 ---
@@ -96,27 +82,21 @@ public class Scope3
 ## Scope: ambito di visibilità delle variabili
 
 ```java
-public class Scope4
-{
-   public static void main(String[] args)      
-   {
+public class Scope4 {
+   public static void main(String[] args) {
       {
          double r = 3.14;
-
          r = r + 5;
          System.out.println(r);
       }
-
       {
+         // Dichiarazione di una variabile con lo stesso nome in un blocco diverso
          String r = "3.14";
-
          r = r + 5;
          System.out.println(r);
       }
-
    }
 }
-
 ```
 
 ---
@@ -124,24 +104,18 @@ public class Scope4
 ## Scope: ambito di visibilità delle variabili
 
 ```java
-public class Scope5
-{
-   public static void main(String[] args)      
-   {
+public class Scope5 {
+   public static void main(String[] args) {
       {
          double r = 3.14;
-
          {
-            r = 5;    // No error
-            t = 5;    // Will cause "undefined variable" error
+            r = 5;    // Nessun errore, poiché r è visibile nel blocco annidato
+            // t = 5;    // Genera errore: t non è ancora dichiarata
          }
-
          double t = 1.0;
       }
-
    }
 }
-
 ```
 
 ---
@@ -149,23 +123,17 @@ public class Scope5
 ## Scope: ambito di visibilità delle variabili
 
 ```java
-public class Scope6
-{
-   public static void main(String[] args)      
-   {
-      {  // Start of outer scope
+public class Scope6 {
+   public static void main(String[] args) {
+      {  // Inizio del blocco esterno
          double r;
-
-         {  // Start of inner scope
+         {  // Inizio del blocco interno
+            // Dichiarazione di una nuova variabile con lo stesso nome
             String r;
-
          }
-
       }
-
    }
 }
-
 ```
 
 ---
@@ -173,22 +141,14 @@ public class Scope6
 ## Scope: ambito di visibilità delle variabili
 
 ```java
-public class Scope7
-{
-   public static void main(String[] args)      
-   {
-      /* -------------------------------------------
-         2 variables named r inside the SAME scope
-         ------------------------------------------- */
+public class Scope7 {
+   public static void main(String[] args) {
+      // Dichiarazione di due variabili con lo stesso nome nello stesso scope: errore di compilazione
       double r = 0.0;
-
-      int r = 0;
-
+      // int r = 0; // Questa riga genererebbe un errore
       System.out.println(r);
-
    }
 }
-
 ```
 
 ---
@@ -196,23 +156,25 @@ public class Scope7
 ## Uso la variabile per lo scambio di valori
 
 ```java
-	public static void main(String[] args) {
-		
-		int a, b, temp;
-		
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("inserisci il primo valore intero");
-		a = sc.nextInt();
-		System.out.println("inserisci il secondo valore intero");
-		b = sc.nextInt();
-		
-		temp = a;
-		a = b;
-		b = temp;
-		
-		System.out.println("A = " + a);
-		System.out.println("B = " + b);
+import java.util.Scanner;
 
-	}
+public class ScambioValori {
+   public static void main(String[] args) {
+      int a, b, temp;
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Inserisci il primo valore intero");
+      a = sc.nextInt();
+      System.out.println("Inserisci il secondo valore intero");
+      b = sc.nextInt();
+
+      // Scambio dei valori usando una variabile temporanea
+      temp = a;
+      a = b;
+      b = temp;
+
+      System.out.println("A = " + a);
+      System.out.println("B = " + b);
+      sc.close();
+   }
+}
 ```
