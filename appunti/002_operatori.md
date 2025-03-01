@@ -55,8 +55,9 @@ Gli operatori sono essenziali per manipolare dati e controllare il flusso di ese
 
 * Di assegnazione: = += -= *= /= &= |= ^=
 * Di assegnazione/incremento: ++ -- %=
-
 * Operatori Aritmetici:` + - * / %`
+
+---
 
 | Operatore | Significato    |
 | --------- | -------------- |
