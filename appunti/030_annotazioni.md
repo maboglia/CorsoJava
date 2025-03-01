@@ -6,6 +6,8 @@ Le annotazioni possono essere utilizzate in diverse situazioni, ad esempio per f
 
 Ecco alcune annotazioni comuni in Java:
 
+---
+
 1. **`@Override`:**
    - **Utilizzo:** Applicato a un metodo per indicare che il metodo sta effettuando l'override di un metodo nella classe genitore.
    - **Esempio:**
@@ -16,6 +18,8 @@ Ecco alcune annotazioni comuni in Java:
          // implementazione del metodo
      }
      ```
+
+---
 
 2. **`@Deprecated`:**
    - **Utilizzo:** Indica che un elemento (classe, metodo, campo) è deprecato e dovrebbe essere evitato, perché potrebbe essere rimosso in future versioni.
@@ -28,6 +32,8 @@ Ecco alcune annotazioni comuni in Java:
      }
      ```
 
+---
+
 3. **`@SuppressWarnings`:**
    - **Utilizzo:** Supprime i warning del compilatore per un elemento specifico o per tutto il metodo.
    - **Esempio:**
@@ -39,6 +45,8 @@ Ecco alcune annotazioni comuni in Java:
      }
      ```
 
+---
+
 4. **`@FunctionalInterface`:**
    - **Utilizzo:** Applicato a un'interfaccia per indicare che si tratta di un'interfaccia funzionale, cioè un'interfaccia con un unico metodo astratto.
    - **Esempio:**
@@ -49,6 +57,8 @@ Ecco alcune annotazioni comuni in Java:
          void myMethod();
      }
      ```
+
+---
 
 5. **`@Entity`, `@Column`, `@Table` (JPA Annotations):**
    - **Utilizzo:** Utilizzato nel contesto di Java Persistence API (JPA) per mappare classi Java a tabelle di database.
@@ -67,6 +77,8 @@ Ecco alcune annotazioni comuni in Java:
      }
      ```
 
+---
+
 6. **`@Test` (JUnit Annotation):**
    - **Utilizzo:** Utilizzato nei test unitari con JUnit per indicare che un metodo è un test.
    - **Esempio:**
@@ -83,6 +95,8 @@ Ecco alcune annotazioni comuni in Java:
 ---
 
 Domande:
+
+---
 
 1. **Domanda:** Cosa c'è di sbagliato nell'interfaccia seguente:
 
@@ -108,6 +122,8 @@ Domande:
         public void openBackDoor();
     }
     ```
+
+---
 
 2. **Domanda:** Considera questa implementazione dell'interfaccia House, mostrata nella Domanda 1.
 
@@ -144,6 +160,8 @@ Domande:
     }
     ```
 
+---
+
 3. **Domanda:** Il seguente codice compila senza errori? Perché sì o no?
 
     ```java
@@ -178,6 +196,8 @@ Domande:
     ```
 
 Esercizio:
+
+---
 
 1. **Esercizio:** Definisci un tipo di annotazione per una richiesta di miglioramento con gli elementi id, synopsis, engineer e date. Specifica il valore predefinito come non assegnato per engineer e sconosciuto per date.
 
