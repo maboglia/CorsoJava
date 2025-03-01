@@ -15,6 +15,8 @@ __N.B. Tutte le classi wrapper sono classi final per cui non possono essere este
 * Un oggetto di una classe "wrapper" incorpora un dato primitivo e fornisce metodi per operare su di esso
 * Le classi wrapper dei tipi primitivi sono definite nel package java.lang
 
+---
+
 ### Corrispondenza
 
 | Tipo Primitivo | ClasseWrapper |
@@ -37,6 +39,8 @@ __N.B. Tutte le classi wrapper sono classi final per cui non possono essere este
 * Spesso abbiamo a che fare con tipi primitivi (int, double, boolean, …) che sono tipi semplici e, quindi, non possiedono metodi. 
 * I wrapper, invece, essendo degli oggetti, sono dotati di metodi ed attributi.
 * Prima dell’introduzione dell’autoboxing, programmando in Java ci si poteva trovare nella necessità di convertire un tipo primitivo nella sua corrispondente classe wrapper.
+
+---
 
 ```java
 Integer x = new Integer(10);
@@ -95,6 +99,8 @@ La classe wrapper Character si trova in java.lang
 
 Include metodi statici per verificare le proprietà di un carattere
 
+---
+
 ### Esempio
 ```
 String s = "Stringa Generica."
@@ -104,19 +110,21 @@ char c = s.charAt (0);
 // false
 ...
 ```
----
 
+---
 
 ### Predicati vari
 
-* boolean isLetter (char c)
-* boolean isDigit (char c)
-* boolean isLetterOrDigit (char c)
-* boolean isSpaceChar (char c)
-* boolean isLowerCase (char c)
-* boolean isUpperCase (char c)
+* `boolean isLetter (char c)`
+* `boolean isDigit (char c)`
+* `boolean isLetterOrDigit (char c)`
+* `boolean isSpaceChar (char c)`
+* `boolean isLowerCase (char c)`
+* `boolean isUpperCase (char c)`
+
+---
 
 ### Trasformazioni varie
 
-* char toUpperCase (char c)
-* char toLowerCase (char c)
+* `char toUpperCase (char c)`
+* `char toLowerCase (char c)`
