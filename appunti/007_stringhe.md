@@ -33,7 +33,13 @@ boolean areEqual = str1.equals(str2);
 
 // Confronto di stringhe (ignorando maiuscole/minuscole)
 boolean areEqualIgnoreCase = str1.equalsIgnoreCase("hello, world!");
+```
 
+---
+
+### Metodi Principali
+
+```java
 // Ricerca di una sottostringa
 boolean containsSubstring = str1.contains("Hello");
 
@@ -231,10 +237,14 @@ String s3 = s3.substring (2, 6);
 * `boolean equalsIgnoreCase(String s)`
 * `myString.equalsIgnoreCase("StRiNgA")`
 
+---
+
 ### Confronta con altra stringa facendone la differenza
 
 * `int compareTo(String str)`
 * `myString.compareTo("stringa")` ritorna un valore >=< 0
+
+---
 
 ### Trasforma int in String
 
@@ -247,6 +257,8 @@ String s3 = s3.substring (2, 6);
 
 * `int indexOf(char c)`
 * `int indexOf(char c, int fromCtrN)`
+
+---
 
 ### Altri metodi
 
@@ -279,6 +291,8 @@ int indexOf(int ch)
 
 Restituisce l’indice del carattere specificato
 
+---
+
 #### lastIndexOf
 
 ```java
@@ -287,6 +301,8 @@ int lastIndexOf(int ch)
 
 E’ come indexOf() ma viene restituito l’indice dell’ultima occorrenza trovata
 
+---
+
 #### length
 
 ```java
@@ -294,6 +310,8 @@ int length()
 ```
 
 Restituisce il numero di caratteri di cui è costituita la stringa corrente
+
+---
 
 #### replace
 
@@ -313,6 +331,8 @@ String substring(int startIndex)
 
 Restituisce una sottostringa della stringa corrente, composta dai caratteri che partono dall’indice startIndex alla fine
 
+---
+
 #### substring
 
 ```java
@@ -321,6 +341,8 @@ String substring(int startIndex, int number)
 
 Restituisce una sottostringa della stringa corrente, composta dal numero number di caratteri che partono dall’indice startIndex
 
+---
+
 #### toLowerCase
 
 ```java
@@ -328,6 +350,8 @@ String toLowerCase()
 ```
 
 Restituisce una nuova stringa equivalente a quella corrente ma con tutti i caratteri minuscoli
+
+---
 
 #### toUpperCase
 
