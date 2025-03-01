@@ -53,6 +53,8 @@ Più in generale, le dichiarazioni di metodo hanno **sei** componenti (alcuni so
 * Se sono anche `private` e aiutano a separare la logica dal metodo `main`, in caso di interfacce testuali (che girano nella `console`), vengono definiti anche `metodi ausiliari`
 * Nella programmazione ad oggetti bisogna farne un uso estremamente limitato!
 
+---
+
 ```java
 
 
@@ -109,6 +111,8 @@ public class ProvaMetodiStatic
 * La classe **Math** non è istanziabile
 * La classe **String** è "istanziabile ibrida"
 * La classe **StringBuilder** è "istanziabile pura"
+
+---
 
 Argomenti correlati
 
