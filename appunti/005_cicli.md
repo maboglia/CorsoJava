@@ -15,6 +15,8 @@ Java mette a disposizione del programmatore diverse strutture sintattiche per co
 
 ![if...else](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/02_costrutti/if-else.png)
 
+---
+
 **if statements**
 
 * E' un’istruzione condizionale, permette cioè di eseguire un blocco di istruzioni solo se si verifica una determinata condizione.
@@ -64,6 +66,8 @@ else {
 Serve per gestire in maniera più ordinata varie condizioni,
 è un modo più elegante in alcune situazioni.
 
+---
+
 ```java
 switch (espressione) {
 
@@ -96,18 +100,14 @@ switch (espressione) {
 Se il numero di iterazioni è **prevedibile**.
 
 ```java
-for (partenza, fine, incremento) 
-blocco di istruzioni da ripetere
-```
-
-```java
-
 for (init; condition; adjustment) {
 
 //statements;
 
 }
 ```
+
+---
 
 ### Esempio: prima di entrare nel ciclo so già che verrà ripetuto 10 volte
 
@@ -121,7 +121,6 @@ for (int i=0; i<n; ++i) {
 
 ---
 
-
 ## Cicli indefiniti - while
 
 si ripete il ciclo fintanto che una condizione è verificata (è vera)
@@ -130,6 +129,8 @@ si ripete il ciclo fintanto che una condizione è verificata (è vera)
 * determina la continuazione del programma
 * ed esegue l'elenco delle operazioni del blocco
 * Da usare se il numero di iterazioni **non è noto** all'inizio del ciclo.
+
+---
 
 ```java
 while (condition) {
@@ -170,6 +171,8 @@ Se il ciclo viene interrotto dopo aver filtrato un valore con una data propriet�
 
 * Se stiamo eseguendo un ciclo, possiamo utilizzare la parola `break` per interromperlo in qualsiasi momento.
 * Si interrompe quindi il ciclo e si riprende l'esecuzione delle istruzioni al di fuori di esso.
+
+---
 
 ### Esempio: verifica se un array contiene o meno numeri negativi
 
@@ -228,6 +231,8 @@ for (int i=1; i<100; ++i) { // passa in rassegna tutti i numeri fra 1 e 100
 
 Vengono passati in rassegna un insieme di valori e ne viene tenuta una traccia cumulativa usando una opportuna variabile.
 
+---
+
 ### Esempio: somma i primi 100 numeri interi.
 
 ```java
@@ -237,6 +242,8 @@ for (int i=1; i<100; ++i) { // passa in rassegna tutti i numeri fra 1 e 100
 }
 
 ```
+
+---
 
 ### Esempio: data una stringa s, ottieni la stringa rovesciata
 

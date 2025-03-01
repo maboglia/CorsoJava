@@ -9,6 +9,8 @@
     * Raggiungibili con l'operatore di indicizzazione
     * le **parentesi quadre** `[]`
 
+---
+
 ## Il riferimento ad array
 
 * Non è un puntatore al primo elemento
@@ -24,6 +26,8 @@ Nel linguaggio di programmazione Java, gli array sono oggetti (§4.3.1), vengono
 
 **In Java gli array sono Oggetti**
 * Sono allocati nell'area di memoria riservata agli oggetti creati dinamicamente (heap)
+
+---
 
 ### Dimensione dell'array
 
@@ -44,6 +48,8 @@ int[] voti;
 voti = new int[10];
 ```
 
+---
+
 *  Con costante simbolica
 ```java
 final int ARRAY_SIZE = 10;
@@ -51,6 +57,8 @@ int[] voti;
 ...
 voti = new int[ARRAY_SIZE];
 ```
+
+---
 
 *  Con valore definito a run-time
 ```java
@@ -67,6 +75,7 @@ voti = new int[x];
   * 0 - per variabili di tipo numerico (inclusi i char)
   * false - per le variabili di tipo boolean
 
+---
 
 ```java
 int[] numeriPrimi = {2,3,5,7,11,13};
@@ -74,6 +83,8 @@ int[] numeriPrimi = {2,3,5,7,11,13};
 // La virgola finale e' facoltativa
 int [] numeriPari = {0, 2, 4, 6, 8, 10,};
 ```
+
+---
 
 * Dichiarazione e creazione possono avvenire contestualmente
 * L'attributo length indica la lunghezza dell'array, cioè il numero di elementi
@@ -83,6 +94,8 @@ int [] numeriPari = {0, 2, 4, 6, 8, 10,};
 for (int i=0; i<voti.length; i++)
 voti[i] = i;
 ```
+
+---
 
 **In Java viene fatto il bounds checking**
 
@@ -97,6 +110,8 @@ Dichiarazione di un riferimento a un array
 
 * `int[] voti;`
 * `int voti[];`
+
+---
 
 La dichiarazione di un array non assegna alcuno spazio
 
@@ -128,12 +143,16 @@ saldo[i] = saldo[j];
 saldo[j] = temp;
 ```
 
+---
+
 * L'array è una struttura dati efficiente ogni volta che il numero di elementi è noto
 * Il ridimensionamento di un array in Java risulta poco efficiente
 * Utilizzare altre strutture dati se il numero di elementi contenuto non è noto
 
 ---
 ## Esempi di Array
+
+---
 
 **Array Monodimensionali**
 
@@ -144,6 +163,8 @@ int[] list = {1, 2, 3, 4};
 
 ```
 
+---
+
 **Array Multidimensionali**
 
 ```java
@@ -153,6 +174,8 @@ list[0].length;
 int[][] list = {{1, 2}, {3, 4}};
 
 ```
+
+---
 
 **Array irregolari**
 Sono possibili righe di lunghezza diverse**

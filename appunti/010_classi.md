@@ -13,7 +13,11 @@
 Una classe è uno dei concetti fondamentali di OOP. Una classe è un insieme di istruzioni necessarie per costruire un tipo specifico di oggetto. 
 Possiamo pensare a una classe come a un modello, un progetto o una ricetta che ci dice come creare oggetti di quella classe. 
 
+---
+
 La creazione di un oggetto di quella classe è un processo chiamato istanziazione e di solito viene eseguito tramite la parola chiave `new`. 
+
+---
 
 Possiamo istanziare tutti gli oggetti che vogliamo. Una definizione di classe non consuma memoria salvata come file sul disco rigido. Una delle migliori pratiche che una classe dovrebbe seguire è il principio di responsabilità singola (SRP): una classe dovrebbe essere progettata e scritta per fare una, e solo una, cosa.
 
@@ -27,7 +31,6 @@ Possiamo istanziare tutti gli oggetti che vogliamo. Una definizione di classe no
 * In **Java** quasi tutto è un **oggetto**, ci sono solo due **eccezioni**:
   * i tipi di dato semplici (tipi primitivi) e
   * gli array (un oggetto trattato in modo _particolare_)
-
 * Le classi, in quanto tipi di dato strutturati, prevedono **usi e regole più complessi** rispetto ai tipi semplici
 
 ---
