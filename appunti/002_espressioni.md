@@ -22,6 +22,8 @@ In Java, un'espressione è una combinazione di **operandi** (variabili, valori o
      true   // Un booleano
      ```
 
+---
+
 2. **Espressioni di variabili**  
    Un'espressione di variabile utilizza una variabile come operando.
    - Esempio:
@@ -29,6 +31,8 @@ In Java, un'espressione è una combinazione di **operandi** (variabili, valori o
      int x = 10;
      x;  // Variabile che rappresenta il valore 10
      ```
+
+---
 
 3. **Espressioni aritmetiche**  
    Queste espressioni coinvolgono operazioni matematiche su numeri e variabili. Gli operatori principali sono:
@@ -40,6 +44,8 @@ In Java, un'espressione è una combinazione di **operandi** (variabili, valori o
      int modulo = 10 % 3;        // 1 (resto)
      ```
 
+---
+
 4. **Espressioni di assegnazione**  
    Le espressioni di assegnazione memorizzano il risultato di un'espressione in una variabile.
    - Operatore: `=`
@@ -48,6 +54,8 @@ In Java, un'espressione è una combinazione di **operandi** (variabili, valori o
      int x;
      x = 5 + 3;   // Assegna 8 a x
      ```
+
+---
 
 5. **Espressioni boolean**  
    Espressioni che restituiscono `true` o `false`, spesso utilizzate nelle condizioni.
@@ -60,6 +68,8 @@ In Java, un'espressione è una combinazione di **operandi** (variabili, valori o
      boolean isEqual = (5 == 5);  // true
      boolean isGreater = (10 > 3); // true
      ```
+
+---
 
 6. **Espressioni condizionali (ternarie)**  
    L'operatore ternario valuta un'espressione e restituisce un valore in base a una condizione.
@@ -86,6 +96,8 @@ Utilizzati per eseguire operazioni matematiche.
 - `/` (divisione)
 - `%` (modulo)
 
+---
+
 #### **Operatori di assegnazione**  
 Permettono di assegnare il valore di un'espressione a una variabile.
 - `=` (assegnazione semplice)
@@ -97,6 +109,8 @@ Permettono di assegnare il valore di un'espressione a una variabile.
     a += 5;  // Equivale a: a = a + 5;
     ```
 
+---
+
 #### **Operatori di confronto**  
 Questi operatori restituiscono un valore booleano (`true` o `false`).
 - `==` (uguale)
@@ -106,12 +120,16 @@ Questi operatori restituiscono un valore booleano (`true` o `false`).
 - `<=` (minore o uguale)
 - `>=` (maggiore o uguale)
 
+---
+
 #### **Operatori logici**  
 Utilizzati nelle espressioni booleane per combinare più condizioni.
 - `&&` (and logico)
 - `||` (or logico)
 - `!` (not logico)
-  
+
+---
+
 #### **Operatori di incremento/decremento**  
 Usati per aumentare o diminuire il valore di una variabile di 1.
 - `++` (incremento)
@@ -134,8 +152,12 @@ int c = a--; // a viene usato prima, quindi c = 6 e poi a = 5
 
 In un'espressione complessa, l'ordine con cui gli operatori vengono valutati dipende dalla loro **precedenza** e **associatività**.
 
+---
+
 - **Precedenza**: gli operatori con precedenza più alta vengono valutati per primi.
   - Ad esempio: `*` e `/` hanno precedenza più alta di `+` e `-`.
+
+---
 
 - **Associatività**: quando due operatori hanno la stessa precedenza, l'**associatività** determina l'ordine di valutazione.
   - Ad esempio, la maggior parte degli operatori aritmetici sono **associativi da sinistra**:
