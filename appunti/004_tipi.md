@@ -4,7 +4,7 @@ I **tipi di dato primitivi** rappresentano i costituenti fondamentali in Java. E
 
 ---
 
-![Types](img/PrimitiveVsReference.png)
+![Types](https://github.com/maboglia/CorsoJava/raw/master/appunti/img/PrimitiveVsReference.png)
 
 ---
 
