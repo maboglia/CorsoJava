@@ -4,7 +4,6 @@
 * `( nometipo ) espressione`
 * Trasforma il valore della variabile (espressione) in quello corrispondente in un tipo diverso
 * Il cast si applica anche a `char`, visto come tipo intero positivo
-
 * La promotion è automatica quando necessaria
   * Es. `double d = 3 + 4;`
 * Il casting deve essere esplicito: il programmatore si assume la responsabilità di eventuali perdite di informazione
@@ -24,6 +23,8 @@
 * la conversione da sotto-classe a super-classe è **automatica**
 * la conversione da super-classe a sotto-classe richiede **cast esplicito**
 * la conversione tra riferimenti non in relazione tra loro **non è permessa**
+
+---
 
 ## esempio promotion
 
@@ -89,4 +90,6 @@ int a = (int) true; // vietato - ... cannot be converted to ...
 boolean falso = (boolean) 0; // vietato - ... cannot be converted to ...  
 ```
 
-[esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/00_Foundations)
+---
+
+[Altri esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/00_Foundations)
