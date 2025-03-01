@@ -6,50 +6,70 @@ I design pattern sono soluzioni generiche a problemi comuni che possono emergere
 
 Ecco alcuni design pattern comuni in programmazione:
 
+---
+
 ### 1. **Singleton Pattern:**
 
 - **Scopo:** Garantire che una classe abbia una sola istanza e fornire un punto di accesso globale a essa.
 - **Implementazione:** Utilizza un costruttore privato e fornisce un metodo statico per ottenere l'istanza unica.
+
+---
 
 ### 2. **Factory Method Pattern:**
 
 - **Scopo:** Definire un'interfaccia per la creazione di un oggetto, ma lasciare alle sottoclassi la scelta delle classi da istanziare.
 - **Implementazione:** Delega la creazione dell'istanza alle sottoclassi, ritardando la sua istanziazione a una classe specifica.
 
+---
+
 ### 3. **Abstract Factory Pattern:**
 
 - **Scopo:** Fornire un'interfaccia per creare famiglie di oggetti correlati o dipendenti senza specificare le classi concrete.
 - **Implementazione:** Introduce un'interfaccia di fabbrica astratta che dichiara metodi per la creazione di oggetti correlati.
+
+---
 
 ### 4. **Builder Pattern:**
 
 - **Scopo:** Separare la costruzione di un oggetto complesso dalla sua rappresentazione, consentendo la stessa costruzione di diversi tipi di oggetti.
 - **Implementazione:** Utilizza un direttore per controllare il processo di costruzione attraverso un'interfaccia comune.
 
+---
+
 ### 5. **Prototype Pattern:**
 
 - **Scopo:** Creare nuovi oggetti duplicando oggetti esistenti, senza fare riferimento alle loro classi specifiche.
 - **Implementazione:** Introduce un metodo di clonazione che crea una copia dell'oggetto esistente.
+
+---
 
 ### 6. **Adapter Pattern:**
 
 - **Scopo:** Consente a un'interfaccia di funzionare con un'altra interfaccia che non sarebbe altrimenti compatibile.
 - **Implementazione:** Introduce un adattatore che funge da ponte tra due interfacce incompatibili.
 
+---
+
 ### 7. **Decorator Pattern:**
 
 - **Scopo:** Attaccare dinamicamente responsabilità aggiuntive a un oggetto. È una via alternativa all'ereditarietà per estendere funzionalità.
 - **Implementazione:** Aggiunge uno o più decorator che contengono oggetti da decorare.
+
+---
 
 ### 8. **Observer Pattern:**
 
 - **Scopo:** Definire una dipendenza uno-a-molti tra oggetti in modo che quando uno oggetto cambia stato, tutti i suoi dipendenti vengano notificati e aggiornati automaticamente.
 - **Implementazione:** Usa un soggetto che tiene traccia degli osservatori e li notifica quando cambia lo stato.
 
+---
+
 ### 9. **Strategy Pattern:**
 
 - **Scopo:** Definire una famiglia di algoritmi, incapsularli e renderli intercambiabili. Consente al cliente di variare l'algoritmo indipendentemente dall'oggetto che lo utilizza.
 - **Implementazione:** Usa una strategia, che è una classe che implementa un'interfaccia comune.
+
+---
 
 ### 10. **Command Pattern:**
 
@@ -119,6 +139,8 @@ Scopo dei design pattern comportamentali
 - [Strategy](https://it.wikipedia.org/wiki/Strategy_pattern)
 - [Template method](https://it.wikipedia.org/wiki/Template_method)
 - Visitor
+
+---
 
 ---
 
