@@ -13,8 +13,12 @@ In Java, **variabili** e **costanti** sono i fondamenti per la gestione dei dati
   - Può contenere lettere, numeri e l'underscore `_`.
   - Non deve coincidere con una parola chiave del linguaggio Java (ad es., `int`, `class`).
   - Si consiglia di scegliere un **nome significativo** per migliorare la leggibilità del programma.
-  
+ 
+---
+ 
 ![dichiarazione variabile](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/01_operatori_tipi_expr/assignment.png)
+
+---
 
 ### Esempio di utilizzo:
 
@@ -47,10 +51,14 @@ Esempio:
 int base, altezza;
 double area;
 ```
-  
+
+---
+
 ### **Regole per le variabili:**
 - Ogni variabile deve essere dichiarata **una sola volta**.
 - Le variabili non possono essere utilizzate finché non sono state **inizializzate**.
+
+---
 
 ### Assegnazione:
 
@@ -62,6 +70,8 @@ base = 5;
 altezza = 10;
 area = base * altezza / 2;
 ```
+
+---
 
 ### Dichiarazione + Assegnazione:
 
@@ -101,6 +111,8 @@ class Nascoste {
 }
 ```
 
+---
+
 ### Costanti
 
 Le **costanti** sono variabili il cui valore **non può cambiare** dopo essere stato inizializzato. Per dichiarare una costante, si utilizza il modificatore `final`:
@@ -111,6 +123,8 @@ final double IVA = 0.22;
 
 - Il modificatore **final** impedisce di assegnare un nuovo valore alla variabile dopo la sua inizializzazione.
 - L'uso delle costanti può aiutare a **prevenire errori** e consente al compilatore di eseguire **ottimizzazioni**.
+
+---
 
 ### **L'attributo `final`:** 
 
