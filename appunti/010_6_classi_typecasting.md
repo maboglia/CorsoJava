@@ -10,6 +10,8 @@ L'oggetto rimane invariato
 * È sempre affidabile (è sempre vero che un auto elettrica è un auto)
 * È automatico
 
+---
+
 ### upcast su Object
 
 Poichè ogni classe è (direttamente o indirettamente) sottoclasse di
@@ -29,6 +31,8 @@ o = a;
 * Può non essere affidabile
   * Non tutte le auto sono autoelettriche
   * Un downcasting può provocare un errore run-time
+
+---
 
 ### usare instanceof
 
