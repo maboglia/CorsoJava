@@ -94,6 +94,11 @@ IllegalArgumentException|Argomento di un metodo non valido.
 IllegalMonitorStateException|Monitor su thread non valido.
 IllegalStateException|Oggetto in uno stato che non consente l'operazione richiesta.
 IllegalThreadStateException|Operazione incompatibile con lo stato attuale di un thread.
+
+---
+
+Eccezione|Significato
+---|---
 IndexOutOfBoundsException|Indice non valido.
 NegativeArraySizeException|Array creato con dimensione negativa.
 NullPointerException|Utilizzo non corretto di un valore null.

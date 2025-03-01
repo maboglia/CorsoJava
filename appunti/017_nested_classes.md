@@ -2,6 +2,8 @@
 
 In Java, le "nested classes" (classi innestate) si riferiscono alla capacità di definire una classe all'interno di un'altra classe. Questa tecnica consente di organizzare e strutturare il codice in modo più logico e coerente. Le classi innestate possono essere suddivise in due categorie principali: classi interne (inner classes) e classi innestate statiche (static nested classes).
 
+---
+
 1. **Classi Interne (Inner Classes):**
 
    - **Definizione:** Una classe interna è dichiarata all'interno di un'altra classe. Ha accesso diretto ai membri della classe esterna, compresi quelli dichiarati privati.
@@ -16,6 +18,8 @@ In Java, le "nested classes" (classi innestate) si riferiscono alla capacità di
      }
      ```
 
+---
+
    - **Utilità:**
      - Raggruppare logicamente classi utilizzate solo in un'unica posizione.
      - Aumentare l'incapsulamento permettendo a una classe interna di accedere ai membri privati della classe esterna.
@@ -27,6 +31,8 @@ In Java, le "nested classes" (classi innestate) si riferiscono alla capacità di
      OuterClass outerObject = new OuterClass();
      OuterClass.InnerClass innerObject = outerObject.new InnerClass();
      ```
+
+---
 
 2. **Classi Innestate Statiche (Static Nested Classes):**
 
@@ -41,6 +47,8 @@ In Java, le "nested classes" (classi innestate) si riferiscono alla capacità di
          }
      }
      ```
+
+---
 
    - **Utilità:**
      - Incapsulamento simile a quello di una classe di primo livello per motivi di convenienza di impacchettamento.

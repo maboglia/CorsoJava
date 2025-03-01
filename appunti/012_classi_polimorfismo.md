@@ -12,10 +12,14 @@
 
 Una classe può avere più metodi con lo stesso nome
 
+---
+
 ## I metodi devono essere distinguibili in base a
 
 * Numero dei parametri
 * Tipo dei parametri
+
+---
 
 ### Il metodo da eseguire viene scelto in base a
 
@@ -46,6 +50,8 @@ n = n * 2
 ```
 
 **Il codice moltiplica n per 2 e registra il risultato in n.**
+
+---
 
 ### In OOP: abbiamo un numero e vogliamo raddoppiarlo
 
@@ -79,5 +85,7 @@ class Operazione{
 Il vantaggio di questa tecnica è definito **polimorfismo**.
 
 Se il programma richiede di replicare la procedura su un oggetto di tipo string come "bob", nel modo procedurale occorre invocare una nuova funzione con un codice e un nome differente.
+
+---
 
 [esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)

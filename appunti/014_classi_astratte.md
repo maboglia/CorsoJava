@@ -1,5 +1,7 @@
 # Classi Astratte
 
+---
+
 ## Una classe avente **almeno un metodo astratto** deve essere dichiarata come classe astratta
 
 NB: **Posso** comunque dichiarare una classe astratta **anche se non contiene** alcun metodo astratto!
@@ -35,7 +37,6 @@ Ad un certo punto la classe superiore diventa a tal punto generica che la si pu√
 
 ---
 
-
 ### METODO ASTRATTO
 
 Posso usare la classe astratta quando voglio **obbligare** tutte le sottoclassi di una classe A ad avere un metodo ```nomeMetodo()```, ma allo stesso tempo non voglio implementare tale metodo nella classe A.
@@ -56,6 +57,8 @@ Le Classi Astratte, oltre ad avere **metodi astratti**, possono avere metodi ed 
 Se una classe √® astratta, non posso istanziarla: **NON POSSO CREARE OGGETTI DA UNA CLASSE ASTRATTA**
 
 
+---
+
 Che senso ha definire dei metodi astratti e di conseguenza rendere una classe astratta?
 
 * Definisco un metodo astratto quando voglio forzare tutte le sottoclassi ad avere un determinato metodo.
@@ -68,5 +71,7 @@ Che senso ha definire dei metodi astratti e di conseguenza rendere una classe as
 La sottoclasse deve implementare **tutti i metodi** che la superclasse aveva astratti.
 
 Se la sottoclasse a sua volta **non definisce** i metodi che la superclasse aveva dichiarato astratti, **anche** la **sottoclasse deve essere dichiarata astratta**.
+
+---
 
 [esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)

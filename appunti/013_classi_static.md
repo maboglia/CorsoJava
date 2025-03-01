@@ -34,12 +34,10 @@ Automobile.numeroRuote;
 
 ---
 
-## Metodi di classe
-
-### Funzioni non associate ad alcuna istanza
+## Metodi di classe: funzioni non associate ad alcuna istanza
 
 * Dichiarazione: static
-* Accesso: nome-classe . metodo()
+* Accesso: NomeClasse . nomeMetodoStatic()
 
 ```java
 class HelloWorld {
@@ -60,9 +58,16 @@ double y = Math.cos(x);
 * `Math.sqrt (2);`
 * `String.valueOf( Math .PI);`
 * In caso di classe istanziabile ibrida si può accedere tramite una qualunque istanza della classe, ma è meglio non farlo.
+
+---
+
+## Accesso a metodi e attributi static
+
 * Nel corpo di un metodo `static` non si può accedere ad attributi e metodi non `static` della stessa classe
 * Il metodo `static` deve poter essere invocato a livello di classe (anche in assenza di istanze) mentre attributi e metodi non `static` esistono solo se c’è almeno un’istanza
 * Se nel corpo di un metodo appare il nome di un metodo o attributo `static` della sua classe è sottinteso che sia preceduto dal nome della classe stessa
 * Eventuali mescolanze improprie di `static` e non `static` causano errori di compilazione
+
+---
 
 [esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)

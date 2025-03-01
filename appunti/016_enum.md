@@ -64,6 +64,8 @@ Ecco alcune caratteristiche chiave delle enum in Java:
    }
    ```
 
+---
+
    Ora puoi ottenere la descrizione di un giorno:
 
    ```java

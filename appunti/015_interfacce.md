@@ -116,6 +116,8 @@ Un'interfaccia può essere considerata un modo per cosa dovrebbero fare le class
 Quindi un'interfaccia non è una classe ma un insieme di requisiti per le classi che si vogliono conformare ad essa.
 
 
+---
+
 
 ## interface
 
@@ -152,6 +154,8 @@ Con le interfacce invece la situazione è diversa: una classe può implementare 
 Un'interfaccia può estendere un'altra interfaccia, sempre con ereditarietà singola.
 Possono così essere implementate gerarchie di interfacce (e classi astratte, vedi per esempio [JCF](./022_JCF_collezioni.md))
 
+---
+
 ### Sintassi di esempio
 
 ```java
@@ -182,5 +186,7 @@ Con le interfacce contenenti un singolo metodo astratto, è possibile utilizzare
 * Ad esempio: `Integer raddoppiato = (o) -> o * 2 ;`
 * [Interfacce funzionali](./018_interfacce_funzionali.md)
 
+
+---
 
 [esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)
