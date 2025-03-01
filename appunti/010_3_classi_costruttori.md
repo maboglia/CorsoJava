@@ -27,6 +27,8 @@ Spesso si usa l'**overloading** dei metodi definendo diversi costruttori per gli
 
 La distruzione di oggetti non è a carico del programmatore (garbage-collection)
 
+---
+
 ### Il costrutto new
 
 * Crea una nuova istanza della classe specificata, allocandone la memoria
@@ -45,6 +47,8 @@ String s = new String ("ABC");
 
 * Accedere mediante il reference ai metodi della classe
 * Accedere mediante il reference agli attributi della classe
+
+---
 
 ### inviare Messaggi
 
@@ -155,4 +159,7 @@ class Automobile {
     }
 }
 ```
+
+---
+
 [esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)
