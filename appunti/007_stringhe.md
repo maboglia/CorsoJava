@@ -368,3 +368,104 @@ Restituisce una nuova stringa equivalente a quella corrente ma con tutti i carat
 * [raccolta esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/04_Stringhe.md)
 * [altri esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_API_Java/P01_java.lang/String)
 * [stringbuilder](https://github.com/maboglia/CorsoJava/tree/master/esempi/04_API_Java/P01_java.lang/StringBuilder)
+
+---
+
+## string interpolation in Java
+
+In Java, non esiste una funzionalità di **string interpolation** come in altri linguaggi (ad esempio, Python, JavaScript o PHP), ma ci sono comunque vari modi per includere variabili all'interno di stringhe. Ecco alcune soluzioni alternative che puoi utilizzare:
+---
+
+
+### 1. **Concatenazione delle stringhe**
+
+Il modo più semplice per includere variabili in una stringa è concatenarle con l'operatore `+`:
+
+```java
+String name = "Alice";
+int age = 30;
+String message = "Hello, my name is " + name + " and I am " + age + " years old.";
+System.out.println(message);
+```
+
+Tuttavia, la concatenazione con l'operatore `+` può risultare inefficiente, soprattutto in loop o quando si concatenano molte variabili, poiché crea nuovi oggetti stringa a ogni operazione.
+
+---
+
+### 2. **`String.format()`**
+
+Una soluzione più elegante e leggibile è utilizzare il metodo `String.format()`, che funziona in modo simile alla string interpolation di altri linguaggi. Permette di specificare un formato per la stringa e inserire i valori in punti specifici:
+
+```java
+String name = "Alice";
+int age = 30;
+String message = String.format("Hello, my name is %s and I am %d years old.", name, age);
+System.out.println(message);
+```
+
+In questo esempio:
+* `%s` è un segnaposto per una **stringa**.
+* `%d` è un segnaposto per un **intero**.
+
+---
+
+### 3. **`System.out.printf()`**
+
+`System.out.printf()` è simile a `String.format()`, ma stampa direttamente il risultato sulla console anziché restituire una stringa:
+
+```java
+String name = "Alice";
+int age = 30;
+System.out.printf("Hello, my name is %s and I am %d years old.%n", name, age);
+```
+
+---
+
+### 4. **`MessageFormat`**
+
+Se hai bisogno di una soluzione più avanzata per la formattazione delle stringhe, come la gestione di lingue diverse (internazionalizzazione), puoi usare `java.text.MessageFormat`:
+
+```java
+import java.text.MessageFormat;
+
+String name = "Alice";
+int age = 30;
+String message = MessageFormat.format("Hello, my name is {0} and I am {1} years old.", name, age);
+System.out.println(message);
+```
+
+---
+
+### 5. **Uso delle `StringBuilder` o `StringBuffer` (per performance)**
+
+Se devi fare molte concatenazioni in un ciclo, è più efficiente usare un `StringBuilder` o `StringBuffer`:
+
+```java
+String name = "Alice";
+int age = 30;
+StringBuilder message = new StringBuilder();
+message.append("Hello, my name is ").append(name).append(" and I am ").append(age).append(" years old.");
+System.out.println(message.toString());
+```
+
+---
+
+### 6. **`Text Blocks` (Java 13+)**
+
+A partire da Java 13, puoi usare i **Text Blocks**, che sono stringhe multilinea. Sebbene non supportino direttamente la string interpolation, combinati con `String.format()`, puoi renderle più leggibili.
+
+```java
+String name = "Alice";
+int age = 30;
+String message = String.format("""
+    Hello, my name is %s
+    and I am %d years old.
+    """, name, age);
+System.out.println(message);
+```
+
+---
+
+### Conclusione
+
+In Java, non esiste una sintassi di **string interpolation** diretta come in altri linguaggi, ma puoi ottenere un effetto simile usando `String.format()`, `StringBuilder`, o `MessageFormat`. Tra queste opzioni, la concatenazione con `String.format()` è probabilmente la più simile alla sintassi di string interpolation in altri linguaggi.
