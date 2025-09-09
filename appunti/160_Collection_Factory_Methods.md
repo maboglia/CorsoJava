@@ -76,3 +76,91 @@ Queste feature sono davvero apprezzate nella community!
 [9]: https://www.infoworld.com/article/2252508/java-9s-other-new-enhancements-part-1.html?utm_source=chatgpt.com "Java 9’s other new enhancements, Part 1: Collections factory methods | InfoWorld"
 [10]: https://www.reddit.com/r/java/comments/15ae93f?utm_source=chatgpt.com "What are your most used java features since java 9?"
 [11]: https://www.reddit.com/r/java/comments/mhury9?utm_source=chatgpt.com "A categorized list of all Java and JVM features since JDK 8 to 16"
+
+---
+
+# **Esercizi su Collection Factory Methods**
+
+---
+
+## Esercizio 1 — Creazione di una lista
+
+Crea una lista immutabile di 5 nomi usando `List.of()`.
+
+* Stampala.
+* Prova ad aggiungere un nuovo elemento e osserva cosa succede.
+
+👉 Hint: solleva `UnsupportedOperationException`.
+
+---
+
+## Esercizio 2 — Set immutabile
+
+Crea un `Set` di colori (`"rosso", "verde", "blu"`) con `Set.of()`.
+
+* Stampa gli elementi.
+* Verifica se contiene `"giallo"`.
+
+---
+
+## Esercizio 3 — Map immutabile
+
+Crea una `Map<String, Integer>` con i prodotti e le scorte:
+
+* `"Tavolo" → 10`, `"Sedia" → 5`, `"Lampada" → 3`.
+  Stampa tutte le coppie chiave → valore.
+
+---
+
+## Esercizio 4 — Uso in metodi
+
+Scrivi un metodo `stampaLista(List<String> lista)` e passagli una lista creata con `List.of("A","B","C")`.
+
+---
+
+## Esercizio 5 — Liste nidificate
+
+Crea una lista di liste (`List<List<String>>`) con:
+
+* `["Java","Python"]`
+* `["C","C++"]`
+  e stampala.
+
+---
+
+## Esercizio 6 — Map con più valori
+
+Usa `Map.ofEntries(...)` per creare una mappa con coppie chiave → valore:
+
+* `"Roma" → "Italia"`
+* `"Parigi" → "Francia"`
+* `"Berlino" → "Germania"`
+
+👉 Hint: `Map.entry("Roma","Italia")`.
+
+---
+
+## Esercizio 7 — Confronto immutabile vs mutabile
+
+Crea una lista con `List.of("x","y","z")` e una con `new ArrayList<>(List.of("x","y","z"))`.
+
+* Aggiungi un elemento a entrambe e spiega la differenza.
+
+---
+
+## Esercizio 8 — Uso con Stream
+
+Crea una lista `List.of(1,2,3,4,5)` e usa uno stream per calcolare la somma.
+
+---
+
+## Esercizio 9 — Immutabilità condivisa
+
+Mostra che due variabili che puntano alla stessa `List.of(...)` non possono modificare il contenuto.
+
+---
+
+## Esercizio 10 — Factory Methods e metodo custom
+
+Scrivi un metodo che prende in input una `List<String>` creata con `List.of(...)` e restituisce una **copia mutabile** con `new ArrayList<>(...)`.
+

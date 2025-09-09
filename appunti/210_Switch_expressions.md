@@ -93,3 +93,119 @@ System.out.println(calorie); // 52
 * Facilita l’uso in contesti funzionali, perché può **ritornare valori** direttamente.
 * Consente di usare **più costanti in un case** con la virgola.
 
+---
+
+Le **Switch Expressions** introdotte in **Java 12** (stabilizzate in Java 14) hanno reso il `switch` molto più potente e leggibile:
+
+* possono restituire un valore,
+* supportano la sintassi con `->`,
+* permettono `yield` nei casi complessi.
+
+
+---
+
+# 🧩 **Esercizi su Switch Expressions (Java 12+)**
+
+---
+
+## 🔹 Esercizio 1 — Giorni della settimana
+
+Scrivi una switch expression che, dato un numero (1–7), restituisce il giorno della settimana come stringa.
+Esempio: `1 → "Lunedì"`.
+
+👉 Hint:
+
+```java
+String giorno = switch(n) {
+    case 1 -> "Lunedì";
+    ...
+    default -> "Sconosciuto";
+};
+```
+
+---
+
+## 🔹 Esercizio 2 — Vocale o consonante
+
+Scrivi un metodo che, dato un carattere (`char`), restituisca `"vocale"` se è una vocale (`a,e,i,o,u`), altrimenti `"consonante"`.
+
+---
+
+## 🔹 Esercizio 3 — Calcolatrice semplice
+
+Crea un metodo che accetta due numeri e un operatore (`+`, `-`, `*`, `/`) e restituisce il risultato usando uno switch expression.
+
+---
+
+## 🔹 Esercizio 4 — Grouping dei case
+
+Data una stringa che rappresenta una stagione (`"dicembre"`, `"gennaio"`, `"febbraio"` → `"Inverno"`, ecc.), usa la sintassi **case multiplo** per restituire la stagione.
+
+👉 Hint:
+
+```java
+String stagione = switch(mese) {
+    case "dicembre","gennaio","febbraio" -> "Inverno";
+    ...
+};
+```
+
+---
+
+## 🔹 Esercizio 5 — Con `yield`
+
+Scrivi un metodo che, dato un voto numerico (0–30), restituisce una valutazione:
+
+* 28–30 → `"Eccellente"`
+* 24–27 → `"Buono"`
+* 18–23 → `"Sufficiente"`
+* altrimenti `"Insufficiente"`
+
+👉 Usa `yield` in blocchi quando ci sono più condizioni.
+
+---
+
+## 🔹 Esercizio 6 — Enum con switch expression
+
+Crea un `enum Giorno { LUN, MAR, MER, GIO, VEN, SAB, DOM }`.
+Scrivi una switch expression che restituisca `true` se il giorno è lavorativo, `false` altrimenti.
+
+---
+
+## 🔹 Esercizio 7 — Switch con return
+
+Scrivi un metodo `String descriviNumero(int n)` che restituisce:
+
+* `"zero"` se `n == 0`
+* `"positivo"` se > 0
+* `"negativo"` se < 0
+
+👉 Usa `return switch(...) { ... };`
+
+---
+
+## 🔹 Esercizio 8 — Switch con tipi diversi
+
+Data una variabile `Object obj`, usa `switch` (con pattern matching se vuoi anticipare il passo successivo) per:
+
+* `"String"` → stampa `"È una stringa"`
+* `"Integer"` → stampa `"È un intero"`
+* default → `"Altro tipo"`
+
+---
+
+## 🔹 Esercizio 9 — Menù CLI
+
+Scrivi un piccolo programma che mostra un menù:
+1 → `"Visualizza prodotti"`
+2 → `"Aggiungi prodotto"`
+3 → `"Esci"`
+
+👉 Usa uno switch expression per interpretare la scelta.
+
+---
+
+## 🔹 Esercizio 10 — Refactoring
+
+Prendi un vecchio codice con `switch-case` e `break`, riscrivilo con la nuova sintassi `->`.
+

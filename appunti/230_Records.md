@@ -1,5 +1,12 @@
 # Cos’è un Record?
 
+---
+
+I **Record** introdotti in **Java 14 (preview) e stabilizzati in Java 16** sono una delle feature più importanti e “complesse” perché cambiano il modo di progettare i **data carrier objects**.
+Un **record** è una classe compatta, immutabile e con costruttori, `equals`, `hashCode`, `toString` generati automaticamente.
+
+---
+
 Un **Record** è una classe speciale per **contenere dati** senza dover scrivere manualmente:
 
 * costruttori
@@ -143,4 +150,88 @@ Qui si vede come **Records + Stream + Lambda** rendono il codice **brevissimo e 
 * Codice più **compatto e chiaro**.
 * Perfetto per **DTO, API responses, valori immutabili**.
 * Si integra perfettamente con **Stream, Lambda, Optional**.
+
+---
+
+# 🧩 **Esercizi su Record (Java 16+)**
+
+---
+
+## 🔹 Esercizio 1 — Creazione base
+
+Definisci un record `Punto(int x, int y)` e crea due punti.
+
+* Stampali con `System.out.println(p)`.
+* Confrontali con `equals`.
+
+👉 Domanda: perché `equals` funziona senza essere implementato?
+
+---
+
+## 🔹 Esercizio 2 — Record come DTO
+
+Definisci un record `Prodotto(String nome, double prezzo)` e crea una lista di prodotti.
+Stampali con uno **stream**.
+
+---
+
+## 🔹 Esercizio 3 — Metodi nei record
+
+Aggiungi un metodo al record `Prodotto` che calcola l’IVA (22%).
+Esempio: `prezzoConIVA()`.
+
+---
+
+## 🔹 Esercizio 4 — Validazione nei costruttori
+
+Definisci un record `Utente(String username, String email)` e aggiungi un **compact constructor** che solleva `IllegalArgumentException` se `email` non contiene `"@"`.
+
+---
+
+## 🔹 Esercizio 5 — Record annidati
+
+Definisci un record `Ordine(int id, Prodotto prodotto, int quantita)`.
+Crea un ordine e stampa il totale (`prodotto.prezzo() * quantita`).
+
+---
+
+## 🔹 Esercizio 6 — Record e collezioni
+
+Crea una lista di record `Studente(String nome, int voto)`.
+Usa gli stream per:
+
+* trovare lo studente con voto massimo
+* calcolare la media voti
+
+---
+
+## 🔹 Esercizio 7 — Record e pattern matching
+
+Usa un `switch` con pattern matching per distinguere:
+
+* `Prodotto` con prezzo > 100 → `"lusso"`
+* altrimenti `"standard"`
+
+---
+
+## 🔹 Esercizio 8 — Record come chiave in una Map
+
+Usa un record `Coppia(int a, int b)` come chiave in una `Map<Coppia, String>`.
+Verifica che due chiavi con stessi valori siano considerate uguali.
+
+👉 Hint: `hashCode` è generato automaticamente.
+
+---
+
+## 🔹 Esercizio 9 — Record immutabile con lista
+
+Definisci un record `Classe(String nome, List<String> studenti)`.
+Mostra che la lista **non è realmente immutabile** se la modifichi dopo la creazione.
+👉 Domanda: come risolveresti il problema (copia difensiva)?
+
+---
+
+## 🔹 Esercizio 10 — Refactoring
+
+Prendi una vecchia classe Java che fa solo da contenitore dati (con `getters`, `setters`, `toString`, `equals`, `hashCode`) e riscrivila come record.
 

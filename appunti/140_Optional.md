@@ -104,5 +104,117 @@ System.out.println(utente2); // Sconosciuto
 * Esplicita che un valore **può non esserci**.
 * Si integra bene con lo stile **funzionale** (`map`, `filter`, `flatMap`).
 
+
 ---
+
+# **Esercizi su `Optional`**
+
+---
+
+## Esercizio 1 — Creazione di `Optional`
+
+Crea un `Optional<String>` da una variabile che può essere `null`.
+
+* Stampa il contenuto se presente.
+* In caso contrario stampa `"Valore assente"`.
+
+👉 Hint: `Optional.ofNullable(...)`, `ifPresentOrElse`.
+
+---
+
+## Esercizio 2 — `Optional.orElse`
+
+Crea un metodo `String leggiNome(String input)` che restituisce:
+
+* il nome (`input`) se non è `null`
+* `"Sconosciuto"` se è `null`.
+
+👉 Hint: `Optional.ofNullable(input).orElse("Sconosciuto")`.
+
+---
+
+## Esercizio 3 — `Optional.map`
+
+Dato un `Optional<String> nome`, trasforma il contenuto in **maiuscolo** se presente e stampalo.
+
+👉 Hint: `nome.map(String::toUpperCase).ifPresent(...)`.
+
+---
+
+## Esercizio 4 — `Optional.filter`
+
+Dato un `Optional<Integer> numero`, stampa `"pari"` solo se il numero esiste ed è pari.
+
+👉 Hint: `numero.filter(n -> n % 2 == 0).ifPresent(...)`.
+
+---
+
+## Esercizio 5 — `Optional.flatMap`
+
+Crea una classe `Utente` con attributo `Optional<Profilo> profilo`.
+
+* Recupera il **nickname** dell’utente (se esiste), altrimenti `"guest"`.
+
+👉 Hint: concatenare `flatMap` sugli `Optional`.
+
+---
+
+## Esercizio 6 — `Optional.orElseGet`
+
+Simula la lettura di un valore da database: se `Optional` è vuoto, genera un valore di default tramite una funzione costosa.
+
+👉 Hint: `orElseGet(() -> funzioneCostosa())`.
+
+---
+
+## Esercizio 7 — `Optional.orElseThrow`
+
+Dato un `Optional<String> codice`, lancia una `IllegalArgumentException` se il codice è assente.
+
+👉 Hint: `orElseThrow(() -> new IllegalArgumentException("Codice mancante"))`.
+
+---
+
+## Esercizio 8 — Uso combinato
+
+Hai una lista di stringhe.
+
+* Trova la **prima stringa che inizia con "A"**.
+* Stampala se esiste, altrimenti `"Nessuna trovata"`.
+
+👉 Hint: `stream().filter(...).findFirst().orElse("Nessuna trovata")`.
+
+---
+
+## Esercizio 9 — Metodo utility
+
+Scrivi un metodo:
+
+```java
+public static Optional<Integer> parseNumero(String s)
+```
+
+che prova a convertire la stringa in `Integer`, restituendo `Optional.empty()` se non è un numero valido.
+
+---
+
+## Esercizio 10 — Optional chaining
+
+Simula una gerarchia:
+
+```java
+class Ordine {
+    Optional<Cliente> cliente;
+}
+class Cliente {
+    Optional<Indirizzo> indirizzo;
+}
+class Indirizzo {
+    String citta;
+}
+```
+
+Recupera la città dell’ordine, se presente, altrimenti `"sconosciuta"`.
+
+👉 Hint: catena di `flatMap`.
 
