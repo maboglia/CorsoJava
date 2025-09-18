@@ -178,3 +178,94 @@ public class GenericsDemo {
     }
 }
 ```
+
+---
+
+## Esercizi sui Generics
+
+---
+
+### **Esercizio 1 – Box generico**
+
+Crea una classe `Box<T>` che possa contenere un valore di tipo generico.
+
+* Scrivi metodi `set` e `get`.
+* Crea un `Box<String>` e un `Box<Integer>` e stampa i valori.
+
+---
+
+### **Esercizio 2 – Metodo generico stampaArray**
+
+Scrivi un metodo generico `stampaArray(T[] array)` che stampi qualsiasi array passato in input.
+
+* Testalo con un array di `String` e uno di `Integer`.
+
+---
+
+### **Esercizio 3 – MathBox con bounded types**
+
+Crea una classe `MathBox<T extends Number>` che:
+
+* memorizza un numero `T`
+* ha un metodo `double getQuadrato()` che restituisce il quadrato del numero.
+  Prova a usare sia `Integer` che `Double`.
+
+---
+
+### **Esercizio 4 – Wildcard ?**
+
+Scrivi un metodo `stampaLista(List<?> lista)` che accetta una lista di qualsiasi tipo e stampa gli elementi.
+Testalo con una `List<String>` e una `List<Integer>`.
+
+---
+
+### **Esercizio 5 – Somma con extends**
+
+Scrivi un metodo `somma(List<? extends Number> lista)` che restituisce la somma dei numeri contenuti in una lista.
+Testalo con `List<Integer>` e `List<Double>`.
+
+---
+
+### **Esercizio 6 – Copia con super**
+
+Scrivi un metodo `copia(List<? super Integer> destinazione, List<Integer> sorgente)` che copi tutti gli elementi dalla sorgente alla destinazione.
+Testalo con:
+
+```java
+List<Number> numeri = new ArrayList<>();
+List<Integer> interi = Arrays.asList(1,2,3);
+copia(numeri, interi);
+```
+
+---
+
+### **Esercizio 7 – Pair\<K,V>**
+
+Crea una classe generica `Pair<K,V>` con due campi chiave/valore e un metodo `toString()`.
+Crea:
+
+* `Pair<String, Integer>` con nome ed età
+* `Pair<String, String>` con username e password
+
+---
+
+### **Esercizio 8 – Repository generico**
+
+Crea un’interfaccia generica `Repository<T>` con i metodi `save(T t)` e `List<T> findAll()`.
+Implementala con una classe `InMemoryRepository<T>`.
+Testala con oggetti `String` e `Integer`.
+
+---
+
+### **Esercizio 9 – Stack<T>**
+
+Implementa una classe generica `Stack<T>` con metodi `push`, `pop` e `isEmpty()`.
+Testala con `Integer` e `String`.
+
+---
+
+### **Esercizio 10 – Uso con Stream**
+
+Scrivi un metodo generico che prenda una `List<T>` e restituisca una nuova lista con gli elementi trasformati in stringhe.
+Suggerimento: usa `stream().map(Object::toString).toList()`.
+
