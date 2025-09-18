@@ -1,194 +1,180 @@
-# Collections e Generics
+# 🔹 Cos’è un Generic?
 
+I **Generics** permettono di scrivere classi, interfacce e metodi che funzionano con **tipi diversi**, mantenendo la **sicurezza di tipo** e senza dover fare cast espliciti.
 
-I Generics permettono di fare in modo che una particolare Collection sia parametrizzata con un certo tipo.
+I **Generics** sono stati introdotti in Java 5, ma sono fondamentali per capire bene tutte le API moderne (Collections, Stream, Optional, ecc.).
 
-La sintassi fa uso di parentesi angolari "<" e ">".
-
-Ad esempio
+👉 Prima dei Generics (Java 1.4):
 
 ```java
-Vector<String> vector = new Vector<>();
+List lista = new ArrayList();
+lista.add("Ciao");
+String s = (String) lista.get(0); // serve il cast!
 ```
 
-Se si provasse ad aggiungere a vector un eventuale oggetto che non sia di tipo String otterremmo un warning in compilazione.
+👉 Con i Generics (Java 5+):
 
-Conoscendo il tipo della Collection il casting è superfluo.
-
+```java
+List<String> lista = new ArrayList<>();
+lista.add("Ciao");
+String s = lista.get(0); // niente cast, più sicuro
+```
 
 ---
 
-## Generics
+# 🔹 Tipi di uso dei Generics
 
-Forniscono la possibilità di creare un modello generale di tipo. 
-
-In particolare:
-
-* i metodi generici permettono di specificare mediante una singola dichiarazione di metodo un insieme di metodi correlati
-
-Con l’uso dei Generics è possibile scrivere un metodo generico sort in grado di ordinare gli elementi di un array di Integer, di String e, in generale, quelli di un array di un qualsiasi tipo che supporta una funzione di ordinamento.
-
-È anche possibile scrivere una classe generica Stack (pila) che possa essere utilizzata per memorizzare interi, numeri a virgola mobile, stringhe, e qualsiasi altro tipo di dati.
-
-Inoltre, essi assicurano la sicurezza dei tipi a tempo di compilazione che permette di individuare a tempo di compilazione errori di compatibilità sui tipi.
-
----
-
-## Sintassi
-
-I generici ci permettono di dichiarare una struttura specificando che essa accetterà solo un certo tipo. Inoltre, bisognerà anche assegnare al nome della struttura un’istanza che accetti lo stesso tipo di elementi.
-
-La sintassi si basa sull’uso delle parentesi angolari che delimitano la sezione parametro del tipo all’interno della quale possono esserci uno o più parametri tipo separati da virgola.
+## 1️⃣ Classi e interfacce generiche
 
 ```java
-List<String> strings = new ArrayList<String>();
-LinkedList<String> list = new LinkedList<String>();
-Vector<String> vector = new Vector<String>();
-HashMap<Integer, String> hashmap = new HashMap<Integer, String>();
-```
-
-N.B. I generici non si possono applicare ai tipi di dati primitivi.
-La seguente istruzione produrrebbe messaggi di errore.
-
-```List<int> ints = new ArrayList<int>();```
-
----
-
-## Generics e List
-
-I generics permettono di dichiarare una lista specificando che essa accetterà solo stringhe. Inoltre, bisogna anche assegnare a strings un’istanza che accetti lo stesso tipo di elementi (stringhe).
-
-```List<String> strings = new ArrayList<String>();```
-
-A questo punto abbiamo una lista che accetta solo stringhe, e nessun altro tipo di oggetto.
-
-```java
-// non produce errore
-strings.add("si può usare String");
-// produce errore in fase di compilazione
-strings.add(new StringBuffer("non si può usare " + "StringBuffer"));
-```
-
-I generics sono utilizzati anche come parametri sia di input che di output dei metodi. Segue un esempio di dichiarazione di un metodo che prende un tipo generico in input e ne restituisce un altro in output.
-
-```java
-public List<String> getListOfMapValues (Map<Integer, String> map) {
-	List<String> list = new ArrayList<String>();
-	for (int i=0; i<map.size(); i++) {
-		list.add(map.get(i));
-	}
-	return list;
+class Box<T> {  // T = "type parameter"
+    private T value;
+    public void set(T value) { this.value = value; }
+    public T get() { return value; }
 }
+
+// Uso
+Box<String> b1 = new Box<>();
+b1.set("Hello");
+System.out.println(b1.get()); // Hello
+
+Box<Integer> b2 = new Box<>();
+b2.set(123);
+System.out.println(b2.get()); // 123
 ```
----
-
-## Interfaccia Iterator
-Oltre a List, tutte le classi e tutte le interfacce Collections supportano ora i generics. 
-Più o meno quanto visto per List vale per tutte le altre Collections (con l’eccezione di Map, come vedremo tra poco) e anche per Iterator ed Enumeration.
-Consideriamo il seguente codice di esempio.
-
-```java
-List<String> strings = new ArrayList<String>();
-strings.add("Generics");
-strings.add("Ciclo for migliorato");
-strings.add("Varargs");
-...
-Iterator it = strings.iterator();
-while (it.hasNext()) {
-	String string = it.next();
-	System.out.println(string);
-}
-```
-
-Viene prodotto un errore in quanto bisogna dichiarare anche l’Iterator come generico.
-
-```java
-Iterator<String> it = strings.iterator();
-while (it.hasNext()) {
-	String string = it.next();
-	System.out.println(string);
-}
-```
-
-N.B. Attenzione a non utilizzare Iterator come generico su una Collection non generica. 
-Si rischia un’inevitabile eccezione al runtime se la Collection non è stata riempita come ci si aspetta.
 
 ---
 
-## Interfaccia Map
-L’interfaccia Map, nella sua dichiarazione, dichiara due parametri: K (key) e V (value). 
+## 2️⃣ Metodi generici
+
+Un metodo può essere parametrizzato indipendentemente dalla classe in cui si trova.
 
 ```java
-Public interface Map<K, V>;
-```
+public static <T> void stampaArray(T[] array) {
+    for (T elem : array) {
+        System.out.println(elem);
+    }
+}
 
-Per una mappa possono essere parametrizzati sia la chiavi che i valori. Nel seguente esempio, le chiavi saranno dichiarate di tipo Integer mentre i valori di tipo String.
+public static void main(String[] args) {
+    String[] nomi = {"Anna", "Luca"};
+    Integer[] numeri = {1, 2, 3};
 
-```java
-Map<Integer, String> map = new HashMap<Integer, String>();
-```
-Ovviamente, in casi del genere, grazie all’autoboxing sarà possibile utilizzare interi primitivi per valorizzare la chiave. Ad esempio, il seguente codice inizializza la mappa e ne stampa i valori con un ciclo sulle chiavi.
-
-```java
-map.put(0, "generics");
-map.put(1, "ciclo for migliorato");
-map.out(2, "varargs");
-for (int i=0; i<3; i++) {
-	System.out.println(map.get(i));
+    stampaArray(nomi);    // funziona con String
+    stampaArray(numeri);  // funziona con Integer
 }
 ```
 
 ---
 
-## Creare i propri tipi Generics
+## 3️⃣ Generics con bounded type
 
-Una qualsiasi classe è parametrizzabile, dunque è possibile definire i propri tipi Generics.
+Possiamo **limitare i tipi ammessi**.
 
 ```java
-public class MioGeneric <E> {
-	private List<E> list;
-	
-public MioGeneric() {
-	list = new ArrayList<E>();
-}
-public void add(E e) {
-	list.add(e);
+class MathBox<T extends Number> {
+    private T numero;
+
+    public MathBox(T numero) { this.numero = numero; }
+    public double getDoppio() {
+        return numero.doubleValue() * 2;
+    }
 }
 
-public void remove(int i) {
-	list.remove(i);
-}
+// Uso
+MathBox<Integer> iBox = new MathBox<>(10);
+System.out.println(iBox.getDoppio()); // 20.0
 
-public E get(int i) {
-	return list.get(i);
-}
-
-public int size() {
-	return list.size();
-}
-
-public boolean isEmpty() {
-	return list.size() == 0;
-}
-
-public String toString() {
-	StringBuilder sb = new StringBuilder();
-	int size = size();
-	for (int i=0; i<size; i++) {
-		sb.append(get(i) + (i != size-1 ? "-" : ""));
-	}
-	return sb.toString();
-}
-}
+// MathBox<String> sBox = new MathBox<>("ciao"); ❌ ERRORE: String non estende Number
 ```
+
 ---
-## Java e la deduzione automatica del tipo
 
-Da Java 7 non devo dichiarare il tipo nel costruttore dell'oggetto.
+## 4️⃣ Wildcards (`?`)
 
-### esempio.
+Le wildcards permettono flessibilità nei metodi.
+
+* `?` → tipo sconosciuto
+* `? extends T` → sottotipi di T
+* `? super T` → supertipi di T
+
+Esempio:
 
 ```java
-ArrayList<String> arrayList = new ArrayList<String>(); // Java 5-6
-ArrayList<String> arrayList = new ArrayList<>();       // Java 7+
+public static void stampaLista(List<?> lista) {
+    for (Object o : lista) {
+        System.out.println(o);
+    }
+}
+
+List<String> s = Arrays.asList("uno", "due");
+stampaLista(s); // funziona
+```
+
+Con `extends`:
+
+```java
+public static double somma(List<? extends Number> lista) {
+    double totale = 0;
+    for (Number n : lista) {
+        totale += n.doubleValue();
+    }
+    return totale;
+}
+
+List<Integer> interi = Arrays.asList(1, 2, 3);
+System.out.println(somma(interi)); // 6.0
+```
+
+---
+
+## 5️⃣ Diamond operator (`<>`)
+
+Introdotto in **Java 7**, permette di evitare ripetizioni.
+
+```java
+Map<String, List<Integer>> mappa = new HashMap<>(); // senza ripetere i tipi
+```
+
+---
+
+# 🚀 Esempio completo
+
+```java
+import java.util.*;
+
+class Box<T> {
+    private T value;
+    public Box(T value) { this.value = value; }
+    public T get() { return value; }
+}
+
+public class GenericsDemo {
+    public static <T> void stampaArray(T[] arr) {
+        for (T elem : arr) {
+            System.out.println(elem);
+        }
+    }
+
+    public static double somma(List<? extends Number> lista) {
+        return lista.stream().mapToDouble(Number::doubleValue).sum();
+    }
+
+    public static void main(String[] args) {
+        // Classe generica
+        Box<String> b1 = new Box<>("Ciao");
+        System.out.println(b1.get());
+
+        Box<Integer> b2 = new Box<>(42);
+        System.out.println(b2.get());
+
+        // Metodo generico
+        String[] parole = {"Java", "Generics"};
+        stampaArray(parole);
+
+        // Bounded type
+        List<Double> decimali = Arrays.asList(1.5, 2.5, 3.0);
+        System.out.println("Somma: " + somma(decimali));
+    }
+}
 ```
