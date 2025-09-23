@@ -154,3 +154,81 @@ public class MethodReferenceDemo {
 }
 ```
 
+---
+
+## 📝 Esercizi sui Method Reference (tracce)
+
+### **Esercizio 1 – Print con method reference**
+
+Dato un `List<String>`, stampare tutti gli elementi usando un method reference invece di una lambda.
+
+```java
+List<String> nomi = Arrays.asList("Anna", "Luca", "Marco");
+// TODO: usare System.out::println
+```
+
+---
+
+### **Esercizio 2 – Static method reference**
+
+Usa `Integer::parseInt` come method reference per trasformare una `List<String>` in una `List<Integer>`.
+
+```java
+List<String> numeriStr = Arrays.asList("1", "2", "3");
+// TODO: trasformare in List<Integer>
+```
+
+---
+
+### **Esercizio 3 – Instance method di un oggetto**
+
+Crea una variabile `String s = "ciao";` e usa un method reference per ottenere `s.toUpperCase()` tramite un `Supplier<String>`.
+
+```java
+String s = "ciao";
+// TODO: usare Supplier e s::toUpperCase
+```
+
+---
+
+### **Esercizio 4 – Instance method di un tipo arbitrario**
+
+Dato un `List<String>`, convertire ogni stringa in maiuscolo usando `String::toUpperCase`.
+
+```java
+List<String> parole = Arrays.asList("java", "lambda", "stream");
+// TODO: usare .map(String::toUpperCase)
+```
+
+---
+
+### **Esercizio 5 – Reference a costruttore**
+
+Crea una nuova `ArrayList` usando `ArrayList::new` come `Supplier<List<String>>`.
+
+```java
+// TODO: creare Supplier<List<String>> con ArrayList::new
+```
+
+---
+
+### **Esercizio 6 – Ordinamento con method reference**
+
+Ordina una lista di stringhe usando `String::compareToIgnoreCase` invece di una lambda.
+
+```java
+List<String> nomi = Arrays.asList("mario", "Anna", "luca");
+// TODO: ordinare usando List.sort con method reference
+```
+
+---
+
+### **Esercizio 7 – ForEach su oggetto custom**
+
+Crea una classe `Persona` con un metodo `saluta()` che stampa "Ciao, sono <nome>".
+Dato un `List<Persona>`, stampare i saluti usando un method reference.
+
+```java
+// TODO: listaPersone.forEach(Persona::saluta)
+```
+
