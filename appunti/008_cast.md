@@ -1,94 +1,121 @@
-# Casting e promotion
+# 🔄 Casting e Promotion in Java
 
-* `( nometipo ) variabile`
-* `( nometipo ) espressione`
-* Trasforma il valore della variabile (espressione) in quello corrispondente in un tipo diverso
-* Il cast si applica anche a `char`, visto come tipo intero positivo
-* La promotion è automatica quando necessaria
-  * Es. `double d = 3 + 4;`
-* Il casting deve essere esplicito: il programmatore si assume la responsabilità di eventuali perdite di informazione
-  * Per esempio 
-  * `int i = ( int ) 3.0 * ( int ) 4.5;` i assume il valore 12
-  * `int j = ( int ) (3.0 * 4.5);` j assume il valore 13
+Il **casting** e la **promotion** sono due meccanismi che consentono di convertire valori da un tipo primitivo o reference a un altro.
 
 ---
 
-![casts](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/Language/01_lang_base/01_operatori_tipi_expr/casts.png)
+## 🔹 Casting dei tipi primitivi
+
+* `(tipo) variabile`
+* `(tipo) espressione`
+
+👉 Trasforma il valore della variabile (o espressione) in un altro tipo.
+
+### Regole generali
+
+* Il **cast esplicito** è richiesto quando si passa da un tipo più "grande" a uno più "piccolo".
+* La **promotion** avviene automaticamente quando serve (es. `int → long`, `int → double`).
+* Il cast si applica anche a `char` (che internamente è un intero positivo).
+* Il cast può causare **perdita di informazione**.
 
 ---
 
-## casting dei tipi reference (oggetti)
-
-* è permesso solo in caso di **ereditarietà**
-* la conversione da sotto-classe a super-classe è **automatica**
-* la conversione da super-classe a sotto-classe richiede **cast esplicito**
-* la conversione tra riferimenti non in relazione tra loro **non è permessa**
-
----
-
-## esempio promotion
+### Esempio: cast e differenza di ordine di valutazione
 
 ```java
+int i = (int) 3.0 * (int) 4.5;     // i = 12
+int j = (int) (3.0 * 4.5);         // j = 13
+```
 
+👉 Nel primo caso ogni valore viene troncato prima della moltiplicazione, nel secondo dopo.
+
+---
+
+## 🔹 Promotion (conversione implicita)
+
+La **promotion** è automatica quando i tipi sono compatibili e non si rischia perdita di dati.
+
+```java
 char a = 'a';
-// promotion int è più grande e i valori sono compatibili
-int b = a;
+int b = a;  // char → int (promotion automatica)
 
 System.out.println(a); // a
 System.out.println(b); // 97
+```
 
+Altro esempio:
+
+```java
+int valore = 56;
+long valoreLong = valore;  // int → long
+System.out.println(valoreLong); // 56
 ```
 
 ---
 
-## esempio promotion II
+## 🔹 Type Casting (esplicito)
+
+Quando si forza un valore in un tipo più piccolo o incompatibile, si parla di **cast esplicito**.
 
 ```java
-
-
-  int valore1 = 56;
-  int valore2 = valore1;
-  
-  System.out.println(valore2);
-  
-  //promozione
-  long valoreLong1 = valore1;
-  System.out.println(valoreLong1);
- }
-
-```
-
----
-
-
-## esempi type casting
-
-```java
-
 byte b = (byte) 261;
 System.out.println(b); // 5
 
-System.out.println(  Integer.toBynaryString(b)  ); // 101
-System.out.println(  Integer.toBynaryString(261)  ); // 100000101
-
+System.out.println(Integer.toBinaryString(b));   // 101 (valore troncato)
+System.out.println(Integer.toBinaryString(261)); // 100000101
 ```
 
 ```java
-int a = (int) 1936.27;
-
+double d = 1936.27;
+int a = (int) d;   // troncamento
 System.out.println(a); // 1936
-
 ```
 
 ---
 
+## 🔹 Casting e boolean
 
-## con il tipo boolean non si può fare il typecasting
+⚠️ Con il tipo `boolean` **non è possibile** fare cast verso o da tipi numerici:
 
 ```java
-int a = (int) true; // vietato - ... cannot be converted to ... 
-boolean falso = (boolean) 0; // vietato - ... cannot be converted to ...  
+int a = (int) true;      // ERRORE: boolean cannot be converted to int
+boolean b = (boolean) 0; // ERRORE: int cannot be converted to boolean
 ```
+
+---
+
+## 🔹 Casting dei tipi reference (oggetti)
+
+Il cast sui tipi reference è consentito **solo con ereditarietà**:
+
+* Conversione da **subclass → superclass**: **automatica (upcasting)**.
+* Conversione da **superclass → subclass**: **richiede cast esplicito (downcasting)**.
+* Conversione tra tipi **senza relazione**: **non permessa**.
+
+### Esempio
+
+```java
+class Animale {}
+class Cane extends Animale {}
+
+Animale a = new Cane();   // upcasting (automatico)
+Cane c = (Cane) a;        // downcasting (esplicito)
+
+// Animale a2 = new Animale();
+// Cane c2 = (Cane) a2;   // Compila, ma genera ClassCastException a runtime!
+```
+
+---
+
+# ✅ Riepilogo
+
+* **Promotion** = automatica, sicura (es. `int → long`, `char → int`).
+* **Casting esplicito** = a rischio perdita di dati (es. `double → int`, `int → byte`).
+* Con i **reference**:
+
+  * Upcasting = sempre sicuro.
+  * Downcasting = possibile ma rischioso (può lanciare `ClassCastException`).
+* **Boolean** = non convertibile con cast.
 
 ---
 

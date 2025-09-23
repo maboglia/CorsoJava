@@ -202,11 +202,15 @@ B. È immutabile
 C. È thread-safe
 D. È una sottoclasse di StringBuilder
 
+---
+
 Quale metodo restituisce la lunghezza di una stringa?
 A. size()
 B. count()
 C. length()
 D. len()
+
+---
 
 Cosa restituisce l’istruzione "Java".charAt(2)?
 A. 'J'
@@ -214,11 +218,15 @@ B. 'a'
 C. 'v'
 D. 'A'
 
+---
+
 Quale tra i seguenti è più efficiente per concatenazioni ripetute in un ciclo?
 A. String
 B. StringBuffer
 C. StringBuilder
 D. Character
+
+---
 
 Quale metodo si usa per verificare se una stringa è vuota?
 A. isNull()
@@ -226,11 +234,15 @@ B. isEmpty()
 C. isBlank()
 D. equals("")
 
+---
+
 Come si converte il numero intero 123 in una stringa?
 A. Integer.toString(123)
 B. String.valueOf(123)
 C. "" + 123
 D. Tutte le precedenti
+
+---
 
 Cosa produce il seguente codice?
 String s = " Hello ";
@@ -240,17 +252,23 @@ B. "Hello"
 C. " Hello"
 D. "Hello "
 
+---
+
 Quale classe usare per gestire stringhe mutabili in modo NON thread-safe?
 A. String
 B. StringBuilder
 C. StringBuffer
 D. Character
 
+---
+
 Qual è il vantaggio dei Text Blocks introdotti in Java 13+?
 A. Permettono di creare stringhe multilinea leggibili
 B. Sono più veloci delle stringhe normali
 C. Rendono le stringhe immutabili
 D. Consentono la concatenazione automatica
+
+---
 
 Quale istruzione con String Templates (Java 21+) stampa "Ciao Luca" se nome="Luca"?
 A. STR."Ciao {nome}"
