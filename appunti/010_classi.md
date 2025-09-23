@@ -1,123 +1,203 @@
-# Classi Java
+# 🔹 Classi in Java
 
-* Una classe è uno dei concetti fondamentali di OOP.
-* Una classe è un modello o un progetto per la creazione di oggetti.
-* Una classe non consuma memoria.
-* Una classe può essere istanziata più volte.
-* Una classe fa una, e solo una, cosa.
+La **classe** è uno dei concetti fondamentali della **programmazione orientata agli oggetti (OOP)**.
+Una classe è un **modello (blueprint)** per la creazione di **oggetti**, che rappresentano entità con **stato** (attributi) e **comportamenti** (metodi).
 
 ---
 
-## La classe
+## 🔹 Caratteristiche principali
 
-Una classe è uno dei concetti fondamentali di OOP. Una classe è un insieme di istruzioni necessarie per costruire un tipo specifico di oggetto. 
-Possiamo pensare a una classe come a un modello, un progetto o una ricetta che ci dice come creare oggetti di quella classe. 
-
----
-
-La creazione di un oggetto di quella classe è un processo chiamato istanziazione e di solito viene eseguito tramite la parola chiave `new`. 
+* Una **classe** non consuma memoria da sola: occupa memoria solo quando vengono create istanze (`new`).
+* Una classe può essere **istanziata più volte**, producendo oggetti distinti.
+* Ogni classe dovrebbe rispettare il **principio di responsabilità singola (SRP)**: fare bene una sola cosa.
 
 ---
 
-Possiamo istanziare tutti gli oggetti che vogliamo. Una definizione di classe non consuma memoria salvata come file sul disco rigido. Una delle migliori pratiche che una classe dovrebbe seguire è il principio di responsabilità singola (SRP): una classe dovrebbe essere progettata e scritta per fare una, e solo una, cosa.
+## 🔹 Java è orientato agli oggetti
+
+* **Classe**: definisce un nuovo tipo, con **proprietà** (attributi) e **azioni** (metodi).
+* **Oggetto**: istanza della classe, con dati propri e metodi applicabili a essi.
+* In Java **quasi tutto è un oggetto**, tranne:
+
+  * i **tipi primitivi** (`int`, `double`, `boolean`, …)
+  * gli **array**, che sono oggetti ma trattati in modo speciale.
 
 ---
 
-## Java è un linguaggio orientato agli oggetti
+## 🔹 Le classi definiscono
 
-* Come definire classi e oggetti in Java?
-* **Classe**: codice che definisce un tipo concreto di oggetto, con proprietà e comportamenti in un unico file
-* **Oggetto**: istanza, esemplare della classe, entità che dispone di alcune proprietà e comportamenti propri, come gli oggetti della realtà
-* In **Java** quasi tutto è un **oggetto**, ci sono solo due **eccezioni**:
-  * i tipi di dato semplici (tipi primitivi) e
-  * gli array (un oggetto trattato in modo _particolare_)
-* Le classi, in quanto tipi di dato strutturati, prevedono **usi e regole più complessi** rispetto ai tipi semplici
+* **Attributi** (o campi) → dati che descrivono lo stato dell’oggetto.
+* **Metodi** → operazioni che l’oggetto può eseguire o che agiscono sui dati.
 
----
+Esempi:
 
-## La classe è lo 'stampo' per gli oggetti
-
-![Classi e oggetti](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/cookie-cutter.png)
+* Definite dal programmatore (`Automobile`, `Studente`, `Persona` …).
+* Definite da Java (`String`, `System`, `Scanner` …).
 
 ---
 
-## Le classi definiscono
+## 🔹 Creazione di oggetti
 
-* I dati (detti campi o attributi)
-* Le azioni (metodi, comportamenti) che agiscono sui dati
+La creazione di un oggetto si chiama **istanza** e avviene con `new`.
 
-Possono essere definite
+```java
+Persona p1 = new Persona("Luca", "Rossi", 25);
+```
 
-* Dal programmatore (p.es. Automobile, Topo, Studente, ...)
-* Dall'ambiente Java (p.es. String, System, Scanner, ...)
-
----
-
-## La "gestione" di una classe avviene mediante
-
-* Definizione della classe
-* Instanziazione di Oggetti della classe
+Ogni volta che uso `new` creo un nuovo oggetto con i suoi valori indipendenti.
 
 ---
 
-### Struttura di una classe
+## 🔹 Struttura di una classe
 
 ```java
 package model;
 
 public class Persona {
 
-    //proprietà private - vedi incapsulamento
+    // attributi (incapsulati)
     private String nome;
     private String cognome;
     private int eta;
 
-    //metodo costruttore
-    public Persona (String nome, String cognome, int eta)  {
-    this.nome = nome;
-    this.cognome = cognome;
-    this.eta = eta;
+    // costruttore
+    public Persona(String nome, String cognome, int eta) {
+        this.nome = nome;
+        this.cognome = cognome;
+        this.eta = eta;
     }
-    
-    //per gestire le proprietà vedi metodi getters and setters    
-    //metodi...
+
+    // metodo di istanza
+    public void saluta() {
+        System.out.println("Ciao, sono " + nome);
+    }
 
     @Override
-    public String toString () {
-    return this.nome + " " + this.cognome + " " +  this.eta;
+    public String toString() {
+        return nome + " " + cognome + " (" + eta + " anni)";
     }
 }
 ```
 
 ---
 
-### Le classi in Java
+## 🔹 Regole di base per le classi
 
-* Il primo passo per definire una classe in Java è creare un file che deve chiamarsi esattamente come la classe e con estensione .java
+* Ogni classe deve stare in un file con **lo stesso nome** e estensione `.java`.
+* Una classe può contenere:
 
-* Java permette di definire solo una classe per ogni file
+  * **Attributi**: variabili che rappresentano lo stato.
+  * **Costruttori**: metodi speciali per inizializzare l’oggetto.
+  * **Metodi**: azioni sugli oggetti.
+* Per convenzione:
 
-* Una classe in Java è formata da:
-
-* **Attributi**: (o campi/proprietà) che immagazzinano alcune informazioni sull'oggetto. Definiscono lo stato dell'oggetto
-
-* **Costruttore**: metodo che si utilizza per inizializzare un oggetto
-
-* **Metodi**: sono utilizzati per modificare o consultare lo stato di un oggetto. Sono equivalenti alle funzioni o procedure di altri linguaggi di programmazione
+  * i **nomi delle classi** iniziano con la maiuscola (`Persona`),
+  * i **metodi** con la minuscola (`saluta`).
 
 ---
 
-## Classi e documentazione
+## 🔹 Documentazione e libreria standard
 
-* Java è dotato di una libreria di classi "pronte all'uso" che coprono molte esigenze
-* Usare classi già definite da altri è la norma (principio DRY)
-* La libreria Java standard è accompagnata da documentazione che illustra lo scopo e l'utilizzo di ciascuna classe presente
-* Dalla versione 9 di Java la libreria è stata divisa in moduli
+* Java fornisce una ricca **libreria di classi pronte all’uso** (principio DRY: *Don’t Repeat Yourself*).
+* Ogni classe della libreria è documentata con API ufficiali.
+* Dalla **Java 9** la libreria standard è stata organizzata in **moduli**.
 
-* [Documentazione Java 8](https://docs.oracle.com/javase/8/docs/api/overview-summary.html)
-* [Documentazione Java 9](https://docs.oracle.com/javase/9/docs/api/overview-summary.html)
-* [Documentazione Java 11](https://docs.oracle.com/en/java/javase/11/)
-* [Documentazione Java 14](https://docs.oracle.com/en/java/javase/14/)
-* [Documentazione Java 17](https://docs.oracle.com/en/java/javase/17/)
+📌 Documentazione ufficiale:
 
-[esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)
+* [Java 8](https://docs.oracle.com/javase/8/docs/api/overview-summary.html)
+* [Java 11](https://docs.oracle.com/en/java/javase/11/)
+* [Java 17](https://docs.oracle.com/en/java/javase/17/)
+* [Java 21](https://docs.oracle.com/en/java/javase/21/)
+
+---
+
+# ✅ Riepilogo
+
+* Una **classe** è un progetto (blueprint) → gli **oggetti** sono istanze reali.
+* Ogni oggetto ha **proprietà** (attributi) e **comportamenti** (metodi).
+* Le classi possono essere create dal programmatore o già pronte nella libreria Java.
+* Buona pratica: seguire il **principio di responsabilità singola (SRP)**.
+
+---
+
+## Domande
+
+---
+
+Che cos’è una classe in Java?
+A. Una variabile che contiene più valori
+B. Un insieme di istruzioni che definisce un tipo di oggetto
+C. Un metodo speciale
+D. Una struttura per gestire array
+
+---
+
+Che cos’è un oggetto in Java?
+A. Una variabile di tipo primitivo
+B. Un’istanza di una classe
+C. Un metodo statico
+D. Una costante
+
+---
+
+Quale parola chiave viene usata per creare un nuovo oggetto in Java?
+A. class
+B. this
+C. new
+D. void
+
+---
+
+Cosa rappresentano gli attributi di una classe?
+A. Le azioni che un oggetto può compiere
+B. Lo stato o le proprietà dell’oggetto
+C. Il costruttore della classe
+D. Le regole di visibilità
+
+---
+
+Quale componente di una classe inizializza i suoi oggetti?
+A. Metodo getter
+B. Metodo setter
+C. Costruttore
+D. Attributo statico
+
+---
+
+Quale convenzione si usa per il nome delle classi in Java?
+A. Tutte maiuscole
+B. Tutte minuscole
+C. PascalCase (iniziale maiuscola)
+D. snake_case
+
+---
+
+Cosa restituisce il metodo toString() se non viene sovrascritto?
+A. Una descrizione leggibile dell’oggetto
+B. Null
+C. Un identificatore interno formato da nome classe + hashcode
+D. Una lista di attributi
+
+---
+
+Quanti oggetti posso creare a partire da una classe?
+A. Uno solo
+B. Nessuno
+C. Un numero qualsiasi
+D. Solo se la classe è statica
+
+---
+
+Quali tra i seguenti NON sono oggetti in Java?
+A. ArrayList
+B. String
+C. int
+D. Scanner
+
+---
+
+Quale principio di progettazione dice che una classe deve fare una sola cosa?
+A. DRY
+B. SRP (Single Responsibility Principle)
+C. OCP
+D. LSP
