@@ -120,7 +120,7 @@
 
 * **Virtual Threads definitivi** 🎉 (Project Loom).
 * **Pattern Matching per `switch` definitivo**.
-* **Sequenced Collections** (`SequencedSet`, `SequencedMap`).
+* **[Sequenced Collections](300_SequencedCollections.md)** (`SequencedSet`, `SequencedMap`).
 * **String Templates (preview)** → interpolazione di stringhe.
 * **Key Encapsulation Mechanism API (cripto)**.
 
