@@ -1,113 +1,238 @@
-# 1. Instanze di una Classe: gli oggetti
+# 🔹 1. Istanze di una Classe: gli Oggetti
 
-In programmazione orientata agli oggetti (OOP), un oggetto è uno dei concetti centrali, rappresentando un'entità del mondo reale dotata di **stato** e **comportamenti**. Gli oggetti hanno attributi, chiamati **campi**, che definiscono il loro stato, e **metodi**, che determinano il loro comportamento. Ogni oggetto rappresenta un'**istanza** di una **classe**, fungendo da esempio concreto dei concetti astratti definiti dalla classe stessa. Gli oggetti occupano spazio nella memoria del sistema, consentendo loro di mantenere uno stato persistente. Un aspetto fondamentale degli oggetti è la loro **capacità di comunicare** tra loro, permettendo lo **scambio di informazioni** e il coordinamento delle **attività** all'interno di un programma. Questa **interazione** tra oggetti è uno dei pilastri della programmazione orientata agli oggetti, consentendo la creazione di sistemi complessi e dinamici.
+In **programmazione orientata agli oggetti (OOP)**, un **oggetto** è l’elemento centrale: rappresenta un’entità del mondo reale con **stato** e **comportamenti**.
 
+* **Stato** → definito dai valori dei campi (attributi).
+* **Comportamenti** → definiti dai metodi.
+* Ogni oggetto è un’**istanza di una classe**, cioè un esempio concreto del modello astratto definito dalla classe.
+* Un oggetto **occupa spazio in memoria** e può **comunicare** con altri oggetti tramite lo scambio di messaggi (invocazione di metodi).
 
-
----
-
-## 1.1. Cos'è un oggetto?
-
-* Un oggetto è uno dei concetti fondamentali di OOP.
-* Un oggetto è un'entità del mondo reale.
-* Un oggetto ha stato (campi) e comportamenti (metodi: modi per compiere azioni).
-* Un oggetto rappresenta un'istanza di una classe.
-* Un oggetto occupa un po' di spazio nella memoria.
-* Un oggetto può comunicare con altri oggetti.
+Questa capacità di interazione è uno dei pilastri di OOP e permette la costruzione di sistemi complessi e dinamici.
 
 ---
 
-Gli `oggetti` sono istanze (esemplari) delle classi
+## 🔹 1.1. Cos’è un oggetto?
 
-Gli oggetti sono caratterizzati da
+* È un’entità concreta derivata da una classe.
+* Ha **stato** (valori degli attributi) e **comportamenti** (metodi).
+* Occupa memoria.
+* Può interagire con altri oggetti.
 
-* Classe di appartenenza - tipo (ne descrive attributi e metodi)
-* Stato (valore attuale degli attributi)
-* Identificatore univoco (reference - handle - puntatore)
-<details>
-<summary>
-Leggi tutto
-</summary>
-Gli `oggetti` costituiscono istanze o esemplari delle classi all'interno del paradigma della programmazione orientata agli oggetti. Ciascun oggetto è associato a una classe di appartenenza, che ne definisce le caratteristiche attraverso attributi e metodi. La distinzione di un oggetto è basata su tre elementi chiave: la sua classe, il suo stato corrente rappresentato dai valori degli attributi, e un identificatore univoco che consente di fare riferimento all'oggetto in modo univoco. Questo identificatore, spesso chiamato reference, handle o puntatore, è fondamentale per interagire con l'oggetto all'interno del programma, consentendo l'accesso alle sue proprietà e l'esecuzione dei suoi metodi. In questo modo, la combinazione di classe, stato e identificatore conferisce a ciascun oggetto la sua individualità e definisce il ruolo che svolge all'interno del sistema.
-</details>
+Ogni oggetto è caratterizzato da:
 
-![oggetti](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/model/car_class.jpeg)
+1. **Classe di appartenenza** → definisce attributi e metodi.
+2. **Stato** → i valori attuali dei campi.
+3. **Identificatore univoco** → il riferimento (reference) che permette di accedere a quell’oggetto.
 
 ---
 
-## 1.2. Per creare un oggetto occorre
+## 🔹 1.2. Creazione di un oggetto
 
-* Dichiarare una istanza
-* La dichiarazione non alloca spazio ma solo una riferimento (puntatore) che per default vale null
-* Allocazione e inizializzazione
-* Riservano lo spazio necessario creando effettivamente l'oggetto appartenente a quella classe
+La creazione di un oggetto richiede due passaggi:
 
----
+1. **Dichiarazione** → crea una variabile di tipo reference, inizialmente `null`.
+2. **Allocazione e inizializzazione** → con `new` si riserva memoria e si inizializza l’oggetto.
 
-## 1.3. Notazioni Puntate
-
-* Le notazioni puntate possono essere combinate
-* `System.out.println("Hello world!");`
-* **System** è una classe del `package java.lang`
-* **out** è una variabile di classe contenente il riferimento ad un oggetto della classe **PrintStream** che punta allo standard output
-* **println()** è un **metodo** della classe PrintStream che stampa una linea di testo
+```java
+Persona p;                // dichiarazione (reference nullo)
+p = new Persona("Luca");  // allocazione e inizializzazione
+```
 
 ---
 
-## 1.4. Operazioni su reference == e !=
+## 🔹 1.3. Notazione puntata
 
-* Attenzione: il test di uguaglianza viene fatto sul puntatore (**reference**) e NON sull'oggetto
-* gli operatori relazionali `== e !=` stabiliscono se i **reference** si riferiscono allo stesso oggetto
-* È definita l'**assegnazione** con l'operatore `=`
-* È definito l'**operatore punto** (notazione puntata)
-* In java **NON** è prevista l'aritmetica dei puntatori
+Si usa il **punto** (`.`) per accedere ad attributi e metodi:
 
----
+```java
+System.out.println("Hello World!");
+```
 
-## 1.5. Operazioni su istanze
-
-Le principali operazioni che si possono effettuare sulle variabili che riferiscono istanze di una classe sono: 
-
-* assegnamento
-* confronto
-* invocazione di metodi
-* Il valore di una variabile di tipo reference è il riferimento ad un oggetto (istanza di una classe)
-* Una stessa variabile può riferire oggetti diversi in tempi diversi a seguito di operazioni di assegnazione sul suo valore
-* Se la variabile contiene il valore `null` non riferisce nessun oggetto in quel momento
+* `System` → classe del package `java.lang`.
+* `out` → variabile di classe (reference a `PrintStream`).
+* `println()` → metodo di `PrintStream`.
 
 ---
 
-## 1.6. Accesso a metodi e attributi non static
+## 🔹 1.4. Operazioni sui reference (`==`, `!=`)
 
-* All'interno del corpo di un metodo che **non è** dichiarato `static`, è possibile accedere a qualsiasi attributo e metodo della stessa classe.
-* Nel contesto di un metodo, è consentito riferirsi in modo abbreviato agli attributi e ai metodi definiti all'interno della stessa classe.
-* Quando, all'interno di un metodo non `static`, compare il nome di un metodo o attributo anch'esso non `static`, è implicito che si stia facendo riferimento all'istanza specifica su cui è stato invocato il metodo.
----
+* In Java i **reference** puntano agli oggetti in memoria.
+* `==` e `!=` confrontano i **reference**, non i contenuti degli oggetti.
+* Non esiste l’aritmetica dei puntatori (a differenza di C/C++).
 
-## 1.7. Oggetti e riferimenti
+Esempio:
 
-* Mentre le variabili sono dotate di un nome distintivo, gli oggetti non lo sono.
-* Per interagire con un oggetto, è necessario passare attraverso una variabile che contiene il suo riferimento.
-* Un singolo oggetto può essere accessibile tramite diverse variabili, consentendo l'utilizzo di nomi variabili per accedervi.
-* Il rapporto tra variabili e gli oggetti a cui fanno riferimento è dinamico; il riferimento iniziale non è necessariamente vincolato all'oggetto per l'intera durata della sua esistenza.
-* Quando nessuna variabile fa più riferimento a un oggetto, quest'ultimo diventa irraggiungibile e il garbage collector interviene per liberare le risorse associate.
+```java
+String s1 = new String("ciao");
+String s2 = new String("ciao");
 
----
-
-## 1.8. Confronti tra variabili di tipo strutturato
-
-* Gli operatori di confronto `==` e `!=` possono essere impiegati con variabili di tipo strutturato.
-* Quando uno dei due termini del confronto è il valore `null`, l'analisi verifica se una specifica variabile fa riferimento a un oggetto o se è priva di un riferimento, ad esempio, nell'espressione `saluto3 != null`.
-* Quando entrambi i termini del confronto sono variabili, il confronto determina se possiedono lo stesso valore, indicando se fanno riferimento esattamente allo stesso oggetto.
+System.out.println(s1 == s2);      // false (reference diversi)
+System.out.println(s1.equals(s2)); // true  (contenuto uguale)
+```
 
 ---
 
-## 1.9. Confronto tra riferimenti vs. confronto tra oggetti
+## 🔹 1.5. Operazioni sulle istanze
 
-* L'operatore `==` confronta i **riferimenti**, non i **valori**, contenuti negli oggetti.
-* Tipicamente, si desidera confrontare i contenuti, non i riferimenti, ed è per questo che si utilizza il **metodo** `equals()`.
-* Il metodo booleano `equals` della classe String richiede come argomento il riferimento a un altro oggetto e restituisce `true` se le stringhe contenute sono uguali, altrimenti restituisce `false`.
-* In modo simile, il metodo booleano `equalsIgnoreCase` effettua la stessa operazione senza fare distinzione tra maiuscole e minuscole.
+Con una variabile di tipo reference si può:
 
+* **Assegnare** un nuovo oggetto → `p = new Persona("Anna");`
+* **Confrontare** reference o contenuti (`==`, `equals()`).
+* **Invocare metodi** → `p.saluta();`.
 
-[esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)
+Una variabile può riferirsi a oggetti diversi in momenti diversi.
+Se il reference vale `null`, la variabile non punta ad alcun oggetto.
+
+---
+
+## 🔹 1.6. Accesso ad attributi e metodi non static
+
+Dentro un metodo **non statico**:
+
+* Posso usare direttamente gli attributi e metodi della stessa classe.
+* L’oggetto implicito è quello su cui è stato invocato il metodo.
+
+Esempio:
+
+```java
+public class Persona {
+    private String nome;
+
+    public Persona(String nome) { this.nome = nome; }
+
+    public void saluta() {
+        System.out.println("Ciao, sono " + nome); // implicito this.nome
+    }
+}
+```
+
+---
+
+## 🔹 1.7. Oggetti e riferimenti
+
+* Gli oggetti **non hanno nome**, ma vengono manipolati tramite variabili reference.
+* Un oggetto può avere **più variabili** che lo referenziano.
+* Quando un oggetto non è più referenziato, diventa irraggiungibile → il **garbage collector** libera la memoria.
+
+```java
+Persona p1 = new Persona("Luca");
+Persona p2 = p1;  // p2 e p1 puntano allo stesso oggetto
+```
+
+---
+
+## 🔹 1.8. Confronti con `null`
+
+* Se una variabile vale `null`, non punta ad alcun oggetto.
+* Il confronto `variabile != null` è usato per verificare se esiste un riferimento valido.
+
+```java
+if (p1 != null) {
+    p1.saluta();
+}
+```
+
+---
+
+## 🔹 1.9. Confronto tra reference vs contenuto
+
+* `==` → confronta se due variabili puntano **allo stesso oggetto**.
+* `equals()` → confronta il **contenuto logico** degli oggetti.
+
+Esempio con `String`:
+
+```java
+String s1 = "Java";
+String s2 = "Java";
+
+System.out.println(s1 == s2);      // true (ottimizzazione string pool)
+System.out.println(s1.equals(s2)); // true
+```
+
+---
+
+📌 [Esempi sulle classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)
+
+---
+
+## Domande
+
+---
+
+Che cos’è un oggetto in Java?
+A. Una funzione che ritorna un valore
+B. Un’entità con stato e comportamento
+C. Una classe con soli metodi statici
+D. Una variabile primitiva
+
+---
+
+Che cosa significa che un oggetto è un’istanza di una classe?
+A. È una copia della classe
+B. È un esempio concreto creato a partire da una classe
+C. È il riferimento alla classe stessa
+D. È un metodo che appartiene alla classe
+
+---
+
+Cosa rappresentano i campi (attributi) di un oggetto?
+A. Le azioni che un oggetto può compiere
+B. Lo stato dell’oggetto
+C. I metodi di una classe
+D. I reference agli oggetti
+
+---
+
+Quale parola chiave si usa in Java per creare un nuovo oggetto?
+A. class
+B. new
+C. void
+D. this
+
+---
+
+Cosa confronta l’operatore == applicato a due oggetti in Java?
+A. I contenuti logici degli oggetti
+B. I loro attributi
+C. I riferimenti in memoria
+D. I valori dei metodi toString()
+
+---
+
+Quale metodo si usa per confrontare il contenuto logico di due oggetti?
+A. compare()
+B. isEqual()
+C. equals()
+D. ==
+
+---
+
+Cosa succede a un oggetto quando nessuna variabile fa più riferimento ad esso?
+A. Rimane in memoria fino al riavvio del programma
+B. Viene automaticamente eliminato dal garbage collector
+C. Genera un errore di compilazione
+D. Si trasforma in un array vuoto
+
+---
+
+Cosa significa se una variabile di tipo reference vale null?
+A. Non è stata dichiarata
+B. Non punta ad alcun oggetto
+C. Punta a un oggetto vuoto
+D. È un valore booleano speciale
+
+---
+
+Come si accede a un attributo o metodo di un oggetto?
+A. Con la parentesi quadra []
+B. Con l’operatore ->
+C. Con l’operatore .
+D. Con la keyword this
+
+---
+
+Quale delle seguenti affermazioni è corretta?
+A. In Java è possibile fare aritmetica dei reference
+B. Due reference possono puntare allo stesso oggetto
+C. Ogni oggetto ha sempre un solo riferimento
+D. Un oggetto non può contenere metodi
