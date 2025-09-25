@@ -296,6 +296,6 @@ for (int i=0; i<n; i++) {
 * [04_for](https://github.com/maboglia/CorsoJava/tree/master/esempi/06_control-flow/04_for)
 * [05_foreach](https://github.com/maboglia/CorsoJava/tree/master/esempi/06_control-flow/05_foreach)
 * [06_labels](https://github.com/maboglia/CorsoJava/tree/master/esempi/06_control-flow/06_labels)
-* [giochi](https://github.com/maboglia/CorsoJava/tree/master/esempi/06_control-flow/giochi)
+* [giochi](https://github.com/maboglia/CorsoJava/tree/master/esercitazioni/LaboratorioJava/01_Giochi)
 * [programmi ](https://github.com/maboglia/CorsoJava/tree/master/esempi/06_control-flow/programmi )
 
