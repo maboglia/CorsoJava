@@ -1,50 +1,74 @@
-# Type Casting di Oggetti
+# **type casting di oggetti** in Java
 
-È possibile modificare il tipo di un riferimento ad oggetto soltanto tra tipi in relazione di ereditarietà
-L'oggetto rimane invariato
+## 🔑 Concetti base
 
----
-
-## Upcasting
-
-* È sempre affidabile (è sempre vero che un auto elettrica è un auto)
-* È automatico
+* Il **casting** modifica solo il **tipo del riferimento**, non l’oggetto.
+* Funziona **solo tra classi in relazione di ereditarietà** (superclasse ↔ sottoclasse).
+* Se il cast non è valido → **ClassCastException a runtime**.
 
 ---
 
-### upcast su Object
+## 🟢 Upcasting
 
-Poichè ogni classe è (direttamente o indirettamente) sottoclasse di
-Object è sempre possibile fare upcast di qualsiasi oggetto su Object
+* **Da sottoclasse a superclasse**
+* È **sicuro** e avviene anche **implicitamente**.
+
+Esempio:
 
 ```java
-QualcheClasse a = new QualcheClasse();
-Object o;
-o = a;
+class Veicolo {}
+class Automobile extends Veicolo {}
+class AutoElettrica extends Automobile {}
+
+AutoElettrica tesla = new AutoElettrica();
+Automobile auto = tesla;  // upcasting implicito
+Veicolo v = tesla;        // valido: una Tesla è un Veicolo
 ```
 
 ---
 
-## Downcasting
+## 🔴 Downcasting
 
-* Non è automatico (richiede cast esplicito)
-* Può non essere affidabile
-  * Non tutte le auto sono autoelettriche
-  * Un downcasting può provocare un errore run-time
+* **Da superclasse a sottoclasse**
+* È **esplicito** e può fallire.
+
+Esempio corretto:
+
+```java
+Veicolo v = new AutoElettrica();
+AutoElettrica ae = (AutoElettrica) v;  // ok
+ae.ricarica();
+```
+
+Esempio pericoloso:
+
+```java
+Veicolo v = new Automobile();
+// Compila, ma a runtime lancia ClassCastException
+AutoElettrica ae = (AutoElettrica) v;
+```
 
 ---
 
-### usare instanceof
-
-Per evitare un errore a run time
-
-* `instanceof (Run Time Type Identification)`
+## ✅ Uso di `instanceof` per la sicurezza
 
 ```java
-Automobile a = new Automobile();
-AutoElettrica ae;
-if (a instanceof AutoElettrica){
-ae = (AutoElettrica) a;
-ae.ricarica();
+Veicolo v = new Automobile();
+
+if (v instanceof AutoElettrica) {
+    AutoElettrica ae = (AutoElettrica) v;
+    ae.ricarica();
+} else {
+    System.out.println("Non è un'auto elettrica!");
 }
 ```
+
+---
+
+## 📊 Tabella riassuntiva
+
+| Operazione      | Direzione                 | Sicurezza     | Cast esplicito? | Note               |
+| --------------- | ------------------------- | ------------- | --------------- | ------------------ |
+| **Upcasting**   | Sottoclasse → Superclasse | Sempre sicuro | No              | Automatico         |
+| **Downcasting** | Superclasse → Sottoclasse | Può fallire   | Sì              | Usare `instanceof` |
+
