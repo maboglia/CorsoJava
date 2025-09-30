@@ -1,83 +1,129 @@
-# Metodi **getter e setter**
+# Metodi **Getter e Setter**
 
-I cosiddetti metodi getters e setters, cioè accessori e mutatori, regolano l'accesso alle proprietà ed ai metodi delle classi
+I **getter** e i **setter** (detti anche **accessor** e **mutator**) sono metodi che permettono di **accedere** e **modificare** in modo controllato gli attributi di una classe.
 
-## Principi di encapsulation e visibilità
-
-* **Modularità** = diminuire le interazioni
-* **Information Hiding** = delegare responsabilità
-* `private` attributo/metodo visibile solo da istanze della stessa classe
-* `public` attributo/metodo visibile ovunque
+Si usano per implementare i principi di **incapsulamento** e **information hiding** tipici della programmazione orientata agli oggetti.
 
 ---
 
-### Ad esempio
+## Principi di Encapsulation e Visibilità
 
-```java
-class NomeClasse{  
-       
-       private double nome1, nome2;
+* **Modularità** → ridurre le interazioni tra le parti del codice.
+* **Information Hiding** → nascondere i dettagli interni e delegare la responsabilità ai metodi pubblici.
 
-       public double getNome1(){
-              return nome1;
-       } 
-       public void setNome1(double nome1){ 
-              this.nome1 = nome1; 
-       }
-```
+In Java la **visibilità** degli attributi/metodi si regola con gli **access modifier**:
 
-* Vantaggi: 
-* possiamo cambiare la rappresentazione interna, 
-* verificare che i valori siano corretti, 
-* modificare altri aspetti dell'oggetto
+* `private` → visibile solo all’interno della stessa classe.
+* `public` → accessibile ovunque.
+* `protected` → accessibile da classi nello stesso package e dalle sottoclassi.
+* *(di default, package-private)* → accessibile solo nello stesso package.
 
 ---
 
-## Getters e setters
+## Perché usare Getter e Setter?
 
-Metodi accessori e mutatori per leggere scrivere un attributo privato
-
-```java
-String getColore() {
-       return colore;
-}
-void setColore(String nuovoColore) {
-       this.colore = nuovoColore;
-}
-```
+* **Protezione degli attributi**: gli attributi restano privati (`private`).
+* **Controllo sui valori**: nei setter si possono verificare i dati prima di assegnarli.
+* **Flessibilità**: è possibile modificare l’implementazione interna senza cambiare l’interfaccia pubblica.
+* **Leggibilità**: getter e setter seguono una convenzione standard (`getNome()`, `setNome()`).
 
 ---
 
-## Proprietà visibili
+## Esempio base
 
 ```java
 class Automobile {
-       public String colore;
+    private String colore;
+
+    // getter
+    public String getColore() {
+        return colore;
+    }
+
+    // setter
+    public void setColore(String nuovoColore) {
+        this.colore = nuovoColore;
+    }
 }
-//creazione oggetto
+
+// utilizzo
 Automobile a = new Automobile();
-a.colore = "bianco"; // ok
+a.setColore("Rosso");            // modifica sicura
+System.out.println(a.getColore()); // lettura
 ```
 
 ---
 
-## Classe incapsulata
+## Esempio con controllo nei setter
 
 ```java
+class ContoBancario {
+    private double saldo;
 
-class Automobile {
-       private String colore;
-       public void vernicia(String colore) {
-              this.colore = colore;
-       }
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double importo) {
+        if (importo >= 0) {
+            this.saldo = importo;
+        } else {
+            System.out.println("Errore: saldo non può essere negativo!");
+        }
+    }
 }
-
-//creazione oggetto
-Automobile a = new Automobile();
-a.colore = "bianco"; // errore
-a.vernicia("verde"); // ok
 ```
 
 ---
 
-[esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)
+## Proprietà pubbliche (sconsigliate)
+
+Gli attributi **pubblici** espongono direttamente i dati:
+
+```java
+class Automobile {
+    public String colore;
+}
+
+Automobile a = new Automobile();
+a.colore = "Bianco"; // accesso diretto
+```
+
+⚠️ In questo caso non c’è **controllo** sull’assegnazione dei valori → **violazione dell’incapsulamento**.
+
+---
+
+## Classe incapsulata (consigliata)
+
+Gli attributi diventano **privati** e vengono gestiti con metodi pubblici:
+
+```java
+class Automobile {
+    private String colore;
+
+    public void vernicia(String colore) {
+        this.colore = colore;
+    }
+
+    public String getColore() {
+        return colore;
+    }
+}
+
+Automobile a = new Automobile();
+// a.colore = "Bianco";  // ERRORE: colore è privato
+a.vernicia("Verde");     // OK
+System.out.println(a.getColore());
+```
+
+---
+
+## Conclusione
+
+* **Senza getter e setter** → dati esposti, difficile garantire consistenza.
+* **Con getter e setter** → controllo sui dati, rispetto dell’incapsulamento, codice più robusto.
+
+👉 In Java si segue la convenzione:
+
+* `getNomeAttributo()` per leggere.
+* `setNomeAttributo(...)` per modificare.

@@ -1,6 +1,8 @@
 # Il Metodo Costruttore
 
-Specifica le operazioni di inizializzazione (attributi, etc.) che vogliamo vengano eseguite su ogni oggetto della classe appena viene creato
+Il **costruttore** è un metodo speciale che serve a **inizializzare un nuovo oggetto** di una classe, impostando i valori iniziali degli attributi e svolgendo eventuali operazioni necessarie all’avvio.
+
+Ogni volta che si crea un oggetto con `new`, viene automaticamente richiamato il costruttore della classe.
 
 ![costruttore](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/model/Class-Concept.png)
 
@@ -8,153 +10,68 @@ Specifica le operazioni di inizializzazione (attributi, etc.) che vogliamo venga
 
 ## Caratteristiche del costruttore
 
-Il metodo **costruttore** ha
+* Ha **lo stesso nome** della classe (inizia quindi con lettera maiuscola).
+* Non ha **tipo di ritorno** (nemmeno `void`).
+* Inizializza gli attributi della classe.
+* Se non viene definito, il compilatore genera un **costruttore di default** (senza parametri e vuoto).
 
-* Lo **stesso nome** della classe: **inizia** quindi **con lettera Maiuscola**
-* **Tipo** di ritorno **non** specificato
-
-Non possono esistere attributi non inizializzati
-
-* Gli attributi vengono inizializzati comunque con valori di **default**
+> In Java, anche se non inizializzi esplicitamente gli attributi, vengono comunque assegnati valori di **default** (es. `0` per numeri, `false` per boolean, `null` per oggetti).
 
 ---
 
-## il costruttore è sempre presente
+## Costruttore di default e costruttore definito dall’utente
 
-Se _non viene dichiarato_ un costruttore, ne viene creato uno di **default** _vuoto e senza parametri_
-
-Spesso si usa l'**overloading** dei metodi definendo diversi costruttori per gli oggetti di un certo tipo
-
-La distruzione di oggetti non è a carico del programmatore (garbage-collection)
-
----
-
-### Il costrutto new
-
-* Crea una nuova istanza della classe specificata, allocandone la memoria
-* Restituisce il riferimento all'oggetto creato
-* Chiama il costruttore del nuovo oggetto
+Se non scrivi alcun costruttore, Java fornisce automaticamente un **costruttore di default**:
 
 ```java
-Automobile a = new Automobile ();
-Motorcycle m = new Motorcycle ();
-String s = new String ("ABC");
+class Persona {
+    String nome;
+    int eta;
+    // costruttore di default implicito
+}
 ```
 
----
-
-### Per "gestire" una classe occorre
-
-* Accedere mediante il reference ai metodi della classe
-* Accedere mediante il reference agli attributi della classe
-
----
-
-### inviare Messaggi
-
-* L'invio di un messaggio provoca l'esecuzione del metodo
-
-Inviare un messaggio ad un oggetto
-
-* Usare la notazione "puntata" `oggetto.messaggio(parametri)`
-* I metodi definiscono l'**implementazione** delle operazioni
-* I messaggi che un oggetto può accettare coincidono con i nomi dei metodi
-* p.es mettiInMoto(), frena(), accelera(100), etc.
-* Spesso i messaggi includono uno o più parametri
-* .vernicia("Rosso")
-
----
-
-### Esempi
+Puoi anche **definirne uno personalizzato**:
 
 ```java
-Automobile a = new Automobile();
-a.mettiInMoto();
-a.accelera(10);
-a.frena(5);
-a.spegni();
-```
-
----
-
-### All'interno della classe
-
-* I metodi che devono inviare messaggi allo stesso oggetto cui appartengono non devono obbligatoriamente utilizzare la notazione puntata: è sottinteso il riferimento
-
-```java
-public class Libro {
-    int nPagine;
-    public void leggiPagina (int nPagina) {
-        //    ...
-    }
-    public void leggiTutto () {
-        for (int i=0; i<nPagine; i++)
-            leggiPagina (i);
+class Persona {
+    String nome;
+    int eta;
+    
+    // costruttore esplicito
+    Persona(String n, int e) {
+        nome = n;
+        eta = e;
     }
 }
 ```
 
 ---
 
-## Attributi
+## Overloading dei costruttori
 
-* Stessa notazione "puntata" dei messaggi `oggetto.attributo`
-* Il riferimento viene usato come una qualunque variabile
-
-```java
-Automobile a=new Automobile();
-a.colore = "Blu";
-boolean x = a.accesa;
-```
-
----
-
-I metodi che fanno riferimento ad attributi dello stesso oggetto possono tralasciare il riferimento all'oggetto
-
-```java
-public class Automobile {
-    String colore;
-    void vernicia(){
-        colore = "Verde";// colore si riferisce all'oggetto corrente
-    }
-}
-```
-
----
-
-## Operatore `this` (Puntatore Auto-referenziante)
-
-La parola riservata `this` e' utilizzata quale puntatore auto-referenziante
-
-* `this` riferisce l'oggetto (e.g., classe) corrente
-
-Utilizzato per:
-
-* Referenziare la classe appena istanziata
-* Evitare il conflitto tra nomi
-
-
----
-
-### Esempio (costruttori con `overloading` e `this`)
+È possibile avere più costruttori (con **parametri diversi**) nella stessa classe:
 
 ```java
 class Automobile {
     String marca;
     String modello;
-    // Automobile senza marca nè modello
-    Automobile () {
-        //...
+    
+    // costruttore vuoto
+    Automobile() {
+        marca = "Sconosciuta";
+        modello = "Standard";
     }
-    // Automobile con marca senza modello
-    Automobile (String marca) {
-        //...
+
+    // costruttore con un parametro
+    Automobile(String marca) {
         this.marca = marca;
+        this.modello = "Standard";
     }
-    // Automobile con marca e modello
-    Automobile (String marca, String modello) {
-        //...
-        this.marca = marca; 
+
+    // costruttore con due parametri
+    Automobile(String marca, String modello) {
+        this.marca = marca;
         this.modello = modello;
     }
 }
@@ -162,4 +79,90 @@ class Automobile {
 
 ---
 
-[esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)
+## Operatore `new`
+
+L’operatore `new` ha tre funzioni principali:
+
+1. **Crea una nuova istanza** della classe (allocando memoria).
+2. **Chiama il costruttore** corrispondente.
+3. **Restituisce un riferimento** all’oggetto creato.
+
+Esempio:
+
+```java
+Automobile a = new Automobile("Fiat", "500");
+String s = new String("ABC");
+```
+
+---
+
+## Invio di messaggi (chiamata di metodi)
+
+Un oggetto può ricevere **messaggi** (invocazioni di metodi) con la **notazione puntata**:
+
+```java
+a.mettiInMoto();
+a.accelera(50);
+a.frena();
+```
+
+All’interno della stessa classe, è sottinteso il riferimento all’oggetto corrente:
+
+```java
+public class Libro {
+    int nPagine;
+
+    public void leggiPagina(int n) {
+        System.out.println("Leggo pagina " + n);
+    }
+
+    public void leggiTutto() {
+        for (int i = 1; i <= nPagine; i++)
+            leggiPagina(i); // this.leggiPagina(i); è implicito
+    }
+}
+```
+
+---
+
+## Attributi e `this`
+
+* Gli attributi si accedono sempre tramite il **reference** dell’oggetto:
+
+  ```java
+  Automobile a = new Automobile();
+  a.colore = "Blu";
+  ```
+
+* All’interno della classe, si può omettere il riferimento:
+
+  ```java
+  public class Automobile {
+      String colore;
+      void vernicia() {
+          colore = "Verde"; // è sottinteso this.colore
+      }
+  }
+  ```
+
+* La parola chiave **`this`** è usata per:
+
+  * Riferirsi all’oggetto corrente.
+  * Distinguere variabili locali da attributi.
+
+Esempio:
+
+```java
+Automobile(String colore) {
+    this.colore = colore; // senza this ci sarebbe ambiguità
+}
+```
+
+---
+
+## Distruzione degli oggetti
+
+In Java la gestione della memoria è automatica grazie al **Garbage Collector**:
+
+* Quando un oggetto non è più referenziato da nessuna variabile, la memoria viene liberata.
+* Non esistono distruttori manuali come in C++.

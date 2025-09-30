@@ -1,53 +1,98 @@
 # Incapsulamento e visibilità in Java
 
-* **due aspetti** che risultano fondamentali in un software:
-  * **Interfaccia**: definita come gli **elementi che sono visibili dall'esterno**, cioè come il sw può essere utilizzato
-  * **Implementazione**: la realizzazione pratica interna dei metodi e la loro interazione con le proprietà degli oggetti
-* L'incapsulamento è uno dei concetti fondamentali di OOP.
-* L'incapsulamento è la tecnica mediante la quale lo stato dell'oggetto è nascosto dal mondo esterno e viene esposto un insieme di metodi pubblici per l'accesso a questo stato.
-* L'incapsulamento si ottiene quando ogni oggetto mantiene il proprio stato privato, all'interno di una classe.
-* L'incapsulamento è noto come meccanismo di occultamento dei dati.
-* L'incapsulamento ha una serie di importanti vantaggi ad esso associati, come codice debolmente accoppiato, riutilizzabile, sicuro e facile da testare.
-* In Java, l'incapsulamento viene implementato tramite i modificatori di accesso: public, private e protected.
+Due aspetti fondamentali in un software orientato agli oggetti sono:
+
+* **Interfaccia** → l’insieme degli elementi **visibili dall’esterno** (ciò che l’utente o altre classi possono utilizzare).
+* **Implementazione** → la parte interna della classe: attributi, logica dei metodi, dettagli nascosti al mondo esterno.
+
+L’**incapsulamento** è uno dei concetti fondamentali della **programmazione orientata agli oggetti (OOP)**.
+Consiste nel **nascondere lo stato interno di un oggetto** e nell’esporre solo i metodi necessari per interagirvi, garantendo **controllo, sicurezza e indipendenza tra interfaccia e implementazione**.
 
 ---
 
 ## Incapsulamento
 
-* L'incapsulamento consiste nell'**occultamento degli attributi** di un oggetto in modo che possano essere **manipolati solo attraverso metodi** appositamente implementati. p.es la proprietà `saldo` di un oggetto `conto corrente`
+* Gli **attributi** di un oggetto sono **occultati** (tipicamente `private`).
+* Lo stato interno può essere **modificato solo tramite metodi pubblici** appositamente definiti (`getter` e `setter`).
+* L’interfaccia deve essere progettata per essere **il più possibile indipendente** dall’implementazione, così da poterla modificare senza impatto sul codice che usa la classe.
 
-* Bisogna fare in modo che l'interfaccia sia più indipendente possibile dall'implementazione
-
-* In Java l'incapsulamento è strettamente relazionato con la visibilità
-
----
-
-### Visibilità
-
-* Per indicare la visibilità di un elemento (attribuito o metodo) possiamo farlo precedere da una delle seguenti parole riservate
-
-* `public`: accessibile da qualsiasi classe
-* `private`: accessibile solo dalla classe attuale
-* `protected`: solo dalla classe attuale, le discendenti e le classi del nostro package
-* `package`: se **non indichiamo la visibilità**: sono accessibili **solo dalle classi del nostro package**
+👉 Esempio tipico: la proprietà `saldo` di un oggetto `ContoCorrente` non deve essere accessibile liberamente dall’esterno, ma solo tramite metodi di deposito/prelievo che ne garantiscano la coerenza.
 
 ---
 
+## Vantaggi dell’incapsulamento
 
-### Accesso agli attributi della classe
-
-* Gli attributi di una classe sono strettamente relazionati con la sua implementazione. 
-* Conviene contrassegnarli come `private` e impedirne l'accesso dall'esterno
-* In futuro potremo cambiare la rappresentazione interna dell'oggetto senza alterare l'interfaccia
-* per consultarli e modificarli aggiungiamo i metodi accessori e mutatori:  `getters` e `setters`
+* Codice **debolmente accoppiato** → minore dipendenza tra le classi.
+* Maggior **riuso del codice**.
+* **Sicurezza** → protezione dei dati da accessi non autorizzati o incoerenti.
+* Codice più **robusto e facile da testare**.
+* Possibilità di **modificare la rappresentazione interna** senza cambiare l’interfaccia pubblica.
 
 ---
 
-### Modifica di rappresentazione interna di una classe
+## Visibilità in Java
 
-* Uno dei maggiori vantaggi di occultare gli attributi è che in **futuro potremo cambiarli** senza la necessità di cambiare l'interfaccia
-* Un linguaggio di programmazione __ORIENTATO AGLI OGGETTI__  fornisce meccanismi per definire nuovi tipi di dato basati sul concetto di classe
-* Una classe definisce un insieme di oggetti (conti bancari, dipendenti, automobili, rettangoli, ecc...).
-* Un oggetto è una struttura dotata di proprie **variabili** (che rappresentano il suo stato) propri **metodi** (che realizzano le sue funzionalità)
+In Java l’incapsulamento si realizza attraverso i **modificatori di accesso**:
 
-[esempi classi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_OOP/)
+* `public` → accessibile da qualsiasi classe.
+* `private` → accessibile solo all’interno della stessa classe.
+* `protected` → accessibile dalla classe attuale, dalle sottoclassi e dalle classi nello stesso package.
+* *(default, package-private)* → se non specifichi nulla, l’elemento è accessibile solo dalle classi dello stesso package.
+
+---
+
+## Accesso agli attributi della classe
+
+* Gli **attributi** fanno parte dell’**implementazione interna** e conviene dichiararli sempre `private`.
+* Per renderli accessibili in modo controllato, si usano **getter** e **setter**:
+
+```java
+class ContoCorrente {
+    private double saldo;
+
+    // getter
+    public double getSaldo() {
+        return saldo;
+    }
+
+    // setter con controllo
+    public void setSaldo(double nuovoSaldo) {
+        if (nuovoSaldo >= 0) {
+            this.saldo = nuovoSaldo;
+        } else {
+            System.out.println("Errore: saldo non può essere negativo.");
+        }
+    }
+}
+```
+
+---
+
+## Vantaggio: modificare la rappresentazione interna
+
+Se in futuro cambiamo la struttura interna della classe, l’interfaccia pubblica può rimanere la stessa.
+
+Esempio:
+
+```java
+class Rettangolo {
+    private int base;
+    private int altezza;
+
+    public int getArea() {
+        return base * altezza;
+    }
+}
+```
+
+In futuro potremmo salvare solo l’**area** come attributo, eliminando `base` e `altezza`.
+Il codice esterno non dovrà cambiare, perché continuerà a chiamare `getArea()`.
+
+---
+
+## Riepilogo
+
+* **Incapsulamento** = separare interfaccia da implementazione, nascondendo i dettagli interni.
+* **Visibilità** = regolare l’accesso con `public`, `private`, `protected`, `package`.
+* Gli **attributi** devono essere privati, e accessibili tramite **getter/setter**.
+* Vantaggi → sicurezza, indipendenza, riusabilità, manutenibilità.
