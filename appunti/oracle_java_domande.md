@@ -13,8 +13,8 @@ Domande e Esercizi: Concetti di Programmazione Orientata agli Oggetti
 
 4. Nascondere i dati interni dal mondo esterno e accedervi solo attraverso metodi pubblici esposti è noto come incapsulamento dei dati.
 
-5. Una pianta per un oggetto software è chiamata ___.
-   - Risposta: Una pianta per un oggetto software è chiamata classe.
+5. Un modello per un oggetto software è chiamato ___.
+   - Risposta: Un modello per un oggetto software è chiamato classe.
 
 6. Un comportamento comune può essere definito in un'___e ereditato in una___ utilizzando la parola chiave ___.
    - Risposta: Un comportamento comune può essere definito in un'interfaccia e ereditato in una classe utilizzando la parola chiave `implements`.

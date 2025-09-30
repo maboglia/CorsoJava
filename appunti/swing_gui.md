@@ -1,6 +1,4 @@
-
-
-**Introduzione a Java Swing:**
+# Introduzione a Java Swing:
 
 Java Swing è una libreria GUI (Graphic User Interface) che fa parte del pacchetto Java Foundation Classes (JFC). È stata introdotta come alternativa più avanzata rispetto alla precedente libreria AWT (Abstract Window Toolkit). Swing offre componenti GUI leggeri, stile look-and-feel consistente su diverse piattaforme e una maggiore flessibilità nella progettazione di interfacce utente.
 
