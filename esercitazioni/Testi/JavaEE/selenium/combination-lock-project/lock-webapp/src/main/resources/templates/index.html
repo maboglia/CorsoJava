@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Combination Lock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2rem; }
+    .box { max-width: 420px; margin: auto; }
+    input { font-size: 1.5rem; padding: .5rem; width: 100%; text-align:center; }
+    button { margin-top: .5rem; padding: .6rem; width:100%; font-size:1rem; }
+    .msg { margin-top: .8rem; min-height: 1.6rem; }
+    .secret { font-size: .9rem; color: #777; margin-top: .6rem; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>Indovina il codice a 4 cifre</h2>
+    <div>
+      <input id="code" maxlength="4" placeholder="0000" />
+      <button id="submit">Invia</button>
+      <button id="reset" style="margin-top: .5rem; background:#eee">Reset</button>
+      <div class="msg" id="msg"></div>
+      <div> Tentativi rimasti: <span id="attempts" th:text="${attemptsLeft}">0</span></div>
+
+      <div th:if="${testMode}">
+        <div class="secret">[TEST MODE] secret: <span id="secret" th:text="${secret}">0000</span></div>
+      </div>
+    </div>
+  </div>
+
+<script>
+document.getElementById('submit').addEventListener('click', send);
+document.getElementById('reset').addEventListener('click', resetSession);
+
+function send(){
+  const code = document.getElementById('code').value.trim();
+  fetch('/guess', {method: 'POST', headers: {'Content-Type':'application/x-www-form-urlencoded'}, body: 'code='+encodeURIComponent(code)})
+  .then(r=>r.json()).then(j=>{
+    document.getElementById('msg').textContent=j.message;
+    document.getElementById('attempts').textContent=j.attemptsLeft;
+    document.getElementById('msg').style.color = (j.result==='ok')?'green':'red';
+  });
+}
+
+function resetSession(){
+  fetch('/reset',{method:'POST'}).then(r=>r.json()).then(j=>{
+    document.getElementById('msg').textContent=j.message;
+    document.getElementById('attempts').textContent=j.attemptsLeft;
+    if(document.getElementById('secret')) document.getElementById('secret').textContent=j.secret;
+  });
+}
+</script>
+</body>
+</html>
