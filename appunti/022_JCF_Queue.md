@@ -1,178 +1,224 @@
 # Queue
 
-* Questa interfaccia, quindi, permette di gestire collezioni di oggetti ordinati identificabili univocamente mediante un indice che rappresenta la sua posizione all’interno della lista.
+Una **Queue** è una collezione ordinata che gestisce gli elementi secondo la logica **FIFO** (*First In, First Out*):
+➡️ il **primo elemento inserito** è anche **il primo ad essere rimosso**.
 
-* Una Queue permette di gestire collezioni di oggetti gestiti con la filosofia FIFO (First In First Out) in modo che il primo oggetto inserito sia il primo candidato ad essere letto.
+Le code vengono spesso utilizzate per:
 
----
-
-## Implementazione di Queue
-
-* L’interfaccia Queue rappresenta un insieme di elementi gestiti mediante FIFO. 
-* Questa interfaccia estende Collection definendo nuovi metodi per l’inserimento, la rimozione e l’utilizzo dei dati. 
-* Ognuno di questi metodi è presente in due forme:
-* la prima lancia un’eccezione se l’operazione fallisce
-* la seconda ritorna un valore speciale (come null o false) se l’operazione fallisce
+* gestire richieste in sequenza (es. processi, messaggi, task);
+* implementare strutture dati come **buffer** o **code di stampa**;
+* simulare comportamenti asincroni o concorrenziali.
 
 ---
 
-## Implementazione di Queue: LinkedList
+## Caratteristiche principali
+
+| Proprietà                    | Descrizione                                                                     |
+| ---------------------------- | ------------------------------------------------------------------------------- |
+| Ordinamento logico           | FIFO (First In First Out)                                                       |
+| Accesso limitato             | Solo in testa (rimozione) e in coda (inserimento)                               |
+| Nessun indice diretto        | Gli elementi non sono accessibili tramite indice                                |
+| Operazioni principali        | `offer()`, `poll()`, `peek()`                                                   |
+| Gestione sicura degli errori | Metodi che lanciano eccezioni o restituiscono valori speciali (`null`, `false`) |
+
+---
+
+## Interfaccia Queue
+
+L’interfaccia `Queue<E>` estende `Collection<E>` e aggiunge nuovi metodi per gestire gli elementi **in modo controllato**.
+Ogni operazione esiste in **due versioni**:
+
+| Operazione        | Lancia eccezione se fallisce | Restituisce valore speciale |
+| ----------------- | ---------------------------- | --------------------------- |
+| Inserimento       | `add(e)`                     | `offer(e)`                  |
+| Lettura (testa)   | `element()`                  | `peek()`                    |
+| Rimozione (testa) | `remove()`                   | `poll()`                    |
+
+> Le implementazioni più comuni di `Queue` sono `LinkedList`, `PriorityQueue` e `ArrayDeque`.
+
+---
+
+## Implementazioni principali
+
+| Implementazione | Struttura interna           | Caratteristiche principali                                        |
+| --------------- | --------------------------- | ----------------------------------------------------------------- |
+| `LinkedList`    | Lista doppiamente collegata | Supporta FIFO e operazioni in testa/coda                          |
+| `PriorityQueue` | Heap binario                | Ordina automaticamente gli elementi per priorità                  |
+| `ArrayDeque`    | Array ridimensionabile      | Gestisce efficacemente inserimenti in testa e in coda (FIFO/LIFO) |
+
+---
+
+## Esempio: Queue con LinkedList
 
 ```java
-        Queue<Integer> q
-            = new LinkedList<>();
- 
-        // Adds elements {0, 1, 2, 3, 4} to
-        // the queue
-        for (int i = 0; i < 5; i++)
-            q.add(i);
- 
-        // Display contents of the queue.
-        System.out.println("Elements of queue " + q);
- 
-        // To remove the head of queue.
-        int removedele = q.remove();
-        System.out.println("removed element-" + removedele);
- 
-        System.out.println(q);
- 
-        // To view the head of queue
-        int head = q.peek();
-        System.out.println("head of queue-" + head);
- 
-        // Rest all methods of collection
-        // interface like size and contains
-        // can be used with this
-        // implementation.
-        int size = q.size();
-        System.out.println("Size of queue-"+ size);
+Queue<Integer> q = new LinkedList<>();
 
+// Aggiunta di elementi
+for (int i = 0; i < 5; i++)
+    q.add(i);
+
+System.out.println("Elementi della coda: " + q);
+
+// Rimozione del primo elemento (testa)
+int removed = q.remove();
+System.out.println("Elemento rimosso: " + removed);
+
+// Visualizza la testa senza rimuoverla
+int head = q.peek();
+System.out.println("Testa della coda: " + head);
+
+// Dimensione della coda
+System.out.println("Dimensione: " + q.size());
+```
+
+**Output**
+
+```
+Elementi della coda: [0, 1, 2, 3, 4]
+Elemento rimosso: 0
+Testa della coda: 1
+Dimensione: 4
 ```
 
 ---
 
-## Implementazione di Queue: PriorityQueue
+## Esempio: PriorityQueue
 
-Esempio di Queue.
+La **PriorityQueue** è una coda che **estrae gli elementi in base alla loro priorità**, non in ordine di inserimento.
+Gli elementi devono essere *comparabili* (implementare `Comparable`) o forniti con un `Comparator`.
 
 ```java
 Queue<String> coda = new PriorityQueue<>();
 
-//puoi aggiungere elementi  con add() e con offer()
-
-for (int i=0; i<50; i++) {
-	coda.offer("Stringa #" + i);
+for (int i = 0; i < 5; i++) {
+    coda.offer("Elemento #" + i);
 }
 
-//puoi rimuovere con remove()
-
-
-//con peek() ricevo l'elemento manon lo rimuovo
-
-//con poll() lo rimuovo
-
+// Stampa ed estrae in base all’ordine naturale
 while (!coda.isEmpty()) {
-	System.out.println(coda.poll());
+    System.out.println(coda.poll());
 }
 ```
 
-La PriorityQueue è una coda che estrae gli elementi secondo la priorità assegnata.
+> 🔸 A differenza di `LinkedList`, gli elementi vengono gestiti **secondo un ordinamento interno**.
+> 🔸 È utile per implementare **scheduler**, **gestori di eventi** o **code con priorità**.
 
 ---
 
-## Implementazione di Queue: Deque
+## Interfaccia Deque
 
-Deque è un'interfaccia che estende le funzionalità di Queue
+`Deque<E>` (*Double-Ended Queue*) estende `Queue` e permette di **inserire e rimuovere elementi da entrambe le estremità**.
+Può essere usata come:
+
+* **Queue** (FIFO)
+* **Stack** (LIFO)
+
+---
+
+### Esempio: Deque con LinkedList
 
 ```java
-Deque<String> deque
-            = new LinkedList<String>();
-  
-        // We can add elements to the queue
-        // in various ways
-  
-        // Add at the last
-        deque.add("Element 1 (Tail)");
-  
-        // Add at the first
-        deque.addFirst("Element 2 (Head)");
-  
-        // Add at the last
-        deque.addLast("Element 3 (Tail)");
-  
-        // Add at the first
-        deque.push("Element 4 (Head)");
-  
-        // Add at the last
-        deque.offer("Element 5 (Tail)");
-  
-        // Add at the first
-        deque.offerFirst("Element 6 (Head)");
-  
-        System.out.println(deque + "\n");
-  
-        // We can remove the first element
-        // or the last element.
-        deque.removeFirst();
-        deque.removeLast();
-        System.out.println("Deque after removing "
-                           + "first and last: "
-                           + deque);
+Deque<String> deque = new LinkedList<>();
+
+deque.add("Elemento 1 (Tail)");
+deque.addFirst("Elemento 2 (Head)");
+deque.addLast("Elemento 3 (Tail)");
+deque.push("Elemento 4 (Head)");
+deque.offer("Elemento 5 (Tail)");
+deque.offerFirst("Elemento 6 (Head)");
+
+System.out.println(deque);
+
+deque.removeFirst();
+deque.removeLast();
+System.out.println("Dopo rimozione testa e coda: " + deque);
+```
+
+**Output**
+
+```
+[Elemento 6 (Head), Elemento 4 (Head), Elemento 2 (Head), Elemento 1 (Tail), Elemento 3 (Tail), Elemento 5 (Tail)]
+Dopo rimozione testa e coda: [Elemento 4 (Head), Elemento 2 (Head), Elemento 1 (Tail), Elemento 3 (Tail)]
 ```
 
 ---
 
+### Esempio: ArrayDeque
+
+`ArrayDeque` è un’implementazione ad alte prestazioni di `Deque` basata su array ridimensionabile.
+
 ```java
-        // Initializing a deque
-        Deque<String> dq = new ArrayDeque<String>();
- 
-        // add() method to insert
-        dq.add("One");
- 
-        // addFirst inserts at the front
-        dq.addFirst("Two");
- 
-        // addLast inserts at the back
-        dq.addLast("Three");
- 
-        // print elements to the console
-        System.out.println("ArrayDeque : " + dq);
- 
-        // remove element as a stack from top/front
-        System.out.println(dq.pop());
- 
-        // remove element as a queue from front
-        System.out.println(dq.poll());
- 
-        // remove element from front
-        System.out.println(dq.pollFirst());
- 
-        // remove element from back
-        System.out.println(dq.pollLast());
+Deque<String> dq = new ArrayDeque<>();
+
+dq.add("One");
+dq.addFirst("Two");
+dq.addLast("Three");
+
+System.out.println("ArrayDeque: " + dq);
+
+// Come stack (LIFO)
+System.out.println("Pop: " + dq.pop());
+
+// Come queue (FIFO)
+System.out.println("Poll: " + dq.poll());
+System.out.println("PollFirst: " + dq.pollFirst());
+System.out.println("PollLast: " + dq.pollLast());
 ```
 
 ---
 
-## Metodi principali
+## Metodi principali di Queue e Deque
 
-
-* `removeFirst()`
-* `removeLast()`
-* `poll()`
-* `pop()`
-* `addFirst()`
-* `addLast()`,
-* `pollFirst()`
-* `pollLast()`
-* `offer(element)`
-* `offerFirst(element)`
-* `offerLast(element)`
-* `peek(element)`
-* `peekFirst(element)`
-* `peekLast(element)`
+| Metodo                               | Descrizione                                                |
+| ------------------------------------ | ---------------------------------------------------------- |
+| `offer(E e)`                         | Inserisce un elemento in coda                              |
+| `poll()`                             | Rimuove e restituisce l’elemento in testa                  |
+| `peek()`                             | Restituisce la testa senza rimuoverla                      |
+| `addFirst(E e)` / `addLast(E e)`     | Inserisce in testa/coda                                    |
+| `removeFirst()` / `removeLast()`     | Rimuove dalla testa/coda                                   |
+| `pollFirst()` / `pollLast()`         | Rimuove e restituisce testa/coda (null se vuoto)           |
+| `offerFirst(E e)` / `offerLast(E e)` | Inserisce in testa/coda se possibile                       |
+| `peekFirst()` / `peekLast()`         | Restituisce testa/coda senza rimuovere                     |
+| `pop()`                              | Rimuove e restituisce l’elemento in testa (come uno stack) |
 
 ---
 
-### thread-safe
+## Queue thread-safe
 
-Le classi thread-safe si trovano nel package `java.util.concurrent`, per esempio `PriorityBlockingQueue`
+Le implementazioni **thread-safe** di code e deque si trovano nel package `java.util.concurrent`:
+
+| Classe                  | Descrizione                               |
+| ----------------------- | ----------------------------------------- |
+| `ConcurrentLinkedQueue` | Coda non bloccante, altamente performante |
+| `LinkedBlockingQueue`   | Coda bloccante basata su lista            |
+| `PriorityBlockingQueue` | Versione thread-safe di `PriorityQueue`   |
+| `ArrayBlockingQueue`    | Coda a dimensione fissa, bloccante        |
+| `LinkedBlockingDeque`   | Implementazione di `Deque` bloccante      |
+
+> Queste classi sono fondamentali per la **programmazione concorrente** in Java (es. produttore/consumatore).
+
+---
+
+## Riepilogo
+
+| Tipo di Queue           | Ordine                | Thread-safe | Note                             |
+| ----------------------- | --------------------- | ----------- | -------------------------------- |
+| `LinkedList`            | FIFO                  | ❌           | Implementa anche `Deque`         |
+| `PriorityQueue`         | Ordinata per priorità | ❌           | Usa `Comparable`/`Comparator`    |
+| `ArrayDeque`            | FIFO / LIFO           | ❌           | Alternativa efficiente a `Stack` |
+| `PriorityBlockingQueue` | Ordinata per priorità | ✅           | Uso concorrente                  |
+| `ConcurrentLinkedQueue` | FIFO                  | ✅           | Uso concorrente non bloccante    |
+
+---
+
+## Approfondimenti
+
+* [Implementazione di List](./022_JCF_List.md)
+* [Implementazione di Set](./022_JCF_Set.md)
+* [Implementazione di Map](./022_JCFLike_Map.md)
+* [Algoritmi del Java Collections Framework](./022_JCF_Algoritmi.md)
+
+---
+
+📘 *Fonte originale: Manuale Java - Claudio De Sio Cesari (rielaborata e aggiornata da M. Boglia)*
+

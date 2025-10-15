@@ -1,236 +1,219 @@
-
 # List
 
-* Una List è una collezione ordinata. In una lista viene sempre associato un indice a ogni elemento, che equivale alla posizione dell’elemento stesso all’interno della lista.
-* Una lista ammette elementi duplicati (distinguibili dalla posizione).
-
-* Contiene elementi con ordine specifico 
-* Elementi duplicati
-* `ArrayList`
-  * Implementazione di una lista mediante array
-  * Ricerca veloce
-  * Inserzione/cancellazione lenta
-* `LinkedList`
-  * Implementa di una lista mediante lista linkata
-  * Ottimo accesso sequenziale
-  * Ottima inserzione e cancellazione
-  * Accesso diretto lento
-* `Vector`
-  * Mantenuto per compatibilità
-  * Più lento di ArrayList
+Una **List** è una **collezione ordinata** che mantiene un **indice numerico** per ogni elemento.
+Gli elementi sono accessibili per posizione e possono essere **duplicati**, poiché l’identificazione avviene tramite indice.
 
 ---
 
-## Implementazione di List
+## Caratteristiche principali
 
-L’interfaccia List rappresenta un insieme di elementi. Sono permessi elementi duplicati.
+| Proprietà                | Descrizione                                          |
+| ------------------------ | ---------------------------------------------------- |
+| Ordinata                 | Gli elementi sono memorizzati in un ordine preciso   |
+| Indicizzata              | Ogni elemento è accessibile tramite un indice intero |
+| Duplicati                | Sono ammessi elementi duplicati                      |
+| Posizione deterministica | L’ordine di inserimento è mantenuto                  |
 
-Gli oggetti vengono memorizzati in locazioni di memoria contigue quindi è possibile accedere a ciascun oggetto molto velocemente mediante il suo indice all’interno della collezione. 
+Le principali implementazioni sono:
 
-Non è adatta per operazioni di ricerca poiché occorrerebbe scorrere tutta la lista per ricercare un oggetto al suo interno. È possibile scorrere facilmente la lista sia mediante la classe iterator che mediante accesso diretto utilizzando l’indice dell’oggetto.
-
-La classe astratta **AbstractList**, che estende **AbstractCollection**, definisce un modello di comportamento generico per la costruzione di liste. 
-
----
-
-Sostanzialmente, le liste sono come degli array dinamici, che possono variare "al volo" le loro dimensioni, per fare spazio a più o meno elementi. 
-
-Esistono diversi tipi di liste, secondo la loro implementazione. 
-
-Dentro **java.util** trovano posto due classi derivate da **AbstractList**, chiamate **Vector** e **ArrayList**.
-
-Entrambe forniscono un'implementazione completa e funzionante del concetto di lista.
-
-
-ArrayList ha prestazioni nettamente superiori rispetto a Vector in quanto quest’ultima è sincronizzata di default mentre ArrayList non lo è (i metodi di accesso agli oggetti non sono Synchronized).
+| Implementazione | Struttura interna            | Vantaggi                        | Svantaggi                           |
+| --------------- | ---------------------------- | ------------------------------- | ----------------------------------- |
+| `ArrayList`     | Array dinamico               | Accesso diretto veloce          | Inserzione e cancellazione lente    |
+| `LinkedList`    | Lista doppiamente collegata  | Inserzione/cancellazione rapide | Accesso diretto lento               |
+| `Vector`        | Array dinamico sincronizzato | Thread-safe (vecchio)           | Prestazioni inferiori a `ArrayList` |
 
 ---
 
-## I metodi delle Collection sono i seguenti
+## L’interfaccia List
 
-* `public boolean add(Object o)`
-aggiunge un oggetto alla Collection
-* `public boolean addAll(Collection c)`
-aggiunge una collection di oggetti alla collection considerata
-* `public void clear()`
-svuota la collection
-* `public boolean contains(Object o)`
-verifica l’esistenza di un oggetto all’interno della collection
-* `public boolean containsAll(Collection c)`
-verifica l’esistenza di una collection all’interno della collection considerata
-* `public boolean isEmpty()`
-verifica se la collection è vuota
+L’interfaccia `List<E>` estende `Collection<E>` e rappresenta una sequenza ordinata di elementi.
 
----
+> Permette di accedere, inserire o rimuovere elementi in posizioni specifiche.
 
-## I metodi delle Collection (segue)
+### Ereditarietà
 
-* `public Iterator iterator()`
-restituisce un’istanza di Iterator che permette di scorrere gli elementi
-* `public boolean remove(Object o)`
-rimuove un oggetto dalla collection
-* `public boolean removeAll(Collection c)`
-rimuove una collection dalla collection considerata
-* `public int size()`
-restituisce il numero di elementi presenti nella collection
-* `public Object[] toArray()`
-restituisce la collection sottoforma di array
-* `public Object[] toArray(Object[] a)`
-restituisce la collection sottoforma di array
-
----
-
-### ArrayList e Vector: Metodi pubblici
-
-* `void add(int i, Object o)`
-Aggiunge l'oggetto o alla lista, disponendolo alla posizione i. Se la posizione è già occupata, l'elemento corrispondente e tutti i suoi successivi verranno avanzati di un posto.
-* `boolean add(Object o)`
-	Aggiunge l'oggetto o in coda alla lista.
-* `void clear()`
-		Ripulisce la lista, eliminando tutti i suoi elementi.
-* `Object clone()`
-Clona l'oggetto. ArrayList implementa l'interfaccia cloneable.
-* `boolean contains(Object o)`
-Restituisce true se la lista contiene l'oggetto o.
-* `boolean equals(Object o)`
-Restituisce true se o è una lista dal contenuto identico all'oggetto di invocazione.
-* `Object get(int i)`
-	Restituisce l'elemento alla posizione i.
-
----
-
-### ArrayList e Vector: Metodi pubblici (segue)
-
-* `int indexOf(Object o)`
-	Restituisce l'indice dell'elemento o, o -1 se l'elemento non compare nella lista.
-* `boolean isEmpty()`
-	Restituisce true se la lista è vuota.
-* `Object remove(int i)`
-	Individua l'elemento alla posizione i, lo rimuove dalla lista e lo restituisce al codice chiamante. Tutti gli elementi successivi saranno arretrati di una posizione.
-* `Object set(int i, Object o)`
-Sostituisce con o l'elemento alla posizione i. Restituisce l'elemento rimpiazzato.
-* `int size()`
-		Restituisce il numero di elementi nella lista.
-* `Object[] toArray()`
-	Converte la lista in un array.
-
----
-
-## Esempio di ArrayList e Vector.
-
-ArrayList | Vector
------------- | -------------
-ArrayList lista = new ArrayList();	|Vector vett = new Vector();
-lista.add("paperino");				|vett.add("paperino");
-lista.add("pluto");				|vett.add("pluto");
-lista.add("pippo");				|vett.add("pippo");
-Iterator it = lista.iterator();		|Iterator it = vett.iterator();
-while (it.hasNext()) {			|while (it.hasNext()) {
-   out.print(it.next());		   	  | out.print(it.next());
-}							|}
-
----
-
-## La classe ArrayList 
-
-* `public class ArrayList<E> extends AbstractList<E> implements List<E>, RandomAccess, Cloneable, Serializable` 
-
-* Package java.util 
-
-La classe ArrayList permette di gestire array di oggetti dinamici. E indica il tipo di elementi contenuti nell’array.
-
-## Costruttore 
-`new ArrayList<T>()` 
-
-Costruisce una array dinamico di oggetti con una capacità iniziale di 10 elementi. 
-
----
-
-### add 
-* `boolean add (Object oggetto)`
-Inserisce l'oggetto specificato alla fine del vettore restituisce true 
-* `void add (int indice,Object oggetto)`
-Inserisce l'oggetto nella posizione specificata all'interno del vettore, spostando gli elementi già presenti di una posizione verso destra 
-restituisce true 
-
-### clear 
-* `void clear() `
-* elimina tutti gli elementi presenti nel vettore 
- 
-### contains 
-* `boolean contains(Object oggetto)`
-* restituisce true se il vettore contiene l'elemento specificato; false altrimenti 1 
-
-### get 
-* `Object get(int indice)`
-* restituisce l'elemento che si trova nella posizione specificata 
-* 
-### remove 
-* `Object remove(int indice)`
-* rimuove l'elemento che si trova nella posizione specificata, spostando gli elementi già presenti di una posizione verso sinistra 
-
-### isEmpty 
-* `boolean isEmpty()`
-* restituisce true se l'array è vuoto; false altrimenti 
-* 
-### set 
-* `Object set(int indice,Object oggetto)`
-sostituisce l'elemento nella posizione indicata, con l'oggetto specificato 
-restituisce l'elemento che si trovava in precedenza nella posizione indicata e che è stato 
-sostituito 
-
-### size 
-* `int size() `
-* restituisce il numero di elementi dell'array 
-
----
-
-### LinkedList
-
-Funzionalità di una LinkedList
-  * Aggiunge in prima posizione
-
-void addFirst (Object o)
-  * Aggiunge in ultima posizione
-void addLast (Object o)
-  * Restituisce l'elemento di posizione index
-Object get(int index)
-  * Estrae il primo elemento della lista
-Object getFirst()
-  * Estrae l'ultimo elemento della lista
-Object getLast()
-  * Restituisce l'indice dell'ultimo elemento uguale a
-c
-int lastIndexOf (Object c)
-  * Eliminano e restituiscono il primo (l'ultimo) elemento
-
-```java
-Object removeFirst ()
-Object removeLast ()
+```
+Collection<E>
+   ↳ List<E>
+       ↳ ArrayList<E>
+       ↳ LinkedList<E>
+       ↳ Vector<E>
 ```
 
+La classe astratta **AbstractList** (che estende **AbstractCollection**) fornisce un modello di base per creare implementazioni personalizzate di liste.
+
+---
+
+## Concetto chiave
+
+Una **List** può essere vista come un **array dinamico**, la cui dimensione si adatta automaticamente in base agli inserimenti o alle rimozioni di elementi.
+È molto usata quando la quantità di dati non è nota in anticipo.
+
+---
+
+## Metodi principali di Collection (ereditati da List)
+
+| Metodo                                      | Descrizione                                               |
+| ------------------------------------------- | --------------------------------------------------------- |
+| `boolean add(E e)`                          | Aggiunge un elemento in fondo                             |
+| `boolean addAll(Collection<? extends E> c)` | Aggiunge tutti gli elementi di un’altra collezione        |
+| `void clear()`                              | Rimuove tutti gli elementi                                |
+| `boolean contains(Object o)`                | Verifica se l’elemento è presente                         |
+| `boolean containsAll(Collection<?> c)`      | Verifica se tutti gli elementi specificati sono contenuti |
+| `boolean isEmpty()`                         | Ritorna `true` se la lista è vuota                        |
+| `Iterator<E> iterator()`                    | Restituisce un iteratore per scorrere gli elementi        |
+| `boolean remove(Object o)`                  | Rimuove la prima occorrenza dell’oggetto specificato      |
+| `boolean removeAll(Collection<?> c)`        | Rimuove tutti gli elementi contenuti in `c`               |
+| `int size()`                                | Numero di elementi presenti                               |
+| `Object[] toArray()`                        | Converte la lista in un array                             |
+
+---
+
+## Metodi specifici di List
+
+| Metodo                              | Descrizione                                   |
+| ----------------------------------- | --------------------------------------------- |
+| `void add(int index, E element)`    | Inserisce un elemento in posizione specifica  |
+| `E get(int index)`                  | Restituisce l’elemento all’indice specificato |
+| `E set(int index, E element)`       | Sostituisce l’elemento all’indice specificato |
+| `E remove(int index)`               | Rimuove l’elemento all’indice specificato     |
+| `int indexOf(Object o)`             | Primo indice dell’elemento specificato        |
+| `int lastIndexOf(Object o)`         | Ultimo indice dell’elemento specificato       |
+| `ListIterator<E> listIterator()`    | Restituisce un iteratore bidirezionale        |
+| `List<E> subList(int from, int to)` | Restituisce una vista parziale della lista    |
+
+---
+
+## `ArrayList`
+
+La classe `ArrayList<E>` è un’implementazione di `List` basata su **array ridimensionabile**.
+
 ```java
-edList ll = new LinkedList();
-// Crea LikedList
-ll.add("10");
-ll.add(new Integer(11);
-ll.addLast(new Integer(13));
-ll.addFirst(new Integer(20));
-11
+public class ArrayList<E> 
+    extends AbstractList<E> 
+    implements List<E>, RandomAccess, Cloneable, Serializable
+```
+
+**Package:** `java.util`
+
+### Costruttori principali
+
+```java
+new ArrayList<>();          // capacità iniziale 10
+new ArrayList<>(int capacity);
+new ArrayList<>(Collection<? extends E> c);
+```
+
+### Metodi più usati
+
+| Metodo                       | Descrizione                      |
+| ---------------------------- | -------------------------------- |
+| `boolean add(E e)`           | Aggiunge alla fine               |
+| `void add(int index, E e)`   | Inserisce in posizione specifica |
+| `void clear()`               | Svuota la lista                  |
+| `boolean contains(Object o)` | Verifica presenza                |
+| `E get(int index)`           | Restituisce elemento             |
+| `E set(int index, E e)`      | Sostituisce elemento             |
+| `E remove(int index)`        | Rimuove e restituisce elemento   |
+| `boolean isEmpty()`          | Verifica se vuota                |
+| `int size()`                 | Numero di elementi               |
+| `Object[] toArray()`         | Converte in array                |
+
+### Esempio
+
+```java
+ArrayList<String> lista = new ArrayList<>();
+lista.add("Paperino");
+lista.add("Pluto");
+lista.add("Pippo");
+
+for (String nome : lista) {
+    System.out.println(nome);
+}
 ```
 
 ---
 
-### Prestazioni & Algoritmi
+## `LinkedList`
 
-Vector/ArrayList vs. LinkedList
+`LinkedList<E>` implementa sia `List<E>` che `Deque<E>` e rappresenta una **lista doppiamente collegata**.
+Offre prestazioni ottime per inserimenti e cancellazioni in qualsiasi posizione.
 
-### Tempo d'accesso a elemento i-esimo
+### Metodi principali
 
-* Vector: costante
-* Linked List: lineare
+| Metodo                      | Descrizione                             |
+| --------------------------- | --------------------------------------- |
+| `void addFirst(E e)`        | Inserisce in testa                      |
+| `void addLast(E e)`         | Inserisce in coda                       |
+| `E getFirst()`              | Restituisce il primo elemento           |
+| `E getLast()`               | Restituisce l’ultimo elemento           |
+| `E removeFirst()`           | Rimuove e restituisce il primo elemento |
+| `E removeLast()`            | Rimuove e restituisce l’ultimo elemento |
+| `int lastIndexOf(Object o)` | Ultima occorrenza di un elemento        |
 
-### Tempo di inserimento in testa e di cancellazione in mezzo
+### Esempio
 
-* Vector: lineare
-* Linked List: costante
+```java
+LinkedList<Integer> ll = new LinkedList<>();
+ll.add(10);
+ll.add(11);
+ll.addLast(13);
+ll.addFirst(20);
+
+System.out.println(ll); // [20, 10, 11, 13]
+```
+
+---
+
+## `Vector` (obsoleta ma compatibile)
+
+`Vector<E>` è una vecchia implementazione sincronizzata di `List`.
+Oggi si preferisce usare `ArrayList`, più efficiente e moderna.
+
+```java
+Vector<String> vett = new Vector<>();
+vett.add("Paperino");
+vett.add("Pluto");
+vett.add("Pippo");
+
+Iterator<String> it = vett.iterator();
+while (it.hasNext()) {
+    System.out.println(it.next());
+}
+```
+
+> ✅ Usa `ArrayList` a meno che non sia richiesta **sincronizzazione automatica**.
+
+---
+
+## Prestazioni: ArrayList vs LinkedList
+
+| Operazione                | `ArrayList`            | `LinkedList`            |
+| ------------------------- | ---------------------- | ----------------------- |
+| Accesso casuale (get/set) | **O(1)**               | **O(n)**                |
+| Inserimento in testa      | **O(n)**               | **O(1)**                |
+| Inserimento in coda       | **O(1)** (amortizzato) | **O(1)**                |
+| Cancellazione in mezzo    | **O(n)**               | **O(1)** (se nodo noto) |
+| Memoria                   | Più compatta           | Maggior overhead (link) |
+
+---
+
+## Riepilogo
+
+* Usa `ArrayList` per accesso rapido e frequenti letture.
+* Usa `LinkedList` per frequenti inserimenti e cancellazioni.
+* Evita `Vector`, usato solo per compatibilità legacy.
+
+---
+
+## Approfondimenti
+
+* [Implementazione di Queue](./022_JCF_Queue.md)
+* [Implementazione di Set](./022_JCF_Set.md)
+* [Implementazione di Map](./022_JCFLike_Map.md)
+* [Algoritmi del Java Collections Framework](./022_JCF_Algoritmi.md)
+
+---
+
+📘 *Fonte originale: Manuale Java - Claudio De Sio Cesari (rielaborata e aggiornata da M. Boglia)*
+

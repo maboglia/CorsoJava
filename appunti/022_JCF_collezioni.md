@@ -1,8 +1,9 @@
 # Framework Collections
 
-Tutte le classi che permettono di gestire gruppi di oggetti, costituiscono il Java Collections Framework.
+Il **Java Collections Framework (JCF)** fornisce un insieme unificato di **interfacce, classi e algoritmi** per gestire insiemi di oggetti in modo efficiente e flessibile.
+È parte integrante del package `java.util`.
 
-Una Collection è un contenitore in cui più oggetti vengono raggruppati in una singola entità, o meglio è una struttura dati che ha metodi usati per inserire, togliere, recuperare e gestire la struttura stessa.
+Una **Collection** è un contenitore che raggruppa più oggetti in una singola unità logica, offrendo metodi per **inserire**, **rimuovere**, **ricercare** e **gestire** gli elementi.
 
 ![JCF](https://raw.githubusercontent.com/maboglia/CorsoJava/master/appunti/img/java_jcf.gif)
 
@@ -10,127 +11,158 @@ Una Collection è un contenitore in cui più oggetti vengono raggruppati in una 
 
 ## Collections & Map
 
-**Collezione di elementi**
+### Collezione di elementi
 
-* Mantenuti mediante "reference"
-* Di tipo generico (Object)
-* Definiti nel package java.util
+* Gli elementi sono mantenuti tramite **reference**
+* Sono **oggetti generici** (possono essere di qualunque tipo, tramite generics)
+* Tutte le interfacce e classi risiedono in `java.util`
 
-**Non specifica se**
-* Ordinati / non ordinati
-* Con duplicati / senza duplicati
+### Caratteristiche non definite
 
-**Gruppo di oggetti singoli**
+Una `Collection` non specifica se:
 
-* List
-* Set
-* Queue
- 
-**Gruppo di coppie di oggetti**
+* Gli elementi sono **ordinati o non ordinati**
+* Gli elementi possono essere **duplicati o unici**
 
-* Map
+### Classificazione principale
 
----
+**Gruppi di oggetti singoli**
 
-Il **Java Collection Framework** è costituito dai seguenti elementi:
+* `List`
+* `Set`
+* `Queue`
 
-* __Interfacce__, che definiscono le operazioni classica di una generica collezione di oggetti
-  * Possono essere suddivise in __due macro-categorie__:
-    * __Collection__, che sono ottimizzate per operazioni di inserimento, modifica e cancellazione di elementi   all’interno di un insieme di oggetti
-    * __Map__, che sono ottimizzate per operazioni di ricerca
-* __Classi__, che implementano le interfacce utilizzando differenti tipi di strutture dati 
-* __Algoritmi__, che consistono in metodi per compiere operazioni sulle Collezioni, quali ad esempio operazioni di ordinamento e di ricerca
+**Gruppi di coppie chiave–valore**
+
+* `Map`
 
 ---
 
-**Vantaggi** 
-* possibilità di scrivere meno codice, 
-* incremento della performance, 
-* interoperabilità tra classi non relazionate tra loro, 
-* riusabilità, 
-* algoritmi complessi già a disposizione
+## Struttura del Framework
 
-Ad un primo livello si trovano le interfacce **Collection** e **Map**.
+Il **Java Collection Framework** è costituito da:
 
-**Collection** è estesa dalle interfacce **Set**, **List** e **Queue**.
+1. **Interfacce**
+   Definiscono le operazioni fondamentali sulle collezioni.
+   Si dividono in due categorie principali:
 
-Lo scopo di queste interfacce è permettere la manipolazione delle implementazioni indipendentemente dai dettagli di rappresentazione.
+   * **Collection**, ottimizzate per operazioni di inserimento, modifica e cancellazione di elementi.
+   * **Map**, ottimizzate per operazioni di ricerca basate su chiavi.
 
-Esistono implementazioni dell’interfaccia **Collection** che ammettono elementi duplicati e altre che non lo permettono, collezioni ordinate e non ordinate.
+2. **Classi**
+   Implementano le interfacce, utilizzando diverse **strutture dati interne** (array, liste collegate, alberi, hash table, ecc.).
 
-La libreria non mette a disposizione alcuna implementazione diretta di **Collection**, ma solo delle sue dirette sottointerfacce come **Set** e **List**.
-
----
-
-## Funzionalità di una Collection
-
-  * Aggiunta di un elemento alla fine; restituisce false se non inserisce
-    * `boolean add (Object o) e.g., <x>.add (<y>)`
-  * Aggiunge o in posizione i 
-    * `boolean add (int index, Object o)`
-  * Aggiunge tutti gli elementi di c
-    * `boolean addAll (Collection c)`
-  * Rimuove gli elementi dal contenitore
-    * `void clear()`
-  * Restituisce true se contiene o
-    * `boolean contains (Object o)`
-  * Restituisce true se contiene tutti gli elementi specificati in c
-    * `boolean containsAll (Collection c)`
+3. **Algoritmi**
+   Sono metodi statici (principalmente nella classe `Collections`) che consentono operazioni comuni come **ordinamento**, **ricerca**, **shuffling**, **reverse**, ecc.
 
 ---
 
-## Funzionalità di una Collection II
+## Vantaggi del Framework Collections
 
-  * Controlla se la struttura è vuota; restituisce true in questo caso
-    * `boolean isEmpty (Object o) e.g., if (<x>.isEmpty())` ...
-  * Rimuove l'oggetto o 
-    * `boolean remove (Object o)`
-  * Rimuove elemento di posizione index
-    * `Object remove (int index)`
-  * Rimuove tutti gli elementi specificati in c
-    * `void removeAll (Collection c)`
-  * Restituisce il numero di elementi del contenitore
-    * `int size ()`
-  * Restituisce l'array di object contenente tutti gli elementi
-    * `Object [] toArray()`
-  * Restituisce un iteratore per scorrere la collection
-    * `Iterator iterator()`
+* Riduzione del codice da scrivere
+* Migliori performance grazie a implementazioni ottimizzate
+* Interoperabilità tra classi non direttamente correlate
+* Elevato grado di riusabilità
+* Disponibilità di algoritmi complessi già implementati
 
 ---
 
-## Iterator
+## Gerarchia delle principali interfacce
 
-Astrae il problema di iterare su tutti gli elementi di una collection
+* **Collection** è la superinterfaccia generale, estesa da:
 
-### L'iterazione
-  * Crea l'iteratore: `public Iterator (Collection c)`
-  * Esiste un elemento successivo? `public boolean hasNext()`
-  * Preleva l'elemento successivo `public Object next()`
+  * `List`
+  * `Set`
+  * `Queue`
 
----
+* **Map** è separata da `Collection`, ma fa parte dello stesso framework.
 
+Le interfacce permettono di **manipolare le collezioni indipendentemente dall’implementazione concreta**, che può essere:
 
-## Strutture obsolete
+* Ordinata o non ordinata
+* Con o senza duplicati
 
-### Vengono mantenute per compatibilità
-
-* Vector
-* Enumeration
-* Hashtable
-* Stack
-* BitSet
-
+> ⚠️ Non esiste un’implementazione diretta di `Collection`.
+> Le implementazioni concrete riguardano le sue sottointerfacce (`List`, `Set`, `Queue`).
 
 ---
 
-## Framework Collections	
-* [Implementazione di List](./022_JCF_List.md)	
-* [Implementazione di Set](./022_JCF_Set.md)	
-* [Implementazione di Map](./022_JCFLike_Map.md)	
-* [Implementazione di Queue](./022_JCF_Queue.md)	
-* Metodi delle Collection e delle Map	
-* Algoritmi del Java Collections Framework	
-* Collections e Generics	
-* Classe StringTokenizer	
+## Principali metodi di una Collection
 
-___source: Manuale Java - Claudio De Sio Cesari___
+| Operazione                                                       | Descrizione                     | Metodo                                      |
+| ---------------------------------------------------------------- | ------------------------------- | ------------------------------------------- |
+| Aggiungere un elemento                                           | Inserisce un nuovo elemento     | `boolean add(E e)`                          |
+| Aggiungere in posizione specifica (solo `List`)                  | Inserisce in indice specificato | `void add(int index, E e)`                  |
+| Aggiungere tutti gli elementi di un’altra collezione             | Unisce due collezioni           | `boolean addAll(Collection<? extends E> c)` |
+| Rimuovere tutti gli elementi                                     | Svuota la collezione            | `void clear()`                              |
+| Verificare se contiene un elemento                               | Ricerca per uguaglianza         | `boolean contains(Object o)`                |
+| Verificare se contiene tutti gli elementi di un’altra collezione |                                 | `boolean containsAll(Collection<?> c)`      |
+
+---
+
+## Altri metodi utili
+
+| Operazione                                                   | Descrizione                             | Metodo                               |
+| ------------------------------------------------------------ | --------------------------------------- | ------------------------------------ |
+| Verificare se è vuota                                        | Ritorna `true` se non ci sono elementi  | `boolean isEmpty()`                  |
+| Rimuovere un elemento specifico                              | Cancella il primo elemento uguale a `o` | `boolean remove(Object o)`           |
+| Rimuovere in posizione specifica (solo `List`)               | Cancella l’elemento all’indice `index`  | `E remove(int index)`                |
+| Rimuovere tutti gli elementi presenti in un’altra collezione |                                         | `boolean removeAll(Collection<?> c)` |
+| Restituire la dimensione                                     | Numero di elementi                      | `int size()`                         |
+| Convertire in array                                          |                                         | `Object[] toArray()`                 |
+| Ottenere un iteratore                                        | Per scorrere gli elementi               | `Iterator<E> iterator()`             |
+
+---
+
+## L’interfaccia Iterator
+
+L’interfaccia `Iterator` astrae il meccanismo di scorrimento degli elementi di una collezione, indipendentemente dalla sua struttura interna.
+
+### Metodi principali
+
+```java
+Iterator<String> it = collection.iterator();
+
+while (it.hasNext()) {
+    String elemento = it.next();
+    System.out.println(elemento);
+}
+```
+
+| Metodo              | Descrizione                                     |
+| ------------------- | ----------------------------------------------- |
+| `boolean hasNext()` | Ritorna `true` se esiste un elemento successivo |
+| `E next()`          | Restituisce l’elemento successivo               |
+| `void remove()`     | Rimuove l’ultimo elemento restituito            |
+
+---
+
+## Classi considerate “obsolete”
+
+Mantenute per compatibilità con versioni precedenti di Java, ma **non consigliate per nuovi progetti**:
+
+* `Vector`
+* `Stack`
+* `Hashtable`
+* `Enumeration`
+* `BitSet`
+
+> Usa invece `ArrayList`, `Deque`, `HashMap` e gli iteratori moderni.
+
+---
+
+## Framework Collections – Approfondimenti
+
+* [Implementazione di List](./022_JCF_List.md)
+* [Implementazione di Set](./022_JCF_Set.md)
+* [Implementazione di Map](./022_JCFLike_Map.md)
+* [Implementazione di Queue](./022_JCF_Queue.md)
+* Metodi delle Collection e delle Map
+* Algoritmi del Java Collections Framework
+* Collections e Generics
+* Classe StringTokenizer
+
+---
+
+📘 *Fonte originale: Manuale Java - Claudio De Sio Cesari (versione aggiornata e riorganizzata)*
+
