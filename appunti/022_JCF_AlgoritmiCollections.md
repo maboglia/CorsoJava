@@ -1,103 +1,155 @@
-# Algoritmi del Java Collections Framework
+# 🧠 Algoritmi del Java Collections Framework
 
-Tra le carateristiche offerte dal Collection Framework esistono classi ed algoritmi come, ad esempio, quelli di ordinamento che se avessimo usato array o altre strutture avremmo dovuto definire ad-hoc.
+## 🔍 Introduzione
 
----
-
-## Collections ha metodi che implementano complicati algoritmi come:
-
-* **sort()** (ordina)
-* **shuffle()** (mischia – il contrario di ordina)
-* **max()** (restituisce l’elemento massimo)
-* **reverse()** (inverte l’ordine degli elementi)
-* **binarySeach()** (ricerca binaria)
-
-Altri metodi, detti "di convenienza", permettono la creazione di:
-* **collection immutabili** di un numero definito di oggetti identici (metodo ncopies())
-* **un oggetto singleton**, che si può istanziare una sola volta (metodo singleton())
+Il **Java Collections Framework (JCF)** fornisce una serie di **algoritmi statici** nella classe `Collections`, che operano direttamente sulle strutture dati come `List`, `Set`, `Map` ecc.
+Questi algoritmi sono **già ottimizzati**, **testati** e **riutilizzabili**.
 
 ---
 
-## ESEMPIO
+## ⚙️ Principali algoritmi disponibili in `java.util.Collections`
 
-utilizzare gli algoritmi per ordinare una lista.
+| Metodo                                              | Descrizione                                                                     | Note                          |
+| --------------------------------------------------- | ------------------------------------------------------------------------------- | ----------------------------- |
+| `sort(List<T> list)`                                | Ordina gli elementi in base all’ordinamento naturale (definito da `Comparable`) |                               |
+| `sort(List<T> list, Comparator<? super T> c)`       | Ordina la lista secondo un criterio personalizzato (`Comparator`)               |                               |
+| `shuffle(List<?> list)`                             | Mischia casualmente gli elementi della lista                                    | Utile per test o giochi       |
+| `reverse(List<?> list)`                             | Inverte l’ordine degli elementi                                                 |                               |
+| `max(Collection<? extends T> coll)`                 | Restituisce l’elemento massimo                                                  | Richiede elementi comparabili |
+| `min(Collection<? extends T> coll)`                 | Restituisce l’elemento minimo                                                   |                               |
+| `binarySearch(List<? extends T> list, T key)`       | Ricerca binaria (lista ordinata)                                                | Richiede lista già ordinata   |
+| `fill(List<? super T> list, T obj)`                 | Riempie la lista con un elemento specifico                                      |                               |
+| `copy(List<? super T> dest, List<? extends T> src)` | Copia elementi da una lista a un’altra                                          |                               |
+| `nCopies(int n, T obj)`                             | Crea una lista immutabile con *n* copie dello stesso oggetto                    |                               |
+| `singleton(T obj)`                                  | Crea una lista/set immutabile contenente un solo elemento                       |                               |
+| `unmodifiableList(Collection<? extends T> c)`       | Restituisce una vista non modificabile della lista                              | Utile per sicurezza dati      |
+
+---
+
+## 🧩 Esempio pratico: ordinamento di oggetti personalizzati
+
+### Classe `Persona`
 
 ```java
-public static void main(String[] args) {
-	List<Persona> persone = new ArrayList<Persona>();
+public class Persona implements Comparable<Persona> {
+    private String nome;
+    private String cognome;
+    private int eta;
 
-	persone.add(new Persona(27, "marco", "bianco"));
-	persone.add(new Persona(80, "luca", "arancio"));
-	persone.add(new Persona(75, "giovanni", "rossi"));
-	persone.add(new Persona(29, "mario", "bianchi"));
+    public Persona(int eta, String nome, String cognome) {
+        this.eta = eta;
+        this.nome = nome;
+        this.cognome = cognome;
+    }
 
-	System.out.println("Lista non ordinata");
-	print(persone);
+    public String getNome() { return nome; }
+    public String getCognome() { return cognome; }
+    public int getEta() { return eta; }
 
-	System.out.println("Ordina per eta");
-	Collections.sort(persone);
-	print(persone);
+    @Override
+    public String toString() {
+        return nome + " " + cognome + " (" + eta + ")";
+    }
 
-	System.out.println("Ordina per cognomi");
-	Collections.sort(persone, new CognomeComparator());
-	print(persone);
-}
-
-private static void print(Collection<Persona> coll) {
-	Iterator<Persona> it = coll.iterator();
-
-	while (it.hasNext()) {
-		Persona p = it.next();
-		System.out.println(p.getNome() + " " +
-   p.getCognome() + " " +
-   p.getEta());
-	}
+    @Override
+    public int compareTo(Persona p) {
+        return Integer.compare(this.eta, p.eta);
+    }
 }
 ```
 
 ---
 
+### Comparator per cognome
+
 ```java
-public class Persona implements Comparable<Persona>{
-private String nome;
-private String cognome;
-private int eta;
+import java.util.Comparator;
 
-public Persona() {}
-
-public Persona(int eta, String nome, String nome) {
-	setEta(eta);
-	setNome(nome);
-	setCognome(cognome);
-}
-
-public String toString() {
-	return nome + " " + cognome + " " + eta;
-}
-
-public boolean equals(Persona p) {
-	if (cognome.equals(p.getCognome()) && 
-    nome.equals(p.getNome()) &&
-    eta == p.getEta())
-	return true;
-else
-	return false;
-}
-
-public int compareTo(Persona p) {
-	if (getEta() == p.getEta())	return 0;
-	else if (getEta()>p.getEta())	return 1;
-	else 						return -1;	
+public class CognomeComparator implements Comparator<Persona> {
+    @Override
+    public int compare(Persona p1, Persona p2) {
+        return p1.getCognome().compareTo(p2.getCognome());
+    }
 }
 ```
 
 ---
 
-Sono stati usati due metodi per ordinare la lista:
+### Esempio d’uso
 
-`Collections.sort(persone)` che riceve in input una List di oggetti che implementano l’interfaccia Comparable. 
-Nell’esempio gli elementi vengono ordinati in base all’età
+```java
+import java.util.*;
 
-`Collections.sort(persone, new CognomeComparator())` che riceve in input una List di oggetti e un’istanza di una classe che implementa l’interfaccia Comparator. 
+public class Main {
+    public static void main(String[] args) {
+        List<Persona> persone = new ArrayList<>();
+        persone.add(new Persona(27, "Marco", "Bianco"));
+        persone.add(new Persona(80, "Luca", "Arancio"));
+        persone.add(new Persona(75, "Giovanni", "Rossi"));
+        persone.add(new Persona(29, "Mario", "Bianchi"));
 
-Nell’esempio gli elementi vengono ordinati in base al cognome. Naturalmente è possibile creare diversi Comparator che permettono di ordinare la lista in altrettanti modi
+        System.out.println("Lista non ordinata:");
+        print(persone);
+
+        System.out.println("\nOrdina per età:");
+        Collections.sort(persone);
+        print(persone);
+
+        System.out.println("\nOrdina per cognome:");
+        Collections.sort(persone, new CognomeComparator());
+        print(persone);
+
+        System.out.println("\nInverte l’ordine:");
+        Collections.reverse(persone);
+        print(persone);
+    }
+
+    private static void print(Collection<Persona> coll) {
+        for (Persona p : coll) {
+            System.out.println(p);
+        }
+    }
+}
+```
+
+---
+
+## 🧮 Risultato esempio
+
+```
+Lista non ordinata:
+Marco Bianco (27)
+Luca Arancio (80)
+Giovanni Rossi (75)
+Mario Bianchi (29)
+
+Ordina per età:
+Marco Bianco (27)
+Mario Bianchi (29)
+Giovanni Rossi (75)
+Luca Arancio (80)
+
+Ordina per cognome:
+Luca Arancio (80)
+Marco Bianco (27)
+Mario Bianchi (29)
+Giovanni Rossi (75)
+
+Inverte l’ordine:
+Giovanni Rossi (75)
+Mario Bianchi (29)
+Marco Bianco (27)
+Luca Arancio (80)
+```
+
+---
+
+## ✅ Conclusione
+
+Gli **algoritmi di `Collections`** permettono di:
+
+* evitare codice duplicato o errori logici
+* ordinare, cercare, copiare, modificare e proteggere collezioni
+* applicare facilmente diversi criteri di ordinamento tramite `Comparable` e `Comparator`
+* garantire performance ottimali con strutture già ottimizzate
+
