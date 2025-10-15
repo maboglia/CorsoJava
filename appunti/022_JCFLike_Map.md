@@ -1,146 +1,314 @@
 # Map
 
+Una **Map** è una collezione che associa **chiavi (key)** a **valori (value)**.
+Ogni chiave è **univoca**, mentre i valori **possono essere duplicati**.
 
-* `Map` è una collezione che associa chiavi ai suoi elementi. Le mappe non possono contenere chiavi duplicate e ogni chiave può essere associata a un solo valore.
+È la struttura dati ideale per gestire **coppie chiave-valore**, come:
 
-* `Map` non è propriamente una Collection poiché non implementa l’interfaccia Collection.
-* Associazione chiave-valore (key-value)
-  * codice fiscale - persona
-  * matricola - studente
-* Permette ricerche data la chiave
-* Non possono esserci chiavi duplicate
-
----
-
-## Implementazioni di Map  
-
-* **HashMap**
-  * Implementazione basata su tabella di hash
-  * Possibile impostare capacità e fattore di carico per ottimizzare le prestazioni
-* **TreeMap**
-  * Implementazione basata su struttura ad albero
-  * Si ottengono i dati ordinati
-  * Disponibilità del metodo subMap() che fornisce un sotto-albero
-* **LinkedHashMap**
-  * Sottoclasse dell'HashMap
-  * Mantiene l'ordine di inserimento dei dati grazie a una lista (in aggiunta alla hash)
-  * Gli iterator forniscono l'ordine di inserzione
-
+* codice fiscale → persona
+* matricola → studente
+* targa → automobile
 
 ---
 
+## Caratteristiche principali
 
-## Implementazione di Map e SortedMap
-
-L’interfaccia `Map` rappresenta un insieme di elementi, ad ognuno dei quali viene associata una chiave univoca. 
-
-Non sono permessi elementi duplicati e null.
-
-E’ preferibile usare le mappe piuttosto che i set in quanto è possibile ricercare facilmente un oggetto all’interno di una mappa a partire dalla sua chiave univoca ed anche perché è possibile accedere agli oggetti in modo veloce.
-
-Le implementazioni di `Map` sono HashTable e `HashMap`.
-
-Un’implementazione di `SortedMap` è `TreeMap`. 
-
-Entrambe non ammettono elementi duplicati.
-
-`HashMap` risulta più performante di `HashTable`, in quanto quest’ultima è sincronizzata di default mentre `HashMap` non lo è 
-(i metodi di accesso agli oggetti non sono Synchronized)
-
-`HashMap` risulta più performante di `TreeMap`, in quanto quest’ultima gestisce l’ordinamento
+| Proprietà              | Descrizione                                                  |
+| ---------------------- | ------------------------------------------------------------ |
+| Duplicati              | ❌ Chiavi uniche, ✅ Valori duplicati                          |
+| Ordinamento            | Dipende dall’implementazione                                 |
+| Accesso agli elementi  | Tramite chiave                                               |
+| Interfaccia base       | `Map<K, V>`                                                  |
+| Derivata ordinata      | `SortedMap<K, V>`                                            |
+| Implementazioni comuni | `HashMap`, `LinkedHashMap`, `TreeMap`                        |
+| Thread-safe            | `Hashtable`, `ConcurrentHashMap` (in `java.util.concurrent`) |
 
 ---
 
-## I metodi delle Map sono i seguenti:
+## Differenze rispetto a Collection
 
-* `public void clear()`
-permette di svuotare la `Map`
-* `public boolean containsKey(Object arg0)`
-verifica l’esistenza di un oggetto all’interno della `Map` in base alla sua chiave
-* `public boolean containsValue(Object arg0)`
-verifica l’esistenza di un oggetto all’interno della `Map` in base al suo valore
-* `public Set entrySet()`
-restituisce la `Map` sottoforma di Set
-* `public Object get(Object arg0)`
-restituisce l’oggetto in base alla sua chiave
-* `public boolean isEmpty()`
-verifica se la `Map` è vuota
-* `public Set keySet()`
-restituisce le chiavi della `Map` sottoforma di Set
-* `public Object put(Object arg0, Object arg1)`
-aggiunge un oggetto alla `Map`
-* `public void putAll(Map arg0)`
-aggiunge una `Map` di oggetti alla `Map` considerata
-* `public Object remove(Object arg0)`
-rimuove un oggetto dalla `Map`
-* `public int size()`
-restituisce il numero di elementi presenti nella `Map`
-* `public Collection values()`
-restituisce la `Map` sottoforma di Collection
-
+> ⚠️ `Map` **non** estende `Collection`
+> perché gestisce coppie chiave–valore invece di singoli elementi.
 
 ---
 
+## Implementazioni principali
 
-
-### Funzionalità di un SortedMap (TreeMap)
-
-* `Comparator comparator ()` Produce meccanismo di confronto
-
-* `Object firstKey()` Produce la chiave più piccola
-
-* `Object lastKey()` Produce la chiave più grande
-
-* `SortedMap subMap(<from>, <to>)` Crea una sotto-map dalla map completa
-estraendono una porzione
-
-* `SortedMap headMap(<to>)` Crea una sotto-map con elementi minori di
-quello indicato
-
-* `SortedMap tailMap(<from>)` Crea una sotto-map con elementi maggiori o
-uguali a quello indicato
+| Implementazione | Ordinamento             | Duplicati          | Thread-safe | Note                            |
+| --------------- | ----------------------- | ------------------ | ----------- | ------------------------------- |
+| `HashMap`       | ❌ Nessuno               | ❌ Chiavi duplicate | ❌ No        | Molto veloce (hash table)       |
+| `LinkedHashMap` | ✅ Inserimento           | ❌ Chiavi duplicate | ❌ No        | Iterazione prevedibile          |
+| `TreeMap`       | ✅ Naturale o Comparator | ❌ Chiavi duplicate | ❌ No        | Ordinamento automatico          |
+| `Hashtable`     | ❌ Nessuno               | ❌ Chiavi duplicate | ✅ Sì        | Versione sincronizzata (legacy) |
 
 ---
 
-## Esempio di HashTable e HashMap.
-HashTable | HashMap
------------- | -------------
-HashTable hash = new HashTable();	|	HashMap map = new HashMap();
-hash.put("1", "Data attuale");		|	map.put("1", "Data attuale");
-hash.put("2", new Date());			|	map.put("2", new Date());
-hash.put("3", hash);				|	map.put("3", map);
-int size = hash.size();			|	int size = map.size();
-for (int i=1; 1<=size; i++) {		|	for (int i=1; 1<=size; i++) {
-   out.print(hash.get(""+i));		   |	out.print(map.get(""+i));
-}							|	}
+## Interfacce collegate
 
-E’ possibile aggiungere elementi mediante il metodo put(Object key, Object value) e si recuperano mediante il metodo get(Object key). 
-In particolare, il metodo get() permette un recupero molto performante dell’elemento della collezione, mediante la specifica della chiave.
+| Interfaccia         | Descrizione                                                                         |
+| ------------------- | ----------------------------------------------------------------------------------- |
+| `Map<K,V>`          | Gestisce associazioni chiave-valore                                                 |
+| `SortedMap<K,V>`    | Versione ordinata di `Map`                                                          |
+| `NavigableMap<K,V>` | Estensione di `SortedMap` con navigazione facilitata (`higherKey()`, `lowerKey()`…) |
 
 ---
 
-## Map.Entry ed entrySet()
+## Metodi principali di Map
 
-Per iterare sulle mappe occorre utilizzare, oltre al solito iterator, anche:
-
-* la **classe innestata** `Map.Entry`, la quale astrae una coppia di tipo chiave-valore che rappresenta un elemento di una mappa
-* il metodo **entrySet()** restituisce un insieme ordinato (in base alle chiavi) degli elementi della mappa
+| Metodo                                | Descrizione                                      |
+| ------------------------------------- | ------------------------------------------------ |
+| `void clear()`                        | Svuota la mappa                                  |
+| `boolean containsKey(Object key)`     | Verifica se esiste una chiave                    |
+| `boolean containsValue(Object value)` | Verifica se esiste un valore                     |
+| `V get(Object key)`                   | Restituisce il valore associato alla chiave      |
+| `V put(K key, V value)`               | Inserisce una coppia chiave–valore               |
+| `void putAll(Map m)`                  | Inserisce tutte le coppie di un’altra mappa      |
+| `V remove(Object key)`                | Rimuove una coppia tramite chiave                |
+| `Set<K> keySet()`                     | Restituisce l’insieme delle chiavi               |
+| `Collection<V> values()`              | Restituisce la collezione dei valori             |
+| `Set<Map.Entry<K,V>> entrySet()`      | Restituisce l’insieme delle coppie chiave–valore |
+| `int size()`                          | Numero di elementi                               |
+| `boolean isEmpty()`                   | Verifica se la mappa è vuota                     |
 
 ---
 
-## Iterator: l’iterazione sulle mappe.
+## Esempio: HashMap
 
 ```java
-HashMap<Integer, String> map = new HashMap<Integer, String>();
-map.put(1, "pippo");
-map.put(2, "pluto");
-map.put(3, "paperino");
-map.put(4, "quiquoqua");
-  
-Iterator<Map.Entry<Integer, String>> it = map.entrySet().iterator();
-while (it.hasNext()) {
-	Map.Entry<Integer, String> entry = it.next();
-	System.out.println("Chiave: " + entry.getKey());
-	System.out.println("Valore: " + entry.getValue());
+import java.util.*;
+
+public class HashMapExample {
+    public static void main(String[] args) {
+        Map<Integer, String> map = new HashMap<>();
+
+        map.put(1, "Pippo");
+        map.put(2, "Pluto");
+        map.put(3, "Paperino");
+        map.put(4, "Qui Quo Qua");
+
+        System.out.println("Chiave 3 → " + map.get(3));
+        System.out.println("Contiene chiave 2? " + map.containsKey(2));
+        System.out.println("Valori nella mappa: " + map.values());
+    }
 }
 ```
+
+**Output possibile:**
+
+```
+Chiave 3 → Paperino
+Contiene chiave 2? true
+Valori nella mappa: [Pippo, Pluto, Paperino, Qui Quo Qua]
+```
+
+---
+
+## Esempio: LinkedHashMap (ordine di inserimento)
+
+```java
+Map<String, Integer> linked = new LinkedHashMap<>();
+
+linked.put("Uno", 1);
+linked.put("Due", 2);
+linked.put("Tre", 3);
+
+System.out.println(linked);
+```
+
+**Output:**
+
+```
+{Uno=1, Due=2, Tre=3}
+```
+
+> Gli elementi vengono restituiti **nell’ordine di inserimento**.
+
+---
+
+## Esempio: TreeMap (ordinamento naturale)
+
+```java
+Map<String, Integer> tree = new TreeMap<>();
+
+tree.put("C", 3);
+tree.put("A", 1);
+tree.put("B", 2);
+
+System.out.println(tree);
+```
+
+**Output:**
+
+```
+{A=1, B=2, C=3}
+```
+
+> `TreeMap` ordina automaticamente le chiavi in **ordine crescente**.
+
+---
+
+## Esempio: Hashtable (thread-safe)
+
+```java
+import java.util.Hashtable;
+
+public class HashTableExample {
+    public static void main(String[] args) {
+        Hashtable<Integer, String> table = new Hashtable<>();
+
+        table.put(1, "Uno");
+        table.put(2, "Due");
+        table.put(3, "Tre");
+
+        System.out.println(table);
+    }
+}
+```
+
+**Output:**
+
+```
+{3=Tre, 2=Due, 1=Uno}
+```
+
+> `Hashtable` è sincronizzata ma **obsoleta** — meglio usare `ConcurrentHashMap`.
+
+---
+
+## Iterazione su una Map
+
+### 1️⃣ Usando `entrySet()`
+
+```java
+Map<Integer, String> map = new HashMap<>();
+map.put(1, "Pippo");
+map.put(2, "Pluto");
+map.put(3, "Paperino");
+
+for (Map.Entry<Integer, String> entry : map.entrySet()) {
+    System.out.println("Chiave: " + entry.getKey() + ", Valore: " + entry.getValue());
+}
+```
+
+---
+
+### 2️⃣ Usando `keySet()` e `values()`
+
+```java
+for (Integer key : map.keySet()) {
+    System.out.println("Chiave: " + key);
+}
+for (String value : map.values()) {
+    System.out.println("Valore: " + value);
+}
+```
+
+---
+
+## Esempio con `Iterator`
+
+```java
+Iterator<Map.Entry<Integer, String>> it = map.entrySet().iterator();
+while (it.hasNext()) {
+    Map.Entry<Integer, String> entry = it.next();
+    System.out.println(entry.getKey() + " → " + entry.getValue());
+}
+```
+
+---
+
+## SortedMap e TreeMap: metodi specifici
+
+| Metodo                           | Descrizione                                        |
+| -------------------------------- | -------------------------------------------------- |
+| `Comparator comparator()`        | Restituisce il comparatore usato per l’ordinamento |
+| `K firstKey()`                   | Chiave minima                                      |
+| `K lastKey()`                    | Chiave massima                                     |
+| `SortedMap subMap(K from, K to)` | Porzione compresa tra due chiavi                   |
+| `SortedMap headMap(K to)`        | Chiavi minori di `to`                              |
+| `SortedMap tailMap(K from)`      | Chiavi maggiori o uguali a `from`                  |
+
+---
+
+### Esempio: sottoMappe con TreeMap
+
+```java
+SortedMap<Integer, String> numeri = new TreeMap<>();
+
+numeri.put(1, "Uno");
+numeri.put(2, "Due");
+numeri.put(3, "Tre");
+numeri.put(4, "Quattro");
+numeri.put(5, "Cinque");
+
+System.out.println("HeadMap(<3): " + numeri.headMap(3));
+System.out.println("TailMap(3): " + numeri.tailMap(3));
+System.out.println("SubMap(2,5): " + numeri.subMap(2, 5));
+```
+
+**Output:**
+
+```
+HeadMap(<3): {1=Uno, 2=Due}
+TailMap(3): {3=Tre, 4=Quattro, 5=Cinque}
+SubMap(2,5): {2=Due, 3=Tre, 4=Quattro}
+```
+
+---
+
+## Confronto tra implementazioni
+
+| Caratteristica   | **HashMap**                 | **LinkedHashMap**      | **TreeMap**             | **Hashtable**             |
+| ---------------- | --------------------------- | ---------------------- | ----------------------- | ------------------------- |
+| Ordinamento      | ❌ Nessuno                   | ✅ Inserimento          | ✅ Naturale / Comparator | ❌ Nessuno                 |
+| Chiavi duplicate | ❌                           | ❌                      | ❌                       | ❌                         |
+| Valori duplicati | ✅                           | ✅                      | ✅                       | ✅                         |
+| Thread-safe      | ❌                           | ❌                      | ❌                       | ✅                         |
+| Null come chiave | ✅ (una sola)                | ✅ (una sola)           | ❌                       | ❌                         |
+| Null come valore | ✅                           | ✅                      | ❌                       | ❌                         |
+| Prestazioni      | ⚡ O(1)                      | ⚡ O(1)                 | 🕓 O(log n)             | 🐢 O(1), ma sincronizzata |
+| Uso tipico       | Accesso veloce senza ordine | Iterazione prevedibile | Mappa ordinata          | Accesso sincronizzato     |
+
+---
+
+## Esempio finale comparativo
+
+```java
+Map<String, Integer> hashMap = new HashMap<>();
+Map<String, Integer> linkedMap = new LinkedHashMap<>();
+Map<String, Integer> treeMap = new TreeMap<>();
+
+for (String k : List.of("B", "A", "C")) {
+    hashMap.put(k, 1);
+    linkedMap.put(k, 1);
+    treeMap.put(k, 1);
+}
+
+System.out.println("HashMap: " + hashMap);
+System.out.println("LinkedHashMap: " + linkedMap);
+System.out.println("TreeMap: " + treeMap);
+```
+
+**Output:**
+
+```
+HashMap: {A=1, B=1, C=1}     // ordine interno (non garantito)
+LinkedHashMap: {B=1, A=1, C=1} // ordine di inserimento
+TreeMap: {A=1, B=1, C=1}       // ordine naturale
+```
+
+---
+
+## Riepilogo
+
+| Tipo            | Ordinamento   | Thread-safe | Null | Complessità media | Uso consigliato            |
+| --------------- | ------------- | ----------- | ---- | ----------------- | -------------------------- |
+| `HashMap`       | ❌ Nessuno     | ❌ No        | ✅ Sì | O(1)              | Mappa veloce non ordinata  |
+| `LinkedHashMap` | ✅ Inserimento | ❌ No        | ✅ Sì | O(1)              | Ordine prevedibile         |
+| `TreeMap`       | ✅ Naturale    | ❌ No        | ❌ No | O(log n)          | Mappa ordinata             |
+| `Hashtable`     | ❌ Nessuno     | ✅ Sì        | ❌ No | O(1)              | Uso legacy / sincronizzato |
+
+---
+
+📘 *Fonte: Manuale Java – Claudio De Sio Cesari (rielaborata e aggiornata da M. Boglia)*
+
