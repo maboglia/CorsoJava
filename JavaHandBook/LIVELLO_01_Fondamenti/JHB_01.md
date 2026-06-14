@@ -1,4 +1,4 @@
-]633;E;for file in *.md;d7b66d70-15c6-4b14-b305-ea3ac94cf04f]633;C# Caratteristiche principali di Java
+# Caratteristiche principali di Java
 
 Java continua a essere uno dei linguaggi di programmazione più diffusi e utilizzati al mondo. Nato negli anni '90 da un team guidato da James Gosling e rilasciato da Sun Microsystems nel 1995, Java si è evoluto costantemente per rispondere alle esigenze dello sviluppo moderno, mantenendo al tempo stesso compatibilità, stabilità e affidabilità.
 
@@ -191,7 +191,8 @@ Queste funzionalità rendono Java più espressivo, moderno ed efficiente, manten
 Java continua a rappresentare una delle piattaforme di sviluppo più solide e complete disponibili. La combinazione di stabilità, retrocompatibilità, sicurezza, prestazioni e innovazione costante lo rende una scelta eccellente per lo sviluppo di applicazioni enterprise, servizi cloud, sistemi distribuiti e software professionale di ogni dimensione.
 
 L'evoluzione continua del linguaggio, unita alla maturità dell'ecosistema e alla disponibilità di framework come Spring Boot, garantisce a Java un ruolo centrale nello sviluppo software moderno.
-\n---\n
+
+---
 # Espressioni
 
 Le espressioni in programmazione sono combinazioni di valori, operatori e chiamate di funzioni che possono essere valutate per produrre un risultato. Le espressioni possono rappresentare calcoli aritmetici, valutazioni booleane, concatenazioni di stringhe e altro ancora. Le espressioni sono fondamentali per la creazione di logica e la manipolazione dei dati all'interno di un programma. Ecco alcuni esempi di espressioni:
@@ -394,7 +395,8 @@ Le espressioni in Java sono fondamentali per eseguire operazioni su dati, effett
 
 [esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/01_Operatori_Tipi.md)
 
-\n---\n
+
+---
 # Operatori nei linguaggi di programmazione
 
 Negli linguaggi di programmazione, gli operatori sono simboli speciali o parole chiave che eseguono operazioni su uno o più operandi. Gli operandi sono i valori o le variabili su cui l'operatore agisce. Gli operatori sono fondamentali per eseguire operazioni aritmetiche, logiche, di confronto e altre azioni specifiche all'interno di un programma. Ecco una breve definizione di alcuni tipi comuni di operatori:
@@ -576,7 +578,8 @@ Literal|Represents
 
 * [raccolta esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/01_Operatori_Tipi.md)
 * [altri esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/01_Operatori)
-\n---\n
+
+---
 ### Le variabili e le costanti in Java (2024)
 
 In Java, **variabili** e **costanti** sono i fondamenti per la gestione dei dati. Le variabili rappresentano delle aree di memoria destinate a memorizzare informazioni che possono cambiare durante l'esecuzione del programma, mentre le costanti sono utilizzate per memorizzare valori che rimangono invariati. Con le versioni avanzate del linguaggio Java, il concetto di variabili e costanti è rimasto centrale per il funzionamento e l'efficienza dei programmi.
@@ -749,7 +752,8 @@ Le variabili e le costanti rappresentano due elementi fondamentali nella program
 **Esempi e risorse aggiuntive:**
 
 - [Raccolta di esempi su variabili e costanti](https://github.com/maboglia/CorsoJava/blob/master/esempi/00_variabili_costanti.md)
-- [Altri esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/02_variabili)\n---\n
+- [Altri esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/02_variabili)
+---
 ### Tipi di dato primitivi in Java (2024)
 
 I **tipi di dato primitivi** rappresentano i costituenti fondamentali in Java. Essi forniscono le basi per la dichiarazione delle variabili e la gestione dei dati semplici, come numeri, caratteri e valori booleani. A differenza dei tipi di dato complessi, i tipi primitivi **non sono oggetti** e non possiedono metodi. Con l'evoluzione di Java fino al 2024, il loro ruolo rimane cruciale, specialmente per le operazioni di basso livello che richiedono efficienza e semplicità.
@@ -886,7 +890,8 @@ System.out.println(mioNumero);
 ### **Conclusioni**
 
 I **tipi primitivi** in Java rimangono fondamentali per la gestione di dati semplici e per garantire l'efficienza nelle applicazioni. Con l'evoluzione del linguaggio, Java ha mantenuto il focus sulla robustezza e sull'efficienza di questi tipi, continuando a renderli la scelta preferita per le operazioni di base, specialmente in ambiti ad alte prestazioni come il machine learning, l'intelligenza artificiale e i sistemi embedded.
-\n---\n
+
+---
 # Il controllo del flusso
 
 Java mette a disposizione del programmatore diverse strutture sintattiche per consentire il **controllo del flusso**
@@ -1188,7 +1193,8 @@ for (int i=0; i<n; i++) {
 * [giochi](https://github.com/maboglia/CorsoJava/tree/master/esercitazioni/LaboratorioJava/01_Giochi)
 * [programmi ](https://github.com/maboglia/CorsoJava/tree/master/esempi/06_control-flow/programmi )
 
-\n---\n
+
+---
 # Array
 
 * Sequenze ordinate di
@@ -1421,7 +1427,8 @@ voti[4] = new Integer (5);
 * [raccolta esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/05_Array.md)
 * [altri esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/03_array)
 * [esempi ed esercizi su array](https://gist.github.com/maboglia/112d52611f8fa02c1772e0b48405fc72)
-\n---\n
+
+---
 # 📚 Stringhe e Caratteri in Java
 
 La gestione delle stringhe è fondamentale in Java. La classe `String` e le relative utility offrono un'ampia varietà di metodi e funzionalità per manipolarle.
@@ -1699,7 +1706,8 @@ A. STR."Ciao {nome}"
 B. STR."Ciao \{nome}"
 C. String.format("Ciao %s", nome)
 D. STR."Ciao nome"
-\n---\n
+
+---
 # 🔄 Casting e Promotion in Java
 
 Il **casting** e la **promotion** sono due meccanismi che consentono di convertire valori da un tipo primitivo o reference a un altro.
@@ -1822,7 +1830,8 @@ Cane c = (Cane) a;        // downcasting (esplicito)
 ---
 
 [Altri esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/00_Foundations)
-\n---\n
+
+---
 # 🔹 Metodi in Java
 
 Un **metodo** è un concetto fondamentale della programmazione orientata agli oggetti (OOP).
@@ -2031,7 +2040,8 @@ public class Fuoristrada extends Automobile {
 
 * [raccolta esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/06_MetodiAusiliari.md)
 * [Esempi sui metodi ausiliari](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/03_metodi_ausiliari)
-\n---\n
+
+---
 # gestire e formattare i numeri
 
 In Java, ci sono diverse modalità per gestire e formattare i numeri, che variano a seconda del tipo di numero (intero, decimale, valuta, percentuale, ecc.). Le principali modalità per lavorare con i numeri sono:
@@ -2211,7 +2221,8 @@ System.out.println(result);  // 123.46
 - **`BigDecimal`**: Precisione elevata per operazioni con numeri decimali, utile per evitare imprecisioni nei calcoli finanziari.
 
 Con queste tecniche, puoi gestire e formattare i numeri in Java in modo molto flessibile e adatto alle esigenze della tua applicazione.
-\n---\n
+
+---
 # La gestione della memoria
 
 La gestione della memoria in Java è affidata al Garbage Collector (GC), un componente del Java Virtual Machine (JVM) responsabile della liberazione della memoria da oggetti non più referenziati. La gestione automatica della memoria è uno dei principali vantaggi di Java, in quanto allevia lo sviluppatore dal compito di liberare manualmente la memoria allocata.
@@ -2307,5 +2318,4 @@ Metaspace è una regione di memoria separata dall'heap principale in cui vengono
 Mentre Metaspace è utilizzato per memorizzare informazioni relative alle classi e ai metodi, la memoria heap è responsabile per la memorizzazione delle istanze degli oggetti. Ogni volta che si crea un nuovo oggetto mediante l'operatore `new`, la memoria per quell'oggetto viene allocata nello spazio heap.
 
 In sintesi, le classi e gli elementi statici sono memorizzati nello spazio Metaspace, una regione di memoria separata dallo spazio heap utilizzato per le istanze degli oggetti. L'utilizzo di Metaspace consente una gestione più dinamica e flessibile rispetto alla vecchia PermGen.
-\n---\n
-\n---\n
+
