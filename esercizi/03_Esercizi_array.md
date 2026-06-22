@@ -348,41 +348,6 @@ System.out.println("The sum is " + sum);
 
 ---
 
-## Scrivere un programma Java per stampare la griglia seguente
-
-```text
-- - - - - - - - - -                                                                                           
-- - - - - - - - - -                                                                                           
-- - - - - - - - - -                                                                                           
-- - - - - - - - - -                                                                                           
-- - - - - - - - - -                                                                                           
-- - - - - - - - - -                                                                                           
-- - - - - - - - - -                                                                                           
-- - - - - - - - - -                                                                                           
-- - - - - - - - - -                                                                                           
-- - - - - - - - - -  
-```
-
-```java
-public class EsercizioArray03 {
-public static void main(String[] args) {   
- int [][]a = new int[10][10];    
- for(int i = 0; i < 10; i++)
-   {
-      for(int j = 0; j < 10; j++)
-      {
-         System.out.printf("%2d ", a[i][j]);
-      }
-      System.out.println();
-   }
-}
-}
-
-
-```
-
----
-
 ## Calcola il valore medio di un elemento dell'array
 
 Scrivete un programma Java per calcolare il valore medio di un elemento dell'array.
