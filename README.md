@@ -1,6 +1,7 @@
 # Corso Java
 
-![Copertina](https://books.google.it/books/publisher/content?id=dr7tEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71feduQ1xH4tmhrR1UY6IB6dgzxCXRRPnK47aNmSploIwwNWLJ0D_AStKjsWp0SNQVx7Z_fv6xI70TVY8-NZtnCqKV9zuiq4B4UVNvB1QLw1sQSF6DhwqIvvqa41Y-b-11gHbPh)
+[![Copertina](https://books.google.it/books/publisher/content?id=dr7tEQAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71feduQ1xH4tmhrR1UY6IB6dgzxCXRRPnK47aNmSploIwwNWLJ0D_AStKjsWp0SNQVx7Z_fv6xI70TVY8-NZtnCqKV9zuiq4B4UVNvB1QLw1sQSF6DhwqIvvqa41Y-b-11gHbPh)](https://books.google.it/books/about?id=dr7tEQAAQBAJ)
+
 [Scarica il mio libro I love Java](https://books.google.it/books/about?id=dr7tEQAAQBAJ)
 
 ---
