@@ -1,3 +1,9 @@
+---
+marp: true
+theme: default
+paginate: true
+---
+
 # Capitolo 01 - Fondamenti
 
 ---
@@ -399,7 +405,6 @@ Le espressioni in Java sono fondamentali per eseguire operazioni su dati, effett
 
 [esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/01_Operatori_Tipi.md)
 
-
 ---
 ## Operatori nei linguaggi di programmazione
 
@@ -455,7 +460,6 @@ Gli operatori sono essenziali per manipolare dati e controllare il flusso di ese
 
 ### Operatori aritmetici
 
-
 * Di assegnazione: = += -= *= /= &= |= ^=
 * Di assegnazione/incremento: ++ -- %=
 * Operatori Aritmetici:` + - * / %`
@@ -489,7 +493,6 @@ Gli operatori sono essenziali per manipolare dati e controllare il flusso di ese
 
 ---
 
-
 ### Operatori relazionali
 `== != > < >= <=`
 
@@ -502,12 +505,9 @@ Gli operatori sono essenziali per manipolare dati e controllare il flusso di ese
 | `==`       | uguale a                 |
 | `!=`        | non uguale / diverso     |
 
-
 ---
 
-
 #### Operatori per Booleani
-
 
 * Bitwise (interi): `& | ^ << >> ~`
 
@@ -526,7 +526,6 @@ Gli operatori sono essenziali per manipolare dati e controllare il flusso di ese
 
 ---
 
-
 ### Operatori su reference
 
 #### Per i riferimenti/reference, sono definiti:
@@ -538,7 +537,6 @@ Gli operatori sono essenziali per manipolare dati e controllare il flusso di ese
 * NON è prevista l'aritmetica dei puntatori, vengono gestiti dalla JVM 
 
 ---
-
 
 ### Operazioni matematiche complesse
 
@@ -578,7 +576,6 @@ Literal|Represents
 `\ddd`|Octal character
 `\xdd`|Hexadecimal character
 `\udddd`|Unicode character
-
 
 * [raccolta esempi](https://github.com/maboglia/CorsoJava/blob/master/esempi/01_Operatori_Tipi.md)
 * [altri esempi](https://github.com/maboglia/CorsoJava/tree/master/esempi/01_base/01_Operatori)
@@ -948,7 +945,6 @@ else if (condition2) {
 
 ```java
 
-
 else {
     
 //statements;
@@ -991,7 +987,6 @@ switch (espressione) {
 ```
 
 ---
-
 
 ### Cicli definiti - for
 
@@ -1049,7 +1044,6 @@ while(true) {
 
 * Quando voglio eseguire almeno una volta l'istruzione, anche se la condizione è impostata su `false`
 * Si verifica la condizione dopo il primo ciclo
-
 
 ```java
 
@@ -1196,7 +1190,6 @@ for (int i=0; i<n; i++) {
 * [06_labels](https://github.com/maboglia/CorsoJava/tree/master/esempi/06_control-flow/06_labels)
 * [giochi](https://github.com/maboglia/CorsoJava/tree/master/esercitazioni/LaboratorioJava/01_Giochi)
 * [programmi ](https://github.com/maboglia/CorsoJava/tree/master/esempi/06_control-flow/programmi )
-
 
 ---
 ## Array
@@ -2294,7 +2287,6 @@ Ecco alcuni concetti chiave relativi alla gestione della memoria in Java:
 
 La gestione automatica della memoria in Java semplifica la vita dello sviluppatore, ma è importante scrivere codice efficiente per minimizzare la pressione sul Garbage Collector e garantire le migliori prestazioni. Evitare la creazione inutile di oggetti, liberare risorse esterne e monitorare l'utilizzo della memoria sono pratiche importanti per un'applicazione Java robusta e performante.
 
-
 Le classi e gli elementi statici in Java sono memorizzati nello spazio di memoria condiviso chiamato "Metaspace" (prima di Java 8 era chiamato "PermGen" per Permanent Generation).
 
 ---
@@ -2322,4 +2314,3 @@ Metaspace è una regione di memoria separata dall'heap principale in cui vengono
 Mentre Metaspace è utilizzato per memorizzare informazioni relative alle classi e ai metodi, la memoria heap è responsabile per la memorizzazione delle istanze degli oggetti. Ogni volta che si crea un nuovo oggetto mediante l'operatore `new`, la memoria per quell'oggetto viene allocata nello spazio heap.
 
 In sintesi, le classi e gli elementi statici sono memorizzati nello spazio Metaspace, una regione di memoria separata dallo spazio heap utilizzato per le istanze degli oggetti. L'utilizzo di Metaspace consente una gestione più dinamica e flessibile rispetto alla vecchia PermGen.
-
