@@ -110,3 +110,424 @@ Michael Feathers ha coniato l'acronimo SOLID.
 
 - Concentrandosi su alta coesione e bassa dipendenza, i componenti del codice diventano più riutilizzabili.  
 - La creazione di nuove funzionalità può spesso essere realizzata riutilizzando componenti esistenti ben definiti.
+
+Ecco una traduzione adattata in italiano, con una breve spiegazione ed esempi coerenti con un capitolo Java/OOP. Ho corretto anche “Listov” → **Liskov** e “principal” → **principle**.
+
+---
+
+# Conclusione — Principi SOLID e buone pratiche di progettazione
+
+I principi **SOLID** rappresentano un insieme di linee guida per scrivere codice orientato agli oggetti più semplice da mantenere, estendere e testare.
+
+Non sono regole assolute, ma strumenti per ridurre l'accoppiamento tra classi e migliorare la qualità del progetto.
+
+---
+
+## S — Single Responsibility Principle (SRP)
+
+### Principio di singola responsabilità
+
+> Non mettere tutte le uova nello stesso paniere.
+> Una classe dovrebbe avere un solo motivo per cambiare.
+
+Una classe dovrebbe occuparsi di **una sola responsabilità**.
+Quando una classe fa troppe cose, ogni modifica rischia di introdurre errori in parti non correlate.
+
+### ❌ Esempio non corretto
+
+```java
+public class Report {
+
+    public void generaReport() {
+        System.out.println("Creo il report");
+    }
+
+    public void salvaSuFile() {
+        System.out.println("Salvo il file");
+    }
+
+    public void inviaEmail() {
+        System.out.println("Invio email");
+    }
+}
+```
+
+La classe `Report` si occupa di:
+
+- creare il report
+- salvarlo
+- inviarlo
+
+Ha troppe responsabilità.
+
+### ✔ Soluzione
+
+Separiamo i compiti:
+
+```java
+public class Report {
+
+    public void genera() {
+        System.out.println("Creo il report");
+    }
+}
+
+
+public class ReportRepository {
+
+    public void salva(Report report) {
+        System.out.println("Salvo report");
+    }
+}
+
+
+public class EmailService {
+
+    public void invia(Report report) {
+        System.out.println("Invio report");
+    }
+}
+```
+
+Ogni classe ora ha un solo motivo per cambiare.
+
+---
+
+# O — Open/Closed Principle (OCP)
+
+### Principio aperto/chiuso
+
+> Non modificare continuamente la stessa classe.
+> Se succede spesso, probabilmente devi astrarre ciò che cambia.
+
+Una classe dovrebbe essere:
+
+- **aperta all'estensione**
+- **chiusa alla modifica**
+
+Dovremmo poter aggiungere nuovi comportamenti senza cambiare codice già funzionante.
+
+### ❌ Esempio
+
+```java
+class CalcolatoreSconto {
+
+    double calcola(String tipoCliente) {
+
+        if(tipoCliente.equals("VIP"))
+            return 20;
+
+        if(tipoCliente.equals("STANDARD"))
+            return 5;
+
+        return 0;
+    }
+}
+```
+
+Ogni nuovo tipo di cliente richiede una modifica della classe.
+
+### ✔ Soluzione
+
+Usiamo il polimorfismo:
+
+```java
+interface Sconto {
+    double calcola();
+}
+
+
+class ScontoVip implements Sconto {
+
+    public double calcola() {
+        return 20;
+    }
+}
+
+
+class ScontoStandard implements Sconto {
+
+    public double calcola() {
+        return 5;
+    }
+}
+```
+
+Per aggiungere uno sconto nuovo creiamo una nuova classe senza modificare quelle esistenti.
+
+---
+
+# L — Liskov Substitution Principle (LSP)
+
+### Principio di sostituzione di Liskov
+
+> Una sottoclasse deve poter sostituire la classe padre senza rompere il programma.
+
+Una classe figlia deve rispettare il comportamento previsto dalla classe base.
+
+I metodi ridefiniti dovrebbero mantenere:
+
+- stesso significato
+- stessi vincoli
+- stesso tipo restituito (o compatibile)
+
+### ❌ Esempio
+
+```java
+class Uccello {
+
+    void vola() {
+        System.out.println("Sto volando");
+    }
+}
+
+
+class Pinguino extends Uccello {
+
+    void vola() {
+        throw new RuntimeException(
+            "Non posso volare"
+        );
+    }
+}
+```
+
+Tecnicamente funziona, ma viola il principio: un `Pinguino` non può sostituire correttamente un `Uccello`.
+
+### ✔ Soluzione
+
+Separiamo i comportamenti:
+
+```java
+interface Volante {
+
+    void vola();
+
+}
+
+
+class Aquila implements Volante {
+
+    public void vola() {
+        System.out.println("Volo");
+    }
+}
+
+
+class Pinguino {
+
+    public void cammina() {
+        System.out.println("Cammino");
+    }
+}
+```
+
+---
+
+# I — Interface Segregation Principle (ISP)
+
+### Principio di segregazione delle interfacce
+
+> Non creare interfacce enormi con molti metodi.
+> È un segnale che stai facendo troppe cose nello stesso punto.
+
+Meglio avere tante piccole interfacce specifiche invece di una generale.
+
+### ❌ Esempio
+
+```java
+interface Stampante {
+
+    void stampa();
+
+    void scannerizza();
+
+    void inviaFax();
+
+}
+```
+
+Una stampante semplice sarebbe costretta a implementare metodi inutili.
+
+```java
+class StampanteBase 
+        implements Stampante {
+
+    public void stampa(){}
+
+    public void scannerizza(){
+        // non supportato
+    }
+
+    public void inviaFax(){
+        // non supportato
+    }
+}
+```
+
+### ✔ Soluzione
+
+```java
+interface Stampabile {
+
+    void stampa();
+
+}
+
+
+interface Scanner {
+
+    void scannerizza();
+
+}
+
+
+interface Fax {
+
+    void inviaFax();
+
+}
+```
+
+Ogni classe implementa solo quello che realmente usa.
+
+---
+
+# D — Dependency Inversion Principle (DIP)
+
+### Principio di inversione delle dipendenze
+
+> Dipendi da interfacce e astrazioni, non da classi concrete.
+
+Le classi di alto livello non dovrebbero conoscere direttamente i dettagli delle classi più basse.
+
+### ❌ Esempio
+
+```java
+class MySQLDatabase {
+
+    void salva(){
+        System.out.println("Salvo su MySQL");
+    }
+}
+
+
+class UserService {
+
+    private MySQLDatabase db =
+            new MySQLDatabase();
+
+}
+```
+
+`UserService` è legato a MySQL.
+
+Cambiare database significa modificare la classe.
+
+### ✔ Soluzione
+
+```java
+interface Database {
+
+    void salva();
+
+}
+
+
+class MySQLDatabase implements Database {
+
+    public void salva(){
+        System.out.println("MySQL");
+    }
+}
+
+
+class UserService {
+
+    private Database db;
+
+    UserService(Database db){
+        this.db = db;
+    }
+}
+```
+
+Ora possiamo sostituire MySQL con PostgreSQL, MongoDB o altro senza cambiare `UserService`.
+
+---
+
+# Encapsulate What Varies
+
+### Incapsula ciò che cambia
+
+> Astrarre solo ciò che può realmente variare.
+
+Non tutto deve diventare un'interfaccia o una gerarchia complicata.
+
+L'obiettivo è isolare le parti soggette a cambiamento.
+
+### Esempio
+
+Supponiamo che oggi inviamo notifiche solo via email:
+
+```java
+class EmailSender {
+
+    void send(String msg){
+        System.out.println("Email: " + msg);
+    }
+}
+```
+
+Se sappiamo che domani potrebbero arrivare:
+
+- SMS
+- WhatsApp
+- notifiche push
+
+conviene astrarre:
+
+```java
+interface NotificationSender {
+
+    void send(String message);
+
+}
+
+
+class EmailSender 
+        implements NotificationSender {
+
+    public void send(String message){
+        System.out.println("Email");
+    }
+}
+
+
+class SmsSender 
+        implements NotificationSender {
+
+    public void send(String message){
+        System.out.println("SMS");
+    }
+}
+```
+
+Abbiamo isolato ciò che cambia.
+
+Se invece una classe è stabile e non cambierà mai, aggiungere astrazioni inutili aumenta solo la complessità.
+
+---
+
+## In sintesi
+
+| Principio               | Idea principale                           |
+| ----------------------- | ----------------------------------------- |
+| SRP                     | Una classe, una responsabilità            |
+| OCP                     | Estendi senza modificare                  |
+| LSP                     | Le sottoclassi devono essere sostituibili |
+| ISP                     | Interfacce piccole e specifiche           |
+| DIP                     | Dipendi da astrazioni                     |
+| Encapsulate What Varies | Isola solo ciò che cambia                 |
+
+Questi principi sono alla base di molti framework moderni Java, in particolare **Spring**, dove l'uso di interfacce, dependency injection e separazione delle responsabilità deriva direttamente da queste idee.
