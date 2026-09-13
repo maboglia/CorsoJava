@@ -61,6 +61,7 @@ Ricorda che la pratica è fondamentale nella programmazione. Scrivi regolarmente
 * [appunti](https://github.com/maboglia/CorsoJava/tree/master/appunti)
 * [dispense e altro materiale java](https://github.com/maboglia/CorsoJavaRisorse)
 * [altre risorse per programmare](https://github.com/maboglia/ProgrammingResources)
+* [The Concise TypeScript Book in italiano](https://gibbok.github.io/typescript-book/it-it/)
 
 
 * [001_Caratteristiche_Java](./appunti/001_Caratteristiche_Java.md)
