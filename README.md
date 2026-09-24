@@ -1,166 +1,94 @@
-# Corso Java — percorso didattico aggiornato
+# Corso Java
 
-Questo repository raccoglie un vasto insieme di appunti, esempi e esercizi per imparare Java in modo progressivo, da fondamenti a architetture web e framework moderni.
+Materiale didattico per imparare Java in modo progressivo: dai fondamenti della programmazione allo sviluppo di applicazioni web, al testing e alle funzionalità moderne della piattaforma.
 
-## Obiettivo del corso
+## Da dove iniziare
 
-Costruire una base solida in Java con attenzione a:
-- sintassi e logica di programmazione;
-- programmazione orientata agli oggetti;
-- collezioni e API standard;
-- gestione di file, JSON e database;
-- applicazioni web con Servlet/JSP e Spring;
-- testing e automazione;
-- Java moderno (streams, lambda, records, concurrency, Java 21/25).
+Il percorso ufficiale e ordinato è disponibile nella cartella [`corso/`](./corso/).
 
-## Learning path consigliato
+### Learning path
 
-### 1. Fondamenti di programmazione
-- `appunti/001_Caratteristiche_Java.md`
-- `appunti/002_operatori.md`
-- `appunti/002_espressioni.md`
-- `appunti/003_variabili.md`
-- `appunti/004_tipi.md`
-- `appunti/005_cicli.md`
-- `appunti/006_array.md`
-- `appunti/007_stringhe.md`
-- `appunti/008_cast.md`
-- `appunti/009_metodi.md`
+1. [Fondamenti](./corso/01_fondamenti/README.md)
+2. [Programmazione orientata agli oggetti](./corso/02_programmazione_oggetti/README.md)
+3. [API standard e collezioni](./corso/03_api_standard/README.md)
+4. [Design del software](./corso/04_design_del_software/README.md)
+5. [Database e JDBC](./corso/05_database/README.md)
+6. [Web e Spring](./corso/06_web/README.md)
+7. [Testing e qualità](./corso/07_testing/README.md)
+8. [Java moderno](./corso/08_java_moderno/README.md)
+9. [Progetti](./corso/09_progetti/README.md)
 
-Obiettivo: imparare la sintassi, il controllo del flusso e il pensiero imperativo.
+Ogni modulo contiene obiettivi, ordine consigliato e collegamenti agli appunti originali, agli esempi e agli esercizi pertinenti.
 
-### 2. Programmazione orientata agli oggetti
-- `appunti/010_0_classi.md`
-- `appunti/010_2_classi_istanze.md`
-- `appunti/010_3_classi_costruttori.md`
-- `appunti/010_4_classi_metodi_getter_setter.md`
-- `appunti/010_5_incapsulamento.md`
-- `appunti/010_6_astrazione.md`
-- `appunti/011_classi_ereditarieta.md`
-- `appunti/012_classi_polimorfismo.md`
-- `appunti/013_classi_static.md`
-- `appunti/014_classi_astratte.md`
-- `appunti/015_interfacce.md`
-- `appunti/016_enum.md`
+## Obiettivi formativi
 
-Obiettivo: modellare dati e comportamenti con classi, ereditarietà, incapsulamento e polimorfismo.
+Al termine del percorso lo studente dovrebbe saper:
 
-### 3. API Java standard e collezioni
-- `appunti/021_java_lang.md`
-- `appunti/021_java_lang_Object.md`
-- `appunti/021_java_lang_System.md`
-- `appunti/021_java_lang_Math.md`
-- `appunti/021_API_Java_Stringhe.md`
-- `appunti/022_JCFLike_Map.md`
-- `appunti/022_java_util_Dizionari_e_mappe.md`
-- `appunti/023_java.time.md`
-- `appunti/024_classe_File.md`
-- `appunti/140_Optional.md`
-- `appunti/150_StreamApi.md`
-- `appunti/154_collectors.md`
-
-Obiettivo: imparare le classi standard, le collezioni, i tipi di data e il trattamento funzionale dei dati.
-
-### 4. Eccezioni, design e architettura
-- `appunti/017_eccezioni.md`
-- `appunti/032_design_patterns.md`
-- `appunti/043_SOLID.md`
-- `appunti/033_singleton_pattern.md`
-- `appunti/034_decorator_pattern.md`
-- `appunti/035_factory_pattern.md`
-- `appunti/036_dao_pattern.md`
-- `appunti/044_mvc_pattern.md`
-
-Obiettivo: costruire codice robusto, leggibile e organizzato.
-
-### 5. File, JSON e database
-- `appunti/038_FileIO.md`
-- `appunti/040_FileIO_esempi.md`
-- `appunti/041_File_NIO_esempi.md`
-- `appunti/061_JSON_Java.md`
-- `appunti/062_JSON_leggi_Java8.md`
-- `appunti/050_Java_Database.md`
-- `appunti/051_Java_Database.md`
-- `appunti/052_Java_Database.md`
-- `appunti/048_JDBC_ConnectionPooling.md`
-
-Obiettivo: integrare Java con fonti dati esterne e persistenza.
-
-### 6. Web Java (tradizionale e moderno)
-- `appunti/053_JSP_Fondamenti.md`
-- `appunti/054_JSP_Azioni.md`
-- `appunti/060_RequestDispatcher.md`
-- `appunti/063_JavaWeb-servlet.md`
-- `appunti/069_spring_framework.md`
-- `appunti/070_spring_core_boot.md`
-- `appunti/071_spring_mvc.md`
-- `appunti/077_Spring_JPA_Hibernate.md`
-- `appunti/079_thymeleaf.md`
-
-Obiettivo: capire la programmazione web Java, da Servlet/JSP a Spring Boot e MVC.
-
-### 7. Test, qualità e automazione
-- `appunti/080_testing.md`
-- `appunti/081_testing_in_java.md`
-- `appunti/082_junit.md`
-- `appunti/083_mockito.md`
-- `appunti/085_selenium.md`
-- `appunti/093_test_unitari.md`
-- `appunti/094_BDD.md`
-- `appunti/095_TDD.md`
-- `appunti/097_CICD.md`
-
-Obiettivo: garantire qualità, testabilità e automazione di processo.
-
-### 8. Java moderno e avanzato
-- `appunti/130_Lambda_Functional.md`
-- `appunti/150_StreamApi.md`
-- `appunti/230_Records.md`
-- `appunti/240_pattern_matching.md`
-- `appunti/250_SealedClasses.md`
-- `appunti/260_VirtualThreads.md`
-- `appunti/java25/README.md`
-- `appunti/300_SequencedCollections.md`
-
-Obiettivo: aggiornare la formazione alle evoluzioni moderne del linguaggio.
+- scrivere programmi Java usando tipi, variabili, operatori, condizioni, cicli e metodi;
+- modellare un dominio con classi e oggetti;
+- applicare incapsulamento, composizione, ereditarietà, polimorfismo, astrazione e interfacce;
+- usare collezioni, generics, `Optional`, lambda, Stream API e `java.time`;
+- leggere e scrivere file e dati JSON;
+- gestire errori ed eccezioni in modo appropriato;
+- interagire con database relazionali tramite JDBC e JPA/Hibernate;
+- comprendere HTTP e realizzare applicazioni web con Spring Boot;
+- scrivere test con JUnit e Mockito;
+- riconoscere e utilizzare, quando appropriato, records, pattern matching, sealed classes e virtual threads.
 
 ## Struttura del repository
 
-- `appunti/`: materiale teorico, per argomento e livello.
-- `esempi/`: esempi pratici e mini-casi di studio.
-- `esercizi/`: esercitazioni da svolgere in ordine.
-- `esercitazioni/`: progetti e laboratori.
+| Cartella | Scopo |
+|---|---|
+| [`corso/`](./corso/) | Percorso didattico ufficiale, ordinato per prerequisiti e livello. |
+| [`appunti/`](./appunti/) | Raccolta originale e completa degli appunti. Gli URL esistenti vengono mantenuti per compatibilità. |
+| [`approfondimenti/`](./approfondimenti/) | Argomenti opzionali, avanzati, specialistici o legacy. |
+| [`esempi/`](./esempi/) | Esempi di codice e mini-casi di studio. |
+| [`esercizi/`](./esercizi/) | Esercizi organizzati per argomento. |
+| [`esercitazioni/`](./esercitazioni/) | Laboratori e progetti pratici. |
 
-## Punti di forza
+## Appunti originali
 
-- Ampia copertura dei fondamenti di Java.
-- Materiale molto dettagliato su OOP, JDBC, Spring e testing.
-- Presenza di contenuti moderni su Java 21/25 e nuove feature.
-- Ampia varietà di esempi ed esercitazioni.
+La cartella [`appunti/`](./appunti/) non è stata eliminata né rinominata: conserva i percorsi storici utilizzati da libri, dispense e collegamenti pubblicati online.
 
-## Percorso consigliato per uno studente junior
+Per seguire un itinerario progressivo è preferibile partire da [`corso/`](./corso/); gli appunti restano disponibili come materiale completo di riferimento.
 
-1. Fondamenti: tipi, variabili, costrutti, array, stringhe, metodi.
-2. OOP: classi, oggetti, ereditarietà, polimorfismo, incapsulamento.
-3. API standard: collections, Optional, streams, java.time, file.
-4. Eccezioni e design: error handling, SOLID, pattern.
-5. Database: JDBC, DAO, SQL basic.
-6. Web Java: servlet/jsp basics, poi Spring Boot MVC.
-7. Testing: JUnit, Mockito, TDD/BDD.
-8. Java moderno: records, patterns, virtual threads, Java 21/25.
+## Approfondimenti
 
-## Suggerimento di revisione
+La cartella [`approfondimenti/`](./approfondimenti/) raccoglie contenuti che non sono prerequisiti del percorso base, tra cui:
 
-Per rendere il repo più professionale, dovrebbe essere organizzato in due livelli:
-- Corso base (obbligatorio): fondamenti + OOP + Java standard + JDBC + web + testing.
-- Approfondimenti (opzionali): Java moderno, Docker/Kubernetes, Selenium, Appium, JMeter, architetture avanzate.
+- Java avanzato, reflection, networking e concorrenza;
+- JSP e Servlet come tecnologie legacy;
+- Selenium, TestNG, JMeter e Appium;
+- Docker, Kubernetes e Jenkins;
+- Swing e sviluppo GUI/mobile;
+- Spring Cloud e altri argomenti specialistici.
 
-## Collegamenti utili
+## Versione Java
 
-- [Appunti](./appunti)
-- [Esempi](./esempi)
-- [Esercizi](./esercizi)
-- [Esercitazioni](./esercitazioni)
+Per il percorso principale è consigliato utilizzare una versione LTS del JDK, ad esempio Java 21. Gli argomenti relativi a Java 25 e alle funzionalità preview sono raccolti negli [appunti dedicati](./appunti/java25/README.md) e devono essere studiati verificando sempre la versione effettiva del JDK e lo stato della feature.
+
+## Metodo di studio consigliato
+
+Per ogni modulo:
+
+1. leggere gli obiettivi e rispettare l'ordine delle lezioni;
+2. consultare l'appunto collegato;
+3. eseguire e modificare gli esempi;
+4. svolgere gli esercizi;
+5. consolidare le conoscenze con un mini-progetto;
+6. aggiungere test e documentazione al codice prodotto.
+
+## Curriculum e competenze
+
 - [Curriculum del corso](./curriculum_corso_java.md)
+- [Competenze di base](./competenze_base.md)
 
+## Risorse esterne
 
+- [CorsoJavaRisorse](https://github.com/maboglia/CorsoJavaRisorse)
+- [ProgrammingResources](https://github.com/maboglia/ProgrammingResources)
+- [Esercitazioni](https://github.com/maboglia/esercitazioni)
+
+## Nota sul materiale
+
+Il repository è una raccolta ampia, costruita nel tempo. Alcuni documenti trattano lo stesso argomento da prospettive diverse o fanno riferimento a versioni precedenti della piattaforma. La separazione tra `corso/`, `appunti/` e `approfondimenti/` consente di mantenere il materiale esistente e, allo stesso tempo, offrire un percorso più chiaro e aggiornabile.
