@@ -2,8 +2,6 @@
 
 Questo repository raccoglie un vasto insieme di appunti, esempi e esercizi per imparare Java in modo progressivo, da fondamenti a architetture web e framework moderni.
 
-Il materiale è molto ricco, ma la sua qualità non è uniforme: alcuni argomenti sono centrali e ben strutturati, altri sono duplicati, avanzati o fuori contesto rispetto alla sequenza didattica ideale.
-
 ## Obiettivo del corso
 
 Costruire una base solida in Java con attenzione a:
@@ -140,30 +138,6 @@ Obiettivo: aggiornare la formazione alle evoluzioni moderne del linguaggio.
 - Presenza di contenuti moderni su Java 21/25 e nuove feature.
 - Ampia varietà di esempi ed esercitazioni.
 
-## Problemi da correggere / migliorare
-
-Il corso ha un grande valore didattico, ma presenta diversi problemi strutturali:
-
-1. Duplicazioni di contenuti
-   - `appunti/022_API_Java_date_time.md` e `appunti/023_java.time.md` trattano lo stesso tema in modo sovrapposto.
-   - `appunti/050_Java_Database.md`, `appunti/051_Java_Database.md`, `appunti/052_Java_Database.md` ripetono lo stesso argomento JDBC in vari livelli di dettaglio.
-   - Spring, Thymeleaf e JSP hanno molte note affini e alcune sovrapposizioni.
-   - `README.md` riassume molte voci più volte con riferimenti duplicati (`JSP appunti`, `Spring thymeleaf`, ecc.).
-
-2. Contenuti obsoleti o poco coerenti con un percorso base
-   - JSP/Servlet sono ancora trattati come core del corso, ma oggi sono spesso un approccio legacy rispetto a Spring Boot / REST / MVC moderno.
-   - `competenze_base.md` è un documento misto Java/PHP e non è coerente con la specificità del repository.
-   - Alcuni argomenti avanzati (Docker, Kubernetes, Appium, Selenium, JMeter, test end-to-end e Java 25) sono utili, ma vanno collocati come approfondimenti, non come base obbligatoria del primo percorso.
-
-3. Link e riferimenti inconsistenti
-   - Il README principale contiene riferimenti a file che non esistono o sono rinominati (`010_classi.md`, `022_JCF_AlgoritmiCollections.md`, `022_JCF_List.md`, ecc.).
-   - Alcuni link usano percorsi non coerenti con la struttura reale del repositor.
-   - La navigazione fra appunti non è sempre lineare e uniforme.
-
-4. Sequenza didattica poco chiara
-   - Il repo combina fondamenti, approfondimenti, note avanzate e materiale di ricerca in una stessa pila.
-   - Per un neofita serve un percorso ordinato: fondamenti → OOP → API → Java web → database → testing → Java moderno.
-
 ## Percorso consigliato per uno studente junior
 
 1. Fondamenti: tipi, variabili, costrutti, array, stringhe, metodi.
@@ -189,6 +163,4 @@ Per rendere il repo più professionale, dovrebbe essere organizzato in due livel
 - [Esercitazioni](./esercitazioni)
 - [Curriculum del corso](./curriculum_corso_java.md)
 
----
 
-Questo README è stato aggiornato per orientare chi studia il corso verso un percorso più chiaro, coerente e più moderno rispetto al materiale grezzo presente nel repository.
