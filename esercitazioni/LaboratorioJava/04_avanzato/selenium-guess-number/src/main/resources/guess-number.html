@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guess the Number | Laboratorio Selenium</title>
+    <style>
+        :root { color-scheme: light; font-family: system-ui, sans-serif; }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0; min-height: 100vh; display: grid; place-items: center;
+            background: linear-gradient(135deg, #e0f2fe, #f5f3ff); color: #172033;
+        }
+        main {
+            width: min(92vw, 520px); padding: 2rem; border-radius: 22px;
+            background: white; box-shadow: 0 18px 55px #24324b20;
+        }
+        .eyebrow { color: #5b5bd6; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .8rem; }
+        h1 { margin: .4rem 0; font-size: clamp(2rem, 7vw, 3rem); }
+        p { line-height: 1.55; }
+        form { display: flex; gap: .65rem; margin: 1.4rem 0; }
+        input {
+            min-width: 0; flex: 1; padding: .85rem; border: 2px solid #d8deea;
+            border-radius: 10px; font: inherit;
+        }
+        input:focus { outline: 3px solid #c7d2fe; border-color: #6366f1; }
+        button {
+            border: 0; border-radius: 10px; padding: .85rem 1rem; font: inherit;
+            font-weight: 700; cursor: pointer; background: #4f46e5; color: white;
+        }
+        button:hover { background: #3730a3; }
+        button.secondary { background: #eef2ff; color: #3730a3; }
+        #feedback { min-height: 3.2rem; padding: .8rem; border-radius: 10px; background: #f8fafc; }
+        #feedback[data-state="success"] { background: #dcfce7; color: #166534; }
+        #feedback[data-state="error"] { background: #fee2e2; color: #991b1b; }
+        .meta { display: flex; justify-content: space-between; gap: 1rem; color: #526078; font-size: .9rem; }
+        .actions { display: flex; justify-content: flex-end; margin-top: 1rem; }
+        code { background: #eef2ff; padding: .12rem .3rem; border-radius: 4px; }
+    </style>
+</head>
+<body>
+<main>
+    <div class="eyebrow">Laboratorio Java + Selenium</div>
+    <h1>Guess the Number</h1>
+    <p>Ho scelto un numero da <strong>1 a 100</strong>. Riesci a indovinarlo?</p>
+
+    <form id="guess-form">
+        <label for="guess" class="visually-hidden">Il tuo numero</label>
+        <input id="guess" name="guess" type="number" min="1" max="100"
+               placeholder="Inserisci un numero" required autocomplete="off">
+        <button id="guess-button" type="submit">Prova</button>
+    </form>
+
+    <p id="feedback" data-state="info" role="status" aria-live="polite">
+        Fai il primo tentativo!
+    </p>
+
+    <div class="meta">
+        <span>Tentativi: <strong id="attempts">0</strong></span>
+        <span>Intervallo: 1–100</span>
+    </div>
+    <div class="actions">
+        <button id="restart-button" class="secondary" type="button">Ricomincia</button>
+    </div>
+</main>
+
+<script>
+    // In modalità normale il numero viene scelto casualmente.
+    // Il parametro ?target=42 abilita un numero noto per test ripetibili.
+    const params = new URLSearchParams(window.location.search);
+    const requestedTarget = Number(params.get("target"));
+    const testMode = params.has("target")
+        && Number.isInteger(requestedTarget)
+        && requestedTarget >= 1
+        && requestedTarget <= 100;
+
+    let secretNumber = testMode ? requestedTarget : Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+    let finished = false;
+
+    const form = document.querySelector("#guess-form");
+    const input = document.querySelector("#guess");
+    const feedback = document.querySelector("#feedback");
+    const attemptsOutput = document.querySelector("#attempts");
+    const restartButton = document.querySelector("#restart-button");
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (finished) return;
+
+        const guess = Number(input.value);
+
+        if (!input.value || !Number.isInteger(guess) || guess < 1 || guess > 100) {
+            feedback.textContent = "Inserisci un numero intero da 1 a 100.";
+            feedback.dataset.state = "error";
+            return;
+        }
+
+        attempts++;
+        attemptsOutput.textContent = String(attempts);
+
+        if (guess < secretNumber) {
+            feedback.textContent = "Troppo basso! Prova con un numero più alto.";
+            feedback.dataset.state = "info";
+        } else if (guess > secretNumber) {
+            feedback.textContent = "Troppo alto! Prova con un numero più basso.";
+            feedback.dataset.state = "info";
+        } else {
+            feedback.textContent = `Esatto! Hai indovinato in ${attempts} tentativi.`;
+            feedback.dataset.state = "success";
+            finished = true;
+        }
+
+        input.value = "";
+        if (!finished) input.focus();
+    });
+
+    restartButton.addEventListener("click", () => {
+        secretNumber = testMode ? requestedTarget : Math.floor(Math.random() * 100) + 1;
+        attempts = 0;
+        finished = false;
+        attemptsOutput.textContent = "0";
+        feedback.textContent = "Nuova partita: fai il primo tentativo!";
+        feedback.dataset.state = "info";
+        input.value = "";
+        input.focus();
+    });
+</script>
+</body>
+</html>
