@@ -7,7 +7,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: contactmanager
     ports:
-      - "3306:3306"
+      - "3307:3306"
     volumes:
       - contactmanager_mysql_data:/var/lib/mysql
     healthcheck:
